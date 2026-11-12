@@ -11,7 +11,8 @@
   standard|../../../../docs/proof-standard.tm><ym-nav-sep><hlink|Contributing|../../../../CONTRIBUTING.tm>>
 
   <ym-unit-nav||<hlink|YM-000022: Logarithmic asymptotics of the running
-  inverse coefficient (draft)|../correspondence.tm><ym-nav-sep><hlink|evidence|index.tm><ym-nav-sep><hlink|proof|../proof.tm>|>
+  inverse coefficient (draft)|../correspondence.tm><ym-nav-sep><hlink|evidence|index.tm><ym-nav-sep><hlink|proof|../proof.tm>|<hlink|YM-000026
+  \<rightarrow\>|../../YM-000026/correspondence.tm>>
 
   <ym-title|Historical pilot record><label|historical-pilot-record>
 
@@ -141,7 +142,8 @@
   were checked separately for trailing whitespace and relative link targets.
 
   <ym-unit-nav||<hlink|YM-000022: Logarithmic asymptotics of the running
-  inverse coefficient (draft)|../correspondence.tm><ym-nav-sep><hlink|evidence|index.tm><ym-nav-sep><hlink|proof|../proof.tm>|>
+  inverse coefficient (draft)|../correspondence.tm><ym-nav-sep><hlink|evidence|index.tm><ym-nav-sep><hlink|proof|../proof.tm>|<hlink|YM-000026
+  \<rightarrow\>|../../YM-000026/correspondence.tm>>
 </body>
 
 <\initial>

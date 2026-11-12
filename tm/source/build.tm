@@ -32,12 +32,18 @@
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Limitations>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-5><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Addendum: clean
+    from-source rebuild (issue #37)> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-6><vspace|0.5fn>
   </table-of-contents>
 
   <block|<tformat|<twith|table-width|1par>|<twith|table-hmode|exact>|<cwith|1|-1|1|-1|cell-hyphen|t>|<cwith|1|1|1|-1|cell-bborder|1ln>|<cwith|1|1|1|-1|cell-valign|bottom>|<table|<row|<cell|<strong|Field>>|<cell|<strong|Value>>>|<row|<cell|Source>|<cell|<verbatim|https://github.com/yang-mills-group/OpenAI-YM-20261028>>>|<row|<cell|Revision>|<cell|<verbatim|3456e5e75cf8d4cd558955a5c7638fba2d68f464>>>|<row|<cell|Toolchain>|<cell|<verbatim|leanprover/lean4:v4.32.0>>>|<row|<cell|Audit
   date>|<cell|11 November 2026>>|<row|<cell|Status>|<cell|<strong|Pinned
   build commands passed from a verified prebuilt artifact; no clean source
-  rebuild was performed on this host>>>>>>
+  rebuild was performed on this host. A clean from-source rebuild on a
+  separate Linux host passed on 12 November 2026: see the addendum
+  below>>>>>>
 
   <section|Result><label|result>
 
@@ -170,6 +176,32 @@
     placeholder in <verbatim|Challenge.lean> is accounted for in the axiom
     evidence.
   </itemize-minus>
+
+  <section|Addendum: clean from-source rebuild (issue
+  #37)><label|addendum-clean-from-source-rebuild-issue-37>
+
+  On 12 November 2026 every project module was compiled from source on an
+  independent Linux x86-64 host, from an empty project build directory and
+  without the prebuilt artifact, and the upstream verification commands were
+  repeated. All passed with the same job count, replay counts, endpoint
+  axioms and inventory counts as recorded above. The record is
+  <hlink|<verbatim|evidence/clean-build-3456e5e.md>|evidence/clean-build-3456e5e.tm>.
+  This closes the third limitation above for the project's own modules;
+  Mathlib and the other external packages still come from their pinned
+  caches. Two observations from that record qualify statements in this file:
+
+  <\itemize-minus>
+    <item>In the Git import, <verbatim|shasum -a 256 -c SOURCES.sha256>
+    reports 9,497 files <verbatim|OK> and 10 absent (the ten
+    <verbatim|verification/*.log> files of the manifest, which are not
+    tracked). The "all 9,507 listed files" result above describes the
+    original archive.
+
+    <item>The prebuilt artifact's generated C and <verbatim|.ilean> files are
+    byte-identical to the fresh build, but 1,044 of its 9,470
+    <verbatim|.olean> files differ by 8 or 16 bytes in length. The cause is
+    undetermined.
+  </itemize-minus>
 </body>
 
 <\initial>
@@ -181,15 +213,17 @@
 
 <\references>
   <\collection>
+    <associate|addendum-clean-from-source-rebuild-issue-37|<tuple|6|4>>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-2|<tuple|2|2>>
-    <associate|auto-3|<tuple|3|2>>
+    <associate|auto-3|<tuple|3|3>>
     <associate|auto-4|<tuple|4|3>>
-    <associate|auto-5|<tuple|5|3>>
+    <associate|auto-5|<tuple|5|4>>
+    <associate|auto-6|<tuple|6|4>>
     <associate|build-record-openai-ym-20261028|<tuple|?|1>>
-    <associate|commands-and-outcomes|<tuple|3|2>>
+    <associate|commands-and-outcomes|<tuple|3|3>>
     <associate|environment|<tuple|2|2>>
-    <associate|limitations|<tuple|5|3>>
+    <associate|limitations|<tuple|5|4>>
     <associate|result|<tuple|1|1>>
     <associate|retained-logs|<tuple|4|3>>
   </collection>
@@ -217,6 +251,11 @@
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Limitations>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Addendum:
+      clean from-source rebuild (issue #37)>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-6><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

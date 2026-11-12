@@ -11,7 +11,8 @@
   standard|../../../docs/proof-standard.tm><ym-nav-sep><hlink|Contributing|../../../CONTRIBUTING.tm>>
 
   <ym-unit-nav||<ym-nav-here|YM-000022: Logarithmic asymptotics of the
-  running inverse coefficient (draft)><ym-nav-sep><hlink|evidence|evidence/index.tm><ym-nav-sep><hlink|proof|proof.tm>|>
+  running inverse coefficient (draft)><ym-nav-sep><hlink|evidence|evidence/index.tm><ym-nav-sep><hlink|proof|proof.tm>|<hlink|YM-000026
+  \<rightarrow\>|../YM-000026/correspondence.tm>>
 
   <ym-title|YM-000022: running-coefficient
   asymptotic><label|ym-000022-running-coefficient-asymptotic>
@@ -162,7 +163,8 @@
   bibliography so changes to any of them invalidate its review fingerprint.
 
   <ym-unit-nav||<ym-nav-here|YM-000022: Logarithmic asymptotics of the
-  running inverse coefficient (draft)><ym-nav-sep><hlink|evidence|evidence/index.tm><ym-nav-sep><hlink|proof|proof.tm>|>
+  running inverse coefficient (draft)><ym-nav-sep><hlink|evidence|evidence/index.tm><ym-nav-sep><hlink|proof|proof.tm>|<hlink|YM-000026
+  \<rightarrow\>|../YM-000026/correspondence.tm>>
 </body>
 
 <\initial>

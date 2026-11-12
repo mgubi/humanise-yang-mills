@@ -11,7 +11,8 @@
   standard|../../../../docs/proof-standard.tm><ym-nav-sep><hlink|Contributing|../../../../CONTRIBUTING.tm>>
 
   <ym-unit-nav||<hlink|YM-000022: Logarithmic asymptotics of the running
-  inverse coefficient (draft)|../correspondence.tm><ym-nav-sep><ym-nav-here|evidence><ym-nav-sep><hlink|proof|../proof.tm>|>
+  inverse coefficient (draft)|../correspondence.tm><ym-nav-sep><ym-nav-here|evidence><ym-nav-sep><hlink|proof|../proof.tm>|<hlink|YM-000026
+  \<rightarrow\>|../../YM-000026/correspondence.tm>>
 
   <ym-title|Evidence for YM-000022 (original Markdown
   draft)><label|evidence-for-ym-000022-original-markdown-draft>
@@ -179,7 +180,8 @@
   or global verification claim is made.
 
   <ym-unit-nav||<hlink|YM-000022: Logarithmic asymptotics of the running
-  inverse coefficient (draft)|../correspondence.tm><ym-nav-sep><ym-nav-here|evidence><ym-nav-sep><hlink|proof|../proof.tm>|>
+  inverse coefficient (draft)|../correspondence.tm><ym-nav-sep><ym-nav-here|evidence><ym-nav-sep><hlink|proof|../proof.tm>|<hlink|YM-000026
+  \<rightarrow\>|../../YM-000026/correspondence.tm>>
 </body>
 
 <\initial>
