@@ -1,0 +1,125 @@
+# Rebuild the TeXmacs version of the documentation and republish the website
+# (fork mgubi/humanise-yang-mills, branch texmacs-site; see tm/README.md).
+#
+# The fork receives no events when the upstream main branch changes, so the
+# workflow polls it: every hour it merges upstream main into texmacs-site and,
+# if anything changed since the last published build, rebuilds tm/ with
+# TeXmacs Upsilon (Linux AppImage), commits the regenerated documents to
+# texmacs-site and publishes tm/html to gh-pages (tm/publish.sh). It also runs
+# on pushes to texmacs-site and by hand (Actions tab, "Run workflow").
+#
+# The upstream workflows (blueprint.yml, sync-lean-source.yml) arrive with the
+# merges; they are disabled in the fork's Actions settings. When upstream
+# changes them, GitHub refuses the push of the merge with the default token
+# (it may not update workflow files): set the repository secret
+# SITE_PUSH_TOKEN to a token with the "workflow" scope, which is then used
+# instead.
+name: TeXmacs site
+
+on:
+  schedule:
+    - cron: '41 * * * *'
+  push:
+    branches: [texmacs-site]
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Rebuild and publish even if nothing changed
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: texmacs-site
+  cancel-in-progress: false
+
+env:
+  UPSTREAM: https://github.com/hairer/humanise-yang-mills.git
+  TEXMACS_RELEASE: upsilon-latest
+  TEXMACS_ASSET: texmacs-upsilon-qt-x86_64.AppImage
+
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: texmacs-site
+          fetch-depth: 0
+          # used by the pushes below (see the note on workflow files above)
+          token: ${{ secrets.SITE_PUSH_TOKEN || github.token }}
+
+      - name: Merge upstream main
+        id: merge
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git remote add upstream "$UPSTREAM"
+          git fetch --quiet upstream main
+          git merge --no-edit upstream/main -m "Merge upstream main ($(git rev-parse --short upstream/main))"
+          git fetch --quiet origin gh-pages || true
+          published=$(git show origin/gh-pages:.source-commit 2>/dev/null || true)
+          echo "head $(git rev-parse HEAD), published ${published:-none}"
+          if [[ "$(git rev-parse HEAD)" == "$published" && "${{ inputs.force }}" != "true" ]]; then
+            echo "nothing changed since the last published build"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install TeXmacs Upsilon and max-html
+        if: steps.merge.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Libraries the AppImage does not bundle (libEGL.so.1 and friends), taken
+          # from conda-forge: the Ubuntu package mirrors are often unreachable from
+          # the runners. Only these libraries are put on the library path.
+          mkdir -p "$RUNNER_TEMP/mamba" "$RUNNER_TEMP/extra-libs"
+          curl -fsSL -o "$RUNNER_TEMP/mamba/micromamba" \
+            https://github.com/mamba-org/micromamba-releases/releases/latest/download/micromamba-linux-64
+          chmod +x "$RUNNER_TEMP/mamba/micromamba"
+          MAMBA_ROOT_PREFIX="$RUNNER_TEMP/mamba/root" "$RUNNER_TEMP/mamba/micromamba" create -y -q \
+            -p "$RUNNER_TEMP/mamba/env" -c conda-forge libegl libopengl libgl libglx libxkbcommon >/dev/null
+          cp -a "$RUNNER_TEMP"/mamba/env/lib/{libEGL,libOpenGL,libGL,libGLX,libGLdispatch,libxkbcommon}.so* "$RUNNER_TEMP/extra-libs/"
+          echo "LD_LIBRARY_PATH=$RUNNER_TEMP/extra-libs${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}" >> "$GITHUB_ENV"
+          export LD_LIBRARY_PATH="$RUNNER_TEMP/extra-libs${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+          mkdir -p "$RUNNER_TEMP/texmacs" && cd "$RUNNER_TEMP/texmacs"
+          gh release download "$TEXMACS_RELEASE" -R mgubi/texmacs -p "$TEXMACS_ASSET"
+          chmod +x "$TEXMACS_ASSET"
+          ./"$TEXMACS_ASSET" --appimage-extract >/dev/null   # no FUSE on runners
+          bin=$PWD/squashfs-root/AppRun
+          [[ -x "$bin" ]] || { echo "AppRun not found in $TEXMACS_ASSET"; exit 1; }
+          echo "TEXMACS_BIN=$bin" >> "$GITHUB_ENV"
+          # smoke test: TeXmacs starts headless (prints missing libraries otherwise)
+          QT_QPA_PLATFORM=offscreen timeout 300 "$bin" -headless -x '(begin (display "TEXMACS-OK") (newline) (quit-TeXmacs))' 2>&1 | tail -20
+          git clone --quiet --depth 1 --filter=blob:none --sparse https://github.com/mgubi/mgubi.github.io.git "$RUNNER_TEMP/web"
+          git -C "$RUNNER_TEMP/web" sparse-checkout set plugins/max-html
+          echo "MAX_HTML_DIR=$RUNNER_TEMP/web/plugins/max-html" >> "$GITHUB_ENV"
+
+      - name: Build
+        if: steps.merge.outputs.skip != 'true'
+        env:
+          # links to repository files point upstream (origin is the fork here)
+          YM_REPO_URL: https://github.com/hairer/humanise-yang-mills
+          YM_REPO_BRANCH: main
+        run: YM_SOURCE_COMMIT=$(git rev-parse upstream/main) tm/build.sh --full
+
+      - name: Commit regenerated documents
+        if: steps.merge.outputs.skip != 'true'
+        run: |
+          git add tm
+          if ! git diff --cached --quiet; then
+            git commit -q -m "tm: regenerate from $(git rev-parse --short upstream/main)"
+          fi
+          if ! git push origin HEAD:texmacs-site; then
+            echo "::error::push to texmacs-site refused; if the merge changes .github/workflows, set the secret SITE_PUSH_TOKEN (scope: workflow)"
+            exit 1
+          fi
+
+      - name: Publish
+        if: steps.merge.outputs.skip != 'true'
+        env:
+          YM_PAGES_REMOTE: https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git
+        run: tm/publish.sh
