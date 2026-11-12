@@ -198,9 +198,11 @@
     original archive.
 
     <item>The prebuilt artifact's generated C and <verbatim|.ilean> files are
-    byte-identical to the fresh build, but 1,044 of its 9,470
-    <verbatim|.olean> files differ by 8 or 16 bytes in length. The cause is
-    undetermined.
+    byte-identical to the fresh build, and 8,426 of its 9,470
+    <verbatim|.olean> files as well. The other 1,044 differ only through the
+    absolute source path stored with persisted linter messages: recompiled
+    under a root path of the same length, all 1,044 equal the artifact's
+    files after substituting that path.
   </itemize-minus>
 </body>
 

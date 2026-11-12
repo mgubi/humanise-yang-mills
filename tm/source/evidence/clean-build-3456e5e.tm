@@ -202,14 +202,50 @@
   before the end of the shorter file, one in the header region and the rest
   near the end of the file.
 
-  <strong|The cause was not determined.> The identical generated C and
-  <verbatim|.ilean> files show that the compiled code and the declaration
-  index agree for all modules; the difference is confined to the serialized
-  environment data of about 11% of the modules and has a fixed small size.
-  This is evidence to examine, not a proof failure: the fresh
-  <verbatim|.olean> files are the ones that passed the kernel replay above,
-  and the artifact's passed the same replay under #2. A semantic comparison
-  of the two sets (declaration by declaration) was not performed.
+  <strong|Cause (determined in a follow-up on 12 November 2026).> The 1,044
+  modules are those whose <verbatim|.olean> stores linter messages
+  (environment extension <verbatim|lintLogExt>, for example
+  <verbatim|unusedVariables> warnings); each stored message carries the
+  absolute path of the source file. The artifact was built under
+  <verbatim|/home/scott/OpenAI-YM-20261028/>, the fresh build under
+  <verbatim|/scratch/userdata/schmittj/ym-build/repo/Lean/>, which is 15
+  characters longer; with 8-byte alignment this lengthens the file by 8 or 16
+  bytes and shifts the object addresses that follow, which accounts for the
+  scattered differing bytes. Three checks support this:
+
+  <\enumerate>
+    <item>For all 1,044 files, the printable strings of the two versions
+    (<verbatim|strings -n 12>, sorted) coincide once each root path is
+    replaced by a common token. With <verbatim|strings -n 6> this holds for
+    1,017 files; in the other 27 the differences are short byte runs that are
+    shifted addresses, not text.
+
+    <item>None of the 8,426 byte-identical <verbatim|.olean> files of the
+    artifact contains the string <verbatim|/home/scott/>.
+
+    <item>Decisive test: the sources were copied to
+    <verbatim|/scratch/userdata/schmittj/ymb/>, a root path of the same
+    length (30 characters) as the artifact's, and each of the 1,044 modules
+    was recompiled there with exactly the command Lake had recorded for it in
+    its <verbatim|.trace> file (same <verbatim|--setup> file and imports from
+    the fresh build), writing to a temporary file. In <strong|all 1,044
+    cases> the result equals the artifact's <verbatim|.olean> after replacing
+    the byte string <verbatim|/home/scott/OpenAI-YM-20261028/> by
+    <verbatim|/scratch/userdata/schmittj/ymb/> in the artifact file, and has
+    the same length. For the sample module
+    <verbatim|YM/FullVolume/Umbra/Ambience>, the two files differ in exactly
+    29 bytes, all inside the path string.
+  </enumerate>
+
+  So every <verbatim|.olean> of the artifact is, up to the embedded source
+  root in stored linter messages, byte-for-byte what this source produces
+  with this toolchain on the audit host. The recompilation in check 3 used
+  the imports of the fresh build, which are themselves identical to the
+  artifact's up to the same substitution. Scripts and logs are retained on
+  the host: <verbatim|repath.py> (<verbatim|9763933a\<ldots\>b131fe>),
+  <verbatim|repath.log> (<verbatim|b34d6def\<ldots\>dfee50>, final line
+  <verbatim|REPATH_DONE total=1044 equal_after_path_substitution=1044
+  other=0>), <verbatim|pathcheck.log> (<verbatim|a1571df1\<ldots\>d2a338>).
   <verbatim|.trace> files record host-specific build traces and are expected
   to differ.
 
@@ -288,9 +324,6 @@
     <item>No independent kernel or checker other than the pinned Lean kernel
     was used.
 
-    <item>The cause of the 1,044 differing <verbatim|.olean> files was not
-    investigated beyond the size and location statistics above.
-
     <item>The upstream <verbatim|verification/negative-controls> were not
     re-run.
   </itemize-minus>
@@ -307,20 +340,20 @@
   <\collection>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-2|<tuple|2|2>>
-    <associate|auto-3|<tuple|3|2>>
+    <associate|auto-3|<tuple|3|3>>
     <associate|auto-4|<tuple|4|3>>
-    <associate|auto-5|<tuple|5|3>>
-    <associate|auto-6|<tuple|6|4>>
-    <associate|auto-7|<tuple|7|4>>
-    <associate|auto-8|<tuple|8|5>>
-    <associate|checks-not-performed|<tuple|8|5>>
+    <associate|auto-5|<tuple|5|4>>
+    <associate|auto-6|<tuple|6|5>>
+    <associate|auto-7|<tuple|7|5>>
+    <associate|auto-8|<tuple|8|6>>
+    <associate|checks-not-performed|<tuple|8|6>>
     <associate|clean-from-source-rebuild-of-3456e5e-on-an-independent-linux-host|<tuple|?|1>>
-    <associate|commands-and-outcomes|<tuple|6|4>>
+    <associate|commands-and-outcomes|<tuple|6|5>>
     <associate|comparison-with-the-published-prebuilt-artifact|<tuple|4|3>>
-    <associate|environment|<tuple|5|3>>
+    <associate|environment|<tuple|5|4>>
     <associate|result|<tuple|1|1>>
-    <associate|retained-logs|<tuple|7|4>>
-    <associate|source-integrity-observation|<tuple|3|2>>
+    <associate|retained-logs|<tuple|7|5>>
+    <associate|source-integrity-observation|<tuple|3|3>>
     <associate|what-was-and-was-not-compiled-here|<tuple|2|2>>
   </collection>
 </references>
