@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Coordinating parallel work &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Coordinating parallel work</h1><a id="coordinating-parallel-work"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Define tasks before distributing them</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Claim protocol</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">2</a>
+      </p>
+      <p>
+        Transition from manual grants <span style="margin-left: 5mm"></span> <a href="#auto-3">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Keep communications useful</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Scaling coordination</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">3</a>
+      </p>
+    </div>
+    <p>
+      GitHub is the live coordination channel. Repository files are durable
+      knowledge, not distributed locks. A local <tt class="verbatim">Bots/</tt> message
+      is invisible to other contributors until it is published, and may not be
+      merged into their branch.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Information</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Canonical home</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Scope, claim, expiry, progress, blockers, handoff</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">One task issue and its comments</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Proposed edits and review discussion</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Pull request and its comments</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Cross-cutting question or policy decision</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Dedicated issue, linked from affected tasks</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Interfaces, dependencies, correspondence, review
+        records</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">blueprint/</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Reusable literature results and source matches</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">blueprint/background/</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Durable discoveries, failed approaches, resume notes</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Bots/notes/</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Authoritative mathematical text, from first draft
+        onward</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">manuscript/</tt></td>
+      </tr></tbody>
+    </table>
+    <p>
+      Use a GitHub Project to display the issue queue through saved views. The
+      existing issue comments are authoritative; labels and assignments are
+      summaries. GitHub-hosted agent sessions are optional, with a self-claim
+      posted and checked before launch. See <a href="github-features.html">Projects and Agents</a>
+      for setup and dispatch rules.
+    </p>
+    <h2 id="auto-1"><a id="define-tasks-before-distributing-them"></a>Define tasks before distributing them<span style="margin-left: 1em"></span></h2>
+    <p>
+      Each issue names a coordinator, task type, source revision, exact
+      declarations or mathematical interface, owned output paths,
+      prerequisites, and acceptance criteria. The contributor preparing or
+      claiming it checks existing issues, PRs, and proof-unit metadata for
+      overlap. Any trusted contributor may publish a well-scoped task as ready
+      when its stated prerequisites are satisfied; labels can be updated later
+      by someone with permissions. Record readiness in the issue comment if
+      necessary. A blocked or disputed scope must be resolved before claiming.
+      Reserve shared outline/glossary edits separately. A coordinator helps
+      resolve conflicts and organize review; ordinary claims do not require
+      their permission.
+    </p>
+    <p>
+      Writing starts directly in LaTeX once the local statement and input
+      interfaces are precise. The entire proof map and all prerequisite proofs
+      need not be complete. State outstanding mathematical inputs explicitly
+      and track them in the blueprint.
+    </p>
+    <p>
+      For mathematical tasks, specify the intended treatment: prove in detail,
+      cite and apply an existing result, suppress formal scaffolding, or
+      investigate an unresolved classification. Consult shared literature
+      notes before commissioning a proof. Classify coherent results or groups
+      of helpers; do not make a writing task for every declaration in the
+      formal dependency graph. A literature task can serve many proof units
+      and should have one shared output.
+    </p>
+    <p>
+      Use one <tt class="verbatim">status:</tt> label at a time:
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+proposed &rarr; ready &rarr; claimed &rarr; in-review &rarr; done</pre>
+    <p>
+      Use <tt class="verbatim">blocked</tt> while a prerequisite or unresolved question
+      prevents progress. The issue records the reason and next action. A
+      blocked worker releases the claim if it cannot make useful progress. On
+      resolution, the coordinator returns the task to <tt class="verbatim">ready</tt>. A
+      rejected review returns it to <tt class="verbatim">ready</tt> or to its
+      still-valid claim; it does not silently reactivate an expired claim.
+    </p>
+    <p>
+      Task types are <tt class="verbatim">audit</tt>, <tt class="verbatim">map</tt>, <tt class="verbatim">literature</tt>,
+      <tt class="verbatim">explain</tt>, <tt class="verbatim">review-lean</tt>, <tt class="verbatim">review-math</tt>,
+      <tt class="verbatim">integrate</tt>, and <tt class="verbatim">tooling</tt>. Explanation
+      tasks require the relevant proof details. Reviews are distinct tasks
+      with different owners. Several authors can work on different units, and
+      reviewers can work on finished units concurrently.
+    </p>
+    <h2 id="auto-2"><a id="claim-protocol"></a>Claim protocol<span style="margin-left: 1em"></span></h2>
+    <p>
+      Contributors are trusted to claim bounded work themselves. No manual
+      grant or renewal approval is required. Use this protocol:
+    </p>
+    <ol>
+      <li>
+        <p>
+          Read the issue, all comments, linked PRs, and overlapping
+          tasks/outputs. Check that the scope is ready and there is no
+          unexpired claim on it. Inspect prior work before taking over an
+          expired or released claim.
+        </p>
+      </li>
+      <li>
+        <p>
+          Post the following comment; its URL is the claim identifier:
+        </p>
+      </li>
+    </ol>
+    <pre class="verbatim" xml:space="preserve">
+CLAIM
+Session: &lt;GitHub account&gt;-&lt;agent&gt;-&lt;unique suffix&gt;
+Scope: &lt;task and exact owned output paths&gt;
+Until: &lt;YYYY-MM-DD HH:MM UTC; at most 24 hours from posting&gt;
+Plan: &lt;two or three sentences&gt;</pre>
+    <ol>
+      <li>
+        <p>
+          Re-read the live issue and overlapping tasks immediately after
+          posting. If no conflicting earlier claim exists, begin. Update the
+          assignee and <tt class="verbatim">status:claimed</tt> label if you have
+          permission; otherwise the comment suffices.
+        </p>
+      </li>
+    </ol>
+    <p>
+      The earliest valid claim comment wins an accidental race for overlapping
+      scope, including across issues. Use GitHub's creation timestamp,
+      breaking ties by numeric comment ID. The later claimant posts a release
+      and chooses disjoint work. If the scope or ordering is ambiguous, pause
+      the overlapping work and resolve it in the issues with the other
+      contributor or coordinator. A GitHub comment is not an atomic lock; the
+      post-claim recheck is essential. A label, branch, or old request alone
+      never establishes ownership.
+    </p>
+    <p>
+      Recheck on starting, resuming and submitting. Before expiry, the holder
+      may post <tt class="verbatim">CLAIM RENEWED</tt>, naming the session, original
+      claim URL, unchanged scope and a new UTC expiry at most 24 hours ahead,
+      after checking for conflicts. After expiry, make a new claim and check
+      for a successor first. A renewal cannot displace an intervening valid
+      claim. Progress comments and draft PRs do not renew a claim. Keep the
+      comment history; post corrections instead of silently editing expiries.
+    </p>
+    <p>
+      On completion, release, or inability to continue, post <tt class="verbatim">CLAIM
+      RELEASED</tt> with the claim URL and a branch/PR handoff. Only claim
+      work you can begin now. Do not take over a live claim without the
+      holder's release. Review remains independent; self-claiming does not
+      permit self-approval, merging, or publication.
+    </p>
+    <p>
+      If GitHub access is unavailable, have the contributor post the prepared
+      comment and relay the live conflict check before substantial work. A
+      local note is not a claim. Maintainer-directed setup and bounded
+      maintenance remain exempt from the queue-claim requirement.
+    </p>
+    <h3 id="auto-3"><a id="transition-from-manual-grants"></a>Transition from manual grants<span style="margin-left: 1em"></span></h3>
+    <p>
+      Existing unexpired grants retain their scope and expiry. Their holders
+      can renew under this protocol. Pending <tt class="verbatim">CLAIM REQUEST</tt>
+      comments do not silently become claims: post a new <tt class="verbatim">CLAIM</tt>
+      and recheck. This repository-wide policy supersedes legacy instructions
+      to wait for a coordinator's grant in existing issues and task drafts;
+      their mathematical prerequisites, exclusions and acceptance criteria
+      still apply. No retroactive change to claim ordering is implied.
+    </p>
+    <h2 id="auto-4"><a id="keep-communications-useful"></a>Keep communications useful<span style="margin-left: 1em"></span></h2>
+    <p>
+      Issue comments should contain findings and decisions, not token-by-token
+      activity. Use qualified declaration names in comments so other agents
+      can search them. Link related issues instead of copying discussions.
+      Record durable conclusions in the relevant proof unit or <tt class="verbatim">Bots/</tt>
+      note; chat history alone is not the project knowledge base. Recheck
+      conclusions against the source when reusing an old note.
+    </p>
+    <p>
+      Issue scope changes require a recorded decision and agreement from the
+      active holder. Deliberately duplicated work, such as independent
+      verification, must be labelled as such and budgeted explicitly. Do not
+      have every agent rebuild the full project: share versioned audit logs
+      and immutable build artifacts where supported.
+    </p>
+    <h2 id="auto-5"><a id="scaling-coordination"></a>Scaling coordination<span style="margin-left: 1em"></span></h2>
+    <p>
+      Keep a small ready queue and assign area coordinators as the
+      mathematical organization stabilizes. Coordinators resolve disputed
+      overlaps, help split tasks, and arrange independent reviews; they are
+      not an approval bottleneck for claims. There is no automatic claim bot.
+      If concurrency makes manual conflict checks unreliable, add and test a
+      bot that serializes self-claims without introducing per-claim human
+      approval. GitHub workflow concurrency alone is not a lock.
+    </p>
+  </body>
+</html>

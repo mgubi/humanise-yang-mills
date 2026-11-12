@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Provisional proof-unit plan &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../index.html">Home</a><font class="ym-sep">&middot;</font><a href="public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><font class="ym-here">Unit plan</font><font class="ym-sep">&middot;</font><a
+      href="index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Provisional proof-unit plan</h1><a id="provisional-proof-unit-plan"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Background and interface packages</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Main-spine proof units</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Focused companion units</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Recommended first wave</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Known limitations of this pass</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">4</a>
+      </p>
+    </div>
+    <p>
+      This plan adapts the 32 source clusters developed in Scott Armstrong's
+      <a href="https://github.com/scottnarmstrong/yang-mills-informalization">Yang-Mills informalization project</a> into mathematical work
+      packages for this monograph. The compiled-Lean source map was inspected
+      at commit <a href="https://github.com/scottnarmstrong/yang-mills-informalization/tree/8f3c7ccaeabb17b0f928bc1a2e75328691de3032"><tt class="verbatim">8f3c7ccaeabb17b0f928bc1a2e75328691de3032</tt></a>;
+      see the <a href="external-map.html">32-cluster disposition and evidence</a>. The IDs below
+      are temporary planning labels. Canonical <tt class="verbatim">YM-&lt;issue&gt;</tt>
+      IDs are created only when bounded GitHub issues exist.
+    </p>
+    <p>
+      One row should normally become one explanation issue, except where a
+      literature task resolves the result or the split notes require finer
+      interfaces. Dependencies are conceptual and provisional; they are not a
+      claim about every Lean constant edge.
+    </p>
+    <h2 id="auto-1"><a id="background-and-interface-packages"></a>Background and interface packages<span style="margin-left: 1em"></span></h2>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>ID</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Package</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>External clusters</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Treatment</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">BG-01</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Lattice gauge theory, compact matrix groups, Wilson
+        measure</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">I.1</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">State conventions; cite standard lattice/gauge background;
+        prove project-specific facts only</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">BG-02</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Field labels, Wilson-family data, marker algebra and
+        polymer estimates</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">II.1&ndash;II.2</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Check the substantive quotient, combinatorial and norm
+        results before deciding what may be cited or compressed</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">BG-03</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Analytic toolkit</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.16</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Shared literature tasks for standard analysis; isolate
+        genuinely project-specific variants</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">BG-04</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Order of constants and RG schedule</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.2</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Parameter ledger/technical appendix; each consuming proof
+        cites the choices it needs</td>
+      </tr></tbody>
+    </table>
+    <p>
+      Background packages can have audit and literature issues without
+      becoming standalone proof chapters. Their definitions are prerequisites
+      for the proof units below.
+    </p>
+    <h2 id="auto-2"><a id="main-spine-proof-units"></a>Main-spine proof units<span style="margin-left: 1em"></span></h2>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>ID</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Mathematical output</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>External clusters</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Depends on</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Split or merge guidance</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-01</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Block-spin map and symmetric gauge fixing</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.1</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">BG-01&ndash;BG-04</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Keep as the geometric entry to one RG step</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-02</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Free lattice kernels and covariance estimates</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.3</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">BG-01, BG-03, PU-01</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Search literature for standard Green-kernel estimates;
+        retain lattice-specific bounds</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-03</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Change of Gaussian sector and window law</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.4</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-01, PU-02, BG-03</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Large cluster: split determinant identities from
+        window/change-of-measure estimates if interfaces separate cleanly</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-04</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Polymer cluster expansion and connected dependence</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.5, III.8</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">BG-02, PU-01, PU-03</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Fold III.8 here unless its four selected statements form a
+        reusable theorem</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-05</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Stationary background for the effective action</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.6</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-01&ndash;PU-03</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Keep distinct from fourth-order matching</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-06</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Fourth-order Wilson-energy matching</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.7</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-02, PU-03, PU-05</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Adjacent to PU-05, but a distinct proof job</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-07</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Marginal coupling flow and reset</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.9, VII.5</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-04&ndash;PU-06, BG-04</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Separate the flow/reset argument from VII.5's logarithmic
+        law; its public regularity use is at the bare-coupling stage</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-08</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Nonlinear RG decomposition and activity update</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.10</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-03&ndash;PU-07</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Proposed interface: identify the updated activity and the
+        hypotheses passed to the next bound</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-09</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Irrelevant-term and large-field estimates</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.10</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-08, BG-03&ndash;BG-04</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Proposed interface: state the induction norm, contraction,
+        and large-field output explicitly</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-10</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Uniform constants and closure of the RG induction</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.10, III.2</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-08&ndash;PU-09</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Proposed interface: determine which parameter choices close
+        the step and are restored by reset</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-11</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Interacting rank and free-Gaussian comparison</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.11</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-03, PU-08&ndash;PU-10</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Identify the rank/free-field output and its overlap with
+        stress-tensor construction before splitting</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-12</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Determinant budgets</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.11</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-03, PU-08&ndash;PU-10</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Audit whether the per-site budget is independently stated
+        and whether it precedes the rank comparison in PU-11</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-13</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Volume-uniform estimates and spacing limit</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.12, III.15</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-07&ndash;PU-12</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Fold observable/remainder cost accounting here unless it
+        supplies a reusable theorem</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-15</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Public construction run, its Wilson family and ultraviolet
+        rate</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.14, VIII.1</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-05&ndash;PU-13</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Identify the selected run and its funded bounds; the
+        alternative family in III.13 is not this public family</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-16</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Infinite-volume subsequence and Euclidean axioms</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">IV.1</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-13, PU-15</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Preserve quantifier order: arbitrary requested volume
+        sequence, then chosen refinement/subsequence</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-17</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Phase decomposition of the limit</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">V.1</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-16</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Keep separate while phase hypotheses and measurability are
+        audited</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-18</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Osterwalder-Schrader reconstruction</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">V.2</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-16&ndash;PU-17, BG-03</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Priority literature match; check every OS hypothesis
+        against this hierarchy</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-19</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Reconstruction for every phase</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">V.3</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-17&ndash;PU-18</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Merge with PU-18 only if it is a routine phasewise
+        application</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-20</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Ward identities, rotations, and conserved stress
+        tensor</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.11, V.3, VI.1</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-16&ndash;PU-19</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.11 and V.3 also contain stress-tensor outputs; audit
+        the conceptual input from PU-11 and assign disjoint statements before
+        prose work</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-21</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Free Maxwell stress tensor and local Ward charge</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">VI.2</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-16, PU-20</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Check the Ward normalization and separate it from VI.2's
+        interacting comparison</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-22</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Free Maxwell data and the short-distance comparison</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">VI.2, VII.1, VII.6, VIII.1</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-06, PU-11, PU-16, PU-20&ndash;PU-21</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">VII.1 supplies the free side; VI.2 supplies the interacting
+        comparison, VIII.1 assembles it, and VII.6 tunes arbitrary scales</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-23</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Selected-phase trace law and exclusion of finite free
+        profiles</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">VII.2, VII.6, VIII.1</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-07, PU-11, PU-16, PU-20&ndash;PU-22, PU-24</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Audit the exact trace bridge and use of Gram positivity; do
+        not infer a mass gap</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-24</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Free Wick algebra and reflected Gram positivity</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">VII.3</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">BG-02, PU-16, PU-21</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">This supplies a free-field detector; the concluding nonfree
+        statements are in VII.2 and VIII.1</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-25</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Pointwise OPE and weighted joint estimate</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">VII.4</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-11, PU-16&ndash;PU-19</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Include <tt class="verbatim">YM.Independent.Core.point</tt>; split
+        foundation from pointwise consequence if needed</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-26</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Contact extensions</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">VII.4</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-16&ndash;PU-17, PU-25</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Include <tt class="verbatim">YM.Contacts.Solstice.celestial</tt>;
+        retain its stated limitations</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-27</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Public theorem assembly</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">VIII.1</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-13, PU-15&ndash;PU-26 as required by the audited
+        statement</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Explain bridges and quantifier matching; do not repeat
+        prior proofs</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-28</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Simplicity of SU(2) and concrete specialization</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">VIII.1 plus SU(2) files</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-27, BG-01</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Prefer a checked literature citation for simplicity of the
+        project's concrete matrix group/Lie algebra</td>
+      </tr></tbody>
+    </table>
+    <p>
+      The former PU-14 proposal has been withdrawn: Scott's revised III.13
+      outline identifies that family as an alternative construction for <tt
+      class="verbatim">habitat</tt>. Its proposed work now belongs in CP-04; PU-15
+      covers the Wilson family selected for public assembly. The broad
+      dependencies in the final rows must be narrowed after exact statement
+      audit. In particular, the external source graph has implementation
+      cycles between clusters; the table above records the intended
+      mathematical order, not all imports.
+    </p>
+    <h2 id="auto-3"><a id="focused-companion-units"></a>Focused companion units<span style="margin-left: 1em"></span></h2>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>ID</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Mathematical output</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Audited headline anchors</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Relation to main spine</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">CP-01</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Finite-leading position reading and four-grade
+        normalization</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Pert.Position.finite_leading</tt>, <tt class="verbatim">YM.Pert.Position.normalized_four</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Uses ultraviolet calibration; exact use by the public
+        theorem remains to be checked</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">CP-02</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Finite-regulator parity and low-order even/odd algebra</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Pert.Parity.parityEndpoint</tt>, <tt class="verbatim">YM.Pert.Parity.low_read</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Follows CP-01; keep finite-regulator and asymptotic claims
+        distinct</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">CP-03</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Asymptotic law for the trajectory's effective coupling</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Pert.Asymptotics.comparison</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">VII.5 states this for a constructed family and arbitrary
+        admissible level/volume sequences; it is a separate unused corollary,
+        while VII.5's <tt class="verbatim">zeroUp_bound</tt> feeds the public regularity
+        clause through VIII.1</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">CP-04</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Alternative Sharp-Gram family and input/output
+        estimates</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.SharpGram.habitat</tt>, <tt class="verbatim">YM.SharpGram.inletFirst</tt>,
+        <tt class="verbatim">YM.SharpGram.outletFirst</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.13 constructs the alternative common family for <tt
+        class="verbatim">habitat</tt>; identify any bridge to the public run before
+        reuse. VII.6's <tt class="verbatim">inletFirst</tt> is a small fixed-field
+        component, while its Sky scaling argument belongs to PU-22/PU-23</td>
+      </tr></tbody>
+    </table>
+    <p>
+      Companion units receive the same correspondence and mathematical
+      reviews. They should not silently expand the conclusion of <tt class="verbatim">YangMills.jointExistence</tt>.
+    </p>
+    <h2 id="auto-4"><a id="recommended-first-wave"></a>Recommended first wave<span style="margin-left: 1em"></span></h2>
+    <p>
+      Open these bounded tasks before distributing the large RG units:
+    </p>
+    <ol>
+      <li>
+        <p>
+          <strong>Build and axiom audit.</strong> Reproduce the pinned build,
+          regenerate the usage inventories, and run supported transitive axiom
+          checks for all 17 roots.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Public statement audit.</strong> Check the external <tt
+          class="verbatim">statement.md</tt> line by line against the elaborated public
+          definitions and record the exact theorem scope.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>External-map synchronization.</strong> Use the pinned
+          compiled-Lean map and its <a href="external-map.html">32-cluster disposition</a>; link
+          current unit outlines and key statements from task issues without
+          copying generated TSVs.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Literature searches.</strong> Start with SU(2) simplicity,
+          OS reconstruction, Gaussian/cluster expansion tools, and standard
+          limit/compactness results.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Two pilot units.</strong> Use PU-28 (SU(2)) and CP-03 (the
+          effective-coupling asymptotic) to calibrate citation,
+          source-correspondence, and review standards.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Main-spine interface audit.</strong> Trace the exact handoff
+          from PU-15 through PU-19 before assigning the very large nonlinear
+          RG proof units.
+        </p>
+      </li>
+    </ol>
+    <p>
+      Only after those tasks settle the interfaces should coordinators create
+      canonical unit directories and distribute PU-08&ndash;PU-12 among
+      several writers.
+    </p>
+    <h2 id="auto-5"><a id="known-limitations-of-this-pass"></a>Known limitations of this pass<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          No Lean build, proof replay, or axiom audit was performed here.
+        </p>
+      </li>
+      <li>
+        <p>
+          The external map is same-revision and now derived from compiled
+          Lean. All 32 pages have AI-written outlines at differing stages,
+          with open points. Their <tt class="verbatim">checked</tt> or <tt class="verbatim">edited</tt>
+          labels do not substitute for this project's independent
+          correspondence and mathematical reviews.
+        </p>
+      </li>
+      <li>
+        <p>
+          No literature match has yet been independently accepted in <tt
+          class="verbatim">blueprint/background/</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The splits inside III.4, III.10, and III.11 are mathematical
+          recommendations; their exact statement interfaces and overlap with
+          other packages remain tasks for the next audit. The compiled graph
+          corrects source-unit links but does not determine a topological
+          expository order.
+        </p>
+      </li>
+      <li>
+        <p>
+          The allocation includes alternative constructions. In particular,
+          III.13's common family is not identified with the family of the
+          public run in III.14.
+        </p>
+      </li>
+      <li>
+        <p>
+          The final dependency closure of <tt class="verbatim">YangMills.jointExistence</tt>
+          must be distinguished from the union of all 17 release-root
+          closures.
+        </p>
+      </li>
+    </ul>
+  </body>
+</html>

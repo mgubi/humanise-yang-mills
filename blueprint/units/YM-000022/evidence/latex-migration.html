@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>LaTeX migration evidence &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <div class="ym-unit-nav">
+      <span class="ym-part"><a href="../correspondence.html">YM-000022: Logarithmic asymptotics of the running
+      inverse coefficient (draft)</a><font class="ym-sep">&middot;</font><a href="index.html">evidence</a><font
+      class="ym-sep">&middot;</font><a href="../proof.html">proof</a></span>
+    </div>
+    <p>
+      <h1>LaTeX migration evidence</h1><a id="latex-migration-evidence"></a>
+    </p>
+    <p>
+      11 November 2026; maintainer-directed maintenance in <a href="https://github.com/hairer/humanise-yang-mills/issues/24">issue
+      #24</a>, session <tt class="verbatim">hairer-codex-workflow-20261111</tt>. Agent
+      assistance: Codex; no new subagent work.
+    </p>
+    <p>
+      The mathematical text now has one authoritative home: <tt class="verbatim">manuscript/pilots/running-coupling.tex</tt>,
+      included by <tt class="verbatim">manuscript/main.tex</tt>. The old <tt class="verbatim">proof.md</tt>
+      and pilot correspondence page are redirects. The former pilot's
+      source/build record is archived in <tt class="verbatim">pilot-provenance.md</tt>;
+      those old validation counts are not results of this migration.
+    </p>
+    <p>
+      The existing LaTeX pilot's gauge normalization, elementary positivity
+      calculation, spacing argument and interpretation are retained. The
+      uniform extraction is now an explicit proposition, followed by the
+      detailed tail-positivity and limit-rule application from YM-000022. The
+      running estimate remains an input. Its existence is not proved here.
+      This consolidation is draft mathematical content and still requires
+      independent review, including the inherited positivity argument.
+    </p>
+    <p>
+      <tt class="verbatim">unit.json</tt> now lists the section, preamble and
+      bibliography as <tt class="verbatim">manuscript</tt> inputs. The checker hashes
+      those paths and contents plus <tt class="verbatim">correspondence.md</tt> and the
+      existing mathematical metadata. Both review entries remain null. No
+      approval was refreshed or invented. Changes to any listed support file
+      conservatively invalidate review; reviewers must check the explicit
+      input list is complete.
+    </p>
+    <h2 id="auto-1"><a id="commands-and-results"></a>Commands and results<span style="margin-left: 1em"></span></h2>
+    <p>
+      In the isolated checkout <tt class="verbatim">/private/tmp/ym-latex-self-claims-20261111</tt>:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">python3 -m unittest discover -s tests</tt>: 22 tests
+          passed. New regressions cover manuscript/support edits, changed
+          input lists, renamed/missing/empty files, forbidden paths/formats
+          and escaping symlinks. Existing review/ownership/graph tests remain
+          in place.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">python3 scripts/check_blueprint.py</tt>: passed, one
+          unit; not a mathematical check.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">python3 scripts/check_blueprint.py --fingerprint
+          YM-000022</tt>: generated the current digest; no acceptance
+          attached.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">git diff --check</tt>: passed after removing one trailing
+          blank line.
+        </p>
+      </li>
+      <li>
+        <p>
+          Changed Markdown relative links were checked with a Python <tt
+          class="verbatim">re</tt>/<tt class="verbatim">pathlib</tt> scan; all resolve after
+          creating this evidence record.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">git diff --name-only -- Lean</tt>: no changes.
+        </p>
+      </li>
+    </ul>
+    <p>
+      From <tt class="verbatim">manuscript/</tt>:
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+mkdir -p build
+latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex
+pdftoppm -scale-to 1400 -png build/main.pdf build/page</pre>
+    <p>
+      Build succeeded, producing two pages. The initial BibTeX warning about
+      an empty year was resolved by recording <tt class="verbatim">n.d.</tt> for the
+      undated HTML edition; the inspected date remains explicit. The final <tt
+      class="verbatim">.log</tt> and <tt class="verbatim">.blg</tt> have no warnings, undefined
+      references, or overfull/underfull boxes. Both pages were visually
+      inspected for readability and layout; the updated bibliography page was
+      inspected again. Build products stay under the ignored <tt class="verbatim">manuscript/build/</tt>
+      directory.
+    </p>
+    <p>
+      The local build used the available TeX distribution. The added Ubuntu CI
+      build has not been run locally. No new Lean build, elaboration, axiom
+      query or kernel replay was performed during this workflow migration;
+      existing evidence is retained and distinguished from current
+      structural/rendering checks. Independent mathematical and
+      Lean-correspondence review remain outstanding.
+    </p>
+    <div class="ym-unit-nav">
+      <span class="ym-part"><a href="../correspondence.html">YM-000022: Logarithmic asymptotics of the running
+      inverse coefficient (draft)</a><font class="ym-sep">&middot;</font><a href="index.html">evidence</a><font
+      class="ym-sep">&middot;</font><a href="../proof.html">proof</a></span>
+    </div>
+  </body>
+</html>

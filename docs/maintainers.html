@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Launching and maintaining the project &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Launching and maintaining the project</h1><a id="launching-and-maintaining-the-project"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Prepare GitHub</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>First tasks after release</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Build the index once</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Integrate and maintain</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">3</a>
+      </p>
+    </div>
+    <h2 id="auto-1"><a id="prepare-github"></a>Prepare GitHub<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Follow the <a href="access.html">access guide</a>: individual accounts, forks for
+          ordinary public contributors, and elevated roles only for trusted
+          coordinators/integrators. Keep owner credentials private. Consider
+          organisation ownership when a separate Triage role would help
+          distribute coordination without granting content write access.
+        </p>
+      </li>
+      <li>
+        <p>
+          Choose licences for original exposition and tooling before inviting
+          contributions. Preserve the upstream formalisation's licence and
+          notices separately.
+        </p>
+      </li>
+      <li>
+        <p>
+          Push this scaffold to the default branch. Enable Issues and Actions.
+          The included workflow checks repository structure; it does not build
+          or certify the Lean proof.
+        </p>
+      </li>
+      <li>
+        <p>
+          Protect <tt class="verbatim">main</tt>: require PR review and the <tt class="verbatim">Blueprint
+          structure</tt> check, require branches to be up to date before
+          merging, and dismiss stale approvals. This matters when two
+          individually valid PRs claim the same declaration.
+        </p>
+      </li>
+      <li>
+        <p>
+          Create the labels below. Name coordinators in task issues and
+          announce changes of coordinator explicitly. Contributors self-claim
+          by commenting without manual approval; coordinators need
+          collaborator access on a personal repository, or Triage or higher on
+          an organisation repository. See the <a href="access.html">access guide</a>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Keep a small ready queue and invite a pilot group. Expand after
+          reviewing one complete unit and adjusting the task size and proof
+          standard.
+        </p>
+      </li>
+      <li>
+        <p>
+          Add a Project with saved views of the issue queue, following <a
+          href="github-features.html">Projects and Agents</a>. Keep hosted agent use optional and
+          test it on a bounded pilot before dispatching larger mathematical
+          tasks.
+        </p>
+      </li>
+    </ul>
+    <p>
+      Suggested labels:
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Group</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Labels</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Status</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">status:proposed</tt>, <tt class="verbatim">status:ready</tt>,
+        <tt class="verbatim">status:claimed</tt>, <tt class="verbatim">status:blocked</tt>, <tt
+        class="verbatim">status:in-review</tt>, <tt class="verbatim">status:done</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Kind</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">kind:audit</tt>, <tt class="verbatim">kind:map</tt>, <tt
+        class="verbatim">kind:literature</tt>, <tt class="verbatim">kind:explain</tt>, <tt class="verbatim">kind:review-lean</tt>,
+        <tt class="verbatim">kind:review-math</tt>, <tt class="verbatim">kind:integrate</tt>, <tt
+        class="verbatim">kind:tooling</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Priority</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">priority:critical</tt>, <tt class="verbatim">priority:normal</tt></td>
+      </tr></tbody>
+    </table>
+    <p>
+      Issue forms and the PR template are included. The labels, branch rules,
+      live issues, and GitHub settings must be configured separately; creating
+      files locally does not activate those settings.
+    </p>
+    <h2 id="auto-2"><a id="first-tasks-after-release"></a>First tasks after release<span style="margin-left: 1em"></span></h2>
+    <p>
+      Create these as separate issues, with concrete outputs and named
+      coordinators. Do not invent theorem names or mathematical divisions
+      before inspecting the source.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Task</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Deliverable</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Prerequisites</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Import and reproduce</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Fixed upstream snapshot, provenance, build recipe and logs
+        in <tt class="verbatim">source/</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Release and redistribution terms</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Audit target statements</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Exact final declarations, definitions, hypotheses, scope
+        and axiom report</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Imported source; build for full audit</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Extract dependency data</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Reproducible declaration inventory and target dependency
+        closure</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Pinned environment and identified targets</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Identify reusable literature results</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Checked references, matched hypotheses, and shared
+        background notes</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Identified mathematical interfaces</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Design the proof map</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Conceptual units, literature interfaces, prerequisites,
+        notation, and first ready issues</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Statement audit; dependency data; initial literature
+        search</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Develop a pilot proof unit</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Detailed proof using applicable references, with
+        independent Lean/mathematical reviews</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Stable interface and a claim</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Assemble an initial chapter</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">LaTeX exposition with explicit dependency status</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Precise local interfaces; inputs may remain draft</td>
+      </tr></tbody>
+    </table>
+    <p>
+      Static statement inspection can start while a central build runs. Avoid
+      distributing hundreds of explanation tasks before the target statement
+      and proof interfaces have been checked. Develop mapping and LaTeX
+      writing together: reuse the shared dependency index and refine it as
+      sections are written, without waiting for a complete blueprint.
+    </p>
+    <h2 id="auto-3"><a id="build-the-index-once"></a>Build the index once<span style="margin-left: 1em"></span></h2>
+    <p>
+      Use the released project's pinned Lean version to inspect its compiled
+      environment. Extract fully qualified declarations, types, source
+      locations where available, and references from both declaration types
+      and values. Retain provenance and record missing/opaque information. A
+      module import graph or text search is a navigation aid, not an exact
+      declaration dependency graph; automation can insert dependencies not
+      visible in tactic text.
+    </p>
+    <p>
+      Start with the final declarations' transitive closure. Distinguish
+      mathematical results from generated helpers, instances, and routine
+      library machinery. Keep the raw graph reproducible, then curate a much
+      smaller conceptual graph in <tt class="verbatim">blueprint/</tt>. Classify groups
+      into results to prove, existing results to cite and apply, formal
+      scaffolding to suppress, and unresolved cases. Include project-local
+      helper code in this assessment: standard mathematics may have been
+      formalised from scratch. Search the literature before deciding to
+      reconstruct a proof. Once an applicable literature result is matched to
+      its formal interface, its internal implementation need not generate
+      further exposition tasks. Retain the full graph for source audit. Use
+      stable names, not line ranges, as identities. Store large generated
+      indexes and build logs as revision-labelled artifacts with checksums;
+      keep their provenance, generation commands, and locations in Git.
+    </p>
+    <p>
+      The extractor is intentionally a post-release task: the correct
+      implementation depends on the actual toolchain, project layout, and
+      available declaration metadata.
+    </p>
+    <h2 id="auto-4"><a id="integrate-and-maintain"></a>Integrate and maintain<span style="margin-left: 1em"></span></h2>
+    <p>
+      Maintain an outline and glossary through dedicated tasks. Authors link
+      to shared definitions instead of redefining them. State the intended
+      reader's prerequisites in the outline. Integrators check that every
+      substantive step has a detailed proof or an applicable literature
+      reference, hypotheses match at interfaces, and all remaining gaps are
+      visible. Routine formal helper coverage is not a completion metric.
+      Local reviews are not a substitute for this global check.
+    </p>
+    <p>
+      Before changing an accepted dependency statement, identify its reverse
+      dependencies and open re-review tasks for affected uses. This includes
+      changing the statement or applicability of a shared literature result.
+      The local fingerprint checker does not automatically determine whether a
+      changed dependency invalidates a downstream proof.
+    </p>
+    <p>
+      Keep upstream frozen during an explanation wave. Import updates in a
+      dedicated PR, compare declarations and dependencies, and explicitly
+      migrate or invalidate affected explanations and reviews. Do not silently
+      replace the source beneath contributors. Record mathematical/editorial
+      decisions in Git and link the issue that established them.
+    </p>
+    <p>
+      Monitor reviewed units, unresolved gaps, high-impact prerequisites, and
+      review backlog. If review is the bottleneck, recruit reviewers before
+      adding more writers.
+    </p>
+  </body>
+</html>

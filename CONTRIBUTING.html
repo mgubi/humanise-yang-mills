@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Contributing &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="index.html">Home</a><font class="ym-sep">&middot;</font><a href="blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><font class="ym-here">Contributing</font>
+    </div>
+    <p>
+      <h1>Contributing</h1><a id="contributing"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Before starting</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Claim a task</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Work in isolation</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Write a proof unit</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Submit and hand off</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Credit and reuse</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">3</a>
+      </p>
+    </div>
+    <p>
+      The unit of contribution is a bounded proof, literature search, source
+      audit, review, or tooling task. The final document should give detailed
+      proofs at the level of a research monograph. Useful contributions
+      include locating an applicable published theorem, checking its
+      hypotheses, or identifying a gap in an interpretation.
+    </p>
+    <h2 id="auto-1"><a id="before-starting"></a>Before starting<span style="margin-left: 1em"></span></h2>
+    <p>
+      For a public repository, use your own GitHub account and fork; ordinary
+      contributors do not need collaborator access. Authenticate your agent
+      under your account, and never ask for or use the project owner's token.
+      See the <a href="docs/access.html">access guide</a> for login options, coordinator roles,
+      and private repositories.
+    </p>
+    <p>
+      Read <a href="AGENTS.html">AGENTS.md</a>, the <a href="docs/coordination.html">coordination rules</a>, and
+      the <a href="docs/proof-standard.html">proof standard</a>. Check the task issue, existing notes,
+      and open PRs before investing substantial compute. Read <a href="source/index.html">source/README.md</a>
+      for the source version and build evidence.
+    </p>
+    <p>
+      Use an agent session identifier such as <tt class="verbatim">alice-codex-01</tt>.
+      The contributor remains responsible for the submission. Multiple
+      sessions under one GitHub account must have distinct identifiers and
+      claims. Select a task that fits a single session; split large tasks at
+      mathematical interfaces rather than arbitrary line counts.
+    </p>
+    <h2 id="auto-2"><a id="claim-a-task"></a>Claim a task<span style="margin-left: 1em"></span></h2>
+    <p>
+      On a ready issue, check for overlapping work, post the self-claim
+      described in <a href="docs/coordination.html">coordination.md</a>, and recheck the live
+      discussion. You may then begin without a coordinator's approval.
+      Contributors without write access claim by commenting too; assignments
+      and labels are only summaries. For a new bounded task, publish its scope
+      and prerequisites before claiming it.
+    </p>
+    <p>
+      Use the <a href="docs/agent-prompts.html">agent prompt</a> to authorise your agent to post
+      task-related GitHub comments and open a PR on your behalf. If it cannot
+      access GitHub, post its prepared messages yourself.
+    </p>
+    <h2 id="auto-3"><a id="work-in-isolation"></a>Work in isolation<span style="margin-left: 1em"></span></h2>
+    <p>
+      Fork the repository, clone your fork, and add the canonical repository
+      as <tt class="verbatim">upstream</tt>. In a local clone with that remote, for
+      example:
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+git fetch upstream
+git worktree add -b codex/issue-123-session-01 ../ym-123-session-01 upstream/main</pre>
+    <p>
+      Replace <tt class="verbatim">123</tt> and the session suffix with your actual task
+      and session. The branch prefix is only a convention. Do not run multiple
+      agents in one working directory or share a writable Lean build directory
+      between their worktrees. Prefer the upstream project's supported
+      dependency cache mechanism.
+    </p>
+    <h2 id="auto-4"><a id="write-a-proof-unit"></a>Write a proof unit<span style="margin-left: 1em"></span></h2>
+    <p>
+      First check the shared <a href="blueprint/background/index.html">literature notes</a> and search for
+      existing results that supply the required steps. Use a precise reference
+      when it applies; prove the remaining steps in detail. A theorem
+      formalised from scratch in the upstream code may still be standard
+      mathematics. Its Lean implementation does not by itself justify a new
+      exposition task.
+    </p>
+    <p>
+      The canonical extraction issue supplies the stable unit ID: issue 123
+      becomes <tt class="verbatim">YM-000123</tt>. Later revision and review issues
+      refer to that existing unit. Use <tt class="verbatim">templates/proof-unit/</tt>:
+      place the mathematical section in <tt class="verbatim">manuscript/</tt>, and put
+      <tt class="verbatim">unit.json</tt> and <tt class="verbatim">correspondence.md</tt> in <tt
+      class="verbatim">blueprint/units/YM-000123/</tt>. The metadata's <tt class="verbatim">manuscript</tt>
+      list names the section and all local mathematical support files (macros,
+      references, included text). Replace every placeholder. Write the proof
+      once, in LaTeX, and keep source/audit details in the correspondence
+      record. Follow <a href="manuscript/index.html">the manuscript build instructions</a>.
+    </p>
+    <p>
+      Start a section once its own interface is precise. Earlier inputs may
+      still be drafts or outstanding obligations: state their exact content
+      and status. A complete blueprint is not a prerequisite for writing;
+      final acceptance still requires review and a check of the whole
+      argument's dependencies.
+    </p>
+    <p>
+      The metadata names the declarations this unit owns, its dependencies,
+      source revision, and review state. Other units cite it instead of
+      explaining those declarations again. A source path identifies the
+      location; the qualified name identifies the declaration. Consult <a
+      href="blueprint/index.html">blueprint/README.md</a>.
+    </p>
+    <p>
+      Post a useful checkpoint on the issue at least every four hours of
+      active work and before stopping. Include exact findings, blockers, and a
+      branch or draft PR. Post a renewal with a new UTC expiry after
+      rechecking for overlap if needed. A progress comment alone does not
+      renew a claim.
+    </p>
+    <h2 id="auto-5"><a id="submit-and-hand-off"></a>Submit and hand off<span style="margin-left: 1em"></span></h2>
+    <p>
+      Run the structural checker, build changed LaTeX and inspect its
+      rendering, and run relevant, documented Lean checks. Push your branch
+      and open a focused PR using the supplied template. Link the issue with
+      <tt class="verbatim">Refs #123</tt>; do not automatically close the task when an
+      unreviewed draft merges.
+    </p>
+    <p>
+      On the issue, report the PR, what is established, what remains
+      uncertain, and what the next contributor should do. Put longer reusable
+      findings in a uniquely named <tt class="verbatim">Bots/notes/</tt> file and link
+      it. Small incomplete drafts can be merged as drafts when they preserve
+      useful work; they do not count as finished proof units.
+    </p>
+    <p>
+      Review the mathematics separately from its correspondence to Lean.
+      Reviewers record the precise content fingerprint and supporting
+      evidence. The coordinator closes a task only when its stated acceptance
+      criteria are met.
+    </p>
+    <h2 id="auto-6"><a id="credit-and-reuse"></a>Credit and reuse<span style="margin-left: 1em"></span></h2>
+    <p>
+      List human contributors and agent assistance in the PR and proof unit.
+      Cite external mathematical sources precisely. Preserve upstream notices.
+      The maintainer must select the project's code and exposition licences
+      before soliciting public contributions; this scaffold does not make that
+      choice on contributors' behalf. When using source clusters, declaration
+      assignments, selected-statement summaries, or glossary material from
+      Scott Armstrong's <a href="https://github.com/scottnarmstrong/yang-mills-informalization">Yang-Mills informalization project</a>,
+      credit that project in the task, proof unit, or resulting manuscript
+      note as appropriate.
+    </p>
+  </body>
+</html>

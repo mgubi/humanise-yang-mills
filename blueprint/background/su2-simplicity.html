@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Real Lie-algebra simplicity for the defining SU(2) representation
+    &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Real Lie-algebra simplicity for the defining SU(2)
+      representation</h1><a id="real-lie-algebra-simplicity-for-the-defining-su2-representation"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Result to be used</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Mathematical reference</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Match to the formalisation</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Application and remaining proof obligations</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-4">4</a>
+      </p>
+      <p>
+        Identify the complexification <span style="margin-left: 5mm"></span> <a href="#auto-5">4</a>
+      </p>
+      <p>
+        Transfer the ideal conclusion back to real scalars <span style="margin-left: 5mm"></span>
+        <a href="#auto-6">4</a>
+      </p>
+      <p>
+        Check the nonabelian clause and boundary of the application <span
+        style="margin-left: 5mm"></span> <a href="#auto-7">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Search and unresolved questions</b> <span style="margin-left: 5mm"></span> <a href="#auto-8">5</a>
+      </p>
+      <p>
+        Inspection and validation evidence <span style="margin-left: 5mm"></span> <a href="#auto-9">5</a>
+      </p>
+    </div>
+    <ul>
+      <li>
+        <p>
+          Literature task: <a href="https://github.com/hairer/humanise-yang-mills/issues/5">issue #5</a>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Source revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Status: source checked; draft application argument, not
+          independently accepted.
+        </p>
+      </li>
+      <li>
+        <p>
+          Contributor and agent assistance: TrishenGunaratnam; research and
+          drafting assisted by Codex, session <tt class="verbatim">TrishenGunaratnam-codex-01</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Independent review: pending; no reviewed commit or review link yet.
+        </p>
+      </li>
+      <li>
+        <p>
+          Claim: <a href="https://github.com/hairer/humanise-yang-mills/issues/5#issuecomment-6797130245">coordinator grant</a>, following the scoped request.
+          The grant text says only &ldquo;CLAIM GRANTED&rdquo;; the
+          contributor instructed this session to proceed on the requested
+          scope and expiry, 2026-11-11 18:00 UTC.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-1"><a id="result-to-be-used"></a>Result to be used<span style="margin-left: 1em"></span></h2>
+    <p>
+      Put
+    </p>
+    <center>
+      \(\displaystyle G = \{U \in M_2 (\mathbb{C}) : U^{\ast} U = UU^{\ast} =
+      1, \det U = 1\},
+\qquad L = \{X \in M_2 (\mathbb{C}) : \exp (tX) \in G
+      \text{ for every } t \in
+\mathbb{R}\} .\)
+    </center>
+    <p>
+      The scalar field of \(L\) is <strong>real</strong>, and its bracket is
+      \([X, Y] = XY - YX\). The needed assertion is:
+    </p>
+    <ol>
+      <li>
+        <p>
+          Some \(X, Y \in L\) have \([X, Y] \ne 0\).
+        </p>
+      </li>
+      <li>
+        <p>
+          Every real vector subspace \(J \subseteq M_2 (\mathbb{C})\) such
+          that \(J \subseteq L\) and \([L, J] \subseteq J\) equals either
+          \(0\) or \(L\).
+        </p>
+      </li>
+    </ol>
+    <p>
+      This is exactly nonabelian simplicity of the real Lie algebra
+      \(\mathfrak{su} (2)\). It is not abstract-group simplicity of \(G\).
+    </p>
+    <h2 id="auto-2"><a id="mathematical-reference"></a>Mathematical reference<span style="margin-left: 1em"></span></h2>
+    <p>
+      The checked route uses a matrix Lie-algebra identification and a
+      specific complex simplicity result, followed by the explicit application
+      below.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Source and inspected version</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Exact locator</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Result used</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Brian C. Hall, <em>An Elementary Introduction to Groups and
+        Representations</em>, arXiv:math-ph/0005032v1, 31 May 2000, <a href="https://arxiv.org/pdf/math-ph/0005032v1">versioned
+        PDF</a></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Chapter 3, Definition 3.13, printed pp. 36&ndash;37 (PDF
+        pages 42&ndash;43); &sect;5.4, printed pp. 37&ndash;38 (PDF pages
+        43&ndash;44)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">The one-parameter definition of a matrix Lie algebra, and
+        its identification for SU(n) as the skew-Hermitian traceless
+        matrices.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Alexander Kirillov, Jr., <em>Introduction to Lie Groups and
+        Lie Algebras</em>, <a href="https://www.math.stonybrook.edu/~kirillov/liegroups/liegroups.pdf">author-hosted preliminary electronic
+        version</a>, inspected 11 November 2026</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">&sect;5.6, Definition 5.36 and Example 5.38, printed p. 80
+        (PDF page 80)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Simplicity means nonabelian with no nonzero proper ideals;
+        the complex Lie algebra sl(2,C) is simple.</td>
+      </tr></tbody>
+    </table>
+    <p>
+      The actual statements and the argument in Example 5.38 were inspected,
+      not just search excerpts. Kirillov gives a proof of this specific
+      example. No general classification theorem is needed. The author
+      identifies this as a <a href="https://www.math.stonybrook.edu/~kirillov/liegroups/">preliminary version</a> of his book. It
+      has 177 PDF pages and contents beginning with &ldquo;Preface 9&rdquo;;
+      the numbering here refers to that file, not an unchecked pagination in
+      the 2008 Cambridge print edition. Hall's arXiv notes are not the 2003 or
+      2015 Springer editions of his later textbook.
+    </p>
+    <h2 id="auto-3"><a id="match-to-the-formalisation"></a>Match to the formalisation<span style="margin-left: 1em"></span></h2>
+    <p>
+      All paths below are relative to this repository; the imported source is
+      pinned by <tt class="verbatim">source/upstream.json</tt> to the revision above.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Qualified declaration</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Source path</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Meaning checked</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.GaugeU</tt>, <tt class="verbatim">YM.Gauge</tt>, <tt
+        class="verbatim">YM.Gauge.repDim</tt>, <tt class="verbatim">YM.Gauge.mat</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Gauge/MatrixGroup.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">The parameter <tt class="verbatim">n</tt> indexes complex
+        representation dimension <tt class="verbatim">n+1</tt>; <tt class="verbatim">mat</tt>
+        forgets the unitary and subgroup subtype wrappers.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Next.Foundations.SUtwo</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Next/FOUNDATIONS/SU2.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">n := 1</tt>; the image is exactly
+        determinant-one elements of U(2). Thus the matrices are 2 by 2, not 1
+        by 1.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Gauge.Generates</tt>, <tt class="verbatim">YM.Gauge.lie</tt>,
+        <tt class="verbatim">YM.Gauge.mem_lie</tt>, <tt class="verbatim">YM.Gauge.bracket_mem</tt>,
+        <tt class="verbatim">YM.Gauge.Simple</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Gauge/Lie.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">All-real-time exponential generators, a real submodule with
+        commutator bracket, and precisely the two simplicity clauses
+        above.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YangMills.GaugeGroup</tt>, <tt class="verbatim">YangMills.GaugeGroup.IsSimple</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/PublicTheory.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">The public Lie algebra is tied to the same exponential
+        condition by its <tt class="verbatim">generates</tt> field; ideals are real
+        ambient matrix submodules contained in that algebra.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YangMills.su2</tt>, <tt class="verbatim">YangMills.su2Simple</tt>,
+        <tt class="verbatim">YangMills.su2Theory</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/ConcreteSU2.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">su2</tt> packages <tt class="verbatim">SUtwo</tt> and its
+        <tt class="verbatim">lie</tt>; <tt class="verbatim">su2Simple</tt> uses the internal
+        theorem directly. <tt class="verbatim">su2Theory</tt> applies <tt class="verbatim">jointExistence</tt>
+        to these inputs.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Examples.SU2.simple</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Examples/SU2.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Existing internal proof of <tt class="verbatim">SUtwo.Simple</tt>.
+        Its private matrix calculations are not a new exposition task.</td>
+      </tr></tbody>
+    </table>
+    <p>
+      The range of <tt class="verbatim">mat</tt> is exactly \(G\): its wrappers require
+      unitarity and determinant one, and any matrix meeting these requirements
+      supplies the two subtype witnesses. Hence the formal exponential
+      condition is the displayed definition of \(L\), with no additional
+      restriction on its elements.
+    </p>
+    <p>
+      The commutator is the usual mathematical convention, with no factor of
+      \(i\). Hall's identification therefore applies as stated:
+    </p>
+    <center>
+      \(\displaystyle L = \{X : X^{\ast} = - X, \text{tr} X = 0\} .\)
+    </center>
+    <p>
+      The hypotheses here are checked by the concrete matrix group above, not
+      by assuming an arbitrary field named <tt class="verbatim">lieAlgebra</tt> has the
+      usual meaning. The real submodule and bracket closure are provided by
+      <tt class="verbatim">YM.Gauge.lie</tt> and <tt class="verbatim">YM.Gauge.bracket_mem</tt>.
+      The public packaging uses the same carrier.
+    </p>
+    <p>
+      An ambient real submodule contained in \(L\) is equivalently a real
+      vector subspace of \(L\). Its stated closure under \([L, J]\) is the
+      ordinary Lie ideal condition; antisymmetry also gives \([J, L] \subseteq
+      J\). Thus no closedness of ideals, invariance under the whole group, or
+      complex scalar closure is being silently added.
+    </p>
+    <h2 id="auto-4"><a id="application-and-remaining-proof-obligations"></a>Application and remaining proof obligations<span style="margin-left: 1em"></span></h2>
+    <p>
+      The following bridge is supplied explicitly rather than identifying real
+      and complex simplicity without justification. Its mathematical reasoning
+      is an application proposed for review; it is not a claim that the Lean
+      proof follows this route.
+    </p>
+    <h3 id="auto-5"><a id="identify-the-complexification"></a>Identify the complexification<span style="margin-left: 1em"></span></h3>
+    <p>
+      Write \(\mathfrak{s}= \{Z \in M_2 (\mathbb{C}) : \text{tr} Z = 0\}\),
+      with its complex vector-space structure and matrix bracket. For \(Z \in
+      \mathfrak{s}\), put
+    </p>
+    <center>
+      \(\displaystyle X = (Z - Z^{\ast}) / 2, \qquad Y = (Z + Z^{\ast}) / (2
+      i) .\)
+    </center>
+    <p>
+      Taking adjoints gives \(X^{\ast} = - X\) and \(Y^{\ast} = - Y\). Their
+      traces vanish since \(\text{tr} Z = \text{tr} Z^{\ast} = 0\), so \(X, Y
+      \in L\), and \(Z = X + iY\). This expression is unique: if \(X = - iY\)
+      with both \(X, Y\) skew-Hermitian, then \(- iY\) is Hermitian, so \(X\)
+      is both Hermitian and skew-Hermitian and must be zero, as must \(Y\).
+    </p>
+    <p>
+      Consequently \(\mathfrak{s}= L \oplus iL\) as real vector spaces. The
+      map
+    </p>
+    <center>
+      \(\displaystyle L \otimes_{\mathbb{R}} \mathbb{C} \longrightarrow
+      \mathfrak{s}, \qquad X
+\otimes z \longmapsto zX\)
+    </center>
+    <p>
+      is complex linear and bijective by this decomposition. It preserves the
+      bracket because \([zX, wY] = zw [X, Y]\). Thus this is the required
+      complex Lie-algebra identification with \(\mathfrak{sl}_2
+      (\mathbb{C})\).
+    </p>
+    <h3 id="auto-6"><a id="transfer-the-ideal-conclusion-back-to-real-scalars"></a>Transfer the ideal conclusion back to real scalars<span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      Let \(J \subseteq L\) satisfy the real ideal condition. Inside
+      \(\mathfrak{s}\) form \(J_{\mathbb{C}} = J + iJ\). It is a complex
+      vector subspace: multiplication by \(i\) sends \(a + ib\) to \(- b +
+      ia\). For \(x, y \in L\) and \(a, b \in J\),
+    </p>
+    <center>
+      \(\displaystyle [x + iy, a + ib] = [x, a] - [y, b] + i ([x, b] + [y, a])
+      \in J + iJ.\)
+    </center>
+    <p>
+      Hence it is a complex Lie ideal of \(\mathfrak{s}\). If \(J \ne 0\),
+      then \(J_{\mathbb{C}} \ne 0\). Applying Kirillov's Example 5.38 gives
+      \(J_{\mathbb{C}} =\mathfrak{s}\). For any \(x \in L\), write \(x = a +
+      ib\) with \(a, b \in J\). Uniqueness of the decomposition in \(L \oplus
+      iL\) forces \(a = x\) and \(b = 0\), so \(x \in J\). Thus \(J = L\). If
+      \(J = 0\), the other alternative already holds. This proves exactly the
+      second formal clause.
+    </p>
+    <h3 id="auto-7"><a id="check-the-nonabelian-clause-and-boundary-of-the-application"></a>Check the nonabelian clause and boundary of the
+    application<span style="margin-left: 1em"></span></h3>
+    <p>
+      The matrices
+    </p>
+    <center>
+      \(\displaystyle A = \left( \begin{array}{cc}
+  i & 0\\
+  0 & -
+      i
+\end{array} \right), \quad B = \left( \begin{array}{cc}
+  0 & 1\\
+  -
+      1 & 0
+\end{array} \right), \quad C = \left( \begin{array}{cc}
+  0 & i\\
+
+      i & 0
+\end{array} \right)\)
+    </center>
+    <p>
+      are skew-Hermitian and traceless, so belong to \(L\). Direct
+      multiplication gives \(AB = C\), \(BA = - C\), hence \([A, B] = 2 C \ne
+      0\). This supplies the first formal clause independently of differences
+      in textbook simplicity conventions. These are also the matrices used in
+      the inspected internal proof.
+    </p>
+    <p>
+      The combined argument supplies <tt class="verbatim">YangMills.su2Simple</tt>. The
+      only use inspected in <tt class="verbatim">YangMills.su2Theory</tt> is passing
+      that proof as the simplicity hypothesis to <tt class="verbatim">YangMills.jointExistence</tt>.
+      This note establishes no other hypothesis or conclusion of that theorem
+      and gives no reconstruction or mass-gap result.
+    </p>
+    <p>
+      No quotient by the centre is needed for this real Lie-algebra result.
+      Indeed \(\{1, - 1\}\) is a nontrivial proper central subgroup of \(G\):
+      both scalar matrices have determinant one, and \(A \in G\) is neither of
+      them. Thus an assertion that SU(2) is simple as an abstract group would
+      be false here. Likewise, simple connectedness is a different property.
+      Neither connectedness nor simple connectedness is used in the
+      ideal-transfer argument, and no implication in the reverse direction
+      from real simplicity to complex simplicity is assumed.
+    </p>
+    <p>
+      There is no unmatched mathematical hypothesis identified for this
+      particular source match. Independent verification of the carrier
+      identification, the complexification bridge, and the references remains
+      required before acceptance.
+    </p>
+    <h2 id="auto-8"><a id="search-and-unresolved-questions"></a>Search and unresolved questions<span style="margin-left: 1em"></span></h2>
+    <p>
+      Searches on 11 November 2026 included <tt class="verbatim">su(2) simple real Lie
+      algebra lecture notes university proof</tt>, <tt class="verbatim">Brian Hall Lie
+      groups Lie algebras SU(2) simple Lie algebra theorem pdf</tt>, and <tt
+      class="verbatim">site.math.stonybrook.edu kirillov lie groups book pdf simple
+      sl(2)</tt>. The existing background directory contained only its README;
+      the bounded search of <tt class="verbatim">Bots/notes/</tt>, the statement audit,
+      and open PRs found no competing SU(2) literature note.
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>Selected:</strong> Hall's versioned arXiv notes for the
+          carrier identification; Kirillov's author-hosted electronic text for
+          the specific simplicity result.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Not used as evidence:</strong> search snippets, Wikipedia
+          entries, and third-party copies of Hall's Springer textbook. No
+          theorem number from those editions is asserted to match the checked
+          arXiv version.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Alternative not pursued:</strong> Knapp's author page for
+          the second edition of <em>Lie Groups Beyond an Introduction</em>
+          supplies bibliographic information but did not itself supply the
+          needed theorem statement. A general classification route would add
+          unnecessary machinery.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Rejected substitutions:</strong> a group simplicity
+          assertion, a theorem about simple connectedness, and semisimplicity
+          alone do not supply the target.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Source-audit relation:</strong> <tt class="verbatim">blueprint/public-statement.md</tt>
+          was inspected for the SU(2) roots. This note does not modify that
+          audit; interpretation and correspondence remain subject to
+          independent review.
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-9"><a id="inspection-and-validation-evidence"></a>Inspection and validation evidence<span style="margin-left: 1em"></span></h3>
+    <p>
+      The six files in the crosswalk were read in bounded excerpts or in full
+      where short. Commands actually run included:
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+cat Lean/ConcreteSU2.lean templates/background-result.md
+cat Lean/YM/Examples/SU2.lean
+cat Lean/YM/Next/FOUNDATIONS/SU2.lean
+cat Lean/YM/Gauge/MatrixGroup.lean
+sed -n '1,90p' Lean/PublicTheory.lean
+sed -n '1,55p' Lean/YM/Gauge/Lie.lean
+sed -n '120,195p' Lean/YM/Gauge/Lie.lean
+sed -n '155,185p' blueprint/public-statement.md
+rg -n 'su2Simple|su2Theory|simplicity|SU\(2\)' blueprint/background Bots/notes source/audit.md blueprint/public-statement.md</pre>
+    <p>
+      Two preliminary path searches failed because guessed paths/globs did not
+      exist; the correctly cased paths above were then read successfully. No
+      mathematical conclusion relies on those failed searches. The six
+      inspected source files were checked against <tt class="verbatim">Lean/SOURCES.sha256</tt>;
+      all matched.
+    </p>
+    <p>
+      Structural validation: <tt class="verbatim">python3
+      scripts/check_blueprint.py</tt> and <tt class="verbatim">git diff --no-index
+      --check /dev/null blueprint/background/su2-simplicity.md</tt> found no
+      whitespace errors (exit status 1 denotes the new-file difference). These
+      checks do not validate background-note references, mathematical truth,
+      or independent acceptance.
+    </p>
+    <p>
+      Not performed: a fresh Lean build, elaborated-type/axiom replay, or
+      independent mathematical or Lean-correspondence review. This prose-only
+      task preserves <tt class="verbatim">Lean/</tt>; its correspondence evidence is
+      source inspection, not a new kernel check. Existing axiom evidence is
+      recorded separately in <tt class="verbatim">source/audit.md</tt>. The
+      author-hosted Kirillov URL is mutable; reviewers should recheck the
+      named example and pagination in the version they inspect.
+    </p>
+  </body>
+</html>

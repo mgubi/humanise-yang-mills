@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Mathematical blueprint &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../index.html">Home</a><font class="ym-sep">&middot;</font><a href="public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><font
+      class="ym-here">Blueprint</font><font class="ym-sep">&middot;</font><a href="../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Mathematical blueprint</h1><a id="mathematical-blueprint"></a>
+    </p>
+    <p>
+      The blueprint connects the formal theorem to a readable mathematical
+      argument. The <a href="outline.html">first-pass outline</a> records the main
+      dependency structure, and the <a href="unit-plan.html">provisional unit plan</a> turns
+      the source clusters into proposed mathematical work packages. Use the
+      shared <a href="glossary.html">glossary</a> and <a href="../docs/notation.html">notation contract</a>.
+    </p>
+    <p>
+      The source clusters are adapted from Scott Armstrong's <a href="https://github.com/scottnarmstrong/yang-mills-informalization">Yang-Mills
+      informalization project</a>. Preserve that attribution in derivative
+      maps, task descriptions, and published material that uses its unit
+      boundaries, declaration assignments, or summaries.
+    </p>
+    <p>
+      The blueprint records the evolving interfaces and verification of a
+      research monograph. The mathematical text is written directly in <tt
+      class="verbatim">manuscript/</tt> LaTeX; there is no separate blueprint prose
+      stage and no duplicate Markdown proof. Only a section's own interface
+      must be precise before it is drafted; outstanding prerequisite proofs
+      stay explicit.
+    </p>
+    <p>
+      Keep the full formal dependency inventory separately as source evidence.
+      Only mathematical interfaces that need explanation or proof become proof
+      units; generated helpers and standard machinery do not each require a
+      unit. Classify groups according to the <a href="../docs/proof-standard.html">proof standard</a>
+      before assigning prose work.
+    </p>
+    <p>
+      Use <a href="background/index.html">background notes</a> to share verified literature results
+      and record how they match the formalisation. Substantive uses still
+      require their hypotheses to be checked in the consuming proof. This
+      avoids repeatedly searching for, translating, or reproving the same
+      established machinery.
+    </p>
+    <h2 id="auto-1"><a id="proof-units"></a>Proof units<span style="margin-left: 1em"></span></h2>
+    <p>
+      Each unit lives in <tt class="verbatim">units/YM-&lt;six-digit canonical issue
+      number&gt;/</tt> and contains <tt class="verbatim">unit.json</tt>, <tt class="verbatim">correspondence.md</tt>,
+      evidence as needed, and eventually <tt class="verbatim">reviews/</tt>. The
+      mathematical section lives in <tt class="verbatim">manuscript/</tt> and is linked
+      by metadata. Use <a href="../templates/proof-unit/index.html">the template instructions</a>. A revision or
+      review task keeps the original unit ID; it does not create a second
+      owner of the same declarations.
+    </p>
+    <p>
+      <tt class="verbatim">unit.json</tt> fields:
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Field</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Meaning</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">id</tt>, <tt class="verbatim">title</tt>, <tt class="verbatim">issue</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Stable ID, mathematical title, canonical task URL</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">source_revision</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Exact active revision from <tt class="verbatim">source/upstream.json</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">status</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">planned</tt>, <tt class="verbatim">draft</tt>, or <tt
+        class="verbatim">reviewed</tt>; separate from the live task status</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">authors</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Human GitHub accounts responsible for the unit</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">declarations</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Owned results/definitions, each with <tt class="verbatim">name</tt>,
+        <tt class="verbatim">module</tt>, and <tt class="verbatim">path</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">manuscript</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Nonempty list of repository-relative <tt class="verbatim">.tex</tt>
+        and <tt class="verbatim">.bib</tt> paths under <tt class="verbatim">manuscript/</tt>: the
+        section and all local mathematical support files</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">depends_on</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">IDs of conceptual prerequisite units, including planned
+        units</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">reviews</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">lean</tt> and <tt class="verbatim">mathematics</tt>; each
+        is null or a review record</td>
+      </tr></tbody>
+    </table>
+    <p>
+      Owned declarations are unique across units. Supporting declarations
+      owned elsewhere are cited in the prose and linked via <tt class="verbatim">depends_on</tt>;
+      they are not added as duplicate ownership. Standard library/background
+      results can be cited precisely in the prose without creating an
+      exposition unit for each one, including results implemented from scratch
+      in the upstream project. <tt class="verbatim">depends_on</tt> lists only other
+      proof-unit IDs; literature notes are linked in <tt class="verbatim">correspondence.md</tt>.
+      There is no requirement for every formal dependency to appear in this
+      list or be owned by a unit. A planned unit still requires a real source
+      declaration and an explicit interface; it is not a guessed theorem.
+    </p>
+    <p>
+      Each non-null review has <tt class="verbatim">reviewer</tt> (a human account other
+      than an author), <tt class="verbatim">evidence</tt> (a repository-relative file
+      under this unit's <tt class="verbatim">reviews/</tt>), and <tt class="verbatim">content_sha256</tt>.
+      Generate the latter after finalising the content:
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+python3 scripts/check_blueprint.py --fingerprint YM-000123</pre>
+    <p>
+      The fingerprint covers the unit's identity, title, source revision,
+      declarations, dependencies, <tt class="verbatim">correspondence.md</tt>, and the
+      paths and complete contents of every file in <tt class="verbatim">manuscript</tt>.
+      It excludes status, author credits, and review records so acceptance can
+      be recorded without changing the reviewed content. Include nested
+      inputs, shared mathematical macros and bibliography; reviewers must
+      check that this explicit list is complete. The checker does not parse
+      LaTeX imports. A shared support-file edit conservatively invalidates
+      reviews of every unit listing it. The assembly file need not be listed
+      if it only arranges sections and contains no mathematical content or
+      notation affecting the unit. Changes to dependency statements still
+      require a separate assessment of downstream uses. Review evidence should
+      say which content was checked and disclose agent assistance.
+    </p>
+    <p>
+      The checker rejects duplicate ownership, unknown dependencies,
+      conceptual cycles, missing source paths, stale source revisions, and
+      stale or incomplete review records. It does not resolve Lean names,
+      inspect proof terms, authenticate reviewers, check the adequacy of
+      prose, or inspect GitHub claims. Those need source tooling and human
+      review. <tt class="verbatim">reviewed</tt> is local to a unit, not a claim of
+      global completion.
+    </p>
+    <p>
+      Legacy <tt class="verbatim">proof.md</tt> links may remain as short redirects, but
+      are not proof sources or review records. Historical evidence must be
+      dated and distinguished from current verification. Never copy old
+      reviewer approvals onto migrated content.
+    </p>
+  </body>
+</html>

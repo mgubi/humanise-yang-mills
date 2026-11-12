@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>YM-000022: running-coefficient asymptotic &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <div class="ym-unit-nav">
+      <span class="ym-part"><font class="ym-here">YM-000022: Logarithmic asymptotics of the
+      running inverse coefficient (draft)</font><font class="ym-sep">&middot;</font><a
+      href="evidence/index.html">evidence</a><font class="ym-sep">&middot;</font><a href="proof.html">proof</a></span>
+    </div>
+    <p>
+      <h1>YM-000022: running-coefficient asymptotic</h1><a id="ym-000022-running-coefficient-asymptotic"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Inputs and notation</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Literature and editorial treatment</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-2">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Correspondence with Lean</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Open obligations and review status</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-4">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Verification evidence</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">3</a>
+      </p>
+    </div>
+    <p>
+      <strong>Draft; independent mathematical and Lean-correspondence reviews
+      pending.</strong> The authoritative mathematical text is <a href="https://github.com/hairer/humanise-yang-mills/blob/main/manuscript/pilots/running-coupling.tex">the
+      LaTeX section</a>, labels <tt class="verbatim">sec:running-coefficient</tt>, <tt
+      class="verbatim">prop:uniform-extraction</tt>, and <tt class="verbatim">prop:running-asymptotic</tt>.
+      There is no separate Markdown proof.
+    </p>
+    <p>
+      Human contributor: hairer. Agent assistance: Codex for
+      exposition/integration; GPT-6 Luna for bounded Lean extraction. See <a
+      href="https://github.com/hairer/humanise-yang-mills/issues/22">issue #22</a>. The provisional VII.5/CP-03 decomposition is
+      credited to <a href="https://github.com/scottnarmstrong/yang-mills-informalization">Scott Armstrong's informalization project</a>.
+    </p>
+    <h2 id="auto-1"><a id="inputs-and-notation"></a>Inputs and notation<span style="margin-left: 1em"></span></h2>
+    <p>
+      The section follows the shared <a href="../../glossary.html">glossary</a> and <a href="../../../docs/notation.html">notation
+      contract</a>: \(N\) is the starting lattice level, \(p\) the period
+      index, \(m\) the observed stage, and \(s_m = \log (a_m^{- 1})\). Its
+      sole outstanding mathematical input is the uniform running estimate <tt
+      class="verbatim">eq:running</tt>, supplied by the projection chain <tt class="verbatim">hc.wilson.running</tt>
+      (qualified declarations listed below). The construction of the family
+      and that estimate are outside this unit. No canonical prerequisite unit
+      currently owns the estimate, so <tt class="verbatim">depends_on</tt> is empty;
+      this does not mean that the proof is independent of the input.
+    </p>
+    <p>
+      The existing LaTeX pilot also proves scale divergence from \(B_j
+      \geqslant 3\) and Casimir positivity by the invariant-trace calculation.
+      These elementary arguments are retained in the consolidated section,
+      replacing the corresponding imported inputs in the former Markdown
+      exposition. They require independent review along with the rest of the
+      section; no review approvals were carried forward.
+    </p>
+    <h2 id="auto-2"><a id="literature-and-editorial-treatment"></a>Literature and editorial treatment<span style="margin-left: 1em"></span></h2>
+    <p>
+      Lebl, <em>Basic Analysis I</em>, author-maintained HTML &sect;2.2,
+      Propositions 2.2.5(iv) and 2.2.6, inspected on 11 November 2026,
+      supplies the reciprocal and square-root limit rules. The section
+      explicitly checks positivity and restricts to a tail. The detailed
+      search and source evidence are in <a href="evidence/index.html">the evidence record</a>. The
+      earlier pilot's upstream Ba&#x0142;aban lead remains unverified and is
+      not used to justify the running estimate. Formal filter/arithmetic
+      helpers implement the uniform estimate and limit steps; they do not need
+      separate prose units.
+    </p>
+    <h2 id="auto-3"><a id="correspondence-with-lean"></a>Correspondence with Lean<span style="margin-left: 1em"></span></h2>
+    <p>
+      All source references in this section use revision <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>.
+      Fully qualified names identify interfaces; line numbers are
+      supplementary. The exact types and axiom reports for the owned
+      declarations are retained in <a href="https://github.com/hairer/humanise-yang-mills/blob/main/blueprint/units/YM-000022/evidence/lean-inspection.txt">the Lean inspection output</a>.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Mathematical datum or step</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Fully qualified declaration</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Source path and location</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Spacing \(a_m\), its positivity, \(s_m = \log (a_m^{-
+        1})\), and divergence</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Schedule.a</tt>, <tt class="verbatim">YM.Schedule.a_pos</tt>,
+        <tt class="verbatim">YM.Schedule.scale</tt>, <tt class="verbatim">YM.Schedule.divergent</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Lattice/Scale.lean:99&ndash;120</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">The family's schedule and scalar coefficients</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Family.S</tt>, <tt class="verbatim">YM.RG.History.&beta;</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Source/Construction.lean:32&ndash;35</tt>;
+        <tt class="verbatim">Lean/YM/RG/History.lean:210&ndash;211</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Fixed \(\bar{\beta} = C. \text{path} . \text{levels} .
+        \text{clock} . \text{bar}\) and reference value \(\bar{\beta} +
+        cs_m\)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.RG.Calendar.bar</tt>, <tt class="verbatim">YM.RG.Calendar.hatBeta</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/RG/History.lean:64&ndash;79</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Running input (<tt class="verbatim">eq:running</tt>), supplied by the
+        construction hypothesis</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Family.Makes.wilson</tt>, <tt class="verbatim">YM.RG.History.Selected.running</tt>,
+        <tt class="verbatim">YM.RG.History.Running</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Source/Construction.lean:44&ndash;45</tt>;
+        <tt class="verbatim">Lean/YM/RG/History.lean:229&ndash;240</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Color normalization and the Casimir formula</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Gauge.Color</tt>, <tt class="verbatim">YM.Gauge.colorIso</tt>,
+        <tt class="verbatim">YM.Gauge.trace_color</tt>, <tt class="verbatim">YM.Gauge.ad</tt>, <tt
+        class="verbatim">YM.Gauge.casimir</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Gauge/Colors.lean:42&ndash;78,136&ndash;149,179&ndash;182</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Nonabelian real Lie-algebra simplicity</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Gauge.Simple</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Gauge/Lie.lean:178&ndash;182</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">\(c = 11 \text{cas} (G) / (24 \pi^2) > 0\) under
+        simplicity</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Gauge.slopeConstant</tt>, <tt class="verbatim">YM.Gauge.slopeConstant_pos</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Gauge/Colors.lean:184</tt>; <tt class="verbatim">Lean/YM/Gauge/Casimir.lean:174&ndash;176</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">\(b_0\) and \(c = 2 b_0\)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Pert.Asymptotics.b0</tt>, <tt class="verbatim">YM.Pert.Asymptotics.b0_normalizes</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Pert/Asymptotics/RawAxis.lean:13&ndash;14</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Uniform extraction proposition</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Pert.Asymptotics.zeroUp_bound</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Pert/Asymptotics/RawAxis.lean:15&ndash;30</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Numerical inverse square root</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Pert.Asymptotics.regulatorRun</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Pert/Asymptotics/RawAxis.lean:35</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Sequence substitution and logarithmic limit</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Pert.Asymptotics.comparison</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Pert/Asymptotics/RawAxis.lean:36&ndash;48</tt></td>
+      </tr></tbody>
+    </table>
+    <p>
+      The uniform extraction proposition weakens the construction's hypotheses
+      to the exact numerical interfaces used. The source's <tt class="verbatim">Calendar.bar_pos</tt>
+      requires a positive intercept, while extraction works for any fixed real
+      intercept. The source's <tt class="verbatim">zeroUp_bound</tt> needs <tt class="verbatim">C.Makes</tt>
+      but no simplicity assumption; <tt class="verbatim">comparison</tt> additionally
+      assumes <tt class="verbatim">G.Simple</tt>. The latter is used here solely through
+      <tt class="verbatim">YM.Gauge.slopeConstant_pos</tt>; the section supplies its
+      elementary positivity argument explicitly. Neither the construction
+      hypothesis nor the simplicity predicate is redefined to mean only the
+      consequence used here.
+    </p>
+    <p>
+      Lean defines <tt class="verbatim">Real.sqrt</tt> and inversion on every real
+      input, including negative arguments and zero. The definition of <tt
+      class="verbatim">regulatorRun</tt> has no hypotheses, as its elaborated type
+      confirms. Our ordinary positive-tail definition agrees with that
+      totalized expression eventually, which suffices for the exact conclusion
+      of <tt class="verbatim">comparison</tt>. There is no assertion here that all
+      finite-prefix terms are positive. The introductory source comment
+      expressly limits the interpretation to the numerical proxy.
+    </p>
+    <h2 id="auto-4"><a id="open-obligations-and-review-status"></a>Open obligations and review status<span style="margin-left: 1em"></span></h2>
+    <p>
+      The construction and its uniform running estimate require accepted
+      exposition or a checked reference before global integration can be
+      complete. The numerical proxy is not identified with a coupling defined
+      by physical observables. Independent correspondence and mathematical
+      review remain outstanding. The unit is draft, including the elementary
+      positivity and schedule arguments inherited from the earlier LaTeX
+      pilot. No mathematical gap in the conditional scalar argument is
+      presently identified.
+    </p>
+    <h2 id="auto-5"><a id="verification-evidence"></a>Verification evidence<span style="margin-left: 1em"></span></h2>
+    <p>
+      <a href="evidence/index.html">Original source and axiom inspection</a>, <a href="evidence/pilot-provenance.html">earlier
+      pilot record</a>, and <a href="evidence/latex-migration.html">LaTeX migration checks</a> distinguish
+      the commands run at each stage. The metadata lists the section, shared
+      preamble and bibliography so changes to any of them invalidate its
+      review fingerprint.
+    </p>
+    <div class="ym-unit-nav">
+      <span class="ym-part"><font class="ym-here">YM-000022: Logarithmic asymptotics of the
+      running inverse coefficient (draft)</font><font class="ym-sep">&middot;</font><a
+      href="evidence/index.html">evidence</a><font class="ym-sep">&middot;</font><a href="proof.html">proof</a></span>
+    </div>
+  </body>
+</html>

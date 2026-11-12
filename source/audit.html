@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Statement and scope audit: OpenAI-YM-20261028 &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><font class="ym-here">Source
+      audit</font><font class="ym-sep">&middot;</font><a href="../blueprint/external-map.html">Literature</a><font
+      class="ym-sep">&middot;</font><a href="../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a
+      href="../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Statement and scope audit: OpenAI-YM-20261028</h1><a id="statement-and-scope-audit-openai-ym-20261028"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Audit method and limits</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Declaration index and source correspondence</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-2">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Public prose comparison</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Printed elaborated types</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">5</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Public-root constant reachability</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">9</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Commands, outcomes, and unperformed checks</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-6">10</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Open questions and review boundary</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-7">11</a>
+      </p>
+    </div>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Field</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Audited value</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Imported source revision</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Pinned toolchain</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">leanprover/lean4:v4.32.0</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Roots</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">All 17 names in <a href="https://github.com/hairer/humanise-yang-mills/blob/main/source/upstream.json"><tt class="verbatim">source/upstream.json</tt></a></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Status</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Author draft; independent Lean-correspondence review
+        required</td>
+      </tr></tbody>
+    </table>
+    <p>
+      This is the issue <a href="https://github.com/hairer/humanise-yang-mills/issues/3">#3</a> statement audit. The <a href="../blueprint/public-statement.html">mathematician-readable
+      ledger</a> spells out quantifiers, hypotheses, conclusions, defining
+      predicates, and interpretation limits. This file records the source
+      correspondence, printed Lean types, public prose comparison, and audit
+      evidence. The theorem names are not substitutes for their elaborated
+      types. No proof of any root is attempted here, and no imported <tt
+      class="verbatim">Lean/</tt> file was changed.
+    </p>
+    <h2 id="auto-1"><a id="audit-method-and-limits"></a>Audit method and limits<span style="margin-left: 1em"></span></h2>
+    <p>
+      Three read-only, disjoint source inspections covered respectively the
+      five public/assembly roots, five SU(2)/independent/contact/asymptotic
+      roots, and seven position/parity/Sharp-Gram roots. They started at the
+      named declarations and expanded only through immediate
+      meaning-determining definitions. The source inspections used separate
+      clones at repository commit <tt class="verbatim">3a20fee84ce46e8f83824b9e3da7078a8313e987</tt>
+      and the immutable imported source revision above. The parent integrated
+      their reports and compared the results with a pinned Lean <tt class="verbatim">#check</tt>
+      run covering every root. The full command, result, and output digest
+      appear below. <tt class="verbatim">#check</tt> is the elaborated-type evidence;
+      source-text readings identify the structures and abbreviations within
+      those printed types. The pretty-printer can hide inferred types or
+      abbreviate dependent arguments; the cited definitions remain
+      authoritative.
+    </p>
+    <p>
+      The separate <a href="evidence/axioms-3456e5e.html">accepted issue #2 evidence</a> reports transitive
+      axioms <tt class="verbatim">propext</tt>, <tt class="verbatim">Classical.choice</tt>, and
+      <tt class="verbatim">Quot.sound</tt> for all 17 roots, with no <tt class="verbatim">sorryAx</tt>
+      or project-defined endpoint axiom. It also records kernel replay of
+      100,168 reachable project declarations. That result used a
+      checksum-verified prebuilt artifact, not a clean source rebuild on this
+      host. Its structural reachability inventory is not a mathematical
+      dependency graph, and neither its axiom report nor this type audit
+      establishes the physical adequacy of a definition.
+    </p>
+    <h2 id="auto-2"><a id="declaration-index-and-source-correspondence"></a>Declaration index and source correspondence<span style="margin-left: 1em"></span></h2>
+    <p>
+      The <tt class="verbatim">Type and meaning</tt> column points to the exact printed
+      type below and the expanded statement in the ledger. Source lines locate
+      the declaration, while fully qualified names and the pinned revision are
+      the stable identifiers.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Release root</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Declaration and meaning-determining
+        sources</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Relation to <tt class="verbatim">jointExistence</tt></strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YangMills.jointExistence</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/Solution.lean:4</tt>; <tt class="verbatim">Lean/ChallengeSpec.lean:186&ndash;188</tt>
+        (<tt class="verbatim">JointExistence</tt>), <tt class="verbatim">:11&ndash;22</tt> (<tt
+        class="verbatim">WilsonRegularity</tt>), <tt class="verbatim">:177&ndash;182</tt> (<tt
+        class="verbatim">Hierarchy.Properties</tt>); <tt class="verbatim">Lean/PublicWilson.lean</tt>,
+        <tt class="verbatim">Lean/PublicTheory.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Public endpoint</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YangMills.constructed</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/Construction.lean:15&ndash;31</tt>; <tt
+        class="verbatim">Lean/WilsonBridge.lean:10&ndash;17</tt>; <tt class="verbatim">Lean/YM/Nonperturbative/HeadlineSpec.lean:143&ndash;155</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Supplies public endpoint by projection through bridge
+        definitions</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Nonperturbative.existence</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Nonperturbative/Headlines.lean:19&ndash;20</tt>;
+        <tt class="verbatim">HeadlineSpec.lean:143&ndash;155</tt>; <tt class="verbatim">Lean/YM/Gauge/MatrixGroup.lean</tt>,
+        <tt class="verbatim">Lean/YM/Gauge/Lie.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Used by <tt class="verbatim">constructed</tt> in its source
+        proof</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Nonperturbative.continuum_with_position_tests</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Nonperturbative/Continuum.lean:28&ndash;39</tt>;
+        <tt class="verbatim">Lean/YM/Independent/Core.lean</tt>, <tt class="verbatim">Lean/YM/Pert/Position/Four.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Used to construct <tt class="verbatim">existence</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Nonperturbative.continuum</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Nonperturbative/Continuum.lean:52&ndash;66</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Projection of preceding result, not an additional
+        premise</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YangMills.su2Simple</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/ConcreteSU2.lean:8&ndash;12</tt>; <tt
+        class="verbatim">Lean/PublicTheory.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Supplies simplicity input for the specialization</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YangMills.su2Theory</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/ConcreteSU2.lean:15&ndash;18</tt>; <tt
+        class="verbatim">Lean/ChallengeSpec.lean:186&ndash;188</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Direct specialization of <tt class="verbatim">jointExistence</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Independent.Core.point</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Independent/Core.lean:49&ndash;63</tt>;
+        <tt class="verbatim">Lean/YM/OPE/Orbits/Profile.lean</tt>, <tt class="verbatim">Words.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">In the public theorem's formal constant closure, but not a
+        public conclusion</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Contacts.Solstice.celestial</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Contacts/Solstice/Result.lean:52&ndash;79</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Separate contact-device existence root</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Pert.Asymptotics.comparison</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Pert/Asymptotics/RawAxis.lean:11&ndash;36</tt>;
+        <tt class="verbatim">Lean/YM/Source/Construction.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Conditional running-proxy companion</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Pert.Position.finite_leading</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Pert/Position/Crest.lean:13</tt>; <tt
+        class="verbatim">Board.lean</tt>, <tt class="verbatim">Actual.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">In the public theorem's formal constant closure, but not a
+        public conclusion</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Pert.Position.normalized_four</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Pert/Position/Four.lean:45&ndash;56</tt>;
+        <tt class="verbatim">Crest.lean</tt>, <tt class="verbatim">Lean/YM/Pert/FirstTarget.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Position-test existence companion</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Pert.Parity.parityEndpoint</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Pert/Parity/End.lean:15&ndash;21</tt>;
+        <tt class="verbatim">Branch.lean</tt>; <tt class="verbatim">Lean/YM/Pert/Position/Crest.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Eventual finite-regulator parity companion</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Pert.Parity.low_read</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Pert/Parity/EvenLow.lean:44</tt>; <tt
+        class="verbatim">Lean/YM/Pert/Position/Board.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Exact low-grade, odd-coefficient vanishing companion</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.SharpGram.habitat</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/SharpGram/Measured.lean:11</tt>; <tt
+        class="verbatim">Lean/YM/SharpGram/Weak/Reading.lean</tt>, <tt class="verbatim">Lean/YM/SharpGram/Dense/Passes.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Weak-portfolio/fixed-field companion</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.SharpGram.inletFirst</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/SharpGram/Clauses.lean:18&ndash;21,126</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Conditional low-grade <tt class="verbatim">Supplies</tt>
+        companion</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.SharpGram.outletFirst</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/SharpGram/Clauses.lean:23&ndash;29,120</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Conditional low-grade <tt class="verbatim">Releases</tt>
+        companion</td>
+      </tr></tbody>
+    </table>
+    <p>
+      The source proof chain directly inspected for the main theorem is <tt
+      class="verbatim">continuum_with_position_tests &rarr; existence &rarr; constructed
+      &rarr; jointExistence</tt>. <tt class="verbatim">continuum</tt> is derived from
+      the first of these; <tt class="verbatim">su2Theory</tt> is derived from the last,
+      using <tt class="verbatim">su2Simple</tt>. The 17-name manifest and the checked-in
+      usage table identify roots and constant reachability over their union;
+      they do not by themselves prove that every focused headline is in the
+      proof of the public endpoint. The targeted per-root query below supplies
+      that distinction.
+    </p>
+    <h2 id="auto-3"><a id="public-prose-comparison"></a>Public prose comparison<span style="margin-left: 1em"></span></h2>
+    <p>
+      The imported <a href="https://github.com/hairer/humanise-yang-mills/blob/main/Lean/README.md"><tt class="verbatim">Lean/README.md</tt></a> is the shipped
+      public prose statement. Its public-challenge section corresponds to <tt
+      class="verbatim">JointExistence</tt> and the four fields of <tt class="verbatim">Hierarchy.Properties</tt>:
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>README claim</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Formal anchor and scope</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">One Wilson family for each closed matrix subgroup with
+        nonabelian simple real Lie algebra; refinements for every increasing
+        volume sequence</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">GaugeGroup</tt>, <tt class="verbatim">IsSimple</tt>, and
+        <tt class="verbatim">JointExistence</tt> in <tt class="verbatim">PublicTheory.lean</tt>
+        and <tt class="verbatim">ChallengeSpec.lean</tt>; one family is chosen before
+        the requested sequence.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Wilson plaquette/Haar origin, finite local stencils,
+        running slope, and separated mesh/volume limits</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">WilsonFamily</tt>, <tt class="verbatim">WilsonRegularity</tt>,
+        and <tt class="verbatim">WilsonFamily.Converges</tt> in <tt class="verbatim">PublicWilson.lean</tt>
+        and <tt class="verbatim">ChallengeSpec.lean</tt>; the local stencil is per token
+        but uniform in spacing, volume, and placement.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Selected Wightman reconstruction, phase integration,
+        spectrum and locality</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Hierarchy.Reconstructed</tt> and its theory
+        axioms in <tt class="verbatim">ChallengeSpec.lean</tt> and <tt class="verbatim">PublicTheory.lean</tt>;
+        positive energy and uniqueness of the translation-invariant vacuum are
+        stated, not a positive mass gap.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Separated all-orders OPE</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Hierarchy.OperatorProductExpansion</tt> in <tt
+        class="verbatim">ChallengeSpec.lean</tt>; its cluster and spectator geometry,
+        truncation degrees, uniform remainder, and same-hierarchy readings are
+        predicate-dependent.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Centered grade-four nonfreeness test</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Hierarchy.TraceTest</tt> in <tt class="verbatim">ChallengeSpec.lean</tt>;
+        it excludes eventual equality to the specified finite Wick profiles,
+        not every generalized free model.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Detailed construction has contacts and leading position
+        tests</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.constructed</tt> and its internal <tt
+        class="verbatim">MultipleLight</tt>, <tt class="verbatim">FirstExtension</tt>, and <tt
+        class="verbatim">FourMeters</tt> conjuncts; these are not fifth/sixth fields of
+        public <tt class="verbatim">Properties</tt>.</td>
+      </tr></tbody>
+    </table>
+    <p>
+      The README explicitly excludes a positive mass gap, general exclusion of
+      continuous-mass generalized free fields, and all-orders MS-bar matching.
+      It also excludes uniqueness over other contact prescriptions and raw
+      cutoff convergence on collision diagonals. The README mentions an
+      earlier challenge revision but contains no separate stronger
+      release-statement link. No such physical conclusion is added by any root
+      name in this audit. The README's build and replay claims must be read
+      with the narrower local evidence in <a href="build.html"><tt class="verbatim">source/build.md</tt></a>
+      and issue #2, including the prebuilt-artifact limitation.
+    </p>
+    <h2 id="auto-4"><a id="printed-elaborated-types"></a>Printed elaborated types<span style="margin-left: 1em"></span></h2>
+    <p>
+      The output below is from the pinned Lean toolchain. Each <tt class="verbatim">#check</tt>
+      names the elaborated theorem type; abbreviated named structures are
+      expanded through the cited sources and ledger. The repeated axiom lines
+      are retained to avoid silently suppressing an endpoint finding.
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+YangMills.jointExistence : YangMills.JointExistence
+'YangMills.jointExistence' depends on axioms: [propext, Classical.choice, Quot.sound]
+YangMills.constructed.{u, v} (g : YangMills.GaugeGroup) (hg : g.IsSimple) (b : &#x211D;) (hb : 0 &lt; b) :
+  &exist; C,
+    C.path.levels.clock.kernel.penalty = b &and;
+      C.Makes &and;
+        YangMills.WilsonRegularity (YangMills.wilsonFamily C) &and;
+          &forall; (p : YM.Extraction.Order),
+            &exist; q S F L Q M X,
+              (YangMills.hierarchy F Q).Properties (p.refine q).per.choose &and;
+                (YangMills.hierarchy F Q).Contacts &and;
+                  { mesh := YM.Extraction.Sequence.full, per := (p.refine q).per }.Ordered C S &and;
+                    YM.FullVolume.PositionsUV C YM.Extraction.Sequence.full &and;
+                      YM.Spec.Calibrated C &and;
+                        YM.Independent.Core (YangMills.GaugeGroup.coreSimple hg) F L Q &and;
+                          YM.Nonperturbative.Headline.Reconstruction F L &and;
+                            (&forall; (i : F.&alpha;.space.X), (YangMills.view (L.actors i)).Axioms) &and;
+                              YM.Nonperturbative.Headline.SeparatedOPE F Q &and;
+                                YM.Nonperturbative.Headline.NestedOPE F Q &and;
+                                  YM.Nonperturbative.Headline.TraceExclusions F &and;
+                                    M.basis = Q.port &and;
+                                      YM.Contacts.Solstice.MultipleLight F M &and;
+                                        Nonempty (YM.Contacts.Transport.SystemBasis M) &and;
+                                          Nonempty (YM.Contacts.Solstice.Thresholds M) &and;
+                                            YM.Pert.FirstExtension F X &and; YM.Pert.Position.FourMeters F X
+'YangMills.constructed' depends on axioms: [propext, Classical.choice, Quot.sound]
+YangMills.su2Simple : YangMills.su2.IsSimple
+'YangMills.su2Simple' depends on axioms: [propext, Classical.choice, Quot.sound]
+YangMills.su2Theory :
+  &exist; C, YangMills.WilsonRegularity C &and; &forall; (p : &#x2115; &rarr; &#x2115;), StrictMono p &rarr; &exist; q, StrictMono q &and; &exist; T, T.Properties (p &#x2218; q)
+'YangMills.su2Theory' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.Nonperturbative.existence.{u, v} (G : YM.Gauge) (hG : G.Simple) (b : &#x211D;) (hb : 0 &lt; b) :
+  YM.Nonperturbative.Headline.WilsonExistence G hG b
+'YM.Nonperturbative.existence' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.Nonperturbative.continuum.{u, v} {G : YM.Gauge} (hG : G.Simple) {b : &#x211D;} (hb : 0 &lt; b) :
+  have R := YM.Independent.fundedRun hG hb;
+  R.family.path.levels.clock.kernel.penalty = b &and;
+    &forall; (p : YM.Extraction.Order),
+      &exist; q S F L Q M,
+        { mesh := YM.Extraction.Sequence.full, per := (p.refine q).per }.Ordered R.family S &and;
+          YM.FullVolume.PositionsUV R.family YM.Extraction.Sequence.full &and;
+            YM.Independent.Core hG F L Q &and;
+              YM.OPE.Nesting.Uniform F Q &and;
+                M.basis = Q.port &and;
+                  YM.Contacts.Solstice.MultipleLight F M &and;
+                    Nonempty (YM.Contacts.Transport.SystemBasis M) &and; Nonempty (YM.Contacts.Solstice.Thresholds M)
+'YM.Nonperturbative.continuum' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.Nonperturbative.continuum_with_position_tests.{u, v} {G : YM.Gauge} (hG : G.Simple) {b : &#x211D;} (hb : 0 &lt; b) :
+  have R := YM.Independent.fundedRun hG hb;
+  R.family.path.levels.clock.kernel.penalty = b &and;
+    &forall; (p : YM.Extraction.Order),
+      &exist; q S F L Q M,
+        { mesh := YM.Extraction.Sequence.full, per := (p.refine q).per }.Ordered R.family S &and;
+          YM.FullVolume.PositionsUV R.family YM.Extraction.Sequence.full &and;
+            YM.Independent.Core hG F L Q &and;
+              YM.OPE.Nesting.Uniform F Q &and;
+                M.basis = Q.port &and;
+                  YM.Contacts.Solstice.MultipleLight F M &and;
+                    Nonempty (YM.Contacts.Transport.SystemBasis M) &and;
+                      Nonempty (YM.Contacts.Solstice.Thresholds M) &and;
+                        &exist; X, YM.Pert.FirstExtension F X &and; YM.Pert.Position.FourMeters F X
+'YM.Nonperturbative.continuum_with_position_tests' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.Contacts.Solstice.celestial (G : YM.Gauge) (h : G.Simple) :
+  &exist; C F S Z M,
+    YM.Contacts.Solstice.MultipleLight Z M &and;
+      Nonempty (YM.Contacts.Transport.SystemBasis M) &and; Nonempty (YM.Contacts.Solstice.Thresholds M)
+'YM.Contacts.Solstice.celestial' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.Pert.Position.finite_leading {G : YM.Gauge} {d t : &#x2115;} {A : YM.Labels.Frames G}
+  (Q : YM.Pert.Position.Conditions A d t) (H : YM.Pert.Position.CleanProfiles Q) (L : YM.Lattice.Side) (hL : 1 &lt; &uarr;L) :
+  Filter.Tendsto (fun m =&gt; YM.Pert.Position.finite Q L m 0) Filter.atTop (nhds (YM.Pert.Position.white Q))
+'YM.Pert.Position.finite_leading' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.Pert.Position.normalized_four {G : YM.Gauge} (hg : G.Simple) {p : &#x211D;} (hp : 0 &lt; p) :
+  &exist; C,
+    C.path.levels.clock.kernel.penalty = p &and;
+      YM.Extraction.Wcmain C &and;
+        YM.MergeProof.Ribbons.Materials C &and;
+          YM.MergeProof.Ribbons.Plenty C &and;
+            &forall; (f : YM.Extraction.Order), &exist; g S b X, YM.Pert.FirstExtension b X &and; YM.Pert.Position.FourMeters b X
+'YM.Pert.Position.normalized_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.Pert.Parity.parityEndpoint {G : YM.Gauge} (hg : G.Simple) {c : &#x211D;} (hc : 0 &lt; c) :
+  &exist; C,
+    C.path.levels.clock.kernel.penalty = c &and;
+      YM.Extraction.Wcmain C &and;
+        YM.MergeProof.Ribbons.Materials C &and;
+          YM.MergeProof.Ribbons.Plenty C &and;
+            &forall; (f : YM.Extraction.Order),
+              &exist; g S b X,
+                YM.Pert.FirstExtension b X &and;
+                  YM.Pert.Position.Crest X &and;
+                    &exist; n Q &phi; J,
+                      YM.Pert.Position.CleanProfiles Q &and;
+                        YM.Pert.Position.BoardAttains Q X &phi; &and;
+                          YM.Pert.Position.Resident b X &phi; &and; YM.Pert.Parity.Fair Q J &and; YM.Pert.Parity.ParityFields &phi;
+'YM.Pert.Parity.parityEndpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.Pert.Parity.low_read {G : YM.Gauge} {d : &#x2115;} {F : YM.Labels.Frames G} (hg : G.Simple) (hd : d &le; 5) {&sigma; : &#x2115;}
+  (X : YM.Pert.Position.Conditions F d &sigma;) (L : YM.Lattice.Side) (m j : &#x2115;) (h : Odd j) :
+  YM.Pert.Position.finite X L m j = 0
+'YM.Pert.Parity.low_read' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.Pert.Asymptotics.comparison {G : YM.Gauge} {C : YM.Family G} {N k : &#x2115; &rarr; &#x2115;} (hc : C.Makes) (hg : G.Simple)
+  (hi : &forall;&#x1DA0; (i : &#x2115;) in Filter.atTop, i &le; N i) :
+  Filter.Tendsto (fun i =&gt; YM.Pert.Asymptotics.regulatorRun C (N i) (k i) i * &radic;(Real.log (C.S.a i)&#x207B;&sup1;)) Filter.atTop
+    (nhds (&radic;(2 * YM.Pert.Asymptotics.b0 G))&#x207B;&sup1;)
+'YM.Pert.Asymptotics.comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.SharpGram.habitat {G : YM.Gauge} (hG : G.Simple) {b : &#x211D;} (hb : 0 &lt; b) (f : YM.Extraction.Order) :
+  &exist; C g T F L P,
+    C.Makes &and;
+      YM.Spec.Calibrated C &and;
+        C.path.levels.clock.kernel.penalty = b &and;
+          YM.UVExtension.Oasis.Floral C &and;
+            { mesh := YM.Extraction.Sequence.full, per := (f.refine g).per }.Ordered C T &and;
+              (&forall; (d k : &#x2115;),
+                  &forall;&#x1DA0; (n : &#x2115;) in Filter.atTop,
+                    &forall; (r : &#x2115;) (v : Fin r &rarr; C.book.Token),
+                      (&forall; (i : Fin r), (v i).fst &le; d) &rarr; &exist; g, YM.UVExtension.Poppy.Margins C r n k v g) &and;
+                YM.OPE.Facilities C (f.refine g) T &and;
+                  (&exist; W r D, YM.OPE.Log.LogPackage C W r D &and; YM.SharpGram.TrueSteps C W) &and;
+                    YM.EveryPhase.Completed F L &and;
+                      YM.OPE.AllShapes F P &and;
+                        YM.SharpGram.Dense.Coverage C F.room.cutoff &and;
+                          &forall; (U : Ultrafilter (&#x2115; &times; &#x2115;)),
+                            &uarr;U &le; (f.refine g).fuse &rarr;
+                              &forall; (D : &#x2115;),
+                                Nonempty (YM.SharpGram.Weak.Portfolio C F.room.cutoff D &uarr;U) &and;
+                                  &forall; (X : YM.SharpGram.Weak.Portfolio C F.room.cutoff D &uarr;U),
+                                    &exist; Y,
+                                      YM.SharpGram.PricedIn F X Y &and;
+                                        &forall; (d : Fin (D + 1)),
+                                          Filter.Tendsto
+                                            (fun k =&gt; YM.SharpGram.Weak.Portfolio.inBasis F X k (&uarr;d) (Y k &uarr;d))
+                                            Filter.atTop (nhds (YM.SharpGram.Weak.Portfolio.model C &uarr;d))
+'YM.SharpGram.habitat' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.SharpGram.inletFirst {G : YM.Gauge} {C : YM.Family G} {f : YM.Extraction.Order} {S : YM.Table C.book}
+  (U : YM.Spec.Final C f S) {d : &#x2115;} (hG : G.Simple) {&phi; : Filter (&#x2115; &times; &#x2115;)} (hf : &phi; &le; f.fuse) (x : C.label d)
+  (hd : d &le; 3) : YM.SharpGram.Supplies C &phi; d ((S.project d) x)
+'YM.SharpGram.inletFirst' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.SharpGram.outletFirst {G : YM.Gauge} {C : YM.Family G} {f : YM.Extraction.Order} {S : YM.Table C.book}
+  (U : YM.Spec.Final C f S) {W : YM.Bid.Worth} {r : &#x2115; &rarr; &#x2115;}
+  {D : (N p m : &#x2115;) &rarr; m &lt; N &rarr; YM.MergeProof.GaugeDoor (C.path.rep N p (m + 1)) (C.path.rep N p m)}
+  (T : YM.OPE.TableTickets C W r D) {d : &#x2115;} (hG : G.Simple) {&phi; : Filter (&#x2115; &times; &#x2115;)} (hf : &phi; &le; f.fuse) {w : &#x2115;}
+  (L : S.Field d &rarr;&#x2097;[&#x2102;] &#x2102;) (hw : w &le; d) (he : w &le; 3) (hp : YM.SharpGram.Kills U.sector.derivatives hw L) :
+  YM.SharpGram.Releases C &phi; d w L
+'YM.SharpGram.outletFirst' depends on axioms: [propext, Classical.choice, Quot.sound]
+YM.Independent.Core.point.{u, v} {G : YM.Gauge} {C : YM.Family G} {f : YM.Extraction.Order} {S : YM.Table C.book}
+  {hG : G.Simple} {F : YM.Spec.Final C f S} {L : YM.EveryPhase.Almanac F}
+  {Q : YM.OPE.Orbits.Reader F.sector.derivatives F.sector.turns F.room.kernel.spin} (H : YM.Independent.Core hG F L Q)
+  {I J : Type} [Fintype I] [Fintype J] {d : I &rarr; &#x2115;} {e : J &rarr; &#x2115;} (a : YM.OPE.Orbits.Labels S d)
+  (b : YM.OPE.Orbits.Labels S e) {M &eta; c &epsilon; : &#x211D;} (hM : 0 &le; M) (h&eta; : 0 &lt; &eta;) (hc : 0 &lt; c) (h&epsilon; : 0 &lt; &epsilon;) (D : &#x2115;) :
+  &forall;&#x1DA0; (r : &#x211D;) in nhdsWithin 0 (Set.Ioi 0),
+    &forall; (x : I &rarr; YM.E4) (o : YM.E4) (y : J &rarr; YM.E4),
+      YM.OPE.WithinRoom r M &eta; x o &rarr;
+        YM.OPE.ClearOf o y c &rarr;
+          &forall; (s : YM.OPE.Viewers F),
+            &#x2016;YM.OPE.Orbits.whole (YM.OPE.spectator F s) x a y b -
+                  &sum; j,
+                    &sum; i,
+                      Q.coef (&uarr;j) i x a o *
+                        YM.OPE.Orbits.whole (YM.OPE.spectator F s) (YM.OPE.sole o) (YM.OPE.sole (Q.actor (&uarr;j) i)) y b&#x2016; &le;
+              r ^ (&uarr;D + 1 - YM.OPE.Orbits.weight d - &epsilon;)
+'YM.Independent.Core.point' depends on axioms: [propext, Classical.choice, Quot.sound]</pre>
+    <h2 id="auto-5"><a id="public-root-constant-reachability"></a>Public-root constant reachability<span style="margin-left: 1em"></span></h2>
+    <p>
+      A temporary pinned Lean meta script imported <tt class="verbatim">ConcreteSU2</tt>,
+      began at <tt class="verbatim">YangMills.jointExistence</tt>, recursively followed
+      each declaration's <tt class="verbatim">ConstantInfo.getUsedConstantsAsSet</tt>
+      references in type and value/proof, and included constructors of reached
+      inductive types. Its visited-name set prevented repeated traversal. It
+      queried membership for the 17 advertised names, rather than treating the
+      all-roots usage TSV as a public-root graph. The script at <tt class="verbatim">/private/tmp/ym-issue3-reach.lean</tt>
+      had SHA-256 <tt class="verbatim">6c5caf8dc03a743cce045bfb01b423f220d64291dd90989fb7d807accc702e01</tt>.
+      From the original checkout's <tt class="verbatim">Lean/</tt> directory, with the
+      same pinned source files, <tt class="verbatim">lake env lean
+      /private/tmp/ym-issue3-reach.lean</tt> exited 0 in 28.629 s:
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Root</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Reachable in <tt class="verbatim">jointExistence</tt>
+        type/proof closure?</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YangMills.jointExistence</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Yes, start</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YangMills.constructed</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Yes</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Nonperturbative.existence</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Yes</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Nonperturbative.continuum_with_position_tests</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Yes</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Independent.Core.point</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Yes</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Pert.Position.finite_leading</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Yes</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Nonperturbative.continuum</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">No</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YangMills.su2Simple</tt>, <tt class="verbatim">YangMills.su2Theory</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">No</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Contacts.Solstice.celestial</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">No</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Pert.Position.normalized_four</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">No</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Pert.Parity.parityEndpoint</tt>, <tt class="verbatim">YM.Pert.Parity.low_read</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">No</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Pert.Asymptotics.comparison</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">No</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.SharpGram.habitat</tt>, <tt class="verbatim">YM.SharpGram.inletFirst</tt>,
+        <tt class="verbatim">YM.SharpGram.outletFirst</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">No</td>
+      </tr></tbody>
+    </table>
+    <p>
+      This is formal constant reachability, not a claim that <tt class="verbatim">Core.point</tt>
+      or <tt class="verbatim">finite_leading</tt> is a <em>conjunct</em> of <tt class="verbatim">jointExistence</tt>.
+      Conversely, a <tt class="verbatim">No</tt> means the named theorem constant was
+      not in that closure; related definitions, mathematical ideas, or
+      separately proved variants may still occur. The direct source proof
+      chain and this closure have different purposes.
+    </p>
+    <h2 id="auto-6"><a id="commands-outcomes-and-unperformed-checks"></a>Commands, outcomes, and unperformed checks<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Targeted source inspections used <tt class="verbatim">rg -n</tt>, <tt class="verbatim">nl
+          -ba</tt>, and <tt class="verbatim">sed</tt> on the named roots, their
+          immediate defining files, <tt class="verbatim">Lean/README.md</tt>, and the
+          public bridge definitions. They found the 17 source declarations and
+          the definition locations cited above. The three agent sessions were
+          <tt class="verbatim">hairer-codex-issue3-public-20261111</tt>, <tt class="verbatim">hairer-codex-issue3-special-20261111</tt>,
+          and <tt class="verbatim">hairer-codex-issue3-pert-20261111</tt>; all were
+          read-only and reported to the parent session <tt class="verbatim">hairer-codex-issue3-20261111</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          From <tt class="verbatim">/Users/hairer/humanise-yang-mills/Lean</tt>, the
+          command <tt class="verbatim">lake env lean -j1 -DmaxHeartbeats=0
+          -DmaxRecDepth=4096
+          /private/tmp/ym-issue3-elaborated-types-20261111.lean</tt> exited 0.
+          Its 159-line output had SHA-256 <tt class="verbatim">bacf65af7ad5aa5d70318686fe63d38963d1586f2f66503b25416d387b993c5e</tt>;
+          two pretty-printer elisions remained.
+        </p>
+      </li>
+      <li>
+        <p>
+          A first attempt to increase print depth using <tt class="verbatim">pp.maxDepth</tt>
+          exited 1 with <tt class="verbatim">Unknown option pp.maxDepth</tt>; its output
+          at <tt class="verbatim">/private/tmp/ym-issue3-elaborated-types-full-20261111.log</tt>
+          had SHA-256 <tt class="verbatim">e9e6e21d5a6edeae44ba3bacb17efe753a0b953820be19af184c2c64849d4200</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The corrected expanded-type command, from the same <tt class="verbatim">Lean/</tt>
+          directory, was <tt class="verbatim">lake env lean -j1 -DmaxHeartbeats=0
+          -DmaxRecDepth=4096
+          /private/tmp/ym-issue3-elaborated-types-expanded-20261111.lean</tt>.
+          It exited 0, produced the 159-line output transcribed above, with no
+          pretty-printer elisions, at <tt class="verbatim">/private/tmp/ym-issue3-elaborated-types-expanded-20261111.log</tt>
+          (SHA-256 <tt class="verbatim">554da88654714fd5a87d408d74904831f5bd587202ebd2f83012ab6da40e64d6</tt>).
+          The input raised <tt class="verbatim">pp.maxSteps</tt> and the deep-term/proof
+          print thresholds. All 17 <tt class="verbatim">#print axioms</tt> outputs were
+          exactly the three standard axioms also reported by issue #2.
+        </p>
+      </li>
+      <li>
+        <p>
+          The first reachability command in an isolated source clone exited
+          128 because that clone had no <tt class="verbatim">.lake/packages/mathlib</tt>
+          and the sandbox could not resolve <tt class="verbatim">github.com</tt> for a
+          new dependency download. The same temporary script run against the
+          existing compiled artifact in the original checkout exited 0, with
+          the result above. No build or imported-source edit was performed.
+        </p>
+      </li>
+      <li>
+        <p>
+          The issue #2 build, verifier, inventory, and axiom checks were read
+          from <a href="evidence/axioms-3456e5e.html">accepted evidence</a> and <a href="build.html">the build
+          record</a>; this issue did not rerun the expensive kernel replay or
+          perform a clean source rebuild. The upstream standalone Comparator,
+          <tt class="verbatim">verification/CompactCheck.lean</tt>, and independent
+          second-implementation proof checking were not run here. Their status
+          must not be inferred from this audit.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">python3 scripts/check_blueprint.py</tt> passed with <tt
+          class="verbatim">Blueprint structure OK: 0 units. Lean and mathematics were
+          not verified.</tt> <tt class="verbatim">git diff --check</tt> passed. A
+          name-count check found all 17 manifest targets in both audit files
+          and 17 printed endpoint axiom lines. These checks verify structure
+          and transcription completeness, not mathematical interpretation.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-7"><a id="open-questions-and-review-boundary"></a>Open questions and review boundary<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          This audit identifies theorem types and defining conditions; it does
+          not prove that the constructions satisfy an external mathematical or
+          physical standard beyond what the predicates literally express. In
+          particular, the group&rsquo;s external assessment of the submission,
+          if used in a monograph, needs its own comparison with the public
+          predicate package and should not be silently imported as a stronger
+          theorem.
+        </p>
+      </li>
+      <li>
+        <p>
+          The <tt class="verbatim">MultipleLight</tt>, <tt class="verbatim">FirstExtension</tt>,
+          <tt class="verbatim">FourMeters</tt>, portfolio, and trace predicates have
+          substantial nested definitions. The ledger records the immediate
+          meaning needed to prevent headline inflation; an independent Lean
+          correspondence review should inspect any deeper interpretation
+          proposed for later proof units.
+        </p>
+      </li>
+      <li>
+        <p>
+          No positive mass gap, uniqueness of the subsequential volume limit,
+          general generalized-free-field exclusion, or all-orders MS-bar
+          matching follows from a name or from the printed types here. Any
+          future claim of one of these properties requires a separate located
+          declaration and source audit.
+        </p>
+      </li>
+      <li>
+        <p>
+          This is an author draft. An independent Lean-correspondence reviewer
+          must check the source-to-English mapping before issue #3 is marked
+          reviewed or done.
+        </p>
+      </li>
+    </ul>
+  </body>
+</html>

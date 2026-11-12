@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Dependency-inventory regeneration for 3456e5e &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Dependency-inventory regeneration for <tt class="verbatim">3456e5e</tt></h1><a
+      id="dependency-inventory-regeneration-for-3456e5e"></a>
+    </p>
+    <h2 id="auto-1"><a id="method"></a>Method<span style="margin-left: 1em"></span></h2>
+    <p>
+      <tt class="verbatim">Lean/verification/Usage.lean</tt> writes its two TSV outputs
+      relative to the current working directory. To avoid overwriting the
+      imported source evidence, the audit created a temporary overlay
+      containing only a copy of <tt class="verbatim">verification/joint-headlines.txt</tt>,
+      then ran the pinned Lean executable with Lake's environment from the
+      project:
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+mkdir -p /private/tmp/ym-issue2-usage-3456e5e.sjDkMo/verification
+cp Lean/verification/joint-headlines.txt \
+  /private/tmp/ym-issue2-usage-3456e5e.sjDkMo/verification/joint-headlines.txt
+cd Lean
+env PATH=/Users/hairer/.elan/toolchains/leanprover--lean4---v4.32.0/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin \
+  /usr/bin/time -p lake env sh -c \
+  'cd /private/tmp/ym-issue2-usage-3456e5e.sjDkMo &amp;&amp; /Users/hairer/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean -j1 -DmaxHeartbeats=0 -DmaxRecDepth=4096 /Users/hairer/humanise-yang-mills/Lean/verification/Usage.lean'</pre>
+    <p>
+      The command exited successfully after 104.49 seconds:
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+USAGE_PASS headlines=17 project=250319 used=100168 outside=150151 modules=9469 modulesWithNoUsedDeclaration=2946</pre>
+    <p>
+      The root list generated from <tt class="verbatim">source/upstream.json</tt> was
+      identical to <tt class="verbatim">Lean/verification/joint-headlines.txt</tt>; both
+      had SHA-256 digest <tt class="verbatim">4a5d4eba5d143858d12466aa818c4bfe202e548fc208b87264932a857f492745</tt>.
+    </p>
+    <h2 id="auto-2"><a id="inventory-comparison"></a>Inventory comparison<span style="margin-left: 1em"></span></h2>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Inventory</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Checked-in SHA-256</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Regenerated SHA-256</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Byte comparison</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">declaration-usage.tsv</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">1f16d6cbf7cd650c7edccd08f95967ce92cd7e36ec68cfdd081621aec126c5e9</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">9dc9a62a163d973cb37a94abc74280e7925a83a608e26b731a124d0202be4d2a</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Different</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">module-usage.tsv</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">f9db49e0d1b7bc8262ecb7f77b18f378db687e9ed87356c42010f560dac265dc</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">f9db49e0d1b7bc8262ecb7f77b18f378db687e9ed87356c42010f560dac265dc</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Identical</td>
+      </tr></tbody>
+    </table>
+    <p>
+      Both declaration files contain 250,320 lines, including the header.
+      Comparing only columns 1&ndash;5 (<tt class="verbatim">module</tt>, <tt class="verbatim">declaration</tt>,
+      <tt class="verbatim">status</tt>, <tt class="verbatim">headline_witness</tt>, and <tt class="verbatim">immediate_user</tt>)
+      gives the same SHA-256 digest for each file: <tt class="verbatim">49c107bbdc756c4449cd13be8a0d2329fc003f4e192e80357069e72521d2daac</tt>.
+      Thus declaration membership, classifications, endpoint witnesses, and
+      immediate users all agree. The only differences are these three <tt
+      class="verbatim">source_line</tt> cells:
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Declaration</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right; border-top: 1px solid; border-bottom: 1px solid"><strong>Checked-in line</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right; border-top: 1px solid; border-bottom: 1px solid"><strong>Regenerated line</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">_private.YM.Work.F05.PiDensity.0.YM.Work.F05.lprodFin</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">17</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">19</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Work.F05.lprod</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">43</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">45</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Work.F05.piDensity</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">51</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">53</td>
+      </tr></tbody>
+    </table>
+    <p>
+      The regenerated values match the declarations' actual lines in <tt
+      class="verbatim">Lean/YM/Work/F05/PiDensity.lean</tt>. That file has SHA-256
+      digest <tt class="verbatim">cd3ec57d549b531ae10f2693a61f19fdb0f8f8ddedebfc3fd0730170e2862741</tt>,
+      which matches its entry in <tt class="verbatim">Lean/SOURCES.sha256</tt>; it is
+      not a local edit. Two attribution-comment lines occur immediately above
+      <tt class="verbatim">lprodFin</tt>, consistently with the uniform offset. This
+      audit does not establish when or from which source layout the checked-in
+      declaration TSV was generated.
+    </p>
+    <p>
+      The checked-in inventories were deliberately left unchanged, as required
+      by the task. The mismatch is evidence to review, not something to
+      overwrite silently.
+    </p>
+    <h2 id="auto-3"><a id="what-this-establishes"></a>What this establishes<span style="margin-left: 1em"></span></h2>
+    <p>
+      For the imported source and restored compiled artifacts, the
+      project-supplied constant-reachability traversal completed for all 17
+      roots and reproduced the published aggregate counts. Its output confirms
+      100,168 reached declarations and 150,151 declarations outside the root
+      closures in the 250,319-declaration audit universe. The module-level
+      inventory is exactly reproducible; the declaration inventory is
+      reproducible apart from the three reported source locations.
+    </p>
+    <p>
+      This is a syntactic dependency inventory, not a mathematical proof
+      graph. A witness is one traversal path, generated declarations and
+      implementation plumbing are included, and dependencies outside the
+      enumerated project modules are not TSV rows. The result does not
+      classify which declarations need exposition or validate the physical
+      interpretation of any endpoint.
+    </p>
+  </body>
+</html>

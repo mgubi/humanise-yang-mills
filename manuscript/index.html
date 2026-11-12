@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Mathematical manuscript &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><font class="ym-here">Manuscript</font><font
+      class="ym-sep">&middot;</font><a href="../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Mathematical manuscript</h1><a id="mathematical-manuscript"></a>
+    </p>
+    <div class="ym-callout">
+      <a href="main.html">Read the manuscript (HTML version, converted from the LaTeX
+      source)</a>
+    </div>
+    <p>
+      LaTeX is the authoritative mathematical text from the first draft
+      onward. Write sections here as soon as their local statements and input
+      interfaces are precise. A completed blueprint and fully proved
+      prerequisites are not required before writing. State outstanding inputs
+      exactly and track their status in the linked blueprint unit; never
+      conceal a missing argument.
+    </p>
+    <p>
+      <tt class="verbatim">main.tex</tt> assembles section files with <tt class="verbatim">\input</tt>.
+      <tt class="verbatim">preamble.tex</tt> defines shared notation and theorem
+      environments; <tt class="verbatim">references.bib</tt> holds conventional
+      references. The running-coefficient pilot is the first section, owned by
+      <a href="../blueprint/units/YM-000022/correspondence.html">YM-000022</a>. Its blueprint contains correspondence and review
+      evidence, not a second version of the proof.
+    </p>
+    <h2 id="auto-1"><a id="build-and-inspect"></a>Build and inspect<span style="margin-left: 1em"></span></h2>
+    <p>
+      From the repository root, with a TeX distribution providing latexmk and
+      BibTeX:
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+mkdir -p manuscript/build
+cd manuscript
+latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex</pre>
+    <p>
+      The result is <tt class="verbatim">manuscript/build/main.pdf</tt>. Build products
+      are ignored by Git. Inspect the rendered pages after changes; resolve
+      missing references and layout warnings before submission. CI builds the
+      manuscript as well as checking metadata.
+    </p>
+    <h2 id="auto-2"><a id="writing-and-review"></a>Writing and review<span style="margin-left: 1em"></span></h2>
+    <p>
+      Use ordinary mathematical language, conventional references and the
+      shared <a href="../docs/notation.html">notation contract</a>. Give complete arguments for
+      substantive steps not supplied by checked references. Check every cited
+      result's hypotheses. Keep Lean identifiers, audit logs, and source
+      crosswalks in the blueprint.
+    </p>
+    <p>
+      Create a section from <tt class="verbatim">templates/proof-unit/section.tex</tt>;
+      place its <tt class="verbatim">unit.json</tt> and <tt class="verbatim">correspondence.md</tt>
+      in the canonical blueprint directory. List the section and all local
+      mathematical support files in <tt class="verbatim">unit.json</tt>'s <tt class="verbatim">manuscript</tt>
+      array, including nested inputs, macros and bibliography. Shared
+      support-file edits invalidate every listed dependent unit's review
+      fingerprint. Claim shared-file edits explicitly; adding a section also
+      needs a bounded edit to <tt class="verbatim">main.tex</tt>.
+    </p>
+    <p>
+      Draft status is visible in the assembled manuscript; inclusion does not
+      imply acceptance. Independent mathematical and Lean-correspondence
+      reviews remain necessary. Integration checks notation, interfaces and
+      the full chain of inputs; it improves the existing LaTeX rather than
+      translating a separate Markdown proof.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Source provenance and verification &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Source provenance and verification</h1><a id="source-provenance-and-verification"></a>
+    </p>
+    <p>
+      <tt class="verbatim">upstream.json</tt> is the source manifest. It records the
+      imported release at the immutable revision <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>.
+      Import integrity has been checked against the upstream checksum
+      manifest, but no successful Lean build or independent proof validation
+      is implied. See <a href="build.html">build.md</a> and <a href="audit.html">audit.md</a>.
+    </p>
+    <p>
+      The source was imported through the review workflow described in <a
+      href="sync.html">sync.md</a>. That workflow can propose later upstream revisions,
+      but each revision still requires the build, statement, dependency, and
+      axiom audits below.
+    </p>
+    <h2 id="auto-1"><a id="import-procedure"></a>Import procedure<span style="margin-left: 1em"></span></h2>
+    <ol>
+      <li>
+        <p>
+          Put the complete upstream project under <tt class="verbatim">Lean/</tt>,
+          preserving its directory layout, toolchain file, dependency lock
+          file, and licence notices. Do not copy its nested <tt class="verbatim">.git</tt>
+          directory. Retain the upstream URL and exact commit, or an archive
+          URL and SHA-256 digest if no commit is available.
+        </p>
+      </li>
+      <li>
+        <p>
+          Set the manifest to <tt class="verbatim">imported</tt>. Record <tt class="verbatim">url</tt>,
+          immutable <tt class="verbatim">revision</tt>, exact <tt class="verbatim">lean_toolchain</tt>,
+          project-relative <tt class="verbatim">project_root</tt>, and <tt class="verbatim">license</tt>
+          identifier or notice path. <tt class="verbatim">revision</tt> is a full commit
+          hash or <tt class="verbatim">sha256:&lt;archive digest&gt;</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Reproduce upstream's build instructions using the pinned
+          dependencies. Write <tt class="verbatim">source/build.md</tt> with working
+          directory, platform, versions, commands, outcomes, resource use, and
+          log/artifact links. Keep failed checks and remaining blockers
+          visible. An imported source is not yet a verified source.
+        </p>
+      </li>
+      <li>
+        <p>
+          Identify the actual final declarations; record their fully qualified
+          names in <tt class="verbatim">targets</tt>. Write <tt class="verbatim">source/audit.md</tt>
+          with their exact statements, relevant definitions, transitive axiom
+          reports, and the mathematical scope established. Empty <tt class="verbatim">targets</tt>
+          means target identification is still pending.
+        </p>
+      </li>
+      <li>
+        <p>
+          Record the upstream-supported verification method and any additional
+          independent checking used. Use commands appropriate to this pinned
+          Lean version, rather than assuming current tools work on an older
+          release.
+        </p>
+      </li>
+    </ol>
+    <p>
+      Run build scripts from a reviewed source snapshot in a suitable isolated
+      environment without contributor credentials. Keep the expensive full
+      source build separate from cheap prose checks; publish reusable results
+      keyed by source and toolchain. Fork PR checks should not receive write
+      credentials or execute privileged workflows.
+    </p>
+    <p>
+      Audit snippets may use <tt class="verbatim">#check</tt>, <tt class="verbatim">#print</tt>,
+      and <tt class="verbatim">#print axioms</tt> after importing the relevant modules.
+      Record the actual command and output. Keep inspection code in a separate
+      audit workspace or documented overlay; preserve upstream <tt class="verbatim">Lean/</tt>.
+    </p>
+    <h2 id="auto-2"><a id="source-changes"></a>Source changes<span style="margin-left: 1em"></span></h2>
+    <p>
+      The manifest pins the active explanation wave. Every unit refers to that
+      exact revision. Changing it requires a coordinated migration and renewed
+      review where needed. Archive older evidence; do not relabel old build
+      logs as a new verification.
+    </p>
+  </body>
+</html>

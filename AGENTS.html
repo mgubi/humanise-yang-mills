@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Instructions for contributing agents &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="index.html">Home</a><font class="ym-sep">&middot;</font><a href="blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Instructions for contributing agents</h1><a id="instructions-for-contributing-agents"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Start here</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Scope and coordination</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Mathematical integrity</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Deliver and review</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">2</a>
+      </p>
+    </div>
+    <h2 id="auto-1"><a id="start-here"></a>Start here<span style="margin-left: 1em"></span></h2>
+    <p>
+      Read <tt class="verbatim">CONTRIBUTING.md</tt>, <tt class="verbatim">docs/coordination.md</tt>,
+      and <tt class="verbatim">docs/proof-standard.md</tt>. Read the task issue, its
+      comments, linked PRs, and relevant <tt class="verbatim">Bots/</tt> notes. Do not
+      read the whole Lean tree into context. Begin with the task's
+      declarations, their definitions and immediate dependencies, and expand
+      only as needed. The editorial target is a research monograph with
+      detailed proofs and appropriate literature references. The number of
+      Lean declarations translated is not a goal.
+    </p>
+    <h2 id="auto-2"><a id="scope-and-coordination"></a>Scope and coordination<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Work on one bounded task per agent session with an unexpired
+          self-claim posted on its issue. Follow <tt class="verbatim">docs/coordination.md</tt>:
+          check for overlap, post <tt class="verbatim">CLAIM</tt>, then recheck before
+          working. No coordinator approval is required. A branch, label, or
+          unposted intention is not a claim.
+        </p>
+      </li>
+      <li>
+        <p>
+          Maintainer-directed repository setup and explicit bounded
+          maintenance requests do not require a queue claim. This exception
+          does not reserve mathematical work.
+        </p>
+      </li>
+      <li>
+        <p>
+          Use issue comments for claims, progress, questions, and handoffs; PR
+          comments for review. Use <tt class="verbatim">Bots/</tt> only for concise
+          knowledge that future sessions need.
+        </p>
+      </li>
+      <li>
+        <p>
+          Recheck the live issue before starting, on resuming, and before
+          submitting. Stop substantial work at expiry unless you have posted a
+          valid renewal after rechecking for overlap; renewal does not need
+          manual approval.
+        </p>
+      </li>
+      <li>
+        <p>
+          Respect the task's declared outputs. Request a split or new task for
+          discoveries outside scope. Shared files such as the outline and
+          glossary have their own tasks.
+        </p>
+      </li>
+      <li>
+        <p>
+          Give each concurrent agent a separate worktree or clone and a
+          distinct session identifier. Subagents stay within the parent's
+          claim and have disjoint outputs; the parent owns their integration
+          and reports their involvement.
+        </p>
+      </li>
+      <li>
+        <p>
+          If GitHub access is unavailable, prepare a claim comment or handoff
+          for the contributor to post. Do not infer ownership from a stale
+          local checkout.
+        </p>
+      </li>
+      <li>
+        <p>
+          Use the contributing human's authorised GitHub authentication or the
+          designated project App. Never request or share the repository
+          owner's token; keep credentials out of prompts, notes, and commits.
+          See <tt class="verbatim">docs/access.md</tt>.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-3"><a id="mathematical-integrity"></a>Mathematical integrity<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Preserve <tt class="verbatim">Lean/</tt> and its pinned toolchain and
+          dependencies. Changes to upstream code belong in an explicitly
+          assigned source-maintenance task.
+        </p>
+      </li>
+      <li>
+        <p>
+          State exact hypotheses, quantifiers, spaces, and conclusions.
+          Inspect definitions and instances; never infer mathematical meaning
+          from a declaration's name.
+        </p>
+      </li>
+      <li>
+        <p>
+          Cite fully qualified declarations, source revision, and paths. Line
+          numbers are supplementary. Distinguish inspected evidence from
+          conjectured interpretation.
+        </p>
+      </li>
+      <li>
+        <p>
+          Search the shared literature notes and original mathematical sources
+          before developing a proof. Prefer a verified existing result to
+          rederiving it. Cite the precise version and check its hypotheses,
+          definitions, and conventions here.
+        </p>
+      </li>
+      <li>
+        <p>
+          Give detailed proofs for all substantive steps not supplied by
+          applicable cited results. Explain how cited results apply, and prove
+          any extra step or variant. A proof outline or a description of the
+          new ideas alone is insufficient.
+        </p>
+      </li>
+      <li>
+        <p>
+          Omit Lean implementation scaffolding from the monograph. Group
+          routine formal helpers by their mathematical purpose; do not assign
+          one prose unit per helper. Inspect enough of the source to justify
+          the grouping. Uncertain classifications remain open questions, not
+          permission to omit mathematical content.
+        </p>
+      </li>
+      <li>
+        <p>
+          Keep source correspondence and audit details in the blueprint. Write
+          the main manuscript in ordinary mathematical language with
+          conventional references.
+        </p>
+      </li>
+      <li>
+        <p>
+          Record gaps and assumptions explicitly. Do not invent an argument to
+          fill a gap.
+        </p>
+      </li>
+      <li>
+        <p>
+          Separate formal assumptions, theorem hypotheses, and external
+          background results. Never suppress axiom findings or change
+          statements to make checking succeed.
+        </p>
+      </li>
+      <li>
+        <p>
+          Reuse canonical proof units and notation. Request new ownership
+          rather than duplicate an existing explanation.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-4"><a id="deliver-and-review"></a>Deliver and review<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Write the authoritative mathematical text directly in <tt class="verbatim">manuscript/*.tex</tt>
+          or its subdirectories. Follow <tt class="verbatim">templates/proof-unit/</tt>
+          for the linked blueprint record, correspondence, and evidence; do
+          not duplicate the proof in Markdown. Drafts may use precisely stated
+          outstanding inputs; do not wait for the whole blueprint or all
+          prerequisite proofs to be complete.
+        </p>
+      </li>
+      <li>
+        <p>
+          Record commands actually run and their results. Unrun checks remain
+          unrun.
+        </p>
+      </li>
+      <li>
+        <p>
+          Run <tt class="verbatim">python3 scripts/check_blueprint.py</tt> for blueprint
+          changes. Run the test suite when changing that checker. Build
+          changed LaTeX and check the rendered pages. Lean commands must match
+          the pinned upstream project.
+        </p>
+      </li>
+      <li>
+        <p>
+          Treat all new prose as a draft. Independent Lean correspondence and
+          mathematical reviews are needed for <tt class="verbatim">reviewed</tt> status;
+          never approve your own work.
+        </p>
+      </li>
+      <li>
+        <p>
+          Material edits invalidate review fingerprints. Do not refresh
+          another reviewer's approval yourself; obtain renewed review.
+        </p>
+      </li>
+      <li>
+        <p>
+          Submit one focused PR and a short handoff, including remaining
+          uncertainties. Do not merge, relicense, or publish results unless
+          explicitly authorised.
+        </p>
+      </li>
+    </ul>
+  </body>
+</html>

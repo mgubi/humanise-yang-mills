@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Standard for an English proof unit &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><font
+      class="ym-here">Proof standard</font><font class="ym-sep">&middot;</font><a href="../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Standard for an English proof unit</h1><a id="standard-for-an-english-proof-unit"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Proof detail and use of the literature</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Decide what requires exposition</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Required content</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Two review questions</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Source audit and scope</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">4</a>
+      </p>
+    </div>
+    <p>
+      A proof unit provides the detailed proof of one coherent mathematical
+      result or construction, using existing results wherever possible. The
+      final output is a research monograph for mathematicians with the
+      prerequisites stated in its outline. Readers should be able to check the
+      argument without knowing Lean or consulting its tactic scripts. Write
+      the mathematical text directly in modular LaTeX files under <tt class="verbatim">manuscript/</tt>,
+      from the first draft. Keep a linked blueprint record for correspondence,
+      dependencies, questions and evidence, without copying the proof. Begin
+      with precise local interfaces, even when upstream proofs are still
+      pending; state those inputs and track their status. Do not wait for a
+      complete blueprint.
+    </p>
+    <h2 id="auto-1"><a id="proof-detail-and-use-of-the-literature"></a>Proof detail and use of the literature<span style="margin-left: 1em"></span></h2>
+    <p>
+      The monograph must give the complete mathematical argument. State the
+      constructions, reductions, estimates, and substantive intermediate
+      steps, and justify how they combine. Explaining the new ideas or stating
+      a sequence of claims is insufficient. Every substantive step must be
+      proved in the exposition or supplied by an applicable, precisely cited
+      result. Proofs supplied by such references need not be reproduced, even
+      when the Lean source develops them from first principles.
+    </p>
+    <p>
+      Before writing a proof, search the shared literature notes and relevant
+      original sources for a result that can be used. Make a reasonable,
+      focused search rather than assuming that unfamiliar formal code
+      represents new mathematics. Record useful searches and unresolved leads
+      so subsequent agents do not repeat them. Failure to find a reference
+      does not establish novelty or excuse a missing proof.
+    </p>
+    <p>
+      For each substantive cited result:
+    </p>
+    <ul>
+      <li>
+        <p>
+          State the version needed in the project's notation. Give an
+          identifiable source and a theorem, section, or page locator,
+          including the edition/version where relevant.
+        </p>
+      </li>
+      <li>
+        <p>
+          Read the source statement and check its hypotheses and definitions
+          against the present setting. A title, search snippet, or remembered
+          theorem name is insufficient.
+        </p>
+      </li>
+      <li>
+        <p>
+          Explain the application and verify its hypotheses. Prove any extra
+          argument, specialisation that needs justification, or strengthening
+          the source does not cover.
+        </p>
+      </li>
+      <li>
+        <p>
+          Identify unresolved mismatches explicitly. An approximate reference
+          cannot stand in for a required proof. Check that the cited result
+          does not presuppose the result under construction or otherwise
+          introduce a circular argument.
+        </p>
+      </li>
+    </ul>
+    <p>
+      Record reusable matches in <a href="../blueprint/background/index.html">background notes</a> at the level of
+      a mathematical result or package, not one note per helper lemma. Routine
+      elementary reasoning may be compressed in the usual monograph style; do
+      not bury a substantive gap in the word &ldquo;standard&rdquo;.
+    </p>
+    <h2 id="auto-2"><a id="decide-what-requires-exposition"></a>Decide what requires exposition<span style="margin-left: 1em"></span></h2>
+    <p>
+      Classify mathematical interfaces or coherent groups of declarations
+      before assigning writing tasks. A single source file may contain several
+      different categories.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Treatment</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>What goes into the monograph</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Prove</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">A detailed argument for the steps not supplied by cited
+        results, whether or not those steps are novel</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Cite and apply</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">The needed statement or reference, verified hypotheses, and
+        its application; further details only where required</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Suppress formal scaffolding</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">No discussion of coercion plumbing, generated helpers,
+        tactic infrastructure, or similar implementation details; retain any
+        mathematical content they encode</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Unresolved</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">A visible classification or proof question until the
+        content and required treatment are understood</td>
+      </tr></tbody>
+    </table>
+    <p>
+      The full formal dependency graph remains useful for source verification.
+      The expository graph ends at accepted literature results and the stated
+      reader prerequisites. Once a standard interface has been identified and
+      checked, there is no obligation to translate its internal Lean proof.
+      This editorial boundary does not remove its transitive dependencies from
+      the formal source audit.
+    </p>
+    <h2 id="auto-3"><a id="required-content"></a>Required content<span style="margin-left: 1em"></span></h2>
+    <p>
+      Items 1&ndash;4 belong in the authoritative LaTeX text. The blueprint's
+      <tt class="verbatim">correspondence.md</tt> links its labels and records items
+      5&ndash;7, literature-search evidence and dependency status. Audit
+      details need not interrupt the mathematics. The unit's <tt class="verbatim">manuscript</tt>
+      list includes every local file supplying its mathematical text, notation
+      or bibliography; the checker fingerprints those files as well as the
+      correspondence. Reviewers check the list is complete, including nested
+      inputs. A shared file change conservatively invalidates each unit that
+      lists it.
+    </p>
+    <ol>
+      <li>
+        <p>
+          <strong>Purpose and statement.</strong> State the result and why it
+          is needed. Spell out quantifiers, hypotheses, spaces,
+          normalisations, and what the conclusion means.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Definitions and notation.</strong> State the mathematical
+          meanings, spaces and conventions. Reuse the project's glossary;
+          record the meaning-determining formal definitions and instances in
+          the blueprint crosswalk.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Dependencies.</strong> Name previously established proof
+          units and precise external results, including hypotheses needed
+          here. State outstanding inputs explicitly; keep links to shared
+          literature notes and review status in the blueprint.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Argument.</strong> Give the mathematical steps and their
+          justification. Explain the key construction or estimate. Prove
+          substantive steps in detail, invoking verified literature results
+          where available and checking their applicability. No unexplained
+          substantive leaps.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Correspondence.</strong> Map the English statement and major
+          steps to fully qualified declarations, paths, and the pinned source
+          revision. Distinguish direct formal dependencies from a reorganised
+          argument proposed by the author.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Open questions.</strong> Identify unresolved
+          interpretations, missing arguments, unverified literature
+          references, and limitations. Write &ldquo;None identified&rdquo;
+          only after checking, not as a placeholder.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Evidence.</strong> Record inspection/build commands, outputs
+          or log paths, and what they establish. Mark checks not performed. A
+          summary of a tactic script alone is insufficient evidence of a
+          mathematical explanation.
+        </p>
+      </li>
+    </ol>
+    <p>
+      Keep source correspondence, classification decisions, and audit evidence
+      in the blueprint; the manuscript presents the proof and its conventional
+      mathematical references. Reordering the exposition, grouping helper
+      lemmas, and invoking an applicable literature theorem in place of its
+      formal implementation are expected editorial work. Any additional
+      argument not established by the formal source or the cited results must
+      be identified and reviewed as a separate proof obligation.
+    </p>
+    <h2 id="auto-4"><a id="two-review-questions"></a>Two review questions<span style="margin-left: 1em"></span></h2>
+    <p>
+      <strong>Lean correspondence:</strong> Are the definitions, quantifiers,
+      assumptions, and claimed conclusions faithful to the pinned source? Do
+      the cited declarations exist and actually support the stated steps? Were
+      hidden instances and coercions inspected?
+    </p>
+    <p>
+      <strong>Mathematical validity:</strong> Does the English argument follow
+      from the stated hypotheses and dependencies in sufficient detail for a
+      research monograph? Can a reader check the substantive steps without
+      mentally executing Lean tactics? Have applicable existing results been
+      sought, and do the verified references actually supply the steps
+      attributed to them? Are any uncited steps only sketched?
+    </p>
+    <p>
+      An independent person can perform both roles if qualified, but an author
+      cannot approve their own unit. Agent assistance is disclosed; a human
+      reviewer takes responsibility for acceptance. Model diversity is useful
+      for error discovery, but agreement between agents is not itself evidence
+      of correctness.
+    </p>
+    <p>
+      Use the <a href="../templates/review.html">review template</a>. Store review evidence beside the
+      unit under <tt class="verbatim">reviews/</tt>, in a separate file for each role
+      and review issue. Concurrent reviewers write their own reports; the
+      coordinator combines their accepted records in <tt class="verbatim">unit.json</tt>
+      so reviewers do not compete to edit that file. The metadata records
+      reviewer identity, evidence path, and the content fingerprint returned
+      by the checker. Changed prose, declarations, or dependency interfaces
+      require renewed review. CI checks the record and its fingerprint, not
+      the identity or mathematical competence of a reviewer.
+    </p>
+    <p>
+      <tt class="verbatim">planned</tt> means an interface is reserved; <tt class="verbatim">draft</tt>
+      means an explanation exists; <tt class="verbatim">reviewed</tt> means the local
+      unit has both reviews. Local review can be conditional on clearly stated
+      dependency results. It does <strong>not</strong> mean those dependencies
+      or the entire Yang&ndash;Mills argument have been verified. Integration
+      must check that the target's mathematical dependencies are covered by
+      detailed proofs, applicable literature results, or the explicitly stated
+      reader prerequisites. It must also re-evaluate uses of changed
+      dependency statements.
+    </p>
+    <h2 id="auto-5"><a id="source-audit-and-scope"></a>Source audit and scope<span style="margin-left: 1em"></span></h2>
+    <p>
+      Audit the actual final statements before attaching a physical
+      interpretation. Record dimensions, gauge groups, hypotheses, the
+      construction of the theory, and the precise axioms or properties
+      established. Treat any mass-gap claim as a separate statement to locate
+      and examine, not something inferred from the title.
+    </p>
+    <p>
+      For target declarations, capture transitive <tt class="verbatim">#print
+      axioms</tt> output and inspect the theorem's elaborated type and
+      relevant definitions. Incomplete proofs and nonstandard axioms require
+      explicit accounting; native-computation trust depends on the pinned Lean
+      version. An axiom audit does not detect an inappropriate theorem
+      hypothesis or a definition that misses the intended mathematics. Use the
+      pinned version's supported checking tools and record their limits. See
+      the official <a href="https://lean-lang.org/doc/reference/latest/ValidatingProofs/">validation guide</a> and <a href="https://lean-lang.org/doc/reference/latest/Axioms/">axiom
+      reference</a>.
+    </p>
+  </body>
+</html>

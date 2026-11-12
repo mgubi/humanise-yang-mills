@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Yang&ndash;Mills: mathematical exposition &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1], hyperref: [bs +
+    'href{###1}{#2}', 2, '']}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="toggle" style="display: none">
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+    </div>
+    <div class="ym-nav">
+      <a href="../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <table class="title-block" style="margin-bottom: 2em">
+      <tr>
+        <td><table class="title-block" style="margin-top: 0.5em; margin-bottom: 0.5em">
+          <tr>
+            <td><font style="font-size: 168.2%"><strong>Yang&ndash;Mills: mathematical
+            exposition</strong></font></td>
+          </tr>
+        </table><div class="compact-block" style="margin-top: 1em; margin-bottom: 1em">
+          <table class="title-block">
+            <tr>
+              <td><p style="margin-top: 0.5em; margin-bottom: 0.5em">
+                <div style="display: inline">
+                  <span style="margin-left: 0pt"></span>
+                </div>
+                <table style="display: inline-table; vertical-align: middle">
+                  <tbody><tr>
+                    <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-bottom: 0em; padding-top: 0em; width: 100%"><center>
+                      <p>
+                        <class style="font-variant: small-caps">by Contributors to Humanise
+                        Yang&ndash;Mills</class>
+                      </p>
+                    </center></td>
+                  </tr></tbody>
+                </table>
+              </p></td>
+            </tr>
+          </table>
+        </div><table class="title-block" style="margin-top: 0.5em; margin-bottom: 0.5em">
+          <tr>
+            <td><i>Draft</i></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>
+    <p>
+      This is a developing manuscript. Included sections are drafts pending
+      independent mathematical and source-correspondence review. Outstanding
+      inputs are stated explicitly; inclusion does not certify the complete
+      construction.
+    </p>
+    <h2 id="auto-1"><a id="sec:running-coefficient"></a>1<span style="margin-left: 1em"></span>Logarithmic asymptotics of the
+    running inverse coefficient<span style="margin-left: 1em"></span></h2>
+    <p>
+      Let \(G \subset U (r_G)\) be a closed matrix subgroup, in the indicated
+      unitary representation, with nonabelian simple real Lie algebra
+      \(\mathfrak{g}\). Write
+    </p>
+    <center>
+      \(\displaystyle b_0 (G) = \frac{11 \hspace{0.17em} C_{\mathfrak{g}}}{48
+      \pi^2}, \qquad
+C_{\mathfrak{g}} = - \frac{1}{\dim_{\mathbb{R}}
+      \mathfrak{g}}  \sum_j
+\text{Tr}_{\mathfrak{g}} \left( (\text{ad}
+      \hspace{0.17em} e_j)^2 \right),\)
+    </center>
+    <p>
+      where \((e_j)\) is an orthonormal basis of \(\mathfrak{g}\) for
+      \(\langle X, Y \rangle = - r_G^{- 1} \text{Retr} (XY)\). Here
+      \(\text{Tr}_{\mathfrak{g}}\) is the real trace of an endomorphism of
+      \(\mathfrak{g}\). Invariance of the matrix trace gives \(\langle [X, Y],
+      Z \rangle = - \langle Y, [X, Z] \rangle\), so each \(\text{ad}
+      \hspace{0.17em} e_j\) is skew-adjoint. Consequently \(-
+      \text{Tr}_{\mathfrak{g}} ((\text{ad} \hspace{0.17em} e_j)^2) =
+      \sum_{\ell}
+\|[e_j, e_{\ell}]\|^2\). Noncommutativity of
+      \(\mathfrak{g}\) makes at least one term in the resulting double sum
+      positive. In particular, \(b_0 (G) > 0\).
+    </p>
+    <p>
+      <div style="display: inline">
+        <a id="auto-2"></a>
+      </div>
+      <h5>Input from the lattice construction.<span style="margin-left: 1em"></span></h5>
+      <div style="display: inline">
+        Fix a construction family \(\mathcal{C}\) satisfying the construction
+        conditions. For \(N, p, m \in \mathbb{N}\) with \(m \leqslant N\), let
+        \(\beta_{N, p, m}\) be its action coefficient at stage \(m\) of the
+        trajectory started at lattice level \(N\) and period index \(p\). The
+        spacing at stage \(m\) is \(a_m = (\prod_{j < m} B_j)^{- 1}\), where
+        each block factor \(B_j\) is an integer at least \(3\). Thus \(s_m =
+        \log (a_m^{- 1}) = \sum_{j < m} \log B_j \geqslant m \log 3\), so
+        \(s_m \to + \infty\). The running estimate for the family provides a
+        fixed reference intercept \(\bar{\beta}\) and, for every \(\eta > 0\),
+        a threshold \(m_0 (\eta)\) such that
+      </div>
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:running"></a>\(\displaystyle | \beta_{N, p, m} -
+        (\bar{\beta} + 2 b_0 (G) s_m) | \leqslant \eta s_m  \qquad
+(m
+        \geqslant m_0 (\eta), N \geqslant m, p \in \mathbb{N}) . \)</td>
+        <td align="right">(1)</td>
+      </tr>
+    </table>
+    <p>
+      The threshold is uniform over the starting level and period index. We
+      use the running estimate as an input to the comparison below.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Proposition <class style="font-style: normal">1.1</class>.
+        </strong><i><class style="font-style: normal"><strong>(Uniform extraction)
+        </strong></class><a id="prop:uniform-extraction"></a>Let \(s_m \to + \infty\), and let \(A, c
+        \in \mathbb{R}\) be fixed. Suppose the real coefficients \(\beta_{N,
+        p, m}\) satisfy, for every \(\eta > 0\), an estimate \(| \beta_{N, p,
+        m} - (A + cs_m) | \leqslant \eta s_m\) for all sufficiently large
+        \(m\), uniformly over \(N \geqslant m\) and \(p \in \mathbb{N}\). Then
+        for every \(\varepsilon > 0\), for all sufficiently large \(m\) one
+        has \(s_m > 0\) and</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle \left| \frac{\beta_{N, p, m}}{s_m} - c \right| <
+          \varepsilon \qquad (N
+\geqslant m, p \in \mathbb{N}) .\)
+        </center></i>
+      </div>
+    </div>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>Fix \(\varepsilon > 0\). Use the assumed
+      estimate with \(\eta = \varepsilon / 2\), and enlarge its threshold so
+      that \(s_m > 2 (|A| + 1) / \varepsilon > 0\). Then, for every \(N
+      \geqslant m\) and \(p\),
+    </p>
+    <center>
+      \(\displaystyle \left| \frac{\beta_{N, p, m}}{s_m} - c \right| \leqslant
+      \frac{| \beta_{N, p,
+m} - (A + cs_m) |}{s_m} + \frac{|A|}{s_m} \leqslant
+      \frac{\varepsilon}{2} +
+\frac{|A|}{s_m} < \varepsilon .\)
+    </center>
+    <p style="margin-bottom: 1em">
+      Both thresholds are independent of \(N, p\). No positivity assumption on
+      \(c\) is used in this proposition.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Proposition <class style="font-style: normal">1.2</class>.
+        </strong><i><class style="font-style: normal"><strong>(Logarithmic asymptotic)
+        </strong></class><a id="prop:running-asymptotic"></a>Let \(N, k : \mathbb{N} \to \mathbb{N}\)
+        be arbitrary sequences with \(i \leqslant N (i)\) for all sufficiently
+        large \(i\). For \(\beta_{N, p, m} > 0\) set \(g_{N, p, m} =
+        (\sqrt{\beta_{N, p, m}})^{- 1}\). Then \(\beta_{N (i), k (i), i} > 0\)
+        for all sufficiently large \(i\), and</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle \lim_{i \to \infty} g_{N (i), k (i), i}  \sqrt{\log
+          (a_i^{- 1})} =
+\frac{1}{\sqrt{2 b_0 (G)}} .\)
+        </center></i>
+      </div>
+    </div>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>Apply Proposition <a href="#prop:uniform-extraction">1.1</a> to
+      <class style="font-style: normal">(<a href="#eq:running">1</a>)</class>, with \(A = \bar{\beta}\) and \(c
+      = 2 b_0 (G) > 0\). For each \(\varepsilon > 0\), enlarge the resulting
+      threshold until \(i \leqslant N (i)\) holds. Substituting \(m = i\), \(N
+      = N (i)\) and \(p = k (i)\) gives
+    </p>
+    <center>
+      \(\displaystyle \left| \frac{\beta_{N (i), k (i), i}}{s_i} - c \right| <
+      \varepsilon\)
+    </center>
+    <p>
+      for every subsequent \(i\). Thus \(x_i = \beta_{N (i), k (i), i} / s_i
+      \to c\) on the tail where \(s_i > 0\). Taking \(\varepsilon = c / 2\)
+      shows \(x_i > c / 2 > 0\) eventually; hence \(\beta_{N (i), k (i), i} =
+      s_i x_i > 0\) there. No condition on the sequence \(k\) was needed,
+      because the original threshold was uniform in \(p\).
+    </p>
+    <p>
+      On this positive tail the square-root limit rule [<a href="#bib-lebl">1</a>,
+      Proposition 2.2.6] gives \(\sqrt{x_i} \to \sqrt{c}\). All denominator
+      terms and their limit are nonzero, so the quotient rule [<a href="#bib-lebl">1</a>,
+      Proposition 2.2.5(iv)], with constant numerator \(1\), gives \(1 /
+      \sqrt{x_i} \to 1 / \sqrt{c}\). Finally,
+    </p>
+    <center>
+      \(\displaystyle \frac{1}{\sqrt{x_i}} = \frac{\sqrt{s_i}}{\sqrt{\beta_{N
+      (i), k (i), i}}} =
+g_{N (i), k (i), i}  \sqrt{\log (a_i^{- 1})} .\)
+    </center>
+    <p style="margin-bottom: 1em">
+      The first identity follows by squaring the positive quantities
+      \(\sqrt{x_i}\) and \(\sqrt{\beta_{N (i), k (i), i}} / \sqrt{s_i}\) and
+      using uniqueness of the nonnegative square root. All expressions are
+      interpreted on the positive tail and may be assigned arbitrary values at
+      earlier indices: changing finitely many terms preserves convergence by
+      enlarging each tolerance's threshold beyond those indices. This proves
+      the stated limit.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      At \(N (i) = i\) the coefficient is the bare lattice action coefficient.
+      For a general admissible \(N (i)\), the comparison concerns the
+      coefficient read from the trajectory at spacing \(a_i\). Relating this
+      inverse-square-root proxy to a coupling defined through a physical
+      observable would require a separate matching theorem.
+    </p>
+    <h2 id="auto-3">References<span style="margin-left: 1em"></span></h2>
+    <div class="compact-block" style="text-indent: 0em">
+      <font style="font-size: 84.0%"><dl>
+        <dt>
+          <strong>[1]  </strong>
+        </dt><dd>
+          <p>
+            <a id="bib-lebl"></a>Ji&#x0159;&iacute; Lebl. <i>Basic Analysis:
+            Introduction to Real Analysis</i>, volume I. Author-maintained
+            electronic edition, n.d. HTML edition, Section 2.2, Propositions
+            2.2.5(iv) and 2.2.6; inspected 11 November 2026. <a href="https://jirilebl.github.io/ra/html/sec_factslimsseqs.html"><tt>https://jirilebl.github.io/ra/html/sec_factslimsseqs.html</tt></a>.
+          </p>
+        </dd>
+      </dl></font>
+    </div>
+  </body>
+</html>

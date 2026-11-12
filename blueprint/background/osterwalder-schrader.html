@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Osterwalder&ndash;Schrader reconstruction: reference and hypothesis
+    checklist &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Osterwalder&ndash;Schrader reconstruction: reference and hypothesis
+      checklist</h1><a id="osterwalderschrader-reconstruction-reference-and-hypothesis-checklist"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Result to be used</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Mathematical reference</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">2</a>
+      </p>
+      <p>
+        Exact formulas checked against the original scan <span style="margin-left: 5mm"></span>
+        <a href="#auto-3">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Match to the formalisation</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">4</a>
+      </p>
+      <p>
+        Input checklist <span style="margin-left: 5mm"></span> <a href="#auto-5">5</a>
+      </p>
+      <p>
+        Output and no-circularity checklist <span style="margin-left: 5mm"></span> <a href="#auto-6">6</a>
+      </p>
+      <p>
+        Completed comparison: what is supplied and what is not <span style="margin-left: 5mm"></span>
+        <a href="#auto-7">7</a>
+      </p>
+      <p>
+        The direct source route is already explicit <span style="margin-left: 5mm"></span> <a
+        href="#auto-8">9</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Application and remaining proof obligations</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-9">9</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Search and unresolved questions</b> <span style="margin-left: 5mm"></span> <a href="#auto-10">10</a>
+      </p>
+      <p>
+        Evidence and limitations <span style="margin-left: 5mm"></span> <a href="#auto-11">11</a>
+      </p>
+    </div>
+    <ul>
+      <li>
+        <p>
+          Literature task: <a href="https://github.com/hairer/humanise-yang-mills/issues/6">issue #6</a>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Source revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Status: original source formulas visually checked; author hypothesis
+          comparison completed with the specific unmatched inputs below;
+          <strong>conditional match, not independently accepted</strong>. A
+          completed comparison is not a proved application to the complete
+          project hierarchy.
+        </p>
+      </li>
+      <li>
+        <p>
+          Contributor and agent assistance: TrishenGunaratnam; Codex research,
+          source inspection and drafting, session <tt class="verbatim">TrishenGunaratnam-codex-02</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Independent review: pending; reviewed commit and review link not yet
+          assigned.
+        </p>
+      </li>
+      <li>
+        <p>
+          Scope confirmation: <a href="https://github.com/hairer/humanise-yang-mills/issues/6#issuecomment-6799207940">maintainer reply</a> to the scoped
+          claim request. Requested expiry: 2026-11-11 18:00 UTC.
+        </p>
+      </li>
+      <li>
+        <p>
+          Repository snapshot inspected: <tt class="verbatim">ecc06d13de67e479666203061918e537316994e3</tt>.
+          <tt class="verbatim">origin</tt> is the contributor's fork; <tt class="verbatim">upstream</tt>
+          is the canonical repository.
+        </p>
+      </li>
+      <li>
+        <p>
+          Follow-up session: <tt class="verbatim">TrishenGunaratnam-codex-02-followup</tt>,
+          <a href="https://github.com/hairer/humanise-yang-mills/issues/6#issuecomment-6802505032">self-claim</a>, until 2026-11-11 21:20 UTC. The original
+          authoring claim was released before this follow-up.
+        </p>
+      </li>
+    </ul>
+    <p>
+      This is an internal literature/source-match record, following the
+      background-note template. It does not create a proof unit or an
+      authoritative manuscript section. Under the current repository rules,
+      later mathematical exposition and proofs belong directly in manuscript
+      LaTeX; this file records their citation gates and evidence.
+    </p>
+    <h2 id="auto-1"><a id="result-to-be-used"></a>Result to be used<span style="margin-left: 1em"></span></h2>
+    <p>
+      The intended application is reconstruction of relativistic fields from
+      the appropriate Euclidean correlations. It has three distinct
+      interfaces:
+    </p>
+    <ol>
+      <li>
+        <p>
+          <strong>Coordinate OS construction:</strong> <tt class="verbatim">YM.Table.Hierarchy</tt>
+          supplies <tt class="verbatim">YM.OS.realization</tt>, whose output is a <tt
+          class="verbatim">YM.OS.Chamber</tt>: a Hilbert-space Gram construction and
+          compatible time/space evolution.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Selected relativistic reconstruction:</strong> the stronger
+          data in <tt class="verbatim">YM.Spec.Materializes</tt> and its consumers lead
+          to a contour and a field system satisfying <tt class="verbatim">YM.Boundary.Wightman.Realizes</tt>,
+          including vacuum uniqueness.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Every-character reconstruction and integration:</strong> <tt
+          class="verbatim">YM.EveryPhase.Completed</tt> quantifies over every character,
+          with common labels and boundary mixture laws.
+        </p>
+      </li>
+    </ol>
+    <p>
+      The first output must not be substituted for the second or third. A
+      literature citation for a scalar reconstructed theory does not alone
+      identify the project's chosen spaces, quotient labels, contours, or
+      phasewise choices.
+    </p>
+    <p>
+      <strong>Citation decision:</strong> the corrected 1975 OS theorem is a
+      relevant candidate, not yet a checked plug-in replacement. In
+      particular, fixed-arity <tt class="verbatim">Capped</tt> estimates are not the
+      theorem's uniform-in-arity growth assumption. Stronger <tt class="verbatim">Spread.AllCopy</tt>
+      estimates are present and are a serious candidate for the missing
+      comparison; they must not be ignored or assumed already converted to the
+      paper's Schwartz seminorms. No failure of the project's complete
+      reconstruction theorem is inferred from an unresolved literature match.
+    </p>
+    <h2 id="auto-2"><a id="mathematical-reference"></a>Mathematical reference<span style="margin-left: 1em"></span></h2>
+    <p>
+      The following are primary sources. Printed page numbers below are
+      journal pages, not a search engine's PDF page labels.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Reference</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Inspected statement and locator</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Use and limit</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">K. Osterwalder and R. Schrader, <em>Axioms for Euclidean
+        Green's functions</em>, Communications in Mathematical Physics
+        <strong>31</strong> (1973), 83&ndash;112, <a href="https://doi.org/10.1007/BF01645738">DOI</a>, <a href="https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-31/issue-2/Axioms-for-Euclidean-Greens-functions/cmp/1103858969.pdf">article
+        text/PDF</a></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">&sect;2 pp. 85&ndash;87; &sect;3 pp. 88&ndash;89; &sect;6
+        pp. 102&ndash;104</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Defines the test spaces and E0&ndash;E4; describes
+        spinor/multiplet conventions. The original sufficiency claim needs the
+        1975 correction.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">K. Osterwalder and R. Schrader, <em>Axioms for Euclidean
+        Green's functions II</em>, Communications in Mathematical Physics
+        <strong>42</strong> (1975), 281&ndash;305, with an appendix by S.
+        Summers, <a href="https://doi.org/10.1007/BF01608978">DOI</a>, <a href="https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-42/issue-3/Axioms-for-Euclidean-Greens-functions-II-with-an-Appendix-by/cmp/1103899050.pdf">article text/PDF</a></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">&sect;I p. 282; &sect;II p. 284, (2.1); &sect;IV.1 p. 287,
+        (4.1)&ndash;(4.2) and named Theorem E&prime; (or E&Prime;) &rarr;
+        R&prime;</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Corrected sufficient reconstruction theorem: strengthened
+        regularity plus E1&ndash;E4. Its norm and arity quantifiers are part
+        of the hypothesis, not optional notation.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Yu. M. Zinoviev, <em>Equivalence of the Euclidean and
+        Wightman Field Theories</em>, <a href="https://arxiv.org/pdf/hep-th/9408009v1">arXiv:hep-th/9408009v1</a>, 2
+        August 1994</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">&sect;4, E5 on pp. 21&ndash;22; Theorem 4.1 on p. 23</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Alternative using E0&ndash;E5, including an additional weak
+        spectral condition formulated through inverse-Laplace limits. It is
+        not a theorem from reflection positivity alone. No project match for
+        E5 is certified here.</td>
+      </tr></tbody>
+    </table>
+    <p>
+      OS II explicitly identifies the incorrect lemma in OS I and gives
+      strengthened sufficient conditions. Its linear-growth version controls
+      distribution order linearly in arity with factorially bounded constants.
+      A separate revised equivalence theorem appears in &sect;III, p. 285,
+      with a stronger distribution topology; that is not ordinary fixed-arity
+      temperedness. The paper's main text treats one real scalar field;
+      &sect;I, Remark 5, p. 283 points to the multiplet extension.
+    </p>
+    <p>
+      For the main candidate, use <strong>OS II &sect;IV.1</strong>, not the
+      similarly named condition E0&prime; in OS I &sect;3, Remark 3. Their
+      meanings differ. Record the exact norm convention in OS II (2.1) and
+      condition (4.1) when establishing the application. Holomorphic
+      continuation by itself does not settle tempered boundary values.
+    </p>
+    <h3 id="auto-3"><a id="exact-formulas-checked-against-the-original-scan"></a>Exact formulas checked against the original scan<span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      The locators in this subsection were checked visually in the original
+      journal scans, not inferred from OCR. OS II uses the joint Schwartz
+      seminorm
+    </p>
+    <center>
+      \(\displaystyle |f|_p = \sup_{x \in \mathbb{R}^m, | \alpha | \leqslant
+      p} (1 + \sum_{j = 1}^m
+x_j^2)^{p / 2} |D^{\alpha} f (x) | \qquad
+      \text{(§II, printed p. 284, (2.1)).}\)
+    </center>
+    <p>
+      Its space \(\mathcal{S}_0 (\mathbb{R}^{4 n})\) has the induced Schwartz
+      topology: all derivatives of its elements vanish whenever any two
+      four-dimensional arguments coincide. Flatness on this set is stronger
+      than just setting the function value to zero there. This is not the
+      space of all Schwartz tests and is not the space of tests supported in
+      one fixed separated compact set.
+    </p>
+    <p>
+      The exact corrected alternatives on printed p. 287 are:
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Source condition</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Quantifiers and bound</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Matching decision</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">E0&prime;, (4.1)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">\(\mathfrak{S}_0 = 1\), \(\mathfrak{S}_n \in \mathcal{S}_0'
+        (\mathbb{R}^{4 n})\); there are one positive integer \(s\) and
+        positive numbers \(\sigma_n \leqslant a (n!)^b\), with \(a, b\)
+        independent of \(n\), such that (</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">\mathfrak S_n(f)</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">E0&Prime;, (4.2)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">\(\mathfrak{S}_0 = 1\), \(\mathfrak{S}_n \in \mathcal{S}'
+        (\mathbb{R}^{4 n})\); one \(s\) and a factorially bounded \(\sigma_n\)
+        satisfy (</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">\mathfrak S_n(f_1\otimes\cdots\otimes f_n)</td>
+      </tr></tbody>
+    </table>
+    <p>
+      The named theorem <strong>E&prime; (or E&Prime;) &rarr;
+      R&prime;</strong> immediately below these formulas gives a uniquely
+      determined Wightman theory from the chosen corrected regularity
+      condition and E1&ndash;E4. Part (b), (4.3), gives a positive integer
+      \(w\) and bounds \(|\mathfrak{W}_n (f) | \leqslant \omega_n |f|_{nw}\),
+      where \(0 < \omega_n \leqslant ab^{n^2}\). The output constants are not
+      asserted to have factorial growth. This named theorem must not be
+      confused with <strong>Theorem 4.1 on printed p. 288</strong>, an
+      intermediate analyticity/estimate theorem.
+    </p>
+    <p>
+      The inherited hypotheses were checked in OS I &sect;3, printed p. 88
+      (PDF page 6): E1 is proper Euclidean covariance; E2 is positivity for
+      all finite sequences of ordered positive-time joint tests, using
+      reflection and conjugate reversal; E3 is permutation symmetry; E4 is the
+      spatial-translation cluster limit for two such finite sequences. OS I p.
+      89, Remark 2, also gives the covariant compact-test cluster formulation
+      (3.1). They are distributional requirements, not assertions about one
+      separated point or one field component.
+    </p>
+    <p>
+      For the <strong>unselected</strong> family, there is a documented weaker
+      conclusion rather than a need to assume unique vacuum: OS II p. 283,
+      Remark 6, retains the subset correspondences of OS I p. 89, Remark 3,
+      with the corrected changes. In particular, omitting E4 retains
+      R0&ndash;R3 and R5, omitting the cluster axiom R4. This does not remove
+      the corrected regularity, covariance, positivity or symmetry
+      requirements. It does not prove <tt class="verbatim">Wightman.Realizes.unique</tt>
+      for a mixture.
+    </p>
+    <p>
+      OS II p. 283, Remark 5, explicitly allows a denumerable collection of
+      arbitrary spinor fields, referring to OS I &sect;6, pp. 102&ndash;104.
+      OS I pp. 102&ndash;103 specifies the component covariance, adjoint
+      indexing and statistics signs. Consequently the scalar theorem is not
+      the only available version; the project's exact component/representation
+      and mixed-correlation identifications must still be checked before
+      applying that extension. No uniformity across all label degrees is
+      inferred from the scalar statement.
+    </p>
+    <p>
+      Zinoviev v1 pp. 21&ndash;23 was also visually checked. Its E5 is
+      precisely the iterated inverse-Laplace limit in (4.12), with (4.13) and
+      (2.54) defining the test transforms: for each relevant odd distribution
+      there is a threshold \(K\), then all integers \(k > K\), all \(1
+      \leqslant l \leqslant m\), and all stated test tuples must satisfy the
+      limit. The time-cutoff limits precede the integer-index limits. Theorem
+      4.1 on p. 23 gives E0&ndash;E5 &harr; R0&ndash;R5. Merely producing a
+      momentum PVM after reconstruction does not establish this input
+      condition.
+    </p>
+    <h2 id="auto-4"><a id="match-to-the-formalisation"></a>Match to the formalisation<span style="margin-left: 1em"></span></h2>
+    <p>
+      All declaration paths below refer to the pinned imported Lean revision.
+      Findings are bounded source inspection, not a new elaboration, kernel
+      check, or independent proof audit. &ldquo;Unresolved&rdquo; means this
+      inspection did not establish the required bridge; it does not mean no
+      such argument exists elsewhere in the source.
+    </p>
+    <h3 id="auto-5"><a id="input-checklist"></a>Input checklist<span style="margin-left: 1em"></span></h3>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Requirement or convention</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Exact project anchor</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Assessment and required comparison</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Four-dimensional Euclidean space; time reflection</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.timeAxis</tt>, <tt class="verbatim">YM.Signed</tt> in
+        <tt class="verbatim">Lean/YM/Space/Index.lean</tt>; <tt class="verbatim">YM.Word.reflect</tt>
+        in <tt class="verbatim">Lean/YM/Euclid/Words.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Source uses the final coordinate for time. The articles use
+        the first coordinate. Record the coordinate permutation and
+        analytic/Fourier sign conventions, especially the direction of the
+        spectral cone.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Arity zero and normalization</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Table.Basic.trivial</tt>, <tt class="verbatim">YM.Table.Basic.unital</tt>,
+        <tt class="verbatim">Lean/YM/Euclid/Table.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Empty correlations equal one; unit insertions have explicit
+        laws. These directly supply the normalization part, with the project's
+        label convention.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Euclidean correlations as distributions, not arbitrary
+        diagonal values</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Table.value</tt>, <tt class="verbatim">YM.Table.Smooth</tt>,
+        <tt class="verbatim">Lean/YM/Euclid/Table.lean</tt>; <tt class="verbatim">YM.Test</tt>,
+        <tt class="verbatim">YM.Test.applyTo</tt>, <tt class="verbatim">Lean/YM/Euclid/Test.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">The table is smooth only on distinct-point configurations.
+        Its initial tests are compact smooth tests supported there. OS I
+        &sect;2 and OS II &sect;II use a Schwartz subspace flat on coincidence
+        diagonals. Establish a continuous extension from compact separated
+        tests to that exact space; do not use the table's arbitrary values off
+        configuration space.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Strong regularity/growth across every arity</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Table.Capped</tt> in <tt class="verbatim">Lean/YM/Euclid/Table.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Its quantifier order permits constants to depend on arity,
+        every fixed label tuple, and derivative order. That signature alone
+        supplies neither linear arity growth nor factorial control. The needed
+        uniform bridge is unresolved.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Stronger growth candidate</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.OS.Spread.radius</tt>, <tt class="verbatim">YM.OS.Spread.AllCopy</tt>,
+        <tt class="verbatim">YM.OS.Spread.Laws.cap</tt>, <tt class="verbatim">Lean/YM/OS/Slabs.lean</tt>;
+        <tt class="verbatim">YM.OS.irons</tt>, <tt class="verbatim">Lean/YM/OS/Halves.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">For bounded label degree and norm, <tt class="verbatim">AllCopy</tt>
+        supplies an operator-norm bound uniform over word length, with radius
+        <tt class="verbatim">C^length * (length/r)^(A*length)</tt>. <tt class="verbatim">irons</tt>
+        additionally assumes <tt class="verbatim">YM.OS.Tiled</tt>. Convert these slab
+        bounds to the chosen distribution seminorm, preserving constants
+        through configuration covers, smearing, and arity. Do not treat <tt
+        class="verbatim">Tiled</tt> as a consequence of <tt class="verbatim">Hierarchy</tt>
+        alone.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">E1: translations</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Table.Homogeneous</tt>, <tt class="verbatim">YM.Table.Hierarchy.translations</tt>,
+        <tt class="verbatim">Lean/YM/Euclid/Table.lean</tt>, <tt class="verbatim">Words.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Translation invariance is explicit on configuration space.
+        Transport it through the distribution extension and quotient
+        labels.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">E1: full continuous rotations and component action</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Table.RealSpin</tt> in <tt class="verbatim">Table.lean</tt>;
+        <tt class="verbatim">YM.Signed</tt> in <tt class="verbatim">Space/Index.lean</tt>; <tt
+        class="verbatim">YM.Table.Rotation</tt>, <tt class="verbatim">.Laws</tt>, <tt class="verbatim">.Oriented</tt>
+        in <tt class="verbatim">Lean/YM/Euclid/Stress.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">RealSpin</tt> uses the finite signed-permutation
+        group and must not be described as full continuous rotation
+        covariance. <tt class="verbatim">Rotation.Laws</tt> and <tt class="verbatim">Rotation.Oriented</tt>
+        supply the stronger candidate data separately. Verify their passage to
+        component distributions and their finite-dimensional representation
+        conventions.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">E2: reflection positivity for arbitrary finite polynomial
+        sums</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Table.RP</tt>, <tt class="verbatim">YM.Table.PastTest</tt>,
+        <tt class="verbatim">YM.Table.RPSmear</tt>, <tt class="verbatim">YM.Table.Hierarchy.onTests</tt>,
+        <tt class="verbatim">Lean/YM/Euclid/Words.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Both word and smeared Gram inequalities are explicit, with
+        varying arities in a finite sum. Reflection reverses the word and
+        conjugates/transforms its labels; the Gram form is antilinear in the
+        first entry. Compare first on compact ordered positive-time tests,
+        then justify continuity/density on the article's full test space.
+        Checking only products of one-point tests would be insufficient.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Reflection positivity on other planes</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Table.ClassWords.transported</tt>, <tt class="verbatim">Lean/YM/Euclid/OtherPlanes.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Requires a hierarchy, full rotation laws, <tt class="verbatim">Rotation.Oriented</tt>,
+        and <tt class="verbatim">T.respects S</tt>. This is an additional transport
+        result, not a hidden field of <tt class="verbatim">Hierarchy</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">E3: permutation symmetry and statistics</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Table.Symmetric.same</tt>, <tt class="verbatim">YM.Table.Basic</tt>,
+        <tt class="verbatim">Lean/YM/Euclid/Table.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Exact simultaneous permutation of points and labels is
+        supplied. It is a bosonic symmetry statement. A spinor reference with
+        graded signs would require a separate statistics match; the word
+        &ldquo;spin&rdquo; in a source name is not evidence of fermionic
+        statistics.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">E4: clustering / unique vacuum</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.OS.Selection.Certificate.heat</tt> and <tt
+        class="verbatim">.still</tt>, <tt class="verbatim">Lean/YM/Phase/Mixture.lean</tt>; <tt
+        class="verbatim">YM.Boundary.Wightman.Realizes.unique</tt>, <tt class="verbatim">Lean/YM/Fields/System.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Hierarchy</tt> has no cluster field.
+        Selected-phase <tt class="verbatim">UniqueHeat</tt> is a candidate input for a
+        clustering/uniqueness argument, but the required smeared cluster
+        statement must be established. Do not infer it for an unselected
+        mixture, and do not use <tt class="verbatim">Realizes.unique</tt> as an input to
+        a theorem intended to produce that same realization.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Scalar theorem versus the project's label system</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Table.Field</tt> in <tt class="verbatim">Lean/YM/Euclid/Null.lean</tt>;
+        <tt class="verbatim">YM.Table.Union</tt>, <tt class="verbatim">YM.DiffPlan.joint</tt> in
+        <tt class="verbatim">Lean/YM/Euclid/Union.lean</tt>; <tt class="verbatim">Rotation.Laws</tt>
+        in <tt class="verbatim">Stress.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Each fixed-level quotient is finite-dimensional; finitely
+        many union labels can be lifted to one level under the stated
+        inclusion hypotheses. A compatible component/multiplet application,
+        including common constants, adjoints, identifications between levels
+        and a common reconstructed domain, remains to be written. Applying a
+        scalar theorem separately to each label does not supply mixed
+        correlations.</td>
+      </tr></tbody>
+    </table>
+    <h3 id="auto-6"><a id="output-and-no-circularity-checklist"></a>Output and no-circularity checklist<span style="margin-left: 1em"></span></h3>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Desired conclusion</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Project definition or consumer</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>What the citation must actually
+        provide</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">A chamber and translation evolution</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.OS.realization</tt>, <tt class="verbatim">YM.OS.Chamber</tt>
+        in <tt class="verbatim">Lean/YM/OS/Dynamics.lean</tt>; <tt class="verbatim">YM.OS.Semigroup</tt>
+        in <tt class="verbatim">Lean/YM/OS/Flow.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">A directly inspected source theorem from <tt class="verbatim">Hierarchy</tt>,
+        with strongly continuous self-adjoint time contractions and commuting
+        spatial unitaries. No full Poincar&eacute; representation, fields, or
+        unique vacuum is in this conclusion.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Analytic continuation and joint tempered boundary</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Boundary.Waves.Region</tt>, <tt class="verbatim">.Opens</tt>,
+        <tt class="verbatim">.NonTangentialFree</tt>, <tt class="verbatim">YM.Boundary.Contour.From</tt>,
+        <tt class="verbatim">Lean/YM/Boundary/Contour.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Match the strict complex-time region, Euclidean root
+        values, integrability, and convergence against <strong>joint</strong>
+        Schwartz tests on the same quotient labels. Pointwise continuation or
+        separate-variable convergence alone is insufficient.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">A relativistic field realization</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Boundary.Fields.Total</tt>, <tt class="verbatim">.sharpPair</tt>,
+        <tt class="verbatim">.commutes</tt>, <tt class="verbatim">YM.Boundary.Wightman.Realizes</tt>,
+        <tt class="verbatim">Lean/YM/Fields/System.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Match dense common domain, cyclic normalized vacuum,
+        distributional fields, adjoints, locality, strong Poincar&eacute;
+        action, spectral PVM/cone and the specified vacuum uniqueness. <tt
+        class="verbatim">faithful</tt> also asks that a nonzero quotient label is
+        detected by the field; this needs a project-specific
+        identification.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Produce reconstruction from earlier data</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Bid.Pantry</tt>, <tt class="verbatim">Lean/YM/Bid/Corners.lean</tt>;
+        <tt class="verbatim">YM.Next.BOUNDARY.contour</tt>, <tt class="verbatim">.after_materializes</tt>,
+        <tt class="verbatim">.Compatible.vacuum</tt>, <tt class="verbatim">Lean/YM/Next/BOUNDARY/Stage.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">These are useful earlier interfaces: <tt class="verbatim">Pantry.counter</tt>
+        contains the stronger spread laws; <tt class="verbatim">after_materializes</tt>
+        produces contours and selected <tt class="verbatim">Realizes</tt> from <tt
+        class="verbatim">Materializes</tt> and spin descent. Check citation
+        applicability there, rather than starting with <tt class="verbatim">Spec.Final.realization</tt>,
+        which already contains the target.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Selected versus unselected theory</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Spec.Relativistic</tt>, <tt class="verbatim">YM.Spec.Final</tt>,
+        <tt class="verbatim">Lean/YM/Spec/Closed.lean</tt>; <tt class="verbatim">.unselected_pantry</tt>,
+        <tt class="verbatim">.selected_pantry</tt> in <tt class="verbatim">Stage.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Keep the full-table contour and selected-phase contour
+        distinct. <tt class="verbatim">FieldCore</tt> permits the unselected theory
+        without vacuum uniqueness; <tt class="verbatim">.Compatible.vacuum</tt> adds the
+        clause from <tt class="verbatim">UniqueHeat</tt>. A reference requiring
+        clustering is not automatically a reference for the unselected
+        mixture.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Every character, not just almost every character</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.OS.Selection.Certificate.states</tt>, <tt
+        class="verbatim">.sym</tt>, <tt class="verbatim">.retains</tt>, <tt class="verbatim">.coordinates</tt>,
+        <tt class="verbatim">.calculus</tt>, <tt class="verbatim">Lean/YM/Phase/Mixture.lean</tt>;
+        <tt class="verbatim">YM.EveryPhase.Almanac.copy</tt>, <tt class="verbatim">Lean/YM/EveryPhase/Pack.lean</tt>;
+        <tt class="verbatim">YM.EveryPhase.Completed</tt>, <tt class="verbatim">.all_characters</tt>,
+        <tt class="verbatim">Lean/YM/EveryPhase/Extension.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Hierarchy and rotation candidates are supplied for every
+        character; <tt class="verbatim">Almanac.copy</tt> makes stronger bounds uniform
+        in the character. <tt class="verbatim">.almostEvery</tt> only proves an
+        almost-everywhere heat statement and cannot alone supply <tt class="verbatim">.Completed.euclid</tt>
+        for every character. Extra source arguments are required.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Integrate boundary distributions to the unselected
+        contour</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.EveryPhase.Completed.depends</tt>, <tt class="verbatim">.at_words</tt>,
+        <tt class="verbatim">.at_boundary</tt>, <tt class="verbatim">Extension.lean</tt>; <tt
+        class="verbatim">Lean/YM/EveryPhase/Barycenter.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Pointwise reconstruction for each phase does not prove
+        continuity/measurability or justify exchanging boundary limits and
+        phase integration. These remain distinct obligations with uniform
+        estimates and the actual phase measure.</td>
+      </tr></tbody>
+    </table>
+    <h3 id="auto-7"><a id="completed-comparison-what-is-supplied-and-what-is-not"></a>Completed comparison: what is supplied and what is
+    not<span style="margin-left: 1em"></span></h3>
+    <p>
+      The following decisions finish the bounded author comparison.
+      &ldquo;Bridge required&rdquo; is a result of that comparison, not a
+      claim that a missing reference check has been silently satisfied.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Item</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Decision at the inspected input
+        interface</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Dimension, coordinate and pairing convention</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Supplied up to the explicit coordinate map \((p_0, p_1,
+        p_2, p_3) \mapsto (p_3, p_0, p_1, p_2)\), taking project time axis 3
+        to article time axis 0. It preserves the Euclidean norm and Lebesgue
+        measure and conjugates the reflection. Both distribution pairings are
+        complex linear in the test, with conjugation in the reflected first
+        Gram argument. The project's radian Fourier conventions are documented
+        in <tt class="verbatim">Lean/YM/Distribution/Tests.lean</tt>; no sign-free
+        identification of a prescribed momentum PVM is claimed.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">E0 normalization</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Supplied by <tt class="verbatim">Table.Basic.trivial</tt>. This does
+        not supply continuity or an arity estimate.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">E0&prime; distribution and growth</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Bridge required: produce the flat-diagonal distribution
+        extension and the exact (\sigma_n</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">E1</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Kernel translations and full quotient rotations are
+        supplied by <tt class="verbatim">Hierarchy.translations</tt>, <tt class="verbatim">Rotation.Laws</tt>,
+        and <tt class="verbatim">Rotation.Oriented</tt> when their separate hypotheses
+        are present. Transport to the chosen distribution extension and
+        identify the article's component action. <tt class="verbatim">Hierarchy.spin</tt>
+        alone supplies only signed permutations.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">E2</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Supplied on compact separated positive-time joint tests by
+        <tt class="verbatim">Hierarchy.onTests</tt>, including finite sums of different
+        arities and labels. The article's ordered tests form a restriction of
+        this compact domain. Extension to its noncompact flat Schwartz tests
+        requires the same continuous extension and density argument as
+        E0&prime;.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">E3</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Supplied on configurations by <tt class="verbatim">Basic.toSymmetric.same</tt>.
+        Simultaneous point/label permutations give bosonic mixed-kernel
+        symmetry. The assertion must pass through the extension; arbitrary
+        spinor statistics are not being asserted.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">E4</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Selection.Certificate.heat</tt> supplies
+        selected heat-ground uniqueness, not the article's smeared spatial
+        cluster formula by definition. That formula needs a separate
+        derivation for a full E&prime; &rarr; R&prime; application. For the
+        unselected family use the corrected nonclustering subset above; do not
+        demand E4 or assert R4 there.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Component system</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Rotation.Laws.filtered</tt> preserves the finite
+        levels and <tt class="verbatim">DiffPlan.joint</tt> lifts each finite tuple to a
+        common level. These provide a concrete comparison interface. The
+        article's mixed component distributions, adjoints and Lorentz
+        representation must be identified; independent scalar reconstructions
+        do not suffice.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Project-specific outputs</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">The article does not identify a prescribed <tt class="verbatim">Contour</tt>,
+        quotient-label faithfulness, every-character choices, or boundary
+        barycenters. Those require the source's compatibility/identification
+        arguments, not stronger wording of the citation.</td>
+      </tr></tbody>
+    </table>
+    <h3 id="auto-8"><a id="the-direct-source-route-is-already-explicit"></a>The direct source route is already explicit<span style="margin-left: 1em"></span></h3>
+    <p>
+      Further bounded inspection resolves an ambiguity in the earlier draft: a
+      lack of a checked OS II citation match does <strong>not</strong> leave
+      the source with only uncontrolled pointwise analytic continuation. The
+      following concrete source route constructs a <em>joint tempered</em>
+      boundary without invoking E0&prime; as a premise:
+    </p>
+    <ol>
+      <li>
+        <p>
+          <tt class="verbatim">YM.Work.C01.answer</tt> in <tt class="verbatim">Lean/YM/Work/C01.lean</tt>
+          obtains centered insertion bounds and compatible quotient operators
+          from <tt class="verbatim">Bid.Pantry.counter.cap</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM.Work.C03.defined_power</tt> in <tt class="verbatim">Lean/YM/Work/C03.lean</tt>
+          obtains <tt class="verbatim">Waves.Breathes</tt> with exponent the sum of the
+          insertion exponents. <tt class="verbatim">YM.Work.C04.answer</tt> in <tt
+          class="verbatim">Lean/YM/Work/C04.lean</tt> supplies integrability, height
+          continuity and tested Cauchy&ndash;Riemann identities (<tt class="verbatim">Bounds</tt>,
+          <tt class="verbatim">Along</tt>, <tt class="verbatim">Lines</tt>).
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM.Boundary.Waves.seeks</tt> and <tt class="verbatim">.jointly</tt>
+          in <tt class="verbatim">Lean/YM/Shift/Osc.lean</tt> construct continuous
+          complex-linear functionals on <strong>joint Schwartz tests</strong>,
+          with an explicit continuous <tt class="verbatim">toll</tt> seminorm bound,
+          using the tested Taylor remainder. The result is <tt class="verbatim">Surface
+          S</tt> and <tt class="verbatim">NonTangentialFree</tt>, not merely
+          separate-variable convergence. The prerequisite definitions are in
+          <tt class="verbatim">Lean/YM/Shift/Ridge.lean</tt>; <tt class="verbatim">Distn</tt> in
+          <tt class="verbatim">Lean/YM/Distribution/Tests.lean</tt> is a continuous
+          linear map on Schwartz tests.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM.Org.Show.Rhythm.opens</tt> in <tt class="verbatim">Lean/YM/Org/Theatre.lean</tt>
+          applies that result. <tt class="verbatim">YM.Next.BOUNDARY.rhythm</tt> and <tt
+          class="verbatim">.contour</tt> assemble the inputs from <tt class="verbatim">Bid.Pantry</tt>.
+          <tt class="verbatim">.Compatible.vacuum</tt> separately adds <tt class="verbatim">UniqueHeat</tt>;
+          the unselected construction does not borrow it from the selected
+          phase.
+        </p>
+      </li>
+    </ol>
+    <p>
+      This is a source crosswalk, not a new proof or an independent validity
+      judgment. <tt class="verbatim">Breathes</tt> has quantifiers \(\forall n, v
+      \exists m, C\), so this route alone does not certify OS II's
+      arity-uniform E0&prime;. It instead supplies a precise alternative proof
+      boundary for later LaTeX exposition. A consumer can explain this direct
+      route without claiming to have verified the different E0&prime; premise.
+    </p>
+    <p>
+      The paper's scalar Wightman conclusion and the project's richer <tt
+      class="verbatim">Realizes</tt> record must be compared field by field. No claim of
+      a mass gap, every-phase uniformity, label faithfulness, or continued
+      stress-tensor identities follows just from an OS reference. Stress
+      outputs are outside this literature task.
+    </p>
+    <h2 id="auto-9"><a id="application-and-remaining-proof-obligations"></a>Application and remaining proof obligations<span style="margin-left: 1em"></span></h2>
+    <p>
+      The following gates specify what a future consuming proof must establish
+      before using the candidate reference. They are proposed mathematical
+      inputs for later LaTeX exposition, not new proved lemmas in this
+      Markdown record.
+    </p>
+    <ol>
+      <li>
+        <p>
+          <strong>Fix the family to reconstruct.</strong> Name the full table
+          or the selected character table and the original quotient label
+          space. Name each component sequence and its adjoint/rotation action,
+          including compatibility as the level increases. Do not obtain these
+          objects by assuming the final realization.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Construct the distribution input.</strong> Extend the
+          compact-separated kernel pairing to the exact flat-diagonal Schwartz
+          space. Establish continuity and the chosen corrected growth
+          condition with the right arity quantifiers. The raw table values on
+          coincident configurations cannot specify an extension.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Match all remaining hypotheses.</strong> Verify continuous
+          rotations, translations, reflected adjoints, mixed-label symmetry
+          and positivity in the same extension. If applying the full theorem,
+          establish its cluster hypothesis for that family. A nonclustering
+          reconstruction requires the corresponding corrected subset version,
+          with an explicit weaker conclusion and no unique-vacuum assertion.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Identify the reconstructed object.</strong> Match the output
+          distributions with the prescribed contour and prove the
+          component/quotient field identifications, common domain,
+          faithfulness and vacuum convention. A uniqueness statement about
+          distributions is not by itself the needed intertwiner between
+          specified field systems. <tt class="verbatim">Stage.lean</tt> exposes relevant
+          compatibility and attachment data.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>For PU-19, repeat with uniform phase control.</strong>
+          Establish hypotheses for every character with uniform constants
+          where integration requires them; prove measurability/continuity and
+          boundary-limit interchange separately. No exceptional-set deletion
+          is allowed if the intended conclusion is all characters.
+        </p>
+      </li>
+    </ol>
+    <p>
+      The strongest quantitative lead in this inspection is <tt class="verbatim">Spread.AllCopy</tt>,
+      transported uniformly by <tt class="verbatim">Almanac.copy</tt>. A separately
+      scoped application proof should either derive OS II's precise growth
+      condition from that interface or use the project's direct
+      contour/temperedness route without asserting the OS hypothesis. No
+      conversion proof has been completed here.
+    </p>
+    <p>
+      An alternative is Zinoviev's Theorem 4.1. To use it one must prove its
+      E5 inverse-Laplace limit condition, not merely point to the existence of
+      the project's eventual momentum PVM. Using a PVM obtained from the
+      reconstruction being justified would be circular. This alternate
+      application is unresolved too.
+    </p>
+    <p>
+      The selected phase's heat condition and the unselected mixture should
+      therefore remain separate in the proof map. This note supports the
+      distinction proposed in <a href="https://github.com/hairer/humanise-yang-mills/pull/18">PR #18</a> for issue #11, but does not
+      edit that author's interface audit or assign its declarations a second
+      proof owner. The draft there was inspected at branch <tt class="verbatim">codex/issue-11-continuum-interfaces</tt>;
+      it is navigation evidence, not accepted proof. The provisional unit plan
+      and that interface draft credit Scott Armstrong's <a href="https://github.com/scottnarmstrong/yang-mills-informalization">Yang-Mills
+      informalization project</a> for prior navigation and clustering. This
+      note checks the named source interfaces directly and does not treat that
+      map as proof evidence.
+    </p>
+    <h2 id="auto-10"><a id="search-and-unresolved-questions"></a>Search and unresolved questions<span style="margin-left: 1em"></span></h2>
+    <p>
+      Searches on 11 November 2026 included <tt class="verbatim">Osterwalder Schrader
+      Axioms Euclidean Greens functions II 1975 theorem linear growth
+      condition pdf</tt>, <tt class="verbatim">Osterwalder Schrader 1973 Axioms
+      Euclidean Greens functions project euclid 83 112</tt>, and <tt class="verbatim">Osterwalder
+      linear growth sn</tt>. The actual primary-paper text, rather than a
+      search-result summary, was used for the named theorem and correction.
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>Selected candidate:</strong> OS II &sect;IV.1 with its
+          corrected growth hypothesis.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Inspected alternative:</strong> OS II &sect;III's stronger
+          distribution-topology equivalence; no project match to that topology
+          is established.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Inspected alternative:</strong> Zinoviev v1 &sect;4 E5 and
+          Theorem 4.1; its weak spectral condition remains a specific
+          additional input, not a way to omit regularity.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Rejected:</strong> unqualified sufficiency of OS I
+          E0&ndash;E4, reflection positivity alone, smoothness away from
+          diagonals alone, fixed-arity bounds in place of uniform arity
+          control, and use of the already-constructed Wightman theory as its
+          own input.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Not used as mathematical evidence:</strong> tertiary axiom
+          summaries, search snippets, unrelated claimed Yang&ndash;Mills
+          constructions returned by search, and a student's thesis returned as
+          a possible lead for the norm notation.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Overlap:</strong> existing background notes and <tt class="verbatim">Bots/notes/</tt>
+          were checked, along with the live issue comments, open PR list, and
+          issue #11 / PR #18 interface draft. No other claim on this
+          literature note was found.
+        </p>
+      </li>
+    </ul>
+    <p>
+      The author reference inspection and bounded comparison are complete; the
+      five application gates above remain mathematical obligations before a
+      cite-and-apply replacement is justified. They are not declarations that
+      the formal source is incorrect or that the corrected reconstruction
+      theorem cannot apply. Independent mathematical and Lean-correspondence
+      review is required before acceptance.
+    </p>
+    <h3 id="auto-11"><a id="evidence-and-limitations"></a>Evidence and limitations<span style="margin-left: 1em"></span></h3>
+    <p>
+      Actual source inspections included <tt class="verbatim">cat</tt> or bounded <tt
+      class="verbatim">sed -n</tt> reads of:
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+Lean/YM/Space/Index.lean
+Lean/YM/Euclid/{Register,Table,Test,Words,Null,Union,Stress,OtherPlanes}.lean
+Lean/YM/OS/{Schwinger,Flow,Dynamics,Slabs,Halves}.lean
+Lean/YM/Phase/Mixture.lean
+Lean/YM/Bid/Corners.lean
+Lean/YM/Next/BOUNDARY/Stage.lean
+Lean/YM/Spec/Closed.lean
+Lean/YM/Fields/System.lean
+Lean/YM/Boundary/Contour.lean
+Lean/YM/EveryPhase/{Pack,Extension,Barycenter}.lean
+Lean/YM/Work/{B02,C01,C03,C04}.lean
+Lean/YM/Shift/{Ridge,Osc}.lean
+Lean/YM/Org/Theatre.lean
+Lean/YM/Distribution/{Tests,Product}.lean</pre>
+    <p>
+      The following searches were run to locate the bounded definitions and
+      consumers:
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+rg -n 'structure Hierarchy|def Hierarchy|growth|Euclidean|rotation|cluster|positiv|structure Relativistic|structure Realizes' Lean/YM/Euclid/Words.lean Lean/YM/OS/Schwinger.lean Lean/YM/OS/Dynamics.lean Lean/YM/Spec/Closed.lean Lean/YM/Fields/System.lean Lean/YM/EveryPhase/Pack.lean Lean/ChallengeSpec.lean
+rg -n 'def Capped|structure Capped|structure Basic|def Homogeneous|def Smooth|def RealSpin' Lean/YM/Euclid
+rg -n 'structure Pantry|theorem contour|lemma contour|def contour|E0|linearGrowth|factorial|Factorial' Lean/YM/Bid Lean/YM/Next/BOUNDARY Lean/YM/Boundary -g '*.lean'</pre>
+    <p>
+      Some preliminary searches used guessed filenames that did not exist. The
+      actual paths above were subsequently located with <tt class="verbatim">rg</tt>; no
+      negative conclusion rests on a missing guessed path. Initial direct
+      downloads from Project Euclid and Springer returned HTML; indexed
+      primary full text was used in the first draft. The follow-up located
+      pre-existing local copies of both original journal scans and rendered
+      them with <tt class="verbatim">pdftoppm</tt>. OS II printed pp. 283&ndash;284 and
+      287, and OS I printed pp. 86, 88&ndash;89, were visually inspected;
+      multiplet statements on OS I pp. 102&ndash;104 and the OS II p. 282
+      correction were additionally read from the PDF. Zinoviev v1 was
+      downloaded from arXiv; pp. 21&ndash;23 were rendered and visually
+      inspected. The scan-access/formula-typography limitation is therefore
+      resolved. No copyrighted scan or rendered page is added to the
+      repository.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Inspected PDF</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>SHA-256</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Page convention</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">OS I, local <tt class="verbatim">1103858969.pdf</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">9e45658863823a5a769891141f8eb7b935f0ddfec62f6554d9f802d8157da878</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PDF page 1 = printed p. 83; 30 PDF pages.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">OS II, local <tt class="verbatim">1103899050.pdf</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">643a45d3037f788ba80ecfef2f218778d7d511102f75ffc44468e20c16382c71</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PDF page 1 = printed p. 281; 26 PDF pages, including an
+        unnumbered terminal page.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Zinoviev, arXiv v1 PDF</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">4e9e572800baebbe79540d6b9cbe472a03d8932d556f7db56453bb6b00d1d5aa</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Printed/PDF pp. 21&ndash;23 agree; 26 pages.</td>
+      </tr></tbody>
+    </table>
+    <p>
+      The follow-up used bounded <tt class="verbatim">sed -n</tt> reads and <tt class="verbatim">rg
+      -n</tt> searches of the named source files, PDF text extraction with <tt
+      class="verbatim">pypdf</tt>, <tt class="verbatim">pdftoppm -f &hellip; -l &hellip; -png</tt>
+      for the named page ranges, visual inspection of the resulting PNGs, and
+      <tt class="verbatim">shasum -a 256</tt> of the PDFs. PDF text extraction had font
+      warnings for Zinoviev; the limit and theorem statements were checked
+      visually rather than trusted to OCR.
+    </p>
+    <p>
+      No fresh Lean build, axiom replay, full dependency-tree audit, or
+      independent review was performed. Existing build evidence is separate
+      from this citation decision. Structural checking does not validate the
+      bibliography or hypotheses. No manuscript or Lean source was changed.
+      Publication was held until the contributor explicitly authorised draft
+      submission.
+    </p>
+    <p>
+      Validation on 11 November 2026 (updated in the follow-up): SHA-256
+      comparison of the 32 named inspected source files against <tt class="verbatim">Lean/SOURCES.sha256</tt>
+      passed. <tt class="verbatim">python3 scripts/check_blueprint.py</tt> passed,
+      reporting <tt class="verbatim">Blueprint structure OK: 1 units. Lean and
+      mathematics were not verified.</tt> The existing unit is unrelated to
+      this note. <tt class="verbatim">git diff --check</tt> passed for the follow-up.
+      The earlier new-file whitespace check also passed. This note remains
+      unreviewed. The live AGENTS.md, CONTRIBUTING.md, docs/coordination.md,
+      docs/agent-prompts.md and docs/proof-standard.md were read again; this
+      output is a permitted internal background record, and any new
+      authoritative proof must be written once in <tt class="verbatim">manuscript/</tt>
+      LaTeX, with build/render checks and linked correspondence metadata.
+    </p>
+  </body>
+</html>

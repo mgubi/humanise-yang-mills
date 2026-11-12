@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>First-pass proof architecture &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../index.html">Home</a><font class="ym-sep">&middot;</font><a href="public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><font class="ym-here">Proof
+      outline</font><font class="ym-sep">&middot;</font><a href="unit-plan.html">Unit plan</a><font
+      class="ym-sep">&middot;</font><a href="index.html">Blueprint</a><font class="ym-sep">&middot;</font><a
+      href="../manuscript/index.html">Manuscript</a><font class="ym-sep">&middot;</font><a href="glossary.html">Glossary</a><font
+      class="ym-sep">&middot;</font><a href="../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a
+      href="../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a href="external-map.html">Literature</a><font
+      class="ym-sep">&middot;</font><a href="../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a
+      href="../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>First-pass proof architecture</h1><a id="first-pass-proof-architecture"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Evidence used for this map</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>The public theorem at the top</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Source clusters</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Proposed monograph parts</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Editorial boundaries</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>External-map handoff</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">4</a>
+      </p>
+    </div>
+    <p>
+      This outline maps the imported Lean release to the planned research
+      monograph. It uses Scott Armstrong's compiled-Lean map at external
+      commit <a href="https://github.com/scottnarmstrong/yang-mills-informalization/tree/8f3c7ccaeabb17b0f928bc1a2e75328691de3032"><tt class="verbatim">8f3c7ccaeabb17b0f928bc1a2e75328691de3032</tt></a>
+      and is pinned to OpenAI-YM revision <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>.
+      It is a planning document: theorem types, proof details, literature
+      matches, and axioms still require independent audit.
+    </p>
+    <h2 id="auto-1"><a id="evidence-used-for-this-map"></a>Evidence used for this map<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          The release-root audit in <tt class="verbatim">Lean/verification/Usage.lean</tt>,
+          inspected through bounded read-only agent reports. The command was
+          not rerun in this pass.
+        </p>
+      </li>
+      <li>
+        <p>
+          The checked-in declaration/module usage inventories, used by those
+          agents as navigation aids rather than accepted mathematical
+          classifications.
+        </p>
+      </li>
+      <li>
+        <p>
+          Scott Armstrong's <a href="https://github.com/scottnarmstrong/yang-mills-informalization/tree/8f3c7ccaeabb17b0f928bc1a2e75328691de3032">Yang&ndash;Mills informalization map</a>,
+          inspected at commit <tt class="verbatim">8f3c7ccaeabb17b0f928bc1a2e75328691de3032</tt>.
+          It targets the same OpenAI-YM revision and supplies 32 source
+          clusters, declaration ownership, 989 selected statements, a
+          glossary, a theorem restatement, and unit outlines at varying review
+          stages. Its <a href="https://github.com/scottnarmstrong/yang-mills-informalization/blob/8f3c7ccaeabb17b0f928bc1a2e75328691de3032/method.md">method</a> now derives dependencies from
+          compiled Lean and compares release-root reachability with OpenAI's
+          record. All unit pages have outlines at varying AI review stages;
+          none is an independently reviewed proof in this project. See the <a
+          href="external-map.html">cluster-by-cluster comparison</a> and Scott's <a href="https://github.com/scottnarmstrong/yang-mills-informalization/blob/8f3c7ccaeabb17b0f928bc1a2e75328691de3032/data/README.md">data
+          dictionary</a> for the different scopes of source allocation and
+          compiled reachability.
+        </p>
+      </li>
+    </ul>
+    <p>
+      The external map is the source-correspondence layer for this first pass.
+      Its allocation includes alternative constructions beyond the public
+      theorem's own closure. This repository should link to its unit IDs and
+      source data rather than recreate a second declaration-to-cluster
+      inventory. Exact hypotheses and proof obligations must still be checked
+      here before prose is accepted.
+    </p>
+    <h2 id="auto-2"><a id="the-public-theorem-at-the-top"></a>The public theorem at the top<span style="margin-left: 1em"></span></h2>
+    <p>
+      The main public endpoint is <tt class="verbatim">YangMills.jointExistence</tt>. At
+      a high level, it asserts the existence, for each compact matrix gauge
+      group with simple Lie algebra, of a Wilson family and suitable
+      refinements along each requested increasing sequence of volumes. The
+      resulting hierarchy packages Wilson convergence, reconstruction,
+      operator-product information, and a trace test. This description is
+      provisional; the exact quantified statement belongs in the
+      statement-audit task.
+    </p>
+    <p>
+      The proof architecture has one main spine and several focused release
+      branches:
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+flowchart TD
+  A[&quot;Lattice gauge theory and construction data&quot;]
+  B[&quot;Ultraviolet RG construction&quot;]
+  C[&quot;Uniform bounds and common Wilson family&quot;]
+  D[&quot;Infinite-volume subsequence&quot;]
+  E[&quot;Phase decomposition and OS reconstruction&quot;]
+  F[&quot;Ward identities and stress tensor&quot;]
+  G[&quot;Short-distance identification and interaction evidence&quot;]
+  H[&quot;OPE and contact extensions&quot;]
+  I[&quot;Public theorem assembly&quot;]
+  J[&quot;Concrete SU(2) specialization&quot;]
+  K[&quot;Perturbative position and parity branch&quot;]
+  L[&quot;Running-coupling proxy branch&quot;]
+  M[&quot;Sharp-Gram fixed-field branch&quot;]
+
+  A --&gt; B --&gt; C --&gt; D --&gt; E --&gt; F --&gt; G --&gt; I --&gt; J
+  D --&gt; H --&gt; I
+  B --&gt; K
+  B --&gt; L
+  B --&gt; M
+  K -.-&gt; I
+  L -.-&gt; I
+  M -.-&gt; I</pre>
+    <p>
+      The dotted arrows indicate editorial association, not a verified formal
+      dependency of <tt class="verbatim">YangMills.jointExistence</tt>. Each focused
+      branch must be checked before the monograph claims that it is part of
+      the public theorem.
+    </p>
+    <h2 id="auto-3"><a id="source-clusters"></a>Source clusters<span style="margin-left: 1em"></span></h2>
+    <p>
+      The external map groups the source into eight parts and 32 units:
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Part</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Source clusters</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Mathematical role</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">I</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">I.1</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Lattice, symmetry, gauge-group, and Wilson-measure
+        setup</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">II</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">II.1&ndash;II.2</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Field labels, polymer activities, norms, Wilson-family and
+        construction records</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">III</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.1&ndash;III.16</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Ultraviolet RG: blocking, kernels, Gaussian/polymer
+        machinery, background, flow, nonlinear estimates, uniformity,
+        construction run, analytic tools</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">IV</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">IV.1</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Infinite-volume subsequence and Euclidean axioms</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">V</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">V.1&ndash;V.3</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Phase decomposition and Wightman reconstruction</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">VI</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">VI.1&ndash;VI.2</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Ward identities, stress tensor, and Maxwell comparison</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">VII</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">VII.1&ndash;VII.6</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Short-distance Maxwell behavior, trace anomaly,
+        nonfreeness, OPE/contacts, running coupling, and fixed-field
+        estimates</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">VIII</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">VIII.1</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Assembly of the public theorem</td>
+      </tr></tbody>
+    </table>
+    <p>
+      These are ownership and navigation clusters. Their compiled-graph <tt
+      class="verbatim">builds_on</tt> summaries contain mutual implementation
+      dependencies and are not a topological proof order. A cluster is not
+      automatically a chapter or a proof task. In particular, Part III
+      contains about 70% of the mapped source, while several clusters mainly
+      organize definitions, parameter choices, analytic utilities, or
+      accounting.
+    </p>
+    <p>
+      The revised outlines identify <a href="https://github.com/scottnarmstrong/yang-mills-informalization/blob/8f3c7ccaeabb17b0f928bc1a2e75328691de3032/outline/units/III-13.md">III.13</a> as an alternative
+      common-family construction for <tt class="verbatim">YM.SharpGram.habitat</tt>. The
+      Wilson family of the public construction is selected in <a href="https://github.com/scottnarmstrong/yang-mills-informalization/blob/8f3c7ccaeabb17b0f928bc1a2e75328691de3032/outline/units/III-14.md">III.14</a>
+      and assembled in VIII.1. The two families are not identified by that
+      outline. Likewise, VII.1 supplies the free side of the short-distance
+      comparison, while the interacting comparison crosses VI.2 and VIII.1;
+      the free Wick and Gram results of VII.3 support a finite-profile
+      exclusion concluded through VII.2 and VIII.1.
+    </p>
+    <h2 id="auto-4"><a id="proposed-monograph-parts"></a>Proposed monograph parts<span style="margin-left: 1em"></span></h2>
+    <ol>
+      <li>
+        <p>
+          <strong>Setting and construction data.</strong> Define the
+          gauge-theoretic, lattice, Wilson-family, field-label, and polymer
+          framework. Quote standard background where possible and state
+          project-specific conventions precisely.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>One-step renormalization framework.</strong> Develop
+          blocking, symmetric gauge fixing, free kernels, Gaussian changes,
+          and the polymer/cluster expansion.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Effective action and coupling flow.</strong> Construct the
+          stationary background, match Wilson energy to fourth order, and
+          derive the marginal flow/reset.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Nonlinear RG estimates.</strong> Prove the one-step
+          induction, irrelevant and large-field bounds,
+          determinant/free-Gaussian comparison, and parameter closure.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Uniformity and the construction run.</strong> Obtain
+          volume-uniform estimates and spacing limits, then select the funded
+          run and its common Wilson family for the public theorem. Treat
+          III.13's alternative family separately.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Infinite volume.</strong> Extract a subsequence for every
+          requested volume sequence and establish the Euclidean hierarchy.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Phases and reconstruction.</strong> Decompose the limit into
+          phases and reconstruct the corresponding Wightman theories.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Symmetry and stress tensor.</strong> Establish Ward
+          identities, rotations, conservation, and the free-Maxwell comparison
+          used later.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Identification and interaction evidence.</strong> Prove the
+          short-distance Maxwell behavior, trace statement, nonfree criterion,
+          and the precisely delimited running-coupling conclusion.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>OPE, contacts, and fixed-field consequences.</strong>
+          Present the pointwise OPE, contact extensions, and selected
+          scaling/Sharp-Gram consequences.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Assembly and concrete gauge groups.</strong> Translate the
+          internal construction into the public theorem and specialize it to
+          SU(2).
+        </p>
+      </li>
+    </ol>
+    <p>
+      This chapter order follows the mathematical transfer of information. It
+      need not follow source-file order. Detailed candidate proof units and
+      dependencies are in <a href="unit-plan.html">unit-plan.md</a>.
+    </p>
+    <h2 id="auto-5"><a id="editorial-boundaries"></a>Editorial boundaries<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Standard results should be located and cited before a new proof is
+          written. The consuming unit must check the cited hypotheses and
+          prove any unmatched step.
+        </p>
+      </li>
+      <li>
+        <p>
+          Generated declarations, coercions, instances, record constructors,
+          and tactic artifacts do not receive prose units. Any mathematical
+          content they encode remains.
+        </p>
+      </li>
+      <li>
+        <p>
+          The public bridges receive a correspondence and assembly
+          explanation; they do not cause the underlying proofs to be repeated.
+        </p>
+      </li>
+      <li>
+        <p>
+          The theorem does not acquire a mass-gap, uniqueness of the
+          subsequential limit, clustering, or other physical conclusion merely
+          from the project title. Every such claim requires an exact audited
+          declaration.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-6"><a id="external-map-handoff"></a>External-map handoff<span style="margin-left: 1em"></span></h2>
+    <p>
+      Before opening an explanation issue, consult the <a href="external-map.html">disposition
+      table</a> and record the relevant pinned external unit ID and
+      key-statement rows. Review any external outline's open points and source
+      correspondence before using it; its AI <tt class="verbatim">checked</tt>/<tt
+      class="verbatim">edited</tt> status does not meet this project's review standard.
+      If this project develops a proof first, link the PR from the
+      corresponding external work item. The external map's Lean source pin
+      must match <tt class="verbatim">source/upstream.json</tt>; future revisions
+      require an explicit comparison.
+    </p>
+  </body>
+</html>

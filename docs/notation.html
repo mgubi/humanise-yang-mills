@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Notation across proof units and chapters &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><font
+      class="ym-here">Notation</font><font class="ym-sep">&middot;</font><a href="../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Notation across proof units and chapters</h1><a id="notation-across-proof-units-and-chapters"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Author contract</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Symbol and meaning conflicts</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Chapter integration</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Changing shared notation</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Evidence and scope</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">3</a>
+      </p>
+    </div>
+    <p>
+      The <a href="../blueprint/glossary.html">shared glossary</a> is the canonical notation register for
+      this exposition. It is pinned to the imported source revision recorded
+      in <tt class="verbatim">source/upstream.json</tt> and remains an author draft
+      until independently reviewed. A proof unit states its mathematics
+      directly in manuscript LaTeX, with source correspondence in the
+      blueprint. Chapter integration edits that same text, preserving its
+      spaces, quantifiers, normalisations and limits.
+    </p>
+    <h2 id="auto-1"><a id="author-contract"></a>Author contract<span style="margin-left: 1em"></span></h2>
+    <p>
+      Define notation at first use in the LaTeX text. In the blueprint unit's
+      <strong>Inputs and notation</strong> section, keep a short crosswalk for
+      the symbols needed at handoffs, with these columns:
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Symbol used here</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Meaning, space and normalisation</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Origin</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Local conversion or qualification</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">A symbol inherited from the glossary</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">State only the detail needed for this proof</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Link the exact glossary entry and dependency unit</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Write &ldquo;none&rdquo; if unchanged</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">A new local symbol</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Define its type and quantified scope</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Cite the defining source declaration or mathematical
+        reference</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">State when it expires and any collision avoided</td>
+      </tr></tbody>
+    </table>
+    <p>
+      List every notation choice that determines a theorem hypothesis or
+      conclusion. This includes gauge representation and Lie algebra,
+      spacetime signature, lattice spacing and period, measure and phase,
+      field grade and quotient, topology/filter of a limit, and the order in
+      which witnesses are chosen. Do not turn Lean binder letters into global
+      notation by accident. A local symbol may be shorter than a glossary
+      symbol when the proof is clearer, but write its conversion at first use
+      and retain one meaning within the unit.
+    </p>
+    <p>
+      When importing a theorem from another unit or the literature, show the
+      source-to-local map for symbols whose type or normalisation differs.
+      Check hypotheses after conversion. For example, identify whether a cited
+      result uses group simplicity or Lie-algebra simplicity, a finite lattice
+      side count or physical linear period, a full mesh limit or a
+      subsequence, a selected phase or a mixture, and a grade or a scaling
+      dimension. If the map requires a nontrivial lemma, prove it or make it a
+      visible dependency; a notation change does not establish an equivalence.
+    </p>
+    <p>
+      Use fully qualified declaration names and pinned source paths in the
+      blueprint correspondence table. In the manuscript, use conventional
+      mathematical names and references, not Lean implementation scaffolding
+      or unexplained nicknames. Cite a shared glossary entry instead of
+      redefining it in every chapter.
+    </p>
+    <h2 id="auto-2"><a id="symbol-and-meaning-conflicts"></a>Symbol and meaning conflicts<span style="margin-left: 1em"></span></h2>
+    <p>
+      The glossary reserves distinct prose symbols for the public Wilson
+      family <tt class="verbatim">\mathcal W</tt>, the internal construction family <tt
+      class="verbatim">\mathcal C</tt>, the Euclidean table <tt class="verbatim">S</tt>, and the
+      public hierarchy <tt class="verbatim">\mathcal T</tt>. The public field space <tt
+      class="verbatim">F_d</tt> (a quotient field space in the constructed hierarchy)
+      differs from the internal final package <tt class="verbatim">\mathsf F</tt>. The
+      character measure <tt class="verbatim">\nu_{\rm ph}</tt> differs from the Wilson
+      law <tt class="verbatim">\mu_{N,p}^{\mathcal W}</tt>. A short-distance radius <tt
+      class="verbatim">r_k</tt> differs from lattice mesh <tt class="verbatim">a_N</tt>. A
+      physical linear period <tt class="verbatim">P_p</tt> differs from the torus site
+      count <tt class="verbatim">\ell_{N,p}</tt>. A reviewer should reject an argument
+      that changes one of these meanings without a stated bridge.
+    </p>
+    <p>
+      The public requested volume sequence is <tt class="verbatim">\varrho</tt>; the
+      period component of a general internal extraction order is <tt class="verbatim">\tau</tt>.
+      They may be identified only in the explicit assembly step that
+      constructs that order from the public request.
+    </p>
+    <p>
+      The assembly in <tt class="verbatim">YangMills.jointExistence</tt> (<tt class="verbatim">Lean/Solution.lean:4&ndash;10</tt>)
+      makes this conversion concrete. After choosing an internal family <tt
+      class="verbatim">\mathcal C</tt> once, a requested strictly increasing <tt class="verbatim">\varrho</tt>
+      becomes the internal order <tt class="verbatim">a=(\mathrm{full},\varrho)</tt>.
+      The construction supplies a refinement order <tt class="verbatim">q</tt>; write
+      <tt class="verbatim">\sigma=q.per</tt>. Then <tt class="verbatim">(a.refine
+      q).per=\varrho\circ\sigma</tt>, while the public family is <tt class="verbatim">YangMills.wilsonFamily
+      \mathcal C</tt> and the public hierarchy is <tt class="verbatim">YangMills.hierarchy
+      F Q</tt> (<tt class="verbatim">Lean/Construction.lean:15&ndash;25</tt>). The
+      Wilson convergence bridge uses the full mesh sequence for this refined
+      period sequence (<tt class="verbatim">Lean/Construction.lean:23</tt>; <tt class="verbatim">Lean/HierarchyBridge.lean:44&ndash;45</tt>).
+      A general internal period sequence is therefore not automatically the
+      public request.
+    </p>
+    <p>
+      Other source names can collide: <tt class="verbatim">Reader</tt> occurs in more
+      than one namespace; <tt class="verbatim">p</tt> can be a period index, extraction
+      order or unrelated parameter; <tt class="verbatim">n</tt> can be representation
+      size or arity. Qualify the source name in the blueprint and choose a
+      typed local symbol in prose. Reserve plain <tt class="verbatim">\pi</tt> for the
+      mathematical constant. The word &ldquo;phase&rdquo; means the formal
+      character parameter unless a separate result justifies a stronger
+      physical use.
+    </p>
+    <p>
+      A symbol is <strong>local</strong> when absent from the glossary. The
+      author may use it within one unit after defining it, and should send a
+      proposed shared entry to the glossary issue if another unit needs it.
+      Authors must not edit the shared glossary while holding an unrelated
+      proof-unit claim. A glossary entry marked unresolved is a question; do
+      not convert it into a theorem hypothesis or an accepted normalisation by
+      prose convention.
+    </p>
+    <h2 id="auto-3"><a id="chapter-integration"></a>Chapter integration<span style="margin-left: 1em"></span></h2>
+    <p>
+      Before joining units into a chapter, the integrator checks the following
+      against the unit crosswalks and actual statements:
+    </p>
+    <ol>
+      <li>
+        <p>
+          <strong>Same object:</strong> Every repeated symbol denotes the same
+          mathematical space and construction. Distinguish public/internal
+          bridges, reference labels/quotient fields, selected/mixed phases,
+          and Euclidean/Minkowski structures.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Same scale:</strong> Mesh, site count, physical period, RG
+          level, and short-distance radius use their declared normalisations.
+          Couplings and the positive kernel penalty are not silently
+          identified.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Same limit:</strong> State the filter/topology and the order
+          of limits at the handoff. An iterated mesh-then-volume limit does
+          not become an arbitrary diagonal limit; a subsequential result does
+          not become uniqueness.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Same quantified data:</strong> Check which witnesses are
+          chosen once and which may depend on a requested sequence, phase,
+          truncation, compact set or geometry constant.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Same reference:</strong> A literature theorem is quoted in a
+          checked version with its own symbols translated and hypotheses
+          matched. An external glossary or AI outline is navigation evidence,
+          not an accepted mathematical citation.
+        </p>
+      </li>
+    </ol>
+    <p>
+      At first use in the chapter, define any chapter-local replacement for a
+      canonical symbol and give a compact conversion. Keep that replacement
+      consistent throughout the chapter. When adjacent chapters use different
+      local aliases, include a one-line bridge at their join. Do not erase a
+      unit's open question or strengthen its conclusion to make notation look
+      smoother.
+    </p>
+    <h2 id="auto-4"><a id="changing-shared-notation"></a>Changing shared notation<span style="margin-left: 1em"></span></h2>
+    <p>
+      <tt class="verbatim">blueprint/glossary.md</tt> has its own issue owner. Propose a
+      new or changed shared entry on that issue (or a new dedicated issue
+      after it closes) with the intended symbol, mathematical type, source
+      revision and declaration, reason for the change, and affected
+      unit/chapter links. The owner checks for collisions and updates the
+      glossary in one focused PR. An integrator then finds all units and
+      chapters that cite the entry and records their conversion or revision
+      tasks.
+    </p>
+    <p>
+      A purely typographic correction may leave mathematical content intact. A
+      change to a space, normalisation, quantifier, limit order, or claimed
+      bridge is material: it invalidates the corresponding source-to-prose and
+      mathematical review assumptions. Obtain renewed independent review of
+      affected work. The structural checker does not track glossary semantics
+      or automatically refresh reviewer fingerprints. Authors must not refresh
+      another reviewer's approval themselves.
+    </p>
+    <p>
+      The proof-unit template requires this crosswalk; the independent
+      Lean-correspondence reviewer checks it against the source, the
+      mathematical reviewer checks its use in the argument and literature
+      applications, and the chapter integrator checks consistency between
+      units. This division is a workflow, not an automated guarantee of
+      mathematical correctness.
+    </p>
+    <h2 id="auto-5"><a id="evidence-and-scope"></a>Evidence and scope<span style="margin-left: 1em"></span></h2>
+    <p>
+      This protocol implements the notation ownership and integration rules in
+      <tt class="verbatim">AGENTS.md</tt>, <tt class="verbatim">docs/coordination.md</tt>, <tt
+      class="verbatim">docs/proof-standard.md</tt>, and <tt class="verbatim">docs/maintainers.md</tt>.
+      It adds no theorem and changes no Lean source. The glossary currently
+      covers the shared entry points and deliberately leaves most RG local
+      symbols for their assigned interface audits; those agents should propose
+      additions through the dedicated notation task rather than edit the
+      shared file concurrently.
+    </p>
+  </body>
+</html>

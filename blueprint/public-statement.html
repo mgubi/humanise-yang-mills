@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Release-statement ledger &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../index.html">Home</a><font class="ym-sep">&middot;</font><font class="ym-here">The
+      theorem</font><font class="ym-sep">&middot;</font><a href="outline.html">Proof
+      outline</a><font class="ym-sep">&middot;</font><a href="unit-plan.html">Unit plan</a><font
+      class="ym-sep">&middot;</font><a href="index.html">Blueprint</a><font class="ym-sep">&middot;</font><a
+      href="../manuscript/index.html">Manuscript</a><font class="ym-sep">&middot;</font><a href="glossary.html">Glossary</a><font
+      class="ym-sep">&middot;</font><a href="../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a
+      href="../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a href="external-map.html">Literature</a><font
+      class="ym-sep">&middot;</font><a href="../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a
+      href="../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Release-statement ledger</h1><a id="release-statement-ledger"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Conventions and evidence</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Public and assembly roots</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">2</a>
+      </p>
+      <p>
+        <tt>YangMills.jointExistence</tt> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+      </p>
+      <p>
+        <tt>YangMills.constructed</tt> <span style="margin-left: 5mm"></span> <a href="#auto-4">3</a>
+      </p>
+      <p>
+        <tt>YM.Nonperturbative.existence</tt> <span style="margin-left: 5mm"></span> <a href="#auto-5">3</a>
+      </p>
+      <p>
+        <tt>YM.Nonperturbative.continuum_with_position_tests</tt> <span style="margin-left: 5mm"></span>
+        <a href="#auto-6">4</a>
+      </p>
+      <p>
+        <tt>YM.Nonperturbative.continuum</tt> <span style="margin-left: 5mm"></span> <a href="#auto-7">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Concrete SU(2) roots</b> <span style="margin-left: 5mm"></span> <a href="#auto-8">4</a>
+      </p>
+      <p>
+        <tt>YangMills.su2Simple</tt> <span style="margin-left: 5mm"></span> <a href="#auto-9">4</a>
+      </p>
+      <p>
+        <tt>YangMills.su2Theory</tt> <span style="margin-left: 5mm"></span> <a href="#auto-10">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Focused companion roots</b> <span style="margin-left: 5mm"></span> <a href="#auto-11">4</a>
+      </p>
+      <p>
+        <tt>YM.Independent.Core.point</tt> <span style="margin-left: 5mm"></span> <a href="#auto-12">4</a>
+      </p>
+      <p>
+        <tt>YM.Contacts.Solstice.celestial</tt> <span style="margin-left: 5mm"></span> <a href="#auto-13">5</a>
+      </p>
+      <p>
+        <tt>YM.Pert.Asymptotics.comparison</tt> <span style="margin-left: 5mm"></span> <a href="#auto-14">5</a>
+      </p>
+      <p>
+        <tt>YM.Pert.Position.finite_leading</tt> <span style="margin-left: 5mm"></span> <a href="#auto-15">6</a>
+      </p>
+      <p>
+        <tt>YM.Pert.Position.normalized_four</tt> <span style="margin-left: 5mm"></span> <a
+        href="#auto-16">6</a>
+      </p>
+      <p>
+        <tt>YM.Pert.Parity.parityEndpoint</tt> <span style="margin-left: 5mm"></span> <a href="#auto-17">6</a>
+      </p>
+      <p>
+        <tt>YM.Pert.Parity.low_read</tt> <span style="margin-left: 5mm"></span> <a href="#auto-18">6</a>
+      </p>
+      <p>
+        <tt>YM.SharpGram.habitat</tt> <span style="margin-left: 5mm"></span> <a href="#auto-19">7</a>
+      </p>
+      <p>
+        <tt>YM.SharpGram.inletFirst</tt> <span style="margin-left: 5mm"></span> <a href="#auto-20">7</a>
+      </p>
+      <p>
+        <tt>YM.SharpGram.outletFirst</tt> <span style="margin-left: 5mm"></span> <a href="#auto-21">7</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Interpretation limits and public prose</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-22">8</a>
+      </p>
+    </div>
+    <p>
+      This ledger audits the 17 advertised theorem declarations of the
+      imported OpenAI-YM source at revision <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>.
+      It is a statement and interpretation audit, not a proof of their
+      mathematical content. The corresponding source-level signatures and
+      check evidence are in <a href="../source/audit.html"><tt class="verbatim">source/audit.md</tt></a>. All
+      source paths below are relative to the repository root. The public
+      theorem is <tt class="verbatim">YangMills.jointExistence</tt>; the other release
+      headlines have distinct scopes and must not be read as extra conjuncts
+      of that theorem.
+    </p>
+    <h2 id="auto-1"><a id="conventions-and-evidence"></a>Conventions and evidence<span style="margin-left: 1em"></span></h2>
+    <p>
+      <tt class="verbatim">YangMills.GaugeGroup</tt> is a closed matrix subgroup in a
+      specified finite unitary representation. Its <tt class="verbatim">IsSimple</tt>
+      predicate refers to the associated real Lie algebra: it is nonabelian
+      and has no proper Lie ideals. The internal <tt class="verbatim">YM.Gauge</tt>/<tt
+      class="verbatim">Family</tt> notation is related by a bridge, but a theorem
+      formulated in that notation does not thereby become a public
+      Wilson-family theorem. All spacetime coordinates in the public challenge
+      are four-dimensional; the time coordinate is distinguished. These are
+      definitions of this formal source, not additional assumptions about
+      every gauge theory.
+    </p>
+    <p>
+      The <a href="../source/evidence/axioms-3456e5e.html">accepted issue #2 axiom evidence</a> reports <tt class="verbatim">propext</tt>,
+      <tt class="verbatim">Classical.choice</tt>, and <tt class="verbatim">Quot.sound</tt> for
+      every root, with no nonstandard endpoint axiom. It used a
+      checksum-verified compiled artifact and the pinned Lean 4.32.0 kernel;
+      it was not a clean build from source on this host. Those facts concern
+      proof terms, not the physical interpretation of a statement.
+    </p>
+    <p>
+      <strong>Assumption layers.</strong> The theorem hypotheses are the
+      displayed simplicity, positivity, geometry, filter, construction, and
+      lower-grade conditions in the entries below. Existential witnesses such
+      as a family, hierarchy, refinement, table, reader, or scaling are
+      constructed data, not hypotheses silently imposed on all gauge theories.
+      The formal proof environment uses the three reported Lean axioms and
+      pinned Mathlib; neither the public theorem nor this ledger adds an
+      external physical axiom such as a mass gap. No literature result is used
+      to replace inspection of these formal definitions.
+    </p>
+    <h2 id="auto-2"><a id="public-and-assembly-roots"></a>Public and assembly roots<span style="margin-left: 1em"></span></h2>
+    <h3 id="auto-3"><a id="yangmillsjointexistence"></a><tt class="verbatim">YangMills.jointExistence</tt><span style="margin-left: 1em"></span></h3>
+    <p>
+      <strong>Source:</strong> <tt class="verbatim">Lean/Solution.lean:4</tt>, with the
+      statement <tt class="verbatim">JointExistence</tt> in <tt class="verbatim">Lean/ChallengeSpec.lean:186&ndash;188</tt>.
+      <strong>Input:</strong> every <tt class="verbatim">g : GaugeGroup</tt> with <tt
+      class="verbatim">g.IsSimple</tt>. <strong>Conclusion:</strong> there is one <tt
+      class="verbatim">C : WilsonFamily g</tt> satisfying <tt class="verbatim">WilsonRegularity
+      C</tt>. For <em>every</em> strictly increasing sequence <tt class="verbatim">p :
+      &#x2115; &rarr; &#x2115;</tt> of volumes, there is a strictly increasing
+      <tt class="verbatim">q : &#x2115; &rarr; &#x2115;</tt> and a <tt class="verbatim">T :
+      Hierarchy C</tt> such that <tt class="verbatim">T.Properties (p &#x2218; q)</tt>
+      holds. The order of these quantifiers permits the hierarchy and
+      subsequence to depend on <tt class="verbatim">p</tt>, while the Wilson family is
+      chosen before <tt class="verbatim">p</tt>.
+    </p>
+    <p>
+      The meanings of <tt class="verbatim">WilsonRegularity</tt> and <tt class="verbatim">Hierarchy.Properties</tt>
+      are fixed by <tt class="verbatim">Lean/ChallengeSpec.lean</tt> and the public
+      Wilson and theory definitions. The property record comprises Wilson
+      convergence, a selected reconstructed theory, an all-orders separated
+      operator-product expansion, and a short-distance nonfreeness test for a
+      centered grade-four field. The reconstruction's spectral condition is
+      positive energy and uniqueness of the invariant vacuum. Neither a
+      positive mass gap nor uniqueness of the continuum limit appears as a
+      conclusion. This is the principal public statement; the detailed
+      construction below supplies its witnesses.
+    </p>
+    <p>
+      More precisely, regularity supplies one positive running slope such that
+      the ratio of the bare action coefficient to <tt class="verbatim">log(mesh&#x207B;&sup1;)</tt>
+      approaches it uniformly over the volume index; continuity and gauge
+      invariance of every insertion; and, for each insertion token, one finite
+      lattice-offset stencil that controls its values at every spacing, volume
+      and placement (<tt class="verbatim">ChallengeSpec.lean:11&ndash;22</tt>). <tt
+      class="verbatim">C.Converges</tt> first takes mesh limits of smeared finite Wilson
+      moments on suitable volume rows, then a volume limit to the unselected
+      hierarchy correlation (<tt class="verbatim">PublicWilson.lean:75&ndash;90</tt>).
+      The four fields of <tt class="verbatim">Hierarchy.Properties</tt> are exactly <tt
+      class="verbatim">wilson</tt>, <tt class="verbatim">reconstruction</tt>, <tt class="verbatim">ope</tt>,
+      and <tt class="verbatim">nonfree</tt> (<tt class="verbatim">ChallengeSpec.lean:177&ndash;182</tt>);
+      contacts are not a fifth field.
+    </p>
+    <p>
+      The reconstruction field includes faithful tempered fields on a common
+      dense cyclic domain, nontriviality and label representation, a
+      probability measure with full support on characters, permutation
+      symmetry and smoothness of separated correlations, continuity in the
+      character, and a phase-mixture identity. Its selected Wightman theory
+      satisfies normalized vacuum, positive-energy spectrum in the
+      <em>closed</em> forward cone, uniqueness of the translation-invariant
+      vacuum up to scalar, Poincar&eacute; covariance, and spacelike locality.
+      Analytic continuation on ordered complex times has the stated Euclidean
+      root and Wightman boundary values on product Schwartz tests (<tt class="verbatim">ChallengeSpec.lean:117&ndash;143</tt>;
+      <tt class="verbatim">PublicTheory.lean:252&ndash;312</tt>). These conditions do
+      not require a spectral interval above the vacuum to be empty.
+    </p>
+    <p>
+      The OPE has one phase-independent coefficient system. For fixed labels,
+      geometry constants, truncation degree <tt class="verbatim">D</tt>, and spectator
+      separation, the remainder is bounded by <tt class="verbatim">r^(D+1-weight(a)-&epsilon;)</tt>
+      at all sufficiently small positive <tt class="verbatim">r</tt>, uniformly over
+      admissible positions and characters. Coefficient bounds are stated
+      separately for each degree and channel. <tt class="verbatim">Within</tt> requires
+      cluster points within <tt class="verbatim">Mr</tt> of the center and separated by
+      at least <tt class="verbatim">&eta;r</tt>; <tt class="verbatim">Clear</tt> requires
+      spectators separated from the center and from each other by at least <tt
+      class="verbatim">c</tt> (<tt class="verbatim">ChallengeSpec.lean:53&ndash;80</tt>).
+      Coefficient-bound thresholds may depend on degree and channel; a
+      fixed-truncation remainder threshold is uniform over the channels in its
+      finite sum but may depend on that truncation and the labels. No
+      threshold uniform over all degrees, truncations, or label choices is
+      asserted.
+    </p>
+    <p>
+      The trace test centers a grade-four field and gives the selected
+      two-point function along the time axis the positive limit <tt class="verbatim">r&#x2078;
+      log&sup2;(r&#x207B;&sup1;) traceTwo(r) &rarr; 3
+      dim&#x211D;(g.lieAlgebra)/&pi;&#x2074;</tt> as <tt class="verbatim">r &darr;
+      0</tt>. It excludes eventual equality near zero with every
+      <em>finite</em> sum of the specified mass-shell Wick profiles (<tt
+      class="verbatim">ChallengeSpec.lean:145&ndash;175</tt>). The README's physical
+      trace identification and Maxwell Fock countertests refer to the detailed
+      construction statement, beyond this four-field public property record.
+    </p>
+    <h3 id="auto-4"><a id="yangmillsconstructed"></a><tt class="verbatim">YangMills.constructed</tt><span style="margin-left: 1em"></span></h3>
+    <p>
+      <strong>Source:</strong> <tt class="verbatim">Lean/Construction.lean:15&ndash;31</tt>.
+      <strong>Inputs:</strong> <tt class="verbatim">g : GaugeGroup</tt>, <tt class="verbatim">g.IsSimple</tt>,
+      and a real blocking-kernel penalty <tt class="verbatim">b &gt; 0</tt>.
+      <strong>Conclusion:</strong> a <tt class="verbatim">YM.Family g.core</tt> with
+      penalty exactly <tt class="verbatim">b</tt>, the internal construction property
+      <tt class="verbatim">Makes</tt>, and public <tt class="verbatim">WilsonRegularity</tt> for
+      its Wilson projection. For every internal extraction order <tt class="verbatim">p</tt>,
+      a refinement <tt class="verbatim">q</tt> gives a table <tt class="verbatim">S</tt>, final
+      object <tt class="verbatim">F</tt>, all-phase reconstruction <tt class="verbatim">L</tt>,
+      OPE reader <tt class="verbatim">Q</tt>, contact devices <tt class="verbatim">M</tt>, and
+      scaling <tt class="verbatim">X</tt>, simultaneously satisfying the projected
+      public hierarchy properties, ordered extraction, full-volume position
+      conditions, calibration, the internal independent core, reconstruction,
+      separated and nested OPE, trace exclusions, contact/basis conditions,
+      and the first extension and four position-meter tests.
+    </p>
+    <p>
+      <tt class="verbatim">Lean/WilsonBridge.lean:10&ndash;17</tt> turns the public
+      matrix group into the internal gauge structure. <tt class="verbatim">Lean/YM/Nonperturbative/HeadlineSpec.lean:143&ndash;155</tt>
+      defines the internal existence package used in the proof. The extra
+      contact and position conditions belong to this detailed result and its
+      selected witnesses. They are not additional conjuncts in <tt class="verbatim">YangMills.jointExistence</tt>.
+      The statement gives an extension under the constructed contact
+      prescription; it does not claim uniqueness across prescriptions or raw
+      cutoff convergence at collisions.
+    </p>
+    <h3 id="auto-5"><a id="ymnonperturbativeexistence"></a><tt class="verbatim">YM.Nonperturbative.existence</tt><span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      <strong>Source:</strong> <tt class="verbatim">Lean/YM/Nonperturbative/Headlines.lean:19&ndash;20</tt>,
+      expanded by <tt class="verbatim">Headline.WilsonExistence</tt> in <tt class="verbatim">Lean/YM/Nonperturbative/HeadlineSpec.lean:143&ndash;155</tt>.
+      <strong>Inputs:</strong> an internal closed matrix gauge group <tt
+      class="verbatim">G</tt>, proof <tt class="verbatim">G.Simple</tt>, and a positive penalty
+      <tt class="verbatim">b</tt>. <strong>Conclusion:</strong> an internal family <tt
+      class="verbatim">C</tt> with that penalty and <tt class="verbatim">C.Makes</tt>; for each
+      extraction order, refined table/final data, every-phase almanac, OPE
+      reader, contact devices, and scaling satisfying ordered extraction,
+      full-volume position tests, independent core, reconstruction, separated
+      and nested OPE, trace exclusions, basis identity, contact
+      transport/basis/threshold conditions, and first-extension/four-meter
+      conditions. The proof of <tt class="verbatim">constructed</tt> invokes this
+      existence result and projects it through the public bridges. A field or
+      condition named in this internal package must be checked through its
+      definition before assigning a physical interpretation.
+    </p>
+    <h3 id="auto-6"><a id="ymnonperturbativecontinuum_with_position_tests"></a><tt class="verbatim">YM.Nonperturbative.continuum_with_position_tests</tt><span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      <strong>Source:</strong> <tt class="verbatim">Lean/YM/Nonperturbative/Continuum.lean:28&ndash;39</tt>.
+      <strong>Inputs:</strong> internal <tt class="verbatim">G.Simple</tt> and <tt
+      class="verbatim">b &gt; 0</tt>; the construction run <tt class="verbatim">R := fundedRun hG
+      hb</tt> is fixed. <strong>Conclusion:</strong> <tt class="verbatim">R</tt> has
+      penalty <tt class="verbatim">b</tt>, and for every extraction order <tt class="verbatim">p</tt>
+      there exist a refinement, table, final object, almanac, reader, devices,
+      and scaling with ordered full extraction, full-volume positions, <tt
+      class="verbatim">Independent.Core</tt>, uniform nested OPE, equality of device and
+      reader field bases, multiple contact properties, nonempty transport
+      basis and thresholds, <tt class="verbatim">FirstExtension</tt>, and <tt class="verbatim">FourMeters</tt>.
+      This theorem feeds <tt class="verbatim">YM.Nonperturbative.existence</tt>; it is
+      phrased in the internal run and table framework, before the public
+      Wilson projection.
+    </p>
+    <h3 id="auto-7"><a id="ymnonperturbativecontinuum"></a><tt class="verbatim">YM.Nonperturbative.continuum</tt><span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      <strong>Source:</strong> <tt class="verbatim">Lean/YM/Nonperturbative/Continuum.lean:52&ndash;62</tt>.
+      <strong>Inputs:</strong> the same internal <tt class="verbatim">G.Simple</tt>,
+      positive <tt class="verbatim">b</tt>, and funded run. <strong>Conclusion:</strong>
+      the same penalty and refined table/final/almanac/reader/devices package
+      as the preceding theorem, omitting the scaling, first-extension, and
+      four-meter conjuncts. Its proof projects <tt class="verbatim">continuum_with_position_tests</tt>;
+      it is a weaker companion statement, not an additional premise of <tt
+      class="verbatim">jointExistence</tt>.
+    </p>
+    <h2 id="auto-8"><a id="concrete-su2-roots"></a>Concrete SU(2) roots<span style="margin-left: 1em"></span></h2>
+    <h3 id="auto-9"><a id="yangmillssu2simple"></a><tt class="verbatim">YangMills.su2Simple</tt><span style="margin-left: 1em"></span></h3>
+    <p>
+      <strong>Source:</strong> <tt class="verbatim">Lean/ConcreteSU2.lean:12</tt>.
+      <strong>Conclusion:</strong> the explicitly packaged two-dimensional
+      unitary matrix group <tt class="verbatim">YangMills.su2</tt> satisfies the
+      source's <tt class="verbatim">GaugeGroup.IsSimple</tt> predicate. <tt class="verbatim">Lean/ConcreteSU2.lean:8&ndash;10</tt>
+      defines this group using <tt class="verbatim">YM.Next.Foundations.SUtwo</tt> and
+      the public gauge-group structure; <tt class="verbatim">Lean/PublicTheory.lean</tt>
+      supplies the simplicity meaning. This result supplies the hypothesis of
+      <tt class="verbatim">su2Theory</tt>; it asserts no Wilson construction on its own.
+    </p>
+    <h3 id="auto-10"><a id="yangmillssu2theory"></a><tt class="verbatim">YangMills.su2Theory</tt><span style="margin-left: 1em"></span></h3>
+    <p>
+      <strong>Source:</strong> <tt class="verbatim">Lean/ConcreteSU2.lean:15&ndash;18</tt>.
+      <strong>Conclusion:</strong> for the concrete <tt class="verbatim">su2</tt>, there
+      exists a regular Wilson family such that every strictly increasing
+      volume sequence has a strictly increasing subsequence and a hierarchy
+      satisfying the public <tt class="verbatim">Properties</tt> record. This is <tt
+      class="verbatim">jointExistence su2 su2Simple</tt>, with no new physical
+      conclusion. It does not assert a mass gap.
+    </p>
+    <h2 id="auto-11"><a id="focused-companion-roots"></a>Focused companion roots<span style="margin-left: 1em"></span></h2>
+    <h3 id="auto-12"><a id="ymindependentcorepoint"></a><tt class="verbatim">YM.Independent.Core.point</tt><span style="margin-left: 1em"></span></h3>
+    <p>
+      <strong>Source:</strong> <tt class="verbatim">Lean/YM/Independent/Core.lean:49&ndash;63</tt>.
+      <strong>Inputs:</strong> an internal <tt class="verbatim">Core</tt> for a final
+      object, almanac, and OPE reader; finite sets of clustered and spectator
+      labels, nonnegative cluster-size constant <tt class="verbatim">M</tt>, positive
+      room, separation, and loss constants <tt class="verbatim">&eta;,c,&epsilon;</tt>,
+      and degree <tt class="verbatim">D</tt>. <strong>Conclusion:</strong> for all
+      sufficiently small positive radii <tt class="verbatim">r</tt>, uniformly over
+      clustered positions <tt class="verbatim">x</tt> in <tt class="verbatim">WithinRoom r M
+      &eta;</tt> about a center <tt class="verbatim">o</tt>, spectator positions <tt
+      class="verbatim">y</tt> in <tt class="verbatim">ClearOf o y c</tt>, and viewers <tt class="verbatim">s</tt>,
+      the norm of the whole correlation minus the finite OPE sum over degrees
+      <tt class="verbatim">j &le; D</tt> and reader channels is at most <tt class="verbatim">r^(D+1-weight(d)-&epsilon;)</tt>.
+      The sum uses the same table's spectator correlation with one field
+      inserted at <tt class="verbatim">o</tt>. <tt class="verbatim">Lean/YM/OPE/Orbits/Profile.lean</tt>
+      defines the geometry and exponent; <tt class="verbatim">Lean/YM/OPE/Orbits/Words.lean</tt>
+      defines the label words. The theorem extracts a consequence of an
+      assumed <tt class="verbatim">Core</tt>, rather than constructing a public
+      hierarchy. A pinned constant-closure query finds this declaration
+      reachable from <tt class="verbatim">jointExistence</tt>'s type or proof; its
+      pointwise estimate is still not a separate conjunct of the public <tt
+      class="verbatim">Properties</tt> record.
+    </p>
+    <h3 id="auto-13"><a id="ymcontactssolsticecelestial"></a><tt class="verbatim">YM.Contacts.Solstice.celestial</tt><span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      <strong>Source:</strong> <tt class="verbatim">Lean/YM/Contacts/Solstice/Result.lean:78&ndash;79</tt>.
+      <strong>Input:</strong> an internal <tt class="verbatim">Gauge G</tt> with <tt
+      class="verbatim">G.Simple</tt>. <strong>Conclusion:</strong> there exist an
+      internal family, extraction order, table, final object, and contact
+      devices satisfying <tt class="verbatim">MultipleLight</tt>, with a nonempty
+      transport system basis and nonempty threshold package. <tt class="verbatim">MultipleLight</tt>
+      is a record of services, a rotation identity, and conditional slope,
+      moment, and distributional estimates under its own finite-dimensional
+      Euclidean and contact-geometry hypotheses (<tt class="verbatim">Result.lean:52&ndash;63</tt>).
+      These conditions are not a claim of uniqueness of contact extensions,
+      reflection positivity on overlapping supports, arbitrary contact Ward
+      identities, or real-time time-ordered products. This is a separately
+      advertised existence statement; the issue #3 dependency audit does not
+      identify it as a premise of <tt class="verbatim">jointExistence</tt>.
+    </p>
+    <p>
+      The conditional clauses quantify over finite-dimensional real
+      inner-product test spaces equipped with the specified Haar/Lebesgue
+      measure structure. The <tt class="verbatim">slope</tt> field requires a rooted
+      normal-group route, a nonempty group, <tt class="verbatim">Run</tt>, <tt class="verbatim">Given</tt>,
+      route authority, and an eligible backdrop, and concludes the named <tt
+      class="verbatim">Sunshine</tt> estimate. The <tt class="verbatim">moment</tt> field
+      concludes <tt class="verbatim">Resolution</tt> for a route and eligible backdrop
+      under <tt class="verbatim">Given</tt> and authority. The <tt class="verbatim">distribution</tt>
+      field concludes a <tt class="verbatim">Charge</tt> bound for the major kernel when
+      the contact plane lies in the test-space range, the configuration is
+      collapsed, and <tt class="verbatim">0 &lt; B &le; 1</tt>, <tt class="verbatim">B</tt> is
+      below the device clearance, and <tt class="verbatim">0 &lt; s</tt> with <tt class="verbatim">2s
+      &le; B</tt>. These are the immediate formal conditions of <tt class="verbatim">MultipleLight</tt>;
+      they should not be replaced with an unrestricted contact-distribution
+      claim.
+    </p>
+    <p>
+      <tt class="verbatim">Sunshine</tt> supplies power-law <tt class="verbatim">Claim</tt>
+      estimates for the backdrop, each root coefficient, and a remainder; for
+      configurations with more than one point it also supplies conditional
+      annulus estimates (<tt class="verbatim">Result.lean:33&ndash;40</tt>). <tt class="verbatim">Resolution</tt>
+      packages an <tt class="verbatim">Achieves</tt> bound, a finite-part/series formula
+      for the route integral, and integrability, absolute summability and <tt
+      class="verbatim">HasSum</tt> statements for the selected and centered contact
+      expansions (<tt class="verbatim">Result.lean:23&ndash;31</tt>). <tt class="verbatim">Charge</tt>
+      is a compact-local test-order bound for the major-kernel distribution:
+      on each compact test support, a constant controls the distribution by
+      the prescribed jet order (<tt class="verbatim">Solstice/Venue.lean:30&ndash;31</tt>).
+      Thus the existential root has contact estimates for this constructed
+      prescription under the displayed geometry and eligibility conditions,
+      not an arbitrary contact theory.
+    </p>
+    <h3 id="auto-14"><a id="ympertasymptoticscomparison"></a><tt class="verbatim">YM.Pert.Asymptotics.comparison</tt><span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      <strong>Source:</strong> <tt class="verbatim">Lean/YM/Pert/Asymptotics/RawAxis.lean:36</tt>.
+      <strong>Inputs:</strong> an internal family <tt class="verbatim">C</tt> satisfying
+      <tt class="verbatim">C.Makes</tt>, a simple internal gauge group, arbitrary
+      integer sequences <tt class="verbatim">N,k</tt>, and the eventual condition <tt
+      class="verbatim">i &le; N(i)</tt>. <strong>Conclusion:</strong> as <tt class="verbatim">i
+      &rarr; &infin;</tt>, the running inverse square root of the bare action
+      coefficient at <tt class="verbatim">(N(i),k(i),i)</tt>, multiplied by the square
+      root of the logarithm of the inverse spacing, converges to <tt class="verbatim">(&radic;(2
+      b&#x2080;(G)))&#x207B;&sup1;</tt>, where <tt class="verbatim">b&#x2080;(G)=11
+      casimir(G)/(48&pi;&sup2;)</tt> (<tt class="verbatim">RawAxis.lean:13&ndash;19</tt>).
+      The statement concerns the defined <tt class="verbatim">regulatorRun</tt> proxy.
+      It does not identify this quantity with an X-scheme physical coupling or
+      establish an all-orders matching formula. Its relation to the public
+      theorem is a focused companion assertion, not an extra public property.
+    </p>
+    <h3 id="auto-15"><a id="ympertpositionfinite_leading"></a><tt class="verbatim">YM.Pert.Position.finite_leading</tt><span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      <strong>Source:</strong> <tt class="verbatim">Lean/YM/Pert/Position/Crest.lean:13</tt>.
+      <strong>Inputs:</strong> a position condition <tt class="verbatim">Q</tt> on a
+      finite frame, its <tt class="verbatim">CleanProfiles</tt> witness, and a lattice
+      side <tt class="verbatim">L</tt> with <tt class="verbatim">L.val &gt; 1</tt>.
+      <strong>Conclusion:</strong> the order-zero finite-regulator position
+      ledger <tt class="verbatim">finite Q L m 0</tt> tends, as <tt class="verbatim">m &rarr;
+      &infin;</tt>, to <tt class="verbatim">white Q</tt> in its function/product
+      topology. <tt class="verbatim">Conditions</tt> in <tt class="verbatim">Position/Board.lean:54&ndash;59</tt>
+      specifies slots, arities, field-valued columns, compact-test profiles
+      and a linear chart; <tt class="verbatim">CleanProfiles</tt> identifies the
+      profiles with compactly supported smooth tests. The theorem fixes the
+      side and concerns the leading coefficient only. It does not identify
+      higher coefficients with continuum correlations or diagrams. A pinned
+      constant-closure query finds this declaration reachable in the
+      proof/type closure of <tt class="verbatim">jointExistence</tt>, without changing
+      the public theorem's conclusion.
+    </p>
+    <h3 id="auto-16"><a id="ympertpositionnormalized_four"></a><tt class="verbatim">YM.Pert.Position.normalized_four</tt><span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      <strong>Source:</strong> <tt class="verbatim">Lean/YM/Pert/Position/Four.lean:56</tt>.
+      <strong>Inputs:</strong> internal <tt class="verbatim">G.Simple</tt> and a
+      positive penalty <tt class="verbatim">p</tt>. <strong>Conclusion:</strong> an
+      internal family with penalty <tt class="verbatim">p</tt>, the named
+      construction/material/plenty conditions, and, for each extraction order
+      <tt class="verbatim">f</tt>, a refinement, table, final object <tt class="verbatim">b</tt>
+      and scaling <tt class="verbatim">X</tt> with <tt class="verbatim">FirstExtension b X</tt>
+      and <tt class="verbatim">FourMeters b X</tt>. The latter requires a position <tt
+      class="verbatim">Crest</tt> and one degree-four, square, clean-profile condition
+      whose board ledger is attained and resident along the same scaling (<tt
+      class="verbatim">Four.lean:45&ndash;47</tt>). <tt class="verbatim">Scaling</tt> contains
+      spin changes and a positive scale decreasing to zero. The source
+      describes ordinary unmarked correlations of the constructed mean theory
+      along a weak sequence; the theorem does not assert all-order
+      actual-versus-diagram matching.
+    </p>
+    <p>
+      The named existence conditions are substantive. <tt class="verbatim">Wcmain</tt>
+      is a centered-budget bound at every grade, positive radius and loss,
+      uniform over bounded reference vectors and auxiliary volume indices
+      after a sufficiently large cutoff (<tt class="verbatim">Extraction/Center.lean:38&ndash;40</tt>).
+      <tt class="verbatim">Materials</tt> includes <tt class="verbatim">G.Simple</tt>, <tt class="verbatim">C.Makes</tt>,
+      created/open-stock data and a paid room package (<tt class="verbatim">Pert/Spatial/Prices.lean:16&ndash;22</tt>).
+      <tt class="verbatim">Plenty</tt> requires at every schedule index that square-root
+      <tt class="verbatim">hatBeta</tt> dominate the support-exponent and fourth-power
+      spacing-factor cost (<tt class="verbatim">Pert/Spatial/CrowdPay.lean:26&ndash;30</tt>).
+      None of these names may be read as an all-orders perturbative matching
+      assertion.
+    </p>
+    <h3 id="auto-17"><a id="ympertparityparityendpoint"></a><tt class="verbatim">YM.Pert.Parity.parityEndpoint</tt><span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      <strong>Source:</strong> <tt class="verbatim">Lean/YM/Pert/Parity/End.lean:21</tt>.
+      <strong>Inputs:</strong> internal <tt class="verbatim">G.Simple</tt> and a
+      positive penalty <tt class="verbatim">c</tt>. <strong>Conclusion:</strong> an
+      internal family with that penalty and the named
+      construction/material/plenty conditions; for every extraction order a
+      refinement, table, final object and scaling with <tt class="verbatim">FirstExtension</tt>,
+      <tt class="verbatim">Crest</tt>, and a clean-profile position condition whose
+      ledger is attained and resident, together with <tt class="verbatim">Fair Q J</tt>
+      and <tt class="verbatim">ParityFields &phi;</tt>. <tt class="verbatim">Fair</tt> is an exact
+      algebraic mirror identity and center fixed-point equation (<tt class="verbatim">Parity/Branch.lean:17</tt>).
+      <tt class="verbatim">ParityFields</tt> says that, for every target condition <tt
+      class="verbatim">R</tt>, side greater than one, and jet indices <tt class="verbatim">p,j</tt>,
+      an identity between the <tt class="verbatim">R</tt> read jet and the
+      coat-transformed condition's read jet holds eventually in the finite
+      regulator, with factor <tt class="verbatim">(-1)^j</tt> (<tt class="verbatim">Parity/End.lean:15&ndash;17</tt>).
+      This is an eventual finite-regulator relation, not an unrestricted
+      continuum parity theorem.
+    </p>
+    <h3 id="auto-18"><a id="ympertparitylow_read"></a><tt class="verbatim">YM.Pert.Parity.low_read</tt><span style="margin-left: 1em"></span></h3>
+    <p>
+      <strong>Source:</strong> <tt class="verbatim">Lean/YM/Pert/Parity/EvenLow.lean:44</tt>.
+      <strong>Inputs:</strong> a simple internal gauge group, a position
+      condition <tt class="verbatim">X</tt> on a frame, arity/grade <tt class="verbatim">d &le;
+      5</tt>, any lattice side and regulator, and an odd coefficient index <tt
+      class="verbatim">j</tt>. <strong>Conclusion:</strong> the finite coefficient <tt
+      class="verbatim">finite X L m j</tt> is exactly zero in its ledger. No
+      clean-profile or determinant hypothesis appears. The result is
+      restricted to these low grades and finite coefficients; it does not
+      itself state a continuum response or all-orders comparison.
+    </p>
+    <h3 id="auto-19"><a id="ymsharpgramhabitat"></a><tt class="verbatim">YM.SharpGram.habitat</tt><span style="margin-left: 1em"></span></h3>
+    <p>
+      <strong>Source:</strong> <tt class="verbatim">Lean/YM/SharpGram/Measured.lean:11</tt>.
+      <strong>Inputs:</strong> internal <tt class="verbatim">G.Simple</tt>, a positive
+      penalty <tt class="verbatim">b</tt>, and an extraction order <tt class="verbatim">f</tt>.
+      <strong>Conclusion:</strong> there exist an internal family, refinement,
+      table, final object, every-phase almanac, and prescription with the
+      stipulated construction, calibration, penalty, UV, order, margin,
+      facility, logarithmic, completion, all-shapes, and dense-coverage
+      conditions. Its final quantified clause runs over every ultrafilter
+      below the fused extraction filter and every horizon <tt class="verbatim">D</tt>: a
+      weak portfolio exists, and each such portfolio has priced spin-change
+      data whose basis readings converge grade by grade to the model. The full
+      conjunction is transcribed in the source audit. This is a fixed-field
+      and weak portfolio habitat; the statement does not assert a Gram matrix
+      is positive definite in every physical regime or establish a mass gap.
+    </p>
+    <p>
+      Here <tt class="verbatim">Floral</tt> is a structured ultraviolet extension/cellar
+      package with analytic arc, spring, geometric and eventual realization
+      clauses (<tt class="verbatim">UVExtension/Oasis/Flora.lean:55&ndash;72</tt>); its
+      many nested predicates are not collapsed to a standard continuum-limit
+      theorem. <tt class="verbatim">Facilities</tt> combines a same-table OPE service
+      package with a logarithmic package (<tt class="verbatim">OPE/ElementaryLog.lean:12&ndash;13</tt>);
+      <tt class="verbatim">AllShapes</tt> adds coherent one-family, nested-tree, and
+      discounted two-family subpower estimates (<tt class="verbatim">OPE/Subpower.lean:37&ndash;45</tt>).
+      <tt class="verbatim">Dense.Coverage</tt> chooses a common predecessor schedule and
+      panels with eventual <tt class="verbatim">Poised</tt> data at every horizon (<tt
+      class="verbatim">SharpGram/Dense/Passes.lean:16&ndash;24</tt>). A weak <tt class="verbatim">Portfolio</tt>
+      carries binding, budget, chart and panel data, a late predecessor,
+      matrix/field sequences and subfilter limits (<tt class="verbatim">SharpGram/Weak/Reading.lean:35&ndash;49</tt>);
+      its nonemptiness is not the existence of a standalone probability
+      measure.
+    </p>
+    <h3 id="auto-20"><a id="ymsharpgraminletfirst"></a><tt class="verbatim">YM.SharpGram.inletFirst</tt><span style="margin-left: 1em"></span></h3>
+    <p>
+      <strong>Source:</strong> <tt class="verbatim">Lean/YM/SharpGram/Clauses.lean:126</tt>.
+      <strong>Inputs:</strong> an internal simple gauge group, a family and
+      final object, a filter <tt class="verbatim">&phi;</tt> on <tt class="verbatim">&#x2115;
+      &times; &#x2115;</tt> below the extraction order's fused filter, and a
+      label <tt class="verbatim">x</tt> of grade <tt class="verbatim">d &le; 3</tt>, and the
+      remaining section data. <strong>Conclusion:</strong> the projected field
+      <tt class="verbatim">S.project d x</tt> satisfies <tt class="verbatim">Supplies C &phi;
+      d</tt>. Precisely, an exponent <tt class="verbatim">p</tt> can be chosen so that,
+      for every sufficiently large <tt class="verbatim">k</tt>, there are a label <tt
+      class="verbatim">y</tt> projecting to that field and a label net <tt class="verbatim">q</tt>
+      tending to <tt class="verbatim">y</tt> along <tt class="verbatim">&phi;</tt>, whose quota is
+      eventually bounded by <tt class="verbatim">hatBeta(k)^p</tt> (<tt class="verbatim">Clauses.lean:18&ndash;21</tt>).
+      The statement concerns supply for grades through three under these
+      hypotheses; it makes no higher-grade or public-hierarchy claim.
+    </p>
+    <h3 id="auto-21"><a id="ymsharpgramoutletfirst"></a><tt class="verbatim">YM.SharpGram.outletFirst</tt><span style="margin-left: 1em"></span></h3>
+    <p>
+      <strong>Source:</strong> <tt class="verbatim">Lean/YM/SharpGram/Clauses.lean:120</tt>.
+      <strong>Inputs:</strong> the same internal simple-group, family,
+      final/table/ticket and filter context; a complex-linear functional <tt
+      class="verbatim">L</tt> on grade <tt class="verbatim">d</tt>; a lower grade <tt class="verbatim">w
+      &le; d</tt> with <tt class="verbatim">w &le; 3</tt>; and <tt class="verbatim">Kills</tt> on
+      all grades below <tt class="verbatim">w</tt>. <strong>Conclusion:</strong> <tt
+      class="verbatim">Releases C &phi; d w L</tt>. An exponent <tt class="verbatim">p</tt> exists
+      such that, for every sufficiently large <tt class="verbatim">k</tt>, every
+      nonbottom subfilter <tt class="verbatim">u &le; &phi;</tt>, convergent label net
+      <tt class="verbatim">q &rarr; x</tt> along <tt class="verbatim">u</tt>, and eventual quota
+      bound <tt class="verbatim">z</tt>, the value of <tt class="verbatim">L</tt> on the projected
+      field is bounded by <tt class="verbatim">hatBeta(k)^p z / a(k)^(d-w)</tt> (<tt
+      class="verbatim">Clauses.lean:23&ndash;29</tt>). The order of the eventual and
+      universal quantifiers matters. It is an estimate conditional on
+      annihilation of lower grades, not a general regularity theorem.
+    </p>
+    <h2 id="auto-22"><a id="interpretation-limits-and-public-prose"></a>Interpretation limits and public prose<span style="margin-left: 1em"></span></h2>
+    <p>
+      The upstream <tt class="verbatim">Lean/README.md</tt> describes Wilson origin,
+      reconstructed Wightman properties, separated OPE, and a nonfreeness test
+      for the public challenge. Those descriptions must be read with the
+      actual predicates in <tt class="verbatim">ChallengeSpec.lean</tt>, <tt class="verbatim">PublicWilson.lean</tt>,
+      and <tt class="verbatim">PublicTheory.lean</tt>; they do not add hypotheses or
+      conclusions to <tt class="verbatim">JointExistence</tt>. The README explicitly
+      excludes a positive mass gap, general exclusion of continuous-mass
+      generalized free fields, and all-orders MS-bar matching. It also says
+      the constructed contact prescription is an extension, without uniqueness
+      over other prescriptions or raw cutoff convergence on collision
+      diagonals.
+    </p>
+    <p>
+      The release-headline list alone does not say which focused results occur
+      in the proof term of <tt class="verbatim">YangMills.jointExistence</tt>. The
+      direct source chain inspected here is <tt class="verbatim">continuum_with_position_tests
+      &rarr; existence &rarr; constructed &rarr; jointExistence</tt>; <tt
+      class="verbatim">continuum</tt> is a projection of the first, and <tt class="verbatim">su2Theory</tt>
+      specializes the last. A pinned type/proof constant-closure query
+      additionally finds <tt class="verbatim">YM.Independent.Core.point</tt> and <tt
+      class="verbatim">YM.Pert.Position.finite_leading</tt> reachable from <tt class="verbatim">jointExistence</tt>;
+      the other focused headline names are not in that closure. Reachability
+      records a formal dependency, not a public conjunct or a physical
+      interpretation. The contact, parity, asymptotics and Sharp-Gram
+      headlines remain separately advertised statements.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Mathematical result or package &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Mathematical result or package</h1><a id="mathematical-result-or-package"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Result to be used</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Mathematical reference</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Match to the formalisation</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Application and remaining proof obligations</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-4">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Search and unresolved questions</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">1</a>
+      </p>
+    </div>
+    <ul>
+      <li>
+        <p>
+          Literature task: &#x27E8;issue URL&#x27E9;
+        </p>
+      </li>
+      <li>
+        <p>
+          Source revision: &#x27E8;pinned Lean revision&#x27E9;
+        </p>
+      </li>
+      <li>
+        <p>
+          Status: &#x27E8;lead / source checked / independently accepted /
+          stale&#x27E9;
+        </p>
+      </li>
+      <li>
+        <p>
+          Contributor and agent assistance: &#x27E8;accounts and tools&#x27E9;
+        </p>
+      </li>
+      <li>
+        <p>
+          Independent review: &#x27E8;reviewer, reviewed commit, and review
+          link; pending until checked&#x27E9;
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-1"><a id="result-to-be-used"></a>Result to be used<span style="margin-left: 1em"></span></h2>
+    <p>
+      &#x27E8;The exact version needed, with hypotheses and conclusion in the
+      project's notation.&#x27E9;
+    </p>
+    <h2 id="auto-2"><a id="mathematical-reference"></a>Mathematical reference<span style="margin-left: 1em"></span></h2>
+    <p>
+      &#x27E8;Author, title, edition/version/year, theorem/section/page, and
+      stable link or DOI where available. State whether the actual source
+      statement has been inspected.&#x27E9;
+    </p>
+    <h2 id="auto-3"><a id="match-to-the-formalisation"></a>Match to the formalisation<span style="margin-left: 1em"></span></h2>
+    <p>
+      &#x27E8;Relevant fully qualified declarations and source paths. Compare
+      definitions, quantifiers, hypotheses, and conventions. Identify any
+      differences or extra steps.&#x27E9;
+    </p>
+    <h2 id="auto-4"><a id="application-and-remaining-proof-obligations"></a>Application and remaining proof obligations<span style="margin-left: 1em"></span></h2>
+    <p>
+      &#x27E8;What each consuming proof must check; extensions requiring
+      proof; known uses.&#x27E9;
+    </p>
+    <h2 id="auto-5"><a id="search-and-unresolved-questions"></a>Search and unresolved questions<span style="margin-left: 1em"></span></h2>
+    <p>
+      &#x27E8;Useful sources/queries checked, unsuccessful leads worth
+      recording, and gaps. Do not infer novelty from an unsuccessful
+      search.&#x27E9;
+    </p>
+  </body>
+</html>

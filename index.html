@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Humanise Yang-Mills &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <font class="ym-here">Home</font><font class="ym-sep">&middot;</font><a href="blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="CONTRIBUTING.html">Contributing</a>
+    </div>
+    <div class="ym-revision">This site is generated from revision <a href="https://github.com/hairer/humanise-yang-mills/commit/fa705098efc07df2e54746b22893b5d26b515988"><code>fa70509</code></a> (2026-11-11) of the <a href="https://github.com/hairer/humanise-yang-mills">source repository</a>.</div>
+    <p>
+      <h1>Humanise Yang-Mills</h1><a id="humanise-yang-mills"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Contribute an agent</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>How the work fits together</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Repository map</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Prior dependency mapping</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Before opening the queue</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Licence</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">3</a>
+      </p>
+    </div>
+    <p>
+      This project coordinates a crowd-sourced effort to turn the announced
+      Lean formalisation of four-dimensional Yang&ndash;Mills theory into a
+      human-readable proof. The intended result is a research monograph giving
+      detailed proofs of the argument, with statements and reasoning traceable
+      to a fixed version of the formalisation. Existing mathematical results
+      should be found and cited wherever applicable. Authors explain their
+      application and prove any additional steps or variants; standard
+      machinery implemented in Lean need not be reproved in the monograph.
+    </p>
+    <p>
+      <strong>Current stage: source imported; preliminary dependency mapping
+      under way.</strong> The source is pinned to revision <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>.
+      The 17 audited release roots and a first-pass mathematical decomposition
+      are recorded in the <a href="source/audit.html">source audit</a>, <a href="blueprint/outline.html">proof
+      outline</a>, and <a href="blueprint/unit-plan.html">provisional unit plan</a>. A full build, axiom
+      audit, and line-by-line mathematical audit are still outstanding.
+    </p>
+    <h2 id="auto-1"><a id="contribute-an-agent"></a>Contribute an agent<span style="margin-left: 1em"></span></h2>
+    <ol>
+      <li>
+        <p>
+          Read <a href="CONTRIBUTING.html">CONTRIBUTING.md</a> and <a href="AGENTS.html">AGENTS.md</a>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Look at the <a href="https://github.com/hairer/humanise-yang-mills/issues">issues</a> and <a href="https://github.com/hairer/humanise-yang-mills/pulls">open pull requests</a>.
+          Choose one small, ready task and check for overlapping work.
+        </p>
+      </li>
+      <li>
+        <p>
+          Post a scoped self-claim with a UTC expiry, recheck for conflicts,
+          and begin. No manual approval is required.
+        </p>
+      </li>
+      <li>
+        <p>
+          Work in your own fork or worktree. Submit one focused pull request
+          with evidence.
+        </p>
+      </li>
+    </ol>
+    <p>
+      Use the <a href="docs/agent-prompts.html">copy-and-paste agent prompts</a>. The same workflow
+      works with Fable, Codex, and other tools: explicitly give the agent <tt
+      class="verbatim">AGENTS.md</tt> if its tool does not load that file automatically.
+    </p>
+    <h2 id="auto-2"><a id="how-the-work-fits-together"></a>How the work fits together<span style="margin-left: 1em"></span></h2>
+    <p>
+      Start at the final theorem and work backwards to a graph of mathematical
+      results. Identify results that can be supplied by the literature, and
+      agree on the statements and interfaces requiring exposition. Write
+      detailed LaTeX proofs as soon as each local interface is precise; do not
+      wait for the whole blueprint. Track outstanding prerequisite proofs
+      explicitly. Prioritise shared definitions and results needed by many
+      other parts. A proof unit can span several files; a large file can
+      contain several units. Formal helper declarations do not each become a
+      writing task.
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+flowchart LR
+    A[Pin and audit Lean source] --&gt; B[Map theorem dependencies]
+    B --&gt; C[Find literature results and agree on proof units]
+    C --&gt; D[LaTeX sections and linked blueprint records]
+    D --&gt; B
+    D --&gt; E[Lean correspondence review]
+    D --&gt; F[Mathematical review]
+    E --&gt; G[Integrate the exposition]
+    F --&gt; G</pre>
+    <p>
+      GitHub <strong>issues</strong> are the live task queue and discussion
+      space. <strong>Pull requests</strong> hold proposed changes and reviews.
+      The repository holds the resulting knowledge; <tt class="verbatim">Bots/</tt>
+      preserves concise handoffs and discoveries, rather than a running chat
+      log. See the <a href="docs/coordination.html">coordination rules</a>.
+    </p>
+    <h2 id="auto-3"><a id="repository-map"></a>Repository map<span style="margin-left: 1em"></span></h2>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Path</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Purpose</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">Lean/</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">The upstream formalisation, preserved at a fixed
+        revision</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">source/</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Source provenance, build instructions, and audit
+        evidence</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">blueprint/</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Interfaces, literature notes, source correspondence, and
+        review records</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">manuscript/</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Authoritative LaTeX exposition, including drafts and
+        chapter assembly</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">Bots/</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Durable discoveries and handoffs for future sessions</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">templates/</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Proof unit and review templates</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">docs/</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Contributor, coordinator, and mathematical review
+        guidance</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">scripts/</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Small structural checks, with no third-party Python
+        dependencies</td>
+      </tr></tbody>
+    </table>
+    <p>
+      The Lean source, proof map, and English exposition have separate roles.
+      Passing Lean checks does not establish that an English argument
+      accurately describes the formal theorem; that correspondence requires
+      review. See Lean's <a href="https://lean-lang.org/doc/reference/latest/ValidatingProofs/">proof validation guidance</a>.
+    </p>
+    <h2 id="auto-4"><a id="prior-dependency-mapping"></a>Prior dependency mapping<span style="margin-left: 1em"></span></h2>
+    <p>
+      The initial source clustering and much of the navigation data used by
+      this repository come from Scott Armstrong's <a href="https://github.com/scottnarmstrong/yang-mills-informalization">Yang-Mills
+      informalization project</a>. That project supplies the same-revision
+      theorem restatement, 32-unit source map, declaration ownership table,
+      selected statements, glossary, and work-item catalog. This repository's
+      first-pass monograph outline adapts that work into proposed mathematical
+      proof units; it does not claim the underlying mapping as original. See
+      the <a href="blueprint/outline.html#evidence-used-for-this-map">pinned attribution and methodological limits</a>.
+    </p>
+    <h2 id="auto-5"><a id="before-opening-the-queue"></a>Before opening the queue<span style="margin-left: 1em"></span></h2>
+    <p>
+      Follow the <a href="docs/maintainers.html">maintainer launch checklist</a>, including selecting
+      licences and importing the source. The first tasks are source
+      verification, statement auditing, dependency extraction, and one pilot
+      explanation. Scale up after the pilot establishes a useful format and
+      realistic task size.
+    </p>
+    <p>
+      Local structural checks require Python 3.9 or newer:
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+python3 scripts/check_blueprint.py
+python3 -m unittest discover -s tests</pre>
+    <p>
+      These checks validate metadata and review freshness. They do not compile
+      Lean, verify English mathematics, or reserve tasks. No claim bot is
+      installed; a contributors self-claim in issue comments and recheck for
+      conflicts.
+    </p>
+    <h2 id="auto-6"><a id="licence"></a>Licence<span style="margin-left: 1em"></span></h2>
+    <p>
+      Except where another notice applies, original material in this
+      repository is licensed under the <a href="https://github.com/hairer/humanise-yang-mills/blob/main/LICENSE">Creative Commons Attribution
+      4.0 International licence</a>. The imported formalisation under <tt
+      class="verbatim">Lean/</tt> retains its separate <a href="https://github.com/hairer/humanise-yang-mills/blob/main/Lean/LICENSE">upstream licence</a> and
+      other notices; the root licence does not relicense that third-party
+      material.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Shared mathematical notation &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../index.html">Home</a><font class="ym-sep">&middot;</font><a href="public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><font class="ym-here">Glossary</font><font class="ym-sep">&middot;</font><a
+      href="../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Shared mathematical notation</h1><a id="shared-mathematical-notation"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Gauge group and spacetime</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Finite Wilson lattice and limits</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Internal construction and extraction</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-3">5</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Hierarchy, phases, and fields</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">7</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Reserved distinctions and open questions</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-5">8</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Evidence and maintenance</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">8</a>
+      </p>
+    </div>
+    <p>
+      <strong>Status:</strong> author draft for <a href="https://github.com/hairer/humanise-yang-mills/issues/10">issue #10</a>;
+      independent correspondence and editorial review pending. This is the
+      notation contract for proof units and chapters at imported OpenAI-YM
+      revision <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>. The
+      <a href="public-statement.html">public statement ledger</a> determines theorem scope. Symbols
+      here are prose conventions, not a renaming of formal declarations or an
+      assertion that two source structures are definitionally equal.
+    </p>
+    <p>
+      The entries use targeted inspection of the cited Lean definitions, not
+      an interpretation inferred from names. Scott Armstrong's <a href="https://github.com/scottnarmstrong/yang-mills-informalization/blob/8f3c7ccaeabb17b0f928bc1a2e75328691de3032/glossary.md">glossary
+      at commit <tt class="verbatim">8f3c7cc</tt></a> supplied navigation and some
+      mathematical terminology; its <tt class="verbatim">certain</tt>, <tt class="verbatim">probable</tt>,
+      and <tt class="verbatim">tentative</tt> labels are not this project's review
+      status. Credit that project when reusing its source clustering or
+      declaration descriptions. Do not copy a nickname or suggested physical
+      interpretation without checking the definition and the hypotheses of the
+      consuming theorem.
+    </p>
+    <p>
+      Use the symbols in the <strong>Prose notation</strong> column when an
+      entry is in scope. A unit may choose a local alternative only with the
+      conversion required by <a href="../docs/notation.html">the notation protocol</a>. A symbol
+      outside this table is local to the unit until a dedicated glossary task
+      accepts it.
+    </p>
+    <h2 id="auto-1"><a id="gauge-group-and-spacetime"></a>Gauge group and spacetime<span style="margin-left: 1em"></span></h2>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Prose notation</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Meaning and space</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Source correspondence and convention</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">G &sub; U(r_G)</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">A closed matrix subgroup in a fixed unitary representation
+        of complex dimension <tt class="verbatim">r_G = n+1</tt>; this is the
+        gauge-group input, not its Lie algebra.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.GaugeGroup</tt>, <tt class="verbatim">Lean/PublicTheory.lean:25&ndash;34</tt>;
+        internal <tt class="verbatim">YM.Gauge</tt>, <tt class="verbatim">Lean/YM/Gauge/MatrixGroup.lean:20&ndash;26</tt>.
+        <tt class="verbatim">YangMills.GaugeGroup.core</tt> projects the public group to
+        the internal one, and <tt class="verbatim">YangMills.GaugeGroup.coreSimple</tt>
+        transports the stated simplicity hypothesis (<tt class="verbatim">Lean/WilsonBridge.lean:9&ndash;18</tt>).
+        The representation is part of the formal data.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">&#x1D524; = Lie(G)</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">The <strong>real</strong> Lie algebra of matrices whose
+        real-parameter exponentials remain in <tt class="verbatim">G</tt>.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.GaugeGroup.lieAlgebra</tt>, <tt class="verbatim">Lean/PublicTheory.lean:25&ndash;34</tt>;
+        <tt class="verbatim">YangMills.GaugeGroup.IsSimple</tt>, <tt class="verbatim">:37&ndash;45</tt>,
+        requires nonabelian bracket and no proper nonzero real Lie ideal.
+        Internal <tt class="verbatim">YM.Gauge.Simple</tt> is in <tt class="verbatim">Lean/YM/Gauge/Lie.lean:178&ndash;182</tt>.
+        <tt class="verbatim">r_G</tt> and <tt class="verbatim">dim&#x211D; &#x1D524;</tt> are
+        different quantities.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">E&#x2084;</tt>, <tt class="verbatim">x=(\mathbf
+        x,t)</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Four-dimensional Euclidean coordinate space, with three
+        spatial coordinates first and the time coordinate last.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Public <tt class="verbatim">YangMills.Spacetime</tt>, <tt class="verbatim">Lean/PublicTheory.lean:51&ndash;68</tt>;
+        internal <tt class="verbatim">YM.E4</tt>, <tt class="verbatim">Lean/YM/Space/Configurations.lean:24</tt>.
+        Euclidean distance is used for positions and test functions.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">\overline V_+</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Closed Minkowski forward cone on the same coordinate vector
+        space: <tt class="verbatim">&#x2016;\mathbf x&#x2016; &le; t</tt>; Minkowski
+        square has sign <tt class="verbatim">t&sup2;&minus;&#x2016;\mathbf
+        x&#x2016;&sup2;</tt>.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.forwardCone</tt>, <tt class="verbatim">Lean/PublicTheory.lean:62&ndash;68</tt>.
+        The Wightman spectrum condition places spectral support in this closed
+        cone; it does not supply a positive mass gap.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">\mathscr S(E&#x2084;;\mathbb C)</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Complex Schwartz test functions on four-dimensional
+        Euclidean coordinates; product tests retain their stated factors.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.TestFunction</tt>, <tt class="verbatim">Lean/PublicTheory.lean:70</tt>;
+        source-specific smooth compact tests are identified separately where
+        used. Do not silently substitute one test space for the other.</td>
+      </tr></tbody>
+    </table>
+    <h2 id="auto-2"><a id="finite-wilson-lattice-and-limits"></a>Finite Wilson lattice and limits<span style="margin-left: 1em"></span></h2>
+    <p>
+      For a public Wilson family write <tt class="verbatim">\mathcal W</tt>. For an
+      internal construction family write <tt class="verbatim">\mathcal C</tt>; its
+      public projection is <tt class="verbatim">\mathcal W(\mathcal C)</tt>. Both are
+      bound as <tt class="verbatim">C</tt> in different Lean declarations, but they
+      carry different fields. This distinction is mandatory at a chapter
+      handoff.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Prose notation</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Meaning and space</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Source correspondence and convention</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">\mathcal W</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Public Wilson family: period and denominator sequences,
+        bare coefficient, invariant probability Haar measure, token type, and
+        insertion map.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.WilsonFamily</tt>, <tt class="verbatim">Lean/PublicWilson.lean:35&ndash;46</tt>.
+        <tt class="verbatim">YangMills.wilsonFamily</tt> projects an internal family
+        through <tt class="verbatim">Lean/WilsonBridge.lean:20&ndash;30</tt>; an
+        arbitrary internal family is not automatically a proved public theorem
+        witness.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">P_p</tt>, <tt class="verbatim">D_N</tt>, <tt class="verbatim">a_N=D_N^{-1}</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">P_p=period(p)</tt> is the physical linear period
+        in the chosen length units; <tt class="verbatim">D_N=denominator(N)</tt> and <tt
+        class="verbatim">a_N</tt> is mesh spacing. Both positive-integer value sequences
+        are strictly increasing.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.WilsonFamily.period</tt>, <tt class="verbatim">YangMills.WilsonFamily.denominator</tt>,
+        <tt class="verbatim">YangMills.WilsonFamily.mesh</tt>, <tt class="verbatim">Lean/PublicWilson.lean:35&ndash;52</tt>.
+        The finite torus has <tt class="verbatim">\ell_{N,p}=P_pD_N=P_p/a_N</tt> sites
+        per axis, not <tt class="verbatim">P_pa_N</tt>; the suitability box has
+        half-width <tt class="verbatim">P_p/2</tt> (<tt class="verbatim">:75&ndash;77</tt>).</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">\Lambda_{N,p}</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Four-dimensional periodic site set <tt class="verbatim">(\mathbb
+        Z/\ell_{N,p}\mathbb Z)^4</tt>; a link configuration assigns an element
+        of <tt class="verbatim">G</tt> to each site and oriented axis.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.Site</tt>, <tt class="verbatim">YangMills.Configuration</tt>,
+        <tt class="verbatim">Lean/PublicWilson.lean:10&ndash;13</tt>. A site's physical
+        coordinate uses <tt class="verbatim">a_N</tt> times the symmetric <tt class="verbatim">ZMod.valMinAbs</tt>
+        representative (<tt class="verbatim">:49&ndash;52</tt>).</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">\beta_{N,p}</tt>, <tt class="verbatim">\mu_{N,p}^{\mathcal
+        W}</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Bare plaquette-action coefficient and normalized Wilson law
+        on link configurations.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.WilsonFamily.beta</tt>, <tt class="verbatim">YangMills.wilsonEnergy</tt>,
+        <tt class="verbatim">YangMills.wilsonLaw</tt>, <tt class="verbatim">Lean/PublicWilson.lean:20&ndash;46</tt>.
+        The law is product Haar weighted by <tt class="verbatim">\exp(-\beta_{N,p}\,\mathrm{wilsonEnergy})</tt>
+        and normalized by its partition integral. Do not use <tt class="verbatim">\mu</tt>
+        for the phase measure in the same chapter.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">v&isin;\mathcal V_{\mathcal W}</tt>, <tt class="verbatim">O_{N,p}(v,z;U)</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">A public insertion token and its complex-valued local
+        lattice observable at site <tt class="verbatim">z</tt> in configuration <tt
+        class="verbatim">U</tt>.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.WilsonFamily.Token</tt>, <tt class="verbatim">YangMills.WilsonFamily.insertion</tt>,
+        <tt class="verbatim">Lean/PublicWilson.lean:35&ndash;46</tt>. <tt class="verbatim">YangMills.WilsonRegularity.localSupport</tt>,
+        <tt class="verbatim">Lean/ChallengeSpec.lean:11&ndash;22</tt>, gives one finite
+        offset stencil <strong>per token</strong>, uniform in <tt class="verbatim">N,p,z</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">W_{N,p}(\mathbf v,\mathbf z)</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Finite moment: Wilson-law integral of the product of the
+        chosen insertions.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.WilsonFamily.finiteMoment</tt>, <tt
+        class="verbatim">Lean/PublicWilson.lean:54&ndash;57</tt>. The smeared <tt class="verbatim">n</tt>-point
+        moment includes <tt class="verbatim">a_N^{4n}</tt> (<tt class="verbatim">:79&ndash;81</tt>).</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">s_{\mathcal W}&gt;0</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Positive asymptotic running slope in <tt class="verbatim">\beta_{N,p}/\log(a_N^{-1})&rarr;s_{\mathcal
+        W}</tt> as <tt class="verbatim">N&rarr;&infin;</tt>, uniformly in <tt class="verbatim">p</tt>.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.WilsonRegularity.running</tt>, <tt
+        class="verbatim">Lean/ChallengeSpec.lean:11&ndash;22</tt>. It is
+        <strong>not</strong> the positive block-kernel penalty <tt class="verbatim">b</tt>
+        quantified in <tt class="verbatim">YangMills.constructed</tt>, nor automatically
+        <tt class="verbatim">b&#x2080;(G)</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">\varrho</tt>, <tt class="verbatim">\sigma</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">A requested strictly increasing public volume-index
+        sequence and a strictly increasing refinement. The theorem uses one
+        <tt class="verbatim">\mathcal W</tt> before <tt class="verbatim">\varrho</tt>, then may
+        choose <tt class="verbatim">\sigma</tt> and a hierarchy depending on <tt class="verbatim">\varrho</tt>.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.JointExistence</tt>, <tt class="verbatim">Lean/ChallengeSpec.lean:186&ndash;188</tt>;
+        source binders are <tt class="verbatim">p,q</tt>. Reserve plain <tt class="verbatim">\pi</tt>
+        for the circle constant.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">\lim_{k&rarr;&infin;}\lim_{N&rarr;&infin;}</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Public separated-test limit: for each suitable fixed volume
+        row a full mesh limit exists, then rows along <tt class="verbatim">\varrho\circ\sigma</tt>
+        tend to the unselected correlation integral.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.WilsonFamily.Converges</tt>, <tt
+        class="verbatim">Lean/PublicWilson.lean:75&ndash;90</tt>. The precise statement
+        also requires eventual suitability of the test support; this is not an
+        arbitrary diagonal or unique volume limit.</td>
+      </tr></tbody>
+    </table>
+    <h2 id="auto-3"><a id="internal-construction-and-extraction"></a>Internal construction and extraction<span style="margin-left: 1em"></span></h2>
+    <p>
+      The internal notation records witnesses needed to build the public
+      family and hierarchy. The source often uses <tt class="verbatim">C,S,F,L,Q,M,X</tt>
+      as local binders. The font changes below prevent collisions with Wilson
+      families, field spaces, and OPE geometry constants in prose.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Prose notation</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Meaning and space</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Source correspondence and convention</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">\mathcal C</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Internal <tt class="verbatim">YM.Family G</tt>: RG path/history,
+        holonomy data, graded frames/labels, local sections, reference
+        cutoffs, and transfers.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Family</tt>, <tt class="verbatim">Lean/YM/Source/Construction.lean:24&ndash;31</tt>.
+        <tt class="verbatim">\mathcal C\,\mathrm{Makes}</tt> is an <strong>additional
+        predicate</strong> (<tt class="verbatim">:44&ndash;62</tt>), not part of the
+        type of every family. The public bridge is <tt class="verbatim">YangMills.wilsonFamily</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">\lambda_{\rm ker}&gt;0</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Positive blocking-kernel penalty, chosen before the
+        construction family in the detailed theorem.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.constructed</tt>, <tt class="verbatim">Lean/Construction.lean:15&ndash;31</tt>,
+        source binder <tt class="verbatim">b</tt>; <tt class="verbatim">YM.Nonperturbative.existence</tt>
+        uses the same penalty parameter. Keep it distinct from running slope
+        and coupling.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">\mathcal L_d</tt>, <tt class="verbatim">F_d</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Reference label space of bounded polynomial-jet grade <tt
+        class="verbatim">d</tt>, and the later quotient field space of the correlation
+        table.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Labels.Label</tt>, <tt class="verbatim">Lean/YM/Labels/Polynomial.lean:103&ndash;120</tt>;
+        <tt class="verbatim">YM.Table.Field</tt>, <tt class="verbatim">Lean/YM/Euclid/Null.lean:74</tt>.
+        Grade bounds jet height; it is not asserted to be a canonical scaling
+        dimension. A chosen coefficient vector <tt class="verbatim">\mathcal C.label\
+        d</tt> also needs its frame map before identification with a
+        field.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">\mathfrak o=(\kappa,\tau)</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Internal extraction order: a strictly increasing mesh-index
+        sequence <tt class="verbatim">\kappa</tt> and a strictly increasing period-index
+        sequence <tt class="verbatim">\tau</tt>; physical volume varies with the period.
+        A refinement composes each component with a further subsequence.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Extraction.Sequence</tt>, <tt class="verbatim">YM.Extraction.Order</tt>,
+        <tt class="verbatim">YM.Extraction.Order.refine</tt>, <tt class="verbatim">Lean/YM/Extraction/Orders.lean:20&ndash;47,60&ndash;64</tt>.
+        The public theorem retains the full mesh sequence; do not identify a
+        general internal <tt class="verbatim">\tau</tt> with its public request <tt
+        class="verbatim">\varrho</tt>. In the explicit public assembly bridge, the
+        internal order is built from the full mesh sequence and that
+        request.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">\mathrm{late}_{\mathfrak o}</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Eventuality with period-index threshold outermost and a
+        mesh-index threshold that may depend on the period index: <tt class="verbatim">&forall;&#x1DA0;
+        k, &forall;&#x1DA0; j</tt>.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Extraction.Order.late</tt>, <tt class="verbatim">Lean/YM/Extraction/Orders.lean:47</tt>;
+        its ordered limit is mesh first, then period. <tt class="verbatim">YM.Extraction.Order.fuse</tt>
+        is a filter on <tt class="verbatim">\mathbb N^2</tt> (<tt class="verbatim">Lean/YM/Extraction/Inherited.lean:27</tt>);
+        use its name explicitly rather than treating it as any diagonal
+        limit.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">S</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Internal Euclidean correlation table: multilinear moments
+        indexed by arity, grade tuple and positions.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Table</tt>, <tt class="verbatim">Lean/YM/Euclid/Table.lean:51&ndash;69</tt>.
+        It is total as formal data, but values on coincident configurations
+        are not thereby physical contact limits; separated smoothness uses <tt
+        class="verbatim">YM.conf</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">\mathsf F</tt>, <tt class="verbatim">\mathcal A</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Internal final package and every-character reconstruction
+        package, respectively.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Spec.Final</tt>, <tt class="verbatim">Lean/YM/Spec/Closed.lean:64&ndash;73</tt>;
+        <tt class="verbatim">YM.EveryPhase.Almanac</tt>, <tt class="verbatim">Lean/YM/EveryPhase/Pack.lean:117&ndash;132</tt>.
+        They are constructed witnesses, not synonyms for the public <tt class="verbatim">Hierarchy.Properties</tt>
+        record.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">Q</tt>, <tt class="verbatim">\mathcal D</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Internal OPE reader and contact-device package.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.OPE.Orbits.Reader</tt>, <tt class="verbatim">Lean/YM/OPE/Orbits/Cuts.lean:17&ndash;24</tt>;
+        <tt class="verbatim">YM.Contacts.Devices</tt>, <tt class="verbatim">Lean/YM/Contacts/Tomography.lean:16&ndash;26</tt>.
+        Qualify the reader: <tt class="verbatim">YM.Contacts.Harvest.Reader</tt> is a
+        different type. <tt class="verbatim">\mathcal D</tt> avoids collision with the
+        public OPE room constant <tt class="verbatim">M</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">X=(U_k,\zeta_k,r_k)</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">A selected short-distance scaling witness with
+        grade-indexed spin/frame changes, positive factors and radii
+        decreasing to zero.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Climb.Scaling</tt>, <tt class="verbatim">Lean/YM/Climb/Cells.lean:24&ndash;32</tt>;
+        the source calls the positive factor <tt class="verbatim">xi</tt>. Its <tt
+        class="verbatim">r_k</tt> is not the Wilson mesh <tt class="verbatim">a_N</tt>, and no
+        universal scaling sequence is asserted.</td>
+      </tr></tbody>
+    </table>
+    <h2 id="auto-4"><a id="hierarchy-phases-and-fields"></a>Hierarchy, phases, and fields<span style="margin-left: 1em"></span></h2>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Prose notation</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Meaning and space</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Source correspondence and convention</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">\mathcal T</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Public hierarchy: correlation, selected reconstructed
+        Wightman theory, character/phase data, OPE coefficients and centered
+        trace field on one Wilson family.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.Hierarchy</tt>, <tt class="verbatim">Lean/ChallengeSpec.lean:24&ndash;48</tt>.
+        Its four <tt class="verbatim">Properties</tt> are Wilson convergence,
+        reconstruction, OPE, and the trace nonfreeness test (<tt class="verbatim">:177&ndash;182</tt>);
+        contacts are additional detailed-construction data.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">\mathscr H</tt>, <tt class="verbatim">\Omega</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Hilbert space and normalized cyclic vacuum of the selected
+        Wightman theory.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.WightmanTheory</tt>, <tt class="verbatim">Lean/PublicTheory.lean:255&ndash;312</tt>.
+        <tt class="verbatim">\mathcal T</tt> denotes the whole hierarchy, never merely
+        its Hilbert space.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">\Xi</tt>, <tt class="verbatim">\xi&isin;\Xi</tt>, <tt
+        class="verbatim">\xi_*</tt>, <tt class="verbatim">\nu_{\rm ph}</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Compact character parameter space, a character, the
+        selected character, and the character measure; <tt class="verbatim">Hierarchy.Reconstructed.normalized</tt>
+        makes that measure a probability measure and its mixture field relates
+        phase correlations.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.Hierarchy.Character</tt>, <tt class="verbatim">YangMills.Hierarchy.selected</tt>,
+        <tt class="verbatim">YangMills.Hierarchy.phaseMeasure</tt>, <tt class="verbatim">Lean/ChallengeSpec.lean:24&ndash;48,117&ndash;143</tt>;
+        internal character algebra appears in <tt class="verbatim">YM.Phase.Mixture.Resolution</tt>,
+        <tt class="verbatim">Lean/YM/Phase/Mixture.lean:65&ndash;85</tt>.
+        &ldquo;Phase&rdquo; is this formal character parameter; do not infer
+        thermodynamic purity without a further theorem.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">\mathcal S^{\xi}</tt>, <tt class="verbatim">\mathcal
+        S^{\rm mix}</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Euclidean correlations with <tt class="verbatim">some &xi;</tt>, and
+        the distinct <tt class="verbatim">none</tt> (unselected) correlation, linked by
+        the phase-mixture identity.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.Hierarchy.correlation</tt>, <tt class="verbatim">Lean/ChallengeSpec.lean:40&ndash;48</tt>;
+        <tt class="verbatim">YangMills.Hierarchy.Reconstructed.mixture</tt>, <tt class="verbatim">:117&ndash;143</tt>.
+        These calligraphic correlation symbols differ from the internal table
+        <tt class="verbatim">S</tt>. The identity is a property to establish, not a
+        definitional identification of <tt class="verbatim">none</tt> with an omitted
+        argument.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">F_d</tt>, <tt class="verbatim">a=(d,\phi)</tt>, <tt class="verbatim">w(\mathbf
+        a)</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Grade-<tt class="verbatim">d</tt> finite-dimensional complex normed
+        field space in a public hierarchy; a tag consisting of a grade and
+        field; sum of the grades in a finite word. In the constructed
+        hierarchy, <tt class="verbatim">F_d</tt> is the quotient field space of the
+        correlation table.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.Hierarchy.Field</tt>, <tt class="verbatim">YangMills.Hierarchy.Tag</tt>,
+        <tt class="verbatim">YangMills.Hierarchy.weight</tt>, <tt class="verbatim">Lean/ChallengeSpec.lean:28&ndash;63</tt>;
+        <tt class="verbatim">YangMills.hierarchy</tt>, <tt class="verbatim">Lean/HierarchyBridge.lean:27&ndash;45</tt>;
+        <tt class="verbatim">YM.Table.Field</tt>, <tt class="verbatim">Lean/YM/Euclid/Null.lean:74&ndash;82</tt>;
+        internal <tt class="verbatim">YM.OPE.Orbits.weight</tt>, <tt class="verbatim">Lean/YM/OPE/Orbits/Rent.lean:17&ndash;18</tt>.
+        The constructed public/internal field identification is not a reason
+        to equate reference labels and quotient fields.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">c_{\mathbf a,j,i}(\mathbf x;o)</tt>, <tt class="verbatim">\Phi_{j,i}</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">OPE coefficient for a cluster, degree <tt class="verbatim">j</tt>,
+        channel <tt class="verbatim">i</tt>, positions and center; and its local actor
+        field.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.Hierarchy.coefficient</tt>, <tt class="verbatim">YangMills.Hierarchy.actor</tt>,
+        <tt class="verbatim">YangMills.Hierarchy.Channel</tt>, <tt class="verbatim">Lean/ChallengeSpec.lean:43&ndash;80</tt>.
+        Coefficients have no phase argument; for fixed labels and truncation,
+        the remainder is uniform over admissible positions and characters. Do
+        not infer one radius threshold uniform over all degrees/channels.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">\Theta</tt>, <tt class="verbatim">C_{\Theta}(r)</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Public centered grade-four trace-test field and its
+        selected-phase two-point function at time-axis points <tt class="verbatim">\pm
+        r/2</tt>.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YangMills.Hierarchy.centeredTrace</tt>, <tt
+        class="verbatim">YangMills.Hierarchy.traceTwo</tt>, <tt class="verbatim">Lean/ChallengeSpec.lean:48,145&ndash;175</tt>.
+        The test has <tt class="verbatim">r^8\log^2(r^{-1})C_{\Theta}(r)&rarr;3\dim_{\mathbb
+        R}\mathfrak g/\pi^4</tt> and excludes specified
+        <strong>finite</strong> Wick profiles. Physical stress-trace
+        identification is a further detailed-construction statement, not a
+        stronger public mass-gap claim.</td>
+      </tr></tbody>
+    </table>
+    <h2 id="auto-5"><a id="reserved-distinctions-and-open-questions"></a>Reserved distinctions and open questions<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">n</tt> may mean matrix representation parameter (<tt
+          class="verbatim">r_G=n+1</tt>) or correlation arity in the source. Prose uses
+          <tt class="verbatim">r_G</tt> for representation dimension and <tt class="verbatim">m</tt>
+          for arity when both occur. <tt class="verbatim">d</tt> is grade; <tt class="verbatim">\dim_{\mathbb
+          R}\mathfrak g</tt> is color dimension. These are not
+          interchangeable.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">p</tt> is reused in source files for a period index, an
+          extraction order, and other parameters. Prose uses <tt class="verbatim">p</tt>
+          only locally after declaring its type; the public requested volume
+          sequence is <tt class="verbatim">\varrho</tt>, while a general internal order
+          is <tt class="verbatim">\mathfrak o=(\kappa,\tau)</tt>. Equate <tt class="verbatim">\tau</tt>
+          with <tt class="verbatim">\varrho</tt> only at the specific bridge that
+          constructs that order.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">\pi</tt> without adornment is the numerical constant. <tt
+          class="verbatim">P_p</tt> is a physical linear period, <tt class="verbatim">\ell_{N,p}</tt>
+          a lattice site count, and <tt class="verbatim">a_N</tt> a spacing. Do not call
+          all three &ldquo;volume.&rdquo;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">\nu_{\rm ph}</tt> is a character measure; <tt class="verbatim">\mu_{N,p}^{\mathcal
+          W}</tt> is a Wilson measure. <tt class="verbatim">\mathcal S^{\rm mix}</tt> is
+          a correlation, not a measure.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">Q</tt> denotes <tt class="verbatim">YM.OPE.Orbits.Reader</tt> only
+          after qualification; the public hierarchy's OPE data may be
+          discussed through <tt class="verbatim">\mathcal T</tt>. The other <tt class="verbatim">Reader</tt>
+          types in contact namespaces require their own local notation.
+        </p>
+      </li>
+      <li>
+        <p>
+          Source-specific numerical parameters and the many RG norm packages
+          are intentionally <strong>not</strong> assigned global symbols here.
+          Their mathematical types and order of choice must be audited in the
+          relevant proof-unit issue before a notation entry is added. Scott's
+          glossary contains probable/tentative readings in those areas; they
+          are leads, not accepted conventions.
+        </p>
+      </li>
+      <li>
+        <p>
+          The public/internal bridges for gauge group and Wilson family are
+          inspected above. The precise projection of <tt class="verbatim">\mathsf
+          F,\mathcal A,Q,\mathcal D,X</tt> to public hierarchy fields is
+          explained by the applicable bridge/assembly proof unit; this
+          glossary does not assert a fieldwise equivalence not checked in that
+          unit.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-6"><a id="evidence-and-maintenance"></a>Evidence and maintenance<span style="margin-left: 1em"></span></h2>
+    <p>
+      Read the merged <a href="public-statement.html">statement audit</a>, the pinned external
+      glossary sections for the main theorem and Parts I, II, IV, V and VII,
+      and targeted source definitions listed in the tables. Two separate
+      read-only agent inspections of public and internal Lean definitions
+      reported source locations and caveats; the public inspection corrected
+      an initial conflation of physical period with lattice site count by
+      checking the placement and suitability definitions in <tt class="verbatim">Lean/PublicWilson.lean:35&ndash;90</tt>.
+      Commands included targeted <tt class="verbatim">rg</tt>, <tt class="verbatim">nl -ba</tt>,
+      <tt class="verbatim">sed</tt>, and <tt class="verbatim">gh api</tt> retrieval of the
+      external glossary. No Lean build or proof command was run for this
+      notation task; issue #2 supplies the pinned build/axiom evidence, not a
+      notation review. The structural checker result and final diff check will
+      be recorded in the PR.
+    </p>
+    <p>
+      Only a dedicated issue may change this shared table. The author of a
+      proof unit records any local alias and conversion in its
+      &ldquo;Definitions and notation&rdquo; section; integrators check the
+      crosswalk under <a href="../docs/notation.html">the notation protocol</a>. Material changes to
+      an accepted meaning require tracing affected units and renewed review
+      rather than updating another reviewer's fingerprint.
+    </p>
+  </body>
+</html>
