@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Standalone Comparator run on 3456e5e &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Standalone Comparator run on <tt class="verbatim">3456e5e</tt></h1><a id="standalone-comparator-run-on-3456e5e"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Result</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Method</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Commands and outcomes</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>What the run does and does not establish</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-4">6</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Checks not performed</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">7</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Retained logs</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">7</a>
+      </p>
+    </div>
+    <ul>
+      <li>
+        <p>
+          Audit task: <a href="https://github.com/hairer/humanise-yang-mills/issues/37">issue #37</a>, follow-up to <a href="https://github.com/hairer/humanise-yang-mills/issues/2">issue
+          #2</a>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Source revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>,
+          read from this repository's <tt class="verbatim">Lean/</tt> at commit <tt
+          class="verbatim">5535cc1579029c69155b0d0a89c13b819bf0f5f1</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Contributor and agent assistance: schmittj; run and written up with
+          Claude, session <tt class="verbatim">schmittj-claude-comparator-20261112</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Date: 12 November 2026. Status: author evidence, not independently
+          reviewed.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-1"><a id="result"></a>Result<span style="margin-left: 1em"></span></h2>
+    <p>
+      <strong>PASS, with three qualifications that must be read with
+      it.</strong> The standalone <a href="https://github.com/leanprover/comparator">Comparator</a> executable,
+      sandboxed with <tt class="verbatim">landrun</tt> (Landlock) and using <tt class="verbatim">lean4export</tt>
+      built for Lean 4.32.0, was run on a byte copy of the clean build of <a
+      href="clean-build-3456e5e.html"><tt class="verbatim">clean-build-3456e5e.md</tt></a> for the theorem <tt
+      class="verbatim">YangMills.jointExistence</tt>, challenge module <tt class="verbatim">Challenge</tt>,
+      solution module <tt class="verbatim">Solution</tt>, permitted axioms <tt class="verbatim">propext</tt>,
+      <tt class="verbatim">Quot.sound</tt>, <tt class="verbatim">Classical.choice</tt>. It exited
+      with status 0 after 34 min 19 s. Decisive output lines (run 3 below):
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+Building Challenge
+&#x26A0; [8658/8658] Replayed Challenge
+warning: Challenge.lean:5:8: declaration uses &lsquo;sorry&lsquo;
+Build completed successfully (8658 jobs).
+Exporting #[YangMills.jointExistence, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList] from Challenge
+Building Solution
+[&hellip;]
+Build completed successfully (18121 jobs).
+Exporting #[YangMills.jointExistence, propext, Quot.sound, Classical.choice, Nat.add, &hellip;, String.ofList] from Solution
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!
+
+Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+Memory peak: 17.1G (swap: 0B)
+EXIT_CODE=0</pre>
+    <p>
+      The three qualifications:
+    </p>
+    <ol>
+      <li>
+        <p>
+          <strong>The project's <tt class="verbatim">comparator.json</tt> was not
+          accepted as shipped.</strong> Comparator at its <tt class="verbatim">v4.32.0</tt>
+          tag requires the field <tt class="verbatim">enable_nanoda</tt>; with the
+          shipped file it stops at once with <tt class="verbatim">uncaught exception:
+          Comparator.Config.enable_nanoda: Bool expected</tt> (run 1, exit
+          status 1). The passing run used a copy of the file with the single
+          added line <tt class="verbatim">&quot;enable_nanoda&quot;: false</tt>; the
+          four shipped fields are unchanged. (Later Comparator versions make
+          the field optional, so the shipped file is valid for them; they need
+          a newer Lean.)
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Comparator was built from its <tt class="verbatim">v4.32.0</tt> tag
+          plus one upstream one-line fix.</strong> Unmodified <tt class="verbatim">v4.32.0</tt>
+          does not work with the current <tt class="verbatim">main</tt> of <tt class="verbatim">landrun</tt>
+          (which the Comparator README requires): <tt class="verbatim">landrun</tt> now
+          consumes the <tt class="verbatim">--</tt> that separates module names from
+          constant names in the <tt class="verbatim">lean4export</tt> command line, and
+          the export step fails with <tt class="verbatim">unknown module prefix
+          'YangMills'</tt> (run 2, exit status 1). Upstream fixed this on 30
+          July 2026 in commit <tt class="verbatim">9badaf470d8f724346d33738bd273efacd78df76</tt>
+          (&quot;Insert '&ndash;' terminator before the sandboxed command in
+          buildLandrunArgs&quot;), after the <tt class="verbatim">v4.32.0</tt> tag. That
+          commit was applied to <tt class="verbatim">v4.32.0</tt> (the diff is one line
+          of <tt class="verbatim">Main.lean</tt>, quoted under Method); nothing else was
+          changed.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>The solution was not compiled inside the sandbox in this
+          run; it was prebuilt.</strong> Comparator's sandboxed <tt class="verbatim">lake
+          build Challenge</tt> and <tt class="verbatim">lake build Solution</tt> found
+          every module up to date and replayed the existing build (the log has
+          1,259 <tt class="verbatim">Replayed</tt> lines and no <tt class="verbatim">Built</tt>
+          line). The <tt class="verbatim">.olean</tt> files are those of the clean
+          build, which compiled <tt class="verbatim">Solution</tt> and everything else
+          outside any sandbox. The Comparator README covers this case
+          (&quot;if you have obtained a fully pre-built <tt class="verbatim">.lake</tt>
+          directory through other means and without compromising your checking
+          environment, <tt class="verbatim">Solution.lean</tt> will not be
+          rebuilt&quot;), but its assumption 2 (&quot;You have not previously
+          tried to compile the <tt class="verbatim">Solution</tt> file or any other
+          potentially adversarial files&quot;) does not hold literally. So the
+          run establishes Comparator's three guarantees for the compiled files
+          of the clean build, relying on that build not having tampered with
+          the challenge-side files, rather than on the sandbox. A
+          supplementary check bounds this: the four project modules on the
+          challenge side were recompiled from source in a second copy that
+          never contained any project build output, and are byte-identical
+          (see below).
+        </p>
+      </li>
+    </ol>
+    <p>
+      Two smaller points: the optional external kernel (nanoda) was not used,
+      so only the Lean 4.32.0 kernel linked into Comparator replayed the
+      proof; and the <tt class="verbatim">systemd-run</tt> wrapper recommended by the
+      README was used with <tt class="verbatim">--wait --pipe</tt> in place of <tt
+      class="verbatim">--pty</tt> (no terminal in a detached run), with <tt class="verbatim">RestrictAddressFamilies=~AF_UNIX</tt>
+      as documented.
+    </p>
+    <p>
+      The evidence tree was not modified: the SHA-256 digests of a sample of
+      200 <tt class="verbatim">.olean</tt> files in <tt class="verbatim">/userdata/schmittj/ym-build/repo/Lean/.lake/build</tt>,
+      taken before any work and again after the last run, are identical; no
+      file under its <tt class="verbatim">.lake</tt> is newer than the first digest
+      list; <tt class="verbatim">git status --porcelain</tt> in the clone is empty.
+    </p>
+    <h2 id="auto-2"><a id="method"></a>Method<span style="margin-left: 1em"></span></h2>
+    <p>
+      Host as in <tt class="verbatim">clean-build-3456e5e.md</tt>: Linux <tt class="verbatim">7.2.8-200.fc44.x86_64</tt>,
+      Fedora 44, x86-64, shared 72-core machine. Landlock is active (<tt
+      class="verbatim">/sys/kernel/security/lsm</tt>: <tt class="verbatim">lockdown,capability,yama,selinux,bpf,landlock,ipe,ima,evm</tt>);
+      <tt class="verbatim">landrun --log-level debug</tt> reports <tt class="verbatim">Applying
+      Landlock restrictions: {Landlock V10; FS: all; Net: all; Scoped: all
+      (best effort)}</tt> and <tt class="verbatim">Landlock restrictions applied
+      successfully</tt>, and a write outside the allowed directory from inside
+      the sandbox failed with <tt class="verbatim">Permission denied</tt>. No
+      unsandboxed or fake-landrun mode was used.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Tool</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Version, commit, how obtained</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>SHA-256 of binary</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Lean / Lake</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">leanprover/lean4:v4.32.0</tt>, commit <tt class="verbatim">8c9756b28d64dab099da31a4c09229a9e6a2ef35</tt>,
+        official elan toolchain; <tt class="verbatim">Lake version
+        5.0.0-src+8c9756b</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">&mdash;</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Comparator</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">github.com/leanprover/comparator</tt>, tag <tt
+        class="verbatim">v4.32.0</tt> = <tt class="verbatim">07bc4ea40f2266dcb861820a2ec1fa3244ed307f</tt>
+        (its <tt class="verbatim">lean-toolchain</tt> is <tt class="verbatim">v4.32.0</tt>), plus
+        cherry-pick without commit of <tt class="verbatim">9badaf470d8f724346d33738bd273efacd78df76</tt>;
+        built with <tt class="verbatim">lake build lean4export comparator</tt>.
+        Repository <tt class="verbatim">master</tt> at the time: <tt class="verbatim">865edc14486c3388e9225daa971da8e157488c3e</tt>
+        (Lean 4.35.0, deprecated in favour of <tt class="verbatim">lake
+        comparator</tt>), not usable with Lean 4.32.0</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">32f09b96&hellip;906bec</tt> (unpatched build:
+        <tt class="verbatim">4ffd95f2&hellip;93be42</tt>)</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">lean4export</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">github.com/leanprover/lean4export</tt>, tag <tt
+        class="verbatim">v4.32.0</tt> = <tt class="verbatim">4e7915201d3f9f04470d9eae002fa695f7cdc589</tt>
+        (the revision pinned in Comparator's manifest at <tt class="verbatim">v4.32.0</tt>),
+        built from source with <tt class="verbatim">lake build</tt> under Lean 4.32.0.
+        The copy Lake fetched for Comparator as a prebuilt Reservoir archive
+        has the same digest</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">e5736998&hellip;7266b0</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">landrun</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">github.com/Zouuup/landrun</tt>, <tt class="verbatim">main</tt>
+        = <tt class="verbatim">ec104f6edc1e14d7fec6d31146f1ec6f9c192c5a</tt>, reports
+        <tt class="verbatim">landrun version 0.1.18</tt>; <tt class="verbatim">go build
+        ./cmd/landrun</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">89964580&hellip;dd11c8</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Go</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">1.27.4 <tt class="verbatim">linux-amd64</tt>, official tarball,
+        digest <tt class="verbatim">7226736c2339719cda28fbf3a54d71aa63bcefe376e98cef00034268dab24840</tt>
+        equal to the one published on go.dev</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">&mdash;</td>
+      </tr></tbody>
+    </table>
+    <p>
+      The patch to Comparator, complete:
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+--- a/Main.lean
++++ b/Main.lean
+@@ -85,7 +85,7 @@ def buildLandrunArgs (spawnArgs : LandrunArgs) : Array String :=
+-  args ++ #[spawnArgs.cmd] ++ spawnArgs.args
++  args ++ #[&quot;--&quot;, spawnArgs.cmd] ++ spawnArgs.args</pre>
+    <p>
+      Project copy. The evidence tree <tt class="verbatim">/userdata/schmittj/ym-build/repo/Lean</tt>
+      (clean build, repository commit <tt class="verbatim">5535cc1</tt>) was copied with
+      <tt class="verbatim">cp -a</tt> (a real copy, 48 GB, no hard links) to <tt class="verbatim">/userdata/schmittj/ym-build/comparator/proj</tt>.
+      In the copy, with the pinned toolchain first on <tt class="verbatim">PATH</tt>,
+      <tt class="verbatim">lake build --no-build Challenge Solution WilsonReference
+      WilsonConstruction</tt> reported <tt class="verbatim">All targets up-to-date
+      (18126 jobs).</tt>, so Lake's traces are valid at the new path and
+      nothing was recompiled. After the runs, the only files under <tt class="verbatim">proj/.lake</tt>
+      newer than the copy are the nine <tt class="verbatim">packages/*/.git/index</tt>
+      files (refreshed by Lake's <tt class="verbatim">git</tt> status calls); the
+      200-file sample has the same digests in the copy as in the evidence
+      tree.
+    </p>
+    <p>
+      What Comparator does, as read from its README and <tt class="verbatim">Main.lean</tt>,
+      <tt class="verbatim">Comparator/Compare.lean</tt>, <tt class="verbatim">Comparator/Axioms.lean</tt>
+      at the commit used: (1) <tt class="verbatim">lake build Challenge</tt> under <tt
+      class="verbatim">landrun --best-effort --ro / --rw /dev -ldd -add-exec --env PATH
+      --env HOME --env LEAN_ABORT_ON_PANIC --ro &lt;project&gt; --rwx
+      &lt;project&gt;/.lake --rox &lt;lean prefix&gt; --rox &lt;git&gt;</tt>;
+      (2) <tt class="verbatim">lean4export Challenge -- &lt;names&gt;</tt> under <tt
+      class="verbatim">landrun</tt> with no writable path except <tt class="verbatim">/dev</tt>;
+      (3) the same two steps for <tt class="verbatim">Solution</tt>; (4) both exports
+      are parsed as text (Comparator does not load <tt class="verbatim">.olean</tt>
+      files itself); the theorem must be a theorem (or axiom) in both with
+      equal name, universe parameters and type, and every constant reachable
+      from the statement, from the permitted axioms and from the kernel's
+      built-in <tt class="verbatim">Nat</tt>/<tt class="verbatim">String</tt> primitives must be
+      equal in the two environments, bodies included; (5) every constant
+      reachable from the solution theorem, through types and bodies, that is
+      an axiom must be in <tt class="verbatim">permitted_axioms</tt>; (6) the whole
+      exported solution environment is replayed in the Lean kernel inside the
+      Comparator process.
+    </p>
+    <p>
+      Treatment of the <tt class="verbatim">sorry</tt> in <tt class="verbatim">Challenge.lean</tt>:
+      the README says the challenge &quot;contains at least a theorem named
+      <tt class="verbatim">todo1</tt> that has a <tt class="verbatim">sorry</tt> (or any other
+      proof)&quot;. In the code, step (4) compares only the <tt class="verbatim">ConstantVal</tt>
+      of the target theorem (name, universe parameters, type), not its proof,
+      and the axiom check and kernel replay are applied to the solution export
+      only. The challenge's placeholder is therefore expected and ignored; a
+      <tt class="verbatim">sorry</tt> in the solution would appear as the axiom <tt
+      class="verbatim">sorryAx</tt> and be rejected by step (5).
+    </p>
+    <h2 id="auto-3"><a id="commands-and-outcomes"></a>Commands and outcomes<span style="margin-left: 1em"></span></h2>
+    <p>
+      All on the audit host, files only under <tt class="verbatim">/userdata/schmittj/ym-build/comparator/</tt>,
+      long commands detached. Environment for runs 1 to 3: <tt class="verbatim">PATH=&lt;toolchain
+      v4.32.0&gt;/bin:/usr/local/bin:/usr/bin</tt>, <tt class="verbatim">COMPARATOR_LANDRUN</tt>
+      and <tt class="verbatim">COMPARATOR_LEAN4EXPORT</tt> set to the binaries above,
+      <tt class="verbatim">LEAN_NUM_THREADS=24</tt>, working directory <tt class="verbatim">proj</tt>.
+      Exact invocation (scripts <tt class="verbatim">run1.sh</tt>, <tt class="verbatim">run3.sh</tt>):
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+systemd-run --user --wait --pipe --collect --nice=10 --property=RestrictAddressFamilies=~AF_UNIX -E PATH=&hellip; -E ELAN_HOME=&hellip; -E TMPDIR=&hellip; -E LEAN_NUM_THREADS=24 -E COMPARATOR_LANDRUN=&hellip;/bin/landrun -E COMPARATOR_LEAN4EXPORT=&hellip;/tools/lean4export/.lake/build/bin/lean4export --working-directory &hellip;/proj -- bash -c &quot;time lake env &lt;comparator binary&gt; &lt;config&gt;&quot;</pre>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Step</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Command</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Outcome</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Sample digests before</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">sha256sum</tt> of 198 evenly spaced entries of
+        the sorted list of 9,471 <tt class="verbatim">.olean</tt> files in <tt class="verbatim">repo/Lean/.lake/build</tt>,
+        plus <tt class="verbatim">Challenge.olean</tt> and <tt class="verbatim">Solution.olean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">list digest <tt class="verbatim">ef3807bf&hellip;5d45b1ed</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Copy</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">cp -a</tt> of sources and <tt class="verbatim">.lake</tt>
+        to <tt class="verbatim">proj</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">done in 33 s, 48 GB</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Up-to-date check</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">lake build --no-build Challenge Solution
+        WilsonReference WilsonConstruction</tt> in <tt class="verbatim">proj</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">All targets up-to-date (18126 jobs).</tt>, 11
+        s</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Tool builds</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">see Method</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">all succeeded</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Sandbox test</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">landrun --best-effort --ro / --rw /dev --rwx
+        proj/.lake --rox /usr /usr/bin/touch logs/SHOULD_FAIL</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Permission denied</tt>, status 1, file not
+        created</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Run 1</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">unpatched Comparator <tt class="verbatim">v4.32.0</tt>, shipped <tt
+        class="verbatim">comparator.json</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><strong>Fail</strong>, status 1, under 1 s: <tt class="verbatim">uncaught
+        exception: Comparator.Config.enable_nanoda: Bool expected</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Run 2</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">unpatched Comparator <tt class="verbatim">v4.32.0</tt>, config with
+        <tt class="verbatim">&quot;enable_nanoda&quot;: false</tt> added</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><strong>Fail</strong>, status 1, 9 s: challenge build
+        replayed, then <tt class="verbatim">uncaught exception: unknown module prefix
+        'YangMills'</tt> from <tt class="verbatim">lean4export</tt> and <tt class="verbatim">uncaught
+        exception: Child exited with 1</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Run 3</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">patched Comparator, config with <tt class="verbatim">&quot;enable_nanoda&quot;:
+        false</tt> added</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><strong>Pass</strong>, status 0, 34 min 19 s wall (33 min
+        49 s user), peak memory 17.1 GB; output quoted under Result. Start
+        16:59:56 UTC, end 17:34:15 UTC</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Challenge-side rebuild</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">second copy <tt class="verbatim">proj2</tt> with sources and <tt
+        class="verbatim">.lake/packages</tt> only (no <tt class="verbatim">.lake/build</tt>); <tt
+        class="verbatim">lake build Challenge</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Build completed successfully (8658 jobs).</tt>,
+        34 s; exactly 4 project <tt class="verbatim">.olean</tt> files produced: <tt
+        class="verbatim">PublicTheory</tt>, <tt class="verbatim">PublicWilson</tt>, <tt class="verbatim">ChallengeSpec</tt>,
+        <tt class="verbatim">Challenge</tt>; each has the same SHA-256 as in <tt class="verbatim">proj</tt>
+        and in the evidence tree (<tt class="verbatim">5ee682d2&hellip;</tt>, <tt class="verbatim">3f476073&hellip;</tt>,
+        <tt class="verbatim">53dd5a26&hellip;</tt>, <tt class="verbatim">33c4a0cc&hellip;</tt>)</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Tool negative control</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Comparator's own test project <tt class="verbatim">tests/projects/simple_mismatch</tt>
+        (solution states a different <tt class="verbatim">comm</tt> as an axiom), same
+        patched binary, real <tt class="verbatim">landrun</tt>, same <tt class="verbatim">lean4export</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">rejected as intended, status 1: <tt class="verbatim">uncaught
+        exception: Challenge and solution constant kind don't match:
+        'comm'</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Sample digests after</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">same 200 files in the evidence tree</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">identical list (<tt class="verbatim">cmp</tt>: no difference); <tt
+        class="verbatim">find repo/Lean/.lake -newer &lt;first list&gt;</tt>: 0 files;
+        <tt class="verbatim">git status --porcelain</tt>: 0 lines, <tt class="verbatim">HEAD</tt>
+        <tt class="verbatim">5535cc1579029c69155b0d0a89c13b819bf0f5f1</tt></td>
+      </tr></tbody>
+    </table>
+    <p>
+      In run 3 the phases were roughly: both sandboxed Lake builds and the
+      challenge export about 35 s, the solution export by <tt class="verbatim">lean4export</tt>
+      about 4 min (about 12 GB resident), parsing, comparison, axiom check and
+      kernel replay about 29 min. <tt class="verbatim">LEAN_NUM_THREADS</tt> is not
+      passed into the sandbox by Comparator (only <tt class="verbatim">PATH</tt>, <tt
+      class="verbatim">HOME</tt>, <tt class="verbatim">LEAN_ABORT_ON_PANIC</tt> are); this did not
+      matter because nothing was compiled.
+    </p>
+    <h2 id="auto-4"><a id="what-the-run-does-and-does-not-establish"></a>What the run does and does not establish<span style="margin-left: 1em"></span></h2>
+    <p>
+      According to Comparator's README, a successful run guarantees, under its
+      listed assumptions, that the theorem in <tt class="verbatim">Solution</tt> named
+      in <tt class="verbatim">theorem_names</tt> (1) proves the same statement as the
+      one in <tt class="verbatim">Challenge</tt>, (2) uses no more axioms than those in
+      <tt class="verbatim">permitted_axioms</tt>, and (3) is accepted by the Lean
+      kernel. For this project: <tt class="verbatim">YangMills.jointExistence</tt> in
+      <tt class="verbatim">Solution</tt> has the same name, universe parameters and type
+      as in <tt class="verbatim">Challenge</tt>; every constant its statement depends on
+      (transitively, with bodies) is the same in both environments; its proof
+      depends on no axiom other than <tt class="verbatim">propext</tt>, <tt class="verbatim">Quot.sound</tt>,
+      <tt class="verbatim">Classical.choice</tt>; and the exported closure was replayed
+      by the Lean 4.32.0 kernel. This is an independent implementation of what
+      <tt class="verbatim">VerifyJoint.lean</tt> checks for this one theorem, using a
+      text export and a separate process instead of in-process environment
+      loading, and it agrees with the <tt class="verbatim">TYPE_MATCH</tt>, axiom and
+      replay results recorded in <tt class="verbatim">clean-build-3456e5e.md</tt> and
+      <tt class="verbatim">axioms-3456e5e.md</tt>.
+    </p>
+    <p>
+      It does not establish:
+    </p>
+    <ul>
+      <li>
+        <p>
+          That the solution build was contained by the sandbox: it was
+          prebuilt (qualification 3). The supplementary rebuild shows that the
+          four challenge-side project modules are exactly what the sources
+          produce, in a tree where the solution was never built, given the
+          same package <tt class="verbatim">.olean</tt> files; it does not cover those
+          package files.
+        </p>
+      </li>
+      <li>
+        <p>
+          Anything about Mathlib and the other pinned packages beyond kernel
+          replay of the constants actually reached: their <tt class="verbatim">.olean</tt>
+          files come from the external cache used by the clean build and were
+          copied, not recompiled. <tt class="verbatim">lean4export</tt> reads <tt class="verbatim">.olean</tt>
+          files directly.
+        </p>
+      </li>
+      <li>
+        <p>
+          Anything about the other 16 advertised results of <tt class="verbatim">VerifyJoint.lean</tt>,
+          or the SU(2) specialisation: <tt class="verbatim">comparator.json</tt> lists
+          one theorem only.
+        </p>
+      </li>
+      <li>
+        <p>
+          That <tt class="verbatim">comparator.json</tt> works unchanged with the
+          Comparator release matching the project's Lean version: it does not
+          (qualification 1), and that release does not work unchanged with
+          current <tt class="verbatim">landrun</tt> (qualification 2).
+        </p>
+      </li>
+      <li>
+        <p>
+          Independence from the Lean kernel: no external kernel was run.
+        </p>
+      </li>
+      <li>
+        <p>
+          The adequacy of the statement <tt class="verbatim">YangMills.JointExistence</tt>
+          as mathematics. Comparator compares the solution with <tt class="verbatim">Challenge.lean</tt>;
+          whether <tt class="verbatim">ChallengeSpec.lean</tt> says what the README
+          claims is a separate question.
+        </p>
+      </li>
+      <li>
+        <p>
+          How many declarations were replayed: Comparator prints no count.
+        </p>
+      </li>
+    </ul>
+    <p>
+      Comparator's assumptions as met here: challenge imports and <tt class="verbatim">lakefile.toml</tt>
+      are the repository's own (assumption 1, trusted as source under audit);
+      assumption 2 not met literally, see above; assumptions 3 and 4, <tt
+      class="verbatim">landrun</tt> and <tt class="verbatim">lean4export</tt> supplied by absolute
+      path, Landlock ABI v10 applied, host kernel 7.2 (the README says the <tt
+      class="verbatim">AF_UNIX</tt> issue guarded by <tt class="verbatim">systemd-run</tt> is
+      fixed from Linux 7.1; the guard was applied anyway); assumption 5,
+      kernel correctness, assumed; assumption 6, run as an unprivileged user.
+    </p>
+    <p>
+      A Comparator pass certifies the proof of the stated theorem, not the
+      adequacy of the statement. What <tt class="verbatim">YangMills.JointExistence</tt>
+      does and does not require is examined separately in <tt class="verbatim">blueprint/units/YM-000026/handoff/results/G01/adequacy.md</tt>
+      on the branch <tt class="verbatim">codex/existence-monograph</tt>, which shows
+      that the same statement is also satisfied with lattice insertions that
+      do not depend on the gauge configuration.
+    </p>
+    <h2 id="auto-5"><a id="checks-not-performed"></a>Checks not performed<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          No run in which Comparator's sandboxed <tt class="verbatim">lake build
+          Solution</tt> compiles the project from an empty build directory
+          (about 3 h or more; inside the sandbox the thread limit would not
+          apply). Unrun.
+        </p>
+      </li>
+      <li>
+        <p>
+          No external kernel (<tt class="verbatim">enable_nanoda</tt>, <tt class="verbatim">external_kernels</tt>).
+          Unrun.
+        </p>
+      </li>
+      <li>
+        <p>
+          No run with <tt class="verbatim">lake comparator</tt> of Lean 4.35.0 or later,
+          which supersedes the standalone tool; it would need the project on a
+          newer toolchain. Unrun.
+        </p>
+      </li>
+      <li>
+        <p>
+          No run with unpatched Comparator <tt class="verbatim">v4.32.0</tt> and a <tt
+          class="verbatim">landrun</tt> commit from before 22 July 2026 (the alternative
+          way round qualification 2). Unrun.
+        </p>
+      </li>
+      <li>
+        <p>
+          No project-specific negative control (a weakened <tt class="verbatim">Solution.lean</tt>)
+          through Comparator; only Comparator's own toy mismatch test was run.
+          Upstream's <tt class="verbatim">verification/negative-controls</tt> were not
+          re-run.
+        </p>
+      </li>
+      <li>
+        <p>
+          The sample check of the evidence tree covers 200 of 9,471 project
+          <tt class="verbatim">.olean</tt> files and file modification times of the
+          whole <tt class="verbatim">.lake</tt>; a full re-hash was not done.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-6"><a id="retained-logs"></a>Retained logs<span style="margin-left: 1em"></span></h2>
+    <p>
+      Kept on the audit host under <tt class="verbatim">/userdata/schmittj/ym-build/comparator/</tt>
+      (<tt class="verbatim">logs/</tt> unless noted), not committed. SHA-256 digests:
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>File</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>SHA-256</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">comparator-run1.log</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">b53ed17107f854fdd37981df4d8a534b4216f8c7e3409288011d90dd2c44dba0</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">comparator-run2.log</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">33ce7173c0c1fa0fc39e1dbd4e703e7451e1924b35c0e62b57df7160bd12059d</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">comparator-run3.log</tt> (passing run, 15,326
+        lines)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">f90aa53d2e26d1d96ac91ead9f9ef6518d9ea8ce250b1411e25ab636170df41c</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">challenge-rebuild.log</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">91baf941096c195494519675ac05ce44a696e424814472dd143719e8e6e782e6</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">negative-control.log</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">b52e85f23f6a11b6cd5361071cb01f3f89cb84be2c0f1c844a69d98be44e86d4</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">sample-list.txt</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">916b347d1ab5d59302a11aa7a4489815fb029eb02bcd22f6073cb07319cf397d</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">sample-before.sha256</tt>, <tt class="verbatim">sample-after.sha256</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">ef3807bfbaa9904fdfb875c450aa761111907675e47be116c3ad995a5d45b1ed</tt>
+        (both)</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">comparator-patch.diff</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">b19697b1c2b5b39ffcae9041f161999b5f799a8feea24b5e126a1781b4ea99db</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">../comparator-with-nanoda-false.json</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">0a35f968e6f0e790cc640e6658f6b3f4437e3bf54bca0da8ea1de719434452d0</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">../proj/comparator.json</tt> (as shipped, equal
+        to the evidence tree's)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">23e159f10cdb40b780ad8b42a2fc62d2f8e995ee932d955c97e54526d476b967</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">../run1.sh</tt>, <tt class="verbatim">../run3.sh</tt>, <tt
+        class="verbatim">../chal.sh</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">3df9ecd1&hellip;9c1866c5</tt>, <tt class="verbatim">fd7d5cae&hellip;4c339194</tt>,
+        <tt class="verbatim">c11592a2&hellip;fc69961a0</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">landrun</tt> binary</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">899645806d1f17cbd73b22912879e53ae6cca9e115d6fa6e6029a0d23cdd11c8</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">patched <tt class="verbatim">comparator</tt> binary</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">32f09b9615a971a033ab032f521788a20dec8561b0bf700c985cbdaa59906bec</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">lean4export</tt> binary</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">e57369980b0b81228580ce08066fb9bd738e717e002673a143f4956d217266b0</tt></td>
+      </tr></tbody>
+    </table>
+    <p>
+      The working directory holds about 58 GB (two project copies, tools, Go);
+      it can be deleted once the logs are no longer needed.
+    </p>
+  </body>
+</html>

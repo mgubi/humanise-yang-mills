@@ -68,23 +68,23 @@
         href="#auto-2">2</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Source integrity observation</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+        <b>Source integrity observation</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">3</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
         <b>Comparison with the published prebuilt artifact</b> <span style="margin-left: 5mm"></span>
         <a href="#auto-4">3</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Environment</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">3</a>
+        <b>Environment</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">4</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Commands and outcomes</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">4</a>
+        <b>Commands and outcomes</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">5</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Retained logs</b> <span style="margin-left: 5mm"></span> <a href="#auto-7">4</a>
+        <b>Retained logs</b> <span style="margin-left: 5mm"></span> <a href="#auto-7">5</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Checks not performed</b> <span style="margin-left: 5mm"></span> <a href="#auto-8">5</a>
+        <b>Checks not performed</b> <span style="margin-left: 5mm"></span> <a href="#auto-8">6</a>
       </p>
     </div>
     <ul>
@@ -321,16 +321,62 @@
       header region and the rest near the end of the file.
     </p>
     <p>
-      <strong>The cause was not determined.</strong> The identical generated C
-      and <tt class="verbatim">.ilean</tt> files show that the compiled code and the
-      declaration index agree for all modules; the difference is confined to
-      the serialized environment data of about 11% of the modules and has a
-      fixed small size. This is evidence to examine, not a proof failure: the
-      fresh <tt class="verbatim">.olean</tt> files are the ones that passed the kernel
-      replay above, and the artifact's passed the same replay under #2. A
-      semantic comparison of the two sets (declaration by declaration) was not
-      performed. <tt class="verbatim">.trace</tt> files record host-specific build
-      traces and are expected to differ.
+      <strong>Cause (determined in a follow-up on 12 November 2026).</strong>
+      The 1,044 modules are those whose <tt class="verbatim">.olean</tt> stores linter
+      messages (environment extension <tt class="verbatim">lintLogExt</tt>, for example
+      <tt class="verbatim">unusedVariables</tt> warnings); each stored message carries
+      the absolute path of the source file. The artifact was built under <tt
+      class="verbatim">/home/scott/OpenAI-YM-20261028/</tt>, the fresh build under <tt
+      class="verbatim">/scratch/userdata/schmittj/ym-build/repo/Lean/</tt>, which is 15
+      characters longer; with 8-byte alignment this lengthens the file by 8 or
+      16 bytes and shifts the object addresses that follow, which accounts for
+      the scattered differing bytes. Three checks support this:
+    </p>
+    <ol>
+      <li>
+        <p>
+          For all 1,044 files, the printable strings of the two versions (<tt
+          class="verbatim">strings -n 12</tt>, sorted) coincide once each root path is
+          replaced by a common token. With <tt class="verbatim">strings -n 6</tt> this
+          holds for 1,017 files; in the other 27 the differences are short
+          byte runs that are shifted addresses, not text.
+        </p>
+      </li>
+      <li>
+        <p>
+          None of the 8,426 byte-identical <tt class="verbatim">.olean</tt> files of the
+          artifact contains the string <tt class="verbatim">/home/scott/</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Decisive test: the sources were copied to <tt class="verbatim">/scratch/userdata/schmittj/ymb/</tt>,
+          a root path of the same length (30 characters) as the artifact's,
+          and each of the 1,044 modules was recompiled there with exactly the
+          command Lake had recorded for it in its <tt class="verbatim">.trace</tt> file
+          (same <tt class="verbatim">--setup</tt> file and imports from the fresh
+          build), writing to a temporary file. In <strong>all 1,044
+          cases</strong> the result equals the artifact's <tt class="verbatim">.olean</tt>
+          after replacing the byte string <tt class="verbatim">/home/scott/OpenAI-YM-20261028/</tt>
+          by <tt class="verbatim">/scratch/userdata/schmittj/ymb/</tt> in the artifact
+          file, and has the same length. For the sample module <tt class="verbatim">YM/FullVolume/Umbra/Ambience</tt>,
+          the two files differ in exactly 29 bytes, all inside the path
+          string.
+        </p>
+      </li>
+    </ol>
+    <p>
+      So every <tt class="verbatim">.olean</tt> of the artifact is, up to the embedded
+      source root in stored linter messages, byte-for-byte what this source
+      produces with this toolchain on the audit host. The recompilation in
+      check 3 used the imports of the fresh build, which are themselves
+      identical to the artifact's up to the same substitution. Scripts and
+      logs are retained on the host: <tt class="verbatim">repath.py</tt> (<tt class="verbatim">9763933a&hellip;b131fe</tt>),
+      <tt class="verbatim">repath.log</tt> (<tt class="verbatim">b34d6def&hellip;dfee50</tt>,
+      final line <tt class="verbatim">REPATH_DONE total=1044
+      equal_after_path_substitution=1044 other=0</tt>), <tt class="verbatim">pathcheck.log</tt>
+      (<tt class="verbatim">a1571df1&hellip;d2a338</tt>). <tt class="verbatim">.trace</tt> files
+      record host-specific build traces and are expected to differ.
     </p>
     <h2 id="auto-5"><a id="environment"></a>Environment<span style="margin-left: 1em"></span></h2>
     <table style="width: 100%">
@@ -506,12 +552,6 @@
         <p>
           No independent kernel or checker other than the pinned Lean kernel
           was used.
-        </p>
-      </li>
-      <li>
-        <p>
-          The cause of the 1,044 differing <tt class="verbatim">.olean</tt> files was
-          not investigated beyond the size and location statistics above.
         </p>
       </li>
       <li>
