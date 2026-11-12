@@ -174,7 +174,8 @@ All fixes are made by the scripts, uniformly; nothing is edited by hand.
 | Links to headings (`#licence`): the importer makes no anchors | `prep.py`: `<a id="slug">` after each heading (GitHub slugs) |
 | Links to `Lean/…`, `unit.json`, `.tex`, `scripts/`, `LICENSE` | `prep.py`: links to the repository on GitHub (`YM_REPO_URL`, `YM_REPO_BRANCH`) |
 | Placeholders such as `<issue URL>` in `templates/` are read as HTML tags and dropped (on GitHub too) | `prep.py`: written ⟨issue URL⟩ (not in code, not HTML tags, not autolinks, not in formulas) |
-| Text inside a formula (`\text{(§II, …)}`) exported in the internal Cork encoding, not UTF-8 | `corkfix.py`: bytes that are not UTF-8 read as Cork and rewritten; characters outside Cork are dropped by the exporter (`post.py` warns) |
+| Text inside a formula (`\text{(§II, …)}`) exported in the internal Cork encoding, not UTF-8 | `corkfix.py`: bytes that are not UTF-8 read as Cork and rewritten (mgubi/texmacs#869, item 11) |
+| `<rightarrow>`, `<alpha>` … in text inside a formula exported as `{\rightarrow}` inside `\text{}`, shown literally by MathJax (mgubi/texmacs#869, item 12) | `post.py` warns; none at present |
 | The importer keeps the Markdown source next to the parsed text (`md-source`, …) | `post.py`: unwrapped; HTML comments dropped |
 | `<details><summary>` (raw HTML) | `post.py`: `ym-details` (a collapsible `<details>` in HTML) |
 | Code fences with a language | `post.py`: the code block is kept, the language dropped (the `mermaid` diagram of the README is shown as code) |

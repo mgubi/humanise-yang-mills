@@ -9,8 +9,8 @@ converting it to UTF-8: `\\text{(§II, p. 284)}` becomes `\\text{(\\x9fII, p.
 284)}`, which is not UTF-8 (browsers show a replacement character). Every
 byte that is not part of a valid UTF-8 sequence is read as a Cork character
 and written in UTF-8. Valid UTF-8 is left alone, so the script is
-idempotent. (Characters outside Cork, <#XXXX>, are dropped by the exporter
-altogether; post.py warns about them.)
+idempotent. Characters outside Cork (<#XXXX>) are exported correctly.
+mgubi/texmacs#869, item 11.
 """
 import sys
 

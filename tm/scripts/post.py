@@ -427,19 +427,19 @@ def unit_bar(page):
     return ['ym-unit-nav', left, concat(*mid), right]
 
 
-def math_text_check(x, in_math=False):
-    """characters outside Cork (<#XXXX>) in text inside a formula are
-    dropped by the MathJax export: warn"""
+def math_text_check(x, in_math=False, in_text=False):
+    """symbols such as <rightarrow> in text inside a formula are exported to
+    MathJax as {\\rightarrow} inside \\text{...}, shown literally
+    (mgubi/texmacs#869, item 12): warn"""
     if isinstance(x, str):
-        if in_math and '<#' in x:
-            warnings.append(CUR[0] + ': character outside Cork in text inside a formula '
-                            '(dropped in HTML): ' + x[:60])
+        if in_text and re.search(r'<[A-Za-z][^<>]*>', x):
+            warnings.append(CUR[0] + ': symbol in text inside a formula '
+                            '(shown as a macro name in HTML): ' + x[:60])
         return
     m = in_math or x[0] in ('math', 'equation*', 'equation', 'align', 'align*', 'eqnarray*')
-    t = m and x[0] == 'text'
+    t = in_text or (m and x[0] == 'text')
     for k in x[1:]:
-        if t or isinstance(k, list):
-            math_text_check(k, m)
+        math_text_check(k, m, t)
 
 
 # --- main -----------------------------------------------------------------
