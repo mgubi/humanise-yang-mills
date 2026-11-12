@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Review of an interface audit: rank, determinant and stress handoffs
+    &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Review of an interface audit: rank, determinant and stress
+      handoffs</h1><a id="review-of-an-interface-audit-rank-determinant-and-stress-handoffs"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Method and its limits</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Findings</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">2</a>
+      </p>
+      <p>
+        Definite errors <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+      </p>
+      <p>
+        Confirmed <span style="margin-left: 5mm"></span> <a href="#auto-4">4</a>
+      </p>
+      <p>
+        Finding 5 of the note (which <tt>Maxwell.Ranks</tt> is used
+        downstream): largely answered [S] <span style="margin-left: 5mm"></span> <a href="#auto-5">6</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Open questions for the author (not errors)</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-6">6</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Required changes and remaining uncertainty</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-7">7</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Acceptance</b> <span style="margin-left: 5mm"></span> <a href="#auto-8">7</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Commands run</b> <span style="margin-left: 5mm"></span> <a href="#auto-9">7</a>
+      </p>
+    </div>
+    <ul>
+      <li>
+        <p>
+          Reviewed file: <tt class="verbatim">blueprint/interfaces/rank-determinant-stress.md</tt>
+          (issue #14, PR #31, author session <tt class="verbatim">mgubi-claude-issue14-20261111</tt>)
+        </p>
+      </li>
+      <li>
+        <p>
+          Role: Lean correspondence
+        </p>
+      </li>
+      <li>
+        <p>
+          Human reviewer: ADB991 (no acceptance recorded; see the last
+          section)
+        </p>
+      </li>
+      <li>
+        <p>
+          Agent assistance: Claude Code (Anthropic), running as a scheduled
+          agent on behalf of ADB991, did the inspection and wrote this report.
+          Three subagents each checked one contract (A, B, C) by reading
+          source. The parent agent then rechecked by hand every finding listed
+          below as definite. ADB991 had not read this report before it was
+          submitted.
+        </p>
+      </li>
+      <li>
+        <p>
+          Content SHA-256: <tt class="verbatim">a7477c982ff94b159b3fc5f0cc7d8c4f6425e43c3f4e67038407d00902772555</tt>
+          (<tt class="verbatim">sha256sum</tt> of the file at <tt class="verbatim">main</tt> <tt
+          class="verbatim">4cf1c97</tt>; the same blob as PR #31 head <tt class="verbatim">6cda532</tt>)
+        </p>
+      </li>
+      <li>
+        <p>
+          Source revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>
+          (<tt class="verbatim">Lean/</tt> in this repository)
+        </p>
+      </li>
+      <li>
+        <p>
+          Review task: <a href="https://github.com/hairer/humanise-yang-mills/issues/14">issue #14</a>, claim <a href="https://github.com/hairer/humanise-yang-mills/issues/14#issuecomment-6825197499">https://github.com/hairer/humanise-yang-mills/issues/14#issuecomment-6825197499</a>
+        </p>
+      </li>
+      <li>
+        <p>
+          Outcome: <strong>changes requested.</strong> Contract A is correct.
+          Contracts B and C misstate one consumer statement and omit
+          hypotheses of several theorems, and the proposed PU-20a boundary
+          needs more inputs than stated. One open question (finding 5 of the
+          note) is largely answered from source.
+        </p>
+      </li>
+    </ul>
+    <p>
+      I am not an author of the note. This is an agent-assisted review, not a
+      human acceptance.
+    </p>
+    <h2 id="auto-1"><a id="method-and-its-limits"></a>Method and its limits<span style="margin-left: 1em"></span></h2>
+    <p>
+      Evidence levels used here:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>[S]</strong> source text read at the pinned revision,
+          including <tt class="verbatim">variable</tt>/<tt class="verbatim">include</tt>/<tt
+          class="verbatim">omit</tt> lines and implicit binders.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>[I]</strong> module import graph. I parsed the <tt class="verbatim">import</tt>
+          lines of all 9,477 <tt class="verbatim">.lean</tt> files under <tt class="verbatim">Lean/</tt>
+          and computed transitive closures. If module A does not transitively
+          import module B, then no declaration of A can refer to a declaration
+          of B. Non-reachability shown this way is sound. Reachability shown
+          this way is not: an import does not imply a reference.
+        </p>
+      </li>
+    </ul>
+    <p>
+      <strong>Nothing was elaborated.</strong> This sandbox can reach neither
+      the Mathlib cache (<tt class="verbatim">mathlib4.lean-cache.cloud</tt>) nor
+      GitHub's Mathlib repository, and it cannot reach the prebuilt release
+      used in <tt class="verbatim">source/build.md</tt>. The pinned toolchain <tt class="verbatim">v4.32.0</tt>
+      was installed, but <tt class="verbatim">lake</tt> could not fetch dependencies. I
+      therefore could not reproduce any of the note's <strong>[E]</strong>
+      claims by elaboration, or any <strong>[G]</strong> claim through the
+      compiled graph. I could only check them against source text. Theorem
+      counts such as &quot;273 theorems&quot; and &quot;7896 theorems&quot;
+      are unchecked.
+    </p>
+    <h2 id="auto-2"><a id="findings"></a>Findings<span style="margin-left: 1em"></span></h2>
+    <h3 id="auto-3"><a id="definite-errors"></a>Definite errors<span style="margin-left: 1em"></span></h3>
+    <ol>
+      <li>
+        <p>
+          <strong>Statement attributed to <tt class="verbatim">YM.Org.Commission.picks</tt>
+          is wrong (Contract C &quot;Output to VI.1&quot;; finding 6)
+          [S].</strong> The note says <tt class="verbatim">picks</tt> has the statement
+          <tt class="verbatim">Spec.Calibrated C &rarr; V.Inclusions S &rarr;
+          V.Derivatives S &rarr; Org.UV C f S V W I &rarr; Nonempty
+          (Spec.Final C f S)</tt>. That is the statement of <tt class="verbatim">YM.MergeProof.Acme.glistens</tt>
+          (<tt class="verbatim">Lean/YM/MergeProof/Summit.lean:17</tt>). <tt class="verbatim">picks</tt>
+          is at <tt class="verbatim">Lean/YM/Org/Twist.lean:45</tt>: <tt class="verbatim">Commission.picks
+          (Z : Commission V W I H) (hv : V.Inclusions S) (hp : V.Derivatives
+          S) : &exist; c U J, Tab S V W I H c U J &and; &exist; K0 :
+          Boundary.Spins S, K0.Descends (mill W I c U)
+          H.basis.kernel.spin</tt>, where <tt class="verbatim">H : UV C F S V W I</tt>
+          is a section variable. <tt class="verbatim">glistens</tt> takes an <tt class="verbatim">Org.UV</tt>,
+          builds a <tt class="verbatim">Commission</tt> with <tt class="verbatim">Bid.station W V
+          I H &hellip;</tt> (Summit.lean:18) and then calls <tt class="verbatim">picks</tt>
+          (Summit.lean:22). So the direct consumer of <tt class="verbatim">Org.UV</tt>
+          with the quoted statement is <tt class="verbatim">Acme.glistens</tt>. <tt
+          class="verbatim">Org.UV</tt> also occurs in about two dozen other files, so
+          &quot;its consumer&quot; in the singular is too strong.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><tt class="verbatim">Acme.annular_fieldA</tt>, <tt class="verbatim">Acme.tenet</tt>
+          and <tt class="verbatim">Acme.shells_law</tt> have more hypotheses than stated
+          (Contract C) [S].</strong> <tt class="verbatim">annular_fieldA</tt> (<tt
+          class="verbatim">West/Bravo.lean:55</tt>) also takes <tt class="verbatim">hC :
+          C.Makes</tt>, <tt class="verbatim">hq : Cells.CellHyp C F</tt>, <tt class="verbatim">ho
+          : F.PointLimits C S</tt>, <tt class="verbatim">H : S.Hierarchy</tt> and <tt
+          class="verbatim">h : V.Derivatives S</tt>. Conservation is <tt class="verbatim">hc :
+          Conserved V H.spin J</tt>, which is relative to the derivative plan
+          <tt class="verbatim">V</tt> and to <tt class="verbatim">H.spin</tt>. <tt class="verbatim">tenet</tt>
+          (<tt class="verbatim">West/Blanca.lean:49</tt>) and <tt class="verbatim">shells_law</tt>
+          (<tt class="verbatim">West/Orange.lean:33</tt>) take the same set. The
+          recommendation that PU-20a is &quot;self-contained given the shell
+          estimate&quot;, with <tt class="verbatim">Aroma</tt> as its only stated
+          hypothesis, should therefore list the extraction, hierarchy and
+          derivative-plan inputs as well.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><tt class="verbatim">YM.MergeProof.Accent.rated</tt> (<tt class="verbatim">Powder.lean:48</tt>)
+          omits one hypothesis and one output [S].</strong> It also needs the
+          explicit hypothesis <tt class="verbatim">H : &forall; i : &#x2115;, 0 &le;
+          generator G i</tt>, which supplies the argument of <tt class="verbatim">(Q
+          i).patronize C (H i)</tt> (the note writes <tt class="verbatim">Panel.patronize
+          C (Q i) &hellip;</tt>). The conclusion also contains <tt class="verbatim">&exist;
+          E : DiffPlan T</tt>: the full conclusion is <tt class="verbatim">&exist; g A L
+          R Z T E, Projected Xf (f.refine g) R Z &and; Base C (f.refine g) A L
+          R T E &and; &exist; s : Seed C (f.refine g) T, Maxwell.Ranks T
+          s.kernel.spin</tt>. The note lists only some of the implicit data
+          (<tt class="verbatim">O : HaarBudget G</tt>, <tt class="verbatim">B :
+          RankCovariance.Binding C</tt>). The rest of the statement matches,
+          including the <tt class="verbatim">&forall; i, &exist;&#x1DA0; j in atTop</tt>
+          order and the <tt class="verbatim">-3</tt> exponents.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><tt class="verbatim">MergeProof.Scotia</tt> (<tt class="verbatim">Eureka.lean:16</tt>)
+          has a quantifier misplaced [S].</strong> The field <tt class="verbatim">step d
+          N p : Mark.Chosen (C.labels.level d) (catalog C R d N p (P d (N,p)))
+          (b.step d (N,p))</tt> holds for <strong>all</strong> <tt class="verbatim">N,
+          p</tt>, not &quot;eventually in <tt class="verbatim">N</tt>&quot;. The
+          eventual field <tt class="verbatim">turns d : &forall;&#x1DA0; N in atTop,
+          &forall; p, &hellip;</tt> contains the reality and signed-axis
+          equivariance the note describes, and also <tt class="verbatim">Mark.Symmetry
+          (C.labels.level d) (b.step d (N,p))</tt>, which the note omits.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Hypotheses missing from the producers of (i)&ndash;(iii)
+          [S].</strong>
+        </p>
+        <ul>
+          <li>
+            <p>
+              <tt class="verbatim">MergeProof.reception</tt> (<tt class="verbatim">Eureka.lean:22</tt>)
+              also takes the explicit hypothesis <tt class="verbatim">hb : &forall; d,
+              &exist; a : &#x2115; &rarr; &#x211D;, Braze (V d) a</tt>. The
+              section hypotheses it does list (<tt class="verbatim">Makes</tt>, <tt
+              class="verbatim">Tabs</tt>, <tt class="verbatim">Scrim</tt> with general <tt class="verbatim">&zeta;</tt>,
+              <tt class="verbatim">Fridge</tt>, portfolio, simplicity) are correct.
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">Legato.castle</tt> (<tt class="verbatim">Snow.lean:28</tt>)
+              also needs <tt class="verbatim">B : Bolt A</tt>, <tt class="verbatim">C.path =
+              A.B.bake.make B.history</tt> and <tt class="verbatim">&forall; j, snows D
+              j &le; A.delay.shells j</tt>. Its conclusion is <tt class="verbatim">&exist;
+              K : RankCovariance.Binding C, K.world &#x224D; A.B.M &and;
+              K.prices = M.K</tt>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">Legato.franchise</tt> (<tt class="verbatim">Snow.lean:55</tt>)
+              fixes the chart ratio to <tt class="verbatim">chart G</tt>, and chooses
+              <tt class="verbatim">Q, U</tt> before <tt class="verbatim">&forall; C</tt>. The note
+              should say so.
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong><tt class="verbatim">Legato.uv_log</tt> does not give &quot;the
+          conclusion of <tt class="verbatim">rated</tt>&quot; for every <tt class="verbatim">f</tt>
+          [S].</strong> In <tt class="verbatim">Flowers.lean:75</tt> the per-order
+          conclusion lacks the <tt class="verbatim">Projected Xf &hellip; R Z</tt>
+          conjunct and <tt class="verbatim">Z</tt>. Also, <tt class="verbatim">Org.Grill C F &and;
+          East.CompleteWeak C F</tt> hold only under <tt class="verbatim">&forall; F,
+          Cells.CellHyp C F &rarr; &hellip;</tt>. Further conjuncts not
+          listed: <tt class="verbatim">kernel.penalty = b</tt>, <tt class="verbatim">Spec.Calibrated
+          C</tt>, and others.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>The &quot;one consumer&quot; claims of Contract A are
+          incomplete [S].</strong>
+        </p>
+        <ul>
+          <li>
+            <p>
+              <tt class="verbatim">YM.Next.Rank.determinant</tt> has a second direct
+              caller, <tt class="verbatim">YM.Next.Rank.Array.postage</tt> (<tt class="verbatim">Lean/YM/Next/RANK/Stamp.lean:131</tt>,
+              call at line 151). I found no textual caller of <tt class="verbatim">Array.postage</tt>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">Soft.coupon</tt> is also called from <tt class="verbatim">YM.Next.Rank.Tapes.West.tenderly</tt>
+              (<tt class="verbatim">YM/MergeProof/West/Equity.lean:86</tt>).
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">Ship.banking</tt> is also called from <tt class="verbatim">YM.MergeProof.earnings</tt>
+              (<tt class="verbatim">YM/MergeProof/West/Tael.lean:70</tt>) and from a
+              copy under <tt class="verbatim">TraceExtension/Prom/Front/West/Tael.lean</tt>.
+            </p>
+          </li>
+        </ul>
+        <p>
+          So the PU-12 material also feeds the <tt class="verbatim">West</tt> directory,
+          not only PU-11b. See question Q1.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Smaller corrections [S].</strong>
+        </p>
+        <ul>
+          <li>
+            <p>
+              <tt class="verbatim">Soft.v_obtain_purchases</tt> (<tt class="verbatim">Supra.lean:177</tt>)
+              shares a table row with <tt class="verbatim">wheeled</tt> but has a
+              different statement. Hypotheses: <tt class="verbatim">G.Simple</tt>, <tt
+              class="verbatim">C.Makes</tt>, <tt class="verbatim">0 &lt; b</tt>, <tt class="verbatim">Offers_
+              O p' b</tt>. Conclusion: <tt class="verbatim">&exist; Z, Travels_ O p' b Z
+              &and; Market.Purchases Z</tt>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">Market.Purchases</tt> (<tt class="verbatim">Bought.lean:68</tt>)
+              also has the fields <tt class="verbatim">flat</tt>, <tt class="verbatim">fit</tt>
+              and <tt class="verbatim">axis</tt>, and an <tt class="verbatim">Interior</tt> clause
+              inside <tt class="verbatim">arrays</tt>.
+            </p>
+          </li>
+          <li>
+            <p>
+              In <tt class="verbatim">Maxwell.Ranks</tt>, <tt class="verbatim">h</tt> is a proof
+              of <tt class="verbatim">(freeTable L.grid).RealSpin</tt>, not a &quot;real
+              structure&quot; datum.
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">Ribbons.laurelE</tt> also uses <tt class="verbatim">G.Simple</tt>.
+              <tt class="verbatim">Ribbons.fugacious</tt> comes after <tt class="verbatim">omit hW
+              L</tt> (<tt class="verbatim">North/Economist.lean:33</tt>), so it uses
+              only <tt class="verbatim">G.Simple</tt> and <tt class="verbatim">Legato.Velour</tt>,
+              not <tt class="verbatim">Scrim</tt>, <tt class="verbatim">Tabs</tt>, <tt class="verbatim">Created</tt>
+              or <tt class="verbatim">Makes</tt>.
+            </p>
+          </li>
+          <li>
+            <p>
+              &quot;<tt class="verbatim">emanate</tt> uses only <tt class="verbatim">corrected</tt>
+              and the extraction fields of the seed&quot;: <tt class="verbatim">emanate</tt>
+              uses all six fields of <tt class="verbatim">Spec.Seed</tt>. <tt class="verbatim">copies
+              : CellHyp C F</tt> is not an extraction field. The only
+              rank-specific field is <tt class="verbatim">corrected</tt>.
+            </p>
+          </li>
+          <li>
+            <p>
+              &quot;Inputs&quot; of Contract A: the 82-module YM import
+              closure of <tt class="verbatim">Next/RANK/Determinant.lean</tt> also
+              contains <tt class="verbatim">Pressure</tt>, <tt class="verbatim">PCalc</tt>, <tt
+              class="verbatim">Branch</tt>, <tt class="verbatim">Vac</tt>, <tt class="verbatim">Bid</tt> and
+              other directories. It is not limited to the lattice, gauge-group
+              and RG-definition directories.
+            </p>
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <h3 id="auto-4"><a id="confirmed"></a>Confirmed<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          <strong>Contract A statements [S].</strong> All match the source
+          exactly, with the line numbers given:
+        </p>
+        <ul>
+          <li>
+            <p>
+              <tt class="verbatim">Rank.determinant</tt> (<tt class="verbatim">Determinant.lean:240</tt>,
+              with section hypothesis <tt class="verbatim">R.Lawful &sigma; A &Lambda;
+              &delta; w</tt>)
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">protection</tt> (:225) and <tt class="verbatim">ent</tt> (:220;
+              <tt class="verbatim">strength p = min 1 p.linear</tt>)
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">HaarBudget</tt> (:26) and <tt class="verbatim">exists_budget</tt>
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">Station.affordable</tt> (<tt class="verbatim">StationMeter.lean:119</tt>;
+              the eventual threshold depends only on <tt class="verbatim">G, O, A</tt>
+              and simplicity), with <tt class="verbatim">Station.Meets</tt> (eight
+              fields) and <tt class="verbatim">Station.ticket</tt>
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">Soft.denture</tt>, and <tt class="verbatim">Ship.banking :=
+              Station.affordable</tt>
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Contract A non-reachability [I].</strong> Neither <tt class="verbatim">YM.Next.RANK.Determinant</tt>
+          nor <tt class="verbatim">YM.Next.RANK.StationMeter</tt> transitively imports
+          the module that defines any of the following, so neither theorem can
+          reach them:
+        </p>
+        <ul>
+          <li>
+            <p>
+              <tt class="verbatim">SectorChange.committed</tt> (<tt class="verbatim">SectorNext/GAUSSIAN_SECTOR_CHANGE/Handoff.lean</tt>)
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">SectorAffine.assembly</tt>
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">Rain.glazing</tt>
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">Roost.Factor.worksNow</tt>
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">Fluctuations.grants</tt>
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">ConnectedActivityE6.Target.issue</tt>
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">Dyed.cardinal_spin</tt> (<tt class="verbatim">Opacity/Prism.lean</tt>)
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">Opacity/Shards.lean</tt>
+            </p>
+          </li>
+        </ul>
+        <p>
+          This confirms finding 1 and the &quot;no, in either direction&quot;
+          half of finding 2 that concerns <tt class="verbatim">Rank.determinant</tt>, by
+          a sound argument independent of the compiled graph.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><tt class="verbatim">Maxwell.Ranks</tt> [S]</strong> (<tt class="verbatim">Euclid/Comparator.lean:135</tt>):
+          for every degree, <tt class="verbatim">f : S.Field d
+          &#x2243;&#x2097;[&#x2102;] (freeTable L.grid).Field d</tt> is a
+          complex <strong>linear equivalence</strong> that intertwines <tt
+          class="verbatim">conj</tt> and <tt class="verbatim">mirror</tt>. This settles the point
+          the note left open (&quot;the binder type was not printed&quot;).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Contract B [S].</strong> These match the note: <tt class="verbatim">Spec.Seed</tt>,
+          <tt class="verbatim">Cells.RankWidths</tt>, <tt class="verbatim">Prayer.fence</tt> (<tt
+          class="verbatim">StrideCost.lean:70</tt>), <tt class="verbatim">RankCovariance.window_prices</tt>
+          (<tt class="verbatim">Window.lean:118</tt>, uniform in the regulator and the
+          group; <tt class="verbatim">a b</tt> are <tt class="verbatim">Degree G</tt>), <tt class="verbatim">Soft.cast_off</tt>
+          and <tt class="verbatim">Soft.wheeled</tt>. <tt class="verbatim">chaletrail</tt> calls
+          <tt class="verbatim">reception</tt> and outputs <tt class="verbatim">Scrim &hellip;
+          &and; &exist; P b, Scotia &hellip;</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Reach paths named in the note, checked call by call in the
+          source [S]:</strong>
+        </p>
+        <ul>
+          <li>
+            <p>
+              <tt class="verbatim">rated</tt> (Powder.lean:65) &rarr; <tt class="verbatim">wheeled</tt>
+              &rarr; <tt class="verbatim">v_paid_factory</tt> &rarr; <tt class="verbatim">Wall.on_demand</tt>
+              &rarr; <tt class="verbatim">Prayer.penalty</tt> &rarr; <tt class="verbatim">fence</tt>
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">wheeled</tt> &rarr; <tt class="verbatim">v_obtain_purchases</tt>
+              &rarr; <tt class="verbatim">coupon</tt> &rarr; <tt class="verbatim">s_postage</tt>
+              &rarr; <tt class="verbatim">denture</tt> &rarr; <tt class="verbatim">determinant</tt>,
+              with <tt class="verbatim">v_obtain_purchases</tt> calling <tt class="verbatim">banking</tt>
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">readyA</tt> &rarr; <tt class="verbatim">shells_law</tt> &rarr;
+              <tt class="verbatim">annular_fieldA</tt> (twice) &rarr; <tt class="verbatim">tenet</tt>
+            </p>
+          </li>
+        </ul>
+        <p>
+          The edge <tt class="verbatim">Tender</tt> &rarr; <tt class="verbatim">prepared</tt>
+          &rarr; <tt class="verbatim">window_prices</tt> is only partly traced.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Contract C [S].</strong> These match the note:
+        </p>
+        <ul>
+          <li>
+            <p>
+              <tt class="verbatim">readyA</tt> and <tt class="verbatim">emanate</tt> (statements
+              and proofs; in <tt class="verbatim">readyA</tt>, <tt class="verbatim">a</tt> is a
+              hierarchy on <tt class="verbatim">Bel C.book</tt>)
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">DimAbove</tt> and <tt class="verbatim">cap_given</tt>
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">Climb.Pre</tt>, <tt class="verbatim">Table.Conserved</tt> and
+              <tt class="verbatim">Table.StressLaws</tt>
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">Acme.Aroma</tt> (fields <tt class="verbatim">shells</tt>, <tt
+              class="verbatim">opens</tt>, <tt class="verbatim">notes</tt>)
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">Org.UV</tt> (all five fields)
+            </p>
+          </li>
+          <li>
+            <p>
+              <tt class="verbatim">Climb.comparison : ActLaw P T J h a &rarr;
+              Maxwell.Ranks S h</tt>
+            </p>
+          </li>
+        </ul>
+        <p>
+          Note that <tt class="verbatim">Table.RawTensor</tt> is covariance under signed
+          mirrors, not symmetry, despite the field name <tt class="verbatim">symmetric</tt>.
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-5"><a id="finding-5-of-the-note-which-maxwellranks-is-used-downstream-largely-answered-s"></a>Finding 5 of the note (which <tt class="verbatim">Maxwell.Ranks</tt>
+    is used downstream): largely answered [S]<span style="margin-left: 1em"></span></h3>
+    <p>
+      In <tt class="verbatim">SharpGram.coordination</tt> (<tt class="verbatim">SharpGram/Common.lean:16&ndash;35</tt>),
+      the <tt class="verbatim">Ranks</tt> obtained from <tt class="verbatim">uv_log</tt>, and
+      hence from <tt class="verbatim">Accent.rated</tt>, is bound but never used. Only
+      the seed goes on to <tt class="verbatim">emanate</tt>. <tt class="verbatim">Spec.Final</tt>
+      comes from <tt class="verbatim">glistens</tt>, and the <tt class="verbatim">Spec.Locals.comparator
+      : Maxwell.Ranks</tt> it builds is <tt class="verbatim">Climb.comparison
+      H.weak</tt>, inside <tt class="verbatim">picks</tt> (<tt class="verbatim">Twist.lean:51</tt>).
+      In <tt class="verbatim">Acme.xanadu</tt> (<tt class="verbatim">Summit.lean:32&ndash;37</tt>)
+      the <tt class="verbatim">rated</tt> output is only passed through to the
+      conclusion. On these two public routes, then, the downstream <tt class="verbatim">Ranks</tt>
+      is the one derived from the action law. The equivariant isomorphism in
+      <tt class="verbatim">rated</tt>'s conclusion is not consumed; only <tt class="verbatim">RankWidths</tt>
+      (the dimension bound) is. This supports the note's remark that PU-11 may
+      need only the dimension count. It still has to be confirmed for the
+      other <tt class="verbatim">Ranks</tt> consumers: <tt class="verbatim">TraceExtension</tt>,
+      <tt class="verbatim">RemainderComparison</tt>, and whether <tt class="verbatim">Spec.Final</tt>/<tt
+      class="verbatim">Materializes</tt> carries <tt class="verbatim">Locals</tt>.
+    </p>
+    <h2 id="auto-6"><a id="open-questions-for-the-author-not-errors"></a>Open questions for the author (not errors)<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          <strong>Q1. Do the stress theorems really avoid
+          PU-11/PU-12?</strong> The note's ordering paragraph says PU-20b
+          reaches only PU-20a and VI.2 [G]. But <tt class="verbatim">YM.MergeProof.Emanate</tt>
+          transitively imports <tt class="verbatim">West/Equity.lean</tt> and <tt class="verbatim">West/Tael.lean</tt>
+          [I], and these call <tt class="verbatim">Soft.coupon</tt> and <tt class="verbatim">Ship.banking</tt>
+          (finding 7). By contrast, <tt class="verbatim">West/Bravo</tt>, <tt class="verbatim">West/Blanca</tt>,
+          <tt class="verbatim">West/Ozone</tt> and <tt class="verbatim">North/Economist</tt> do
+          not import those two files [I]. So the PU-20a anchors and <tt class="verbatim">Aroma</tt>'s
+          producers cannot reach <tt class="verbatim">tenderly</tt>/<tt class="verbatim">earnings</tt>.
+          <tt class="verbatim">Powder.lean</tt> (<tt class="verbatim">rated</tt>) does not import
+          them either. Whether <tt class="verbatim">readyA</tt>/<tt class="verbatim">emanate</tt>
+          reach <tt class="verbatim">tenderly</tt> or <tt class="verbatim">earnings</tt>, for
+          instance through <tt class="verbatim">Work.D06.answer</tt>, <tt class="verbatim">Stations.equivalences</tt>
+          or <tt class="verbatim">produce_current</tt>, I could not settle without the
+          compiled graph. The note's [G] claim that neither reaches <tt class="verbatim">Rank.determinant</tt>
+          should be rechecked against <tt class="verbatim">Array.postage</tt>, <tt
+          class="verbatim">tenderly</tt> and <tt class="verbatim">earnings</tt> in particular.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Q2.</strong> <tt class="verbatim">rated</tt> &#x219B; <tt class="verbatim">Rain.glazing</tt>/<tt
+          class="verbatim">Roost.Factor.worksNow</tt>/<tt class="verbatim">SectorChange.committed</tt>:
+          not refuted. The import graph clears most of <tt class="verbatim">rated</tt>'s
+          direct callees: <tt class="verbatim">Extraction.crops</tt>, <tt class="verbatim">include_projections</tt>,
+          <tt class="verbatim">copy_down</tt>, <tt class="verbatim">Extra.FD.vane</tt>, <tt class="verbatim">Price.from_labels</tt>,
+          and the others in the B report. It also shows that <tt class="verbatim">wheeled</tt>/<tt
+          class="verbatim">cast_off</tt> cannot reach <tt class="verbatim">glazing</tt> or <tt
+          class="verbatim">worksNow</tt>. Paths through <tt class="verbatim">MergeProof.bursts</tt>
+          (<tt class="verbatim">SteamW.lean:54</tt>), <tt class="verbatim">Mark.thrush</tt> (<tt
+          class="verbatim">Thrush.lean:72</tt>) and the definitions in <tt class="verbatim">rated</tt>'s
+          statement remain unchecked.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Q3. Notation, for #10.</strong> <tt class="verbatim">DimAbove</tt>
+          compares with <tt class="verbatim">(Climb.Bel L).Field d</tt>, with <tt class="verbatim">Bel
+          L = Spin.comparator L</tt> (<tt class="verbatim">Climb/Cells.lean:20</tt>).
+          <tt class="verbatim">Maxwell.Ranks</tt> compares with <tt class="verbatim">(Maxwell.freeTable
+          L.grid).Field d</tt>. These are different tables. The step from <tt
+          class="verbatim">RankWidths</tt> to <tt class="verbatim">DimAbove</tt> (<tt class="verbatim">cap_given</tt>),
+          and any identification of the two free tables, should be stated
+          explicitly in PU-11c/PU-20b.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Q4. V.3.</strong> <tt class="verbatim">readyA</tt> has no caller
+          outside <tt class="verbatim">Emanate.lean</tt>. <tt class="verbatim">emanate</tt> is
+          called only by endpoint assemblies: <tt class="verbatim">Summit.lean</tt>, <tt
+          class="verbatim">SharpGram/Common.lean</tt>, <tt class="verbatim">TraceExtension/Made/World.lean</tt>,
+          <tt class="verbatim">MultipleContact/*</tt>, <tt class="verbatim">UVExtension/*</tt>,
+          <tt class="verbatim">RG08/Reports/Receipt.lean</tt> and <tt class="verbatim">RemainderComparison/Chron/Public.lean</tt>.
+          No source consumer was identifiable as V.3. This agrees with the
+          note's obstruction 4.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-7"><a id="required-changes-and-remaining-uncertainty"></a>Required changes and remaining uncertainty<span style="margin-left: 1em"></span></h2>
+    <p>
+      Required before canonical proof-unit issues use the split:
+    </p>
+    <ol>
+      <li>
+        <p>
+          Correct the <tt class="verbatim">Org.Commission.picks</tt> statement and the
+          VI.1 consumer (finding 1).
+        </p>
+      </li>
+      <li>
+        <p>
+          Add the missing hypotheses to <tt class="verbatim">annular_fieldA</tt>, <tt
+          class="verbatim">tenet</tt>, <tt class="verbatim">shells_law</tt> and the PU-20a
+          &quot;Needs&quot; column (finding 2), and to <tt class="verbatim">rated</tt>,
+          <tt class="verbatim">reception</tt> and <tt class="verbatim">castle</tt> (findings 3 and
+          5). Correct <tt class="verbatim">Scotia</tt>'s quantifiers (finding 4) and the
+          <tt class="verbatim">uv_log</tt> conclusion (finding 6).
+        </p>
+      </li>
+      <li>
+        <p>
+          Qualify the &quot;one consumer&quot; sentences and the handoff-table
+          consumers of PU-12 (finding 7), and answer Q1 with the compiled
+          graph.
+        </p>
+      </li>
+      <li>
+        <p>
+          Record that <tt class="verbatim">Maxwell.Ranks</tt> is a linear equivalence,
+          and update finding 5 with the source evidence above.
+        </p>
+      </li>
+    </ol>
+    <p>
+      Not checked by this review: any elaboration (<strong>[E]</strong>) or
+      compiled-graph (<strong>[G]</strong>) claim by reproduction; theorem
+      counts; the literature leads; the descriptions of proof ideas that the
+      note takes from the external outline (as the note itself says); <tt
+      class="verbatim">Soft.Available</tt>/<tt class="verbatim">Soft.Kraft</tt> and the other
+      bundles in the note's obstruction 1. An independent reviewer with a
+      built checkout should re-run the note's <tt class="verbatim">#check</tt>/<tt
+      class="verbatim">#print</tt> list and the reference closures, particularly for Q1
+      and Q2.
+    </p>
+    <h2 id="auto-8"><a id="acceptance"></a>Acceptance<span style="margin-left: 1em"></span></h2>
+    <p>
+      None. This is an agent-assisted review reporting changes requested. A
+      responsible human reviewer must record any acceptance after the required
+      changes are resolved, against a new content fingerprint.
+    </p>
+    <h2 id="auto-9"><a id="commands-run"></a>Commands run<span style="margin-left: 1em"></span></h2>
+    <pre class="verbatim" xml:space="preserve">
+sha256sum blueprint/interfaces/rank-determinant-stress.md            # a7477c98&hellip;2555
+git show 6cda532:blueprint/interfaces/rank-determinant-stress.md | sha256sum   # same
+python3 imports.py Lean/ imports.json   # parse import lines of 9,477 modules (scratch script, not committed)
+python3 reach.py &lt;module&gt; &lt;module&gt;&hellip;   # transitive-import queries quoted above
+rg -n '&lt;declaration pattern&gt;' Lean/YM  # locate declarations; sed -n of the cited line ranges
+python3 scripts/check_blueprint.py      # Blueprint structure OK: 2 units.
+python3 -m unittest discover -s tests   # Ran 22 tests, OK
+git diff --check</pre>
+    <p>
+      Lean: <tt class="verbatim">leanprover/lean4:v4.32.0</tt> was installed from the
+      official release tarball, and <tt class="verbatim">lean --version</tt> reports
+      commit <tt class="verbatim">8c9756b2&hellip;</tt>. No <tt class="verbatim">lake</tt> command
+      succeeded, because dependencies could not be fetched; no Lean file was
+      elaborated.
+    </p>
+  </body>
+</html>

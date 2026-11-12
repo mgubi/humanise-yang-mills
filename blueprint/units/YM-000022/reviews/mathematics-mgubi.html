@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Review of a proof unit &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <div class="ym-unit-nav">
+      <span class="ym-part"><a href="../correspondence.html">YM-000022: Logarithmic asymptotics of the running
+      inverse coefficient (draft)</a><font class="ym-sep">&middot;</font><a href="../evidence/index.html">evidence</a><font
+      class="ym-sep">&middot;</font><a href="../proof.html">proof</a></span><a class="ym-next" href="../../YM-000026/correspondence.html">YM-000026
+      &rarr;</a>
+    </div>
+    <p>
+      <h1>Review of a proof unit</h1><a id="review-of-a-proof-unit"></a>
+    </p>
+    <ul>
+      <li>
+        <p>
+          Unit: YM-000022, <tt class="verbatim">blueprint/units/YM-000022/</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Role: mathematical validity
+        </p>
+      </li>
+      <li>
+        <p>
+          Human reviewer: mgubi (no acceptance recorded; see the last section)
+        </p>
+      </li>
+      <li>
+        <p>
+          Agent assistance: Claude Code (Claude Fable 5.2) checked the
+          argument and wrote this report; a web-fetch subagent made a first
+          read of the cited page, which I then repeated directly.
+        </p>
+      </li>
+      <li>
+        <p>
+          Content SHA-256: <tt class="verbatim">367b5982bb56035d3f0cbf81641d1f0564c27a48169707b9aa64a5cf3c0b0aa2</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Manuscript files and labels: <tt class="verbatim">manuscript/pilots/running-coupling.tex</tt>
+          (<tt class="verbatim">sec:running-coefficient</tt>, <tt class="verbatim">eq:running</tt>,
+          <tt class="verbatim">prop:uniform-extraction</tt>, <tt class="verbatim">prop:running-asymptotic</tt>),
+          <tt class="verbatim">manuscript/preamble.tex</tt>, <tt class="verbatim">manuscript/references.bib</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Source revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Review task and PR: <a href="https://github.com/hairer/humanise-yang-mills/issues/22">issue #22</a>, claim <a href="https://github.com/hairer/humanise-yang-mills/issues/22#issuecomment-6817176547">https://github.com/hairer/humanise-yang-mills/issues/22#issuecomment-6817176547</a>
+        </p>
+      </li>
+      <li>
+        <p>
+          Outcome: changes requested (two small gaps in the positivity
+          paragraph). The two propositions and their proofs are correct as
+          written, conditional on the stated input <tt class="verbatim">eq:running</tt>.
+        </p>
+      </li>
+    </ul>
+    <p>
+      I am not an author of this unit. This is an agent-assisted review; it is
+      not a human acceptance.
+    </p>
+    <h2 id="auto-1"><a id="findings-and-evidence"></a>Findings and evidence<span style="margin-left: 1em"></span></h2>
+    <h3 id="auto-2"><a id="proposition-propuniform-extraction"></a>Proposition <tt class="verbatim">prop:uniform-extraction</tt><span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      Correct. With <tt class="verbatim">&eta; = &epsilon;/2</tt> and <tt class="verbatim">s_m
+      &gt; 2(|A|+1)/&epsilon;</tt>: <tt class="verbatim">|&beta;/s &minus; c| = |&beta;
+      &minus; c s|/s &le; (|&beta; &minus; (A + c s)| + |A|)/s &le;
+      &epsilon;/2 + |A|/s</tt>, and <tt class="verbatim">|A|/s &lt;
+      &epsilon;|A|/(2(|A|+1)) &lt; &epsilon;/2</tt>. Both thresholds depend
+      only on <tt class="verbatim">&epsilon;</tt>, so the bound is uniform in <tt class="verbatim">N
+      &ge; m</tt> and <tt class="verbatim">p</tt>. The enlargement of the threshold uses
+      only <tt class="verbatim">s_m &rarr; +&infin;</tt>. No sign condition on <tt
+      class="verbatim">c</tt> or <tt class="verbatim">A</tt> is used, as the text says.
+    </p>
+    <h3 id="auto-3"><a id="proposition-proprunning-asymptotic"></a>Proposition <tt class="verbatim">prop:running-asymptotic</tt><span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      Correct.
+    </p>
+    <ul>
+      <li>
+        <p>
+          The substitution <tt class="verbatim">m = i</tt>, <tt class="verbatim">N = N(i)</tt>,
+          <tt class="verbatim">p = k(i)</tt> is legitimate once <tt class="verbatim">i &le;
+          N(i)</tt>, and uniformity in <tt class="verbatim">p</tt> is what frees <tt
+          class="verbatim">k</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">&epsilon; = c/2</tt> gives <tt class="verbatim">x_i &gt; c/2 &gt;
+          0</tt>, and <tt class="verbatim">s_i &gt; 0</tt> on the same tail, so <tt
+          class="verbatim">&beta; = s_i x_i &gt; 0</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The identity <tt class="verbatim">1/&radic;x_i = &radic;s_i/&radic;&beta; =
+          g&middot;&radic;(log a_i^{-1})</tt> holds on the positive tail.
+        </p>
+      </li>
+      <li>
+        <p>
+          The cited rules require their hypotheses for every index (<tt class="verbatim">x_n
+          &ge; 0</tt> for all <tt class="verbatim">n</tt>; <tt class="verbatim">y_n &ne; 0</tt>
+          for all <tt class="verbatim">n</tt> and nonzero limit). The text applies them
+          on a tail and then observes that altering finitely many terms does
+          not affect convergence. That is sufficient.
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-4"><a id="the-citation"></a>The citation<span style="margin-left: 1em"></span></h3>
+    <p>
+      I downloaded <a href="https://jirilebl.github.io/ra/html/sec_factslimsseqs.html">https://jirilebl.github.io/ra/html/sec_factslimsseqs.html</a>
+      on 12 November 2026 (SHA-256 of the HTML <tt class="verbatim">2bf861b19ffb89c27fd781ee16eb71da011463127982dad8fb791f3c7f78a100</tt>)
+      and read the two statements.
+    </p>
+    <ul>
+      <li>
+        <p>
+          Proposition 2.2.5 assumes <tt class="verbatim">{x_n}</tt>, <tt class="verbatim">{y_n}</tt>
+          convergent; item (iv) adds <tt class="verbatim">lim y_n &ne; 0</tt> and <tt
+          class="verbatim">y_n &ne; 0</tt> for all <tt class="verbatim">n</tt>, and concludes <tt
+          class="verbatim">lim x_n/y_n = lim x_n / lim y_n</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Proposition 2.2.6 assumes <tt class="verbatim">{x_n}</tt> convergent with <tt
+          class="verbatim">x_n &ge; 0</tt> for all <tt class="verbatim">n</tt>, and concludes <tt
+          class="verbatim">lim &radic;x_n = &radic;(lim x_n)</tt>.
+        </p>
+      </li>
+    </ul>
+    <p>
+      Both are as the unit describes and both apply. The page shows no version
+      number or date; the bibliography entry's &quot;inspected&quot; date is
+      therefore the only version identifier, which the unit already
+      acknowledges.
+    </p>
+    <h3 id="auto-5"><a id="scale-divergence"></a>Scale divergence<span style="margin-left: 1em"></span></h3>
+    <p>
+      Correct: <tt class="verbatim">a_m^{-1} = &prod;_{j&lt;m} B_j</tt> with <tt class="verbatim">B_j
+      &ge; 3</tt> gives <tt class="verbatim">s_m = &sum;_{j&lt;m} log B_j &ge; m log
+      3</tt>. Note <tt class="verbatim">s_0 = 0</tt>; the propositions only use <tt
+      class="verbatim">s_m &gt; 0</tt> eventually, and the text arranges that.
+    </p>
+    <h3 id="auto-6"><a id="positivity-of-b_0g"></a>Positivity of <tt class="verbatim">b_0(G)</tt><span style="margin-left: 1em"></span></h3>
+    <p>
+      The argument is right, with two unstated steps.
+    </p>
+    <ul>
+      <li>
+        <p>
+          The invariance identity holds: <tt class="verbatim">tr([X,Y]Z) + tr(Y[X,Z]) =
+          tr(XYZ) &minus; tr(YZX) = 0</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Given an inner product for which each <tt class="verbatim">ad e_j</tt> is
+          skew-adjoint, <tt class="verbatim">&minus;Tr((ad e_j)&sup2;) = Tr((ad e_j)^T
+          ad e_j) = &sum;_&#x2113;
+          &#x2016;[e_j,e_&#x2113;]&#x2016;&sup2;</tt>. If <tt class="verbatim">[X,Y]
+          &ne; 0</tt> for some <tt class="verbatim">X, Y &isin; &#x1D524;</tt>,
+          bilinearity gives some <tt class="verbatim">[e_j,e_&#x2113;] &ne; 0</tt>. So
+          <tt class="verbatim">C_&#x1D524; &gt; 0</tt>.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-7"><a id="required-changes-and-remaining-uncertainty"></a>Required changes and remaining uncertainty<span style="margin-left: 1em"></span></h2>
+    <ol>
+      <li>
+        <p>
+          <strong>State why <tt class="verbatim">&#x27E8;X,Y&#x27E9; = &minus;r_G^{-1}
+          Re tr(XY)</tt> is an inner product on <tt class="verbatim">&#x1D524;</tt>.</strong>
+          The text calls <tt class="verbatim">(e_j)</tt> an orthonormal basis and uses
+          norms, but never says the form is positive definite. It is, because
+          <tt class="verbatim">&#x1D524;</tt> consists of skew-Hermitian matrices (<tt
+          class="verbatim">G &sub; U(r_G)</tt>), so <tt class="verbatim">&minus;tr(X&sup2;) =
+          tr(X^*X) &gt; 0</tt> for <tt class="verbatim">X &ne; 0</tt>. One sentence is
+          needed; without it the display <tt class="verbatim">&sum;&#x2016;[e_j,e_&#x2113;]&#x2016;&sup2;</tt>
+          is not justified.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>State that <tt class="verbatim">C_&#x1D524;</tt> does not depend on
+          the orthonormal basis, and that <tt class="verbatim">dim &#x1D524; &ge;
+          1</tt>.</strong> The definition says &quot;an orthonormal
+          basis&quot;. Independence holds because <tt class="verbatim">&sum;_j (ad
+          e_j)&sup2;</tt> is unchanged under an orthogonal change of basis.
+          The division by <tt class="verbatim">dim &#x1D524;</tt> is harmless because a
+          nonabelian algebra is nonzero; the hypotheses give this but the text
+          does not say it. Closure of <tt class="verbatim">&#x1D524;</tt> under brackets
+          is the standard fact for the Lie algebra of a closed matrix group
+          and could be mentioned with a reference to the existing background
+          note on SU(2) or a textbook.
+        </p>
+      </li>
+    </ol>
+    <p>
+      Suggestions, not required:
+    </p>
+    <ol>
+      <li>
+        <p>
+          A normalisation example would help readers compare with the usual
+          one-loop coefficient. By my hand computation (not checked against
+          the source or a reference), for <tt class="verbatim">SU(N)</tt> in its
+          defining representation <tt class="verbatim">C_&#x1D524; = 2N&sup2;</tt>, so
+          <tt class="verbatim">2b_0 = 11N&sup2;/(12&pi;&sup2;)</tt>, which is the
+          standard <tt class="verbatim">&beta; = 2N/g&sup2;</tt> running. If included it
+          should be verified by someone else.
+        </p>
+      </li>
+      <li>
+        <p>
+          The symbol <tt class="verbatim">g</tt> for <tt class="verbatim">&beta;^{-1/2}</tt>
+          invites reading it as the usual coupling; with the normalisation
+          above the two differ by the factor <tt class="verbatim">&radic;(2N)</tt>. The
+          closing paragraph's caveat covers the physical identification but
+          not this constant.
+        </p>
+      </li>
+    </ol>
+    <p>
+      Not checked: the running estimate <tt class="verbatim">eq:running</tt> itself (an
+      explicit input of the unit); whether the manuscript's reading of <tt
+      class="verbatim">&beta;</tt> as &quot;the action coefficient&quot; is justified
+      beyond the declarations listed in the Lean-correspondence report. I
+      built <tt class="verbatim">manuscript/main.tex</tt> out of tree with <tt class="verbatim">latexmk
+      -pdf</tt> (exit 0; no undefined references in the final pass; <tt class="verbatim">pdftotext</tt>
+      finds no <tt class="verbatim">??</tt>) but did not inspect the rendered pages
+      visually.
+    </p>
+    <h2 id="auto-8"><a id="acceptance"></a>Acceptance<span style="margin-left: 1em"></span></h2>
+    <p>
+      Not recorded. This report is agent-assisted evidence for a human
+      reviewer. Any edit made in response changes the content fingerprint and
+      needs a renewed check.
+    </p>
+    <div class="ym-unit-nav">
+      <span class="ym-part"><a href="../correspondence.html">YM-000022: Logarithmic asymptotics of the running
+      inverse coefficient (draft)</a><font class="ym-sep">&middot;</font><a href="../evidence/index.html">evidence</a><font
+      class="ym-sep">&middot;</font><a href="../proof.html">proof</a></span><a class="ym-next" href="../../YM-000026/correspondence.html">YM-000026
+      &rarr;</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Validation log (ongoing) &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <div class="ym-unit-nav">
+      <a class="ym-prev" href="../YM-000022/correspondence.html">&larr; YM-000022</a><span class="ym-part"><a href="correspondence.html">YM-000026:
+      Foundations and conditional assembly of the four-dimensional existence
+      argument (draft)</a><font class="ym-sep">&middot;</font><a href="AGENT-PROMPT.html">AGENT-PROMPT</a><font
+      class="ym-sep">&middot;</font><a href="CHECKPOINT.html">CHECKPOINT</a><font class="ym-sep">&middot;</font><a
+      href="USAGE-HANDOFF.html">USAGE-HANDOFF</a><font class="ym-sep">&middot;</font><a href="actual-corrected-body-compiler-evidence.html">actual-corrected-body-compiler-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-covariance-fourier-window-evidence.html">actual-covariance-fourier-window-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-covariance-transport-evidence.html">actual-covariance-transport-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-equation-kernel-relay-evidence.html">actual-equation-kernel-relay-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-global-row-prices-evidence.html">actual-global-row-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-harvested-owner-energy-evidence.html">actual-harvested-owner-energy-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-insertion-derivative-relay-evidence.html">actual-insertion-derivative-relay-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-local-compiler-handoff-evidence.html">actual-local-compiler-handoff-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-marked-portfolio-calibration-evidence.html">actual-marked-portfolio-calibration-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-mixed-marked-compiler-evidence.html">actual-mixed-marked-compiler-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-palette-warning-evidence.html">actual-palette-warning-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-phase-detector-moments-evidence.html">actual-phase-detector-moments-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-phase-grid-approximants-evidence.html">actual-phase-grid-approximants-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-rank-purchases-evidence.html">actual-rank-purchases-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-dawn-selection-evidence.html">actual-reader-dawn-selection-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-guarded-curvature-evidence.html">actual-reader-guarded-curvature-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-local-gaussian-prices-evidence.html">actual-reader-local-gaussian-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-short-covariance-evidence.html">actual-reader-short-covariance-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-small-window-bridge-evidence.html">actual-reader-small-window-bridge-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-tree-covariance-evidence.html">actual-reader-tree-covariance-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-slab-copy-bounds-evidence.html">actual-slab-copy-bounds-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-stress-annulus-evidence.html">actual-stress-annulus-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-stress-normalization-evidence.html">actual-stress-normalization-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-stress-shell-nodes-evidence.html">actual-stress-shell-nodes-evidence</a><font
+      class="ym-sep">&middot;</font><a href="all-arity-reader-gaussian-model-evidence.html">all-arity-reader-gaussian-model-evidence</a><font
+      class="ym-sep">&middot;</font><a href="all-grade-free-detectors-evidence.html">all-grade-free-detectors-evidence</a><font
+      class="ym-sep">&middot;</font><a href="allarity-coordinate-calibration-evidence.html">allarity-coordinate-calibration-evidence</a><font
+      class="ym-sep">&middot;</font><a href="allarity-cumulant-comparison-evidence.html">allarity-cumulant-comparison-evidence</a><font
+      class="ym-sep">&middot;</font><a href="allarity-marked-propagation-evidence.html">allarity-marked-propagation-evidence</a><font
+      class="ym-sep">&middot;</font><a href="allarity-planted-compiler-evidence.html">allarity-planted-compiler-evidence</a><font
+      class="ym-sep">&middot;</font><a href="annulus-fleet-face-estimates-evidence.html">annulus-fleet-face-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="annulus-recording-yield-evidence.html">annulus-recording-yield-evidence</a><font
+      class="ym-sep">&middot;</font><a href="annulus-same-data-binding-evidence.html">annulus-same-data-binding-evidence</a><font
+      class="ym-sep">&middot;</font><a href="annulus-two-wave-estimates-evidence.html">annulus-two-wave-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="atlas-estimates-evidence.html">atlas-estimates-evidence</a><font class="ym-sep">&middot;</font><a
+      href="centered-birth-receipt-evidence.html">centered-birth-receipt-evidence</a><font class="ym-sep">&middot;</font><a
+      href="centered-budget-evidence.html">centered-budget-evidence</a><font class="ym-sep">&middot;</font><a href="centered-construction-evidence.html">centered-construction-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-estimates-evidence.html">centered-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-freight-producer-evidence.html">centered-freight-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-geometry-producer-evidence.html">centered-geometry-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-geyser-scale-estimates-evidence.html">centered-geyser-scale-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-production-evidence.html">centered-production-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-public-service-evidence.html">centered-public-service-evidence</a><font
+      class="ym-sep">&middot;</font><a href="classical-stationary-vertices-evidence.html">classical-stationary-vertices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="common-funded-history-evidence.html">common-funded-history-evidence</a><font
+      class="ym-sep">&middot;</font><a href="common-observable-purchases-evidence.html">common-observable-purchases-evidence</a><font
+      class="ym-sep">&middot;</font><a href="coupling-reset-selection-evidence.html">coupling-reset-selection-evidence</a><font
+      class="ym-sep">&middot;</font><a href="endpoint-closure-ledger.html">endpoint-closure-ledger</a><font class="ym-sep">&middot;</font><a
+      href="finite-rank-kernel-transport-evidence.html">finite-rank-kernel-transport-evidence</a><font class="ym-sep">&middot;</font><a
+      href="flat-estimate-audit.html">flat-estimate-audit</a><font class="ym-sep">&middot;</font><a href="flat-step-evidence.html">flat-step-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-collision-pole-separation-evidence.html">free-collision-pole-separation-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-horizon-convergence-evidence.html">free-horizon-convergence-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-internal-ward-erasure-evidence.html">free-internal-ward-erasure-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-kernel-components-evidence.html">free-kernel-components-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-kernel-estimates-evidence.html">free-kernel-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-maxwell-radial-flux-evidence.html">free-maxwell-radial-flux-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-maxwell-ward-flux-evidence.html">free-maxwell-ward-flux-evidence</a><font
+      class="ym-sep">&middot;</font><a href="fullmesh-correlation-cauchy-evidence.html">fullmesh-correlation-cauchy-evidence</a><font
+      class="ym-sep">&middot;</font><a href="fullmesh-fixedbounds-producer-evidence.html">fullmesh-fixedbounds-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="handoff/index.html">handoff</a><font class="ym-sep">&middot;</font><a
+      href="inherited-loop-transport-evidence.html">inherited-loop-transport-evidence</a><font class="ym-sep">&middot;</font><a
+      href="lattice-evidence.html">lattice-evidence</a><font class="ym-sep">&middot;</font><a href="lattice-history-closure-refresh.html">lattice-history-closure-refresh</a><font
+      class="ym-sep">&middot;</font><a href="limits-evidence.html">limits-evidence</a><font class="ym-sep">&middot;</font><a
+      href="local-projection-evidence.html">local-projection-evidence</a><font class="ym-sep">&middot;</font><a href="marked-campaign-producer-evidence.html">marked-campaign-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="marked-field-local-estimates-evidence.html">marked-field-local-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="marked-healthy-cumulant-launch-evidence.html">marked-healthy-cumulant-launch-evidence</a><font
+      class="ym-sep">&middot;</font><a href="marked-portfolio-calibration-evidence.html">marked-portfolio-calibration-evidence</a><font
+      class="ym-sep">&middot;</font><a href="multileg-curvature-lift-evidence.html">multileg-curvature-lift-evidence</a><font
+      class="ym-sep">&middot;</font><a href="ope-closure-refresh.html">ope-closure-refresh</a><font class="ym-sep">&middot;</font><a
+      href="ope-evidence.html">ope-evidence</a><font class="ym-sep">&middot;</font><a href="ope-history-service-evidence.html">ope-history-service-evidence</a><font
+      class="ym-sep">&middot;</font><a href="ope-scale-purchases-evidence.html">ope-scale-purchases-evidence</a><font
+      class="ym-sep">&middot;</font><a href="original-history-portfolio-attachment-evidence.html">original-history-portfolio-attachment-evidence</a><font
+      class="ym-sep">&middot;</font><a href="parameter-continuity-evidence.html">parameter-continuity-evidence</a><font
+      class="ym-sep">&middot;</font><a href="path-attachment-producer-evidence.html">path-attachment-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="phase-evidence.html">phase-evidence</a><font class="ym-sep">&middot;</font><a
+      href="phase-null-inheritance-evidence.html">phase-null-inheritance-evidence</a><font class="ym-sep">&middot;</font><a
+      href="phase-quantitative-producer-evidence.html">phase-quantitative-producer-evidence</a><font class="ym-sep">&middot;</font><a
+      href="phase-ward-inheritance-evidence.html">phase-ward-inheritance-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-angular-actions-evidence.html">physical-angular-actions-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-reset-reorganization-evidence.html">physical-reset-reorganization-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-analytic-continuation-evidence.html">physical-ward-analytic-continuation-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-final-binding-audit.html">physical-ward-final-binding-audit</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-free-classification-evidence.html">physical-ward-free-classification-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-packet-prices-evidence.html">physical-ward-packet-prices-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-propagation-evidence.html">physical-ward-propagation-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-stress-cone-evidence.html">physical-ward-stress-cone-evidence</a><font class="ym-sep">&middot;</font><a
+      href="public-binding-package-audit.html">public-binding-package-audit</a><font class="ym-sep">&middot;</font><a
+      href="public-run-binding-evidence.html">public-run-binding-evidence</a><font class="ym-sep">&middot;</font><a
+      href="quadratic-pole-transport-evidence.html">quadratic-pole-transport-evidence</a><font class="ym-sep">&middot;</font><a
+      href="rank-root-normalization-evidence.html">rank-root-normalization-evidence</a><font class="ym-sep">&middot;</font><a
+      href="reconstruction-evidence.html">reconstruction-evidence</a><font class="ym-sep">&middot;</font><a href="restarted-rank-history-evidence.html">restarted-rank-history-evidence</a><font
+      class="ym-sep">&middot;</font><a href="rg-construction-evidence.html">rg-construction-evidence</a><font class="ym-sep">&middot;</font><a
+      href="rg-horizon-geometry-evidence.html">rg-horizon-geometry-evidence</a><font class="ym-sep">&middot;</font><a
+      href="rg-menu-jets-evidence.html">rg-menu-jets-evidence</a><font class="ym-sep">&middot;</font><a href="rg-multisource-evidence.html">rg-multisource-evidence</a><font
+      class="ym-sep">&middot;</font><a href="rg-price-receipts-evidence.html">rg-price-receipts-evidence</a><font
+      class="ym-sep">&middot;</font><a href="row-quadratic-price-evidence.html">row-quadratic-price-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-centered-service-evidence.html">selected-centered-service-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-course-binding-evidence.html">selected-course-binding-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-history-limits-evidence.html">selected-history-limits-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-kinetic-response-evidence.html">selected-kinetic-response-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-nonlinear-offering-evidence.html">selected-nonlinear-offering-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-stationary-linear-data-evidence.html">selected-stationary-linear-data-evidence</a><font
+      class="ym-sep">&middot;</font><a href="soft-curvature-receipts-evidence.html">soft-curvature-receipts-evidence</a><font
+      class="ym-sep">&middot;</font><a href="stationary-determinant-prices-evidence.html">stationary-determinant-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="stationary-germ-symmetry-evidence.html">stationary-germ-symmetry-evidence</a><font
+      class="ym-sep">&middot;</font><a href="stationary-output-construction-evidence.html">stationary-output-construction-evidence</a><font
+      class="ym-sep">&middot;</font><a href="stationary-small-field-evidence.html">stationary-small-field-evidence</a><font
+      class="ym-sep">&middot;</font><a href="surviving-interval-shooting-evidence.html">surviving-interval-shooting-evidence</a><font
+      class="ym-sep">&middot;</font><a href="terminal-marked-construction-evidence.html">terminal-marked-construction-evidence</a><font
+      class="ym-sep">&middot;</font><a href="terminal-normalization-transfer-evidence.html">terminal-normalization-transfer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="thermal-contact-cancellation-evidence.html">thermal-contact-cancellation-evidence</a><font
+      class="ym-sep">&middot;</font><a href="three-panel-weak-comparison-evidence.html">three-panel-weak-comparison-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-bill-prices-evidence.html">trace-bill-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-calibration-producer-evidence.html">trace-calibration-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-coffer-supplier-evidence.html">trace-coffer-supplier-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-crown-buffer-evidence.html">trace-crown-buffer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-eve-producer-evidence.html">trace-eve-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-evidence.html">trace-evidence</a><font class="ym-sep">&middot;</font><a
+      href="trace-firesky-gallery-evidence.html">trace-firesky-gallery-evidence</a><font class="ym-sep">&middot;</font><a
+      href="trace-free-rank-evidence.html">trace-free-rank-evidence</a><font class="ym-sep">&middot;</font><a href="trace-local-charge-evidence.html">trace-local-charge-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-local-paid-budgets-evidence.html">trace-local-paid-budgets-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-local-pairing-evidence.html">trace-local-pairing-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-local-rate-selection-evidence.html">trace-local-rate-selection-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-medal-prices-evidence.html">trace-medal-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-mission-price-evidence.html">trace-mission-price-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-price-recurrence-evidence.html">trace-price-recurrence-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-probe-assembly-evidence.html">trace-probe-assembly-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-regular-atom-evidence.html">trace-regular-atom-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-row-jet-estimates-evidence.html">trace-row-jet-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-scribe-producer-evidence.html">trace-scribe-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-small-means-evidence.html">trace-small-means-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-weighted-estimates-evidence.html">trace-weighted-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="usage-hold-checkpoint.html">usage-hold-checkpoint</a><font class="ym-sep">&middot;</font><font
+      class="ym-here">validation</font><font class="ym-sep">&middot;</font><a href="weighted-frame-penalty-evidence.html">weighted-frame-penalty-evidence</a><font
+      class="ym-sep">&middot;</font><a href="weighted-stationary-inverses-evidence.html">weighted-stationary-inverses-evidence</a><font
+      class="ym-sep">&middot;</font><a href="wilson-startup-construction-evidence.html">wilson-startup-construction-evidence</a><font
+      class="ym-sep">&middot;</font><a href="wilson-vacuum-price-evidence.html">wilson-vacuum-price-evidence</a></span>
+    </div>
+    <p>
+      <h1>Validation log (ongoing)</h1><a id="validation-log-ongoing"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>109-page checkpoint</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">3</a>
+      </p>
+      <p>
+        120-page checkpoint <span style="margin-left: 5mm"></span> <a href="#auto-2">3</a>
+      </p>
+      <p>
+        19:45 UTC producer expansion checkpoint <span style="margin-left: 5mm"></span> <a href="#auto-3">3</a>
+      </p>
+      <p>
+        19:55 UTC checkpoint <span style="margin-left: 5mm"></span> <a href="#auto-4">4</a>
+      </p>
+      <p>
+        20:35 UTC checkpoint <span style="margin-left: 5mm"></span> <a href="#auto-5">4</a>
+      </p>
+      <p>
+        21:20 UTC checkpoint <span style="margin-left: 5mm"></span> <a href="#auto-6">5</a>
+      </p>
+      <p>
+        21:35 UTC checkpoint <span style="margin-left: 5mm"></span> <a href="#auto-7">5</a>
+      </p>
+      <p>
+        21:55 UTC approximate checkpoint <span style="margin-left: 5mm"></span> <a href="#auto-8">5</a>
+      </p>
+      <p>
+        2026-11-11, 347-page kernel/horizon checkpoint <span style="margin-left: 5mm"></span> <a
+        href="#auto-9">6</a>
+      </p>
+      <p>
+        2026-11-11, 414-page local-convergence checkpoint <span style="margin-left: 5mm"></span>
+        <a href="#auto-10">6</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>444-page integration checkpoint, 2026-11-11 23:31 UTC</b> <span
+        style="margin-left: 5mm"></span> <a href="#auto-11">7</a>
+      </p>
+      <p>
+        2026-11-12 05:36 UTC <span style="margin-left: 5mm"></span> <a href="#auto-12">8</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2026-11-12 06:37 UTC checkpoint</b> <span style="margin-left: 5mm"></span> <a href="#auto-13">8</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2026-11-12 06:52 UTC &mdash; 636-page checkpoint</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-14">8</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2026-11-12 09:00 UTC &mdash; 734-page working checkpoint</b> <span
+        style="margin-left: 5mm"></span> <a href="#auto-15">9</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2026-11-12 09:44 UTC &mdash; 747-page checkpoint</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-16">10</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2026-11-12 10:21 UTC &mdash; 767-page checkpoint</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-17">10</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2026-11-12 10:50 UTC &mdash; 783-page checkpoint</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-18">10</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2026-11-12 11:10 UTC &mdash; 809-page checkpoint</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-19">11</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2026-11-12 11:35 UTC &mdash; 821-page checkpoint</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-20">11</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2026-11-12 11:58 UTC &mdash; 838-page checkpoint</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-21">11</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2026-11-12 12:38 UTC &mdash; 852-page working build</b> <span
+        style="margin-left: 5mm"></span> <a href="#auto-22">12</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>12:44 UTC &mdash; 855-page pole-separation build</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-23">12</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>12:51 UTC &mdash;857-page checkpoint</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-24">12</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>13:12 UTC &mdash;870-page working checkpoint</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-25">12</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>13:22 UTC &mdash;free Ward input application</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-26">13</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>13:38 UTC &mdash;872-page binding checkpoint</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-27">13</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Threshold handoff validation &mdash; 12 November 2026</b> <span
+        style="margin-left: 5mm"></span> <a href="#auto-28">13</a>
+      </p>
+    </div>
+    <p>
+      Parent integration clone: <tt class="verbatim">/private/tmp/ym-existence-20261111</tt>.
+      Source pin: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>.
+    </p>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">python3 scripts/check_blueprint.py</tt> passed after the
+          locality integration: two units, structure OK; this does not verify
+          Lean or mathematics.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">/Library/TeX/texbin/latexmk -cd -pdf
+          -interaction=nonstopmode -halt-on-error -outdir=build
+          manuscript/existence.tex</tt> built the 75-page checkpoint with no
+          remaining LaTeX warnings. Log: <tt class="verbatim">/private/tmp/ym-existence-latex-build.log</tt>
+          (overwritten on later builds). Earlier missing corollary/mathscr
+          definitions were corrected; earlier overfull boxes were removed
+          before this checkpoint.
+        </p>
+      </li>
+      <li>
+        <p>
+          All 75 pages were rendered with <tt class="verbatim">pdftoppm -scale-to 800
+          -png</tt> to <tt class="verbatim">/private/tmp/ym-existence-preview/page-*.png</tt>.
+          All nine 3-by-3 contact sheets were visually inspected: no clipping,
+          overlap, or missing glyphs visible. This is overview QA of the
+          75-page checkpoint, not final high-resolution QA of later additions.
+        </p>
+      </li>
+      <li>
+        <p>
+          Independent gpt-6-astra reviews are copied under <tt class="verbatim">reviews/</tt>.
+          They include specific mathematical corrections and source checks
+          with chapter hashes. Material later changes require renewed review.
+          Machine review fields remain null.
+        </p>
+      </li>
+      <li>
+        <p>
+          No Lean source edit, fresh Lean build, axiom replay, or clean-source
+          build was performed. Inherited source/build.md evidence has its
+          stated prebuilt-artifact limitation. These English proofs are not
+          certified by the blueprint checker.
+        </p>
+      </li>
+      <li>
+        <p>
+          No commit, PR submission, merge or publication has yet been made for
+          these files.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-1"><a id="109-page-checkpoint"></a>109-page checkpoint<span style="margin-left: 1em"></span></h2>
+    <p>
+      The integrated 109-page checkpoint built successfully with the same
+      latexmk command and no LaTeX warnings or overfull boxes. <tt class="verbatim">pdftoppm
+      -scale-to 800 -png</tt> rendered all 109 pages to <tt class="verbatim">/private/tmp/ym-existence-preview-109/</tt>;
+      all thirteen 3-by-3 contact sheets were visually inspected. No clipping,
+      overlaps or missing glyphs were seen at overview resolution. The later
+      phase-price chapter is not part of this checkpoint. Files and the PDF
+      were copied to the workspace. The centered lane/density alternative is
+      being separated from the main public route after caller tracing found
+      that Wcmain is supplied by Gardens.gardena.
+    </p>
+    <h3 id="auto-2"><a id="120-page-checkpoint"></a>120-page checkpoint<span style="margin-left: 1em"></span></h3>
+    <p>
+      The direct latexmk command completed successfully, producing 120 pages /
+      997659 bytes before singleton insertion. Rendered pages 81&ndash;103
+      with bundled pdftoppm and visually inspected all 23 pages in four
+      contact sheets under <tt class="verbatim">/private/tmp/ym-existence-preview-120/</tt>.
+      No clipping, collision or layout defect identified. Earlier checkpoint
+      QA covered the other material. A subsequent singleton insertion is
+      currently rebuilding and needs its own local layout check.
+    </p>
+    <h3 id="auto-3"><a id="1945-utc-producer-expansion-checkpoint"></a>19:45 UTC producer expansion checkpoint<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">python3 scripts/check_blueprint.py</tt>: passed after
+          leaf-expansion and cluster additions (structure only); rerun pending
+          latest mixed/fusion additions.
+        </p>
+      </li>
+      <li>
+        <p>
+          Integrated latexmk build: 173 pages, no overfull boxes, known
+          unresolved <tt class="verbatim">ex-centered-sail</tt> until
+          centered-construction integration. Later soft-log-fusion chapter not
+          included in that build.
+        </p>
+      </li>
+      <li>
+        <p>
+          Visual QA: rendered pp.118&ndash;145 and viewed all four contact
+          sheets under <tt class="verbatim">/private/tmp/ym-existence-preview-175/</tt>;
+          no visible layout defect. Includes repaired local-splitting
+          literal-backslash issue and new section constructions.
+        </p>
+      </li>
+      <li>
+        <p>
+          No Lean source edits, fresh build or axiom replay.
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-4"><a id="1955-utc-checkpoint"></a>19:55 UTC checkpoint<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          Integrated 192-page article built successfully. One 1.06pt line
+          overflow and <tt class="verbatim">over</tt> TeX warning in newly drafted price
+          chapters were fixed; rebuild clean for those chapters. All
+          references resolved.
+        </p>
+      </li>
+      <li>
+        <p>
+          Rendered and visually inspected all pages 39&ndash;48 (centered
+          construction) and 144&ndash;155 (Gaussian warning, packet estimate,
+          soft-log fusion) in four contact sheets <tt class="verbatim">/private/tmp/ym-{centered,prices}-qa-contact-{0,1}.jpg</tt>.
+          No clipping, overlap or missing glyph identified at overview
+          resolution.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">python3 scripts/check_blueprint.py</tt> passed after
+          Gaussian and packet additions: two units, structure OK only.
+          Seed-energy is a later addition, now rebuilding.
+        </p>
+      </li>
+      <li>
+        <p>
+          Independent conditional local passes: Gaussian
+          d0dfa7f19b8739045bd6070bfe04da6201889fda36b70a0e0fbc0d51c866a953;
+          packet1e220b3bb0955c27bb797f54ed760fec042ebc0d0f8e0bdc35768d7ec5da6f77.
+          These do not discharge their retained analytic inputs or imply
+          completion.
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-5"><a id="2035-utc-checkpoint"></a>20:35 UTC checkpoint<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          Integrated latexmk build completed: 253 pages / 1626989 bytes. No
+          overfull boxes, unresolved references or LaTeX warnings found in the
+          log.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">python3 scripts/check_blueprint.py</tt> passed after
+          local-covariance integration: two units, structure OK only.
+        </p>
+      </li>
+      <li>
+        <p>
+          Rendered and visually inspected all pages 174&ndash;210 (seed
+          geometry, guides, comparison, energy, annulus, Gram and covariance),
+          35&ndash;47 (RG producers), and 63&ndash;74 (centered producers).
+          Nine contact sheets under <tt class="verbatim">/private/tmp/ym-{seed,rg,freight}-qa-contact-*.jpg</tt>
+          show no clipping, overlap or missing glyphs at overview resolution.
+        </p>
+      </li>
+      <li>
+        <p>
+          Independent review report copied through the local-covariance pass.
+          These local checks retain the displayed incoming inputs; whole-proof
+          closure remains outstanding. No fresh Lean build, axiom replay or
+          Lean edit.
+        </p>
+      </li>
+    </ul>
+    <p>
+      2026-11-11 21:00 UTC approximate checkpoint: actual latexmk build
+      completed 281 pages, 1753945 bytes; log scan found no Overfull or LaTeX
+      warnings. Blueprint checker passes 2 units (structural only). Rendered
+      pp209&ndash;229 of preceding274-page build with pdftoppm, inspected four
+      contact sheets <tt class="verbatim">/private/tmp/ym-new-analytic-contact-{0,1,2,3}.jpg</tt>:
+      mean, Haar, normalization, compensated variation and mean/action layouts
+      readable with no clipping/overlap. Newly inserted horizon and Gaussian
+      differentiation/moment pages still need visual inspection. Exact packet
+      delta and moment small wording update require next rebuild. No Lean
+      build or axiom replay.
+    </p>
+    <h3 id="auto-6"><a id="2120-utc-checkpoint"></a>21:20 UTC checkpoint<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          Latest integrated latexmk build: 300 pages / 1835047 bytes,
+          including the corrected healthy-support hypothesis and output
+          exponent in activity assembly. Log scan found no overfull boxes or
+          LaTeX warnings. Structural checker passes two units; it does not
+          verify Lean or mathematics.
+        </p>
+      </li>
+      <li>
+        <p>
+          The preceding 300-page build was rendered for pp.37&ndash;41,
+          80&ndash;85, and 237&ndash;260. All six contact sheets <tt class="verbatim">/private/tmp/ym-horizon-contact-0.jpg</tt>,
+          <tt class="verbatim">/private/tmp/ym-service-contact-0.jpg</tt>, and <tt
+          class="verbatim">/private/tmp/ym-activity-contact-{0,1,2,3}.jpg</tt> were
+          visually inspected. No clipping or collision identified. The final
+          assembly wording needs its next local visual check; the underlying
+          layout otherwise remains unchanged.
+        </p>
+      </li>
+      <li>
+        <p>
+          Independent local conditional passes confirmed for remote action,
+          inherited prices, itinerary prices, likelihood ticket estimate,
+          Gaussian moments, activity assembly, centered service and Geyser
+          estimates. Editorial itinerary fingerprint 28fc529e&hellip; and
+          service 72d4df9a&hellip; retain those passes. Report copied.
+        </p>
+      </li>
+      <li>
+        <p>
+          Full-mesh producer is still with author/reviewer and is not
+          integrated. Whole-proof closure remains outstanding. No fresh Lean
+          build or axiom replay.
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-7"><a id="2135-utc-checkpoint"></a>21:35 UTC checkpoint<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          Integrated build before latest forest/exclusion insertions: 312
+          pages, 1892631 bytes. Log scan clean for overfull boxes and LaTeX
+          warnings.
+        </p>
+      </li>
+      <li>
+        <p>
+          Rendered and inspected contact sheets <tt class="verbatim">/private/tmp/ym-312-{safety,reassembly,fullmesh,tariff}.jpg</tt>,
+          covering pp.229&ndash;233, 268&ndash;273, 94&ndash;98, 55&ndash;57
+          respectively. No visible clipping, overlap or missing glyphs at
+          overview resolution.
+        </p>
+      </li>
+      <li>
+        <p>
+          Forest-average/log and forced-exclusion passed independent
+          conditional local review after healthy-order and canonical-majorant
+          repairs, fingerprints recorded in review report. Tariff
+          reflow56532f8e retains earlier pass.
+        </p>
+      </li>
+      <li>
+        <p>
+          Phase producer remains unintegrated pending real-valued
+          approximation correction. Trace candidate remains unintegrated
+          pending substantive producer proofs. No Lean source edits, fresh
+          build or axiom replay.
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-8"><a id="2155-utc-approximate-checkpoint"></a>21:55 UTC approximate checkpoint<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          Actual latexmk build completed at 336 pages / 1995461 bytes.
+          Corrected a missing display terminator and two line overflows; final
+          log clean for overfull boxes and LaTeX warnings. Projection-payment
+          is a later insertion.
+        </p>
+      </li>
+      <li>
+        <p>
+          Rendered and visually inspected all pp.277&ndash;283, 286&ndash;293,
+          329&ndash;334 and98&ndash;103 in <tt class="verbatim">/private/tmp/ym336-{forest,marked,payment,phase}-contact.jpg</tt>.
+          No clipping, overlap or missing glyphs identified at overview
+          resolution.
+        </p>
+      </li>
+      <li>
+        <p>
+          Marked jets, phase conditional assembly, numerical arrival, scale
+          schedule, and actual projection payments passed bounded independent
+          review. Editorial reflow hashes sent for acknowledgment. This is not
+          whole-proof closure.
+        </p>
+      </li>
+      <li>
+        <p>
+          No fresh Lean build, axiom replay, source edits, commit or push.
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-9"><a id="2026-11-11-347-page-kernelhorizon-checkpoint"></a>2026-11-11, 347-page kernel/horizon checkpoint<span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      Commands actually run in <tt class="verbatim">/private/tmp/ym-existence-20261111</tt>:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">python3 scripts/check_blueprint.py</tt>: passed, 2 units;
+          structural only.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">latexmk -cd -pdf -interaction=nonstopmode -halt-on-error
+          -outdir=build manuscript/existence.tex</tt>: completed, 347 pages
+          (2,049,396 bytes). Final log has no overfull boxes,
+          undefined-reference warnings, or LaTeX errors. Earlier 349-page
+          build exposed three-digit TOC-number width and an inline formula
+          overflow; both were fixed and rebuilt. The amsmath foreign-command
+          diagnostic is inherited mathematical typesetting, not a failed
+          build.
+        </p>
+      </li>
+      <li>
+        <p>
+          Rendered pp.38&ndash;50 and 304&ndash;308 with pdftoppm; inspected
+          contact sheets <tt class="verbatim">/private/tmp/ym347-kernel-contact.jpg</tt>
+          and <tt class="verbatim">/private/tmp/ym347-curvature-contact.jpg</tt>. Layout
+          is clean at this scale.
+        </p>
+      </li>
+      <li>
+        <p>
+          Synced only the owned manuscript/blueprint files and the built PDF
+          to <tt class="verbatim">/Users/hairer/humanise-yang-mills</tt>. Copied the
+          independent reviewer report.
+        </p>
+      </li>
+    </ul>
+    <p>
+      Positive-row, exact-kernel-transport, and curvature-horizon local proofs
+      have independent bounded mathematical/source review. The draft as a
+      whole remains incomplete. No Lean source changes, Lean build, axiom
+      replay, commit, push, merge or publication were performed at this
+      checkpoint.
+    </p>
+    <h3 id="auto-10"><a id="2026-11-11-414-page-local-convergence-checkpoint"></a>2026-11-11, 414-page local-convergence checkpoint<span
+    style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          Ran the structural checker successfully (2 units).
+        </p>
+      </li>
+      <li>
+        <p>
+          Ran latexmk with the documented flags. Final build: 414 pages,
+          2,346,221 bytes before the final display reflow; after reflow the
+          page count remains 414. Final log has no overfull boxes, undefined
+          references, multiply-defined labels or fatal errors. Two
+          mathematical tag commands needed explicit math mode; one long
+          geometric majorant was displayed.
+        </p>
+      </li>
+      <li>
+        <p>
+          Rendered pp.110&ndash;114, 343&ndash;364, 384&ndash;389,
+          404&ndash;408 with pdftoppm and inspected all five <tt class="verbatim">/private/tmp/ym414-contact-{0,1,2,3,4}.jpg</tt>
+          sheets. No clipping, overlap or missing glyphs identified at
+          overview resolution. This supplements the earlier 384/394-page
+          rendered checks; final whole-book ordering and detailed typography
+          remain to be done after proof closure.
+        </p>
+      </li>
+      <li>
+        <p>
+          Integrated the independently checked fixed-scale graph, background
+          path, countable source stability and common-variable marked-integral
+          chapters. Local-source final tag repair fingerprint:
+          cec21b47aad71ba01a6caa0cc8f99dcfcd2c5501bcf206f6faed02d9125ab5cf.
+          Fixed-rung final display repair fingerprint:
+          e0033dda0b3d25b37da5c3f8e8c91a6777445e1e0d4d11c7d4736cc0225e2ba5.
+        </p>
+      </li>
+      <li>
+        <p>
+          Coupled-background and finite-real-test chapters are separate review
+          candidates and are not yet included in this PDF. The nonlinear
+          FullPaths and trace analytic suppliers remain incomplete. Section 2
+          overview, symbolic index and final notation/order pass are still
+          pending.
+        </p>
+      </li>
+      <li>
+        <p>
+          No Lean source edits, Lean build, axiom replay, commit, push or
+          publication.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-11"><a id="444-page-integration-checkpoint-2026-11-11-2331-utc"></a>444-page integration checkpoint, 2026-11-11 23:31
+    UTC<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Ran latexmk with the existing PDF/interaction/halt-on-error
+          settings; successful output: 444 pages, 2,472,757 bytes. Reflowed
+          three long displays and replaced the undefined path annulus macro by
+          explicit mathematical notation. The final log has no overfull boxes
+          or undefined references.
+        </p>
+      </li>
+      <li>
+        <p>
+          Rendered pages 361&ndash;385 and 411&ndash;417 with pdftoppm;
+          inspected all four <tt class="verbatim">/private/tmp/ym444-contact-{0,1,2,3}.jpg</tt>
+          sheets. No clipping, overlap or missing glyphs identified at
+          overview resolution.
+        </p>
+      </li>
+      <li>
+        <p>
+          Integrated the independently checked path attachment, trace
+          calibration, coupled history convergence, finite-test sharpening and
+          real-ray contraction. These remain conditional local proofs. The
+          stronger reviewer checked the layout-only revisions to the path and
+          finite-test chapters.
+        </p>
+      </li>
+      <li>
+        <p>
+          New real-coupling interpolation draft is under independent review,
+          outside this compiled checkpoint. Remaining analytic suppliers,
+          whole-proof closure, Section 2 outline, symbolic index and final
+          ordering/notation pass remain open.
+        </p>
+      </li>
+      <li>
+        <p>
+          No fresh Lean build, axiom replay, source edits, commit or push.
+        </p>
+      </li>
+    </ul>
+    <p>
+      2026-11-11 23:50 UTC checkpoint: structural checker passes (2 units; no
+      mathematics/Lean verification). latexmk built 467 pages, 2,597,107
+      bytes; no overfull boxes or undefined references in final log. Rendered
+      pages 338&ndash;342,379&ndash;403,433&ndash;442 using pdftoppm at
+      scale1100 and visually inspected all five contact sheets
+      /private/tmp/ym467-contact-{0..4}.jpg. No clipping or overlap observed
+      in this sample. Parent owned manuscript and unit files synchronized to
+      workspace, including unintegrated high-degree candidate. No Lean
+      commands or source edits, no commit/push. Full-proof closure remains
+      outstanding.
+    </p>
+    <p>
+      2026-11-12 04:09 UTC checkpoint: latexmk successfully built 487 pages,
+      2,682,333 bytes, with no overfull boxes or undefined references in the
+      final log. Rendered 23 pages (343&ndash;356, 379&ndash;382,
+      455&ndash;459) at scale1000 and visually inspected all three
+      /private/tmp/ym487-contact-{0..2}.jpg sheets; no clipping/overlap
+      observed at overview resolution. Structural checker passed (2 units, not
+      Lean or mathematics verification). Supplier chapter integrated after
+      this build; next build pending. No Lean command, source edit, commit or
+      push.
+    </p>
+    <p>
+      2026-11-12 04:41 UTC checkpoint: latexmk successfully built 514 pages
+      (2,800,524 bytes before the final display-only reflow). The final log
+      contains no overfull boxes or undefined references. Rendered pages
+      359&ndash;379 and 480&ndash;484 with pdftoppm at scale1100 and visually
+      inspected all three /private/tmp/ym514-contact-{0,1,2}.jpg sheets: no
+      clipping or overlap identified at overview resolution. This covers the
+      stationary action/radius/log/exterior/small-field/boundary additions and
+      Crown buffer. No Lean build, axiom replay or source edit; no commit or
+      push. Whole-proof closure and final editorial work remain open. Live
+      issue26 rechecked on resume; no overlapping claim. Usage at 04:37 UTC:
+      94% remaining, credit balance unchanged, zero resets available.
+    </p>
+    <p>
+      2026-11-12 05:11 UTC: structural checker passes 2 units. LaTeX
+      checkpoint builds 547 pages; one pending crossreference to
+      trace-price-recurrence not integrated yet. Earlier 533-page additions
+      visually inspected at overview scale on rendered
+      pp408&ndash;422,458&ndash;461,499&ndash;503; no visible layout defects.
+      Latest additions await visual QA. Current account limit check
+      at05:06:91% weekly remaining, credits unchanged, no reset available. No
+      new Lean build or axiom replay.
+    </p>
+    <h3 id="auto-12"><a id="2026-11-12-0536-utc"></a>2026-11-12 05:36 UTC<span style="margin-left: 1em"></span></h3>
+    <p>
+      Live issue26 comments rechecked05:21; no conflict found, claim
+      expires16:40UTC. Blueprint PR30 rechecked05:35 at unchanged
+      ba33d36fe767e5068d9d02d4dd13ff80ce47a3be. Usage86% remaining,
+      credits50413.0750500000 unchanged, no reset available;
+      nextcheck05:51UTC.
+    </p>
+    <p>
+      Actual latexmk builds:565 pages then573 (one overfull inverse display)
+      then575 pages with no overfull/undefined diagnostics. Display reflowed;
+      determinant editorial carry reviewed. Visual overview QA on565
+      pp417&ndash;438 via three contact sheets found no
+      clipping/overlap/missing glyphs. New575 pp430&ndash;449 rendered,
+      inspection pending. pypdf extraction succeeded; fitz extraction attempt
+      failed because module absent, then used pypdf. Structural checker
+      passes2 units; no Lean or mathematical conclusion follows from it. No
+      fresh Lean build or axiom replay.
+    </p>
+    <p>
+      2026-11-12 05:44 UTC: latexmk completed successfully at 577 pages; no
+      overfull boxes or undefined references. Visually inspected 575-page
+      pages 430&ndash;449 and 577-page pages 454&ndash;456, 537&ndash;545 via
+      rendered contact sheets; no layout defect identified. This validates
+      rendering, not mathematical closure. Regular-atom addition follows this
+      PDF checkpoint.
+    </p>
+    <p>
+      2026-11-12: <tt class="verbatim">python3 scripts/check_blueprint.py</tt> passed (2
+      units; no mathematical or Lean verification). <tt class="verbatim">latexmk -cd
+      -pdf -interaction=nonstopmode -halt-on-error -outdir=build
+      manuscript/existence.tex</tt> succeeded, 596 pages, no remaining
+      overfull boxes or undefined references. Rendered and visually inspected
+      pages 447&ndash;450, 500&ndash;510 and 555&ndash;562 via pdftoppm/PIL
+      contact sheets in /private/tmp/ym-qa596; no layout defects observed. New
+      content includes stationary germ symmetry, interval return, scalar
+      reset, shooting, regular trace atom and Fourier/jet estimates.
+      Physical-reset-reorganization remains an unimported review candidate. No
+      fresh Lean build or axiom replay. Draft remains incomplete; no
+      commit/push/PR.
+    </p>
+    <h2 id="auto-13"><a id="2026-11-12-0637-utc-checkpoint"></a>2026-11-12 06:37 UTC checkpoint<span style="margin-left: 1em"></span></h2>
+    <p>
+      latexmk -cd -pdf -interaction=nonstopmode -halt-on-error -outdir=build
+      manuscript/existence.tex completed successfully (624 pages). Final pass
+      has no undefined references or overfull boxes; initial-pass rerun
+      warnings resolved. Overview rendering inspected on pages
+      105,107,108,452,454,523,524,526,528,529,530,533,579,580; contact sheets
+      /private/tmp/ym-qa624/contact-{0,1,2}.png. New formulas fit margins.
+      This is layout QA, not mathematical validation.
+      Common-observable-purchases is not yet included and is under independent
+      review. No Lean build or axiom replay.
+    </p>
+    <h2 id="auto-14"><a id="2026-11-12-0652-utc--636-page-checkpoint"></a>2026-11-12 06:52 UTC &mdash; 636-page checkpoint<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      <tt class="verbatim">python3 scripts/check_blueprint.py</tt>: passes, 2 units. <tt
+      class="verbatim">latexmk -cd -pdf -interaction=nonstopmode -halt-on-error
+      -outdir=build manuscript/existence.tex</tt>: passes, 636 pages, final
+      log has no undefined-reference or overfull-box warnings. Rendered and
+      visually inspected pages 450&ndash;451, 542&ndash;545 and 594&ndash;595
+      at /private/tmp/ym-qa636; equations fit and added prose is readable.
+      These checks precede the terminal-marked/service integration, whose
+      build follows. No new Lean check.
+    </p>
+    <p>
+      2026-11-12 07:00 UTC: python3 scripts/check_blueprint.py passed (2
+      units). latexmk -cd -pdf -interaction=nonstopmode -halt-on-error
+      -outdir=build manuscript/existence.tex passed, 649 pages. No overfull
+      boxes or undefined references; pre-existing amsmath foreign-command
+      warning only. Rendered and visually inspected pages 465&ndash;466,
+      548&ndash;553, 603&ndash;604, 647&ndash;648 at
+      /private/tmp/ym-qa650/contact-0.png through contact-2.png; margins and
+      displays good. Initial synchronization script failed before edits
+      because system python lacks pypdf; rerun with bundled Python succeeded.
+      No Lean build or axiom replay run.
+    </p>
+    <p>
+      2026-11-12 07:33 UTC: structural checker passes2 units; latexmk
+      succeeded671 pages, no overfull/undefined warnings. Rendered and
+      inspected664 pp548&ndash;569 and671 pp560&ndash;578 via contact sheets;
+      no margin/clipping defects observed. Added restarted history,
+      physical-dimension normalization, three-panel weak comparison,
+      conditional portfolio, planted compiler algebra and cumulant bounds.
+      Latest marked-propagation draft is unintegrated pending review. Live
+      issue26 and PR30 rechecked07:30UTC; no change/conflict. Usage72%
+      remaining at07:29, credits unchanged, zero resets. No Lean build or
+      axiom replay.
+    </p>
+    <p>
+      2026-11-12 08:14 UTC collaborative checkpoint: latexmk -cd -pdf
+      -interaction=nonstopmode -halt-on-error -outdir=build
+      manuscript/existence.tex succeeded, 711 pages, 3,677,991 bytes. Final
+      log has no overfull boxes, missing glyphs or undefined references.
+      Rendered and visually inspected pages 549&ndash;555, 576&ndash;585, 629,
+      631, 633, 635&ndash;636 and 706&ndash;708 on five contact sheets in
+      /private/tmp/ym-qa711; no clipping or display overflow observed at
+      overview scale. Latest independent agent review logs copied, preserving
+      parent finite-rank review. No fresh Lean build or axiom replay.
+      Whole-proof closure and final editorial pass remain outstanding.
+    </p>
+    <p>
+      Checkpoint staging: initial git diff &ndash;cached &ndash;check found
+      only trailing whitespace / blank EOF in five chapters
+      (free-kernel-components, primary-calibration-producer, rg-construction,
+      trace-medal-prices, trace-weighted-estimates). Removed whitespace only;
+      prior review fingerprints preserved, not refreshed by author. Subsequent
+      whitespace check passes. These edits do not change the mathematical
+      text; review carry is requested independently.
+    </p>
+    <p>
+      Post-whitespace rebuild succeeded: 711 pages, 3,677,991 bytes, no
+      overfull/undefined/missing-glyph diagnostics. PDF refreshed and its
+      SHA-256 recorded in checkpoint-manifest.json. Source and manuscript text
+      remain an incomplete draft.
+    </p>
+    <h2 id="auto-15"><a id="2026-11-12-0900-utc--734-page-working-checkpoint"></a>2026-11-12 09:00 UTC &mdash; 734-page working
+    checkpoint<span style="margin-left: 1em"></span></h2>
+    <p>
+      <tt class="verbatim">python3 scripts/check_blueprint.py</tt> passed (2 units;
+      structural only). <tt class="verbatim">latexmk -cd -pdf -interaction=nonstopmode
+      -halt-on-error -outdir=build manuscript/existence.tex</tt> succeeded:
+      734 pages, 3,778,568 bytes. The first portfolio layout attempt failed
+      because a split display had extra alignment tabs; replacing it by
+      aligned still overflowed, so the final identities use gathered with one
+      identity per line. The final log has no overfull boxes, undefined
+      references or missing-glyph warnings.
+    </p>
+    <p>
+      Rendered and visually inspected 29 pages (568&ndash;574, 582&ndash;587,
+      599&ndash;607, 699&ndash;704, 734) at scale 1100 in five contact sheets
+      under <tt class="verbatim">/private/tmp/ym-qa734</tt>. No clipping or overlap
+      identified at overview scale. This samples the mixed compiler, joint
+      reader model, healthy launch, trace scribe and portfolio changes; it is
+      rendering QA, not proof closure. The independently checked portfolio
+      layout carry is recorded in the reviewer log. The healthy-launch wording
+      edit was reported harmless but the reviewer lacked the exact old
+      baseline to certify a bytewise editorial-only diff.
+    </p>
+    <p>
+      No Lean build, fresh axiom replay or source changes. New
+      original-history attachment and tree-covariance candidates are outside
+      this build and remain under review. The 711-page committed checkpoint
+      manifest and PDF still describe the earlier pushed snapshot until the
+      next refresh.
+    </p>
+    <h2 id="auto-16"><a id="2026-11-12-0944-utc--747-page-checkpoint"></a>2026-11-12 09:44 UTC &mdash; 747-page checkpoint<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      Actual latexmk builds succeeded at 737, 744 and 747 pages. The 744-page
+      build had one overfull prose line caused by an unbreakable
+      slash-separated phrase; wording-only reflow was independently checked.
+      Final 747-page PDF is 3,839,085 bytes, with no overfull boxes, undefined
+      references or missing-glyph diagnostics. Rendered 18 pages
+      (546&ndash;548, 586&ndash;595, 598&ndash;602) with pdftoppm at scale1300
+      and visually inspected all three contact sheets under
+      /private/tmp/ym-qa747. No clipping, overlap or oversized displays
+      observed at overview resolution. This covers the original-history
+      attachment, harvested owner-energy, corrected body and tree covariance
+      additions. Previous new sections were checked at734.
+    </p>
+    <p>
+      The structural checker passed after the body/attachment imports; the
+      final owner-energy metadata addition is checked again before commit. No
+      Lean build, fresh axiom replay or Lean edits. Mathematical reviews are
+      bounded conditional agent reviews; human acceptance and full dependency
+      closure remain outstanding. Live main compared to
+      fa705098efc07df2e54746b22893b5d26b515988 at09:41: identical. Issue26 was
+      reread on resume; no overlapping new claim found.
+    </p>
+    <h2 id="auto-17"><a id="2026-11-12-1021-utc--767-page-checkpoint"></a>2026-11-12 10:21 UTC &mdash; 767-page checkpoint<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      LaTeX builds succeeded at 757,765,767 pages. The 757 build had a 10.96pt
+      small-window geometry display overflow; the inequalities were reflowed,
+      and the independent reviewer confirmed mathematical carry. Final
+      767-page PDF is3,926,799 bytes. Its final existence.log has no overfull
+      boxes, undefined references or missing glyphs. <tt class="verbatim">python3
+      scripts/check_blueprint.py</tt> passed after derivative import; rerun
+      with final native-binding metadata before commit. Rendered26 pages
+      (602&ndash;607,670&ndash;685,763&ndash;766) with pdftoppm, scale1100;
+      inspected five contact sheets under /private/tmp/ym-qa768. No clipping,
+      overlap or display overflow observed at this resolution. Directory
+      name768 is incidental; actual PDF has767 pages. Copied bounded
+      independent review logs, preserving parent reviews. No fresh Lean build
+      or axiom replay and no Lean changes. Usage10:15UTC55% remaining; claim
+      and live issue26 rechecked on resume; independent trace claims
+      respected.
+    </p>
+    <h2 id="auto-18"><a id="2026-11-12-1050-utc--783-page-checkpoint"></a>2026-11-12 10:50 UTC &mdash; 783-page checkpoint<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      Actual latexmk builds succeeded at 771, 776, 779 and 783 pages. Final
+      PDF is 3,999,327 bytes; existence.log has no overfull boxes, undefined
+      references or missing glyph diagnostics. Rendered 18 pages
+      (275&ndash;278,606&ndash;610,674&ndash;678,710&ndash;713) with pdftoppm
+      at scale1300 and visually inspected all three contact sheets in
+      /private/tmp/ym-qa783. No clipping, overlap or oversized displays
+      observed at overview resolution. Samples cover global rows, short
+      covariance, Maxwell Ward flux, and stress normalization. Bounded
+      independent review logs copied from the review clone; parent-authored
+      review records preserved separately. Structural checker and whitespace
+      check rerun before commit. No Lean edits, fresh Lean build or axiom
+      replay. New native symmetry-propagation obligations remain open; this
+      artifact is not a whole-proof closure certificate.
+    </p>
+    <h2 id="auto-19"><a id="2026-11-12-1110-utc--809-page-checkpoint"></a>2026-11-12 11:10 UTC &mdash; 809-page checkpoint<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      Actual latexmk builds succeeded at 796, 799 and 809 pages after
+      integration of guard/Dawn/slab, detector powers, and angular/Pupil
+      packages. First guard build failed at an unescaped underscore in
+      source-helper wording and had two long displays/prose overflows.
+      Replaced that wording by ordinary mathematics and reflowed the displays;
+      the reviewer checked exact editorial carry. Final PDF is 4,116,812
+      bytes. Final log has no overfull boxes, undefined references or missing
+      glyphs. Rendered 20 pages from the 799-page intermediate
+      (143&ndash;147,619&ndash;629,701&ndash;704) at scale1100; viewed all
+      four contact sheets in /private/tmp/ym-qa799. Rendered 12 added
+      Pupil/angular pages from the 809-page PDF (282&ndash;287,734&ndash;739)
+      at scale1300; viewed both sheets in /private/tmp/ym-qa809. No clipping,
+      overlaps or excessive displays seen at overview resolution. The earlier
+      samples retain their reviewed content although pagination shifts.
+    </p>
+    <p>
+      Structural checker passed after final manuscript metadata addition;
+      whitespace check rerun before commit. Restored prior metadata list order
+      to avoid unrelated reordering. Live issues26/33/34 reread before
+      submission: parent claim unchanged; external trace claims still active.
+      No fresh Lean build/axiom replay or source edits. Reviews are bounded,
+      conditional agent passes; global proof closure and human acceptance
+      remain outstanding. Weekly usage10:58UTC49% remaining.
+    </p>
+    <h2 id="auto-20"><a id="2026-11-12-1135-utc--821-page-checkpoint"></a>2026-11-12 11:35 UTC &mdash; 821-page checkpoint<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      Actual latexmk builds succeeded at814 and821 pages. The first821 build
+      reported one8.86pt analytic-comparator display overflow; split that
+      display and rebuilt. Final PDF is4,174,434 bytes; final log has no
+      overfull boxes, undefined references or missing glyphs. Rendered six
+      phase-grid pages592&ndash;597 from814 atscale1300 and viewed its contact
+      sheet. Rendered nine local-compiler/analytic pages
+      641&ndash;645,743&ndash;746 from821 atscale1300; viewed both contact
+      sheets. No clipping, overlap or oversized displays observed. Files under
+      /private/tmp/ym-qa814 and /private/tmp/ym-qa821. Structural/whitespace
+      checks run before commit. No Lean edits, fresh build or axiom replay.
+      Independent agent reviews retain explicit hypotheses; full dependency
+      closure and human acceptance remain open.
+    </p>
+    <h2 id="auto-21"><a id="2026-11-12-1158-utc--838-page-checkpoint"></a>2026-11-12 11:58 UTC &mdash; 838-page checkpoint<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      Actual latexmk build succeeds after annulus/packet/cone integration. The
+      final PDF is 4253672 bytes; log has no overfull boxes, undefined
+      references or missing glyphs (checked separately before commit).
+      Rendered pages744&ndash;761 at scale1300 using pdftoppm, then inspected
+      all18 pages on three contact sheets
+      /private/tmp/ym838-contact-{0,1,2}.jpg. No clipping, overlap or
+      oversized displays observed at overview resolution. Annulus display
+      reflow received reviewer carry; packet's final cone cross-reference
+      received bounded carry. Structural checker and whitespace check run
+      before commit. Live issues26/33/34 reread11:57UTC; scope unchanged.
+      Main's Balaban literature note was located, without introducing a new
+      literature substitution. Endpoint call ledger added as an author audit,
+      not a global completion finding. No Lean edits, fresh build or axiom
+      replay. Whole dependency closure and human acceptance remain open.
+    </p>
+    <h2 id="auto-22"><a id="2026-11-12-1238-utc--852-page-working-build"></a>2026-11-12 12:38 UTC &mdash; 852-page working
+    build<span style="margin-left: 1em"></span></h2>
+    <p>
+      Built the integrated Ward941dfa8, internal erasure be439656 and
+      phase-inheritance ba6a0498 chapters. The first build exposed one
+      undefined reference to the held free-classifier draft. Replaced it by
+      the explicit existing free input boundary and a reference to the
+      now-proved internal erasure; independent reviewer checked that exact
+      carry. Final852 build succeeds,4317061 bytes, no overfull boxes,
+      undefined references or missing glyphs. Rendered18
+      pages713&ndash;717,767&ndash;775,780&ndash;783 at scale1300 and viewed
+      all three contact sheets in /private/tmp/ym-qa852; no clipping, overlap
+      or display overflow seen. The trace-small-means heading now starts its
+      own section; reviewer confirmed the editorial-only carry.
+    </p>
+    <p>
+      A structural cross-reference inventory reports1761 labels,2440
+      references,179 cross-chapter forward references, no missing or duplicate
+      labels. It is navigation evidence only, not a mathematical dependency
+      graph or proof of definition-before-use. The free collision-pole chapter
+      is a separate new draft and is not in this PDF. No Lean source edits,
+      fresh Lean build or axiom replay. New main fetch still28d9c5e (Balaban
+      note); external clean-build issue37 is active and is not duplicated.
+    </p>
+    <h2 id="auto-23"><a id="1244-utc--855-page-pole-separation-build"></a>12:44 UTC &mdash; 855-page pole-separation build<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      The added pole/collision chapter9a1cc07b builds cleanly; PDF855
+      pages,4332105 bytes, with no overfull, undefined-reference or
+      missing-glyph diagnostics. Rendered pages715&ndash;719 at scale1300 and
+      inspected all five in /private/tmp/ym855-pole-contact.jpg; no clipping
+      or overflow observed. Source and mathematical bounded pass is recorded
+      separately. Phase-null inheritance was added afterwards and awaits its
+      own review/build. Main fetch now3b1eeb6 shows the maintainer merged
+      PR40; the next pushed checkpoint needs a new draft PR.
+    </p>
+    <h2 id="auto-24"><a id="1251-utc-857-page-checkpoint"></a>12:51 UTC &mdash;857-page checkpoint<span style="margin-left: 1em"></span></h2>
+    <p>
+      After the phase-null join, the855-page build remained855 pages,4335817
+      bytes; rendered/viewed pages151&ndash;153,156&ndash;158 on
+      /private/tmp/ym855-phase-contact.jpg. Added radial Euler flux yields857
+      pages,4343024 bytes; rendered/viewed pages 707&ndash;710 on
+      /private/tmp/ym856-radial-contact.jpg (directory name856 is incidental).
+      Both logs have no overfull boxes, undefined references or missing
+      glyphs; no clipping/overlap observed in rendered samples. Canonical
+      radial and C03 phase edits have bounded independent passes. Provisional
+      handoff coverage refreshed to238 chapters; not released/claimable. No
+      Lean changes/build/axiom replay.
+    </p>
+    <h2 id="auto-25"><a id="1312-utc-870-page-working-checkpoint"></a>13:12 UTC &mdash;870-page working checkpoint<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      Integrated the reviewed shell producer and free classifier, with
+      separately recorded independent parent review of cross-order ranging.
+      The first shell build (864 pages) had a 68pt overflow in its
+      introductory definitions, repaired by two aligned rows; the first
+      classifier build (870 pages) had a 17pt inline triple overflow, repaired
+      by a display. The reviewer checked exact editorial carries, including
+      removal of Bool terminology and replacing the source-name normal by the
+      established nu=(4pi&sup2;)^-1. Final log has no overfull boxes,
+      undefined references or missing glyphs. Rendered/viewed shell
+      pages753&ndash;759 in the864 build and classifier721&ndash;727 plus
+      revised shell763 in the870 build; no clipping or overlap observed in the
+      contact sheets. A failed attempted PyMuPDF import (fitz unavailable) was
+      replaced by pypdf for page inspection.
+    </p>
+    <p>
+      Structural reference inventory:240 chapters,1801 labels,2488 references,
+      183 cross-chapter forward references, no missing or duplicate labels.
+      This is navigation evidence only. Manifest now correctly excludes the
+      two unintegrated historical alternatives from included_sections (their
+      conservative unit.json metadata entries remain). No Lean
+      edit/build/axiom replay. Checker and whitespace checks pass; whole proof
+      and human acceptance remain outstanding.
+    </p>
+    <h2 id="auto-26"><a id="1322-utc-free-ward-input-application"></a>13:22 UTC &mdash;free Ward input application<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      Updated physical-ward-propagation with the exact now-proved free
+      classifier, finite-scene and internal-erasure references, and the
+      distinction between each fixed grade/test-family scale and the common
+      scalar. Independent review passed 8d221691; generic construction
+      hypotheses retained. Build remains870 pages, 4400995 bytes, clean log.
+      Rendered/viewed791&ndash;794 in /private/tmp/ym870-wardjoin, no observed
+      clipping/overlap. The earlier870 checkpoint PDF remains published until
+      the next assembled snapshot. No Lean build or source changes.
+    </p>
+    <h2 id="auto-27"><a id="1338-utc-872-page-binding-checkpoint"></a>13:38 UTC &mdash;872-page binding checkpoint<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      Narrowed selected-course result imported after independent review:
+      literal-family Binding and generic Paid weakening only. The draft
+      claiming raw franchise-receipt retention was held and replaced; its
+      unsupported conclusion is not in the article. First872 build had a7.7pt
+      plateau display overflow; split into two gathered rows and obtained
+      exact editorial review carry. Corrected evidence manifest path. Final872
+      PDF is4407859 bytes; clean log. Rendered/viewed564&ndash;566 at
+      scale1400, no clipping or overlap observed. No Lean edit/build/axiom
+      replay. New audits and known-interface package notes do not certify
+      complete dependency closure.
+    </p>
+    <h2 id="auto-28"><a id="threshold-handoff-validation--12-november-2026"></a>Threshold handoff validation &mdash; 12 November
+    2026<span style="margin-left: 1em"></span></h2>
+    <p>
+      Weekly remaining reached30% at13:46UTC. No mathematical edit followed
+      the freeze. The 21 new issue payloads were published; canonical22 and
+      reserved26 complete the 23-package index. Independent handoff-document
+      review found disjoint chapter ownership and intact review/editorial
+      gates; three clarity fixes were applied. Chapter partition/hash
+      check:241 included chapters exactly once; PDF SHA-256
+      6a2614c163263bd705703faae3de4cf6ec0ef08d6ef6995a0e7aa7c9cab7f2f3.
+      Blueprint checker and whitespace checks are rerun before the release
+      commit. No new Lean build, axiom replay or LaTeX build is claimed for
+      coordination-only edits.
+    </p>
+    <p>
+      The final main-branch fetch was4cf1c97dd820c9996d0242f9956d123a940e2dff.
+      Seven separately authored blueprint additions/reviews are linked
+      immutably in handoff/upstream-evidence.md; no content review or edit of
+      them is claimed.
+    </p>
+    <div class="ym-unit-nav">
+      <a class="ym-prev" href="../YM-000022/correspondence.html">&larr; YM-000022</a><span class="ym-part"><a href="correspondence.html">YM-000026:
+      Foundations and conditional assembly of the four-dimensional existence
+      argument (draft)</a><font class="ym-sep">&middot;</font><a href="AGENT-PROMPT.html">AGENT-PROMPT</a><font
+      class="ym-sep">&middot;</font><a href="CHECKPOINT.html">CHECKPOINT</a><font class="ym-sep">&middot;</font><a
+      href="USAGE-HANDOFF.html">USAGE-HANDOFF</a><font class="ym-sep">&middot;</font><a href="actual-corrected-body-compiler-evidence.html">actual-corrected-body-compiler-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-covariance-fourier-window-evidence.html">actual-covariance-fourier-window-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-covariance-transport-evidence.html">actual-covariance-transport-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-equation-kernel-relay-evidence.html">actual-equation-kernel-relay-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-global-row-prices-evidence.html">actual-global-row-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-harvested-owner-energy-evidence.html">actual-harvested-owner-energy-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-insertion-derivative-relay-evidence.html">actual-insertion-derivative-relay-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-local-compiler-handoff-evidence.html">actual-local-compiler-handoff-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-marked-portfolio-calibration-evidence.html">actual-marked-portfolio-calibration-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-mixed-marked-compiler-evidence.html">actual-mixed-marked-compiler-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-palette-warning-evidence.html">actual-palette-warning-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-phase-detector-moments-evidence.html">actual-phase-detector-moments-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-phase-grid-approximants-evidence.html">actual-phase-grid-approximants-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-rank-purchases-evidence.html">actual-rank-purchases-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-dawn-selection-evidence.html">actual-reader-dawn-selection-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-guarded-curvature-evidence.html">actual-reader-guarded-curvature-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-local-gaussian-prices-evidence.html">actual-reader-local-gaussian-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-short-covariance-evidence.html">actual-reader-short-covariance-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-small-window-bridge-evidence.html">actual-reader-small-window-bridge-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-tree-covariance-evidence.html">actual-reader-tree-covariance-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-slab-copy-bounds-evidence.html">actual-slab-copy-bounds-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-stress-annulus-evidence.html">actual-stress-annulus-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-stress-normalization-evidence.html">actual-stress-normalization-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-stress-shell-nodes-evidence.html">actual-stress-shell-nodes-evidence</a><font
+      class="ym-sep">&middot;</font><a href="all-arity-reader-gaussian-model-evidence.html">all-arity-reader-gaussian-model-evidence</a><font
+      class="ym-sep">&middot;</font><a href="all-grade-free-detectors-evidence.html">all-grade-free-detectors-evidence</a><font
+      class="ym-sep">&middot;</font><a href="allarity-coordinate-calibration-evidence.html">allarity-coordinate-calibration-evidence</a><font
+      class="ym-sep">&middot;</font><a href="allarity-cumulant-comparison-evidence.html">allarity-cumulant-comparison-evidence</a><font
+      class="ym-sep">&middot;</font><a href="allarity-marked-propagation-evidence.html">allarity-marked-propagation-evidence</a><font
+      class="ym-sep">&middot;</font><a href="allarity-planted-compiler-evidence.html">allarity-planted-compiler-evidence</a><font
+      class="ym-sep">&middot;</font><a href="annulus-fleet-face-estimates-evidence.html">annulus-fleet-face-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="annulus-recording-yield-evidence.html">annulus-recording-yield-evidence</a><font
+      class="ym-sep">&middot;</font><a href="annulus-same-data-binding-evidence.html">annulus-same-data-binding-evidence</a><font
+      class="ym-sep">&middot;</font><a href="annulus-two-wave-estimates-evidence.html">annulus-two-wave-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="atlas-estimates-evidence.html">atlas-estimates-evidence</a><font class="ym-sep">&middot;</font><a
+      href="centered-birth-receipt-evidence.html">centered-birth-receipt-evidence</a><font class="ym-sep">&middot;</font><a
+      href="centered-budget-evidence.html">centered-budget-evidence</a><font class="ym-sep">&middot;</font><a href="centered-construction-evidence.html">centered-construction-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-estimates-evidence.html">centered-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-freight-producer-evidence.html">centered-freight-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-geometry-producer-evidence.html">centered-geometry-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-geyser-scale-estimates-evidence.html">centered-geyser-scale-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-production-evidence.html">centered-production-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-public-service-evidence.html">centered-public-service-evidence</a><font
+      class="ym-sep">&middot;</font><a href="classical-stationary-vertices-evidence.html">classical-stationary-vertices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="common-funded-history-evidence.html">common-funded-history-evidence</a><font
+      class="ym-sep">&middot;</font><a href="common-observable-purchases-evidence.html">common-observable-purchases-evidence</a><font
+      class="ym-sep">&middot;</font><a href="coupling-reset-selection-evidence.html">coupling-reset-selection-evidence</a><font
+      class="ym-sep">&middot;</font><a href="endpoint-closure-ledger.html">endpoint-closure-ledger</a><font class="ym-sep">&middot;</font><a
+      href="finite-rank-kernel-transport-evidence.html">finite-rank-kernel-transport-evidence</a><font class="ym-sep">&middot;</font><a
+      href="flat-estimate-audit.html">flat-estimate-audit</a><font class="ym-sep">&middot;</font><a href="flat-step-evidence.html">flat-step-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-collision-pole-separation-evidence.html">free-collision-pole-separation-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-horizon-convergence-evidence.html">free-horizon-convergence-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-internal-ward-erasure-evidence.html">free-internal-ward-erasure-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-kernel-components-evidence.html">free-kernel-components-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-kernel-estimates-evidence.html">free-kernel-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-maxwell-radial-flux-evidence.html">free-maxwell-radial-flux-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-maxwell-ward-flux-evidence.html">free-maxwell-ward-flux-evidence</a><font
+      class="ym-sep">&middot;</font><a href="fullmesh-correlation-cauchy-evidence.html">fullmesh-correlation-cauchy-evidence</a><font
+      class="ym-sep">&middot;</font><a href="fullmesh-fixedbounds-producer-evidence.html">fullmesh-fixedbounds-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="handoff/index.html">handoff</a><font class="ym-sep">&middot;</font><a
+      href="inherited-loop-transport-evidence.html">inherited-loop-transport-evidence</a><font class="ym-sep">&middot;</font><a
+      href="lattice-evidence.html">lattice-evidence</a><font class="ym-sep">&middot;</font><a href="lattice-history-closure-refresh.html">lattice-history-closure-refresh</a><font
+      class="ym-sep">&middot;</font><a href="limits-evidence.html">limits-evidence</a><font class="ym-sep">&middot;</font><a
+      href="local-projection-evidence.html">local-projection-evidence</a><font class="ym-sep">&middot;</font><a href="marked-campaign-producer-evidence.html">marked-campaign-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="marked-field-local-estimates-evidence.html">marked-field-local-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="marked-healthy-cumulant-launch-evidence.html">marked-healthy-cumulant-launch-evidence</a><font
+      class="ym-sep">&middot;</font><a href="marked-portfolio-calibration-evidence.html">marked-portfolio-calibration-evidence</a><font
+      class="ym-sep">&middot;</font><a href="multileg-curvature-lift-evidence.html">multileg-curvature-lift-evidence</a><font
+      class="ym-sep">&middot;</font><a href="ope-closure-refresh.html">ope-closure-refresh</a><font class="ym-sep">&middot;</font><a
+      href="ope-evidence.html">ope-evidence</a><font class="ym-sep">&middot;</font><a href="ope-history-service-evidence.html">ope-history-service-evidence</a><font
+      class="ym-sep">&middot;</font><a href="ope-scale-purchases-evidence.html">ope-scale-purchases-evidence</a><font
+      class="ym-sep">&middot;</font><a href="original-history-portfolio-attachment-evidence.html">original-history-portfolio-attachment-evidence</a><font
+      class="ym-sep">&middot;</font><a href="parameter-continuity-evidence.html">parameter-continuity-evidence</a><font
+      class="ym-sep">&middot;</font><a href="path-attachment-producer-evidence.html">path-attachment-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="phase-evidence.html">phase-evidence</a><font class="ym-sep">&middot;</font><a
+      href="phase-null-inheritance-evidence.html">phase-null-inheritance-evidence</a><font class="ym-sep">&middot;</font><a
+      href="phase-quantitative-producer-evidence.html">phase-quantitative-producer-evidence</a><font class="ym-sep">&middot;</font><a
+      href="phase-ward-inheritance-evidence.html">phase-ward-inheritance-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-angular-actions-evidence.html">physical-angular-actions-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-reset-reorganization-evidence.html">physical-reset-reorganization-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-analytic-continuation-evidence.html">physical-ward-analytic-continuation-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-final-binding-audit.html">physical-ward-final-binding-audit</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-free-classification-evidence.html">physical-ward-free-classification-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-packet-prices-evidence.html">physical-ward-packet-prices-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-propagation-evidence.html">physical-ward-propagation-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-stress-cone-evidence.html">physical-ward-stress-cone-evidence</a><font class="ym-sep">&middot;</font><a
+      href="public-binding-package-audit.html">public-binding-package-audit</a><font class="ym-sep">&middot;</font><a
+      href="public-run-binding-evidence.html">public-run-binding-evidence</a><font class="ym-sep">&middot;</font><a
+      href="quadratic-pole-transport-evidence.html">quadratic-pole-transport-evidence</a><font class="ym-sep">&middot;</font><a
+      href="rank-root-normalization-evidence.html">rank-root-normalization-evidence</a><font class="ym-sep">&middot;</font><a
+      href="reconstruction-evidence.html">reconstruction-evidence</a><font class="ym-sep">&middot;</font><a href="restarted-rank-history-evidence.html">restarted-rank-history-evidence</a><font
+      class="ym-sep">&middot;</font><a href="rg-construction-evidence.html">rg-construction-evidence</a><font class="ym-sep">&middot;</font><a
+      href="rg-horizon-geometry-evidence.html">rg-horizon-geometry-evidence</a><font class="ym-sep">&middot;</font><a
+      href="rg-menu-jets-evidence.html">rg-menu-jets-evidence</a><font class="ym-sep">&middot;</font><a href="rg-multisource-evidence.html">rg-multisource-evidence</a><font
+      class="ym-sep">&middot;</font><a href="rg-price-receipts-evidence.html">rg-price-receipts-evidence</a><font
+      class="ym-sep">&middot;</font><a href="row-quadratic-price-evidence.html">row-quadratic-price-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-centered-service-evidence.html">selected-centered-service-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-course-binding-evidence.html">selected-course-binding-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-history-limits-evidence.html">selected-history-limits-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-kinetic-response-evidence.html">selected-kinetic-response-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-nonlinear-offering-evidence.html">selected-nonlinear-offering-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-stationary-linear-data-evidence.html">selected-stationary-linear-data-evidence</a><font
+      class="ym-sep">&middot;</font><a href="soft-curvature-receipts-evidence.html">soft-curvature-receipts-evidence</a><font
+      class="ym-sep">&middot;</font><a href="stationary-determinant-prices-evidence.html">stationary-determinant-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="stationary-germ-symmetry-evidence.html">stationary-germ-symmetry-evidence</a><font
+      class="ym-sep">&middot;</font><a href="stationary-output-construction-evidence.html">stationary-output-construction-evidence</a><font
+      class="ym-sep">&middot;</font><a href="stationary-small-field-evidence.html">stationary-small-field-evidence</a><font
+      class="ym-sep">&middot;</font><a href="surviving-interval-shooting-evidence.html">surviving-interval-shooting-evidence</a><font
+      class="ym-sep">&middot;</font><a href="terminal-marked-construction-evidence.html">terminal-marked-construction-evidence</a><font
+      class="ym-sep">&middot;</font><a href="terminal-normalization-transfer-evidence.html">terminal-normalization-transfer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="thermal-contact-cancellation-evidence.html">thermal-contact-cancellation-evidence</a><font
+      class="ym-sep">&middot;</font><a href="three-panel-weak-comparison-evidence.html">three-panel-weak-comparison-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-bill-prices-evidence.html">trace-bill-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-calibration-producer-evidence.html">trace-calibration-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-coffer-supplier-evidence.html">trace-coffer-supplier-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-crown-buffer-evidence.html">trace-crown-buffer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-eve-producer-evidence.html">trace-eve-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-evidence.html">trace-evidence</a><font class="ym-sep">&middot;</font><a
+      href="trace-firesky-gallery-evidence.html">trace-firesky-gallery-evidence</a><font class="ym-sep">&middot;</font><a
+      href="trace-free-rank-evidence.html">trace-free-rank-evidence</a><font class="ym-sep">&middot;</font><a href="trace-local-charge-evidence.html">trace-local-charge-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-local-paid-budgets-evidence.html">trace-local-paid-budgets-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-local-pairing-evidence.html">trace-local-pairing-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-local-rate-selection-evidence.html">trace-local-rate-selection-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-medal-prices-evidence.html">trace-medal-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-mission-price-evidence.html">trace-mission-price-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-price-recurrence-evidence.html">trace-price-recurrence-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-probe-assembly-evidence.html">trace-probe-assembly-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-regular-atom-evidence.html">trace-regular-atom-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-row-jet-estimates-evidence.html">trace-row-jet-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-scribe-producer-evidence.html">trace-scribe-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-small-means-evidence.html">trace-small-means-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-weighted-estimates-evidence.html">trace-weighted-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="usage-hold-checkpoint.html">usage-hold-checkpoint</a><font class="ym-sep">&middot;</font><font
+      class="ym-here">validation</font><font class="ym-sep">&middot;</font><a href="weighted-frame-penalty-evidence.html">weighted-frame-penalty-evidence</a><font
+      class="ym-sep">&middot;</font><a href="weighted-stationary-inverses-evidence.html">weighted-stationary-inverses-evidence</a><font
+      class="ym-sep">&middot;</font><a href="wilson-startup-construction-evidence.html">wilson-startup-construction-evidence</a><font
+      class="ym-sep">&middot;</font><a href="wilson-vacuum-price-evidence.html">wilson-vacuum-price-evidence</a></span>
+    </div>
+  </body>
+</html>

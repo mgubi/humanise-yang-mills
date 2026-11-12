@@ -66,13 +66,17 @@
         <b>Environment</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">2</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Commands and outcomes</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+        <b>Commands and outcomes</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">3</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
         <b>Retained logs</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">3</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Limitations</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">3</a>
+        <b>Limitations</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Addendum: clean from-source rebuild (issue #37)</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-6">4</a>
       </p>
     </div>
     <table style="width: 100%">
@@ -94,8 +98,9 @@
       </tr><tr>
         <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Status</td>
         <td style="border-right: 1px solid; border-bottom: 1px solid"><strong>Pinned build commands passed from a verified
-        prebuilt artifact; no clean source rebuild was performed on this
-        host</strong></td>
+        prebuilt artifact; no clean source rebuild was performed on this host.
+        A clean from-source rebuild on a separate Linux host passed on 12
+        November 2026: see the addendum below</strong></td>
       </tr></tbody>
     </table>
     <h2 id="auto-1"><a id="result"></a>Result<span style="margin-left: 1em"></span></h2>
@@ -307,6 +312,38 @@ env PATH=/Users/hairer/.elan/toolchains/leanprover--lean4---v4.32.0/bin:/opt/hom
           the build. They did not cause failure. The deliberate reference
           placeholder in <tt class="verbatim">Challenge.lean</tt> is accounted for in
           the axiom evidence.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-6"><a id="addendum-clean-from-source-rebuild-issue-37"></a>Addendum: clean from-source rebuild (issue #37)<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      On 12 November 2026 every project module was compiled from source on an
+      independent Linux x86-64 host, from an empty project build directory and
+      without the prebuilt artifact, and the upstream verification commands
+      were repeated. All passed with the same job count, replay counts,
+      endpoint axioms and inventory counts as recorded above. The record is <a
+      href="evidence/clean-build-3456e5e.html"><tt class="verbatim">evidence/clean-build-3456e5e.md</tt></a>. This closes
+      the third limitation above for the project's own modules; Mathlib and
+      the other external packages still come from their pinned caches. Two
+      observations from that record qualify statements in this file:
+    </p>
+    <ul>
+      <li>
+        <p>
+          In the Git import, <tt class="verbatim">shasum -a 256 -c SOURCES.sha256</tt>
+          reports 9,497 files <tt class="verbatim">OK</tt> and 10 absent (the ten <tt
+          class="verbatim">verification/*.log</tt> files of the manifest, which are not
+          tracked). The &quot;all 9,507 listed files&quot; result above
+          describes the original archive.
+        </p>
+      </li>
+      <li>
+        <p>
+          The prebuilt artifact's generated C and <tt class="verbatim">.ilean</tt> files
+          are byte-identical to the fresh build, but 1,044 of its 9,470 <tt
+          class="verbatim">.olean</tt> files differ by 8 or 16 bytes in length. The
+          cause is undetermined.
         </p>
       </li>
     </ul>

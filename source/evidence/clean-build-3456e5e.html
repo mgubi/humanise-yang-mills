@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Clean from-source rebuild of 3456e5e on an independent Linux host
+    &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Clean from-source rebuild of <tt class="verbatim">3456e5e</tt> on an
+      independent Linux host</h1><a id="clean-from-source-rebuild-of-3456e5e-on-an-independent-linux-host"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Result</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>What was and was not compiled here</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-2">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Source integrity observation</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Comparison with the published prebuilt artifact</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-4">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Environment</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Commands and outcomes</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Retained logs</b> <span style="margin-left: 5mm"></span> <a href="#auto-7">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Checks not performed</b> <span style="margin-left: 5mm"></span> <a href="#auto-8">5</a>
+      </p>
+    </div>
+    <ul>
+      <li>
+        <p>
+          Audit task: <a href="https://github.com/hairer/humanise-yang-mills/issues/37">issue #37</a>, follow-up to <a href="https://github.com/hairer/humanise-yang-mills/issues/2">issue
+          #2</a>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Source revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>,
+          read from this repository's <tt class="verbatim">Lean/</tt> at commit <tt
+          class="verbatim">5535cc1579029c69155b0d0a89c13b819bf0f5f1</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Contributor and agent assistance: schmittj; run and written up with
+          Claude, session <tt class="verbatim">schmittj-claude-build-20261112</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Date: 12 November 2026. Status: author evidence, not independently
+          reviewed.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-1"><a id="result"></a>Result<span style="margin-left: 1em"></span></h2>
+    <p>
+      Every project module was compiled from source on the audit host,
+      starting from an empty project build directory and without the prebuilt
+      project artifact. All commands exited with status 0:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">lake build WilsonReference WilsonConstruction</tt>: <tt
+          class="verbatim">Build completed successfully (18126 jobs).</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">lake build --no-build WilsonReference
+          WilsonConstruction</tt>: <tt class="verbatim">All targets up-to-date (18126
+          jobs).</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">lake build YM</tt>: <tt class="verbatim">Build completed
+          successfully (18112 jobs).</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">VerifyJoint.lean</tt>: <tt class="verbatim">TYPE_MATCH
+          YangMills.jointExistence</tt>, 17 <tt class="verbatim">ENDPOINT_AXIOMS</tt>
+          lines each listing exactly <tt class="verbatim">[propext, Classical.choice,
+          Quot.sound]</tt>, and <tt class="verbatim">REPLAY_PASS project=100168
+          external=14364 endpoints=17 duplicateAliases=0</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">verification/CompactCheck.lean</tt>: <tt class="verbatim">COMPACT_ESTIMATE</tt>
+          for <tt class="verbatim">YangMills.CompactCheck.compactCoefficient</tt> and
+          <tt class="verbatim">compactRemainder</tt>, both <tt class="verbatim">[propext,
+          Classical.choice, Quot.sound]</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">verification/Inventory.lean</tt>: <tt class="verbatim">INVENTORY_PASS</tt>,
+          <tt class="verbatim">DECLARATION_SCAN declarations=249713 directSorryAx=0
+          projectAxioms=0</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">verification/Usage.lean</tt>: <tt class="verbatim">USAGE_PASS
+          headlines=17 project=250319 used=100168 outside=150151 modules=9469
+          modulesWithNoUsedDeclaration=2946</tt>.
+        </p>
+      </li>
+    </ul>
+    <p>
+      These agree with the values recorded under #2 in <tt class="verbatim">source/build.md</tt>,
+      <a href="axioms-3456e5e.html"><tt class="verbatim">axioms-3456e5e.md</tt></a> and <a href="usage-3456e5e.html"><tt class="verbatim">usage-3456e5e.md</tt></a>:
+      the same job count, the same replay counts, the same 17 endpoints with
+      the same three axioms, the same declaration and usage counts. The
+      regenerated inventories have the same SHA-256 digests as the ones
+      regenerated under #2 (<tt class="verbatim">declaration-usage.tsv</tt> <tt class="verbatim">9dc9a62a&hellip;be4d2a</tt>,
+      <tt class="verbatim">module-usage.tsv</tt> <tt class="verbatim">f9db49e0&hellip;c265dc</tt>),
+      so the three <tt class="verbatim">source_line</tt> differences from the checked-in
+      <tt class="verbatim">declaration-usage.tsv</tt> reported there are reproduced;
+      columns 1&ndash;5 of the regenerated and checked-in files are identical
+      (<tt class="verbatim">diff</tt> of <tt class="verbatim">cut -f1-5</tt>: no output).
+    </p>
+    <p>
+      The build log contains no failed job (<tt class="verbatim">&#x2716;</tt>: 0
+      occurrences) and one <tt class="verbatim">sorry</tt> warning, <tt class="verbatim">Challenge.lean:5:8:
+      declaration uses 'sorry'</tt>, the deliberate reference placeholder
+      already accounted for in <tt class="verbatim">axioms-3456e5e.md</tt>.
+    </p>
+    <h2 id="auto-2"><a id="what-was-and-was-not-compiled-here"></a>What was and was not compiled here<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          <strong>Compiled on this host from source:</strong> all modules of
+          the project libraries <tt class="verbatim">YM</tt>, <tt class="verbatim">WilsonPublic</tt>,
+          <tt class="verbatim">WilsonReference</tt>, <tt class="verbatim">WilsonConstruction</tt>.
+          Before the build, <tt class="verbatim">Lean/.lake/build</tt> did not exist
+          (<tt class="verbatim">ls: cannot access '.lake/build'</tt>), and the working
+          tree had no local change (<tt class="verbatim">git status --porcelain</tt>: 0
+          lines before and after).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Taken from external caches, not recompiled:</strong> Mathlib
+          at <tt class="verbatim">81a5d257c8e410db227a6665ed08f64fea08e997</tt> and the
+          other pinned packages, fetched by <tt class="verbatim">lake exe cache get</tt>
+          (final line <tt class="verbatim">Already decompressed 8639 file(s)</tt>) after
+          Lake cloned the repositories named in <tt class="verbatim">lake-manifest.json</tt>.
+          The 18,126 jobs include these.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Lean toolchain:</strong> the official <tt class="verbatim">leanprover/lean4:v4.32.0</tt>
+          binary installed by elan, <tt class="verbatim">Lean (version 4.32.0,
+          x86_64-unknown-linux-gnu, commit
+          8c9756b28d64dab099da31a4c09229a9e6a2ef35, Release)</tt>, <tt class="verbatim">Lake
+          version 5.0.0-src+8c9756b</tt>. Same commit as in #2, different
+          platform.
+        </p>
+      </li>
+    </ul>
+    <p>
+      So this closes the limitation in <tt class="verbatim">source/build.md</tt> that no
+      host had recompiled every project source file. It does not remove trust
+      in the pinned Lean binary, its kernel, or the pinned external package
+      artifacts, and it says nothing about the adequacy of any theorem
+      statement.
+    </p>
+    <h2 id="auto-3"><a id="source-integrity-observation"></a>Source integrity observation<span style="margin-left: 1em"></span></h2>
+    <p>
+      <tt class="verbatim">sha256sum -c SOURCES.sha256</tt> in a fresh clone reports
+      <strong>9,497 files <tt class="verbatim">OK</tt> and 10 files absent</strong>; it
+      exits with status 1 for that reason alone. The absent files are the ten
+      <tt class="verbatim">verification/*.log</tt> files listed in the manifest: <tt
+      class="verbatim">archive-graph.log</tt>, <tt class="verbatim">attributions.log</tt>, <tt
+      class="verbatim">build.log</tt>, <tt class="verbatim">compact-check.log</tt>, <tt class="verbatim">joint-check.log</tt>,
+      <tt class="verbatim">kernel.log</tt>, <tt class="verbatim">negative-controls.log</tt>, <tt
+      class="verbatim">source-match.log</tt>, <tt class="verbatim">su2-check.log</tt>, <tt class="verbatim">usage.log</tt>.
+      They are not tracked in this repository (<tt class="verbatim">git ls-files
+      Lean</tt> has 9,498 entries including the manifest; the manifest has
+      9,507 lines). No <tt class="verbatim">.lean</tt> file, toolchain file or manifest
+      is affected. The statement in <tt class="verbatim">source/build.md</tt> that all
+      9,507 listed files reported <tt class="verbatim">OK</tt> therefore describes the
+      original archive, not the Git import; <tt class="verbatim">Lean/README.md</tt>
+      links to several of the missing logs. Whether to add them to the import
+      is left to the maintainer.
+    </p>
+    <p>
+      The digests of <tt class="verbatim">lean-toolchain</tt> (<tt class="verbatim">2773c517&hellip;fd32e</tt>)
+      and <tt class="verbatim">lake-manifest.json</tt> (<tt class="verbatim">389c72d1&hellip;724c3</tt>)
+      equal those in <tt class="verbatim">source/build.md</tt>.
+    </p>
+    <h2 id="auto-4"><a id="comparison-with-the-published-prebuilt-artifact"></a>Comparison with the published prebuilt artifact<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      The artifact used under #2, Scott Armstrong's <a href="https://github.com/scottnarmstrong/yang-mills-informalization/releases/tag/lean-build-3456e5e">compiled Lean
+      release</a>, was downloaded to the same host and unpacked to a separate
+      directory; it was not used for the build. Both parts matched <tt class="verbatim">SHA256SUMS</tt>,
+      and the concatenated archive has digest <tt class="verbatim">07c145c36a45948ac55044a98d5626c201fe7ad6214d627a0739694c8e464707</tt>,
+      as recorded in <tt class="verbatim">source/build.md</tt>. Every file of the
+      artifact (66,290) has a counterpart in the fresh build directory. Byte
+      comparison by SHA-256:
+    </p>
+    <p>
+      <table style="display: inline-table; vertical-align: middle">
+        <tbody><tr>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>File kind</strong></td>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right; border-top: 1px solid; border-bottom: 1px solid"><strong>Common</strong></td>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right; border-top: 1px solid; border-bottom: 1px solid"><strong>Identical</strong></td>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right; border-top: 1px solid; border-bottom: 1px solid"><strong>Different</strong></td>
+        </tr><tr>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">generated C (<tt class="verbatim">ir/**/*.c</tt>)</td>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">9,470</td>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">9,470</td>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">0</td>
+        </tr><tr>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">.ilean</tt></td>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">9,470</td>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">9,470</td>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">0</td>
+        </tr><tr>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">.olean</tt></td>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">9,470</td>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">8,426</td>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">1,044</td>
+        </tr><tr>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">.hash</tt> side files</td>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">28,410</td>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">27,366</td>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">1,044</td>
+        </tr><tr>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">.trace</tt></td>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">9,470</td>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">0</td>
+          <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">9,470</td>
+        </tr></tbody>
+      </table>
+    </p>
+    <p>
+      Present only in the fresh build: the files of the aggregate root <tt
+      class="verbatim">YM</tt> (absent from the artifact, as #2 found) and 9,471 <tt
+      class="verbatim">.json</tt> files written by Lake.
+    </p>
+    <p>
+      The 1,044 differing <tt class="verbatim">.olean</tt> files are in every case
+      <strong>larger in the fresh build, by 8 bytes or by 16 bytes</strong>
+      (minimum 8, median 16, maximum 16); their <tt class="verbatim">.hash</tt> side
+      files differ accordingly. They are concentrated in <tt class="verbatim">YM/TraceExtension</tt>
+      (249), <tt class="verbatim">YM/FullVolume</tt> (219), <tt class="verbatim">YM/UVExtension</tt>
+      (126), <tt class="verbatim">YM/OPE</tt> (94), <tt class="verbatim">YM/MergeProof</tt> (78),
+      <tt class="verbatim">YM/MultipleContact</tt> (67), <tt class="verbatim">YM/Pert</tt> (63).
+      For one sample, <tt class="verbatim">YM/Contacts/Solstice/JetLocal.olean</tt>
+      (1,160,784 bytes in the artifact), <tt class="verbatim">cmp -l</tt> reports 5,364
+      differing byte positions before the end of the shorter file, one in the
+      header region and the rest near the end of the file.
+    </p>
+    <p>
+      <strong>The cause was not determined.</strong> The identical generated C
+      and <tt class="verbatim">.ilean</tt> files show that the compiled code and the
+      declaration index agree for all modules; the difference is confined to
+      the serialized environment data of about 11% of the modules and has a
+      fixed small size. This is evidence to examine, not a proof failure: the
+      fresh <tt class="verbatim">.olean</tt> files are the ones that passed the kernel
+      replay above, and the artifact's passed the same replay under #2. A
+      semantic comparison of the two sets (declaration by declaration) was not
+      performed. <tt class="verbatim">.trace</tt> files record host-specific build
+      traces and are expected to differ.
+    </p>
+    <h2 id="auto-5"><a id="environment"></a>Environment<span style="margin-left: 1em"></span></h2>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Component</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Value</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Host</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Linux <tt class="verbatim">7.2.8-200.fc44.x86_64</tt>, Fedora Linux
+        44, x86-64, 72 cores (Intel Xeon Gold 6254), 503 GB RAM; shared
+        machine with other users' jobs running</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Lean / Lake</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">4.32.0, commit <tt class="verbatim">8c9756b28d64dab099da31a4c09229a9e6a2ef35</tt>
+        / <tt class="verbatim">5.0.0-src+8c9756b</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Settings</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">LEAN_NUM_THREADS=36</tt>, build commands run
+        under <tt class="verbatim">nice -n 10</tt>; <tt class="verbatim">ELAN_HOME</tt>, <tt
+        class="verbatim">XDG_CACHE_HOME</tt>, <tt class="verbatim">MATHLIB_CACHE_DIR</tt> and <tt
+        class="verbatim">TMPDIR</tt> pointed at a scratch directory</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Repository</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">git clone
+        https://github.com/hairer/humanise-yang-mills.git</tt>, checked out at
+        <tt class="verbatim">5535cc1579029c69155b0d0a89c13b819bf0f5f1</tt>; <tt class="verbatim">Lean/</tt>
+        last changed in <tt class="verbatim">9865613</tt></td>
+      </tr></tbody>
+    </table>
+    <h2 id="auto-6"><a id="commands-and-outcomes"></a>Commands and outcomes<span style="margin-left: 1em"></span></h2>
+    <p>
+      All from <tt class="verbatim">Lean/</tt> of the fresh clone, with the pinned
+      toolchain first on <tt class="verbatim">PATH</tt>. Each command was wrapped in <tt
+      class="verbatim">/usr/bin/time -v</tt>.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Command</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Result</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right; border-top: 1px solid; border-bottom: 1px solid"><strong>Wall time</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right; border-top: 1px solid; border-bottom: 1px solid"><strong>Peak RSS of one process</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">sha256sum -c SOURCES.sha256</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">9,497 <tt class="verbatim">OK</tt>, 10 absent (see above)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">&mdash;</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">&mdash;</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">lake exe cache get</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Pass</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">1 min 36 s</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">&mdash;</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">lake build WilsonReference
+        WilsonConstruction</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Pass, 18,126 jobs</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">3 h 16 min 48 s (143,307 s user CPU)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">13.7 GB</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">lake build --no-build WilsonReference
+        WilsonConstruction</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Pass, all up to date</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">9 s</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">&mdash;</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">lake build YM</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Pass, 18,112 jobs</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">16 s</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">12.7 GB</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">lake env lean -j1 -DmaxHeartbeats=0
+        -DmaxRecDepth=4096 VerifyJoint.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Pass, see Result</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">22 min 22 s</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">29.6 GB</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">lake env lean -j1
+        verification/CompactCheck.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Pass</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">7 s</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">7.1 GB</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">lake env lean -j1 -DmaxHeartbeats=0
+        -DmaxRecDepth=4096 verification/Inventory.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Pass</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">47 s</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">13.7 GB</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">Usage.lean</tt> in a temporary overlay
+        containing only <tt class="verbatim">verification/joint-headlines.txt</tt>, as
+        under #2: <tt class="verbatim">lake env sh -c 'cd OVERLAY &amp;&amp; lean -j1
+        -DmaxHeartbeats=0 -DmaxRecDepth=4096
+        LEAN/verification/Usage.lean'</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Pass</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">47 s</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; text-align: right">13.5 GB</td>
+      </tr></tbody>
+    </table>
+    <p>
+      The long wall time of the main build reflects the shared host and the
+      thread limit; it is not a property of the project. The order differs
+      from #2 in one respect: <tt class="verbatim">lake build YM</tt> was run before <tt
+      class="verbatim">Inventory.lean</tt>, so the preliminary failure recorded there
+      (missing <tt class="verbatim">YM.olean</tt>) does not occur.
+    </p>
+    <h2 id="auto-7"><a id="retained-logs"></a>Retained logs<span style="margin-left: 1em"></span></h2>
+    <p>
+      Raw logs are kept on the audit host and are not committed. SHA-256
+      digests:
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Log</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>SHA-256</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">build.log</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">b794ad3af6d2841e173601cdbd2fa6d892a605bc99ab99661be3f618e59d1fb9</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">build-nobuild.log</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">498295121071b8622c1b05d4046e2e5507178d2d1f900b205d616db8330164f0</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">build-ym.log</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">ae45ce68349259436d1b9592fde1aa020823c06c40f6866c0cee586ada580227</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">cache-get.log</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">be893da9a4295dc530eb8b426b1f5b49206d80f6a3c18f0ef4c2f8caa9d77d08</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">sources.log</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">267635c96da05a670352fef03ed4db54024db15d121dbebfe777c1c31b560d7d</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">toolchain.log</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">44e4d5ceab76db792d1818bf00fee45e094106615b483add8cd32bf69286c27d</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">verify-joint.log</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">2410c8c1eefb052519dd5d281ec7f452a4dfb78e6a3eb6e543277f9345aed26b</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">compact-check.log</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">1e17482cb51be4beeffee22a3bb08bca9b5845b56f0e4f0c7d55ca640dc72e36</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">inventory.log</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">05707f033cd2bd57eae998b84bd39e2dbd62632ca407e7ea6724e60b140feacc</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">usage.log</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">f30a24774b78df2565113ce0350de6bfd9c5ef4a8d12479d57e25de8e4e1b29e</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">artifact file hashes (<tt class="verbatim">cmp_artifact.sha</tt>)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">e6a8db82965ade3682bc6e039c482b146a22e7631d39fee8d5174ea6f49f2bcf</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">fresh build file hashes (<tt class="verbatim">cmp_ours.sha</tt>)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">d7ee18cad9535f5634e8e344f5fade009d6e49677ed7ec38e939c39c41ef6b64</tt></td>
+      </tr></tbody>
+    </table>
+    <p>
+      The digests of <tt class="verbatim">verify-joint.log</tt>, <tt class="verbatim">usage.log</tt>
+      and the build logs differ from those under #2 because the logs contain
+      host paths and timings; the result lines quoted above are the comparable
+      content. The logs and the two hash lists can be supplied on request.
+    </p>
+    <h2 id="auto-8"><a id="checks-not-performed"></a>Checks not performed<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Mathlib and the other external packages were not recompiled from
+          source.
+        </p>
+      </li>
+      <li>
+        <p>
+          The standalone Comparator executable was not run with <tt class="verbatim">Lean/comparator.json</tt>
+          (upstream's README records the same). Unrun.
+        </p>
+      </li>
+      <li>
+        <p>
+          No independent kernel or checker other than the pinned Lean kernel
+          was used.
+        </p>
+      </li>
+      <li>
+        <p>
+          The cause of the 1,044 differing <tt class="verbatim">.olean</tt> files was
+          not investigated beyond the size and location statistics above.
+        </p>
+      </li>
+      <li>
+        <p>
+          The upstream <tt class="verbatim">verification/negative-controls</tt> were not
+          re-run.
+        </p>
+      </li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Review of a proof unit &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <div class="ym-unit-nav">
+      <span class="ym-part"><a href="../correspondence.html">YM-000022: Logarithmic asymptotics of the running
+      inverse coefficient (draft)</a><font class="ym-sep">&middot;</font><a href="../evidence/index.html">evidence</a><font
+      class="ym-sep">&middot;</font><a href="../proof.html">proof</a></span><a class="ym-next" href="../../YM-000026/correspondence.html">YM-000026
+      &rarr;</a>
+    </div>
+    <p>
+      <h1>Review of a proof unit</h1><a id="review-of-a-proof-unit"></a>
+    </p>
+    <ul>
+      <li>
+        <p>
+          Unit: YM-000022, <tt class="verbatim">blueprint/units/YM-000022/</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Role: Lean correspondence
+        </p>
+      </li>
+      <li>
+        <p>
+          Human reviewer: mgubi (no acceptance recorded; see the last section)
+        </p>
+      </li>
+      <li>
+        <p>
+          Agent assistance: Claude Code (Claude Fable 5.2) carried out the
+          inspection and wrote this report. One subagent fetched a web page
+          for the mathematical review; none was used for this role.
+        </p>
+      </li>
+      <li>
+        <p>
+          Content SHA-256: <tt class="verbatim">367b5982bb56035d3f0cbf81641d1f0564c27a48169707b9aa64a5cf3c0b0aa2</tt>
+          (<tt class="verbatim">python3 scripts/check_blueprint.py --fingerprint
+          YM-000022</tt> at main <tt class="verbatim">fa70509</tt>)
+        </p>
+      </li>
+      <li>
+        <p>
+          Manuscript files and labels: <tt class="verbatim">manuscript/pilots/running-coupling.tex</tt>
+          (<tt class="verbatim">sec:running-coefficient</tt>, <tt class="verbatim">eq:running</tt>,
+          <tt class="verbatim">prop:uniform-extraction</tt>, <tt class="verbatim">prop:running-asymptotic</tt>),
+          <tt class="verbatim">manuscript/preamble.tex</tt>, <tt class="verbatim">manuscript/references.bib</tt>.
+          The section has no <tt class="verbatim">\input</tt>; <tt class="verbatim">manuscript/main.tex</tt>
+          inputs only the preamble, this section and the bibliography. The
+          list in <tt class="verbatim">unit.json</tt> is complete.
+        </p>
+      </li>
+      <li>
+        <p>
+          Source revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Review task and PR: <a href="https://github.com/hairer/humanise-yang-mills/issues/22">issue #22</a>, claim <a href="https://github.com/hairer/humanise-yang-mills/issues/22#issuecomment-6817176547">https://github.com/hairer/humanise-yang-mills/issues/22#issuecomment-6817176547</a>
+        </p>
+      </li>
+      <li>
+        <p>
+          Outcome: changes requested (two additions to the crosswalk, one
+          clarification). No mismatch was found between the stated results and
+          the source.
+        </p>
+      </li>
+    </ul>
+    <p>
+      I am not an author of this unit. This is an agent-assisted review; it is
+      not a human acceptance.
+    </p>
+    <h2 id="auto-1"><a id="findings-and-evidence"></a>Findings and evidence<span style="margin-left: 1em"></span></h2>
+    <p>
+      Evidence levels: <strong>[E]</strong> elaborated by me at the pinned
+      revision; <strong>[S]</strong> source text read.
+    </p>
+    <h3 id="auto-2"><a id="statements"></a>Statements<span style="margin-left: 1em"></span></h3>
+    <ol>
+      <li>
+        <p>
+          <strong><tt class="verbatim">prop:uniform-extraction</tt> matches <tt class="verbatim">YM.Pert.Asymptotics.zeroUp_bound</tt>
+          [E].</strong> The elaborated type is: for <tt class="verbatim">C : YM.Family
+          G</tt> with <tt class="verbatim">C.Makes</tt> and <tt class="verbatim">0 &lt;
+          &epsilon;</tt>, eventually in <tt class="verbatim">m</tt>, for all <tt class="verbatim">N
+          p : &#x2115;</tt> with <tt class="verbatim">m &le; N</tt>, <tt class="verbatim">|C.path.&beta;
+          N p m / C.S.scale m - 2 * b0 G| &lt; &epsilon;</tt>. The text's
+          proposition is stated for abstract <tt class="verbatim">s_m</tt>, <tt class="verbatim">A</tt>,
+          <tt class="verbatim">c</tt> and so is more general; specialised to <tt class="verbatim">A
+          = bar</tt>, <tt class="verbatim">c = 2 b_0(G)</tt> it is this statement. The
+          Lean statement has no simplicity hypothesis, as the correspondence
+          says.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><tt class="verbatim">prop:running-asymptotic</tt> matches <tt class="verbatim">YM.Pert.Asymptotics.comparison</tt>
+          [E].</strong> Hypotheses <tt class="verbatim">C.Makes</tt>, <tt class="verbatim">G.Simple</tt>,
+          and <tt class="verbatim">&forall;&#x1DA0; i, i &le; N i</tt>; <tt class="verbatim">k :
+          &#x2115; &rarr; &#x2115;</tt> is unconstrained; conclusion <tt
+          class="verbatim">Tendsto (fun i =&gt; regulatorRun C (N i) (k i) i *
+          &radic;(Real.log (C.S.a i)&#x207B;&sup1;)) atTop (&#x1D4DD;
+          (&radic;(2 * b0 G))&#x207B;&sup1;)</tt>. The text's limit <tt class="verbatim">1/&radic;(2
+          b_0(G))</tt> and its quantifiers agree.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><tt class="verbatim">regulatorRun</tt> is total [E]:</strong> <tt
+          class="verbatim">fun C N p m =&gt; (&radic;(C.path.&beta; N p
+          m))&#x207B;&sup1;</tt>, no hypotheses. The correspondence's remark
+          on the totalised square root and inverse is accurate, and the text's
+          &quot;positive tail&quot; reading is enough for a <tt class="verbatim">Tendsto</tt>
+          statement.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><tt class="verbatim">b0</tt> and <tt class="verbatim">b0_normalizes</tt>
+          [E]:</strong> <tt class="verbatim">b0 G = 11 * G.casimir / (48 * &pi;^2)</tt>
+          and <tt class="verbatim">2 * b0 G = G.slopeConstant</tt>, with <tt class="verbatim">slopeConstant
+          = 11 * G.casimir / (24 * &pi;^2)</tt>.
+        </p>
+      </li>
+    </ol>
+    <h3 id="auto-3"><a id="the-input-eqrunning"></a>The input <tt class="verbatim">eq:running</tt><span style="margin-left: 1em"></span></h3>
+    <ol>
+      <li>
+        <p>
+          <strong><tt class="verbatim">eq:running</tt> is <tt class="verbatim">YM.RG.History.Running</tt>
+          for <tt class="verbatim">C.path</tt> [E].</strong> <tt class="verbatim">Running A :=
+          &forall; &epsilon; &gt; 0, &forall;&#x1DA0; m, &forall; N p, m &le;
+          N &rarr; |A.&beta; N p m - A.levels.clock.hatBeta m| &le; &epsilon;
+          * A.S.scale m</tt>, with <tt class="verbatim">hatBeta m = bar +
+          G.slopeConstant * schedule.scale m</tt>. It is reached by <tt class="verbatim">YM.Family.Makes.wilson</tt>
+          then <tt class="verbatim">YM.RG.History.Selected.running</tt>, as stated.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Hidden identification checked [E].</strong> <tt class="verbatim">Running</tt>
+          measures the error against <tt class="verbatim">A.S.scale</tt> while <tt
+          class="verbatim">hatBeta</tt> uses <tt class="verbatim">clock.schedule.scale</tt>, and
+          the theorems use <tt class="verbatim">C.S.scale</tt>. All three are the same
+          schedule by unfolding: <tt class="verbatim">Family.S C = C.path.levels.S</tt>
+          and <tt class="verbatim">Levels.S s = s.clock.schedule</tt> are reducible
+          abbreviations, and <tt class="verbatim">example &hellip; :
+          C.path.levels.clock.hatBeta m = C.path.levels.clock.bar +
+          G.slopeConstant * C.S.scale m := rfl</tt> elaborates. So the single
+          <tt class="verbatim">s_m</tt> of the text is faithful.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Spacing and scale [E].</strong> <tt class="verbatim">Schedule.a S m =
+          ((S.denominator m : &#x2115;) : &#x211D;)&#x207B;&sup1;</tt>, <tt
+          class="verbatim">Schedule.scale S m = Real.log (S.a m)&#x207B;&sup1;</tt> (by
+          <tt class="verbatim">rfl</tt>), <tt class="verbatim">denominator 0 = 1</tt>, <tt class="verbatim">denominator
+          (k+1) = denominator k * block k</tt> [S, <tt class="verbatim">Lean/YM/Lattice/Scale.lean:39&ndash;41</tt>],
+          and <tt class="verbatim">Schedule.block_large : &forall; m, 3 &le; block
+          m</tt>. This is the text's <tt class="verbatim">a_m = (&prod;_{j&lt;m}
+          B_j)^{-1}</tt> with integer <tt class="verbatim">B_j &ge; 3</tt>. Lean also
+          requires each <tt class="verbatim">B_j</tt> odd; the text does not use this.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Indices [E].</strong> <tt class="verbatim">History.&beta; A N p m =
+          (A.rep N p m).beta</tt>, where <tt class="verbatim">A.rep N p m : Rep G
+          (levels.S.side m p)</tt> and <tt class="verbatim">side m p = period p *
+          denominator m</tt>. So <tt class="verbatim">m</tt> indexes the lattice of
+          spacing <tt class="verbatim">a_m</tt>, <tt class="verbatim">N</tt> the starting level
+          and <tt class="verbatim">p</tt> the period, as in the text. The function is
+          defined for all <tt class="verbatim">N, p, m</tt>; only <tt class="verbatim">m &le;
+          N</tt> is constrained, which is what the text uses.
+        </p>
+      </li>
+    </ol>
+    <h3 id="auto-4"><a id="gauge-data-and-the-constant"></a>Gauge data and the constant<span style="margin-left: 1em"></span></h3>
+    <ol>
+      <li>
+        <p>
+          <strong>Group and Lie algebra [E].</strong> <tt class="verbatim">YM.Gauge</tt>
+          is a natural number <tt class="verbatim">n</tt> and a closed subgroup of <tt
+          class="verbatim">Matrix.unitaryGroup (Fin (n+1)) &#x2102;</tt>; <tt class="verbatim">repDim
+          = n + 1</tt>. <tt class="verbatim">G.lie</tt> is the real subspace of matrices
+          <tt class="verbatim">X</tt> with <tt class="verbatim">exp(tX)</tt> in the group for
+          every real <tt class="verbatim">t</tt> (<tt class="verbatim">YM.Gauge.Generates</tt>).
+          <tt class="verbatim">G.Simple</tt> says some pair in <tt class="verbatim">G.lie</tt>
+          does not commute and every real subspace of <tt class="verbatim">G.lie</tt>
+          stable under brackets with <tt class="verbatim">G.lie</tt> is <tt class="verbatim">&perp;</tt>
+          or <tt class="verbatim">G.lie</tt>. The opening sentence of the section is a
+          faithful reading, with <tt class="verbatim">r_G = n + 1</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Casimir normalisation [E].</strong> <tt class="verbatim">casimir =
+          (-&sum; i, trace (ad (b i) &#x2218; ad (b i))) / lieDim</tt>, with
+          <tt class="verbatim">b</tt> the standard basis of <tt class="verbatim">Color =
+          EuclideanSpace &#x211D; (Fin lieDim)</tt> and <tt class="verbatim">ad c d =
+          projectColor (colorMat c * colorMat d - colorMat d * colorMat
+          c)</tt>. <tt class="verbatim">YM.Gauge.trace_color</tt> gives <tt class="verbatim">-(colorMat
+          c * colorMat d).trace.re = repDim * &#x27EA;c, d&#x27EB;</tt>, so
+          the matrices <tt class="verbatim">colorMat (b i)</tt> are orthonormal for <tt
+          class="verbatim">&#x27E8;X,Y&#x27E9; = -r_G^{-1} Re tr(XY)</tt>. The text's
+          formula for <tt class="verbatim">C_&#x1D524;</tt> is this definition
+          transported along the linear isomorphism <tt class="verbatim">colorIso</tt>,
+          which preserves traces of endomorphisms. I did not inspect which
+          inner product on matrices defines <tt class="verbatim">orthogonalProjectionOnto</tt>
+          in <tt class="verbatim">projectColor</tt>; on brackets of elements of <tt
+          class="verbatim">G.lie</tt> the projection should be the identity, but I did
+          not look for the declaration that proves closure under brackets.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Positivity is proved differently in the text than in Lean
+          [S].</strong> <tt class="verbatim">YM.Gauge.casimir_pos</tt> (<tt class="verbatim">Lean/YM/Gauge/Casimir.lean:160&ndash;172</tt>)
+          picks a non-central <tt class="verbatim">x</tt>, shows <tt class="verbatim">-trace (ad x
+          * ad x) &gt; 0</tt>, and then uses <tt class="verbatim">trace_adjoint h</tt>,
+          which needs the full simplicity hypothesis, to convert this into
+          positivity of the constant. The text instead sums <tt class="verbatim">&#x2016;[e_j,
+          e_&#x2113;]&#x2016;&sup2;</tt> over a basis and uses only
+          noncommutativity. The text's route is a reorganised argument in the
+          sense of <tt class="verbatim">docs/proof-standard.md</tt> item 5 and is
+          checked in the mathematical review, not by the formal source.
+        </p>
+      </li>
+    </ol>
+    <h3 id="auto-5"><a id="crosswalk-table-and-evidence"></a>Crosswalk table and evidence<span style="margin-left: 1em"></span></h3>
+    <ol>
+      <li>
+        <p>
+          The fully qualified names in the table all exist and are at or near
+          the stated lines [E, S]. <tt class="verbatim">YM.Schedule.divergent</tt>
+          starts at <tt class="verbatim">Scale.lean:117</tt> and its proof runs past the
+          stated end line 120; this is immaterial.
+        </p>
+      </li>
+      <li>
+        <p>
+          The unit's <tt class="verbatim">evidence/lean-inspection.txt</tt> agrees line
+          for line with my own output for the same commands [E]. <tt class="verbatim">evidence/check_sources.py</tt>
+          rerun on this checkout reproduces <tt class="verbatim">evidence/source-checksums.txt</tt>
+          exactly, and the seven files are byte-identical to my separate
+          pinned checkout.
+        </p>
+      </li>
+      <li>
+        <p>
+          Axioms [E]: <tt class="verbatim">b0_normalizes</tt>, <tt class="verbatim">zeroUp_bound</tt>,
+          <tt class="verbatim">comparison</tt> each report <tt class="verbatim">[propext,
+          Classical.choice, Quot.sound]</tt>.
+        </p>
+      </li>
+    </ol>
+    <h3 id="auto-6"><a id="commands-run"></a>Commands run<span style="margin-left: 1em"></span></h3>
+    <p>
+      From a separate checkout of the pinned source (commit <tt class="verbatim">1dba6965</tt>,
+      which is the pinned revision plus CI and <tt class="verbatim">.gitignore</tt>
+      files; the seven source files above were compared with <tt class="verbatim">cmp</tt>
+      against <tt class="verbatim">Lean/</tt> in this repository), toolchain <tt class="verbatim">leanprover/lean4:v4.32.0</tt>,
+      existing build artifacts, no rebuild:
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+lake env lean c1.lean   # exit 0: #print/#check of the five owned declarations, Running, Calendar, hatBeta,
+                        # History, &beta;, Selected, Family, Family.S, Makes, Schedule, a, scale, a_pos, divergent,
+                        # Gauge, Simple, Color, colorIso, trace_color, ad, casimir, slopeConstant(_pos), axioms
+lake env lean c2.lean   # exit 0: denominator, Side, side, Levels(.S), History.S, Rep, GaugeU, lie, Alg,
+                        # ColorIndex, lieDim, repDim, colorScale, colorMat, projectColor, casimir_pos; three rfl examples
+lake env lean c3.lean   # exit 0: Wilson.bare, Rep.eval, block_large, Generates, Mat, dimPos
+python3 blueprint/units/YM-000022/evidence/check_sources.py &lt;this worktree&gt; | diff - &hellip;/source-checksums.txt   # no difference
+python3 scripts/check_blueprint.py --fingerprint YM-000022</pre>
+    <p>
+      The scratch files are not committed. No <tt class="verbatim">lake build</tt> and
+      no kernel replay were run.
+    </p>
+    <h2 id="auto-7"><a id="required-changes-and-remaining-uncertainty"></a>Required changes and remaining uncertainty<span style="margin-left: 1em"></span></h2>
+    <ol>
+      <li>
+        <p>
+          <strong>Add the source of the closing remark.</strong> &quot;At <tt
+          class="verbatim">N(i)=i</tt> the coefficient is the bare lattice action
+          coefficient&quot; rests on <tt class="verbatim">YM.RG.History.Selected.starts</tt>:
+          <tt class="verbatim">(A.rep N p N).v = 0 &and; (A.rep N p N).eval =
+          YM.Wilson.bare (A.&beta; N p N)</tt>, with <tt class="verbatim">Wilson.bare
+          &beta; U = exp(-&beta; * Wilson.energy U)</tt> [E]. Neither
+          declaration is in the crosswalk. I did not inspect <tt class="verbatim">Wilson.energy</tt>
+          or <tt class="verbatim">Rep.eval</tt>, so whether &quot;bare lattice action
+          coefficient&quot; needs a normalisation caveat is open.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Add the declarations behind the text's own divergence
+          argument.</strong> The text proves <tt class="verbatim">s_m &ge; m log 3</tt>
+          from the product formula and <tt class="verbatim">B_j &ge; 3</tt>. The table
+          cites <tt class="verbatim">Schedule.a</tt>, <tt class="verbatim">a_pos</tt>, <tt class="verbatim">scale</tt>,
+          <tt class="verbatim">divergent</tt> but not <tt class="verbatim">YM.Schedule.denominator</tt>
+          or <tt class="verbatim">YM.Schedule.block_large</tt>, which carry these two
+          facts. <tt class="verbatim">YM.Gauge.lie</tt> / <tt class="verbatim">YM.Gauge.Generates</tt>
+          and <tt class="verbatim">YM.Gauge.repDim</tt> would similarly anchor the
+          opening sentence.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Say that the positivity argument is not the Lean
+          one</strong> (finding 11). The correspondence currently says
+          simplicity &quot;is used here solely through <tt class="verbatim">slopeConstant_pos</tt>&quot;
+          and that the section &quot;supplies its elementary positivity
+          argument explicitly&quot;; it should state that this argument
+          replaces, and does not paraphrase, <tt class="verbatim">casimir_pos</tt>.
+        </p>
+      </li>
+    </ol>
+    <p>
+      Not checked: the definitions of <tt class="verbatim">A.Conv</tt>, <tt class="verbatim">A.Transfer</tt>,
+      <tt class="verbatim">Calendar.Fits</tt>, <tt class="verbatim">BlockControl</tt> and the
+      other fields of <tt class="verbatim">Family.Makes</tt> (not used by this unit);
+      <tt class="verbatim">Wilson.energy</tt>; the inner product on <tt class="verbatim">G.Mat</tt>;
+      anything about how <tt class="verbatim">Family.Makes</tt> is produced. The running
+      estimate remains an unproved input of the unit, as the unit says.
+    </p>
+    <h2 id="auto-8"><a id="acceptance"></a>Acceptance<span style="margin-left: 1em"></span></h2>
+    <p>
+      Not recorded. This report is agent-assisted evidence for a human
+      reviewer. Any edit made in response changes the content fingerprint and
+      needs a renewed check.
+    </p>
+    <div class="ym-unit-nav">
+      <span class="ym-part"><a href="../correspondence.html">YM-000022: Logarithmic asymptotics of the running
+      inverse coefficient (draft)</a><font class="ym-sep">&middot;</font><a href="../evidence/index.html">evidence</a><font
+      class="ym-sep">&middot;</font><a href="../proof.html">proof</a></span><a class="ym-next" href="../../YM-000026/correspondence.html">YM-000026
+      &rarr;</a>
+    </div>
+  </body>
+</html>

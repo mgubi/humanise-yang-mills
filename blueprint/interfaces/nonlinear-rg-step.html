@@ -1,0 +1,1290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Nonlinear RG step interfaces &mdash; working audit, issue #13
+    &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Nonlinear RG step interfaces &mdash; working audit, issue #13</h1><a
+      id="nonlinear-rg-step-interfaces--working-audit-issue-13"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Summary of findings</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Contract 1 &mdash; one-step estimates at fixed constants (candidate
+        PU-09)</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Contract 2 &mdash; pre-reset presentation of the blocked density
+        (candidate PU-08)</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">5</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Contract 3 &mdash; order of constants, bundle and closure
+        (candidate PU-10)</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">7</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Proposed ownership and order</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">9</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Obstructions and requested follow-up</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-6">10</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Literature leads (unverified)</b> <span style="margin-left: 5mm"></span> <a href="#auto-7">13</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Evidence</b> <span style="margin-left: 5mm"></span> <a href="#auto-8">13</a>
+      </p>
+    </div>
+    <p>
+      <strong>Status: author draft for independent Lean-correspondence
+      review.</strong> This is a bounded interface audit, not an exposition
+      and not an ownership grant. Imported source revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>;
+      paths are relative to <tt class="verbatim">Lean/</tt>. Scott Armstrong's <a href="https://github.com/scottnarmstrong/yang-mills-informalization/blob/8f3c7ccaeabb17b0f928bc1a2e75328691de3032/outline/units/III-10.md">III.10</a>,
+      <a href="https://github.com/scottnarmstrong/yang-mills-informalization/blob/8f3c7ccaeabb17b0f928bc1a2e75328691de3032/outline/units/III-9.md">III.9</a> and III.2 outlines at <tt class="verbatim">8f3c7ccaeabb17b0f928bc1a2e75328691de3032</tt>
+      were used as navigation leads, not as proof evidence. Do not commission
+      PU-08&ndash;PU-10 explanation tasks from this note before that review
+      and the follow-up audit requested in <a href="#obstructions-and-requested-follow-up">Obstructions</a>.
+    </p>
+    <p>
+      Three levels of evidence are distinguished throughout:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>[E]</strong> elaborated: the statement or definition was
+          printed by Lean (<tt class="verbatim">#check</tt>/<tt class="verbatim">#print</tt>) in a
+          built copy of the source and read;
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>[S]</strong> source text of the declaration was read;
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>[G]</strong> graph only: name, location, membership in the
+          closure of the headline results and reference edges were taken from
+          a compiled declaration graph; the statement itself was
+          <strong>not</strong> read in this session.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-1"><a id="summary-of-findings"></a>Summary of findings<span style="margin-left: 1em"></span></h2>
+    <ol>
+      <li>
+        <p>
+          <strong>The cluster has no package-level boundary.</strong> Treating
+          the five III.10 work packages as one block, 1518 of their theorems
+          are referenced from outside it by declarations in the headline
+          closure [G]. Interfaces must therefore be chosen as mathematical
+          statements, not as module borders.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>There is a narrow theorem spine for the step itself</strong>
+          [E]:
+        </p>
+        <pre class="verbatim" xml:space="preserve">
+one-step estimates &#x2500;&#x2500;&#x25BA; Roof.timberT &#x2500;&#x2500;&#x25BA; Roof.Sheltered &#x2500;&#x2510;
+(III.10.1&ndash;10.4)        (parameter order)                &#x251C;&#x2500;&#x25BA; Rain.glazing &#x2500;&#x2500;&#x25BA; Use.Offering
+                                      Roof.WorksIn &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;                        &#x2502;
+Use.Machine (inside Sheltered) &#x2500;&#x2500;&#x25BA; Use.supplier &#x25C4;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;
+                                       &#x2502;
+                                       &#x25BC;
+                   UVNext.CouplingReset.program &#x2500;&#x2500;&#x25BA; Input.Directed.Program</pre>
+        <p>
+          <tt class="verbatim">Roost.Factor.worksNow</tt> is the one-line assembly of
+          the last three arrows; <tt class="verbatim">Roost.commerce</tt> is the
+          existence statement with the full order of constants. The diagram
+          omits three inputs [E]: <tt class="verbatim">Use.supplier</tt> also takes <tt
+          class="verbatim">G.Simple</tt> and <tt class="verbatim">Use.Origins</tt> (from <tt
+          class="verbatim">Use.from_menu</tt>); <tt class="verbatim">program</tt> also takes <tt
+          class="verbatim">PricedReset</tt> (<tt class="verbatim">machine.prices</tt>); and <tt
+          class="verbatim">Roof.WorksIn</tt> is not produced by <tt class="verbatim">timberT</tt>
+          but by <tt class="verbatim">Roof.honey</tt> inside <tt class="verbatim">Roost.commerce</tt>,
+          from further one-step theorems (see Contract 1, &quot;Incomplete
+          list&quot;).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>The proposed PU-08/PU-09/PU-10 split survives, with the
+          dependency order of PU-08 and PU-09 reversed</strong> relative to
+          <tt class="verbatim">unit-plan.md</tt>. The offering theorem (activity update,
+          candidate PU-08) does not reference the one-step estimates
+          (candidate PU-09); it receives them only as the hypotheses <tt
+          class="verbatim">Roof.Sheltered</tt> and <tt class="verbatim">Roof.WorksIn</tt>, which
+          the closure theorems (candidate PU-10) produce [G]. The conceptual
+          order is PU-09 &rarr; PU-10 (bundle) &rarr; PU-08 &rarr; PU-07
+          (reset) &rarr; PU-10 (program).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>PU-09 is not one theorem.</strong> It is four separately
+          stated estimates with different quantifier orders [S]; a two-unit
+          split is recommended below.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Part of III.10 is not in the step-program closure at
+          all</strong>: the integrated molecule estimate of III.10.3, the
+          schedule statements of III.10.5 and the marker statements I01, I03,
+          I04 have other consumers [G].
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>The closure is conditional on a purchased schedule.</strong>
+          The hypothesis <tt class="verbatim">ThroughLaunch.PaidView</tt> of <tt class="verbatim">Roof.timberT</tt>
+          and <tt class="verbatim">Roost.commerce</tt> already contains the scheduled
+          energy bound <tt class="verbatim">Pressure.Testing.Ringing</tt>, the Gaussian
+          run hypothesis <tt class="verbatim">Next.SectorChange.Cosmos</tt>, <tt class="verbatim">Stock.Priced</tt>
+          and the start-up prices [E]. PU-10 therefore does not prove them;
+          they are built upstream by <tt class="verbatim">ThroughLaunch.sailsV</tt> [G].
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>The hypothesis bundle is the one-step estimates evaluated
+          along the schedule.</strong> Every analytic field of <tt class="verbatim">Roof.Sheltered</tt>
+          and <tt class="verbatim">Roof.WorksIn</tt> that was unfolded (seven rows of
+          the field table were not) has the form &quot;for each admissible
+          stage pair and every coupling above the entry coupling, a one-step
+          statement holds&quot; [E]. <strong>These are not all consequences of
+          the four Contract 1 statements</strong>: the fields <tt class="verbatim">pipes</tt>,
+          <tt class="verbatim">peak</tt>, <tt class="verbatim">jewels</tt> and most of <tt class="verbatim">WorksIn</tt>
+          are produced from further <tt class="verbatim">Cash</tt>-conditional one-step
+          theorems that Contract 1 does not list [S]; see the producer table
+          in obstruction 1.
+        </p>
+      </li>
+    </ol>
+    <h2 id="auto-2"><a id="contract-1--one-step-estimates-at-fixed-constants-candidate-pu-09"></a>Contract 1 &mdash; one-step estimates at fixed
+    constants (candidate PU-09)<span style="margin-left: 1em"></span></h2>
+    <p>
+      <strong>Role.</strong> Large-field and irrelevant-term bounds for a
+      single block step, with all schedule data fixed. Nothing here refers to
+      a trajectory, a reset, or a curve of couplings.
+    </p>
+    <p>
+      <strong>Inputs.</strong> Step data and tree gauge (III.1), free kernels
+      and towers (III.3), polymer norms (III.5), stationary branch and
+      matching (III.6&ndash;III.8), and the window/jet package of #12 through
+      <tt class="verbatim">YM.AnalyticBridge.SectorAffine.assembly</tt> and <tt class="verbatim">.estimates</tt>
+      [G]. <tt class="verbatim">YM.PhysicalNext.Repeat.Malachite.treasure</tt> (<tt
+      class="verbatim">&hellip;/Malachite/Grain.lean:42</tt>), flagged by #12 as a
+      consumer of <tt class="verbatim">SectorAffine.assembly</tt>, lies on this side of
+      the boundary: it is reached from <tt class="verbatim">Roof.timberT</tt> and not
+      from <tt class="verbatim">Rain.glazing</tt> [G].
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Statement</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Anchor</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Evidence</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Direct consumers in the closure [G]</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Energy per seed (large-field action gap)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Next.Fluctuations.grants : &forall; P :
+        Pressure.Teller G, P.Grants</tt>, <tt class="verbatim">YM/Next/FLUCTUATIONS/Grants.lean:24</tt>;
+        <tt class="verbatim">YM.Pressure.Teller.Grants</tt>, <tt class="verbatim">.cash</tt>, <tt
+        class="verbatim">.live</tt>, <tt class="verbatim">.Funds</tt>, <tt class="verbatim">YM/Pressure/Seeds.lean:89&ndash;131</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">type [E], definitions [S]</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Push.AbsoluteSums.Grant.order</tt>, <tt
+        class="verbatim">YM.Push.SectorMeasure.points_grant</tt>, <tt class="verbatim">YM.Next.Fluctuations.pressure_queries</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Activity bounds of one step</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.ConnectedActivityE6.Target.issue</tt>, <tt
+        class="verbatim">&hellip;/CONNECTED_ACTIVITY_JETS_E6/Issue.lean:94</tt>, with
+        <tt class="verbatim">Target.Order</tt>, <tt class="verbatim">GrantBodies</tt>, <tt class="verbatim">Invoices</tt>
+        (same file, 33&ndash;88); bundle <tt class="verbatim">YM.ConnectedActivityE6.Cash</tt>,
+        <tt class="verbatim">&hellip;/Batch.lean:82</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">statement and the three structures [S]; <tt class="verbatim">Cash</tt>
+        [G]</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Target.quotesTogether</tt> (<tt class="verbatim">&hellip;/IssuePlan.lean:53</tt>)
+        &rarr; <tt class="verbatim">YM.ConnectedActivityE6.Planning.exists_floors</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Coarse-field jets of the new letters</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.ConnectedActivityE6.Blaze.Silica.Utopia.whittle</tt>
+        and structure <tt class="verbatim">Utopia</tt>, <tt class="verbatim">&hellip;/CONNECTED_ACTIVITY_JETS_E6/Das.lean:27&ndash;52</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">[S]</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.ConnectedActivityE6.Blaze.Flux.launch</tt>,
+        <tt class="verbatim">Empire.prom</tt>, <tt class="verbatim">Empire.womb</tt>, <tt class="verbatim">Repeat.Alabaster.discover</tt>,
+        <tt class="verbatim">Repeat.Daisy.timing</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Gaussian sector of the step</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.PhysicalNext.JointLoad.capital</tt> and
+        structures <tt class="verbatim">Charges</tt>, <tt class="verbatim">Value</tt>, <tt class="verbatim">&hellip;/V9_JOINT_ENDPOINT_LOAD/Costs.lean:34&ndash;98</tt>;
+        then <tt class="verbatim">.stage</tt> (<tt class="verbatim">&hellip;/Supply.lean:72</tt>)
+        &rarr; <tt class="verbatim">.Clockwork.offer</tt> (<tt class="verbatim">&hellip;/Calendar.lean:75</tt>)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">capital</tt> [S]; <tt class="verbatim">stage</tt>, <tt
+        class="verbatim">offer</tt> [G]</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">JointLoad.Clockwork.opened</tt></td>
+      </tr></tbody>
+    </table>
+    <p>
+      <strong>Statements and order of constants</strong> [S].
+    </p>
+    <ul>
+      <li>
+        <p>
+          <em>Energy.</em> <tt class="verbatim">Grants</tt>: <tt class="verbatim">&exist; i,
+          &forall; L &ge; i, &forall;&#x1DA0; W, &exist; &kappa; &gt; 0,
+          &forall;&#x1DA0; x,</tt> for every step <tt class="verbatim">S</tt> with block
+          factor <tt class="verbatim">L</tt> and coarse side <tt class="verbatim">c &ge; 100(1 +
+          B(x))</tt>, every tube <tt class="verbatim">T</tt> with <tt class="verbatim">P.Funds S
+          T</tt>, every forest, store <tt class="verbatim">A</tt>, fine field <tt class="verbatim">U</tt>
+          in tree gauge (<tt class="verbatim">Stores.SliceSet</tt>), tags <tt class="verbatim">k</tt>
+          and coarse field <tt class="verbatim">V</tt> with <tt class="verbatim">Stores.Plot A U k
+          V x W</tt>: <tt class="verbatim">&kappa; &middot; t(&beta;_F(x,L))&sup2;
+          &middot; &#x266F;A &le; A.assessed T x U (S.prediction U k) V</tt>.
+          Here <tt class="verbatim">B(x) = &lceil;(log x)&sup2;&rceil;</tt>, <tt class="verbatim">&beta;_F
+          = x + b_G log L</tt>, <tt class="verbatim">t(y) = y^{-1/2} exp((log log
+          y)&sup2;)</tt>. The constant <tt class="verbatim">&kappa;</tt> is chosen after
+          <tt class="verbatim">L</tt> and <tt class="verbatim">W</tt>; the statement is
+          deterministic.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Activities.</em> <tt class="verbatim">Target.issue</tt>: <tt class="verbatim">&exist;
+          n, &forall; L &ge; n, &forall;&#x1DA0; W, W &gt; 0 &and; &exist;
+          &mu; &gt; 0,</tt> for every patch <tt class="verbatim">D</tt> with the branch
+          condition <tt class="verbatim">&exist; (o : Order G W) (C &ge; 0),
+          &forall;&#x1DA0; x,</tt> for every step on <tt class="verbatim">D</tt> and
+          tube with <tt class="verbatim">Works P L x S T</tt>: <tt class="verbatim">GrantBodies W
+          x &mu; L R o C T</tt>, and for every fine representation <tt class="verbatim">K</tt>
+          with <tt class="verbatim">Intake P T x K</tt> and <tt class="verbatim">Stamp T</tt> on
+          the same tube: <tt class="verbatim">Invoices W x &mu; L R o C T K</tt>. Here
+          <tt class="verbatim">R : ConnectedActivityE6.Target G P</tt> is an explicit
+          parameter on which <tt class="verbatim">n</tt> and all thresholds depend, and
+          <tt class="verbatim">Works P L x S T</tt> is <tt class="verbatim">P.Funds S T &and;
+          S.patch.L = L &and; 100(1+B(x)) &le; c</tt>. <tt class="verbatim">Invoices</tt>
+          contains the tree-graph test (<tt class="verbatim">Buy</tt>), the rooted sum
+          (<tt class="verbatim">Sales</tt>) for forced, logarithmic and warning letters,
+          the packet bound with gain per seed, and the catastrophe probability
+          bound <tt class="verbatim">&le; E^{|v|}</tt>. Its proof starts from <tt class="verbatim">Grant.order
+          P</tt>, so this estimate depends on the energy bound.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Jets.</em> <tt class="verbatim">Utopia.whittle</tt>: <tt class="verbatim">&exist; n,
+          &forall; L &ge; n,</tt> every patch <tt class="verbatim">D</tt> with branches,
+          order <tt class="verbatim">i</tt>, cutoff <tt class="verbatim">&chi;</tt>, <tt class="verbatim">W
+          &gt; 0</tt>, <tt class="verbatim">&mu; &gt; 0</tt>, window constants <tt
+          class="verbatim">o</tt>, functions <tt class="verbatim">v, w</tt> of rate <tt class="verbatim">-1/2</tt>
+          (<tt class="verbatim">v</tt> eventually nonnegative): <tt class="verbatim">&exist; C'
+          &ge; 0</tt> and <tt class="verbatim">r</tt> of rate <tt class="verbatim">0</tt>, <tt
+          class="verbatim">&forall;&#x1DA0; x,</tt> for every step on <tt class="verbatim">D</tt>
+          with <tt class="verbatim">Stamp T</tt>, every <tt class="verbatim">R</tt>, <tt class="verbatim">C</tt>
+          and <strong>every bundle <tt class="verbatim">H : Cash W x &mu; L Q o C T
+          R</tt></strong>, a structure <tt class="verbatim">Utopia H i (v x) (w x) (r x)
+          C' &chi;</tt> exists. It is conditional on a <tt class="verbatim">Cash</tt>
+          bundle, i.e. on the output of the previous item.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>Gaussian sector.</em> <tt class="verbatim">capital</tt>: for a patch <tt
+          class="verbatim">H</tt> with branches, aperture <tt class="verbatim">B &gt; 0</tt>,
+          cutoff <tt class="verbatim">q</tt> and <tt class="verbatim">k, p : &#x2115;</tt>, <tt
+          class="verbatim">&exist; v : Charges, &forall;&#x1DA0; x,</tt> for all <tt
+          class="verbatim">0 &lt; &beta; &le; 2&beta;_F</tt>, budget points of power <tt
+          class="verbatim">p</tt> and threshold <tt class="verbatim">t(x)</tt>, funded steps on
+          <tt class="verbatim">H</tt> with <tt class="verbatim">c &ge; 100(1 + B(x))</tt>, and
+          stores whose flags are the flags of <tt class="verbatim">V</tt>: <tt class="verbatim">Value
+          v x (B&middot;t(&beta;_F)) T A F l V bp k q (coupling &beta;)</tt>.
+        </p>
+      </li>
+    </ul>
+    <p>
+      The orders agree with the external outline's Propositions
+      III.10.1&ndash;10.4. In all four, the threshold in <tt class="verbatim">x</tt> is
+      chosen last and the statement is uniform in the sides <tt class="verbatim">c,
+      f</tt> of the step. The teller is fixed data: <tt class="verbatim">Teller.Funds</tt>
+      requires <tt class="verbatim">S.patch.J = P.j</tt> and <tt class="verbatim">T.R.Deep P.&eta;
+      P.C (P.j-2)</tt>, so a stage index does occur as a parameter on which
+      every threshold depends [S]. Here &quot;rate <tt class="verbatim">a</tt>&quot; is
+      <tt class="verbatim">ConnectedActivityE6.Rate G L a w</tt>, i.e. for every <tt
+      class="verbatim">v &gt; a</tt>, eventually <tt class="verbatim">|w x| &le;
+      &beta;_F(x)^v</tt>; it is not a bound by <tt class="verbatim">&beta;_F^a</tt>
+      itself.
+    </p>
+    <p>
+      <strong>Consumer.</strong> All four statements are reached from <tt
+      class="verbatim">Roof.timberT</tt> and from none of <tt class="verbatim">Rain.glazing</tt>,
+      <tt class="verbatim">Use.supplier</tt>, <tt class="verbatim">Roost.Factor.worksNow</tt> [G].
+    </p>
+    <p>
+      <strong>Incomplete list</strong> (found in the author-side self-check;
+      [S] for the statements named, [G] for reachability). The four rows above
+      are not all of the one-step estimates that feed the bundle. <tt class="verbatim">Roof.employeesT</tt>
+      (<tt class="verbatim">YM/MergeProof/Retreat.lean:31</tt>) and <tt class="verbatim">Roof.honey</tt>
+      (<tt class="verbatim">&hellip;/Roof/Honey.lean:27</tt>) build several fields from
+      other theorems of the same shape, each conditional on a <tt class="verbatim">Cash</tt>
+      bundle and, except <tt class="verbatim">Yearling.sterling</tt> (which reaches <tt
+      class="verbatim">Utopia.whittle</tt>), none of them reaching any of the four
+      anchors above: <tt class="verbatim">Repeat.Brim.pressings</tt> (<tt class="verbatim">&hellip;/Brim/Level.lean:61</tt>,
+      for <tt class="verbatim">pipes</tt>), <tt class="verbatim">ConnectedActivityE6.Blaze.March.takeover</tt>
+      and <tt class="verbatim">Armada.ensemble</tt> (for <tt class="verbatim">jewels</tt>), <tt
+      class="verbatim">Repeat.Yearling.sterling</tt> (<tt class="verbatim">&hellip;/Yearling/Garter.lean:34</tt>,
+      for <tt class="verbatim">WorksIn</tt>, through <tt class="verbatim">Yearling.batten</tt>),
+      and the inputs of <tt class="verbatim">Boulevard.emits</tt>, <tt class="verbatim">Roof.ensures</tt>
+      and <tt class="verbatim">Pane.school</tt> (for the other <tt class="verbatim">WorksIn</tt>
+      fields). Their statements were not read beyond <tt class="verbatim">pressings</tt>
+      and their number is not established. Contract 1 must either be widened
+      to this family or a further contract opened for it.
+    </p>
+    <p>
+      <strong>Recommendation: separate, and split in two.</strong>
+    </p>
+    <ul>
+      <li>
+        <p>
+          <em>PU-09a, deterministic energy bound.</em> <tt class="verbatim">Teller.Grants</tt>
+          is a statement about fields, with no measure. Its proof
+          (completed-square identity, kernel defects, row-by-row lower bounds;
+          <tt class="verbatim">YM/Bid/</tt>, <tt class="verbatim">YM/Next/FLUCTUATIONS/</tt>, <tt
+          class="verbatim">YM/Work/E01</tt>&ndash;<tt class="verbatim">E09</tt>) is self-contained
+          and a plausible single-agent unit.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>PU-09b, activity and jet bounds.</em> <tt class="verbatim">Target.issue</tt>
+          and <tt class="verbatim">Utopia.whittle</tt> share the target data, the window
+          constants and the Gaussian tail input, and the second is stated for
+          bound bundles produced by the first. The <tt class="verbatim">JointLoad</tt>
+          chain should be owned here as an <em>application</em> of #12's
+          package 2, cited and not reproved. This unit is large: the two
+          statements have separate proofs, and a further cut between them
+          (activities; jets) is available if one session cannot cover both.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-3"><a id="contract-2--pre-reset-presentation-of-the-blocked-density-candidate-pu-08"></a>Contract 2 &mdash; pre-reset presentation of the
+    blocked density (candidate PU-08)<span style="margin-left: 1em"></span></h2>
+    <p>
+      <strong>Statement</strong> [E]. <tt class="verbatim">YM.PhysicalNext.Repeat.Rain.glazing</tt>,
+      <tt class="verbatim">YM/PhysicalNext/RG_NEXT_COMPLETE_REPEATABLE_NONLINEAR_STEP/Rain/Glazing.lean:97</tt>:
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+Roof.Sheltered A bt u t r Bn J P L R S (1/16) (1/16) (1/8) E q &eta;
+  &rarr; Roof.WorksIn R A.post A.delay S
+  &rarr; RG.Supply.AsDivisors A.B.a.S
+  &rarr; (&forall; j i, StepStages j i &rarr; (C j i).table = X.O)
+  &rarr; Use.Offering A.B S p (radiusW Y)</pre>
+    <p>
+      Here <tt class="verbatim">X : Org.Metals G</tt> (sheet, map prices, chart ratio),
+      <tt class="verbatim">D</tt> the block factors, and <tt class="verbatim">A : Org.Alloy X
+      D</tt> packages post-block costs, protection, delays, bar, waits, stock
+      prices and the directed input <tt class="verbatim">A.B</tt>.
+    </p>
+    <p>
+      <strong>Conclusion unfolded</strong> [E] (<tt class="verbatim">Use.Offering</tt>,
+      <tt class="verbatim">YM/AnalyticBridge/VERIFIED_RESET_STEP/Downstream.lean:77</tt>).
+      For all <tt class="verbatim">N</tt>, <tt class="verbatim">p</tt>, <tt class="verbatim">m &lt; N</tt>,
+      every <tt class="verbatim">l &le; u</tt>, and every curve <tt class="verbatim">Q</tt> of
+      level-<tt class="verbatim">(m+1)</tt> representations on <tt class="verbatim">[l,u]</tt>
+      that is continuous for the level-<tt class="verbatim">(m+1)</tt> budget (<tt
+      class="verbatim">RG.Shoot.Curve</tt>), alive for the recipe (<tt class="verbatim">RG.Shoot.Lives</tt>)
+      and with couplings in the band <tt class="verbatim">RG.Shoot.band A.B.a
+      (m+1)</tt>, there exist a listing <tt class="verbatim">X</tt>, sources <tt class="verbatim">v
+      x</tt>, vacuum terms <tt class="verbatim">&tau; x</tt>, a forest choice <tt class="verbatim">T</tt>,
+      bookings <tt class="verbatim">d</tt> and a sector cutoff <tt class="verbatim">&chi;</tt>
+      with:
+    </p>
+    <ol>
+      <li>
+        <p>
+          <strong>Exact presentation</strong> (<tt class="verbatim">Return.atlas</tt>,
+          <tt class="verbatim">&hellip;/Inputs.lean:70</tt>): for each <tt class="verbatim">x</tt>,
+          <tt class="verbatim">Return.gaussian B N T d &chi; r (Q x) =
+          Collection.earlyValue X (path N m) clip (budget m) (v x) (Q x).beta
+          (&tau; x) (alpha N m)</tt>. The left side is the Gaussian-sector
+          formula, <strong>not</strong> the block-spin push itself. The
+          identification <tt class="verbatim">push = Return.gaussian</tt> is <tt class="verbatim">Return.earnings</tt>
+          (<tt class="verbatim">&hellip;/Inputs.lean:56</tt>), obtained from <tt class="verbatim">SectorChange.committed</tt>
+          under <tt class="verbatim">Ringing</tt> and <tt class="verbatim">Cosmos</tt> [S]. The
+          proof of this item already uses it: <tt class="verbatim">Rain.sprint &rarr;
+          Roof.Embrasure.patrons &rarr; Opera.symphony</tt> (<tt class="verbatim">&hellip;/Opera.lean:95</tt>)
+          proves the atlas as Gaussian = push (by <tt class="verbatim">earnings</tt>)
+          followed by push = <tt class="verbatim">earlyValue</tt> (by <tt class="verbatim">Song.forward</tt>).
+          <tt class="verbatim">Return.grants</tt> (<tt class="verbatim">&hellip;/Inputs.lean:74</tt>)
+          applies <tt class="verbatim">earnings</tt> again on the reset side to restate
+          the atlas for the push.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Local bounds</strong> (<tt class="verbatim">Collection.Local</tt>, <tt
+          class="verbatim">&hellip;/Trays.lean:35</tt>) at the level-<tt class="verbatim">m</tt>
+          budget point: regularity, forced-family structure and
+          lattice-symmetry moves; regular letters with sup-jet bounds summing
+          to at most <tt class="verbatim">forecastE a m = credit G (params m) *
+          allowance m</tt> (<tt class="verbatim">Quotes.early</tt>); forced letters with
+          uniform bounds satisfying a rooted sum (<tt class="verbatim">Ac.Hit</tt>) at
+          support exponent <tt class="verbatim">+1</tt> and total <tt class="verbatim">forecastK a
+          m S &beta; = (S (J (m+1)) (J m)).pair.strong (hatBeta (m+1))
+          &beta;</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Continuity along the curve</strong> (<tt class="verbatim">Collection.Compared</tt>,
+          <tt class="verbatim">&hellip;/Comparison.lean:72</tt>): pointwise convergence
+          and a common summable majorant in the budget norm (<tt class="verbatim">Push.BetaTransport.AtEach</tt>,
+          <tt class="verbatim">.Submajorized</tt>).
+        </p>
+      </li>
+    </ol>
+    <p>
+      <strong>Internal structure</strong> [E types, S proof of <tt class="verbatim">glazing</tt>].
+      The proof is an assembly of five statements, all under <tt class="verbatim">Sheltered</tt>,
+      preceded by <tt class="verbatim">Rain.learns</tt> (which produces the <tt class="verbatim">Rain.Zeal</tt>
+      argument of the last four from <tt class="verbatim">conducts.income.grow</tt> and
+      <tt class="verbatim">conducts.full</tt>) and by the choices <tt class="verbatim">Tree.select</tt>
+      (forest) and <tt class="verbatim">Opera.forum</tt> (bookings); the cutoff is
+      always <tt class="verbatim">Chi.canonical</tt>:
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Step</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Anchor</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Content</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Common address structure</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Roof.arches</tt>, <tt class="verbatim">&hellip;/Roof/Moment.lean:122</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">From <tt class="verbatim">Touring</tt> and the curve hypotheses, a
+        <tt class="verbatim">Roof.Embrasure</tt>: a guide and price at every curve
+        point, matched to a base point with identical molecule units.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Uniform truncation</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Rain.topped</tt>, <tt class="verbatim">&hellip;/Rain/Innings.lean:95</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">On a compact parameter set, eventually in the truncation
+        order <tt class="verbatim">d</tt>, the per-site sup bounds and the budget <tt
+        class="verbatim">(1/16 + 2/16)&middot;forecastE + turnFee&middot;gold +
+        gold</tt> hold for all <tt class="verbatim">x</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Identity</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Rain.sprint</tt>, <tt class="verbatim">&hellip;/Rain/Glazing.lean:85</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Item 1 above.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Bounds</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Rain.varnish</tt>, <tt class="verbatim">&hellip;/Rain/Glazing.lean:56</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Item 2 above.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Continuity</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Rain.blinking</tt>, <tt class="verbatim">&hellip;/Rain/Mir.lean:59</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Item 3 above.</td>
+      </tr></tbody>
+    </table>
+    <p>
+      <strong>Mathematical dependencies</strong> [G, transitive references of
+      <tt class="verbatim">glazing</tt>]:
+    </p>
+    <ul>
+      <li>
+        <p>
+          #12 package 1: <tt class="verbatim">YM.Next.SectorChange.authorized_change</tt>
+          and <tt class="verbatim">.committed</tt> (<tt class="verbatim">committed</tt> through
+          <tt class="verbatim">sprint</tt> only, via <tt class="verbatim">Return.earnings</tt>;
+          <tt class="verbatim">authorized_change</tt> also through <tt class="verbatim">topped</tt>).
+          #12 packages 2 and 3 are <strong>not</strong> reached.
+        </p>
+      </li>
+      <li>
+        <p>
+          Start-up fusion H01&ndash;H03 (<tt class="verbatim">YM.Work.H01.gathered</tt>,
+          <tt class="verbatim">H02.answer</tt>, <tt class="verbatim">H03.fused_forcedFamily</tt>):
+          the exponential regrouping of logarithmic letters.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">Repeat.Alabaster.meritBar</tt> and <tt class="verbatim">.rimfire</tt>
+          (via <tt class="verbatim">Repeat.Yearling.ovulation</tt>): difference bounds
+          along the curve. The external outline lists these as
+          &quot;additional reset estimates&quot;; in the source they serve
+          this contract.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM.Pressure.Testing.notation_ticket</tt> (<tt class="verbatim">YM/Pressure/Seeds.lean:166</tt>):
+          the energy bound at trajectory positions, obtained from the <tt
+          class="verbatim">Ringing</tt> field of <tt class="verbatim">Use.Machine</tt>, i.e. from
+          the bundle and not from Contract 1 directly.
+        </p>
+      </li>
+    </ul>
+    <p>
+      <strong>Recommendation: separate unit.</strong> It has one stable
+      statement, a fixed hypothesis bundle and, on the spine, a single
+      consumer (<tt class="verbatim">Use.supplier</tt>, whose only referrer is <tt
+      class="verbatim">Roost.Factor.worksNow</tt>; <tt class="verbatim">Use.Offering</tt> also
+      occurs in <tt class="verbatim">FundedCompanySelection.company</tt> and in about
+      twenty <tt class="verbatim">Repeat.Legato.*</tt> declarations [G]). The
+      mathematics is the polymer reorganisation after Gaussian integration: an
+      exact identity, followed by norm bounds that only <em>spend</em>
+      hypotheses. If one session cannot cover it, the natural cut is identity
+      (<tt class="verbatim">arches</tt>, <tt class="verbatim">sprint</tt>) versus bounds and
+      continuity (<tt class="verbatim">topped</tt>, <tt class="verbatim">varnish</tt>, <tt class="verbatim">blinking</tt>).
+    </p>
+    <h2 id="auto-4"><a id="contract-3--order-of-constants-bundle-and-closure-candidate-pu-10"></a>Contract 3 &mdash; order of constants, bundle and
+    closure (candidate PU-10)<span style="margin-left: 1em"></span></h2>
+    <p>
+      <strong>(a) Bundle existence</strong> [E]. <tt class="verbatim">YM.PhysicalNext.Repeat.Roof.timberT</tt>,
+      <tt class="verbatim">YM/MergeProof/Retreat.lean:44</tt>, for simple <tt class="verbatim">G</tt>
+      and a purchased schedule <tt class="verbatim">ThroughLaunch.PaidView s O K u g k r
+      X &Theta; v</tt>, and any <tt class="verbatim">c&#x2081;, c&#x2082;, c &gt;
+      0</tt>, yields <tt class="verbatim">Roof.Sheltered</tt> for every admissible
+      choice. <tt class="verbatim">YM.PhysicalNext.Repeat.Roost.commerce</tt> (<tt
+      class="verbatim">YM/MergeProof/Trading.lean:20</tt>) calls it at <tt class="verbatim">(1/16,
+      1/16, 1/8)</tt> and adds <tt class="verbatim">WorksIn</tt>, <tt class="verbatim">Use.Origins</tt>
+      (via <tt class="verbatim">Use.from_menu</tt>) and the offering (via <tt class="verbatim">Rain.glazing</tt>)
+      [S, <tt class="verbatim">Trading.lean</tt> lines 33&ndash;48]. <tt class="verbatim">WorksIn</tt>
+      comes from <tt class="verbatim">Roof.honey</tt> (<tt class="verbatim">&hellip;/Roof/Honey.lean:27</tt>),
+      fed with the <tt class="verbatim">wanting = -7/16</tt> clause and with <tt class="verbatim">Yearling.batten
+      : &exist; M, Yearling.Hood s K X M</tt>; <tt class="verbatim">honey</tt> returns a
+      delay threshold <tt class="verbatim">U</tt> beyond which <tt class="verbatim">WorksIn</tt>
+      holds. <tt class="verbatim">commerce</tt> therefore raises <tt class="verbatim">timberT</tt>'s
+      floor <tt class="verbatim">j</tt> to <tt class="verbatim">m &#x2294; j</tt> and inserts <tt
+      class="verbatim">honey</tt>'s delay threshold before applying <tt class="verbatim">timberT</tt>.
+    </p>
+    <p>
+      <tt class="verbatim">PaidView</tt> (<tt class="verbatim">YM/MergeProof/Seaside.lean:62</tt>)
+      is a hypothesis, not an output [E]. Its field <tt class="verbatim">ship</tt>
+      states that for all block-factor records above <tt class="verbatim">v</tt> and all
+      block factors there is a stationary budget gap <tt class="verbatim">&eta;</tt>,
+      and for every admissible post-block cost, protection, tariff, floor <tt
+      class="verbatim">z</tt> and delays there are boosted delays beyond which hold:
+      start-up prices (<tt class="verbatim">Further.StrongStartup.Prices</tt>), <tt
+      class="verbatim">Stock.Priced</tt>, the scheduled energy bound <tt class="verbatim">Pressure.Testing.Ringing</tt>,
+      the Gaussian run hypothesis <tt class="verbatim">Next.SectorChange.Cosmos</tt>,
+      and for every paid level system a budget, a prepared multi-source scope
+      and a <tt class="verbatim">ThroughLaunch.Torrent</tt>. It is constructed by <tt
+      class="verbatim">ThroughLaunch.sailsV</tt> (<tt class="verbatim">YM/MergeProof/Seaside.lean:96</tt>),
+      which reaches <tt class="verbatim">Fluctuations.pressure_pricing</tt>, <tt class="verbatim">Bid.pricing_order</tt>,
+      <tt class="verbatim">Extra.Multi.pricing</tt>, <tt class="verbatim">Further.StrongStartup.prices</tt>
+      and <tt class="verbatim">ThroughLaunch.developer</tt>, and does not reach <tt
+      class="verbatim">Target.issue</tt>, <tt class="verbatim">Rain.glazing</tt> or <tt class="verbatim">Roost.commerce</tt>
+      [G]. So the energy bound enters the step twice: scheduled, through <tt
+      class="verbatim">PaidView</tt>, and unscheduled, through <tt class="verbatim">Target.issue</tt>
+      inside <tt class="verbatim">timberT</tt>.
+    </p>
+    <p>
+      <strong>Order of choice</strong> [E], read off the alternation of
+      quantifiers in <tt class="verbatim">commerce</tt>:
+    </p>
+    <ol>
+      <li>
+        <p>
+          <tt class="verbatim">&exist;</tt> block-factor floors <tt class="verbatim">j &ge;
+          v</tt>, programs <tt class="verbatim">C</tt>, wages <tt class="verbatim">z</tt>, targets
+          <tt class="verbatim">R</tt> (chart <tt class="verbatim">Next.Foundations.chart G</tt>,
+          halo <tt class="verbatim">500</tt>), expenses <tt class="verbatim">E</tt> (<tt class="verbatim">earn
+          = Roof.rays s i k</tt>, <tt class="verbatim">wanting = -7/16</tt>, degree <tt
+          class="verbatim">0</tt>), baton <tt class="verbatim">bt</tt>;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">&forall;</tt> block-factor records <tt class="verbatim">l &ge;
+          j</tt> and <tt class="verbatim">&forall;</tt> block factors <tt class="verbatim">D</tt>;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">&exist;</tt> wage floor <tt class="verbatim">y</tt>, <tt class="verbatim">&forall;</tt>
+          wages <tt class="verbatim">w &ge; y</tt>, <tt class="verbatim">&exist;</tt> register <tt
+          class="verbatim">R'</tt> and caf&eacute;s <tt class="verbatim">B</tt>;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">&forall;</tt> postage <tt class="verbatim">K'</tt>, <tt class="verbatim">&exist;</tt>
+          smaller postage <tt class="verbatim">F</tt> and scouts <tt class="verbatim">S</tt>;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">&forall;</tt> exchange <tt class="verbatim">E&#x2080;</tt> and
+          tariff <tt class="verbatim">&xi;</tt>, <tt class="verbatim">&exist;</tt> reset prices
+          <tt class="verbatim">q</tt>, sensor constants <tt class="verbatim">&eta;</tt>,
+          post-block costs <tt class="verbatim">P</tt>;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">&forall;</tt> protection ceiling <tt class="verbatim">&theta;&#x2080;
+          &gt; 0</tt>, <tt class="verbatim">&exist;</tt> protection <tt class="verbatim">&theta;
+          &le; &theta;&#x2080;</tt> and records <tt class="verbatim">p</tt> with <tt
+          class="verbatim">&epsilon; &le; 1/4</tt>;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">&forall;</tt> menus <tt class="verbatim">Q</tt> and delays <tt
+          class="verbatim">U</tt>, <tt class="verbatim">&exist;</tt> booths <tt class="verbatim">b</tt>, <tt
+          class="verbatim">&forall;</tt> auxiliaries <tt class="verbatim">J</tt>, <tt class="verbatim">&exist;</tt>
+          ordered delays <tt class="verbatim">W &ge; U</tt>;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">&forall;</tt> delays <tt class="verbatim">V &ge; W</tt>, bars <tt
+          class="verbatim">Z</tt>, waits <tt class="verbatim">I</tt> and levels <tt class="verbatim">a</tt>
+          with <tt class="verbatim">RG.Supply.Paid I a</tt>: <tt class="verbatim">Doors.Budget a k
+          r</tt>, <tt class="verbatim">Extra.Multi.Prepared</tt>, and <tt class="verbatim">&exist;</tt>
+          stock prices and a directed input <tt class="verbatim">B'</tt> with <tt class="verbatim">B'.a
+          = a</tt> for which the bundle, <tt class="verbatim">WorksIn</tt>, <tt class="verbatim">Origins</tt>,
+          &mdash; under <tt class="verbatim">AsDivisors a.S</tt> &mdash; the offering,
+          and a <tt class="verbatim">RankCovariance.ShapePort</tt> hold.
+        </p>
+      </li>
+    </ol>
+    <p>
+      The delays (<tt class="verbatim">betaEntry</tt>, the entry couplings, together
+      with <tt class="verbatim">scaleEntry</tt>, <tt class="verbatim">shells</tt> and <tt class="verbatim">growth</tt>)
+      are therefore chosen after every constant and may always be increased;
+      only <tt class="verbatim">Z</tt>, <tt class="verbatim">I</tt>, <tt class="verbatim">a</tt> and the
+      directed input <tt class="verbatim">B'</tt> follow them. Block factors precede
+      every analytic constant except the target data, programs, wages,
+      expenses and the baton. The indices <tt class="verbatim">N</tt>, <tt class="verbatim">p</tt>,
+      <tt class="verbatim">m</tt> are quantified inside <tt class="verbatim">Offering</tt> and <tt
+      class="verbatim">Program</tt>, after all of the above: this is the uniformity
+      required at the next scale. Their reading is not settled by this audit:
+      in <tt class="verbatim">Program.begins</tt> the start-up curve lives at level <tt
+      class="verbatim">N</tt> and steps run from <tt class="verbatim">m+1</tt> to <tt class="verbatim">m
+      &lt; N</tt>, and <tt class="verbatim">p</tt> indexes <tt class="verbatim">a.S.side m p</tt>,
+      which suggests <tt class="verbatim">N</tt> = cutoff level, <tt class="verbatim">m</tt> =
+      current scale, <tt class="verbatim">p</tt> = volume index.
+    </p>
+    <p>
+      <strong>(b) Reset side of the bundle</strong> [E]. <tt class="verbatim">Roof.Sheltered.conducts.machine
+      : Use.Machine</tt> (<tt class="verbatim">&hellip;/Downstream.lean:41</tt>) carries
+      the reset's numerical conditions: the recipe identity, opened shops,
+      coverage inequalities, the cubic gate for all <tt class="verbatim">x</tt> above
+      the entry coupling, <tt class="verbatim">PricedReset</tt>, the scheduled energy
+      bound <tt class="verbatim">Pressure.Testing.Ringing</tt>, and <tt class="verbatim">Cosmos</tt>.
+      <tt class="verbatim">Ringing</tt> and <tt class="verbatim">Cosmos</tt> are carried over from
+      <tt class="verbatim">PaidView.ship</tt> (see (a)); the reset numerics are
+      established inside <tt class="verbatim">timberT</tt> (through <tt class="verbatim">Repeat.commissioning</tt>,
+      not read), which reaches <tt class="verbatim">UVNext.CouplingReset.buys_reset</tt>,
+      <tt class="verbatim">.can_delay_reset</tt>, <tt class="verbatim">.sensor</tt>, <tt class="verbatim">VerifiedReset.Time.beforeWait</tt>
+      and <tt class="verbatim">Time.cash</tt> [G]. This is where III.9's entry
+      thresholds and III.2's ledger enter the step.
+    </p>
+    <p>
+      <strong>(c) Closure</strong> [E, S]. <tt class="verbatim">Roost.Factor.worksNow</tt>
+      (<tt class="verbatim">&hellip;/Roost/Foundry.lean:59</tt>):
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+worksNow := CouplingReset.program R.machine.prices
+              (Use.supplier hG R.machine R.offering R.originsHere)</pre>
+    <p>
+      <tt class="verbatim">Use.supplier</tt> (<tt class="verbatim">&hellip;/Downstream.lean:85</tt>)
+      turns the offering into the reset's <tt class="verbatim">Income</tt> and <tt
+      class="verbatim">Remainder</tt> hypotheses through <tt class="verbatim">Machine.packet</tt>
+      (<tt class="verbatim">Return.grants</tt>, <tt class="verbatim">Return.earns</tt>, <tt class="verbatim">Return.remainders</tt>);
+      <tt class="verbatim">UVNext.CouplingReset.program</tt> (<tt class="verbatim">YM/UVNext/COUPLING_RESET/Stability.lean:67</tt>)
+      gives <tt class="verbatim">Input.Directed.Program</tt> (<tt class="verbatim">YM/PCalc/Band.lean:65</tt>):
+      start-up curves at every <tt class="verbatim">N, p</tt>, and for every <tt class="verbatim">m
+      &lt; N</tt> and every admissible input curve a continuous output curve
+      with <tt class="verbatim">Directed.Move</tt> at each point &mdash; exact push
+      identity <tt class="verbatim">u.eval = push v.beta v.eval</tt>, recipe step, <tt
+      class="verbatim">Lives</tt>, the forced bound <tt class="verbatim">exp(-P.g(J(m+1)) &middot;
+      monitor(m+1)&sup2;)</tt>, and the coupling increment bound <tt class="verbatim">|u.beta
+      - v.beta - alpha N m| &le; 1</tt> (five fields [E]). <tt class="verbatim">worksNow</tt>
+      is conditional on what <tt class="verbatim">Roost.Factor</tt> assumes beyond <tt
+      class="verbatim">Sheltered</tt> at <tt class="verbatim">(1/16, 1/16, 1/8)</tt>: <tt class="verbatim">WorksIn</tt>,
+      <tt class="verbatim">AsDivisors A.B.a.S</tt>, and the target-table condition for
+      all <tt class="verbatim">j, i</tt>.
+    </p>
+    <p>
+      <strong>Dependency check</strong> [G]. <tt class="verbatim">glazing</tt> reaches
+      neither <tt class="verbatim">Return.reset</tt> nor <tt class="verbatim">CouplingReset.advance</tt>;
+      <tt class="verbatim">Use.supplier</tt> and <tt class="verbatim">program</tt> do not reach
+      <tt class="verbatim">glazing</tt> or <tt class="verbatim">timberT</tt>; <tt class="verbatim">timberT</tt>
+      does not reach <tt class="verbatim">glazing</tt>. No cycle was found on the spine.
+      This is a statement about reference edges among the listed declarations,
+      not about the whole cluster.
+    </p>
+    <p>
+      <strong>Recommendation: separate unit</strong>, owning the order of
+      constants, the assembly of the bundle fields from the one-step theorems
+      (those of Contract 1 and the further family listed there), and the
+      two-line closure. It should <em>cite</em> PU-07 for <tt class="verbatim">program</tt>,
+      <tt class="verbatim">supplier</tt> and the reset price lemmas, and BG-04 for the
+      ledger. <tt class="verbatim">Roost.Factor</tt> and its projections are packaging
+      and can be suppressed.
+    </p>
+    <h2 id="auto-5"><a id="proposed-ownership-and-order"></a>Proposed ownership and order<span style="margin-left: 1em"></span></h2>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Candidate</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Owns</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Depends on</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Consumer</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-09a</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Fluctuations.grants</tt>, <tt class="verbatim">Teller.Grants</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">III.1, III.3</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-10</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-09b</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Target.issue</tt>, <tt class="verbatim">Cash</tt>, <tt
+        class="verbatim">Utopia.whittle</tt>; applies <tt class="verbatim">JointLoad.capital
+        &rarr; stage &rarr; offer</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">#12 package 2, PU-04, PU-05/06</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-10</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-10 (a,b)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Roof.timberT</tt>, <tt class="verbatim">Roof.employeesT</tt>,
+        <tt class="verbatim">Roof.honey</tt>, <tt class="verbatim">Roost.commerce</tt>, <tt class="verbatim">Yearling.batten</tt>,
+        bundle definitions</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-09a/b, the unowned one-step family below, PU-07 price
+        lemmas, BG-04</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-08, PU-07</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><em>unowned</em></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Brim.pressings</tt>, <tt class="verbatim">March.takeover</tt>,
+        <tt class="verbatim">Armada.ensemble</tt>, <tt class="verbatim">Yearling.sterling</tt> and
+        the inputs of <tt class="verbatim">Boulevard.emits</tt>, <tt class="verbatim">Roof.ensures</tt>,
+        <tt class="verbatim">Pane.school</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Cash</tt> (PU-09b)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-10 (a,b)</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-08</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Rain.glazing</tt> and its five steps, <tt class="verbatim">Use.Offering</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">bundle statement, #12 package 1, H01&ndash;H03</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-07 via <tt class="verbatim">Use.supplier</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-10 (c)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Roost.Factor.worksNow</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-08, PU-07</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">trajectory and shooting (<tt class="verbatim">Graces.winnow</tt>, <tt
+        class="verbatim">FullVolume.rodB</tt>, <tt class="verbatim">UVExtension.Orchard.ministry</tt>)</td>
+      </tr></tbody>
+    </table>
+    <p>
+      <tt class="verbatim">unit-plan.md</tt> currently lists PU-09 as depending on
+      PU-08. The source order is the reverse; that file is outside this task
+      and should be corrected by its owner once this note is reviewed.
+    </p>
+    <p>
+      <strong>Not owned by PU-08&ndash;PU-10</strong> [G]:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">Repeat.Daisy.timing</tt> (integrated molecule bound,
+          III.10.3): not reached from any spine declaration; its only direct
+          consumer is <tt class="verbatim">Repeat.Daisy.Charity.rocketsC</tt> (then <tt
+          class="verbatim">Charity.awakening</tt>, <tt class="verbatim">Charity.RG12.annex</tt>).
+          An earlier draft named <tt class="verbatim">YM/FullVolume/Florid/</tt> as a
+          consumer; no declaration there refers to it. Candidate for PU-13.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">Fluctuations.pressure_pricing</tt> (III.10.5a): consumed
+          by <tt class="verbatim">YM.Extra.Multi.pricing</tt> and reached from <tt
+          class="verbatim">ThroughLaunch.sailsV</tt>, the constructor of <tt class="verbatim">PaidView</tt>.
+          It is an <em>input</em> to PU-10, to be owned with the schedule
+          (BG-04, III.2) or with PU-09a as its scheduled corollary.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">RG.Supply.Wait.engine</tt> (III.10.5b, divisible
+          periods): consumed by <tt class="verbatim">YM.Pert.deeper</tt>, <tt class="verbatim">Repeat.Legato.noel_columns</tt>,
+          <tt class="verbatim">Repeat.Legato.uv_log</tt> and further <tt class="verbatim">Repeat.Legato.*</tt>
+          declarations; not reached from <tt class="verbatim">sailsV</tt> or from the
+          spine. Candidate for BG-04.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM.Work.I01</tt>, <tt class="verbatim">I03</tt>, <tt class="verbatim">I04</tt>
+          (markers): not reached from the spine.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM.Work.H04.answer</tt> (continuity of fusion): reached
+          from <tt class="verbatim">worksNow</tt> but not from <tt class="verbatim">glazing</tt>;
+          it belongs to the start-up side (PU-07).
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM.AnalyticBridge.RelativeLogdet.Priced.chains</tt>, <tt
+          class="verbatim">YM.Next.Rank.determinant</tt> and <tt class="verbatim">Dyed.cardinal_spin</tt>
+          are not reached from the spine: the determinant normalisation is
+          entirely #14's.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-6"><a id="obstructions-and-requested-follow-up"></a>Obstructions and requested follow-up<span style="margin-left: 1em"></span></h2>
+    <ol>
+      <li>
+        <p>
+          <strong>The bundle is unfolded to two levels only.</strong> The
+          table gives each field of <tt class="verbatim">Roof.Sheltered</tt> (<tt class="verbatim">&hellip;/Roof/Income.lean:20</tt>)
+          and <tt class="verbatim">Roof.WorksIn</tt> (<tt class="verbatim">&hellip;/Roof/Honey.lean:22</tt>)
+          as printed [E]. &quot;Scheduled&quot; means: for all <tt class="verbatim">j,
+          i</tt> with <tt class="verbatim">StepStages j i</tt> and all <tt class="verbatim">x &ge;
+          W.betaEntry j</tt>, at block factor <tt class="verbatim">D.L j</tt>.
+        </p>
+        <table style="width: 100%">
+          <tbody><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Field</strong></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Content at second level</strong></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Kind</strong></td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">conducts.hearing :
+            Psalm.Stage.Cadence</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Heir.Suite.Earlier</tt>, <tt class="verbatim">Clockwork.Funded</tt>,
+            <tt class="verbatim">Heir.Suite.Offers</tt>, <tt class="verbatim">Folio.Secured</tt>,
+            <tt class="verbatim">Psalm.Stage.Listens</tt>, and <tt class="verbatim">(t j
+            i).&theta; &le; (d j i).&epsilon; / 32</tt> for the menu <tt
+            class="verbatim">t = Solo.guardMenu Q p</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">Gaussian-sector prices of the <tt class="verbatim">JointLoad</tt>
+            chain; not unfolded</td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">conducts.sustains :
+            Psalm.Solo.Sustained</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">scheduled <tt class="verbatim">Psalm.Solo.Reset</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">not unfolded</td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">conducts.machine : Use.Machine</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">recipe identity, shops, coverage, cubic gate, <tt
+            class="verbatim">PricedReset</tt>, <tt class="verbatim">Ringing</tt>, <tt class="verbatim">Cosmos</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">reset numerics and scheduled energy bound</td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">conducts.starts</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Progress.DirectedRecipe.Origins</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">start-up curves</td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">conducts.full : Bid.Sworn</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">the gauge quadratic form of every bed is invariant
+            under the signed lattice moves</td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">symmetry of the free kernels</td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">conducts.income.grow :
+            Planning.Permits</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">on the register <tt class="verbatim">Planning.Purchase</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">scheduled activity bundle; not unfolded</td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">conducts.income.earns</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">scheduled <tt class="verbatim">Cash.armK &le; c &middot;
+            pair.strong(&beta;_F, &beta;)</tt> for <tt class="verbatim">&beta;</tt> in
+            the band</td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">numerical: forced weight within <tt class="verbatim">forecastK</tt></td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">agenda</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">support exponent <tt class="verbatim">+3 &le;</tt> earn rate and
+            <tt class="verbatim">&le; t</tt>; halo <tt class="verbatim">+5 &le; r</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">numerical</td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">range : Opera.Treble</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">scheduled <tt class="verbatim">(a + 3)/B(x) &le;
+            width/2</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">numerical</td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">pipes : Roof.Pew</tt> &rarr; <tt class="verbatim">Roof.Verandah</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">for every step with <tt class="verbatim">Works</tt>, every <tt
+            class="verbatim">Cash</tt> bundle, budget point and <tt class="verbatim">March.Captain</tt>
+            jet bundle: <tt class="verbatim">Brim.Houses</tt> at prices <tt class="verbatim">Height.heap
+            G (s.profile i) c&#x2082; &middot; &delta;E(x)</tt>; guarded by
+            <tt class="verbatim">s.first &le; i</tt> and further <tt class="verbatim">Verandah</tt>
+            side conditions not listed here</td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">scheduled analytic estimate, conditional on <tt class="verbatim">Cash</tt></td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">peak : Height.Rich</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">scheduled <tt class="verbatim">1 &le; X</tt>, <tt class="verbatim">X&sup3;
+            &le; exp(mark)</tt>, tree degree price <tt class="verbatim">&le; 1/2</tt>,
+            and further clauses</td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">numerical; read in part</td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">jewels : Height.Tenement</tt> &rarr; <tt
+            class="verbatim">Height.Skill</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">growth inequality, and for every step with <tt class="verbatim">Works</tt>,
+            <tt class="verbatim">Stamp</tt> and <tt class="verbatim">Cash</tt> bundle: existence
+            of a <tt class="verbatim">Silica.Heavy</tt> conduit and <tt class="verbatim">March.Armada</tt>
+            with <tt class="verbatim">collars &middot; salary &middot; 2 &le;
+            &beta;_F^{wanting}</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">scheduled analytic estimate with rate <tt class="verbatim">-7/16</tt></td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">WorksIn.chip : Boulevard.Pollened</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">scheduled <tt class="verbatim">Boulevard.Portaged</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">not unfolded</td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">WorksIn.year : Yearling.Acre</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">scheduled <tt class="verbatim">Yearling.Stargaze</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">not unfolded</td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">WorksIn.terms : Roof.Autumn</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">scheduled <tt class="verbatim">Roof.pan</tt>; shell and growth
+            sizes</td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">not unfolded; sizes numerical</td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">WorksIn.plaza : Pane.Planks</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">scheduled <tt class="verbatim">Pane.Morning</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">not unfolded</td>
+          </tr></tbody>
+        </table>
+        <p>
+          The analytic fields quantify over <em>all</em> <tt class="verbatim">Cash</tt>
+          bundles and all steps, so they are one-step statements evaluated
+          above the entry coupling, not new estimates on a trajectory [E]. An
+          earlier draft concluded that they are therefore consequences of
+          Contract 1; that inference was wrong. The last line of <tt class="verbatim">Roof.employeesT</tt>
+          (<tt class="verbatim">YM/MergeProof/Retreat.lean:31&ndash;41</tt>) shows which
+          lemma yields each field of <tt class="verbatim">Sheltered</tt> [S]:
+        </p>
+        <table style="width: 100%">
+          <tbody><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Field</strong></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Produced by</strong></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Reaches a Contract 1 anchor? [G]</strong></td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">conducts</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Repeat.commissioning</tt> (<tt class="verbatim">YM/MergeProof/Serenity.lean:29</tt>)</td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">JointLoad.capital</tt> chain only</td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">agenda</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">hypothesis of <tt class="verbatim">employeesT</tt>
+            (numerical)</td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">&mdash;</td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">range</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Opera.conducts</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">none</td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">pipes</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Roof.pews</tt> &rarr; <tt class="verbatim">Roof.tapes</tt>
+            &rarr; <tt class="verbatim">Brim.pressings</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">none (it reaches <tt class="verbatim">SectorAffine.assembly</tt>,
+            #12 package 2)</td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">peak</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Height.season</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">none</td>
+          </tr><tr>
+            <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">jewels</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Height.haste</tt> &larr; <tt class="verbatim">Height.beneath</tt>
+            &larr; <tt class="verbatim">March.takeover</tt>, <tt class="verbatim">Armada.ensemble</tt></td>
+            <td style="border-right: 1px solid; border-bottom: 1px solid">none</td>
+          </tr></tbody>
+        </table>
+        <p>
+          <tt class="verbatim">WorksIn</tt> is produced by <tt class="verbatim">Roof.honey</tt>
+          from <tt class="verbatim">Boulevard.emits</tt>, <tt class="verbatim">Yearling.brine</tt>
+          (&larr; <tt class="verbatim">Yearling.batten</tt> &larr; <tt class="verbatim">Yearling.sterling</tt>),
+          <tt class="verbatim">Roof.ensures</tt> and <tt class="verbatim">Pane.school</tt>. <tt
+          class="verbatim">Repeat.budgets</tt> (<tt class="verbatim">&hellip;/Instruments.lean:36</tt>),
+          <tt class="verbatim">Height.beneath</tt>, <tt class="verbatim">Roof.faceting</tt> and
+          <tt class="verbatim">Repeat.pockets</tt> (<tt class="verbatim">&hellip;/Rent.lean:76</tt>)
+          discharge hypotheses of <tt class="verbatim">employeesT</tt> inside <tt class="verbatim">timberT</tt>;
+          <tt class="verbatim">budgets</tt> is the one that reaches <tt class="verbatim">Fluctuations.grants</tt>,
+          <tt class="verbatim">Target.issue</tt> and <tt class="verbatim">Utopia.whittle</tt>. (An
+          earlier draft cited <tt class="verbatim">Roof.budgets</tt> and <tt class="verbatim">Roof.pockets</tt>,
+          which do not exist.)
+        </p>
+        <p>
+          <tt class="verbatim">conducts.full</tt> is a field of the <em>conclusion</em>
+          of <tt class="verbatim">timberT</tt>, so it is a hypothesis of <tt class="verbatim">Rain.glazing</tt>
+          only; <tt class="verbatim">timberT</tt> delivers it from <tt class="verbatim">G.Simple</tt>
+          and <tt class="verbatim">PaidView</tt>, whose <tt class="verbatim">Torrent</tt> already
+          carries a <tt class="verbatim">Bid.Sworn</tt> clause. It is stated for the
+          realised horizon of the directed input. The external outline
+          (&sect;7, item 2) is reported to record its proof along the selected
+          trajectory as unchecked; that document was not re-read for this
+          claim. <em>Remaining follow-up:</em> unfold the third-level
+          predicates named in the table, and read the statements of the
+          further one-step theorems.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><tt class="verbatim">Cash</tt>, <tt class="verbatim">JointLoad.stage</tt> and
+          <tt class="verbatim">Clockwork.offer</tt> remain [G]</strong>; the other
+          Contract 1 statements were read in source, not all of their defining
+          predicates (<tt class="verbatim">Works</tt>, <tt class="verbatim">Intake</tt>, <tt
+          class="verbatim">Stamp</tt>, <tt class="verbatim">Sales</tt>, <tt class="verbatim">Buy</tt>, <tt
+          class="verbatim">Ticket</tt>).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Three closure variants are in the headline closure:</strong>
+          <tt class="verbatim">Roost.commerce</tt> (hypothesis <tt class="verbatim">PaidView</tt>;
+          consumer <tt class="verbatim">Repeat.Legato.expenders</tt>), <tt class="verbatim">Roost.companyK</tt>
+          (<tt class="verbatim">ThroughLaunch.Perceived</tt> and a <tt class="verbatim">&tau; &gt;
+          0</tt>, <tt class="verbatim">YM/FullVolume/Roll/Linger.lean:23</tt>; consumer
+          <tt class="verbatim">YM.Integration.NativeSelection.FundedCompanySelection.company</tt>)
+          and <tt class="verbatim">Roost.uv_commerce</tt> (<tt class="verbatim">UVExtension.Case.Purchased</tt>
+          and a <tt class="verbatim">Guild.Tool</tt>, <tt class="verbatim">YM/UVExtension/Case/Trading.lean:22</tt>;
+          consumer <tt class="verbatim">Repeat.Legato.multitude</tt>). Their conclusions
+          differ in at least one clause (<tt class="verbatim">companyK</tt> adds <tt
+          class="verbatim">Repeat.Pocket R' S</tt>). Which variant each headline result
+          uses, and whether one statement implies the others, is open. <tt
+          class="verbatim">Roost.company</tt> and <tt class="verbatim">Roost.commerceUV</tt> are
+          outside the closure.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><tt class="verbatim">Return.gaussian</tt> versus the push.</strong>
+          The step's output identity is for the Gaussian-sector expression.
+          The licence and the equality with the push are <tt class="verbatim">Return.earnings</tt>,
+          which is used on both sides: by PU-08's identity step (through <tt
+          class="verbatim">Opera.symphony</tt>) and by the reset (<tt class="verbatim">Return.grants</tt>).
+          It should be stated once, as an application of #12's package 1, and
+          cited by both.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Shared notation.</strong> <tt class="verbatim">forecastE</tt>, <tt
+          class="verbatim">forecastK</tt>, budget points, &quot;curve&quot; and
+          &quot;lives&quot; need glossary names; referred to #10.
+        </p>
+      </li>
+    </ol>
+    <h2 id="auto-7"><a id="literature-leads-unverified"></a>Literature leads (unverified)<span style="margin-left: 1em"></span></h2>
+    <p>
+      No statement below has been compared with the source's definitions.
+    </p>
+    <ul>
+      <li>
+        <p>
+          T. Ba&#x0142;aban, <em>Renormalization group approach to lattice
+          gauge field theories</em> I&ndash;II, Comm. Math. Phys. 109 (1987)
+          and 116 (1988); <em>Large field renormalization</em> I&ndash;II,
+          Comm. Math. Phys. 122 (1989): small-field step, R-operation and
+          large-field bounds. Threshold <tt class="verbatim">x^{-1/2} e^{(log log
+          x)&sup2;}</tt> and the hysteresis conventions are to be compared
+          with his <tt class="verbatim">p(g)</tt> regions.
+        </p>
+      </li>
+      <li>
+        <p>
+          R. Koteck&yacute;, D. Preiss, Comm. Math. Phys. 103 (1986): rooted
+          polymer sums.
+        </p>
+      </li>
+      <li>
+        <p>
+          J. Dimock, <em>The renormalization group according to Balaban</em>
+          I&ndash;III: a possible model for the exposition of Contract 2;
+          applicability unchecked.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-8"><a id="evidence"></a>Evidence<span style="margin-left: 1em"></span></h2>
+    <p>
+      Inspection used a sibling checkout <tt class="verbatim">../OpenAI-YM</tt> of the
+      upstream project at commit <tt class="verbatim">1dba6965d734bac06951579601b90e985033ee45</tt>,
+      which adds only a CI workflow and <tt class="verbatim">.gitignore</tt> to <tt
+      class="verbatim">3456e5e</tt>; <tt class="verbatim">diff -rq ../OpenAI-YM/YM Lean/YM</tt>
+      printed nothing. It contains a completed build (9470 <tt class="verbatim">.olean</tt>
+      files under <tt class="verbatim">.lake/build/lib</tt> for 9457 sources; toolchain
+      <tt class="verbatim">leanprover/lean4:v4.32.0</tt>). The build itself was not run
+      or re-verified in this session.
+    </p>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">lake env lean t1.lean</tt> with <tt class="verbatim">#check
+          @YM.Next.Fluctuations.grants</tt>: <tt class="verbatim">&forall; {G : Gauge}
+          (P : Pressure.Teller G), P.Grants</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">lake env lean t2.lean</tt>, <tt class="verbatim">t3.lean</tt>
+          (options <tt class="verbatim">pp.proofs false</tt>, <tt class="verbatim">pp.deepTerms
+          true</tt>): <tt class="verbatim">#check</tt>/<tt class="verbatim">#print</tt> of <tt
+          class="verbatim">Rain.glazing</tt>, <tt class="verbatim">Rain.sprint</tt>, <tt class="verbatim">Rain.varnish</tt>,
+          <tt class="verbatim">Rain.blinking</tt>, <tt class="verbatim">Rain.topped</tt>, <tt
+          class="verbatim">Roof.arches</tt>, <tt class="verbatim">Roof.timberT</tt>, <tt class="verbatim">Roost.commerce</tt>,
+          <tt class="verbatim">Roost.companyK</tt>, <tt class="verbatim">Roost.uv_commerce</tt>,
+          <tt class="verbatim">Roost.Factor.worksNow</tt>, <tt class="verbatim">Graces.winnow</tt>,
+          <tt class="verbatim">CouplingReset.program</tt>, <tt class="verbatim">Roof.Sheltered</tt>,
+          <tt class="verbatim">Touring</tt>, <tt class="verbatim">Roof.WorksIn</tt>, <tt class="verbatim">Roof.Pew</tt>,
+          <tt class="verbatim">Height.Rich</tt>, <tt class="verbatim">Height.Tenement</tt>, <tt
+          class="verbatim">Opera.Treble</tt>, <tt class="verbatim">Roof.Embrasure</tt>, <tt class="verbatim">Return.atlas</tt>,
+          <tt class="verbatim">Collection.Local</tt>, <tt class="verbatim">Collection.Compared</tt>,
+          <tt class="verbatim">Time.forecastE</tt>, <tt class="verbatim">Time.forecastK</tt>, <tt
+          class="verbatim">CouplingReset.Supplier</tt>, <tt class="verbatim">Usable</tt>, <tt
+          class="verbatim">Income</tt>, <tt class="verbatim">Remainder</tt>, <tt class="verbatim">Input.Directed.Program</tt>,
+          <tt class="verbatim">Input.Directed.Move</tt>, <tt class="verbatim">ThroughLaunch.PaidView</tt>,
+          <tt class="verbatim">Org.Alloy</tt>, <tt class="verbatim">Org.Metals</tt>. Two mistyped
+          names (<tt class="verbatim">YM.RG.Shoot.Directed.Program</tt>, <tt class="verbatim">.Move</tt>)
+          gave &quot;unknown constant&quot; and were re-queried under <tt
+          class="verbatim">YM.Input.Directed</tt>. <tt class="verbatim">Height.Rich</tt>, <tt
+          class="verbatim">Income</tt>, <tt class="verbatim">Remainder</tt> and <tt class="verbatim">PaidView</tt>
+          were printed but only partly read.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">#print axioms</tt> for <tt class="verbatim">Roost.Factor.worksNow</tt>
+          and <tt class="verbatim">Roost.commerce</tt>: <tt class="verbatim">[propext,
+          Classical.choice, Quot.sound]</tt> each.
+        </p>
+      </li>
+      <li>
+        <p>
+          Source read: <tt class="verbatim">&hellip;/Rain/Glazing.lean</tt> (whole
+          file), <tt class="verbatim">&hellip;/Roost/Foundry.lean</tt> (whole file), <tt
+          class="verbatim">YM/AnalyticBridge/VERIFIED_RESET_STEP/Downstream.lean</tt>
+          lines 14&ndash;95, <tt class="verbatim">YM/MergeProof/Trading.lean</tt> lines
+          15&ndash;40, <tt class="verbatim">YM/MergeProof/Retreat.lean</tt> lines
+          40&ndash;64, <tt class="verbatim">YM/Pressure/Seeds.lean</tt> lines
+          86&ndash;183, <tt class="verbatim">&hellip;/CONNECTED_ACTIVITY_JETS_E6/Issue.lean</tt>
+          lines 25&ndash;110, <tt class="verbatim">&hellip;/CONNECTED_ACTIVITY_JETS_E6/Das.lean</tt>
+          lines 24&ndash;62, <tt class="verbatim">&hellip;/V9_JOINT_ENDPOINT_LOAD/Costs.lean</tt>
+          lines 30&ndash;100.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">lake env lean t4.lean</tt>: <tt class="verbatim">#print</tt> of <tt
+          class="verbatim">Psalm.Stage.Cadence</tt>, <tt class="verbatim">Psalm.Solo.Sustained</tt>,
+          <tt class="verbatim">Receiving</tt>, <tt class="verbatim">Roof.Verandah</tt>, <tt class="verbatim">Height.Skill</tt>,
+          <tt class="verbatim">Boulevard.Pollened</tt>, <tt class="verbatim">Yearling.Acre</tt>,
+          <tt class="verbatim">Roof.Autumn</tt>, <tt class="verbatim">Pane.Planks</tt>, <tt class="verbatim">Bid.Sworn</tt>,
+          <tt class="verbatim">Service.simpleOrigins</tt>, <tt class="verbatim">Register</tt>, <tt
+          class="verbatim">Targets</tt>, <tt class="verbatim">Expenses</tt>; no errors.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>[G] graph.</strong> <tt class="verbatim">../OpenAI-YM/graph-compiled/{nodes,refs}.tsv</tt>
+          is an untracked local artifact of that checkout (170 498 nodes, 15
+          186 855 reference rows, a <tt class="verbatim">reached</tt> flag for the
+          headline closure). It is not part of this repository and its
+          generation was not audited; every [G] claim should be reproduced by
+          the reviewer. Three short Python scripts computed (i) theorems of
+          the five packages referenced from outside them by reached
+          declarations: 1518 (678 in <tt class="verbatim">RG_NEXT_COMPLETE_REPEATABLE_NONLINEAR_STEP</tt>,
+          517 in <tt class="verbatim">CONNECTED_ACTIVITY_JETS_E6</tt>, 153 in <tt class="verbatim">Bid</tt>,
+          128 in <tt class="verbatim">V9_JOINT_ENDPOINT_LOAD</tt>, 42 in <tt class="verbatim">Next/FLUCTUATIONS</tt>);
+          (ii) transitive reference closures of the spine declarations against
+          the anchors named above; (iii) direct referrers of each anchor.
+        </p>
+      </li>
+      <li>
+        <p>
+          Overlap search: issues #2&ndash;#15, #22, #26, #29 and PR #18 at
+          2026-11-11 20:56 UTC; <tt class="verbatim">Bots/notes/</tt> is empty. #12's
+          merged audit was read for its consumer edges.
+        </p>
+      </li>
+    </ul>
+    <p>
+      <strong>Not done:</strong> no proof body other than those listed was
+      read; the third-level bundle predicates, <tt class="verbatim">Cash</tt>, <tt
+      class="verbatim">JointLoad.stage</tt>, <tt class="verbatim">Clockwork.offer</tt>, the
+      statements of the further one-step theorems, the proof of <tt class="verbatim">ThroughLaunch.sailsV</tt>
+      and the proof of <tt class="verbatim">CouplingReset.program</tt> were not
+      inspected; no literature source was opened; the Lean project was not
+      rebuilt.
+    </p>
+    <p>
+      <strong>Author-side self-check (2026-11-11, after commit <tt class="verbatim">7c69d33</tt>).</strong>
+      Two fresh agent passes over disjoint halves of this note re-elaborated
+      the cited declarations (<tt class="verbatim">lake env lean</tt> on their own
+      scratch files: <tt class="verbatim">#check</tt>, <tt class="verbatim">#print</tt>, <tt
+      class="verbatim">#print axioms</tt>; no errors other than mistyped names), re-ran
+      the reference closures on the same graph, and read <tt class="verbatim">Retreat.lean</tt>,
+      <tt class="verbatim">Trading.lean</tt> 20&ndash;48, <tt class="verbatim">Opera.lean</tt>
+      60&ndash;100, <tt class="verbatim">Inputs.lean</tt> 28&ndash;95, <tt class="verbatim">Roof/Honey.lean</tt>,
+      <tt class="verbatim">Brim/Level.lean</tt> 61&ndash;73 and <tt class="verbatim">PCalc/Band.lean</tt>.
+      The author then confirmed each reported discrepancy in the source.
+      Corrected as a result: the claim that the bundle follows from Contract
+      1; the names <tt class="verbatim">Roof.budgets</tt>/<tt class="verbatim">Roof.pockets</tt>;
+      the source of <tt class="verbatim">WorksIn</tt>; where the push identity is used;
+      the consumers of <tt class="verbatim">Daisy.timing</tt> and <tt class="verbatim">Wait.engine</tt>;
+      the field count of <tt class="verbatim">Directed.Move</tt>; and the smaller items
+      marked &quot;earlier draft&quot; above. All cited names, kinds, paths
+      and the four Contract 1 quantifier orders were confirmed. This check was
+      run from the author's account and is <strong>not</strong> the
+      independent correspondence review.
+    </p>
+    <p>
+      <strong>Graph recheck (2026-11-12).</strong> Every reference-closure
+      claim of this note was re-run with edges into <tt class="verbatim">_private.</tt>
+      declarations followed, which the earlier scripts had dropped. One claim
+      changed: <tt class="verbatim">Yearling.sterling</tt> reaches <tt class="verbatim">Utopia.whittle</tt>.
+      The other reachability and non-reachability claims were reproduced.
+    </p>
+    <p>
+      Agent assistance: Claude Code, directed by <tt class="verbatim">mgubi</tt>.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Rank, determinant and stress handoffs &mdash; working audit, issue
+    #14 &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Rank, determinant and stress handoffs &mdash; working audit, issue
+      #14</h1><a id="rank-determinant-and-stress-handoffs--working-audit-issue-14"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Summary of findings</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Contract A &mdash; determinant budget (candidate PU-12)</b> <span
+        style="margin-left: 5mm"></span> <a href="#auto-2">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Contract B &mdash; rank comparison (candidate PU-11)</b> <span
+        style="margin-left: 5mm"></span> <a href="#auto-3">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Contract C &mdash; stress tensor and Ward identities (candidate
+        PU-20, III.11 part)</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">5</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Handoff table</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">7</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Obstructions and requested follow-up</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-6">8</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Literature leads (unverified)</b> <span style="margin-left: 5mm"></span> <a href="#auto-7">8</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Evidence</b> <span style="margin-left: 5mm"></span> <a href="#auto-8">9</a>
+      </p>
+    </div>
+    <p>
+      <strong>Status: author draft for independent correspondence
+      review.</strong> This is a bounded interface audit of source cluster
+      III.11, not an exposition and not an ownership grant. Imported source
+      revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>;
+      paths are under <tt class="verbatim">Lean/</tt>. Scott Armstrong's <a href="https://github.com/scottnarmstrong/yang-mills-informalization/blob/8f3c7ccaeabb17b0f928bc1a2e75328691de3032/outline/units/III-11.md">III.11
+      outline</a> at <tt class="verbatim">8f3c7ccaeabb17b0f928bc1a2e75328691de3032</tt>
+      was used for navigation only (proposition numbers
+      III.11.1&ndash;III.11.7 below are that outline's); no claim here rests
+      on it. Do not commission explanation tasks from this note before it has
+      been reviewed.
+    </p>
+    <p>
+      Evidence levels: <strong>[E]</strong> statement elaborated by Lean (<tt
+      class="verbatim">#check</tt>/<tt class="verbatim">#print</tt>); <strong>[S]</strong> source
+      text read; <strong>[G]</strong> computed from a compiled declaration
+      graph that is a local, unaudited artifact (see Evidence). Anything
+      unmarked is interpretation.
+    </p>
+    <h2 id="auto-1"><a id="summary-of-findings"></a>Summary of findings<span style="margin-left: 1em"></span></h2>
+    <ol>
+      <li>
+        <p>
+          <strong>The determinant budget is a stable, separate result that
+          precedes the rank comparison.</strong> <tt class="verbatim">YM.Next.Rank.determinant</tt>
+          and <tt class="verbatim">YM.Next.Rank.Station.affordable</tt> reference none
+          of the other candidate theorems of this cluster, nor the nonlinear
+          step or the Gaussian sector [G]; the rank comparison reaches both of
+          them [G]. PU-12 can be written first and cited by PU-11.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Two different &quot;determinants&quot; occur, with different
+          consumers.</strong> The budget of item 1 is a ratio of Haar
+          integrals on a torus. The relative matrix determinant of #12's third
+          package (<tt class="verbatim">Dyed.cardinal_spin</tt>, <tt class="verbatim">Port.book_price</tt>,
+          <tt class="verbatim">RelativeLogdet.Priced.chains</tt>) is <em>not</em>
+          referenced by <tt class="verbatim">Rank.determinant</tt>, by <tt class="verbatim">Station.affordable</tt>
+          or by the rank theorem <tt class="verbatim">MergeProof.Accent.rated</tt> [G].
+          It enters only upstream of one hypothesis of the rank theorem,
+          through <tt class="verbatim">InteractingRank.Soft.accepts_stock &rarr;
+          Soft.soluble &rarr; Soft.shapers</tt> [G]. #12's open question
+          &quot;is there a proof edge from <tt class="verbatim">cardinal_spin</tt> or
+          <tt class="verbatim">book_price</tt> to <tt class="verbatim">Rank.determinant</tt>&quot;
+          has the answer <strong>no</strong> in either direction [G].
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>The rank comparison is one theorem with three carried
+          hypotheses</strong> [E]: <tt class="verbatim">MergeProof.Accent.rated</tt>.
+          Its conclusion is an extraction record, a <tt class="verbatim">Spec.Seed</tt>
+          and <tt class="verbatim">Maxwell.Ranks</tt>. It does not reference the
+          nonlinear step (<tt class="verbatim">Rain.glazing</tt>, <tt class="verbatim">Roost.Factor.worksNow</tt>)
+          or <tt class="verbatim">Next.SectorChange.committed</tt> [G]; the RG history
+          enters through the hypotheses.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>The stress theorems do not reference the rank
+          theorem</strong> [G]. The handoff from rank to stress is a
+          <em>statement</em>, not a proof dependency: <tt class="verbatim">Acme.emanate</tt>
+          takes a <tt class="verbatim">Spec.Seed</tt> and uses only its field <tt class="verbatim">corrected
+          : Cells.RankWidths</tt>, through <tt class="verbatim">Next.UVStress.cap_given
+          : RankWidths &rarr; DimAbove</tt>, plus the seed's extraction fields
+          [S]. <tt class="verbatim">Maxwell.Ranks</tt> itself is <strong>not</strong>
+          consumed by the stress construction.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><tt class="verbatim">Maxwell.Ranks</tt> is produced twice.</strong>
+          Once by the rank theorem, and again from the stress output by <tt
+          class="verbatim">YM.Climb.comparison : ActLaw &rarr; Maxwell.Ranks</tt> [E].
+          Which of the two the later chapters use is not settled here; it
+          decides whether PU-11 must prove the equivariant isomorphism at all
+          or only the dimension count.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>The handoff to VI.1 is the record <tt class="verbatim">YM.Org.UV</tt></strong>
+          [E]: a seed, the orientation law, the Ward record <tt class="verbatim">Climb.Pre</tt>,
+          the action law <tt class="verbatim">Climb.ActLaw</tt> and the grid condition
+          <tt class="verbatim">Org.Grill</tt>. Its direct VI.1 consumer is <tt class="verbatim">Org.Commission.picks</tt>
+          [E]. No consumer of the stress statements in V.3 was found; see
+          obstruction 4.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>III.11 as delimited by the external outline is not three
+          packages but at least five.</strong> Besides the three in the issue
+          title there are the free covariance estimates (III.11.2, III.11.3)
+          and the production of trial systems from frequent good scales
+          (III.11.4), each with its own statement. A split is proposed below.
+        </p>
+      </li>
+    </ol>
+    <h2 id="auto-2"><a id="contract-a--determinant-budget-candidate-pu-12"></a>Contract A &mdash; determinant budget (candidate
+    PU-12)<span style="margin-left: 1em"></span></h2>
+    <p>
+      <strong>Statements</strong> [E].
+    </p>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">YM.Next.Rank.determinant</tt>, <tt class="verbatim">YM/Next/RANK/Determinant.lean:240</tt>.
+          For a representation <tt class="verbatim">R : RG.Rep G n</tt> with <tt class="verbatim">R.Lawful
+          &sigma; A &Lambda; &delta; w</tt>, a Haar budget <tt class="verbatim">O</tt>,
+          <tt class="verbatim">0 &le; R.eval</tt> pointwise, <tt class="verbatim">1 &lt; n</tt>,
+          <tt class="verbatim">0 &lt; g &le; R.p.threshold</tt>, <tt class="verbatim">R.beta * g^2
+          = 1</tt>, a <tt class="verbatim">Wilson.prior</tt>-integrable <tt class="verbatim">F :
+          Config G n &rarr; &#x2102;</tt>, <tt class="verbatim">0 &le; z</tt>, and the
+          pointwise bound <tt class="verbatim">z * &#x2016;F U&#x2016; &le; exp
+          (R.exponent U + card(Site n) * X)</tt>:
+        </p>
+        <pre class="verbatim" xml:space="preserve">
+z * &#x2016;&int; F d(prior)&#x2016; / &int; R.eval d(prior)
+    &le; exp (card(Site n) * protection O R A &Lambda; &delta; X g - 4 * G.lieDim * log g)</pre>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM.Next.Rank.protection</tt> (<tt class="verbatim">Determinant.lean:225</tt>)
+          [E]: &lsquo;2 * R.exCost A &Lambda; &delta; + card PlaqAxes + R.beta
+          * RG.baseBudget R.clip A g + X
+        </p>
+        <ul>
+          <li>
+            <p>
+              3 * ent O R.clip - 4 * log O.small<tt class="verbatim">, with </tt>ent O p
+              = log O.big - G.lieDim * log (min 1 p.linear)&lsquo;.
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM.Next.Rank.HaarBudget</tt> (<tt class="verbatim">Determinant.lean:26</tt>)
+          [E]: reals <tt class="verbatim">0 &lt; small &le; 1 &le; big</tt> with <tt
+          class="verbatim">small * r^lieDim &le; probHaar (shell (r/4))</tt> for <tt
+          class="verbatim">0 &lt; r &le; 1</tt> and <tt class="verbatim">&int; exp(-(chord u / t))
+          d(probHaar) &le; big * t^lieDim</tt> for <tt class="verbatim">t &gt; 0</tt>.
+          <tt class="verbatim">YM.Next.Rank.exists_budget : Nonempty (HaarBudget G)</tt>
+          for every <tt class="verbatim">G</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM.Next.Rank.Station.affordable</tt>, <tt class="verbatim">YM/Next/RANK/StationMeter.lean:119</tt>.
+          For a Haar budget <tt class="verbatim">O</tt>, levels <tt class="verbatim">A : RG.Levels
+          G</tt> and simple <tt class="verbatim">G</tt>: eventually in the level <tt
+          class="verbatim">m</tt>, for every period index <tt class="verbatim">p</tt>, every
+          representation <tt class="verbatim">P</tt> on <tt class="verbatim">A.S.side m p</tt>,
+          all <tt class="verbatim">g &Lambda; &delta; X</tt> and <tt class="verbatim">k :
+          &#x2115;</tt> with <tt class="verbatim">Station.Meets A m p P g &Lambda;
+          &delta;</tt> and <tt class="verbatim">X &le; 1 + k</tt>,
+        </p>
+        <pre class="verbatim" xml:space="preserve">
+protection O P (A.params m).paths &Lambda; &delta; X g
+    - 4 * G.lieDim * log g / card(Site (A.S.side m p))
+  &le; Station.ticket O (A.params m) k</pre>
+        <p>
+          <tt class="verbatim">Station.Meets</tt> is eight scalar conditions (same clip
+          as the stage, <tt class="verbatim">P.beta &le; 4 * hatBeta m</tt>, <tt class="verbatim">P.beta
+          * g^2 = 1</tt>, <tt class="verbatim">0 &lt; g &le; P.p.threshold &le;
+          threshold m</tt>, <tt class="verbatim">&delta; &le; 1</tt>, <tt class="verbatim">&Lambda;
+          &le; loopCap m</tt>); <tt class="verbatim">Station.ticket</tt> is an explicit
+          expression in the stage data, <tt class="verbatim">O</tt> and <tt class="verbatim">k</tt>
+          [E].
+        </p>
+      </li>
+    </ul>
+    <p>
+      <strong>Order of quantifiers.</strong> In <tt class="verbatim">determinant</tt>
+      nothing is chosen: it is a bound for each fixed torus, representation
+      and <tt class="verbatim">g</tt>. In <tt class="verbatim">affordable</tt> the level threshold
+      depends on <tt class="verbatim">O</tt> and <tt class="verbatim">A</tt> only and is uniform
+      in <tt class="verbatim">p</tt>, <tt class="verbatim">P</tt>, <tt class="verbatim">g</tt>, <tt class="verbatim">&Lambda;</tt>,
+      <tt class="verbatim">&delta;</tt>, <tt class="verbatim">X</tt>, <tt class="verbatim">k</tt>.
+    </p>
+    <p>
+      <strong>Inputs</strong> [G]. The reference closure of <tt class="verbatim">determinant</tt>
+      contains 273 theorems, in <tt class="verbatim">YM/Next/RANK</tt> (41: <tt class="verbatim">Axial.lean</tt>,
+      <tt class="verbatim">Haar.lean</tt>, <tt class="verbatim">Determinant.lean</tt>) and in the
+      lattice, gauge-group and RG-definition directories. It reaches none of:
+      <tt class="verbatim">SectorChange.committed</tt>, <tt class="verbatim">SectorAffine.assembly</tt>,
+      <tt class="verbatim">Rain.glazing</tt>, <tt class="verbatim">Roost.Factor.worksNow</tt>, <tt
+      class="verbatim">Fluctuations.grants</tt>, <tt class="verbatim">Target.issue</tt>, <tt
+      class="verbatim">Dyed.cardinal_spin</tt>. <tt class="verbatim">affordable</tt> (87 theorems)
+      likewise.
+    </p>
+    <p>
+      <strong>Consumers</strong> [G]. <tt class="verbatim">determinant</tt> has one: <tt
+      class="verbatim">InteractingRank.Soft.denture</tt> (the same inequality under a
+      <tt class="verbatim">Soft.Tissue</tt> hypothesis [E]), which is reached by the
+      rank theorem along <tt class="verbatim">Accent.rated &rarr; Soft.wheeled &rarr;
+      Soft.v_obtain_purchases &rarr; Soft.coupon &rarr; Soft.s_postage &rarr;
+      Soft.denture</tt>. <tt class="verbatim">affordable</tt> has one: <tt class="verbatim">Rank.Ship.banking</tt>,
+      used by <tt class="verbatim">v_obtain_purchases</tt>.
+    </p>
+    <p>
+      <strong>Recommendation: separate unit, before PU-11.</strong> One
+      coherent argument (tree gauge, a triangular choice of plaquettes for the
+      numerator, Haar shells for the vacuum, cancellation of powers of <tt
+      class="verbatim">g</tt>), a short statement and a single consumer. The
+      mathematical description of the proof is taken from the external outline
+      and was not checked against the proof bodies.
+    </p>
+    <h2 id="auto-3"><a id="contract-b--rank-comparison-candidate-pu-11"></a>Contract B &mdash; rank comparison (candidate
+    PU-11)<span style="margin-left: 1em"></span></h2>
+    <p>
+      <strong>Main statement</strong> [E]. <tt class="verbatim">YM.MergeProof.Accent.rated</tt>,
+      <tt class="verbatim">YM/MergeProof/Powder.lean:48</tt>. For a Wilson family <tt
+      class="verbatim">C</tt> with <tt class="verbatim">C.Makes</tt>, simple <tt class="verbatim">G</tt>,
+      <tt class="verbatim">Extraction.Wcmain C</tt>, and
+    </p>
+    <ul>
+      <li>
+        <p>
+          (i) <tt class="verbatim">MergeProof.Scotia C V Y Xf</tt> (<tt class="verbatim">YM/MergeProof/Eureka.lean:16</tt>):
+          a presentation <tt class="verbatim">Xf</tt> with <tt class="verbatim">Extract.Affordable</tt>
+          and <tt class="verbatim">Extract.RelayCosts</tt> along every extraction order,
+          such that for each degree, eventually in <tt class="verbatim">N</tt> and for
+          all <tt class="verbatim">p</tt>, the corrected label map is real and
+          equivariant under the signed axis permutations and the step of <tt
+          class="verbatim">Xf</tt> is the chosen projector of the catalogue [E];
+        </p>
+      </li>
+      <li>
+        <p>
+          (ii) <tt class="verbatim">MergeProof.Scrim C W u &psi; &phi; &delta;
+          (Bandage.fly &hellip;) r D</tt> along gauge-door maps <tt class="verbatim">D</tt>
+          between successive levels (not unfolded);
+        </p>
+      </li>
+      <li>
+        <p>
+          (iii) panels <tt class="verbatim">Q</tt>, a chart ratio <tt class="verbatim">J</tt> and
+          a binding <tt class="verbatim">B</tt> such that for every degree <tt class="verbatim">i</tt>
+          there are <strong>frequently</strong> (<tt class="verbatim">&exist;&#x1DA0; j
+          in atTop</tt>) levels <tt class="verbatim">j</tt> with <tt class="verbatim">RankCovariance.Tender
+          v j &and; Tapes.Metering v O j (-3) &and; &exist; l r, ShowHours J B
+          (v.current j) j (-3) l r &and; Soft.Vents B (v.current j) J l r
+          j</tt>, where <tt class="verbatim">v = Panel.patronize C (Q i) &hellip;</tt>;
+        </p>
+      </li>
+    </ul>
+    <p>
+      for every extraction order <tt class="verbatim">f</tt> there exist a refinement
+      <tt class="verbatim">g</tt> and <tt class="verbatim">A L R Z T E</tt> with <tt class="verbatim">Extract.Projected
+      Xf (f.refine g) R Z</tt>, <tt class="verbatim">Extract.Base C (f.refine g) A L R T
+      E</tt>, a seed <tt class="verbatim">s : Spec.Seed C (f.refine g) T</tt>, and <tt
+      class="verbatim">Maxwell.Ranks T s.kernel&hellip;</tt>.
+    </p>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">YM.Spec.Seed</tt> (<tt class="verbatim">YM/Spec/Closed.lean:20</tt>)
+          [E]: <tt class="verbatim">C.Makes</tt>, <tt class="verbatim">f.Ordered C S</tt>, <tt
+          class="verbatim">f.PointLimits C S</tt>, <tt class="verbatim">S.Hierarchy</tt>, <tt
+          class="verbatim">Cells.CellHyp C f</tt>, and <tt class="verbatim">Cells.RankWidths C f S
+          := &forall; d, &exist; X Y, Columns.Trials.Valid f Y</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM.Maxwell.Ranks</tt> (<tt class="verbatim">YM/Euclid/Comparator.lean:135</tt>)
+          [E]: a real structure <tt class="verbatim">h</tt> on <tt class="verbatim">Maxwell.freeTable
+          L.grid</tt> and, for every degree <tt class="verbatim">d</tt>, a map <tt
+          class="verbatim">f</tt> from <tt class="verbatim">S.Field d</tt> to the free field space
+          intertwining the conjugations and the mirror actions of <tt class="verbatim">YM.Signed</tt>.
+          That <tt class="verbatim">f</tt> is a linear isomorphism is as reported by the
+          external outline; the binder type was not printed.
+        </p>
+      </li>
+    </ul>
+    <p>
+      <strong>Internal statements</strong> [E], in the order in which the
+      proof uses them [G]:
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Step</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Anchor</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Statement</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Free pair terms (III.11.2)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Next.Rank.Prayer.fence</tt>, <tt class="verbatim">YM/Next/RANK/StrideCost.lean:70</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">For stencils <tt class="verbatim">L, S</tt> there is <tt class="verbatim">C
+        &ge; 0</tt> such that for every configuration of distinct points, <tt
+        class="verbatim">i &ne; j</tt>, a bound <tt class="verbatim">D</tt> on the real parts of
+        the current covariance, and <tt class="verbatim">r &ge; 1</tt>: <tt class="verbatim">r *
+        &#x2016;(rescaled pairing) - Prayer.light L S x_i x_j&#x2016; &le; C *
+        D</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Free covariance windows (III.11.3)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.PhysicalNext.RankCovariance.window_prices</tt>,
+        <tt class="verbatim">YM/PhysicalNext/RANK_COVARIANCE_ATLAS/Window.lean:118</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">For <tt class="verbatim">&alpha;, &eta; &gt; 0</tt>, <tt class="verbatim">&Omega;</tt>,
+        <tt class="verbatim">n</tt> there is <tt class="verbatim">C &ge; 0</tt> such that for
+        every regulator <tt class="verbatim">f : FreeCovariance.KP.Firm &alpha; &Omega;
+        &eta;</tt>, every <tt class="verbatim">G</tt> and stencils <tt class="verbatim">a, b</tt>:
+        <tt class="verbatim">Radian.Window (coloredChart f a b) 2 C n (chartHeat a
+        b)</tt>. Uniform in the regulator and the group.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Frequent scales to provisions</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.PhysicalNext.InteractingRank.Soft.cast_off</tt>,
+        <tt class="verbatim">&hellip;/AFTERNOON_INTERACTING_RANK_COMPARISON/Soft/Star.lean:64</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">From the four price conditions and <tt class="verbatim">LanternMarks
+        M F X k</tt> holding frequently in <tt class="verbatim">k</tt>: <tt class="verbatim">Soft.s_provisions
+        F O X M</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Provisions to trial systems (III.11.4)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Soft.wheeled</tt>, <tt class="verbatim">&hellip;/Soft/Star.lean:68</tt>;
+        <tt class="verbatim">Soft.v_obtain_purchases</tt>, <tt class="verbatim">&hellip;/Soft/Supra.lean:177</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">&exist; Z, Soft.Travels_ O p F.fixed Z &and;
+        Market.Purchases Z</tt>. <tt class="verbatim">Market.Purchases</tt> (<tt class="verbatim">YM/Next/RANK/Bought.lean:68</tt>)
+        records the depths, strictly decreasing scales <tt class="verbatim">a &middot;
+        monitor^b</tt>, real bounded coefficient vectors with first entry the
+        reference unit, convergence of the test configurations, and &mdash;
+        eventually in <tt class="verbatim">N</tt>, for every <tt class="verbatim">p</tt> &mdash;
+        the bound <tt class="verbatim">rootTest (&beta;_{N,p}) (connected part) &le;
+        Z.gap k</tt> for every nonempty set of modes.</td>
+      </tr></tbody>
+    </table>
+    <p>
+      <tt class="verbatim">Accent.rated</tt> reaches <tt class="verbatim">Prayer.fence</tt>
+      through <tt class="verbatim">Soft.wheeled &rarr; Soft.v_paid_factory &rarr;
+      Wall.on_demand &rarr; Prayer.penalty</tt>, and <tt class="verbatim">window_prices</tt>
+      through the definition <tt class="verbatim">RankCovariance.Tender &rarr;
+      RankCovariance.prepared</tt> [G].
+    </p>
+    <p>
+      <strong>Where the hypotheses are discharged</strong> [E statements, G
+      reachability].
+    </p>
+    <ul>
+      <li>
+        <p>
+          (i): <tt class="verbatim">YM.MergeProof.reception</tt> (<tt class="verbatim">Eureka.lean:22</tt>)
+          produces <tt class="verbatim">&exist; P b, Scotia C R P b</tt> from <tt class="verbatim">Makes</tt>,
+          <tt class="verbatim">Stock.Tabs</tt>, <tt class="verbatim">Scrim</tt>, <tt class="verbatim">Fridge</tt>,
+          portfolio data and simplicity. It is used by <tt class="verbatim">YM.PhysicalNext.Repeat.Legato.chaletrail</tt>
+          (<tt class="verbatim">YM/MergeProof/Inns.lean:33</tt>), which
+          <strong>does</strong> reach the nonlinear step's reset (<tt class="verbatim">&hellip;
+          &rarr; Use.Machine.run &rarr; Return.reset &rarr; Return.earnings
+          &rarr; SectorChange.committed</tt>).
+        </p>
+      </li>
+      <li>
+        <p>
+          (iii): <tt class="verbatim">YM.PhysicalNext.Repeat.Legato.franchise</tt> (<tt
+          class="verbatim">YM/MergeProof/Snow.lean:55</tt>). From <tt class="verbatim">InteractingRank.PreStand</tt>,
+          <tt class="verbatim">Soft.Shops K s k P &mu;</tt>, a size condition and an
+          eventual-membership condition, it enlarges a waiting window <tt
+          class="verbatim">J</tt> to <tt class="verbatim">U</tt> and gives the four price
+          conditions frequently, for every family paid at <tt class="verbatim">U</tt>
+          and every binding with the given prices. <tt class="verbatim">Soft.Shops</tt>
+          is produced by <tt class="verbatim">Soft.shapers</tt> (<tt class="verbatim">&exist; M,
+          Shops B X k p M</tt>), whose closure contains <tt class="verbatim">Soft.accepts_stock</tt>,
+          <tt class="verbatim">Dyed.cardinal_spin</tt> and 288 theorems of <tt class="verbatim">RELATIVE_LOGDET_TRACE</tt>
+          [G]. This is the only place where #12's third package meets this
+          cluster.
+        </p>
+      </li>
+      <li>
+        <p>
+          The binding: <tt class="verbatim">Legato.castle</tt> (<tt class="verbatim">Snow.lean:28</tt>),
+          from a <tt class="verbatim">Roost.Factor</tt> of the nonlinear step and a <tt
+          class="verbatim">RankCovariance.ShapePort</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          All three, and the stress hypotheses below, are closed by <tt class="verbatim">Legato.uv_log</tt>
+          (<tt class="verbatim">YM/SharpGram/Assembly/Flowers.lean:75</tt>): <tt class="verbatim">G.Simple
+          &rarr; 0 &lt; b &rarr; &exist; C, &hellip;</tt> with conclusion
+          containing <tt class="verbatim">Makes</tt>, <tt class="verbatim">Wcmain</tt>, <tt class="verbatim">Acme.Aroma
+          C</tt>, <tt class="verbatim">Org.Grill</tt>, <tt class="verbatim">East.CompleteWeak</tt>
+          and, for every <tt class="verbatim">f</tt>, the conclusion of <tt class="verbatim">rated</tt>
+          [E]. <tt class="verbatim">uv_log</tt> belongs to III.13.
+        </p>
+      </li>
+    </ul>
+    <p>
+      <strong>Recommendation: split in three.</strong> The closure of <tt
+      class="verbatim">rated</tt> has 7896 theorems [G]; one unit cannot own it.
+    </p>
+    <ul>
+      <li>
+        <p>
+          <em>PU-11a, free covariance estimates</em>: <tt class="verbatim">Prayer.fence</tt>,
+          <tt class="verbatim">window_prices</tt>. Statements about the free Maxwell
+          kernel and regulators only; candidates for literature (symbol
+          estimates) with project-specific uniformity.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>PU-11b, trial systems</em>: <tt class="verbatim">cast_off</tt>, <tt class="verbatim">wheeled</tt>,
+          <tt class="verbatim">v_obtain_purchases</tt>, <tt class="verbatim">Market.Purchases</tt>.
+          Consumes PU-12 (<tt class="verbatim">denture</tt>, <tt class="verbatim">banking</tt>)
+          and PU-11a. This is the chessboard/root-test argument.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>PU-11c, rank identification</em>: <tt class="verbatim">Accent.rated</tt>
+          from <tt class="verbatim">Purchases</tt>, <tt class="verbatim">Scotia</tt> and <tt
+          class="verbatim">Scrim</tt>: the two dimension bounds, the projector
+          conjugation, the seed.
+        </p>
+      </li>
+    </ul>
+    <p>
+      The producers <tt class="verbatim">franchise</tt>, <tt class="verbatim">castle</tt>, <tt
+      class="verbatim">reception</tt>/<tt class="verbatim">chaletrail</tt> are applications of the
+      nonlinear step and of #12's third package to the hypotheses of PU-11c.
+      They should not be owned by PU-11; whether they go to PU-13 (with <tt
+      class="verbatim">uv_log</tt>) is a question for the owner of III.13.
+    </p>
+    <h2 id="auto-4"><a id="contract-c--stress-tensor-and-ward-identities-candidate-pu-20-iii11-part"></a>Contract C &mdash; stress tensor and Ward identities
+    (candidate PU-20, III.11 part)<span style="margin-left: 1em"></span></h2>
+    <p>
+      <strong>Statements</strong> [E].
+    </p>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">YM.MergeProof.Acme.readyA</tt>, <tt class="verbatim">YM/MergeProof/Emanate.lean:15</tt>
+          (III.11.6(a)). Hypotheses: <tt class="verbatim">C.Makes</tt>, <tt class="verbatim">F.Ordered
+          C S</tt>, <tt class="verbatim">F.PointLimits C S</tt>, <tt class="verbatim">H :
+          S.Hierarchy</tt>, <tt class="verbatim">Cells.CellHyp C F</tt>, <tt class="verbatim">W.Inclusions
+          S</tt>, <tt class="verbatim">W.Derivatives S</tt>, <strong><tt class="verbatim">Next.UVStress.DimAbove
+          S</tt></strong> (<tt class="verbatim">&forall; d, finrank (S.Field d) &le;
+          finrank ((Climb.Bel L).Field d)</tt>), a free model <tt class="verbatim">T :
+          Climb.Lighthouse C.book</tt> with hierarchy <tt class="verbatim">a</tt>, its
+          inclusion, derivative and orientation laws and <tt class="verbatim">FreeDiv T
+          a p</tt>, <tt class="verbatim">Next.UVStress.Stations C F a.spin</tt>, and the
+          shell estimate <tt class="verbatim">Acme.Aroma C</tt>. Conclusion: <tt class="verbatim">W.Orientation
+          H.spin</tt> and <tt class="verbatim">&exist; I X</tt> with <tt class="verbatim">I.J &ne;
+          0</tt>, <tt class="verbatim">I.J &isin; KernelSpace H.spin</tt>, <tt class="verbatim">Approaches
+          (path X) (isoPanel X)</tt>, <tt class="verbatim">Stable &hellip; W T.W X</tt>,
+          <tt class="verbatim">X.meter I.J T.J</tt>, <tt class="verbatim">Climb.Pre H W I.J I.p
+          I.Y</tt> and <tt class="verbatim">Climb.ActLaw W T I.J H.spin a.spin</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM.Climb.Pre</tt> [E]: <tt class="verbatim">Table.Conserved V
+          &hellip; J</tt> (symmetric, real, divergence-free with respect to
+          the plan's derivative), <tt class="verbatim">Table.RawTensor</tt>, and <tt
+          class="verbatim">Table.StressLaws S J p Y</tt> (translation and rotation Ward
+          identities: the shell gradient and shell spin of <tt class="verbatim">J</tt>
+          against a window equal the insertion of <tt class="verbatim">Y d b B</tt>,
+          respectively <tt class="verbatim">A d g B</tt>).
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM.MergeProof.Acme.annular_fieldA</tt>, <tt class="verbatim">YM/MergeProof/West/Bravo.lean:55</tt>
+          (III.11.7). For a conserved stress <tt class="verbatim">J</tt>, <tt class="verbatim">v :
+          S.Field d</tt>, a smooth Killing field <tt class="verbatim">U</tt> homogeneous
+          of degree <tt class="verbatim">p</tt>, <tt class="verbatim">D + (3 + p) = d + 4</tt> and
+          <tt class="verbatim">Aroma C</tt>: <tt class="verbatim">&exist; B</tt>, for all <tt
+          class="verbatim">n</tt>, tags <tt class="verbatim">q</tt>, distinct points <tt class="verbatim">x</tt>
+          and windows <tt class="verbatim">&chi;</tt>, <tt class="verbatim">Work.A01.flux J &chi;
+          (U(&middot; - x&#x2080;)) x q v = Ward.disc (Fin.cons &#x27E8;D,
+          B&#x27E9; q) x</tt>. It rests on <tt class="verbatim">Acme.tenet</tt> (<tt
+          class="verbatim">West/Blanca.lean:49</tt>: combinations of fluxes annihilated
+          by all degree-<tt class="verbatim">D</tt> testers vanish) and feeds <tt class="verbatim">Acme.shells_law</tt>
+          (<tt class="verbatim">West/Orange.lean:33</tt>: <tt class="verbatim">&exist; p Y,
+          Table.StressLaws S J p Y</tt>), which <tt class="verbatim">readyA</tt> calls
+          [S].
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM.MergeProof.Acme.Aroma</tt> (<tt class="verbatim">West/Ozone.lean:16</tt>)
+          [E]: <tt class="verbatim">Ribbons.Economics C</tt>, <tt class="verbatim">Stock.Tabs
+          C.path.levels</tt> and a <tt class="verbatim">Ribbons.Note</tt>. <tt class="verbatim">Economics</tt>
+          is produced by <tt class="verbatim">Ribbons.laurelE</tt> and the note by <tt
+          class="verbatim">Ribbons.fugacious</tt> (<tt class="verbatim">YM/MergeProof/North/Economist.lean:23,
+          34</tt>), from <tt class="verbatim">Scrim</tt>, <tt class="verbatim">Legato.Velour</tt>,
+          <tt class="verbatim">Tabs</tt>, <tt class="verbatim">Ribbons.Created</tt> and <tt class="verbatim">Makes</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM.MergeProof.Acme.emanate</tt>, <tt class="verbatim">Emanate.lean:31</tt>
+          (III.11.6(b)): <tt class="verbatim">Aroma C &rarr; G.Simple &rarr; Org.Grill C
+          F &rarr; East.CompleteWeak C F &rarr; Spec.Seed C F S &rarr;
+          W.Inclusions S &rarr; W.Derivatives S &rarr; &exist; M I, I.J &ne; 0
+          &and; Org.UV C F S W M I</tt>.
+        </p>
+      </li>
+    </ul>
+    <p>
+      <strong>How rank feeds stress</strong> [S, proof of <tt class="verbatim">emanate</tt>].
+      The free model is taken from <tt class="verbatim">Maxwell.Free.maxwell_supplies</tt>
+      and <tt class="verbatim">UVNext.FreeStress.fire</tt> (VI.2); <tt class="verbatim">Stations</tt>
+      is built by <tt class="verbatim">realizes_stations</tt> from the seed's <tt class="verbatim">cutoff</tt>,
+      <tt class="verbatim">generic</tt>, <tt class="verbatim">ordered</tt>, <tt class="verbatim">kernel</tt>
+      and from <tt class="verbatim">CompleteWeak</tt>; and <tt class="verbatim">DimAbove</tt> is
+      <tt class="verbatim">cap_given s.corrected</tt>. Then <tt class="verbatim">readyA</tt> is
+      applied. So the stress construction consumes from the rank comparison
+      exactly the inequality <tt class="verbatim">dim F_d(S) &le; dim F_d^free</tt> (as
+      <tt class="verbatim">RankWidths</tt>) and the extraction fields of the seed.
+      Neither <tt class="verbatim">readyA</tt> nor <tt class="verbatim">emanate</tt> reaches <tt
+      class="verbatim">Accent.rated</tt> or <tt class="verbatim">Rank.determinant</tt> [G].
+    </p>
+    <p>
+      <strong>Output to VI.1</strong> [E]. <tt class="verbatim">YM.Org.UV C F S W
+      T&#x2080; I</tt> (<tt class="verbatim">YM/Org/Input.lean:177</tt>): <tt class="verbatim">basis
+      : Spec.Seed C F S</tt>, <tt class="verbatim">aligned : W.Orientation
+      &hellip;</tt>, <tt class="verbatim">planet : Climb.Pre &hellip; W I.J I.p
+      I.Y</tt>, <tt class="verbatim">weak : Climb.ActLaw W T&#x2080;.T I.J &hellip;
+      &hellip;</tt>, <tt class="verbatim">tables : Org.Grill C F</tt>. Its consumer <tt
+      class="verbatim">YM.Org.Commission.picks</tt> has the statement <tt class="verbatim">Spec.Calibrated
+      C &rarr; V.Inclusions S &rarr; V.Derivatives S &rarr; Org.UV C f S V W I
+      &rarr; Nonempty (Spec.Final C f S)</tt> [E]. <tt class="verbatim">YM.Climb.comparison</tt>
+      (<tt class="verbatim">YM/Climb/Beams.lean:53</tt>): <tt class="verbatim">Climb.ActLaw P T J
+      h a &rarr; Maxwell.Ranks S h</tt> [E]; it is reached from <tt class="verbatim">SharpGram.coordination</tt>
+      through <tt class="verbatim">Acme.glistens &rarr; Org.Commission.picks</tt> [G].
+    </p>
+    <p>
+      <strong>Recommendation: two units inside PU-20's III.11 share.</strong>
+    </p>
+    <ul>
+      <li>
+        <p>
+          <em>PU-20a, Ward flux</em>: <tt class="verbatim">tenet</tt>, <tt class="verbatim">annular_fieldA</tt>,
+          <tt class="verbatim">shells_law</tt>, with <tt class="verbatim">Aroma</tt> as a stated
+          hypothesis. Self-contained given the shell estimate.
+        </p>
+      </li>
+      <li>
+        <p>
+          <em>PU-20b, stress from the free comparison</em>: <tt class="verbatim">readyA</tt>
+          and <tt class="verbatim">emanate</tt>, citing PU-20a, VI.2 for the free model,
+          and PU-11 only for <tt class="verbatim">RankWidths</tt>.
+        </p>
+      </li>
+    </ul>
+    <p>
+      The shell estimate (<tt class="verbatim">laurelE</tt>, <tt class="verbatim">fugacious</tt>;
+      closure 2411 theorems, mostly <tt class="verbatim">MergeProof/North</tt> [G]) is a
+      third, separate argument. It is not a stress statement and should not be
+      absorbed into PU-20 without its own audit.
+    </p>
+    <h2 id="auto-5"><a id="handoff-table"></a>Handoff table<span style="margin-left: 1em"></span></h2>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Candidate</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Owns</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Needs (statement)</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Hands on (statement)</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Consumer</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-12</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Rank.determinant</tt>, <tt class="verbatim">protection</tt>,
+        <tt class="verbatim">HaarBudget</tt>, <tt class="verbatim">exists_budget</tt>, <tt class="verbatim">Station.affordable</tt>,
+        <tt class="verbatim">Station.Meets</tt>, <tt class="verbatim">Station.ticket</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">RG.Rep.Lawful</tt>; stage data of <tt class="verbatim">RG.Levels</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">the two inequalities of Contract A</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-11b via <tt class="verbatim">Soft.denture</tt>, <tt class="verbatim">Ship.banking</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-11a</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Prayer.fence</tt>, <tt class="verbatim">RankCovariance.window_prices</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">free covariance and regulator family (III.3)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">pair-term and window bounds</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-11b; <tt class="verbatim">RankCovariance.Tender</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-11b</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Soft.cast_off</tt>, <tt class="verbatim">Soft.wheeled</tt>,
+        <tt class="verbatim">Soft.v_obtain_purchases</tt>, <tt class="verbatim">Market.Purchases</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-12, PU-11a, the four price conditions frequently</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Market.Purchases Z</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-11c</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-11c</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Accent.rated</tt>, <tt class="verbatim">Maxwell.Ranks</tt>,
+        <tt class="verbatim">Spec.Seed</tt> (as output)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Scotia</tt>, <tt class="verbatim">Scrim</tt>, price
+        conditions, PU-11b, extraction (IV.1)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Spec.Seed</tt>, <tt class="verbatim">Maxwell.Ranks</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-20b (<tt class="verbatim">RankWidths</tt> only); VIII.1</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-20a</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Acme.tenet</tt>, <tt class="verbatim">Acme.annular_fieldA</tt>,
+        <tt class="verbatim">Acme.shells_law</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Acme.Aroma</tt>; conserved <tt class="verbatim">J</tt>;
+        VI.1 windows and flux</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Table.StressLaws</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-20b</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">PU-20b</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Acme.readyA</tt>, <tt class="verbatim">Acme.emanate</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">DimAbove</tt> (from <tt class="verbatim">RankWidths</tt>),
+        <tt class="verbatim">Stations</tt>, free model (VI.2), PU-20a</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Org.UV</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">VI.1 (<tt class="verbatim">Org.Commission.picks</tt>)</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><em>unowned</em></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">franchise</tt>, <tt class="verbatim">castle</tt>, <tt
+        class="verbatim">reception</tt>, <tt class="verbatim">chaletrail</tt>; <tt class="verbatim">laurelE</tt>,
+        <tt class="verbatim">fugacious</tt>; <tt class="verbatim">Soft.shapers</tt>, <tt class="verbatim">Soft.soluble</tt>,
+        <tt class="verbatim">Soft.accepts_stock</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">nonlinear step (#13), #12 package 3</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">hypotheses (i)&ndash;(iii) of PU-11c and <tt class="verbatim">Aroma</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Legato.uv_log</tt> (III.13)</td>
+      </tr></tbody>
+    </table>
+    <p>
+      <strong>Formal versus conceptual order.</strong> No reference cycle was
+      found among the anchors of the table [G]: PU-12 and PU-11a reach nothing
+      else in it; PU-11b reaches PU-12 and PU-11a; PU-11c reaches PU-11b;
+      PU-20a reaches nothing in PU-11 or PU-12; PU-20b reaches PU-20a and VI.2
+      only. The conceptual order PU-12 &rarr; PU-11a &rarr; PU-11b &rarr;
+      PU-11c &rarr; PU-20b, with PU-20a parallel, coincides with the reference
+      order. The apparent cycle &quot;stress needs ranks, VI.1 derives ranks
+      from the action law&quot; (finding 5) is not a formal cycle, because the
+      stress construction needs only the upper bound on dimensions.
+    </p>
+    <h2 id="auto-6"><a id="obstructions-and-requested-follow-up"></a>Obstructions and requested follow-up<span style="margin-left: 1em"></span></h2>
+    <ol>
+      <li>
+        <p>
+          <strong>Hypothesis bundles are not unfolded.</strong> <tt class="verbatim">Scrim</tt>,
+          <tt class="verbatim">Tapes.Cohesion</tt>, <tt class="verbatim">RankCovariance.Tender</tt>,
+          <tt class="verbatim">Tapes.Metering</tt>, <tt class="verbatim">Soft.Timing</tt>, <tt
+          class="verbatim">Ceremony</tt>, <tt class="verbatim">LanternMarks</tt>, <tt class="verbatim">Soft.s_supplies</tt>,
+          <tt class="verbatim">Soft.Travels_</tt>, <tt class="verbatim">Cells.Columns.Trials.Valid</tt>,
+          <tt class="verbatim">Stations.Admissible</tt>, <tt class="verbatim">Climb.Track</tt>,
+          <tt class="verbatim">Ribbons.ShellNode</tt>, <tt class="verbatim">Soft.Tissue</tt>, <tt
+          class="verbatim">Extract.Base</tt>, <tt class="verbatim">Extract.Projected</tt>, <tt
+          class="verbatim">Extraction.Wcmain</tt>, <tt class="verbatim">Soft.Available</tt>, <tt
+          class="verbatim">Soft.Kraft</tt> were seen as names in elaborated statements
+          only. Every sentence above that describes their content is taken
+          from the external outline and is unverified.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Which <tt class="verbatim">Maxwell.Ranks</tt> is used
+          downstream</strong> (finding 5). <tt class="verbatim">Ranks</tt> occurs in the
+          value of at least twenty-five declarations, among them <tt class="verbatim">SharpGram.coordination</tt>,
+          <tt class="verbatim">Trace.agora</tt> and <tt class="verbatim">RemainderComparison.Chron.commissioned</tt>
+          [G]. Their source was not read.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>The role of #12's third package is located but not
+          stated.</strong> <tt class="verbatim">Soft.accepts_stock</tt> (<tt class="verbatim">&forall;&#x1DA0;
+          s, Soft.Kraft J i P D W d s</tt> under <tt class="verbatim">Pump.Granite</tt>
+          and <tt class="verbatim">Wax.Peaking</tt> eventually [E]) and <tt class="verbatim">Soft.soluble</tt>
+          (<tt class="verbatim">&exist; n, &forall; L &ge; n, Soft.Available P L i</tt>
+          [E]) are the consumers of <tt class="verbatim">Vale.land</tt>/<tt class="verbatim">Pump.foreshadows</tt>.
+          What <tt class="verbatim">Available</tt> asserts, and therefore what
+          determinant statement PU-11 actually needs from #12, is open. This
+          is the border that #12 proposed at <tt class="verbatim">Port.book_price</tt>;
+          it should be agreed with #12's author once <tt class="verbatim">Available</tt>
+          is unfolded.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>V.3.</strong> The issue asks for the data consumed by the
+          stress tensor in V.3/VI.1. The external V.3 outline does not cite
+          III.11, <tt class="verbatim">readyA</tt>, <tt class="verbatim">emanate</tt> or <tt
+          class="verbatim">Org.UV</tt>; it lists <tt class="verbatim">Spec.Seed</tt> as an input
+          from IV.1. No Lean consumer in V.3 was searched for. The VI.1
+          handoff is <tt class="verbatim">Org.UV</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Notation</strong>, referred to #10: <tt class="verbatim">F_d(S)</tt>
+          (<tt class="verbatim">S.Field d</tt>) versus the label space <tt class="verbatim">C.label
+          d</tt> and its coordinate space; <tt class="verbatim">Maxwell.freeTable</tt>
+          versus <tt class="verbatim">Climb.Bel</tt>; &quot;rank widths&quot;,
+          &quot;trial system&quot;, &quot;seed&quot;; the two determinants of
+          finding 2; <tt class="verbatim">protection</tt> (per-site price) versus <tt
+          class="verbatim">Station.ticket</tt>; the stress <tt class="verbatim">J : Axis &rarr;
+          Axis &rarr; S.Field 4</tt>, the Ward rows <tt class="verbatim">p</tt>, <tt
+          class="verbatim">Y</tt>, and the sign convention of <tt class="verbatim">Work.A01.flux</tt>.
+        </p>
+      </li>
+    </ol>
+    <h2 id="auto-7"><a id="literature-leads-unverified"></a>Literature leads (unverified)<span style="margin-left: 1em"></span></h2>
+    <p>
+      None was opened in this session; all are taken from the external
+      outline's list and must be checked before use.
+    </p>
+    <ul>
+      <li>
+        <p>
+          Contract A: axial (tree) gauge on a torus and invariance of Haar
+          measure (Seiler, <em>Gauge Theories as a Problem of Constructive
+          Quantum Field Theory and Statistical Mechanics</em>, LNP 159, 1982);
+          volume of small balls in a compact Lie group. The specific budget
+          with <tt class="verbatim">g^{-4 dim G}</tt> is project-specific.
+        </p>
+      </li>
+      <li>
+        <p>
+          Contract B: the chessboard estimate
+          (Fr&ouml;hlich&ndash;Israel&ndash;Lieb&ndash;Simon, Comm. Math.
+          Phys. 62, 1978) and reflection positivity of the Wilson action
+          (Osterwalder&ndash;Seiler, Ann. Phys. 110, 1978) for PU-11b; symbol
+          estimates for PU-11a. The frequent-scale diagonal argument and the
+          projector conjugation appear to be project-specific.
+        </p>
+      </li>
+      <li>
+        <p>
+          Contract C: Ward identities for a conserved symmetric stress tensor
+          and Killing fields are standard in form; the
+          flux-on-shrinking-annuli argument with finite faithfulness of
+          testers appears to be project-specific.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-8"><a id="evidence"></a>Evidence<span style="margin-left: 1em"></span></h2>
+    <p>
+      Inspection used a sibling checkout of the upstream project at commit <tt
+      class="verbatim">1dba6965d734bac06951579601b90e985033ee45</tt>, which adds only a
+      CI workflow and <tt class="verbatim">.gitignore</tt> to <tt class="verbatim">3456e5e</tt>;
+      <tt class="verbatim">diff -rq &lt;checkout&gt;/YM Lean/YM</tt> printed nothing
+      (run earlier the same day). It contains a completed build with toolchain
+      <tt class="verbatim">leanprover/lean4:v4.32.0</tt>. The build was not rerun.
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>[E]</strong> <tt class="verbatim">lake env lean b1.lean</tt> (about 50
+          s, no errors): <tt class="verbatim">#check @</tt> of <tt class="verbatim">Rank.determinant</tt>,
+          <tt class="verbatim">exists_budget</tt>, <tt class="verbatim">Station.affordable</tt>,
+          <tt class="verbatim">Soft.denture</tt>, <tt class="verbatim">Ship.banking</tt>, <tt
+          class="verbatim">Prayer.fence</tt>, <tt class="verbatim">window_prices</tt>, <tt class="verbatim">Soft.cast_off</tt>,
+          <tt class="verbatim">Soft.wheeled</tt>, <tt class="verbatim">Soft.v_obtain_purchases</tt>,
+          <tt class="verbatim">Accent.rated</tt>, <tt class="verbatim">franchise</tt>, <tt class="verbatim">castle</tt>,
+          <tt class="verbatim">reception</tt>, <tt class="verbatim">chaletrail</tt>, <tt class="verbatim">Acme.readyA</tt>,
+          <tt class="verbatim">Acme.emanate</tt>, <tt class="verbatim">Acme.annular_fieldA</tt>,
+          <tt class="verbatim">Acme.tenet</tt>, <tt class="verbatim">Acme.shells_law</tt>, <tt
+          class="verbatim">laurelE</tt>, <tt class="verbatim">fugacious</tt>, <tt class="verbatim">Climb.comparison</tt>,
+          <tt class="verbatim">jointOffers</tt>, <tt class="verbatim">uv_log</tt>, <tt class="verbatim">Pump.issued</tt>;
+          <tt class="verbatim">#print</tt> of <tt class="verbatim">protection</tt>, <tt class="verbatim">HaarBudget</tt>,
+          <tt class="verbatim">ent</tt>, <tt class="verbatim">strength</tt>, <tt class="verbatim">Maxwell.Ranks</tt>,
+          <tt class="verbatim">Spec.Seed</tt>, <tt class="verbatim">Scotia</tt>, <tt class="verbatim">Aroma</tt>,
+          <tt class="verbatim">DimAbove</tt>, <tt class="verbatim">Stations</tt>, <tt class="verbatim">Economics</tt>,
+          <tt class="verbatim">Org.UV</tt>, <tt class="verbatim">Org.Grill</tt>, <tt class="verbatim">Chateau</tt>,
+          <tt class="verbatim">Tender</tt>, <tt class="verbatim">Metering</tt>, <tt class="verbatim">CompleteWeak</tt>.
+          <tt class="verbatim">#print axioms</tt> gives <tt class="verbatim">[propext,
+          Classical.choice, Quot.sound]</tt> for <tt class="verbatim">Rank.determinant</tt>,
+          <tt class="verbatim">Station.affordable</tt>, <tt class="verbatim">Accent.rated</tt>,
+          <tt class="verbatim">Acme.readyA</tt>, <tt class="verbatim">Acme.emanate</tt>, <tt
+          class="verbatim">Acme.annular_fieldA</tt>, <tt class="verbatim">Legato.uv_log</tt>, <tt
+          class="verbatim">Soft.wheeled</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>[E]</strong> <tt class="verbatim">lake env lean b2.lean</tt> (no
+          errors): <tt class="verbatim">#check @</tt> of <tt class="verbatim">East.posters</tt>,
+          <tt class="verbatim">Soft.y_poster</tt>, <tt class="verbatim">Soft.shapers</tt>, <tt
+          class="verbatim">Soft.soluble</tt>, <tt class="verbatim">Soft.accepts_stock</tt>, <tt
+          class="verbatim">UVStress.cap_given</tt>, <tt class="verbatim">Org.Commission.picks</tt>,
+          <tt class="verbatim">Acme.glistens</tt>, <tt class="verbatim">UVStress.produce_current</tt>,
+          <tt class="verbatim">Maxwell.Free.maxwell_supplies</tt>; <tt class="verbatim">#print</tt>
+          of <tt class="verbatim">Soft.Vents</tt>, <tt class="verbatim">ShowHours</tt>, <tt class="verbatim">Soft.Shops</tt>,
+          <tt class="verbatim">Soft.s_provisions</tt>, <tt class="verbatim">Market.Purchases</tt>,
+          <tt class="verbatim">Cells.RankWidths</tt>, <tt class="verbatim">Climb.Pre</tt>, <tt
+          class="verbatim">Climb.ActLaw</tt>, <tt class="verbatim">Table.StressLaws</tt>, <tt
+          class="verbatim">Org.IR</tt>, <tt class="verbatim">Org.MaxwellData</tt>, <tt class="verbatim">Org.Commission</tt>,
+          <tt class="verbatim">Table.Conserved</tt>, <tt class="verbatim">Table.Stress</tt>. <tt
+          class="verbatim">Station.Meets</tt> and <tt class="verbatim">Station.ticket</tt> were
+          printed in the review for issue #29.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>[S]</strong> <tt class="verbatim">sed -n '10,50p'
+          YM/MergeProof/Emanate.lean</tt> (statements and full proofs of <tt
+          class="verbatim">readyA</tt> and <tt class="verbatim">emanate</tt>). No other proof body
+          was read.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>[G]</strong> <tt class="verbatim">graph-compiled/{nodes,refs}.tsv</tt>
+          in the same checkout: an untracked local artifact whose generation
+          was not audited. Three Python scripts computed forward reference
+          closures, shortest reference paths and per-directory theorem counts
+          of closures. <strong>Private declarations must be followed</strong>:
+          a first run that kept only destinations whose name starts with <tt
+          class="verbatim">YM.</tt> missed every path through a <tt class="verbatim">_private.YM&hellip;</tt>
+          declaration and wrongly reported <tt class="verbatim">window_prices</tt> as
+          unreached from <tt class="verbatim">uv_log</tt>; all [G] claims above are from
+          the corrected run. Every &quot;does not reach&quot; claim should be
+          reproduced by the reviewer.
+        </p>
+      </li>
+      <li>
+        <p>
+          Names were resolved from the external outline's links to file and
+          line and then to fully qualified names through <tt class="verbatim">nodes.tsv</tt>;
+          each name cited with [E] was subsequently elaborated.
+        </p>
+      </li>
+      <li>
+        <p>
+          Overlap search: open issues and PRs at 2026-11-11 22:52 UTC; <tt
+          class="verbatim">blueprint/interfaces/gaussian-sector.md</tt> (#12) and the
+          draft <tt class="verbatim">nonlinear-rg-step.md</tt> (PR #30, #13) were read
+          for their handoffs.
+        </p>
+      </li>
+    </ul>
+    <p>
+      <strong>Not done:</strong> no proof body other than <tt class="verbatim">readyA</tt>/<tt
+      class="verbatim">emanate</tt>; none of the bundles in obstruction 1; no V.3 or
+      VI.1 source beyond the statements named; the internal lemmas of <tt
+      class="verbatim">Determinant.lean</tt> and <tt class="verbatim">Axial.lean</tt> (<tt class="verbatim">vacuum_bound</tt>,
+      <tt class="verbatim">numerator</tt>, <tt class="verbatim">elimination</tt>, &hellip;) were
+      located but not elaborated; no literature source was opened; the Lean
+      project was not rebuilt.
+    </p>
+    <p>
+      Agent assistance: Claude Code, directed by <tt class="verbatim">mgubi</tt>.
+      Navigation leads are due to Scott Armstrong's Yang&ndash;Mills
+      informalization project.
+    </p>
+  </body>
+</html>

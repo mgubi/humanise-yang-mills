@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Evidence: finite-volume stress shell nodes &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <div class="ym-unit-nav">
+      <a class="ym-prev" href="../YM-000022/correspondence.html">&larr; YM-000022</a><span class="ym-part"><a href="correspondence.html">YM-000026:
+      Foundations and conditional assembly of the four-dimensional existence
+      argument (draft)</a><font class="ym-sep">&middot;</font><a href="AGENT-PROMPT.html">AGENT-PROMPT</a><font
+      class="ym-sep">&middot;</font><a href="CHECKPOINT.html">CHECKPOINT</a><font class="ym-sep">&middot;</font><a
+      href="USAGE-HANDOFF.html">USAGE-HANDOFF</a><font class="ym-sep">&middot;</font><a href="actual-corrected-body-compiler-evidence.html">actual-corrected-body-compiler-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-covariance-fourier-window-evidence.html">actual-covariance-fourier-window-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-covariance-transport-evidence.html">actual-covariance-transport-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-equation-kernel-relay-evidence.html">actual-equation-kernel-relay-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-global-row-prices-evidence.html">actual-global-row-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-harvested-owner-energy-evidence.html">actual-harvested-owner-energy-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-insertion-derivative-relay-evidence.html">actual-insertion-derivative-relay-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-local-compiler-handoff-evidence.html">actual-local-compiler-handoff-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-marked-portfolio-calibration-evidence.html">actual-marked-portfolio-calibration-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-mixed-marked-compiler-evidence.html">actual-mixed-marked-compiler-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-palette-warning-evidence.html">actual-palette-warning-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-phase-detector-moments-evidence.html">actual-phase-detector-moments-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-phase-grid-approximants-evidence.html">actual-phase-grid-approximants-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-rank-purchases-evidence.html">actual-rank-purchases-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-dawn-selection-evidence.html">actual-reader-dawn-selection-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-guarded-curvature-evidence.html">actual-reader-guarded-curvature-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-local-gaussian-prices-evidence.html">actual-reader-local-gaussian-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-short-covariance-evidence.html">actual-reader-short-covariance-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-small-window-bridge-evidence.html">actual-reader-small-window-bridge-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-tree-covariance-evidence.html">actual-reader-tree-covariance-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-slab-copy-bounds-evidence.html">actual-slab-copy-bounds-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-stress-annulus-evidence.html">actual-stress-annulus-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-stress-normalization-evidence.html">actual-stress-normalization-evidence</a><font
+      class="ym-sep">&middot;</font><font class="ym-here">actual-stress-shell-nodes-evidence</font><font
+      class="ym-sep">&middot;</font><a href="all-arity-reader-gaussian-model-evidence.html">all-arity-reader-gaussian-model-evidence</a><font
+      class="ym-sep">&middot;</font><a href="all-grade-free-detectors-evidence.html">all-grade-free-detectors-evidence</a><font
+      class="ym-sep">&middot;</font><a href="allarity-coordinate-calibration-evidence.html">allarity-coordinate-calibration-evidence</a><font
+      class="ym-sep">&middot;</font><a href="allarity-cumulant-comparison-evidence.html">allarity-cumulant-comparison-evidence</a><font
+      class="ym-sep">&middot;</font><a href="allarity-marked-propagation-evidence.html">allarity-marked-propagation-evidence</a><font
+      class="ym-sep">&middot;</font><a href="allarity-planted-compiler-evidence.html">allarity-planted-compiler-evidence</a><font
+      class="ym-sep">&middot;</font><a href="annulus-fleet-face-estimates-evidence.html">annulus-fleet-face-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="annulus-recording-yield-evidence.html">annulus-recording-yield-evidence</a><font
+      class="ym-sep">&middot;</font><a href="annulus-same-data-binding-evidence.html">annulus-same-data-binding-evidence</a><font
+      class="ym-sep">&middot;</font><a href="annulus-two-wave-estimates-evidence.html">annulus-two-wave-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="atlas-estimates-evidence.html">atlas-estimates-evidence</a><font class="ym-sep">&middot;</font><a
+      href="centered-birth-receipt-evidence.html">centered-birth-receipt-evidence</a><font class="ym-sep">&middot;</font><a
+      href="centered-budget-evidence.html">centered-budget-evidence</a><font class="ym-sep">&middot;</font><a href="centered-construction-evidence.html">centered-construction-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-estimates-evidence.html">centered-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-freight-producer-evidence.html">centered-freight-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-geometry-producer-evidence.html">centered-geometry-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-geyser-scale-estimates-evidence.html">centered-geyser-scale-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-production-evidence.html">centered-production-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-public-service-evidence.html">centered-public-service-evidence</a><font
+      class="ym-sep">&middot;</font><a href="classical-stationary-vertices-evidence.html">classical-stationary-vertices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="common-funded-history-evidence.html">common-funded-history-evidence</a><font
+      class="ym-sep">&middot;</font><a href="common-observable-purchases-evidence.html">common-observable-purchases-evidence</a><font
+      class="ym-sep">&middot;</font><a href="coupling-reset-selection-evidence.html">coupling-reset-selection-evidence</a><font
+      class="ym-sep">&middot;</font><a href="endpoint-closure-ledger.html">endpoint-closure-ledger</a><font class="ym-sep">&middot;</font><a
+      href="finite-rank-kernel-transport-evidence.html">finite-rank-kernel-transport-evidence</a><font class="ym-sep">&middot;</font><a
+      href="flat-estimate-audit.html">flat-estimate-audit</a><font class="ym-sep">&middot;</font><a href="flat-step-evidence.html">flat-step-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-collision-pole-separation-evidence.html">free-collision-pole-separation-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-horizon-convergence-evidence.html">free-horizon-convergence-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-internal-ward-erasure-evidence.html">free-internal-ward-erasure-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-kernel-components-evidence.html">free-kernel-components-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-kernel-estimates-evidence.html">free-kernel-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-maxwell-radial-flux-evidence.html">free-maxwell-radial-flux-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-maxwell-ward-flux-evidence.html">free-maxwell-ward-flux-evidence</a><font
+      class="ym-sep">&middot;</font><a href="fullmesh-correlation-cauchy-evidence.html">fullmesh-correlation-cauchy-evidence</a><font
+      class="ym-sep">&middot;</font><a href="fullmesh-fixedbounds-producer-evidence.html">fullmesh-fixedbounds-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="handoff/index.html">handoff</a><font class="ym-sep">&middot;</font><a
+      href="inherited-loop-transport-evidence.html">inherited-loop-transport-evidence</a><font class="ym-sep">&middot;</font><a
+      href="lattice-evidence.html">lattice-evidence</a><font class="ym-sep">&middot;</font><a href="lattice-history-closure-refresh.html">lattice-history-closure-refresh</a><font
+      class="ym-sep">&middot;</font><a href="limits-evidence.html">limits-evidence</a><font class="ym-sep">&middot;</font><a
+      href="local-projection-evidence.html">local-projection-evidence</a><font class="ym-sep">&middot;</font><a href="marked-campaign-producer-evidence.html">marked-campaign-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="marked-field-local-estimates-evidence.html">marked-field-local-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="marked-healthy-cumulant-launch-evidence.html">marked-healthy-cumulant-launch-evidence</a><font
+      class="ym-sep">&middot;</font><a href="marked-portfolio-calibration-evidence.html">marked-portfolio-calibration-evidence</a><font
+      class="ym-sep">&middot;</font><a href="multileg-curvature-lift-evidence.html">multileg-curvature-lift-evidence</a><font
+      class="ym-sep">&middot;</font><a href="ope-closure-refresh.html">ope-closure-refresh</a><font class="ym-sep">&middot;</font><a
+      href="ope-evidence.html">ope-evidence</a><font class="ym-sep">&middot;</font><a href="ope-history-service-evidence.html">ope-history-service-evidence</a><font
+      class="ym-sep">&middot;</font><a href="ope-scale-purchases-evidence.html">ope-scale-purchases-evidence</a><font
+      class="ym-sep">&middot;</font><a href="original-history-portfolio-attachment-evidence.html">original-history-portfolio-attachment-evidence</a><font
+      class="ym-sep">&middot;</font><a href="parameter-continuity-evidence.html">parameter-continuity-evidence</a><font
+      class="ym-sep">&middot;</font><a href="path-attachment-producer-evidence.html">path-attachment-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="phase-evidence.html">phase-evidence</a><font class="ym-sep">&middot;</font><a
+      href="phase-null-inheritance-evidence.html">phase-null-inheritance-evidence</a><font class="ym-sep">&middot;</font><a
+      href="phase-quantitative-producer-evidence.html">phase-quantitative-producer-evidence</a><font class="ym-sep">&middot;</font><a
+      href="phase-ward-inheritance-evidence.html">phase-ward-inheritance-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-angular-actions-evidence.html">physical-angular-actions-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-reset-reorganization-evidence.html">physical-reset-reorganization-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-analytic-continuation-evidence.html">physical-ward-analytic-continuation-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-final-binding-audit.html">physical-ward-final-binding-audit</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-free-classification-evidence.html">physical-ward-free-classification-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-packet-prices-evidence.html">physical-ward-packet-prices-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-propagation-evidence.html">physical-ward-propagation-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-stress-cone-evidence.html">physical-ward-stress-cone-evidence</a><font class="ym-sep">&middot;</font><a
+      href="public-binding-package-audit.html">public-binding-package-audit</a><font class="ym-sep">&middot;</font><a
+      href="public-run-binding-evidence.html">public-run-binding-evidence</a><font class="ym-sep">&middot;</font><a
+      href="quadratic-pole-transport-evidence.html">quadratic-pole-transport-evidence</a><font class="ym-sep">&middot;</font><a
+      href="rank-root-normalization-evidence.html">rank-root-normalization-evidence</a><font class="ym-sep">&middot;</font><a
+      href="reconstruction-evidence.html">reconstruction-evidence</a><font class="ym-sep">&middot;</font><a href="restarted-rank-history-evidence.html">restarted-rank-history-evidence</a><font
+      class="ym-sep">&middot;</font><a href="rg-construction-evidence.html">rg-construction-evidence</a><font class="ym-sep">&middot;</font><a
+      href="rg-horizon-geometry-evidence.html">rg-horizon-geometry-evidence</a><font class="ym-sep">&middot;</font><a
+      href="rg-menu-jets-evidence.html">rg-menu-jets-evidence</a><font class="ym-sep">&middot;</font><a href="rg-multisource-evidence.html">rg-multisource-evidence</a><font
+      class="ym-sep">&middot;</font><a href="rg-price-receipts-evidence.html">rg-price-receipts-evidence</a><font
+      class="ym-sep">&middot;</font><a href="row-quadratic-price-evidence.html">row-quadratic-price-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-centered-service-evidence.html">selected-centered-service-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-course-binding-evidence.html">selected-course-binding-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-history-limits-evidence.html">selected-history-limits-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-kinetic-response-evidence.html">selected-kinetic-response-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-nonlinear-offering-evidence.html">selected-nonlinear-offering-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-stationary-linear-data-evidence.html">selected-stationary-linear-data-evidence</a><font
+      class="ym-sep">&middot;</font><a href="soft-curvature-receipts-evidence.html">soft-curvature-receipts-evidence</a><font
+      class="ym-sep">&middot;</font><a href="stationary-determinant-prices-evidence.html">stationary-determinant-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="stationary-germ-symmetry-evidence.html">stationary-germ-symmetry-evidence</a><font
+      class="ym-sep">&middot;</font><a href="stationary-output-construction-evidence.html">stationary-output-construction-evidence</a><font
+      class="ym-sep">&middot;</font><a href="stationary-small-field-evidence.html">stationary-small-field-evidence</a><font
+      class="ym-sep">&middot;</font><a href="surviving-interval-shooting-evidence.html">surviving-interval-shooting-evidence</a><font
+      class="ym-sep">&middot;</font><a href="terminal-marked-construction-evidence.html">terminal-marked-construction-evidence</a><font
+      class="ym-sep">&middot;</font><a href="terminal-normalization-transfer-evidence.html">terminal-normalization-transfer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="thermal-contact-cancellation-evidence.html">thermal-contact-cancellation-evidence</a><font
+      class="ym-sep">&middot;</font><a href="three-panel-weak-comparison-evidence.html">three-panel-weak-comparison-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-bill-prices-evidence.html">trace-bill-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-calibration-producer-evidence.html">trace-calibration-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-coffer-supplier-evidence.html">trace-coffer-supplier-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-crown-buffer-evidence.html">trace-crown-buffer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-eve-producer-evidence.html">trace-eve-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-evidence.html">trace-evidence</a><font class="ym-sep">&middot;</font><a
+      href="trace-firesky-gallery-evidence.html">trace-firesky-gallery-evidence</a><font class="ym-sep">&middot;</font><a
+      href="trace-free-rank-evidence.html">trace-free-rank-evidence</a><font class="ym-sep">&middot;</font><a href="trace-local-charge-evidence.html">trace-local-charge-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-local-paid-budgets-evidence.html">trace-local-paid-budgets-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-local-pairing-evidence.html">trace-local-pairing-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-local-rate-selection-evidence.html">trace-local-rate-selection-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-medal-prices-evidence.html">trace-medal-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-mission-price-evidence.html">trace-mission-price-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-price-recurrence-evidence.html">trace-price-recurrence-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-probe-assembly-evidence.html">trace-probe-assembly-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-regular-atom-evidence.html">trace-regular-atom-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-row-jet-estimates-evidence.html">trace-row-jet-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-scribe-producer-evidence.html">trace-scribe-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-small-means-evidence.html">trace-small-means-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-weighted-estimates-evidence.html">trace-weighted-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="usage-hold-checkpoint.html">usage-hold-checkpoint</a><font class="ym-sep">&middot;</font><a
+      href="validation.html">validation</a><font class="ym-sep">&middot;</font><a href="weighted-frame-penalty-evidence.html">weighted-frame-penalty-evidence</a><font
+      class="ym-sep">&middot;</font><a href="weighted-stationary-inverses-evidence.html">weighted-stationary-inverses-evidence</a><font
+      class="ym-sep">&middot;</font><a href="wilson-startup-construction-evidence.html">wilson-startup-construction-evidence</a><font
+      class="ym-sep">&middot;</font><a href="wilson-vacuum-price-evidence.html">wilson-vacuum-price-evidence</a></span>
+    </div>
+    <p>
+      <h1>Evidence: finite-volume stress shell nodes</h1><a id="evidence-finite-volume-stress-shell-nodes"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Source pin and scope</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Source crosswalk</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Canonical prose reused</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Mathematical distinctions retained</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-4">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Commands and source reads</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">5</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Rate and density details added in the repaired draft</b> <span
+        style="margin-left: 5mm"></span> <a href="#auto-6">6</a>
+      </p>
+    </div>
+    <p>
+      Status: draft; the revised source correspondence is submitted for
+      independent review. This unit proves the shell-specific composition
+      conditional on the selected same-history service, price, and quota
+      receipts; it does not claim to close the full stress construction.
+    </p>
+    <h2 id="auto-1"><a id="source-pin-and-scope"></a>Source pin and scope<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Vendored Lean revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Claim: #26, in the isolated clone <tt class="verbatim">/private/tmp/ym-existence-lattice-20261111</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Only outputs owned here: <tt class="verbatim">manuscript/existence/actual-stress-shell-nodes.tex</tt>
+          and <tt class="verbatim">blueprint/units/YM-000026/actual-stress-shell-nodes-evidence.md</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          No Lean source, shared manuscript, or metadata was edited.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-2"><a id="source-crosswalk"></a>Source crosswalk<span style="margin-left: 1em"></span></h2>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Mathematical item in the draft</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Fully qualified declaration</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Source path</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>What the source establishes /
+        boundary</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Same-family public route and actual Aroma input</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.PhysicalNext.Repeat.Legato.Run.extractible17</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/RG17/Joint.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">From the retained run records, builds <tt class="verbatim">Created
+        C</tt>, then <tt class="verbatim">Aroma C</tt> using <tt class="verbatim">laurelE</tt> and
+        <tt class="verbatim">fugacious</tt>; then passes that same Aroma into <tt class="verbatim">readyA</tt>.
+        This is the public route inspected, not an alternate family or
+        history.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Economic schedule and shell-node conclusion</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.MergeProof.Ribbons.Economics</tt>, <tt class="verbatim">YM.MergeProof.Ribbons.laurelE</tt>,
+        <tt class="verbatim">YM.MergeProof.Ribbons.fugacious</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/MergeProof/North/Economist.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Chooses <tt class="verbatim">t=1+1/(64(d+12))</tt>, a mesh
+        subsequence with scale ratio tending to t, and invokes <tt class="verbatim">pricey</tt>,
+        <tt class="verbatim">lightness</tt>, room and <tt class="verbatim">bricks</tt> for each
+        fixed opening, labels, and finite extraction order. <tt class="verbatim">fugacious</tt>
+        supplies the scale note for <tt class="verbatim">fuga(i+1)</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Paid shell-node numerical gates</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.MergeProof.Ribbons.pricey</tt>, <tt class="verbatim">YM.MergeProof.Ribbons.lightness</tt>,
+        <tt class="verbatim">YM.MergeProof.Ribbons.pitts</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/MergeProof/North/Burrough.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">pricey</tt> gives positive product <tt class="verbatim">ventola</tt>,
+        the marched price <tt class="verbatim">&le;&delta;_i ventola/(16 bling_i)</tt>,
+        and <tt class="verbatim">32(1+columns_i)pitts_i&#x2016;alto(k,D)&#x2016;(e_i/gainChart(i,k))&le;fly(D,k)/2</tt>;
+        its strict rate is <tt class="verbatim">(d+12)(1&minus;t)&gt;&minus;1/32</tt>.
+        <tt class="verbatim">lightness</tt> gives <tt class="verbatim">32 fuga(i+1)&le;a_p</tt>
+        and <tt class="verbatim">a_{i+1}(B_{i+1}&sup2;+1+2
+        polls_{i+1})&le;a_p</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Exact two-channel price definitions</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.MergeProof.Ribbons.picket</tt>, <tt class="verbatim">YM.MergeProof.Ribbons.ventola</tt>,
+        <tt class="verbatim">YM.MergeProof.Ribbons.scurry</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/MergeProof/North/Brick.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">The two factors use Bool false/true as insertion-channel
+        labels. <tt class="verbatim">picket</tt> calls <tt class="verbatim">ventola</tt> at <tt
+        class="verbatim">i=m+1</tt>; both outer and inner scalar factors are therefore
+        <tt class="verbatim">renal(m+1)</tt>, so the numerator is <tt class="verbatim">delta_(m+1)^2</tt>,
+        with the further input <tt class="verbatim">near(j)</tt>. The grade-four
+        insertion price is divided by <tt class="verbatim">fuga(i+1)^h</tt>. <tt class="verbatim">scurry</tt>
+        uses the distinct fine occupancy <tt class="verbatim">r(i+1)</tt>; its geometric
+        stencil radius is <tt class="verbatim">polls=1024 B^2</tt>, while the
+        exponential count is <tt class="verbatim">peepers=(2&middot;1024 B+1)^4</tt>.
+        <tt class="verbatim">krill(j,i,b)=b/16(a_j/a_i)^4</tt> is defined in <tt class="verbatim">North/Ossola.lean</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Local root and quota output at each anchor</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.MergeProof.Ribbons.Wares</tt>, <tt class="verbatim">YM.MergeProof.Ribbons.sales</tt>,
+        <tt class="verbatim">YM.MergeProof.Ribbons.bricks</tt>, <tt class="verbatim">YM.MergeProof.Ribbons.faraway</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/MergeProof/North/Siroco.lean</tt>, <tt
+        class="verbatim">North/Brim.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Wares</tt> carries the Thor controls, Runs and
+        Throws at all levels. <tt class="verbatim">sales</tt> returns a grade-D label
+        with quota <tt class="verbatim">&le;2e</tt>, chamber membership and root test
+        <tt class="verbatim">&le;2 stakes/c</tt>. <tt class="verbatim">bricks</tt> obtains this
+        for each fixed collar cover point after eventual placement,
+        near-center and room conditions. It uses the exact fragment <tt class="verbatim">(fuga(m+1))^h
+        O(T,location)O(B,0)&minus;O(z,0)</tt>. The late filter is pointwise in
+        the anchor; the numerical bound is common.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Finite two-channel assembly</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.MergeProof.Ribbons.mutation</tt>, <tt class="verbatim">YM.MergeProof.bequeathed</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/MergeProof/North/Brick.lean</tt>, <tt
+        class="verbatim">Lean/YM/MergeProof/South/Merman.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Caps the two channel sources, uses maximizing/placement
+        geometry, then calls the coefficient construction, bridge and <tt
+        class="verbatim">YM.MergeProof.bequeathed</tt>; the exact output is the <tt
+        class="verbatim">sales</tt> root/quota bound <tt class="verbatim">2&middot;stakes/c</tt>.
+        For the final factor 2, <tt class="verbatim">bequeathed</tt> writes the
+        root-tested difference as <tt class="verbatim">(f+r')+(-r'-O(B,0))</tt>; with
+        <tt class="verbatim">S=stakes/w</tt> (here <tt class="verbatim">w=c_m</tt>), the first
+        summand is bounded by <tt class="verbatim">S</tt>, the second by <tt class="verbatim">S/2</tt>
+        and hence by <tt class="verbatim">S</tt>. The triangle inequality for the root
+        seminorm gives <tt class="verbatim">2S=2&middot;stakes/c_m</tt>. The factor does
+        not come from combining regular and forced coefficient charges.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">One-step coefficient ledger</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.MergeProof.Ribbons.sail</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/MergeProof/North/Arco.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Produces <tt class="verbatim">Q&#x2080;</tt> with order-zero format,
+        remainder bound, coefficient-size <tt class="verbatim">&le;a_{m+1}^D
+        x(4/A)</tt>, and <tt class="verbatim">Served</tt> identity for the pushed
+        two-channel birth. These four fields are stated in ordinary
+        mathematical terms in the manuscript.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Root-test copies and reflection</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Cells.Tiling.copy</tt>, <tt class="verbatim">YM.Cells.Tiling.rootTest</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Cells/Tiling.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">The finite product is over <tt class="verbatim">T.Cell</tt> for the
+        centered chamber tiling at the opened reference level; each copy pulls
+        back under its prescribed motion/translation and is complex-conjugated
+        for odd reflection parity. The root is the cell-count root of the
+        normalized moment, not a product over all fine sites.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Fine response construction</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.MergeProof.Ribbons.upper</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/MergeProof/North/Flank.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Uses the Geyser/Thor response inputs, migrated sites,
+        occupancy, separation, response-cost bounds, and same-history
+        factorization of each insertion. It constructs a response certificate
+        at level j.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Response transport from j to m+1</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.MergeProof.Ribbons.ossuary</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/MergeProof/North/Ossola.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Backward-transports the response. The proof uses <tt class="verbatim">krill(j,i,b)=b/16(a_j/a_i)^4</tt>;
+        adjacent block ratio L&#x2A7E;2 gives fourth-power amplification and
+        <tt class="verbatim">6L&le;L&#x2074;</tt>; it propagates occupancy, separation,
+        and the endpoint weighted response.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Two-channel graft and coefficient extraction</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.MergeProof.Ribbons.dusks</tt>, <tt class="verbatim">YM.MergeProof.Ribbons.grafted</tt>,
+        <tt class="verbatim">YM.MergeProof.Ribbons.fuseNext</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/MergeProof/North/Dolphin.lean</tt>, <tt
+        class="verbatim">North/Anise.lean</tt>, <tt class="verbatim">North/Lamplit.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">dusks</tt> combines false/true channels, checks
+        zero-anchor/affine covariance, then calls <tt class="verbatim">grafted</tt> and
+        <tt class="verbatim">fuseNext</tt>; <tt class="verbatim">fuseNext</tt> obtains the finite
+        coupon from <tt class="verbatim">tossing</tt>, applies the one-step <tt class="verbatim">Duty.pre</tt>
+        conversion, and returns the coefficient ledger.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Exact one-step menu condition and price arithmetic</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">YM.MergeProof.Accent.Duty, YM.MergeProof.Accent.Duty.pre,
+        YM.MergeProof.Menu.Volant, YM.MergeProof.Menu.stroke</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Lean/YM/MergeProof/Temper.lean, Copse.lean, Menu.lean</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Duty.pre consumes the selected menu offer and tariff;
+        Menu.stroke is its served-transfer step. The selected paid menu and
+        same-history specialization are proved in the canonical parent units
+        listed below.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Quota-to-label norm conversion</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Next.UVStress.quota</tt>, <tt class="verbatim">YM.Next.UVStress.quota_stop</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Next/UV_STRESS/Least.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">The quota is <tt class="verbatim">quota C D m N p z</tt>: its second
+        index is the moving birth level <tt class="verbatim">m</tt>, not the opening.
+        <tt class="verbatim">Brim.bricks</tt> applies the quota stop at <tt class="verbatim">m</tt>,
+        using <tt class="verbatim">ref(D)&le;k&le;m</tt>. Thus its finite norm constant
+        can depend on <tt class="verbatim">m</tt>; there is no source receipt for one
+        constant uniform in birth level. For each fixed <tt class="verbatim">m</tt>, it
+        is independent of volume and period. The opening <tt class="verbatim">p0</tt>
+        selects the root-test chamber and stake bound, not the quota
+        index.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Exact regular/forced density form</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.MergeProof.Accent.Served</tt>, <tt class="verbatim">YM.MergeProof.Accent.restore</tt>,
+        <tt class="verbatim">YM.MergeProof.Accent.Carton</tt>, <tt class="verbatim">YM.MergeProof.Accent.Towed</tt>,
+        <tt class="verbatim">YM.MergeProof.Accent.field</tt>, <tt class="verbatim">YM.MergeProof.Accent.grid</tt>,
+        <tt class="verbatim">YM.MergeProof.Domino.radiant</tt>, <tt class="verbatim">YM.MergeProof.Domino.sunny</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/MergeProof/Accent.lean</tt>, <tt class="verbatim">Lean/YM/MergeProof/Domino.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">restore</tt> is exactly action exponential times
+        <tt class="verbatim">Poly.pass(Mach &Phi; + &Sigma; H)</tt> times the box field.
+        <tt class="verbatim">Poly.pass</tt> is the finite sum <tt class="verbatim">&Sigma;_{r=0}^{|I|}
+        Z^r/r!</tt>. <tt class="verbatim">field</tt> sums only patterns whose full box
+        supports are pairwise disjoint and whose flags union to the target
+        flags. The <tt class="verbatim">Carton</tt> and <tt class="verbatim">Towed</tt> fields
+        give support, no-degree-0/1, and separate summable regular/forced cost
+        bounds; these residual terms are not a single coefficient
+        readout.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Rate, scale, and normalization definitions</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.MergeProof.Ribbons.fuga</tt>, <tt class="verbatim">polls</tt>,
+        <tt class="verbatim">YM.MergeProof.Ribbons.whims</tt>, <tt class="verbatim">YM.MergeProof.Accent.plumR</tt>,
+        <tt class="verbatim">YM.MergeProof.Ribbons.gainChart</tt>, <tt class="verbatim">YM.MergeProof.Accent.alto</tt>,
+        <tt class="verbatim">YM.MergeProof.Ribbons.fly</tt>, <tt class="verbatim">YM.MergeProof.Ribbons.pica</tt>,
+        <tt class="verbatim">YM.MergeProof.Ribbons.quilled</tt>, <tt class="verbatim">YM.MergeProof.Ribbons.seeing</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/MergeProof/North/Vert.lean</tt>, <tt
+        class="verbatim">Sultan.lean</tt>, <tt class="verbatim">Traps.lean</tt>, <tt class="verbatim">Cashew.lean</tt>,
+        <tt class="verbatim">Bid/Loan.lean</tt>, <tt class="verbatim">Stove.lean</tt>, <tt class="verbatim">Wicker.lean</tt>,
+        <tt class="verbatim">Welch.lean</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">fuga(i)=128 B_i&sup2;a_i</tt>; <tt class="verbatim">whims</tt>
+        uses the two channel label sizes and divides the grade-four branch by
+        <tt class="verbatim">fuga(m+1)^h</tt>; <tt class="verbatim">alto</tt> has norm <tt class="verbatim">a_k^{-D}</tt>;
+        gain is <tt class="verbatim">exp((scale(i)&minus;scale(k))/8)</tt>; <tt class="verbatim">fly</tt>
+        is the inverse winter power of effective coupling. <tt class="verbatim">quilled</tt>
+        gives the exact channel product rate <tt class="verbatim">&minus;D+(d+12)(1&minus;t)</tt>.
+        The column count is rate zero. This yields correction-price rate <tt
+        class="verbatim">1/32&minus;M&minus;1/8=&minus;5/64</tt>; the marched-price
+        comparison uses the explicit growth bound and has rate gap <tt class="verbatim">&minus;61/64</tt>.</td>
+      </tr></tbody>
+    </table>
+    <h2 id="auto-3"><a id="canonical-prose-reused"></a>Canonical prose reused<span style="margin-left: 1em"></span></h2>
+    <p>
+      The parent manuscript now supplies prose proofs for the menu and
+      transfer receipts used by this unit. I read these parent files read-only
+      and matched their exact assumptions:
+    </p>
+    <ul>
+      <li>
+        <p>
+          manuscript/existence/rg-multisource.tex, Section
+          sec:ex-lattice-rg-multisource: selected paid terms, local menu jet,
+          per-box quiet/singleton identities, and the pushed expression.
+        </p>
+      </li>
+      <li>
+        <p>
+          manuscript/existence/rg-construction.tex, Theorem
+          thm:ex-lattice-volant-supplier and subsection
+          subsec:ex-lattice-volant-producer: rooted tariff conversion and
+          grouping of the already-paid ungrouped rows.
+        </p>
+      </li>
+      <li>
+        <p>
+          manuscript/existence/finite-menu-history-handoff.tex, Section
+          sec:finite-menu-history-handoff: same adjacent-scale history, door,
+          support exponents, tariff inputs, and explicit Duty specialization.
+        </p>
+      </li>
+      <li>
+        <p>
+          manuscript/existence/local-transfer.tex, Section sec:local-transfer:
+          the mathematical content of Duty.pre/Menu.stroke, including the
+          finite served-transfer calculation.
+        </p>
+      </li>
+      <li>
+        <p>
+          manuscript/existence/centered-public-service.tex, Theorem
+          thm:ex-selected-run-service, and selected-centered-service.tex,
+          Section sec:selected-centered-service: selected public service and
+          endpoint support-exponent bounds.
+        </p>
+      </li>
+    </ul>
+    <p>
+      Thus this shell unit does not re-prove those canonical estimates. It
+      translates the remaining shell chain upper -&gt; ossuary -&gt; dusks
+      -&gt; fuseNext/sail, then derives the collar location, quota-to-label
+      norm, and root estimate. The exact numerical gate is stated in the
+      manuscript and matched to the cited same-history Duty specialization.
+    </p>
+    <h2 id="auto-4"><a id="mathematical-distinctions-retained"></a>Mathematical distinctions retained<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          The root functional uses the cell-copy set of the centered chamber
+          tiling for the opened reference level <tt class="verbatim">p0</tt>, as in <tt
+          class="verbatim">YM.Cells.Tiling.rootTest</tt>; it is not an average over the
+          entire fine torus. Each tiling copy includes its translation and the
+          source's odd-reflection complex conjugation.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">fuga(m+1)</tt> is the physical annulus scale in the
+          fragment; it is not the fine mesh <tt class="verbatim">a_{m+1}</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The price <tt class="verbatim">c_m=exp(scale(m)/32)</tt> diverges because <tt
+          class="verbatim">scale(m)=log(a_m^{-1})&rarr;&infin;</tt>; <tt class="verbatim">a_m&rarr;0</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The finite coefficient output is not only a size estimate: its <tt
+          class="verbatim">Format</tt>, remainder, and <tt class="verbatim">Served</tt> density
+          identity are all needed for the later bridge.
+        </p>
+      </li>
+      <li>
+        <p>
+          The two-channel product is handled by the finite mutation/served
+          construction, not by an unproved submultiplicativity claim for the
+          normalized root functional.
+        </p>
+      </li>
+      <li>
+        <p>
+          The source quantifier is: for every fixed collar anchor, the
+          relevant volume-period event is late; common numeric estimates do
+          not imply one common late event for the whole growing collar.
+        </p>
+      </li>
+      <li>
+        <p>
+          The Ribbons.bricks result supplies the fragment and correction at
+          each fixed anchor. The shell manuscript then translates the
+          continuation through Ribbons.sail, including the coefficient ledger,
+          same-history served identity, and pointwise late-set quantifier. The
+          selected menu and transfer assumptions are tied to the reviewed
+          parent prose units listed above.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-5"><a id="commands-and-source-reads"></a>Commands and source reads<span style="margin-left: 1em"></span></h2>
+    <p>
+      Targeted reads/searches actually performed in the isolated clone:
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+rg -n 'ShellNode|def bricks|def sales|def sail|def upper|def ossuary|def dusks|def fuseNext|def pricey|def lightness|def laurelE|def fugacious' Lean/YM/MergeProof/North/{Brim,Siroco,Arco,Flank,Ossola,Dolphin,Lamplit,Burrough,Economist}.lean
+sed -n '1,130p' Lean/YM/MergeProof/North/Brim.lean
+sed -n '1,130p' Lean/YM/MergeProof/North/Arco.lean
+sed -n '1,150p' Lean/YM/MergeProof/North/Flank.lean
+sed -n '1,140p' Lean/YM/MergeProof/North/Ossola.lean
+sed -n '1,150p' Lean/YM/MergeProof/North/Dolphin.lean
+cat Lean/YM/MergeProof/North/Economist.lean
+sed -n '1,150p' Lean/YM/MergeProof/North/Siroco.lean
+sed -n '1,130p' Lean/YM/MergeProof/North/Burrough.lean
+sed -n '1,90p' Lean/YM/MergeProof/North/Bonus.lean
+sed -n '1,100p' Lean/YM/MergeProof/North/Brick.lean
+cat Lean/YM/MergeProof/Temper.lean
+cat Lean/YM/MergeProof/Copse.lean
+sed -n '160,300p' /private/tmp/ym-existence-20261111/manuscript/existence/rg-construction.tex
+sed -n '320,452p' /private/tmp/ym-existence-20261111/manuscript/existence/rg-multisource.tex
+sed -n '1,130p' /private/tmp/ym-existence-20261111/manuscript/existence/finite-menu-history-handoff.tex
+rg -n 'label|Duty|Volant|Canopy|Menu.stroke' /private/tmp/ym-existence-20261111/manuscript/existence/{rg-construction.tex,rg-multisource.tex,local-transfer.tex,finite-menu-history-handoff.tex,selected-centered-service.tex,centered-public-service.tex}
+sed -n '1,180p' Lean/YM/MergeProof/North/Lamplit.lean
+sed -n '1,115p' Lean/YM/RG17/Joint.lean
+sed -n '1,100p' Lean/YM/Next/UV_STRESS/Least.lean
+sed -n '1,110p' Lean/YM/MergeProof/North/Thumb.lean
+sed -n '1,110p' Lean/YM/MergeProof/South/Merman.lean
+rg -n 'def Repegs|def gainChart|def winter|def fog|def plume|def quota' Lean/YM/MergeProof Lean/YM/Next
+sed -n '215,245p' Lean/YM/Cells/Tiling.lean
+sed -n '15,28p' Lean/YM/Next/UV_STRESS/Least.lean
+sed -n '40,68p' Lean/YM/MergeProof/North/Siroco.lean
+sed -n '35,58p' Lean/YM/MergeProof/North/Brim.lean</pre>
+    <p>
+      No TeX or Lean build was run. I ran python3 scripts/check_blueprint.py;
+      it could not validate this isolated draft because
+      blueprint/units/YM-000026/ does not contain unit.json. The parent owns
+      the integrated metadata record. No literature substitution was used;
+      this is a source-faithful translation of the finite construction and its
+      explicit scale arithmetic. The earlier annulus unit has a separate
+      recorded background search and no applicable external Ward theorem.
+    </p>
+    <h2 id="auto-6"><a id="rate-and-density-details-added-in-the-repaired-draft"></a>Rate and density details added in the repaired
+    draft<span style="margin-left: 1em"></span></h2>
+    <p>
+      The repaired manuscript gives the paid width explicitly. With (g_q) the
+      maximal engineering degree at grade (q), its positive price is
+    </p>
+    <center>
+      \(\displaystyle w_q (v, j) = \frac{\hat{\beta}_j^{- (g_q + 4)}}{vC_j 
+      \prod_{\ell < j} C_{\ell
++ 1}} .\)
+    </center>
+    <p>
+      This is the ordinary-mathematical restatement of <tt class="verbatim">plumR</tt>
+      and <tt class="verbatim">Mix.width</tt>: <tt class="verbatim">plumR</tt> multiplies (a_j^q)
+      by the width at power (2,\mathrm{winter}(G,q)), <tt class="verbatim">hatCoupling</tt>
+      is \(\hat{\beta}^{- 1 / 2}\), and <tt class="verbatim">Mix.envelope</tt> is the
+      label price times the current column count and the product of preceding
+      column counts. The grade-four branch has the further factor (r_m^{-h}).
+    </p>
+    <p>
+      The rate proof uses the exact channel factors, with both renal factors
+      at <tt class="verbatim">m+1</tt> (because the source evaluates the menu at <tt
+      class="verbatim">i=m+1</tt>):
+    </p>
+    <center>
+      \(\displaystyle \rho_{m, -} : - dt + 4 (1 - t), \qquad \rho_{m, +} : - 4
+      t + h + 4 (1 - t),\)
+    </center>
+    <p>
+      so their product rate is (h+8-(d+12)t=-D+(d+12)(1-t)). The price error
+      rate is (1/32-M-1/8=-5/64), and the marched price comparison has rate
+      gap (1/32-1-M=-61/64), with (M=-1/64). These are ordinary rate
+      calculations spelled out in TeX; the source lemmas <tt class="verbatim">pica</tt>,
+      <tt class="verbatim">quilled</tt>, and <tt class="verbatim">seeing</tt> establish the
+      per-factor rate/growth receipts under the selected-history hypotheses.
+      The proof also records the subexponential column product from the
+      cumulative column-rate receipt, not only the current column count.
+    </p>
+    <p>
+      The quota itself is indexed by birth level, <tt class="verbatim">quota C D m N p
+      z</tt>, and the quota constant is birth-level dependent: the source
+      applies <tt class="verbatim">quota_stop</tt> with <tt class="verbatim">ref(D)&le;k&le;m</tt>.
+      It yields a finite (Q_m^{\mathrm{quota}}) at each fixed (m), uniform in
+      volume and period, not a constant uniform over all birth levels. The
+      marched estimate uses <tt class="verbatim">fly(D,m)&le;1</tt>; the source
+      inequality <tt class="verbatim">(s_i+1/2) peepers_i &le; sqrt(betaHat_(i+1))</tt>
+      makes the exponential channel denominator rate zero. The strict lower
+      bound <tt class="verbatim">M&gt;&minus;1/32</tt> is sufficient for the
+      correction-price decay, not asserted sharp. Fine response/graft
+      occupancy is (r(m+1)); served transfer occupancy is (r(m)).
+    </p>
+    <p>
+      The displayed density identity unpacks <tt class="verbatim">Accent.Served</tt> and
+      <tt class="verbatim">Accent.restore</tt>: regular coefficients indexed by supports
+      and forced coefficients indexed by boxes remain as higher-degree terms.
+      <tt class="verbatim">Accent.field</tt> sums full-support- disjoint box families
+      whose flags cover the target. The manuscript does not replace this
+      identity by a single leading coefficient.
+    </p>
+    <p>
+      Additional targeted source reads during this repair:
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+rg -n 'def Served|structure Carton|def Towed|def restore|def field|def grid' Lean/YM/MergeProof/Accent.lean
+sed -n '1,85p' Lean/YM/MergeProof/Accent.lean
+rg -n 'def radiant|def sunny' Lean/YM/MergeProof/Domino.lean
+sed -n '1,55p' Lean/YM/MergeProof/Domino.lean
+sed -n '1,100p' Lean/YM/MergeProof/North/Wings.lean
+sed -n '1,100p' Lean/YM/MergeProof/North/Wicker.lean
+sed -n '1,90p' Lean/YM/MergeProof/North/Welch.lean
+sed -n '1,80p' Lean/YM/Work/I04.lean</pre>
+    <p>
+      I also inspected <tt class="verbatim">Lean/YM/MergeProof/North/Brick.lean</tt>,
+      <tt class="verbatim">Sultan.lean</tt>, <tt class="verbatim">Stove.lean</tt>, and <tt class="verbatim">Traps.lean</tt>
+      for the exact channel indexing and width normalization. No TeX or Lean
+      build was run.
+    </p>
+    <div class="ym-unit-nav">
+      <a class="ym-prev" href="../YM-000022/correspondence.html">&larr; YM-000022</a><span class="ym-part"><a href="correspondence.html">YM-000026:
+      Foundations and conditional assembly of the four-dimensional existence
+      argument (draft)</a><font class="ym-sep">&middot;</font><a href="AGENT-PROMPT.html">AGENT-PROMPT</a><font
+      class="ym-sep">&middot;</font><a href="CHECKPOINT.html">CHECKPOINT</a><font class="ym-sep">&middot;</font><a
+      href="USAGE-HANDOFF.html">USAGE-HANDOFF</a><font class="ym-sep">&middot;</font><a href="actual-corrected-body-compiler-evidence.html">actual-corrected-body-compiler-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-covariance-fourier-window-evidence.html">actual-covariance-fourier-window-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-covariance-transport-evidence.html">actual-covariance-transport-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-equation-kernel-relay-evidence.html">actual-equation-kernel-relay-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-global-row-prices-evidence.html">actual-global-row-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-harvested-owner-energy-evidence.html">actual-harvested-owner-energy-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-insertion-derivative-relay-evidence.html">actual-insertion-derivative-relay-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-local-compiler-handoff-evidence.html">actual-local-compiler-handoff-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-marked-portfolio-calibration-evidence.html">actual-marked-portfolio-calibration-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-mixed-marked-compiler-evidence.html">actual-mixed-marked-compiler-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-palette-warning-evidence.html">actual-palette-warning-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-phase-detector-moments-evidence.html">actual-phase-detector-moments-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-phase-grid-approximants-evidence.html">actual-phase-grid-approximants-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-rank-purchases-evidence.html">actual-rank-purchases-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-dawn-selection-evidence.html">actual-reader-dawn-selection-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-guarded-curvature-evidence.html">actual-reader-guarded-curvature-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-local-gaussian-prices-evidence.html">actual-reader-local-gaussian-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-short-covariance-evidence.html">actual-reader-short-covariance-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-small-window-bridge-evidence.html">actual-reader-small-window-bridge-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-reader-tree-covariance-evidence.html">actual-reader-tree-covariance-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-slab-copy-bounds-evidence.html">actual-slab-copy-bounds-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-stress-annulus-evidence.html">actual-stress-annulus-evidence</a><font
+      class="ym-sep">&middot;</font><a href="actual-stress-normalization-evidence.html">actual-stress-normalization-evidence</a><font
+      class="ym-sep">&middot;</font><font class="ym-here">actual-stress-shell-nodes-evidence</font><font
+      class="ym-sep">&middot;</font><a href="all-arity-reader-gaussian-model-evidence.html">all-arity-reader-gaussian-model-evidence</a><font
+      class="ym-sep">&middot;</font><a href="all-grade-free-detectors-evidence.html">all-grade-free-detectors-evidence</a><font
+      class="ym-sep">&middot;</font><a href="allarity-coordinate-calibration-evidence.html">allarity-coordinate-calibration-evidence</a><font
+      class="ym-sep">&middot;</font><a href="allarity-cumulant-comparison-evidence.html">allarity-cumulant-comparison-evidence</a><font
+      class="ym-sep">&middot;</font><a href="allarity-marked-propagation-evidence.html">allarity-marked-propagation-evidence</a><font
+      class="ym-sep">&middot;</font><a href="allarity-planted-compiler-evidence.html">allarity-planted-compiler-evidence</a><font
+      class="ym-sep">&middot;</font><a href="annulus-fleet-face-estimates-evidence.html">annulus-fleet-face-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="annulus-recording-yield-evidence.html">annulus-recording-yield-evidence</a><font
+      class="ym-sep">&middot;</font><a href="annulus-same-data-binding-evidence.html">annulus-same-data-binding-evidence</a><font
+      class="ym-sep">&middot;</font><a href="annulus-two-wave-estimates-evidence.html">annulus-two-wave-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="atlas-estimates-evidence.html">atlas-estimates-evidence</a><font class="ym-sep">&middot;</font><a
+      href="centered-birth-receipt-evidence.html">centered-birth-receipt-evidence</a><font class="ym-sep">&middot;</font><a
+      href="centered-budget-evidence.html">centered-budget-evidence</a><font class="ym-sep">&middot;</font><a href="centered-construction-evidence.html">centered-construction-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-estimates-evidence.html">centered-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-freight-producer-evidence.html">centered-freight-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-geometry-producer-evidence.html">centered-geometry-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-geyser-scale-estimates-evidence.html">centered-geyser-scale-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-production-evidence.html">centered-production-evidence</a><font
+      class="ym-sep">&middot;</font><a href="centered-public-service-evidence.html">centered-public-service-evidence</a><font
+      class="ym-sep">&middot;</font><a href="classical-stationary-vertices-evidence.html">classical-stationary-vertices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="common-funded-history-evidence.html">common-funded-history-evidence</a><font
+      class="ym-sep">&middot;</font><a href="common-observable-purchases-evidence.html">common-observable-purchases-evidence</a><font
+      class="ym-sep">&middot;</font><a href="coupling-reset-selection-evidence.html">coupling-reset-selection-evidence</a><font
+      class="ym-sep">&middot;</font><a href="endpoint-closure-ledger.html">endpoint-closure-ledger</a><font class="ym-sep">&middot;</font><a
+      href="finite-rank-kernel-transport-evidence.html">finite-rank-kernel-transport-evidence</a><font class="ym-sep">&middot;</font><a
+      href="flat-estimate-audit.html">flat-estimate-audit</a><font class="ym-sep">&middot;</font><a href="flat-step-evidence.html">flat-step-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-collision-pole-separation-evidence.html">free-collision-pole-separation-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-horizon-convergence-evidence.html">free-horizon-convergence-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-internal-ward-erasure-evidence.html">free-internal-ward-erasure-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-kernel-components-evidence.html">free-kernel-components-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-kernel-estimates-evidence.html">free-kernel-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-maxwell-radial-flux-evidence.html">free-maxwell-radial-flux-evidence</a><font
+      class="ym-sep">&middot;</font><a href="free-maxwell-ward-flux-evidence.html">free-maxwell-ward-flux-evidence</a><font
+      class="ym-sep">&middot;</font><a href="fullmesh-correlation-cauchy-evidence.html">fullmesh-correlation-cauchy-evidence</a><font
+      class="ym-sep">&middot;</font><a href="fullmesh-fixedbounds-producer-evidence.html">fullmesh-fixedbounds-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="handoff/index.html">handoff</a><font class="ym-sep">&middot;</font><a
+      href="inherited-loop-transport-evidence.html">inherited-loop-transport-evidence</a><font class="ym-sep">&middot;</font><a
+      href="lattice-evidence.html">lattice-evidence</a><font class="ym-sep">&middot;</font><a href="lattice-history-closure-refresh.html">lattice-history-closure-refresh</a><font
+      class="ym-sep">&middot;</font><a href="limits-evidence.html">limits-evidence</a><font class="ym-sep">&middot;</font><a
+      href="local-projection-evidence.html">local-projection-evidence</a><font class="ym-sep">&middot;</font><a href="marked-campaign-producer-evidence.html">marked-campaign-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="marked-field-local-estimates-evidence.html">marked-field-local-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="marked-healthy-cumulant-launch-evidence.html">marked-healthy-cumulant-launch-evidence</a><font
+      class="ym-sep">&middot;</font><a href="marked-portfolio-calibration-evidence.html">marked-portfolio-calibration-evidence</a><font
+      class="ym-sep">&middot;</font><a href="multileg-curvature-lift-evidence.html">multileg-curvature-lift-evidence</a><font
+      class="ym-sep">&middot;</font><a href="ope-closure-refresh.html">ope-closure-refresh</a><font class="ym-sep">&middot;</font><a
+      href="ope-evidence.html">ope-evidence</a><font class="ym-sep">&middot;</font><a href="ope-history-service-evidence.html">ope-history-service-evidence</a><font
+      class="ym-sep">&middot;</font><a href="ope-scale-purchases-evidence.html">ope-scale-purchases-evidence</a><font
+      class="ym-sep">&middot;</font><a href="original-history-portfolio-attachment-evidence.html">original-history-portfolio-attachment-evidence</a><font
+      class="ym-sep">&middot;</font><a href="parameter-continuity-evidence.html">parameter-continuity-evidence</a><font
+      class="ym-sep">&middot;</font><a href="path-attachment-producer-evidence.html">path-attachment-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="phase-evidence.html">phase-evidence</a><font class="ym-sep">&middot;</font><a
+      href="phase-null-inheritance-evidence.html">phase-null-inheritance-evidence</a><font class="ym-sep">&middot;</font><a
+      href="phase-quantitative-producer-evidence.html">phase-quantitative-producer-evidence</a><font class="ym-sep">&middot;</font><a
+      href="phase-ward-inheritance-evidence.html">phase-ward-inheritance-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-angular-actions-evidence.html">physical-angular-actions-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-reset-reorganization-evidence.html">physical-reset-reorganization-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-analytic-continuation-evidence.html">physical-ward-analytic-continuation-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-final-binding-audit.html">physical-ward-final-binding-audit</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-free-classification-evidence.html">physical-ward-free-classification-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-packet-prices-evidence.html">physical-ward-packet-prices-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-propagation-evidence.html">physical-ward-propagation-evidence</a><font class="ym-sep">&middot;</font><a
+      href="physical-ward-stress-cone-evidence.html">physical-ward-stress-cone-evidence</a><font class="ym-sep">&middot;</font><a
+      href="public-binding-package-audit.html">public-binding-package-audit</a><font class="ym-sep">&middot;</font><a
+      href="public-run-binding-evidence.html">public-run-binding-evidence</a><font class="ym-sep">&middot;</font><a
+      href="quadratic-pole-transport-evidence.html">quadratic-pole-transport-evidence</a><font class="ym-sep">&middot;</font><a
+      href="rank-root-normalization-evidence.html">rank-root-normalization-evidence</a><font class="ym-sep">&middot;</font><a
+      href="reconstruction-evidence.html">reconstruction-evidence</a><font class="ym-sep">&middot;</font><a href="restarted-rank-history-evidence.html">restarted-rank-history-evidence</a><font
+      class="ym-sep">&middot;</font><a href="rg-construction-evidence.html">rg-construction-evidence</a><font class="ym-sep">&middot;</font><a
+      href="rg-horizon-geometry-evidence.html">rg-horizon-geometry-evidence</a><font class="ym-sep">&middot;</font><a
+      href="rg-menu-jets-evidence.html">rg-menu-jets-evidence</a><font class="ym-sep">&middot;</font><a href="rg-multisource-evidence.html">rg-multisource-evidence</a><font
+      class="ym-sep">&middot;</font><a href="rg-price-receipts-evidence.html">rg-price-receipts-evidence</a><font
+      class="ym-sep">&middot;</font><a href="row-quadratic-price-evidence.html">row-quadratic-price-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-centered-service-evidence.html">selected-centered-service-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-course-binding-evidence.html">selected-course-binding-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-history-limits-evidence.html">selected-history-limits-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-kinetic-response-evidence.html">selected-kinetic-response-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-nonlinear-offering-evidence.html">selected-nonlinear-offering-evidence</a><font
+      class="ym-sep">&middot;</font><a href="selected-stationary-linear-data-evidence.html">selected-stationary-linear-data-evidence</a><font
+      class="ym-sep">&middot;</font><a href="soft-curvature-receipts-evidence.html">soft-curvature-receipts-evidence</a><font
+      class="ym-sep">&middot;</font><a href="stationary-determinant-prices-evidence.html">stationary-determinant-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="stationary-germ-symmetry-evidence.html">stationary-germ-symmetry-evidence</a><font
+      class="ym-sep">&middot;</font><a href="stationary-output-construction-evidence.html">stationary-output-construction-evidence</a><font
+      class="ym-sep">&middot;</font><a href="stationary-small-field-evidence.html">stationary-small-field-evidence</a><font
+      class="ym-sep">&middot;</font><a href="surviving-interval-shooting-evidence.html">surviving-interval-shooting-evidence</a><font
+      class="ym-sep">&middot;</font><a href="terminal-marked-construction-evidence.html">terminal-marked-construction-evidence</a><font
+      class="ym-sep">&middot;</font><a href="terminal-normalization-transfer-evidence.html">terminal-normalization-transfer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="thermal-contact-cancellation-evidence.html">thermal-contact-cancellation-evidence</a><font
+      class="ym-sep">&middot;</font><a href="three-panel-weak-comparison-evidence.html">three-panel-weak-comparison-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-bill-prices-evidence.html">trace-bill-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-calibration-producer-evidence.html">trace-calibration-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-coffer-supplier-evidence.html">trace-coffer-supplier-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-crown-buffer-evidence.html">trace-crown-buffer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-eve-producer-evidence.html">trace-eve-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-evidence.html">trace-evidence</a><font class="ym-sep">&middot;</font><a
+      href="trace-firesky-gallery-evidence.html">trace-firesky-gallery-evidence</a><font class="ym-sep">&middot;</font><a
+      href="trace-free-rank-evidence.html">trace-free-rank-evidence</a><font class="ym-sep">&middot;</font><a href="trace-local-charge-evidence.html">trace-local-charge-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-local-paid-budgets-evidence.html">trace-local-paid-budgets-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-local-pairing-evidence.html">trace-local-pairing-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-local-rate-selection-evidence.html">trace-local-rate-selection-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-medal-prices-evidence.html">trace-medal-prices-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-mission-price-evidence.html">trace-mission-price-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-price-recurrence-evidence.html">trace-price-recurrence-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-probe-assembly-evidence.html">trace-probe-assembly-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-regular-atom-evidence.html">trace-regular-atom-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-row-jet-estimates-evidence.html">trace-row-jet-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-scribe-producer-evidence.html">trace-scribe-producer-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-small-means-evidence.html">trace-small-means-evidence</a><font
+      class="ym-sep">&middot;</font><a href="trace-weighted-estimates-evidence.html">trace-weighted-estimates-evidence</a><font
+      class="ym-sep">&middot;</font><a href="usage-hold-checkpoint.html">usage-hold-checkpoint</a><font class="ym-sep">&middot;</font><a
+      href="validation.html">validation</a><font class="ym-sep">&middot;</font><a href="weighted-frame-penalty-evidence.html">weighted-frame-penalty-evidence</a><font
+      class="ym-sep">&middot;</font><a href="weighted-stationary-inverses-evidence.html">weighted-stationary-inverses-evidence</a><font
+      class="ym-sep">&middot;</font><a href="wilson-startup-construction-evidence.html">wilson-startup-construction-evidence</a><font
+      class="ym-sep">&middot;</font><a href="wilson-vacuum-price-evidence.html">wilson-vacuum-price-evidence</a></span>
+    </div>
+  </body>
+</html>
