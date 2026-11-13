@@ -38,23 +38,54 @@
 
   Let <math|G\<subset\>U<around|(|r<rsub|G>|)>> be a closed matrix subgroup,
   in the indicated unitary representation, with nonabelian simple real Lie
-  algebra <math|\<frak-g\>>. Write
+  algebra <math|\<frak-g\>>, where <math|r<rsub|G>\<geqslant\>1>. Explicitly,
+
+  <\equation*>
+    \<frak-g\>=<around|{|X\<in\>M<rsub|r<rsub|G>><around|(|\<bbb-C\>|)>:exp
+    <around|(|t*X|)>\<in\>G<text| for every >t\<in\>\<bbb-R\>|}>.
+  </equation*>
+
+  Since <math|U<around|(|r<rsub|G>|)>> is closed in
+  <math|<math-up|GL><around|(|r<rsub|G>,\<bbb-C\>|)>>, so is <math|G>. Thus
+  Hall's matrix Lie group results apply: this set is a finite-dimensional
+  real vector space closed under <math|<around|[|X,Y|]>=X*Y-Y*X>
+  <cite-detail|hall2000|Definition<nbsp>3.13 and Theorem<nbsp>3.16>. Since
+  <math|exp <around|(|t*X|)>> is unitary for <math|X\<in\>\<frak-g\>> and
+  real <math|t>, differentiating <math|exp <around|(|t*X|)><rsup|\<ast\>>*exp
+  <around|(|t*X|)>=I> at <math|t=0> gives <math|X<rsup|\<ast\>>=-X>. Thus the
+  symmetric real bilinear form <math|<around|\<langle\>|X,Y|\<rangle\>>=-r<rsub|G><rsup|-1><math-up|Retr><around|(|X*Y|)>>
+  is positive definite: for <math|X\<ne\>0>,
+
+  <\equation*>
+    <around|\<langle\>|X,X|\<rangle\>>=r<rsub|G><rsup|-1><math-up|tr><around|(|X<rsup|\<ast\>>*X|)>=r<rsub|G><rsup|-1>*<big|sum><rsub|a,b><around|\||X<rsub|a*b>|\|><rsup|2>\<gtr\>0.
+  </equation*>
+
+  Nonabelianness implies <math|\<frak-g\>\<ne\><around|{|0|}>>, so
+  <math|dim<rsub|\<bbb-R\>> \<frak-g\>\<geqslant\>1>. Write
 
   <\equation*>
     b<rsub|0><around|(|G|)>=<frac|11*<space|0.17em>C<rsub|\<frak-g\>>|48*\<pi\><rsup|2>>,<space|2em>C<rsub|\<frak-g\>>=-<frac|1|dim<rsub|\<bbb-R\>>
     \<frak-g\>>*<big|sum><rsub|j><math-up|Tr><rsub|\<frak-g\>><around*|(|<around|(|<math-up|ad><space|0.17em>e<rsub|j>|)><rsup|2>|)>,
   </equation*>
 
-  where <math|<around|(|e<rsub|j>|)>> is an orthonormal basis of
-  <math|\<frak-g\>> for <math|<around|\<langle\>|X,Y|\<rangle\>>=-r<rsub|G><rsup|-1><math-up|Retr><around|(|X*Y|)>>.
+  where <math|<around|(|e<rsub|j>|)>> is an orthonormal basis for this inner
+  product and <math|<math-up|ad><space|0.17em>X<around|(|Y|)>=<around|[|X,Y|]>=X*Y-Y*X>.
   Here <math|<math-up|Tr><rsub|\<frak-g\>>> is the real trace of an
-  endomorphism of <math|\<frak-g\>>. Invariance of the matrix trace gives
+  endomorphism of <math|\<frak-g\>>. This constant is independent of the
+  orthonormal basis: if <math|f<rsub|i>=<big|sum><rsub|j>q<rsub|i*j>*e<rsub|j>>
+  with <math|q> orthogonal, then
+
+  <\equation*>
+    <big|sum><rsub|i><around|(|<math-up|ad><space|0.17em>f<rsub|i>|)><rsup|2>=<big|sum><rsub|j,k><around*|(|<big|sum><rsub|i>q<rsub|i*j>*q<rsub|i*k>|)><math-up|ad><space|0.17em>e<rsub|j><math-up|ad><space|0.17em>e<rsub|k>=<big|sum><rsub|j><around|(|<math-up|ad><space|0.17em>e<rsub|j>|)><rsup|2>.
+  </equation*>
+
+  Taking traces proves the assertion. Invariance of the matrix trace gives
   <math|<around|\<langle\>|<around|[|X,Y|]>,Z|\<rangle\>>=-<around|\<langle\>|Y,<around|[|X,Z|]>|\<rangle\>>>,
   so each <math|<math-up|ad><space|0.17em>e<rsub|j>> is skew-adjoint.
   Consequently <math|-<math-up|Tr><rsub|\<frak-g\>><around|(|<around|(|<math-up|ad><space|0.17em>e<rsub|j>|)><rsup|2>|)>=<big|sum><rsub|\<ell\>><around|\<\|\|\>|<around|[|e<rsub|j>,e<rsub|\<ell\>>|]>|\<\|\|\>><rsup|2>>.
-  Noncommutativity of <math|\<frak-g\>> makes at least one term in the
-  resulting double sum positive. In particular,
-  <math|b<rsub|0><around|(|G|)>\<gtr\>0>.
+  If every basis commutator vanished, bilinearity would make all commutators
+  vanish. Noncommutativity therefore makes at least one term in the resulting
+  double sum positive. In particular, <math|b<rsub|0><around|(|G|)>\<gtr\>0>.
 
   <paragraph|Input from the lattice construction.> Fix a construction family
   <math|\<cal-C\>> satisfying the construction conditions. For
@@ -169,8 +200,14 @@
   theorem.
 
   <\bibliography|bib|tm-plain|references>
-    <\bib-list|1>
-      <bibitem*|1><label|bib-lebl>Ji°í Lebl.
+    <\bib-list|2>
+      <bibitem*|1><label|bib-hall2000>Brian<nbsp>C.<nbsp>Hall. <newblock>An
+      elementary introduction to groups and representations.
+      <newblock>arXiv:math-ph/0005032v1, 31 May 2000, 2000. <newblock>Chapter
+      3, Definition 3.13 and Theorem 3.16, pp. 36 and 40\U41.
+      <slink|https://arxiv.org/pdf/math-ph/0005032v1>.<newblock>
+
+      <bibitem*|2><label|bib-lebl>Ji°í Lebl.
       <newblock><with|font-shape|italic|Basic Analysis: Introduction to Real
       Analysis>, <localize|volume><nbsp>I. <newblock>Author-maintained
       electronic edition, n.d. <newblock>HTML edition, Section 2.2,
@@ -190,12 +227,13 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-2|<tuple|1|1>>
-    <associate|auto-3|<tuple|1.2|2>>
-    <associate|bib-lebl|<tuple|1|2>>
-    <associate|eq:running|<tuple|1|1>>
+    <associate|auto-2|<tuple|1|2>>
+    <associate|auto-3|<tuple|1.2|3>>
+    <associate|bib-hall2000|<tuple|1|3>>
+    <associate|bib-lebl|<tuple|2|3>>
+    <associate|eq:running|<tuple|1|2>>
     <associate|prop:running-asymptotic|<tuple|1.2|2>>
-    <associate|prop:uniform-extraction|<tuple|1.1|1>>
+    <associate|prop:uniform-extraction|<tuple|1.1|2>>
     <associate|sec:running-coefficient|<tuple|1|1>>
   </collection>
 </references>
@@ -203,6 +241,8 @@
 <\auxiliary>
   <\collection>
     <\associate|bib>
+      hall2000
+
       lebl
 
       lebl

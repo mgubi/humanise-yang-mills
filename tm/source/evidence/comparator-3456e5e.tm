@@ -95,8 +95,7 @@
 
     Your solution is okay!
 
-    <md-source|real \ \ \ 34m19.043s|real\<#9\>34m19.043s|real
-    \ \ \ 34m19.043s>
+    real \ \ \ 34m19.043s
 
     Finished with result: success
 
