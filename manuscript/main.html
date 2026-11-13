@@ -118,7 +118,31 @@
     <p>
       Let \(G \subset U (r_G)\) be a closed matrix subgroup, in the indicated
       unitary representation, with nonabelian simple real Lie algebra
-      \(\mathfrak{g}\). Write
+      \(\mathfrak{g}\), where \(r_G \geqslant 1\). Explicitly,
+    </p>
+    <center>
+      \(\displaystyle \mathfrak{g}= \{X \in M_{r_G} (\mathbb{C}) : \exp (tX)
+      \in G \text{ for every
+} t \in \mathbb{R}\} .\)
+    </center>
+    <p>
+      Since \(U (r_G)\) is closed in \(\text{GL} (r_G, \mathbb{C})\), so is
+      \(G\). Thus Hall's matrix Lie group results apply: this set is a
+      finite-dimensional real vector space closed under \([X, Y] = XY - YX\)
+      [<a href="#bib-hall2000">1</a>, Definition 3.13 and Theorem 3.16]. Since \(\exp (tX)\)
+      is unitary for \(X \in \mathfrak{g}\) and real \(t\), differentiating
+      \(\exp (tX)^{\ast} \exp (tX) = I\) at \(t = 0\) gives \(X^{\ast} = -
+      X\). Thus the symmetric real bilinear form \(\langle X, Y \rangle = -
+      r_G^{- 1} \text{Retr} (XY)\) is positive definite: for \(X \ne 0\),
+    </p>
+    <center>
+      \(\displaystyle \langle X, X \rangle = r_G^{- 1} \text{tr} (X^{\ast} X)
+      = r_G^{- 1}  \sum_{a,
+b} |X_{ab} |^2 > 0.\)
+    </center>
+    <p>
+      Nonabelianness implies \(\mathfrak{g} \ne \{0\}\), so
+      \(\dim_{\mathbb{R}} \mathfrak{g} \geqslant 1\). Write
     </p>
     <center>
       \(\displaystyle b_0 (G) = \frac{11 \hspace{0.17em} C_{\mathfrak{g}}}{48
@@ -129,17 +153,30 @@ C_{\mathfrak{g}} = - \frac{1}{\dim_{\mathbb{R}}
       \hspace{0.17em} e_j)^2 \right),\)
     </center>
     <p>
-      where \((e_j)\) is an orthonormal basis of \(\mathfrak{g}\) for
-      \(\langle X, Y \rangle = - r_G^{- 1} \text{Retr} (XY)\). Here
+      where \((e_j)\) is an orthonormal basis for this inner product and
+      \(\text{ad} \hspace{0.17em} X (Y) = [X, Y] = XY - YX\). Here
       \(\text{Tr}_{\mathfrak{g}}\) is the real trace of an endomorphism of
-      \(\mathfrak{g}\). Invariance of the matrix trace gives \(\langle [X, Y],
-      Z \rangle = - \langle Y, [X, Z] \rangle\), so each \(\text{ad}
-      \hspace{0.17em} e_j\) is skew-adjoint. Consequently \(-
+      \(\mathfrak{g}\). This constant is independent of the orthonormal basis:
+      if \(f_i = \sum_j q_{ij} e_j\) with \(q\) orthogonal, then
+    </p>
+    <center>
+      \(\displaystyle \sum_i (\text{ad} \hspace{0.17em} f_i)^2 = \sum_{j, k}
+      \left( \sum_i q_{ij}
+q_{ik} \right) \text{ad} \hspace{0.17em} e_j
+      \text{ad} \hspace{0.17em} e_k =
+\sum_j (\text{ad} \hspace{0.17em} e_j)^2
+      .\)
+    </center>
+    <p>
+      Taking traces proves the assertion. Invariance of the matrix trace gives
+      \(\langle [X, Y], Z \rangle = - \langle Y, [X, Z] \rangle\), so each
+      \(\text{ad} \hspace{0.17em} e_j\) is skew-adjoint. Consequently \(-
       \text{Tr}_{\mathfrak{g}} ((\text{ad} \hspace{0.17em} e_j)^2) =
       \sum_{\ell}
-\|[e_j, e_{\ell}]\|^2\). Noncommutativity of
-      \(\mathfrak{g}\) makes at least one term in the resulting double sum
-      positive. In particular, \(b_0 (G) > 0\).
+\|[e_j, e_{\ell}]\|^2\). If every basis commutator vanished,
+      bilinearity would make all commutators vanish. Noncommutativity
+      therefore makes at least one term in the resulting double sum positive.
+      In particular, \(b_0 (G) > 0\).
     </p>
     <p>
       <div style="display: inline">
@@ -246,9 +283,9 @@ m} - (A + cs_m) |}{s_m} + \frac{|A|}{s_m} \leqslant
       because the original threshold was uniform in \(p\).
     </p>
     <p>
-      On this positive tail the square-root limit rule [<a href="#bib-lebl">1</a>,
+      On this positive tail the square-root limit rule [<a href="#bib-lebl">2</a>,
       Proposition 2.2.6] gives \(\sqrt{x_i} \to \sqrt{c}\). All denominator
-      terms and their limit are nonzero, so the quotient rule [<a href="#bib-lebl">1</a>,
+      terms and their limit are nonzero, so the quotient rule [<a href="#bib-lebl">2</a>,
       Proposition 2.2.5(iv)], with constant numerator \(1\), gives \(1 /
       \sqrt{x_i} \to 1 / \sqrt{c}\). Finally,
     </p>
@@ -278,6 +315,16 @@ g_{N (i), k (i), i}  \sqrt{\log (a_i^{- 1})} .\)
       <font style="font-size: 84.0%"><dl>
         <dt>
           <strong>[1]  </strong>
+        </dt><dd>
+          <p>
+            <a id="bib-hall2000"></a>Brian C. Hall. An elementary introduction to groups and
+            representations. arXiv:math-ph/0005032v1, 31 May 2000, 2000.
+            Chapter 3, Definition 3.13 and Theorem 3.16, pp. 36 and
+            40&ndash;41. <a href="https://arxiv.org/pdf/math-ph/0005032v1"><tt>https://arxiv.org/pdf/math-ph/0005032v1</tt></a>.
+          </p>
+        </dd>
+        <dt>
+          <strong>[2]  </strong>
         </dt><dd>
           <p>
             <a id="bib-lebl"></a>Ji&#x0159;&iacute; Lebl. <i>Basic Analysis:

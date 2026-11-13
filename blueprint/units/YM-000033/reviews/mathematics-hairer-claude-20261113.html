@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Review of a proof unit &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <div class="ym-unit-nav">
+      <a class="ym-prev" href="../../YM-000026/correspondence.html">&larr; YM-000026</a><span class="ym-part"><a href="../correspondence.html">YM-000033:
+      Selected trace sensor and weighted Ward limit (draft)</a><font class="ym-sep">&middot;</font><a
+      href="../HANDOFF.html">HANDOFF</a><font class="ym-sep">&middot;</font><a href="../validation.html">validation</a></span><a
+      class="ym-next" href="../../YM-000034/correspondence.html">YM-000034 &rarr;</a>
+    </div>
+    <p>
+      <h1>Review of a proof unit</h1><a id="review-of-a-proof-unit"></a>
+    </p>
+    <ul>
+      <li>
+        <p>
+          Unit: YM-000033, <tt class="verbatim">blueprint/units/YM-000033/</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Role: mathematical validity
+        </p>
+      </li>
+      <li>
+        <p>
+          Human reviewer: <tt class="verbatim">hairer</tt> (account under which this
+          report is submitted; no human acceptance is recorded by this report)
+        </p>
+      </li>
+      <li>
+        <p>
+          Agent assistance: the whole review was done by a Claude (Anthropic)
+          agent session, <tt class="verbatim">hairer-claude-issue33-review-20261113</tt>.
+          The unit was drafted with GPT-6.1 Terra (Codex), so the reviewing
+          model family differs from the authoring one.
+        </p>
+      </li>
+      <li>
+        <p>
+          Content SHA-256: <tt class="verbatim">f4ab86a58f7df57adc923ef2298df4377c1942c8a6a2cebcf74c641f396d5657</tt>
+          (<tt class="verbatim">python3 scripts/check_blueprint.py --fingerprint
+          YM-000033</tt> at <tt class="verbatim">69c254b</tt>)
+        </p>
+      </li>
+      <li>
+        <p>
+          Manuscript files and labels: <tt class="verbatim">manuscript/existence/trace-prosper-sensor.tex</tt>
+          (<tt class="verbatim">sec:trace-prosper-sensor</tt>, <tt class="verbatim">prop:trace-prosper-sensor</tt>,
+          equations <tt class="verbatim">eq:trace-sensor-*</tt>), read in full. Support
+          files from <tt class="verbatim">unit.json</tt>: in <tt class="verbatim">trace-weighted-estimates.tex</tt>,
+          <tt class="verbatim">lem:ex-lattice-trace-weighted-price</tt> and <tt class="verbatim">lem:ex-lattice-trace-medium-receipts</tt>
+          were read with their hypotheses; in <tt class="verbatim">trace-small-means.tex</tt>,
+          the statement of <tt class="verbatim">lem:ex-trace-small-means</tt> was read;
+          <tt class="verbatim">trace-free-rank.tex</tt> was used only for the rank fact
+          \(\ker f =\mathbb{R}x\), \(x \neq 0\), and its labels; <tt class="verbatim">preamble.tex</tt>
+          was not reviewed.
+        </p>
+      </li>
+      <li>
+        <p>
+          Source revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Review task and PR: issue <a href="https://github.com/hairer/humanise-yang-mills/issues/33">#33</a> (claim by <tt class="verbatim">hairer</tt>,
+          13 November 2026); author PR #71; this report's PR: draft against
+          <tt class="verbatim">codex/existence-monograph</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Outcome: <strong>changes requested.</strong> No mathematical error
+          found; every derivation in the chapter was checked step by step. One
+          required presentation change (R1), two minor items (R3, R4), a nit
+          (R2, corrected on 13 November 2026: the cited argument does exist in
+          <tt class="verbatim">trace-free-rank.tex</tt>) and a record item (R5).
+          Acceptance would be local and conditional on the explicitly listed
+          inputs.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-1"><a id="findings-and-evidence"></a>Findings and evidence<span style="margin-left: 1em"></span></h2>
+    <p>
+      I checked every displayed step of the chapter. In order:
+    </p>
+    <ol>
+      <li>
+        <p>
+          <strong>Free normalisation (lines 1&ndash;96).</strong>
+        </p>
+        <ul>
+          <li>
+            <p>
+              The three evaluation rows: \((0, 2, 0)\) for the jet with
+              \(F_{12} = 1\); \((1, 2, 0)\) for \(F_{01} = 1\), \(\partial_0
+              F_{01} = 1\), \(\partial_2 F_{21} = - 1\), where \(J^{(3)}_0 =
+              \partial_0 F_{01} + \partial_2 F_{21} = 0\); \((1, 2, 1)\) for
+              the last jet. The determinant is \(- 2 \neq 0\).
+            </p>
+          </li>
+          <li>
+            <p>
+              The Bianchi check of the first jet: \(1 - \tfrac{1}{2} -
+              \tfrac{1}{2} = 0\). The other two jets have only repeated-index
+              derivative entries, so the cyclic identity holds trivially.
+            </p>
+          </li>
+          <li>
+            <p>
+              The radial-gauge potential and \(\partial_c  (\partial_a A_b -
+              \partial_b A_a) (0) = \tfrac{1}{3} (2 K_{cab} -
+K_{abc} -
+              K_{bca}) = K_{cab}\).
+            </p>
+          </li>
+          <li>
+            <p>
+              The divergence computation, including \(B = J^{(2)} - B\) via
+              the Bianchi identity and the exchange \(a \leftrightarrow i\),
+              giving coordinates \(2 (w_0 - w_2), \hspace{0.17em} 2 w_1 +
+              \tfrac{1}{2} w_2, \hspace{0.17em} w_2\).
+            </p>
+          </li>
+          <li>
+            <p>
+              Trace \((w_0 + 4 w_1) \mathcal{I}\), hence \(\rho = - 4 (w_0 + 4
+              w_1)\), \(J^{(3)} \mapsto (1, - \tfrac{1}{4}, 1)\) and \(\rho
+              (x) = 0\).
+            </p>
+          </li>
+        </ul>
+        <p>
+          All correct.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Clock ratio (lines 97&ndash;138).</strong> The
+          minimal-overshoot bound \(0 \leqslant \ell_{q (k)} - \ell_k
+          \leqslant 2 g\) uses \(\hat{\beta}_m \leqslant \chi + \gamma g
+          \leqslant 2 \chi\) and \(\log L_m \leqslant L_m \leqslant \log
+          \hat{\beta}_m \leqslant \log 2 \chi
+\leqslant g\). From it follow
+          \(\hat{\beta}_{q (k)} / \hat{\beta}_k \to 1\) and, with \(|b_j -
+          \hat{\beta}_j | \leqslant \varepsilon \ell_j \leqslant
+          \varepsilon
+\hat{\beta}_j / \gamma\), the limit \(b_{k_i} / b_{n_i}
+          \to 1\). Correct.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Chart, right inverse and parity (lines
+          139&ndash;220).</strong> \(s_i u_i = \text{id}\) follows from
+          \(\text{core} M_i Y_i h = M_i Y_i h\) and \(PY_i = X_i\). The parity
+          argument for the vanishing unit coefficient (total inversion acts by
+          \(- 1\) on lifted vector components and fixes \(e_0\)) is correct.
+          So is the construction of \(U\): the \(\Gamma\)-averaged Hermitian
+          form makes the signed action unitary and conjugation antiunitary,
+          and \(K\) is real and stable, so the orthogonal-complement section
+          intertwines both.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Tested map and centring (lines 255&ndash;288).</strong>
+          Injectivity of \(\textsf{T}\) from the first bound. Recentring with
+          \(v^{\circ} = v - (\textsf{T} v)_0 \boldsymbol{1}\) gives
+          \(\textsf{T} v^{\circ} = \text{core} \textsf{T} v\), \(\text{core}
+          \textsf{A} v^{\circ} = \text{core} \textsf{A} v\), \(| \textsf{A}
+          v^{\circ} |_1 \leqslant 2 | \textsf{T} v^{\circ} |_1\), and hence
+          <tt class="verbatim">eq:trace-sensor-centered-price</tt> with constant \(2
+          \eta_i\). Correct (see R3 for one wording point).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Calibration (lines 290&ndash;339).</strong> Every nonunit
+          coordinate of an odd two-factor label has position degree 5 and
+          factor degree 2, because jet factors have weight \(r + 2\) and sign
+          \((- 1)^{r + 2}\). Then \(\textsf{T} \lambda_i = \text{Dil}_{\xi^{-
+          1}} \text{Pos}_{\sigma_i} p = \xi^{-
+2} \sigma_i^5 p\) and \(\xi^{-
+          2} = \beta_i \vartheta_{k_i}^2\). Multiplying by
+          \(\vartheta_{k_i}^{- 2} d_{k_i}^5\) gives exactly <tt class="verbatim">eq:trace-sensor-finite-price</tt>,
+          using \(r_i = d_{k_i} \sigma_i\). Correct. The vanishing of
+          one-factor invariants is proved in <tt class="verbatim">trace-free-rank.tex</tt>,
+          but the chapter refers to it only as &quot;above&quot; (R2).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Transport price (lines 341&ndash;466).</strong>
+        </p>
+        <ul>
+          <li>
+            <p>
+              Backward induction: \(|z_j - z_{n_i} |_1 \leqslant a (n_i - j)
+              |z_{n_i} |_1\) with \(a = \delta_i / N_i\) and \(aN_i \leqslant
+              1\).
+            </p>
+          </li>
+          <li>
+            <p>
+              Grade scaling: Block factor 1 and dilation factor \((\vartheta_j
+              / \vartheta_{j + 1})^2\) on the nonunit coordinates. Applying
+              the core and dividing gives \(|z_j - z_{j + 1} |_1 \leqslant 4
+              g_j |z_{j + 1} |_1\).
+            </p>
+          </li>
+          <li>
+            <p>
+              Budget comparison: \(N_i \leqslant 2 (\log \chi)^{48}\), \(C_{j
+              + 1} \leqslant 2 \log \chi\), \(A_{1 / 2}  (j + 1) \geqslant
+              A_{1 / 2} (k_i)\), and \(32 (\log \chi)^{48}  (1 + 2 \log \chi)
+              \leqslant A_{1 / 10} (k_i)\) eventually.
+            </p>
+          </li>
+        </ul>
+        <p>
+          All correct. The quantifier handling is also correct: finite
+          intersection over \(k_i \leqslant j < n_i\) for fixed \(i\), then
+          the ultrafilter limit, then \(i \to \infty\).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>\(u_i \to U\) (lines 456&ndash;475).</strong> I checked the
+          identity \((u_i h)_{\alpha} = (b_{k_i} / b_{n_i}) \textsf{R}_i\)
+          from \(c_i = b_{n_i} r_i^5\) and \(D_i = b_{k_i} r_i^5\). I also
+          checked the constant exactly: \(\delta (1 + 2 \eta) / (1 - \delta) +
+          2 \eta = (2 \eta + \delta) / (1 - \delta)\). Correct.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Proposition and proof (lines 476&ndash;540).</strong> \(T_i
+          = u_i f + A \otimes v_i \to \text{id}\), \(s_i T_i = f + A \otimes
+          s_i (v_i)\) on the tail, and the explicit bound \(\|s_i - f\|
+          \leqslant (\|A\|\|s_i (v_i)\|+\|f\| \epsilon_i) / (1 -
+          \epsilon_i)\). Lemma <tt class="verbatim">lem:ex-lattice-trace-weighted-price</tt>
+          is applied with all its hypotheses supplied. Its own proof (read in
+          full) is correct.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Medium paragraph (lines 542&ndash;564).</strong> Consistent
+          with <tt class="verbatim">lem:ex-lattice-trace-medium-receipts</tt>. That
+          lemma's \(e_i / b_i \to 0\) and \(e_i \leqslant p_i\) are proved in
+          <tt class="verbatim">trace-weighted-estimates.tex</tt> at the postselected
+          level, which that file now says explicitly. The comparison \(A_{1 /
+          5} (n_i) \leqslant \hat{\beta}_{n_i}\) is correct.
+        </p>
+      </li>
+    </ol>
+    <p>
+      <strong>Support files changed after the author's build.</strong> <tt
+      class="verbatim">trace-weighted-estimates.tex</tt> and <tt class="verbatim">trace-small-means.tex</tt>
+      were edited by the C15 author pass (<tt class="verbatim">f8022ce</tt>) after PR
+      #71. I compared them with the author's base <tt class="verbatim">aa2e995</tt>. The
+      statements of the two lemmas and of <tt class="verbatim">lem:ex-trace-small-means</tt>
+      used here are unchanged in substance; the edits clarify definitions and
+      point back to this unit. The sensor chapter itself is unchanged. As a
+      side effect, the unit's wrapper now has two undefined references (R5).
+    </p>
+    <p>
+      <strong>Existing results.</strong> The two analytic tools are the
+      Neumann series and the rank-one receiver lemma. Both are elementary and
+      proved or cited correctly. I know of no literature result that would
+      shorten the chart derivations, which are bookkeeping of the source's
+      normalisations.
+    </p>
+    <h2 id="auto-2"><a id="required-changes-and-remaining-uncertainty"></a>Required changes and remaining uncertainty<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          <strong>R1 (required, presentation).</strong> The proposition's
+          hypotheses are given by reference to prose: &quot;the tested-map,
+          selected-lift and finite-volume normalization inputs described
+          around (&hellip;)&ndash;(&hellip;)&quot; and &quot;the stated
+          oddness, joint convergence and column-budget inputs&quot;. In the
+          text, the inputs are introduced by &quot;Assume&quot; or
+          &quot;Suppose&quot; inside paragraphs that also derive consequences.
+          A reader cannot extract the exact hypothesis list, with quantifiers,
+          without re-reading the whole chapter. For a research monograph,
+          state the inputs as a numbered list immediately before the
+          proposition (for example (S1) clock and block-size inputs; (S2)
+          chart formulas and identities with their tails; (S3) symmetry
+          intertwining; (S4) joint transport and lift convergence along the
+          ultrafilter; (S5) tested-map bounds and calibration; (S6) one-step
+          residual and threshold ratio, with the quantifier &quot;for each
+          fixed \(j\), eventually in \(\nu\), uniformly in \(N > j\) and the
+          label&quot;; (S7) column budget and oddness preservation). Make the
+          derived intermediate results labelled lemmas: the arch ratio, the
+          initial price, the transport price, and \(u_i \to U\). The
+          proposition can then cite them. No mathematical change is needed.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>R2 (nit; corrected 13 November 2026).</strong> Line 306:
+          &quot;A one-factor invariant vanishes by the invariant-linear-form
+          argument in the low-grade label calculation above&quot;. The
+          argument is in a support file of this unit: the &quot;Low-grade
+          invariant labels&quot; subsection of <tt class="verbatim">trace-free-rank.tex</tt>
+          (<tt class="verbatim">sec:ex-lattice-trace-free-rank</tt>), which proves that
+          an \(\text{Ad}\)-invariant real linear functional on the simple
+          algebra vanishes. The earlier version of this report wrongly said it
+          was missing. The only request is to replace &quot;above&quot; by a
+          reference to that section.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>R3 (minor).</strong> Lines 266&ndash;280: \(\textsf{A},
+          \textsf{T}\) are called &quot;complex-linear maps on the finite
+          complex coefficient space&quot;, and then &quot;the two
+          finite-dimensional coefficient spaces have the same dimension&quot;
+          is used for invertibility. Say which spaces they are. If both maps
+          are endomorphisms of one space, injectivity suffices and the
+          sentence can go. If not, justify the equality of dimensions or make
+          it part of the input.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>R4 (nit).</strong> Lines 233&ndash;234: &quot;Fix one
+          ultrafilter on these pairs containing both coordinate tails.&quot;
+          In the source the ultrafilter satisfies \(\mathcal{L} \leqslant F.
+          \text{fuse}\) (<tt class="verbatim">hb</tt> in <tt class="verbatim">springs</tt>). Say
+          that the inputs are taken along the selected ultrafilter, which
+          refines the fused order, and that only its coordinate tails are used
+          in the argument.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>R5 (record).</strong> The wrapper <tt class="verbatim">evidence/wrapper.tex</tt>
+          now builds to 19 pages with two undefined references (<tt class="verbatim">prop:ex-lattice-charge-bounds</tt>,
+          <tt class="verbatim">prop:ex-trace-mission-price-transfer</tt>). Both were
+          introduced into the support chapters by the C15 pass. They are not
+          in this unit's chapter. Update the wrapper or its validation note
+          before integration.
+        </p>
+      </li>
+    </ul>
+    <p>
+      Not checked: the full production of the inputs (by design they are
+      hypotheses); <tt class="verbatim">preamble.tex</tt>; the parts of the support
+      chapters not cited here.
+    </p>
+    <h2 id="auto-3"><a id="acceptance"></a>Acceptance<span style="margin-left: 1em"></span></h2>
+    <p>
+      No acceptance is recorded. After R1, R3 and R4 are resolved, a renewed
+      check of the changed text at its new fingerprint is needed. Then the
+      responsible human reviewer may record local acceptance, conditional on
+      the listed inputs.
+    </p>
+    <div class="ym-unit-nav">
+      <a class="ym-prev" href="../../YM-000026/correspondence.html">&larr; YM-000026</a><span class="ym-part"><a href="../correspondence.html">YM-000033:
+      Selected trace sensor and weighted Ward limit (draft)</a><font class="ym-sep">&middot;</font><a
+      href="../HANDOFF.html">HANDOFF</a><font class="ym-sep">&middot;</font><a href="../validation.html">validation</a></span><a
+      class="ym-next" href="../../YM-000034/correspondence.html">YM-000034 &rarr;</a>
+    </div>
+  </body>
+</html>

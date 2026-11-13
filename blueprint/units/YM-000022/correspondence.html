@@ -66,21 +66,21 @@
         Contents
       </div>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Inputs and notation</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+        <b>Inputs and notation</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">2</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
         <b>Literature and editorial treatment</b> <span style="margin-left: 5mm"></span> <a
-        href="#auto-2">1</a>
+        href="#auto-2">2</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
         <b>Correspondence with Lean</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
         <b>Open obligations and review status</b> <span style="margin-left: 5mm"></span> <a
-        href="#auto-4">3</a>
+        href="#auto-4">4</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Verification evidence</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">3</a>
+        <b>Verification evidence</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">5</a>
       </p>
     </div>
     <p>
@@ -92,8 +92,10 @@
     </p>
     <p>
       Human contributor: hairer. Agent assistance: Codex for
-      exposition/integration; GPT-6 Luna for bounded Lean extraction. See <a
-      href="https://github.com/hairer/humanise-yang-mills/issues/22">issue #22</a>. The provisional VII.5/CP-03 decomposition is
+      exposition/integration; GPT-6 Luna for bounded Lean extraction. Human
+      contributor mgubi and GPT-6 Astra (Codex) supplied the bounded author
+      revision responding to PR #32; see <a href="revisions/mgubi-astra-22-repair-20261113/index.html">the revision record</a>. See
+      <a href="https://github.com/hairer/humanise-yang-mills/issues/22">issue #22</a>. The provisional VII.5/CP-03 decomposition is
       credited to <a href="https://github.com/scottnarmstrong/yang-mills-informalization">Scott Armstrong's informalization project</a>.
     </p>
     <h2 id="auto-1"><a id="inputs-and-notation"></a>Inputs and notation<span style="margin-left: 1em"></span></h2>
@@ -118,6 +120,19 @@
     </p>
     <h2 id="auto-2"><a id="literature-and-editorial-treatment"></a>Literature and editorial treatment<span style="margin-left: 1em"></span></h2>
     <p>
+      Hall, <em>An Elementary Introduction to Groups and Representations</em>,
+      <a href="https://arxiv.org/pdf/math-ph/0005032v1">arXiv:math-ph/0005032v1</a>, 31 May 2000, Chapter 3, Definition
+      3.13 (p. 36) and Theorem 3.16 (pp. 40&ndash;41), supplies the matrix Lie
+      algebra definition and its real vector-space and commutator closure
+      properties. Chapter 2, Definition 2.2 (p. 9), requires a subgroup closed
+      in the general linear group; the manuscript checks this for the closed
+      subgroup of the unitary group. The definition uses all real exponential
+      parameters, exactly as <tt class="verbatim">YM.Gauge.Generates</tt> and <tt class="verbatim">YM.Gauge.lie</tt>
+      do. The opening paragraph now cites these results directly; see the <a
+      href="revisions/mgubi-astra-22-hall-20261113/index.html">Hall follow-up record</a> for the inspected version, verification
+      and bibliography impact.
+    </p>
+    <p>
       Lebl, <em>Basic Analysis I</em>, author-maintained HTML &sect;2.2,
       Propositions 2.2.5(iv) and 2.2.6, inspected on 11 November 2026,
       supplies the reciprocal and square-root limit rules. The section
@@ -140,6 +155,11 @@
         <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Mathematical datum or step</strong></td>
         <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Fully qualified declaration</strong></td>
         <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Source path and location</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Product formula and block lower bound used in the prose
+        divergence proof</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Schedule.denominator</tt>, <tt class="verbatim">YM.Schedule.block_large</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Lattice/Scale.lean:29&ndash;41</tt></td>
       </tr><tr>
         <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Spacing \(a_m\), its positivity, \(s_m = \log (a_m^{-
         1})\), and divergence</td>
@@ -165,11 +185,35 @@
         <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Source/Construction.lean:44&ndash;45</tt>;
         <tt class="verbatim">Lean/YM/RG/History.lean:229&ndash;240</tt></td>
       </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Initial coefficient is the bare Wilson action
+        coefficient</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.RG.History.Selected.starts</tt>, <tt class="verbatim">YM.RG.Rep.eval</tt>,
+        <tt class="verbatim">YM.Wilson.bare</tt>, <tt class="verbatim">YM.Wilson.energy</tt>, <tt
+        class="verbatim">YM.Gauge.price</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/RG/History.lean:174&ndash;179,237</tt>;
+        <tt class="verbatim">Lean/YM/Wilson/Law.lean:29,58</tt>; <tt class="verbatim">Lean/YM/Gauge/MatrixGroup.lean:112</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Matrix representation and its positive dimension</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Gauge</tt>, <tt class="verbatim">YM.Gauge.repDim</tt>,
+        <tt class="verbatim">YM.Gauge.dimPos</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Gauge/MatrixGroup.lean:23&ndash;26,73&ndash;75</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Real Lie algebra, skew-Hermitian generators, and bracket
+        closure</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Gauge.Generates</tt>, <tt class="verbatim">YM.Gauge.lie</tt>,
+        <tt class="verbatim">YM.Gauge.generates_skew</tt>, <tt class="verbatim">YM.Gauge.bracket_mem</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Gauge/Lie.lean:26,42&ndash;44,126&ndash;134,159&ndash;176</tt></td>
+      </tr><tr>
         <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Color normalization and the Casimir formula</td>
         <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Gauge.Color</tt>, <tt class="verbatim">YM.Gauge.colorIso</tt>,
         <tt class="verbatim">YM.Gauge.trace_color</tt>, <tt class="verbatim">YM.Gauge.ad</tt>, <tt
         class="verbatim">YM.Gauge.casimir</tt></td>
         <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Gauge/Colors.lean:42&ndash;78,136&ndash;149,179&ndash;182</tt></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Transport of the commutator to color coordinates</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Gauge.frobInner</tt>, <tt class="verbatim">YM.Gauge.projectColor</tt>,
+        <tt class="verbatim">YM.Gauge.colorMat_project_self</tt>, <tt class="verbatim">YM.Gauge.colorMat_ad</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Lean/YM/Gauge/Colors.lean:25&ndash;38,96&ndash;105,152&ndash;154</tt></td>
       </tr><tr>
         <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Nonabelian real Lie-algebra simplicity</td>
         <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Gauge.Simple</tt></td>
@@ -203,11 +247,47 @@
       requires a positive intercept, while extraction works for any fixed real
       intercept. The source's <tt class="verbatim">zeroUp_bound</tt> needs <tt class="verbatim">C.Makes</tt>
       but no simplicity assumption; <tt class="verbatim">comparison</tt> additionally
-      assumes <tt class="verbatim">G.Simple</tt>. The latter is used here solely through
-      <tt class="verbatim">YM.Gauge.slopeConstant_pos</tt>; the section supplies its
-      elementary positivity argument explicitly. Neither the construction
-      hypothesis nor the simplicity predicate is redefined to mean only the
-      consequence used here.
+      assumes <tt class="verbatim">G.Simple</tt> and obtains positivity through <tt
+      class="verbatim">YM.Gauge.slopeConstant_pos</tt>. Its input <tt class="verbatim">YM.Gauge.casimir_pos</tt>
+      (<tt class="verbatim">Lean/YM/Gauge/Casimir.lean:160&ndash;172</tt>) uses <tt
+      class="verbatim">YM.Gauge.trace_adjoint</tt> (<tt class="verbatim">Lean/YM/Gauge/Casimir.lean:140&ndash;158</tt>),
+      which uses full simplicity to identify an invariant bilinear form with a
+      scalar multiple of the color inner product. The manuscript instead gives
+      a reorganized positivity proof: sum the squared commutator norms over an
+      orthonormal basis and use noncommutativity. This replaces, rather than
+      paraphrases, <tt class="verbatim">casimir_pos</tt>; it needs only the nonabelian
+      clause, although the section retains the source's full simplicity
+      hypothesis. The new positive-definiteness and basis-independence
+      calculations are author arguments requiring renewed mathematical review.
+      Neither the construction hypothesis nor the simplicity predicate is
+      redefined to mean only the consequence used here.
+    </p>
+    <p>
+      For the closing bare-coefficient remark, <tt class="verbatim">hc.wilson.starts N
+      p</tt> identifies <tt class="verbatim">(C.path.rep N p N).eval</tt> exactly with
+      <tt class="verbatim">YM.Wilson.bare (C.path.&beta; N p N)</tt>. The latter is the
+      unnormalized density <tt class="verbatim">exp(-&beta; * energy U)</tt>, where <tt
+      class="verbatim">energy</tt> is the sum of <tt class="verbatim">G.price</tt> over lattice
+      faces and <tt class="verbatim">G.price u = 1 - Re tr(G.mat u) / G.repDim</tt>.
+      Thus &ldquo;bare lattice action coefficient&rdquo; means the multiplier
+      of this specific energy. <tt class="verbatim">Rep.eval</tt> is a full represented
+      density (an exponential times an activity gas), not itself an action or
+      a coupling. The equality in <tt class="verbatim">starts</tt>, rather than a
+      general simplification of <tt class="verbatim">Rep.eval</tt>, justifies the
+      remark. No conventional physical coupling normalization or matching
+      theorem is asserted.
+    </p>
+    <p>
+      For the opening Casimir formula, <tt class="verbatim">trace_color</tt> makes <tt
+      class="verbatim">colorIso</tt> an isometry from color coordinates to the Lie
+      algebra with the manuscript's normalized inner product. <tt class="verbatim">colorMat_ad</tt>,
+      using <tt class="verbatim">bracket_mem</tt> and <tt class="verbatim">colorMat_project_self</tt>,
+      transports the adjoint operator to the actual matrix commutator; hence
+      traces of the conjugate endomorphisms agree. The local <tt class="verbatim">frobInner</tt>
+      instance defining the projection is the unnormalized real Frobenius
+      inner product; <tt class="verbatim">colorIso</tt> rescales by <tt class="verbatim">sqrt(repDim)</tt>.
+      These facts support the formula without treating the projection as an
+      extra Lie bracket.
     </p>
     <p>
       Lean defines <tt class="verbatim">Real.sqrt</tt> and inversion on every real
@@ -227,7 +307,16 @@
       by physical observables. Independent correspondence and mathematical
       review remain outstanding. The unit is draft, including the elementary
       positivity and schedule arguments inherited from the earlier LaTeX
-      pilot. No mathematical gap in the conditional scalar argument is
+      pilot. The reports in <tt class="verbatim">reviews/lean-mgubi.md</tt> and <tt
+      class="verbatim">reviews/mathematics-mgubi.md</tt> concern the earlier fingerprint
+      <tt class="verbatim">367b5982bb56035d3f0cbf81641d1f0564c27a48169707b9aa64a5cf3c0b0aa2</tt>;
+      they remain unchanged historical evidence and do not review this
+      revision. The independent reports in <a href="https://github.com/hairer/humanise-yang-mills/pull/113">PR #113</a> reviewed the
+      subsequent fingerprint <tt class="verbatim">37a404dea24a3001c320680e4b25334e619d6865178c86e3d85993bb4000168f</tt>.
+      Their required Hall definition/citation addition is addressed by the
+      follow-up under <a href="https://github.com/hairer/humanise-yang-mills/issues/114">issue #114</a>, which changes the fingerprint
+      again and requires renewed independent review. Both approvals remain
+      null. No mathematical gap in the conditional scalar argument is
       presently identified.
     </p>
     <h2 id="auto-5"><a id="verification-evidence"></a>Verification evidence<span style="margin-left: 1em"></span></h2>

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Review of a proof unit &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <div class="ym-unit-nav">
+      <span class="ym-part"><a href="../correspondence.html">YM-000022: Logarithmic asymptotics of the running
+      inverse coefficient (draft)</a><font class="ym-sep">&middot;</font><a href="../evidence/index.html">evidence</a><font
+      class="ym-sep">&middot;</font><a href="../proof.html">proof</a></span><a class="ym-next" href="../../YM-000026/correspondence.html">YM-000026
+      &rarr;</a>
+    </div>
+    <p>
+      <h1>Review of a proof unit</h1><a id="review-of-a-proof-unit"></a>
+    </p>
+    <ul>
+      <li>
+        <p>
+          Unit: YM-000022, <tt class="verbatim">blueprint/units/YM-000022/</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Role: Lean correspondence
+        </p>
+      </li>
+      <li>
+        <p>
+          Human reviewer: ADB991 (no acceptance recorded; see the last
+          section)
+        </p>
+      </li>
+      <li>
+        <p>
+          Agent assistance: one Claude agent running as a scheduled session
+          (<tt class="verbatim">ADB991-claude-20261113-af9e</tt>) on behalf of ADB991.
+          It read the pinned source text and wrote this report. ADB991 had not
+          read it before submission. No other model was used.
+        </p>
+      </li>
+      <li>
+        <p>
+          Content SHA-256: <tt class="verbatim">24db9174727f1abf8bcb4211cb1c3bc601711dfd4c193983b1fde864a02ce056</tt>
+          (<tt class="verbatim">python3 scripts/check_blueprint.py --fingerprint
+          YM-000022</tt> on <tt class="verbatim">main</tt> at <tt class="verbatim">f73c5002e8d7e716fe5cce58185ec46ea74951b4</tt>,
+          after PR #115 merged)
+        </p>
+      </li>
+      <li>
+        <p>
+          Reviewed content (file SHA-256): <tt class="verbatim">manuscript/pilots/running-coupling.tex</tt>
+          <tt class="verbatim">105a1a28&hellip;5426</tt>; <tt class="verbatim">manuscript/preamble.tex</tt>
+          <tt class="verbatim">0827ef17&hellip;90df</tt>; <tt class="verbatim">manuscript/references.bib</tt>
+          <tt class="verbatim">844ea80b&hellip;ac53</tt>; <tt class="verbatim">correspondence.md</tt>
+          <tt class="verbatim">c9feae1f&hellip;655f</tt>; <tt class="verbatim">unit.json</tt> <tt
+          class="verbatim">cfc20482&hellip;6731</tt> (full hashes in <tt class="verbatim">mathematics-adb991.md</tt>).
+        </p>
+      </li>
+      <li>
+        <p>
+          Manuscript files and labels: <tt class="verbatim">manuscript/pilots/running-coupling.tex</tt>
+          (<tt class="verbatim">sec:running-coefficient</tt>, <tt class="verbatim">eq:running</tt>,
+          <tt class="verbatim">prop:uniform-extraction</tt>, <tt class="verbatim">prop:running-asymptotic</tt>),
+          <tt class="verbatim">manuscript/preamble.tex</tt>, <tt class="verbatim">manuscript/references.bib</tt>.
+          The list is complete.
+        </p>
+      </li>
+      <li>
+        <p>
+          Source revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Review task and PR: <a href="https://github.com/hairer/humanise-yang-mills/issues/22">issue #22</a>, claim <a href="https://github.com/hairer/humanise-yang-mills/issues/22#issuecomment-6848731664">https://github.com/hairer/humanise-yang-mills/issues/22#issuecomment-6848731664</a>;
+          this report-only draft PR against <tt class="verbatim">main</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Outcome: no change required; one nit. This is an agent review: no
+          human acceptance and no approval field is set.
+        </p>
+      </li>
+    </ul>
+    <p>
+      ADB991 is not an author of YM-000022 and wrote none of its earlier
+      revisions or reviews.
+    </p>
+    <h2 id="auto-1"><a id="findings-and-evidence"></a>Findings and evidence<span style="margin-left: 1em"></span></h2>
+    <p>
+      Evidence level: <strong>[S]</strong> means I read the source text under
+      <tt class="verbatim">Lean/</tt> at the pinned revision. Nothing was elaborated:
+      this environment cannot reach the Mathlib sources or cache, so <tt
+      class="verbatim">lake build</tt> and <tt class="verbatim">#print axioms</tt> were not run.
+      The unit's retained <tt class="verbatim">evidence/lean-inspection.txt</tt> was not
+      regenerated. <tt class="verbatim">python3
+      blueprint/units/YM-000022/evidence/check_sources.py</tt> reports OK for
+      all 7 inspected files against <tt class="verbatim">Lean/SOURCES.sha256</tt>.
+    </p>
+    <p>
+      PR #115 changed no Lean anchor in the table. It added a literature
+      paragraph and a status paragraph to <tt class="verbatim">correspondence.md</tt>
+      and changed the opening of the section. I nevertheless rechecked the
+      whole table against the current text.
+    </p>
+    <h3 id="auto-2"><a id="the-new-opening-against-the-source"></a>The new opening against the source<span style="margin-left: 1em"></span></h3>
+    <ol>
+      <li>
+        <p>
+          <strong>Lie algebra definition</strong> [S]. <tt class="verbatim">YM.Gauge.Generates
+          X := &forall; t : &#x211D;, exp (t &bull; X) &isin; range G.mat</tt>
+          (<tt class="verbatim">Lie.lean:26</tt>), and <tt class="verbatim">YM.Gauge.lie</tt> is
+          the real submodule with this carrier (<tt class="verbatim">Lie.lean:126&ndash;134</tt>).
+          This is exactly the displayed set {X : exp(tX) &isin; G for every
+          real t}, with G identified with <tt class="verbatim">range G.mat</tt>, as the
+          correspondence states. It is also Hall's Definition 3.13.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Closedness</strong> [S]. <tt class="verbatim">YM.Gauge</tt> (<tt
+          class="verbatim">MatrixGroup.lean:23&ndash;26</tt>) is a natural number <tt
+          class="verbatim">n</tt> together with a <tt class="verbatim">Subgroup</tt> of <tt class="verbatim">Matrix.unitaryGroup
+          (Fin (n+1)) &#x2102;</tt> satisfying <tt class="verbatim">IsClosed</tt> in the
+          unitary group. This is the text's &quot;closed matrix subgroup of
+          U(r_G)&quot;, with <tt class="verbatim">r_G = repDim = n + 1</tt> and <tt
+          class="verbatim">dimPos : 0 &lt; repDim</tt> (<tt class="verbatim">:73&ndash;75</tt>).
+          The text's step &quot;U(r_G) closed in GL, so G closed in GL&quot;
+          is ordinary topology. The source does not need it, because it proves
+          bracket closure itself.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Skew-Hermitian generators and bracket closure</strong> [S].
+          <tt class="verbatim">generates_skew : G.Generates X &rarr; star X = -X</tt>
+          (<tt class="verbatim">Lie.lean:42&ndash;44</tt>, via <tt class="verbatim">tangent_skew</tt>),
+          and <tt class="verbatim">bracket_mem : X &isin; G.lie &rarr; Y &isin; G.lie
+          &rarr; X*Y - Y*X &isin; G.lie</tt> (<tt class="verbatim">Lie.lean:159&ndash;176</tt>).
+          The source proves bracket closure by differentiating conjugation and
+          using that <tt class="verbatim">G.lie</tt> is closed (<tt class="verbatim">closed_lie</tt>,
+          by finite dimensionality). That is Hall's own proof of Theorem
+          3.16(3). The citation therefore replaces, rather than misdescribes,
+          the formal argument.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Simplicity</strong> [S]. <tt class="verbatim">YM.Gauge.Simple</tt>
+          (<tt class="verbatim">Lie.lean:178&ndash;182</tt>) consists of a nonabelian
+          clause (some X, Y &isin; <tt class="verbatim">G.lie</tt> with XY &minus; YX
+          &ne; 0) and an ideal clause over real submodules. This is
+          &quot;nonabelian simple real Lie algebra&quot;.
+        </p>
+      </li>
+    </ol>
+    <h3 id="auto-3"><a id="casimir-and-slope"></a>Casimir and slope<span style="margin-left: 1em"></span></h3>
+    <ol>
+      <li>
+        <p>
+          [S] <tt class="verbatim">casimir = &minus;(&Sigma;_i trace(ad b_i &#x2218; ad
+          b_i)) / lieDim</tt> over the standard basis of <tt class="verbatim">Color =
+          EuclideanSpace &#x211D; (Fin lieDim)</tt> (<tt class="verbatim">Colors.lean:180&ndash;182</tt>).
+          <tt class="verbatim">trace_color</tt> (<tt class="verbatim">:71&ndash;75</tt>) gives
+          &minus;Re tr(colorMat c &middot; colorMat d) = repDim &middot;
+          &#x27E8;c, d&#x27E9;. Hence <tt class="verbatim">colorMat</tt> sends the
+          standard basis to an orthonormal basis of g for the text's form
+          &minus;r_G^{-1} Re tr(XY). <tt class="verbatim">colorMat_ad</tt> (<tt class="verbatim">:152&ndash;154</tt>)
+          identifies <tt class="verbatim">ad</tt> with the matrix commutator. So <tt
+          class="verbatim">casimir</tt> is the text's C_g computed in one orthonormal
+          basis. The text proves basis independence separately, which the
+          source does not need. <tt class="verbatim">slopeConstant =
+          11&middot;casimir/(24&pi;&sup2;)</tt> (<tt class="verbatim">:184</tt>), <tt
+          class="verbatim">b0 G = 11&middot;casimir/(48&pi;&sup2;)</tt> and <tt class="verbatim">b0_normalizes
+          : 2*b0 G = slopeConstant</tt> (<tt class="verbatim">RawAxis.lean:13&ndash;14</tt>)
+          match the text's b_0(G) and c = 2b_0(G).
+        </p>
+      </li>
+      <li>
+        <p>
+          [S] Positivity: the source uses <tt class="verbatim">slopeConstant_pos</tt>
+          &larr; <tt class="verbatim">casimir_pos</tt> &larr; <tt class="verbatim">trace_adjoint</tt>
+          (<tt class="verbatim">Casimir.lean:140&ndash;176</tt>), which needs the ideal
+          clause. The text gives a different, valid argument using only the
+          nonabelian clause, and the correspondence says so. Both lead to the
+          same conclusion under the source's hypothesis <tt class="verbatim">G.Simple</tt>.
+        </p>
+      </li>
+    </ol>
+    <h3 id="auto-4"><a id="owned-statements"></a>Owned statements<span style="margin-left: 1em"></span></h3>
+    <ol>
+      <li>
+        <p>
+          <tt class="verbatim">zeroUp_bound</tt> (<tt class="verbatim">RawAxis.lean:15&ndash;30</tt>)
+          [S]: from <tt class="verbatim">C.Makes</tt> and <tt class="verbatim">0 &lt;
+          &epsilon;</tt>, eventually in m, for all N and p with m &#x2A7D; N,
+          |&beta;_{N,p,m}/s_m &minus; 2b0| &lt; &epsilon;. There is no
+          simplicity hypothesis, because <tt class="verbatim">include hc hg</tt> comes
+          after this lemma (line 33). <tt class="verbatim">prop:uniform-extraction</tt>
+          is the abstract version with arbitrary A and c. The source
+          instantiates it with A = <tt class="verbatim">clock.bar</tt> and c = <tt
+          class="verbatim">slopeConstant</tt>, via <tt class="verbatim">hc.wilson.running</tt>
+          (<tt class="verbatim">Construction.lean:44&ndash;45</tt>, <tt class="verbatim">History.lean:229&ndash;231,240</tt>).
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">regulatorRun</tt> (<tt class="verbatim">:35</tt>) and <tt class="verbatim">comparison</tt>
+          (<tt class="verbatim">:36&ndash;48</tt>) [S]. The hypotheses are <tt class="verbatim">C.Makes</tt>,
+          <tt class="verbatim">G.Simple</tt> and <tt class="verbatim">&forall;&#x1DA0; i, i &le; N
+          i</tt>; k is unconstrained. The conclusion is that
+          (&radic;&beta;_{N(i),k(i),i})&#x207B;&sup1; &middot; &radic;(log
+          (a_i)&#x207B;&sup1;) tends to (&radic;(2b0))&#x207B;&sup1;. This
+          matches <tt class="verbatim">prop:running-asymptotic</tt>. The text adds the
+          eventual positivity of &beta;, which the source never states but
+          which follows inside the proof (the text derives it). The
+          correspondence's remark on the totalized &radic; and &#x207B;&sup1;
+          is accurate.
+        </p>
+      </li>
+      <li>
+        <p>
+          Running input [S]. <tt class="verbatim">Running</tt> (<tt class="verbatim">History.lean:229&ndash;231</tt>)
+          says: for every &epsilon; &gt; 0, eventually in m, for all N, p with
+          m &#x2A7D; N, |&beta; &minus; hatBeta m| &#x2A7D; &epsilon; &middot;
+          scale m, where <tt class="verbatim">hatBeta m = bar + slopeConstant &middot;
+          scale m</tt> (<tt class="verbatim">:79</tt>). This is <tt class="verbatim">eq:running</tt>
+          with &eta; = &epsilon;, and <tt class="verbatim">bar</tt> is a fixed field of
+          the <tt class="verbatim">Calendar</tt> (<tt class="verbatim">:64&ndash;73</tt>). The
+          source's <tt class="verbatim">bar_pos</tt> is not used by the text, as the
+          correspondence notes.
+        </p>
+      </li>
+      <li>
+        <p>
+          Schedule [S]. <tt class="verbatim">block_large : 3 &le; (block m).val</tt>
+          (<tt class="verbatim">Scale.lean:31</tt>). <tt class="verbatim">denominator</tt> (<tt
+          class="verbatim">:39&ndash;41</tt>) is the product of blocks, <tt class="verbatim">a m =
+          (denominator m)&#x207B;&sup1;</tt> (<tt class="verbatim">:99</tt>), and <tt
+          class="verbatim">scale m = log (a m)&#x207B;&sup1;</tt> (<tt class="verbatim">:115</tt>).
+          These are the text's B_j &#x2A7E; 3, a_m and s_m.
+        </p>
+      </li>
+      <li>
+        <p>
+          Closing remark [S]. <tt class="verbatim">Selected.starts</tt> (<tt class="verbatim">History.lean:237</tt>)
+          gives <tt class="verbatim">(A.rep N p N).eval = bare (A.&beta; N p N)</tt>,
+          with <tt class="verbatim">bare</tt> resolving to <tt class="verbatim">YM.Wilson.bare</tt>
+          through <tt class="verbatim">open Wilson</tt> (<tt class="verbatim">History.lean:40</tt>).
+          <tt class="verbatim">bare &beta; U = exp(&minus;&beta; &middot; energy U)</tt>
+          (<tt class="verbatim">Law.lean:58</tt>), <tt class="verbatim">energy = &Sigma;_faces
+          price</tt> (<tt class="verbatim">Law.lean:29</tt>) and <tt class="verbatim">price u = 1
+          &minus; Re tr(mat u)/repDim</tt> (<tt class="verbatim">MatrixGroup.lean:112</tt>).
+          This supports &quot;at N(i) = i the coefficient is the bare lattice
+          action coefficient&quot; for the Wilson action normalized by (1/r_G)
+          Re tr.
+        </p>
+      </li>
+    </ol>
+    <h3 id="auto-5"><a id="crosswalk-locations"></a>Crosswalk locations<span style="margin-left: 1em"></span></h3>
+    <ol>
+      <li>
+        <p>
+          Every qualified name in the table exists under the stated name and
+          in the stated file, inside or within a line or two of the stated
+          range. For example, <tt class="verbatim">YM.Family.S</tt> is at <tt class="verbatim">Construction.lean:34</tt>
+          inside the cited <tt class="verbatim">32&ndash;35</tt>, and <tt class="verbatim">frobInner</tt>
+          occupies <tt class="verbatim">Colors.lean:24&ndash;35</tt> against the cited
+          <tt class="verbatim">25&ndash;38</tt>. The offsets are immaterial.
+        </p>
+      </li>
+      <li>
+        <p>
+          NIT. The PR #113 nit (the Hall citation missing from the
+          correspondence) is resolved: the &quot;Literature and editorial
+          treatment&quot; section now records Hall v1 with locators. I checked
+          those locators against the PDF (see the mathematics report). A
+          further nit: the rendered Hall bibliography item prints &quot;31 May
+          2000, 2000.&quot; because both <tt class="verbatim">howpublished</tt> and <tt
+          class="verbatim">year</tt> carry the year. This is cosmetic.
+        </p>
+      </li>
+    </ol>
+    <h2 id="auto-6"><a id="required-changes-and-remaining-uncertainty"></a>Required changes and remaining uncertainty<span style="margin-left: 1em"></span></h2>
+    <p>
+      None required. Not done here: elaboration, <tt class="verbatim">#print
+      axioms</tt>, and regeneration of <tt class="verbatim">evidence/lean-inspection.txt</tt>
+      (Mathlib unreachable from this environment). The claims above about
+      elaborated types rest on source text only, together with the unit's
+      retained inspection output, which I did not regenerate.
+    </p>
+    <p>
+      Commands actually run (on <tt class="verbatim">main</tt> at <tt class="verbatim">f73c500</tt>):
+    </p>
+    <pre class="verbatim" xml:space="preserve">
+python3 scripts/check_blueprint.py --fingerprint YM-000022   # 24db9174&hellip;ce056
+python3 scripts/check_blueprint.py                            # Blueprint structure OK: 2 units
+python3 -m unittest discover -s tests                         # Ran 22 tests, OK
+python3 blueprint/units/YM-000022/evidence/check_sources.py   # 7 x OK
+git diff 0a24993 f0c6056                                      # PR #115 content
+sed -n / grep reads of Lean/YM/Pert/Asymptotics/RawAxis.lean, Lean/YM/Gauge/{Lie,Colors,Casimir,MatrixGroup}.lean,
+  Lean/YM/RG/History.lean (40, 60&ndash;80, 170&ndash;242), Lean/YM/Source/Construction.lean (25&ndash;50),
+  Lean/YM/Lattice/Scale.lean (25&ndash;45, 95&ndash;122), Lean/YM/Wilson/Law.lean (29, 58)
+cd manuscript &amp;&amp; latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex
+  # exit 0, 3 pages, no undefined references or LaTeX warnings; pages rendered with pdftoppm and inspected</pre>
+    <h2 id="auto-7"><a id="acceptance"></a>Acceptance<span style="margin-left: 1em"></span></h2>
+    <p>
+      Not recorded. An agent review is evidence for a human reviewer and is
+      not acceptance. <tt class="verbatim">unit.json</tt> approvals remain null.
+    </p>
+    <div class="ym-unit-nav">
+      <span class="ym-part"><a href="../correspondence.html">YM-000022: Logarithmic asymptotics of the running
+      inverse coefficient (draft)</a><font class="ym-sep">&middot;</font><a href="../evidence/index.html">evidence</a><font
+      class="ym-sep">&middot;</font><a href="../proof.html">proof</a></span><a class="ym-next" href="../../YM-000026/correspondence.html">YM-000026
+      &rarr;</a>
+    </div>
+  </body>
+</html>

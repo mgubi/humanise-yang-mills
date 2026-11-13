@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Selected trace sensor: source correspondence &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <div class="ym-unit-nav">
+      <a class="ym-prev" href="../YM-000026/correspondence.html">&larr; YM-000026</a><span class="ym-part"><font class="ym-here">YM-000033:
+      Selected trace sensor and weighted Ward limit (draft)</font><font class="ym-sep">&middot;</font><a
+      href="HANDOFF.html">HANDOFF</a><font class="ym-sep">&middot;</font><a href="validation.html">validation</a></span><a
+      class="ym-next" href="../YM-000034/correspondence.html">YM-000034 &rarr;</a>
+    </div>
+    <p>
+      <h1>Selected trace sensor: source correspondence</h1><a id="selected-trace-sensor-source-correspondence"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Input contract and notation</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Formal hypothesis crosswalk</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Quantifier checkpoints</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">6</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Correspondence and proof boundaries</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-4">7</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Literature and editorial decisions</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-5">8</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Outstanding obligations</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">8</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Revision response to independent review #126, corrected by #127</b>
+        <span style="margin-left: 5mm"></span> <a href="#auto-7">8</a>
+      </p>
+    </div>
+    <ul>
+      <li>
+        <p>
+          Issue: <a href="https://github.com/hairer/humanise-yang-mills/issues/33">https://github.com/hairer/humanise-yang-mills/issues/33</a>;
+          unit YM-000033.
+        </p>
+      </li>
+      <li>
+        <p>
+          Status: draft; formal independent acceptance remains pending.
+        </p>
+      </li>
+      <li>
+        <p>
+          Authoritative text: <tt class="verbatim">manuscript/existence/trace-prosper-sensor.tex</tt>,
+          Proposition <tt class="verbatim">prop:trace-prosper-sensor</tt>; it invokes
+          the existing receiver and scalar-medium proofs in <tt class="verbatim">manuscript/existence/trace-weighted-estimates.tex</tt>,
+          and the separately conditional priced-mission lemma in <tt class="verbatim">manuscript/existence/trace-small-means.tex</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Original extraction checkpoint: <tt class="verbatim">660cada6a037210475f3f5873fdce8c4f627240c</tt>;
+          public candidate base: <tt class="verbatim">d3bb3ded6a7145087456df1f4eab886dc5f622c7</tt>;
+          imported Lean revision <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Contributor: TrishenGunaratnam; drafting and source inspection
+          assisted by Codex. Scott Armstrong's informalization map is credited
+          by the parent checkpoint as navigation, not evidence.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-1"><a id="input-contract-and-notation"></a>Input contract and notation<span style="margin-left: 1em"></span></h2>
+    <p>
+      The selected-chart input <tt class="verbatim">eq:trace-sensor-chart</tt> spells
+      out the componentwise terminal identity and odd-vector core identity
+      used in <tt class="verbatim">YM.Trace.Terrace.lensP</tt>, alongside its limiting
+      section. The manuscript derives the array-level real covariance and the
+      eventual right-inverse identity from intertwining of the selected lift
+      and arch maps and the same odd-core cancellation as <tt class="verbatim">lensP</tt>.
+      It also derives pointwise transported-lift convergence from the initial
+      price and the derived transport estimate. Both are derived from separate
+      finite-volume receipts and their ultrafilter limits; the arch-scale
+      ratio is derived from the clock inputs. These primitive receipts are
+      upstream inputs, not sensor conclusions. The limiting section is the
+      componentwise grade-five <tt class="verbatim">ladder</tt>; the source's <tt class="verbatim">lensP</tt>
+      supplies its right-inverse identity and the eventual common-tail chart
+      properties. The source supplies this chart under the parameters in <tt
+      class="verbatim">springs</tt>: <tt class="verbatim">hZ : steep &#x1D4DB; Z</tt>, <tt class="verbatim">H
+      : C.Makes</tt>, <tt class="verbatim">hb : (&#x1D4DB; : Filter (&#x2115; &times;
+      &#x2115;)) &le; F.fuse</tt>, <tt class="verbatim">hr : Scrim C W u &psi; &phi;
+      &delta; &zeta; r D</tt>, <tt class="verbatim">hq : Gondola F a X &#x1D4DB; V
+      Y</tt>, <tt class="verbatim">K : Sceptre C W</tt>, <tt class="verbatim">&theta; : PostT
+      C.path.levels</tt>, <tt class="verbatim">hG : G.Simple</tt>, and <tt class="verbatim">hp :
+      Spun Z X V a s</tt>. These are structured assumptions, not asserted to
+      follow just from the abstract identities in the manuscript. <tt class="verbatim">Gondola.growth</tt>
+      is the selected-level divergence; <tt class="verbatim">Gondola.terminal</tt>
+      supplies eventual grade-five lift convergence along the fixed
+      ultrafilter and <tt class="verbatim">X.U i 5 z = S.project 5 (Y 5 i z)</tt> for
+      every field <tt class="verbatim">z</tt>. <tt class="verbatim">Spun.starts</tt> identifies
+      the sensor on a common tail, component by component, with the normalized
+      Vault map. <tt class="verbatim">YM.Trace.Terrace.vspin</tt> and <tt class="verbatim">cruise</tt>
+      make each <tt class="verbatim">Y 5 i h_&alpha;</tt> odd under total inversion; <tt
+      class="verbatim">gateW</tt> transports oddness through <tt class="verbatim">Z.M</tt>, and
+      <tt class="verbatim">nights</tt> proves the core fixes that odd vector. The
+      source's finite-volume/scale chart production has not been independently
+      audited in this unit; the above is the precise interface consumed.
+    </p>
+    <p>
+      The second input <tt class="verbatim">eq:trace-sensor-marked</tt> is
+      <strong>exactly</strong> the three extra arguments of <tt class="verbatim">springs</tt>,
+      for an arbitrary sequence <tt class="verbatim">v</tt>: convergence to <tt class="verbatim">Stem5</tt>,
+      <tt class="verbatim">hueK(A)(Stern V i) &bull; s i (v i) &rarr; 0</tt>, and <tt
+      class="verbatim">hueK(A)(Stern V i) * Lease (U#) hG (v i) &rarr; 0</tt>. There is
+      no requirement that <tt class="verbatim">v</tt> be the medium or that the
+      resulting functionals converge in the statement of <tt class="verbatim">Prosper</tt>.
+      The special medium is one later supplier, not a restriction on <tt
+      class="verbatim">springs</tt>. Pointwise inequalities in <tt class="verbatim">Prosper.vote</tt>
+      have one eventual index uniform over vectors; the weighted bound has a
+      tail that may depend on the positive epsilon. Both are preserved.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Manuscript notation</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Pinned source definition / conversion</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">G.Simple</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Gauge.Simple</tt> in <tt class="verbatim">Lean/YM/Gauge/Lie.lean</tt>
+        asserts noncommuting Lie algebra elements and absence of proper
+        nonzero real Lie ideals. <tt class="verbatim">YM.Gauge</tt> is a closed subgroup
+        of a fixed finite-dimensional unitary group (<tt class="verbatim">Lean/YM/Gauge/MatrixGroup.lean</tt>);
+        no stronger connectedness assumption is inserted.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">E</tt>, <tt class="verbatim">H</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Bowl (C.labels.level 5)</tt>, <tt class="verbatim">TableOne
+        a.spin</tt>: real subspaces of axis-indexed grade-five coefficients
+        and fields with reality and signed-vector covariance; <tt class="verbatim">YM.StressFlux.vectors</tt>,
+        <tt class="verbatim">Lean/YM/Push/STRESS_FLUX/Counts.lean</tt>. Norms are the
+        inherited finite-dimensional norms.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">&#x1D5B5;</tt>, <tt class="verbatim">&#x1D4D5;</tt>, <tt
+        class="verbatim">S&#x2085;</tt>, <tt class="verbatim">Col_j(&omega;)</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">The local grade-five complex coefficient space <tt class="verbatim">C.label
+        5</tt>, reference field <tt class="verbatim">(Cells.standard C).Field 5</tt>
+        (not automatically the public quotient <tt class="verbatim">F_5</tt>), selected
+        interacting field <tt class="verbatim">S.Field 5</tt> (not the shared mixed
+        correlation <tt class="verbatim">&#x1D4AE;^mix</tt>), and finite-volume <tt
+        class="verbatim">YM.Trace.Terrace.Cturn C 5 j N &nu;</tt>, respectively. The <tt
+        class="verbatim">Col</tt> notation is local to this section and is distinct from
+        the shared construction family <tt class="verbatim">&#x1D49E;</tt>; <tt class="verbatim">&nu;</tt>
+        is the period index, distinct from the reference coefficient <tt
+        class="verbatim">p</tt>, the shared character measure <tt class="verbatim">&nu;_ph</tt>,
+        and the locally scoped Green-function constant <tt class="verbatim">&nu;=(4&pi;&sup2;)&#x207B;&sup1;</tt>
+        in <tt class="verbatim">trace-free-rank.tex</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">core</tt>, <tt class="verbatim">Dil_t</tt>, <tt class="verbatim">Pos_t</tt>,
+        <tt class="verbatim">Block_j</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">The unit-coordinate deletion <tt class="verbatim">YM.Labels.Frame.core</tt>,
+        factor-degree dilation <tt class="verbatim">YM.Labels.Frame.scaled</tt>,
+        position-degree weight <tt class="verbatim">YM.Next.Rank.Price.weightTag</tt>,
+        and block transport <tt class="verbatim">YM.Bid.vowel</tt>; see <tt class="verbatim">Lean/YM/Labels/Reference.lean</tt>,
+        <tt class="verbatim">Lean/YM/Next/RANK/Matrices.lean</tt>, and <tt class="verbatim">Lean/YM/Bid/Loan.lean</tt>.
+        These local operator names avoid the shared OPE reader <tt class="verbatim">Q</tt>,
+        contact package <tt class="verbatim">&#x1D49F;</tt>, Wilson family <tt class="verbatim">&#x1D4B2;</tt>,
+        and token-space notation.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">&chi;</tt>, <tt class="verbatim">&#x1D5AB;_i</tt>, <tt
+        class="verbatim">&#x1D5B1;_i</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">&chi;</tt> is the positive scalar running rate
+        at the currently fixed initial level, and <tt class="verbatim">&#x1D5AB;_i,
+        &#x1D5B1;_i</tt> are the normalized initial/postlevel coefficient
+        vectors used only in the convergence calculation. The latter are
+        distinct from the block sizes <tt class="verbatim">L_j</tt> and the shared label
+        space <tt class="verbatim">&#x1D4DB;_d</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">f</tt>, <tt class="verbatim">x</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Trace.Terrace.Vbase a.spin</tt>, <tt class="verbatim">Stem5
+        (C.labels.level 5)</tt>, <tt class="verbatim">Lean/YM/TraceExtension/Terrace/Vector.lean</tt>.
+        <tt class="verbatim">plate</tt> identifies <tt class="verbatim">E</tt> with <tt class="verbatim">RawOne
+        G</tt>, <tt class="verbatim">Vbase</tt> is the componentwise reference
+        projection, and <tt class="verbatim">Stem5</tt> is the inverse image of the
+        equation-of-motion vector. <tt class="verbatim">Stem5_kernel</tt> and <tt class="verbatim">Stem5_alive</tt>
+        require <tt class="verbatim">G.Simple</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">&rho;</tt>, <tt class="verbatim">J&#x207D;&sup1;&#x207E;</tt>,
+        <tt class="verbatim">J&#x207D;&sup2;&#x207E;</tt>, <tt class="verbatim">J&#x207D;&sup3;&#x207E;</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Trace.Terrace.Lease (C.labels.level 5) hG =
+        YM.Trace.rho hG &#x2218; plate</tt>, <tt class="verbatim">Lease.lean</tt> and
+        <tt class="verbatim">Lean/YM/TraceExtension/Foundation/Dilate.lean</tt>. <tt
+        class="verbatim">YM.Trace.momentum1</tt>, <tt class="verbatim">.momentum2</tt>, <tt class="verbatim">.basisV</tt>,
+        <tt class="verbatim">Lean/YM/TraceExtension/Foundation/Caps.lean</tt>, and <tt
+        class="verbatim">YM.StressFlux.eom</tt>, <tt class="verbatim">Lean/YM/Push/STRESS_FLUX/Polynomial.lean</tt>,
+        give the three displayed raw vectors. Their source membership proofs
+        are <tt class="verbatim">YM.Trace.momentum1_mem</tt>, <tt class="verbatim">YM.Trace.momentum2_mem</tt>
+        (<tt class="verbatim">Caps.lean</tt>), and <tt class="verbatim">YM.StressFlux.eom_rows</tt>
+        (<tt class="verbatim">Lean/YM/Push/STRESS_FLUX/Counts.lean</tt>); the prose
+        gives the color and signed-covariance argument, <tt class="verbatim">YM.Trace.bareVector_coords</tt>
+        and <tt class="verbatim">.bareCoordinates</tt> establish the stated unique
+        coordinates, <tt class="verbatim">rho_vector</tt> gives <tt class="verbatim">&minus;4(w&#x2080;+4w&#x2081;)</tt>,
+        <tt class="verbatim">YM.Trace.mechanical_trace</tt> gives the trace
+        normalization by <tt class="verbatim">YM.Trace.square4 = &#x1D4D8;/4</tt>, <tt
+        class="verbatim">euler</tt> gives the stress-divergence coordinates via the
+        Bianchi identity, and <tt class="verbatim">eom_vector_raw</tt> identifies the
+        displayed coordinates of <tt class="verbatim">J&#x207D;&sup3;&#x207E;</tt>. The
+        manuscript expands the divergence and trace calculations. <tt class="verbatim">Lease_alive</tt>
+        supplies <tt class="verbatim">&rho;(x)=0</tt>; this equality is informative but
+        not needed for the abstract receiver argument.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">j&#x2080;</tt>, <tt class="verbatim">k_i</tt>, <tt class="verbatim">n_i</tt>,
+        <tt class="verbatim">&beta;&#x0302;</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">C.ref 5</tt>, <tt class="verbatim">(V i).k</tt>, <tt
+        class="verbatim">Stern V i = summit A ((V i).k)</tt>, <tt class="verbatim">A.clock.hatBeta</tt>;
+        <tt class="verbatim">A=C.path.levels</tt>. The first postlevel is defined by <tt
+        class="verbatim">YM.Trace.Terrace.summit</tt> in <tt class="verbatim">Base.lean</tt> via
+        the first natural <tt class="verbatim">n&gt;j</tt> with <tt class="verbatim">Gate (hatBeta
+        j) &le; A.S.scale n &minus; A.S.scale j</tt>, <tt class="verbatim">Gate z=(log
+        z)^48</tt>. <tt class="verbatim">Sstar</tt> and <tt class="verbatim">Gondola.growth</tt>
+        yield <tt class="verbatim">n_i&rarr;&infin;</tt>; <tt class="verbatim">A.fits.delayed</tt>
+        is the explicit <tt class="verbatim">hatBeta j&gt;1</tt> condition that makes
+        both logarithms real; <tt class="verbatim">hrate</tt> uses <tt class="verbatim">A.S.divergent</tt>
+        and <tt class="verbatim">Gauge.slopeConstant_pos hG</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">&#x2113;_j</tt>, <tt class="verbatim">L_j</tt>, <tt class="verbatim">&gamma;</tt>,
+        <tt class="verbatim">b_j</tt> and clock inputs</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">A.S.scale j</tt>, <tt class="verbatim">(A.S.block
+        j).val</tt>, <tt class="verbatim">G.slopeConstant</tt>, <tt class="verbatim">Z.&beta;
+        j</tt>. <tt class="verbatim">YM.Trace.Terrace.qNext</tt> gives the logarithmic
+        increment and <tt class="verbatim">PostT.bloom</tt> the block upper bound (<tt
+        class="verbatim">Lyre.lean</tt>, <tt class="verbatim">Base.lean</tt>). <tt class="verbatim">Merr</tt>
+        gives the arbitrary-&epsilon; relative-to-scale arch error and <tt
+        class="verbatim">measured</tt> positivity (<tt class="verbatim">Dusk.lean</tt>). The
+        written minimal-overshoot argument follows <tt class="verbatim">back_gate</tt>
+        (<tt class="verbatim">Lyre.lean</tt>), and the final ratio passage follows <tt
+        class="verbatim">gamut</tt> and <tt class="verbatim">Barry</tt> (<tt class="verbatim">Dusk.lean</tt>,
+        <tt class="verbatim">Bang.lean</tt>). The finite-volume source of <tt class="verbatim">Merr</tt>
+        and the selected <tt class="verbatim">PostT</tt> receipt remain upstream
+        inputs.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">&#x1D51E;_i</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">hueK A (Stern V i)=AgeK A (1/5) (Stern V
+        i)=exp((1/5)(log(log &beta;&#x0302;_{n_i}))&sup2;)</tt>; <tt class="verbatim">Lease.lean</tt>,
+        <tt class="verbatim">Look.lean</tt>, <tt class="verbatim">Lean/YM/TraceExtension/Zn/Have.lean</tt>.
+        <tt class="verbatim">Zn.wake</tt> gives positivity and <tt class="verbatim">Zn.awe</tt>
+        with <tt class="verbatim">hrate</tt>, <tt class="verbatim">Sstar</tt>, <tt class="verbatim">growth</tt>
+        gives divergence.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">P</tt>, <tt class="verbatim">X_i</tt>, <tt class="verbatim">Y_i</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">S.project 5</tt>, <tt class="verbatim">X.U i 5</tt>, <tt
+        class="verbatim">Y 5 i</tt>; the identity <tt class="verbatim">P Y_i = X_i</tt> is <tt
+        class="verbatim">Gondola.terminal 5</tt> on a tail, and <tt class="verbatim">X_i</tt> is
+        the chosen grade-five linear equivalence.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">M_i</tt>, <tt class="verbatim">&thetasym;_j</tt>, <tt
+        class="verbatim">t_i</tt>, <tt class="verbatim">core</tt>, <tt class="verbatim">b_n</tt>, <tt class="verbatim">r_i</tt>,
+        <tt class="verbatim">c_i</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Z.M 5 n_i</tt>, <tt class="verbatim">(A.budget
+        j).threshold</tt>, <tt class="verbatim">(A.budget n_i).threshold</tt>, <tt
+        class="verbatim">(C.labels.level 5).core</tt>, <tt class="verbatim">Z.&beta; n</tt>, <tt
+        class="verbatim">X.r i</tt>, <tt class="verbatim">crown Z X (Stern V) 5 i = b_{n_i}
+        r_i^5</tt>; see <tt class="verbatim">Bang.lean</tt>, <tt class="verbatim">Path.lean</tt>,
+        <tt class="verbatim">Insert.lean</tt>. <tt class="verbatim">swale = t_i^{-2} core
+        M_i</tt>, <tt class="verbatim">Vault = P (c_i t_i&sup2; M_i^{-1})</tt>, and <tt
+        class="verbatim">prize = c_i^{-1} swale</tt>. <tt class="verbatim">&thetasym;_j</tt> is a
+        positive real threshold, distinct from the period subsequence <tt
+        class="verbatim">&tau;</tt> reserved in the shared glossary. The source uses
+        these identities on the appropriate graded/covariant arrays; <tt
+        class="verbatim">core</tt> need not be the identity on arbitrary
+        coefficients.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">s_i</tt>, <tt class="verbatim">U</tt>, <tt class="verbatim">u_i</tt>,
+        <tt class="verbatim">v_i</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">s i</tt>, <tt class="verbatim">U</tt> and <tt class="verbatim">t
+        i</tt> chosen in <tt class="verbatim">lensP</tt>, and the arbitrary argument <tt
+        class="verbatim">v i</tt> in <tt class="verbatim">springs</tt>, respectively. <tt class="verbatim">Spun.starts</tt>
+        and the private predicate in the proof of <tt class="verbatim">lensP</tt> give
+        the displayed chart formulas on an eventual common tail. <tt class="verbatim">section5</tt>
+        supplies <tt class="verbatim">U</tt>; <tt class="verbatim">arrive_t</tt> supplies
+        pointwise convergence. The prose derives the former from the invariant
+        Hermitian form and the free-null orthogonal complement: its <tt class="verbatim">K</tt>
+        is exactly <tt class="verbatim">(Cells.standard C).null 5</tt>, the kernel of
+        the reference quotient projection. The quotient and its map are <tt
+        class="verbatim">YM.Table.Field</tt> and <tt class="verbatim">YM.Table.project</tt> (<tt
+        class="verbatim">Lean/YM/Euclid/Null.lean</tt>); <tt class="verbatim">YM.Further.CorrectedLift.freeKernel</tt>
+        identifies this free null with the equation subspace (<tt class="verbatim">Lean/YM/Further/CORRECTED_LIFT_COEFFICIENTS/Basis.lean</tt>).
+        <tt class="verbatim">YM.Push.CutoffProjectors.pair_formula</tt> defines the
+        stated signed-orbit inner product, while <tt class="verbatim">retain_mem</tt>
+        and <tt class="verbatim">removed</tt> show that <tt class="verbatim">retain K</tt> is the
+        unique representative in the associated normal complement of the same
+        quotient class (<tt class="verbatim">Lean/YM/Push/CUTOFF_PROJECTORS/Frame.lean</tt>).
+        The equation <tt class="verbatim">YM.Further.CorrectedLift.ladder_on</tt>
+        identifies that representative with the source ladder on each
+        projected coefficient; <tt class="verbatim">ladder_reads</tt>, <tt class="verbatim">ladder_spin</tt>,
+        and <tt class="verbatim">ladder_conj</tt> give the projection, signed and
+        reality identities (<tt class="verbatim">Lean/YM/Further/CORRECTED_LIFT_COEFFICIENTS/Basis.lean</tt>).
+        This identifies the particular section used by the finite-volume lift,
+        rather than an arbitrary equivariant section.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">W_j</tt>, <tt class="verbatim">D_i</tt>, <tt class="verbatim">&eta;_i</tt>,
+        <tt class="verbatim">&delta;_i</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">swale Z 5 j = threshold_j&#x207B;&sup2; &bull;
+        core &#x2218; Z.M 5 j</tt>; <tt class="verbatim">D_i = Z.&beta; ((V i).k) * (X.r
+        i)^5</tt>; <tt class="verbatim">AgeK A (&minus;1/2) ((V i).k)</tt>; and <tt
+        class="verbatim">part A ((V i).k) = AgeK A (&minus;2/5) ((V i).k)</tt>. The
+        coordinate norm <tt class="verbatim">|&middot;|&#x2081;</tt> is <tt class="verbatim">Frame.coeffSize</tt>.
+        For each component, the first inequality is <tt class="verbatim">YM.Trace.Terrace.sky_tip</tt>
+        (<tt class="verbatim">Gondola.lean</tt>) applied to the odd grade-five lifted
+        field, with <tt class="verbatim">core(ladder)=ladder</tt>; the second is <tt
+        class="verbatim">nightsE</tt> (<tt class="verbatim">Bang.lean</tt>) at the initial and
+        summit levels; the derived arch-scale ratio corresponds to <tt class="verbatim">Barry</tt>
+        (<tt class="verbatim">Bang.lean</tt>). <tt class="verbatim">floss</tt>, <tt class="verbatim">stair_link</tt>,
+        and <tt class="verbatim">arrive_t</tt> (<tt class="verbatim">Path.lean</tt>) perform the
+        same normalization, relative-error and scale-ratio passage. The prose
+        proves this passage and the clock-to-ratio step; it does not claim to
+        construct the tested/calibration, raw residual or primitive clock
+        receipts.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">z_j(&omega;)</tt>, <tt class="verbatim">z&#x0303;_j(&omega;)</tt>,
+        <tt class="verbatim">g_j</tt>, <tt class="verbatim">C_j</tt> and the one-step inputs</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Trace.Terrace.spine C 5 j N p (Y 5 i
+        h_&alpha;)</tt> (<tt class="verbatim">Knob.lean</tt>) and <tt class="verbatim">YM.Trace.Terrace.Cturn
+        C 5 j N p (Y 5 i h_&alpha;)</tt> (<tt class="verbatim">Knell.lean</tt>), with
+        <tt class="verbatim">&omega;=(N,&nu;)</tt> (the Lean period argument is <tt
+        class="verbatim">p=&nu;</tt>) and the same input label at every level; <tt
+        class="verbatim">gear A j</tt> and <tt class="verbatim">(A.params j).columns</tt> are <tt
+        class="verbatim">g_j</tt> and <tt class="verbatim">C_j</tt>; <tt class="verbatim">YM.Trace.Terrace.cameo_age</tt>
+        (<tt class="verbatim">Look.lean</tt>) identifies the denominator <tt class="verbatim">cameo
+        A (j+1)</tt> with <tt class="verbatim">A_{1/2}(j+1)</tt>. The raw residual and
+        threshold ratio are the exact <tt class="verbatim">YM.Trace.Terrace.Sceptre.step</tt>
+        receipt (<tt class="verbatim">Knell.lean</tt>), eventually in period <tt class="verbatim">p</tt>
+        uniformly in <tt class="verbatim">N</tt> above the level and in the terminal
+        label. The manuscript derives the common large set on each fixed
+        finite interval from these tails and the two coordinate-tail
+        consequences <tt class="verbatim">link_period</tt> and <tt class="verbatim">link_mesh</tt>
+        of fuse domination. The prose derives grade-five dilation
+        coordinatewise from <tt class="verbatim">Bid.vowel</tt> (<tt class="verbatim">Lean/YM/Bid/Loan.lean</tt>),
+        <tt class="verbatim">Frame.scaled</tt> (<tt class="verbatim">Lean/YM/Labels/Reference.lean</tt>),
+        the transported odd-grade receipt and the reference-frame bidegree
+        classification. The manuscript now derives that classification from
+        positive factor degree, minimum jet weight two, the degree-five bound
+        and the previously proved vanishing of invariant linear forms;
+        inversion parity comes from the jet weights. The exact source results
+        are <tt class="verbatim">YM.Trace.nbase</tt> (<tt class="verbatim">Lean/YM/TraceExtension/Quince/Nadir.lean</tt>)
+        and <tt class="verbatim">YM.Trace.basis_turn</tt>/<tt class="verbatim">sign_rows</tt> (<tt
+        class="verbatim">Lean/YM/TraceExtension/Quince/Platt.lean</tt>). This matches
+        <tt class="verbatim">core_scale</tt>; the normalized one-step estimate is <tt
+        class="verbatim">readStep</tt>, and <tt class="verbatim">night_space</tt>/<tt class="verbatim">night_grade</tt>
+        supply its grade premise (<tt class="verbatim">Knob.lean</tt>). The written
+        factor four is the actual threshold-ratio square. <tt class="verbatim">YM.Trace.Terrace.rounder</tt>
+        (<tt class="verbatim">Look.lean</tt>) bounds <tt class="verbatim">gearK=4*gear</tt> by <tt
+        class="verbatim">part A k_i / (2*(n_i-k_i))</tt>; the manuscript gives the
+        clock, column-budget and <tt class="verbatim">AgeK(1/10)</tt> comparison
+        establishing this price bound. The private helper <tt class="verbatim">casc</tt>
+        and <tt class="verbatim">YM.Trace.Terrace.spine_pitch</tt> (<tt class="verbatim">Look.lean</tt>)
+        prove the finite backward-induction estimate, and <tt class="verbatim">topPitch</tt>
+        plus <tt class="verbatim">nightsE</tt> (<tt class="verbatim">Bang.lean</tt>) pass to the
+        selected ultrafilter limit. The raw residual, grade/symmetry,
+        threshold and column-budget receipts and ultrafilter convergence
+        remain inputs. In particular, the ultrafilter-late condition <tt
+        class="verbatim">N &ge; n_i</tt> comes from the fixed fuse domination; it is not
+        a claim of a tail uniform over all <tt class="verbatim">i</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">Z_i(&omega;)</tt>, <tt class="verbatim">B_i(&omega;)</tt>
+        and finite initial-price receipt</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">spine C 5 k_i N p (heightV V i 5 (N,p)
+        h_&alpha;)</tt> and <tt class="verbatim">C.path.&beta; N p k_i * (X.r i)^5</tt>,
+        respectively. The displayed finite-volume bound is the <tt class="verbatim">via_step</tt>
+        application in <tt class="verbatim">YM.Trace.Terrace.sky_tip</tt> (<tt class="verbatim">Gondola.lean</tt>),
+        under the selected <tt class="verbatim">InvoiceSky</tt>/<tt class="verbatim">Vane.checked</tt>
+        receipts and the required grade of the ladder. <tt class="verbatim">Gondola.terminal</tt>
+        gives the selected finite-volume lift limit. The manuscript states the
+        joint transport receipt <tt class="verbatim">steep.terms</tt> (<tt class="verbatim">Dusk.lean</tt>),
+        applies it to that varying lift for the initial price and to the
+        constant terminal label for each fixed intermediate level, and uses
+        continuity of the core and <tt class="verbatim">steep.mintS</tt> to derive the
+        required coefficient and scalar limits; this is the passage packaged
+        by <tt class="verbatim">topPitch</tt> (<tt class="verbatim">Bang.lean</tt>). The text
+        proves the centered tested-map bound, normalized <tt class="verbatim">via_step</tt>
+        algebra and closed-inequality passage for each fixed <tt class="verbatim">i</tt>;
+        it does not construct the tested/calibration receipts or the selected
+        finite-volume inputs.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">&#x1D5A0;</tt>, <tt class="verbatim">&#x1D5B3;</tt>, <tt
+        class="verbatim">&lambda;_i</tt>, <tt class="verbatim">d_{k_i}</tt>, <tt class="verbatim">&sigma;_i</tt>
+        and tested/calibration inputs</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Next.Rank.Price.awake</tt> is <tt class="verbatim">&#x1D5A0;</tt>,
+        the tested finite-volume map <tt class="verbatim">T</tt> is <tt class="verbatim">&#x1D5B3;</tt>,
+        <tt class="verbatim">heightV V i 5 (N,p) h_&alpha; = YM.Next.Rank.East.ladd C
+        &sigma;_i k_i N p 5 T (YM.Further.CorrectedLift.ladder C 5
+        h_&alpha;)</tt> for <tt class="verbatim">i&ge;5</tt>, with <tt class="verbatim">T=(V i).R
+        N p &#x27E8;5,5&lt;i+1&#x27E9;</tt>, <tt class="verbatim">C.S.a k_i</tt>, and
+        <tt class="verbatim">Next.Rank.Station.mag A (V i).b k_i</tt>. For <tt class="verbatim">i&lt;5</tt>,
+        <tt class="verbatim">heightV</tt> is defined as zero; the manuscript uses the
+        identity only on the eventual tail. <tt class="verbatim">YM.Overlay.beta_positive</tt>
+        (<tt class="verbatim">Lean/YM/Overlay/Engine.lean</tt>) gives <tt class="verbatim">&beta;_i(&omega;)&gt;0</tt>
+        when <tt class="verbatim">k_i&le;N</tt>, a set in the fixed ultrafilter; no
+        positivity outside that set is asserted. The local spacing <tt class="verbatim">d_{k_i}</tt>
+        is the RG-level schedule spacing, not automatically the public mesh
+        <tt class="verbatim">a_N</tt>; the finite running value <tt class="verbatim">&beta;_i(&omega;)=C.path.&beta;
+        N &nu; k_i</tt> is not the bare coefficient <tt class="verbatim">&beta;_{N,&nu;}</tt>
+        unless a separate relation is established. This lift identity uses <tt
+        class="verbatim">YM.MergeProof.East.wok</tt> (<tt class="verbatim">Lean/YM/MergeProof/East/Pint.lean</tt>)
+        and the <tt class="verbatim">Vane.wheel</tt> definition (<tt class="verbatim">Lean/YM/TraceExtension/Prom/Zoom/Boats.lean</tt>);
+        the period variable <tt class="verbatim">p</tt> is not the reference-section
+        label. The two test bounds are <tt class="verbatim">Tested.score</tt> (<tt
+        class="verbatim">Lean/YM/Next/RANK/Matrices.lean</tt>) and <tt class="verbatim">InvoiceSky</tt>
+        (<tt class="verbatim">Lean/YM/TraceExtension/Prom/Orion/Eupho.lean</tt>); <tt
+        class="verbatim">YM.Trace.Terrace.dollar</tt> (<tt class="verbatim">Turn.lean</tt>)
+        identifies the latter's <tt class="verbatim">Perch.bill (&minus;1/2)</tt> with
+        <tt class="verbatim">&eta;_i</tt>. The unit values are <tt class="verbatim">Tested.unit</tt>
+        and <tt class="verbatim">awake</tt>'s unit identity. <tt class="verbatim">YM.Trace.Terrace.Gondola.season</tt>
+        identifies <tt class="verbatim">r_i</tt> with <tt class="verbatim">Vane.wheel.r</tt>; the
+        definitions <tt class="verbatim">YM.MergeProof.East.wok</tt> and <tt class="verbatim">YM.Next.Rank.Station.gap</tt>
+        (<tt class="verbatim">Lean/YM/Next/RANK/Station.lean</tt>) then give <tt class="verbatim">r_i=d_{k_i}&sigma;_i</tt>,
+        with positivity from <tt class="verbatim">YM.Next.Rank.Station.mag_pos</tt> and
+        the lattice-spacing positivity. The manuscript derives invertibility
+        of the tested map from <tt class="verbatim">Tested.score</tt> and injectivity of
+        <tt class="verbatim">awake</tt> (<tt class="verbatim">nib_faithful</tt> and nonzero
+        scale), defines the finite-volume lift by the inverse-map formula <tt
+        class="verbatim">YM.Next.Rank.East.ladd</tt>, and obtains the calibration
+        equation <tt class="verbatim">YM.Next.Rank.East.poured</tt> (<tt class="verbatim">Lean/YM/MergeProof/East/Ladle.lean</tt>),
+        with <tt class="verbatim">shrink=(sqrt &beta;)&#x207B;&sup1;/threshold</tt>; the
+        fixed grade-five coefficient scaling follows from <tt class="verbatim">YM.Trace.Terrace.night_grade</tt>
+        and <tt class="verbatim">YM.Trace.nbase</tt>, and <tt class="verbatim">YM.Trace.Terrace.mintage</tt>
+        performs the displayed inverse-scaling conversion (<tt class="verbatim">Turn.lean</tt>).
+        <tt class="verbatim">via_step</tt> is its normalized consequence. The written
+        centering/cost calculation follows <tt class="verbatim">scores_core</tt> and the
+        algebraic conversion in <tt class="verbatim">via_step</tt>; it does not prove
+        the tested-map estimates or construct the selected family and its lift
+        limit.</td>
+      </tr></tbody>
+    </table>
+    <h2 id="auto-2"><a id="formal-hypothesis-crosswalk"></a>Formal hypothesis crosswalk<span style="margin-left: 1em"></span></h2>
+    <p>
+      The following records the inspected fields that feed this draft; it does
+      not replace the full structured assumptions in <tt class="verbatim">YM.Trace.Terrace.springs</tt>
+      or claim their production. All paths refer to the pinned source revision
+      above.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Formal assumption</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Field or consequence used here</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Family.Makes</tt> (<tt class="verbatim">Lean/YM/Source/Construction.lean</tt>)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">wilson</tt> supplies the selected running-scale
+        estimates; <tt class="verbatim">calibrated</tt> supplies the finite-volume based
+        maps, linearity, unit and comparison bounds used for <tt class="verbatim">Cturn</tt>
+        and <tt class="verbatim">awake</tt>. The additional <tt class="verbatim">sections</tt>,
+        <tt class="verbatim">stages</tt>, <tt class="verbatim">places</tt>, and <tt class="verbatim">priced</tt>
+        fields remain part of the formal <tt class="verbatim">Makes</tt> hypothesis; the
+        simplified prose does not claim to construct or eliminate them.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Trace.Terrace.steep</tt> (<tt class="verbatim">Lean/YM/TraceExtension/Terrace/Dusk.lean</tt>)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">mintS</tt> is scalar convergence at each fixed
+        level, while <tt class="verbatim">terms</tt> handles convergence with a
+        <strong>varying</strong> input label at each fixed admissible level;
+        these are distinct from uniformity over the selected index.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Trace.Terrace.Gondola</tt> (<tt class="verbatim">Lean/YM/TraceExtension/Terrace/Gondola.lean</tt>)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">growth</tt> gives divergence of initial levels;
+        <tt class="verbatim">season</tt> supplies the checked finite-volume family and
+        common radius; <tt class="verbatim">terminal</tt> gives, for each fixed degree
+        and eventually in the selected index, lift convergence and projection
+        identity for every reference field. The checked <tt class="verbatim">TimberSky</tt>
+        structure also contains <tt class="verbatim">high</tt>, <tt class="verbatim">early</tt>,
+        <tt class="verbatim">plate</tt>, and <tt class="verbatim">fares</tt>; <tt class="verbatim">early</tt>
+        supplies the reference-level bound and <tt class="verbatim">fares</tt> supplies
+        lift symmetries used by <tt class="verbatim">cruise</tt>. <tt class="verbatim">YM.MergeProof.East.TimberSky.rate</tt>
+        (<tt class="verbatim">Lean/YM/TraceExtension/Prom/Zoom/Boats.lean</tt>) supplies
+        <tt class="verbatim">YM.MergeProof.East.Charting</tt> (<tt class="verbatim">Lean/YM/MergeProof/East/Plume.lean</tt>)
+        and <tt class="verbatim">YM.Next.Rank.East.InvoiceSky</tt>: the former includes
+        <tt class="verbatim">YM.Next.Rank.Price.Tested</tt> and signed equivariance, and
+        the latter gives the relative-price hypothesis for every period and
+        every finite volume with <tt class="verbatim">N&gt;k_i</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.MergeProof.Scrim</tt> (<tt class="verbatim">Lean/YM/MergeProof/Biscuit.lean</tt>)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Its <tt class="verbatim">costs</tt> field supplies the transport
+        symmetry via <tt class="verbatim">YM.Trace.Terrace.guarded</tt>; <tt class="verbatim">back</tt>,
+        <tt class="verbatim">grows</tt>, <tt class="verbatim">jump</tt>, and <tt class="verbatim">listens</tt>
+        are also present in the formal structure. The prose does not claim
+        that symmetry alone constructs a <tt class="verbatim">Scrim</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Trace.Terrace.Sceptre</tt> (<tt class="verbatim">Lean/YM/TraceExtension/Terrace/Knell.lean</tt>)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">step</tt> quantifies over every degree up to
+        five and each admissible initial level, then eventually over periods,
+        uniformly over later volume and terminal label; it supplies the
+        threshold and residual estimates. The separate <tt class="verbatim">bias</tt>
+        field is still part of the formal structure, not a conclusion of <tt
+        class="verbatim">step</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Trace.Terrace.PostT</tt> (<tt class="verbatim">Lean/YM/TraceExtension/Terrace/Base.lean</tt>)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">bloom</tt> bounds block size and <tt class="verbatim">share</tt>
+        bounds the real column budget. <tt class="verbatim">cropK</tt>, <tt class="verbatim">purse</tt>,
+        and <tt class="verbatim">jig</tt> are additional formal fields; the simplified
+        clock estimates in the manuscript do not assert the full
+        structure.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">YM.Trace.Terrace.Spun</tt> (<tt class="verbatim">Lean/YM/TraceExtension/Terrace/Prism.lean</tt>)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">starts</tt> identifies each sensor component on
+        one eventual tail uniformly in the covariant array and component; it
+        is a chart hypothesis, separate from the marked-vector limits.</td>
+      </tr></tbody>
+    </table>
+    <h2 id="auto-3"><a id="quantifier-checkpoints"></a>Quantifier checkpoints<span style="margin-left: 1em"></span></h2>
+    <p>
+      The tails below are distinct; none asserts convergence uniformly in the
+      selected index.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Manuscript use</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Quantifier and source boundary</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Selected chart and lift</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Spun.starts</tt> gives one eventual tail in <tt
+        class="verbatim">i</tt> for every input array and component. At degree five, <tt
+        class="verbatim">Gondola.terminal</tt> gives an eventual tail in <tt class="verbatim">i</tt>
+        on which the projection identity holds for every reference field and
+        the finite-volume lift map converges along the fixed ultrafilter. The
+        signed/reality intertwining is supplied separately by <tt class="verbatim">cruise</tt>
+        and <tt class="verbatim">move_anchor</tt>/<tt class="verbatim">move_anchor_star</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Finite initial price</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Fix a sufficiently large <tt class="verbatim">i</tt>, then a
+        reference field component. <tt class="verbatim">TimberSky.rate</tt> gives the
+        tested and invoice receipts for every period and every <tt class="verbatim">N&gt;k_i</tt>;
+        <tt class="verbatim">link_mesh</tt> makes this a large set. <tt class="verbatim">steep.terms</tt>
+        applies at the fixed level <tt class="verbatim">k_i</tt> to the varying
+        finite-volume lift, and <tt class="verbatim">mintS</tt> gives the scalar limit.
+        The limit in volume is taken before <tt class="verbatim">i&rarr;&infin;</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Finite transport interval</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">For each fixed level <tt class="verbatim">j&ge;C.ref 5</tt>, <tt
+        class="verbatim">Sceptre.step</tt> supplies a period tail uniform over <tt
+        class="verbatim">N&gt;j</tt> and the input label. Only after fixing <tt class="verbatim">i</tt>
+        is the finite intersection over <tt class="verbatim">k_i&le;j&lt;n_i</tt> taken,
+        together with <tt class="verbatim">N&ge;n_i</tt>. This gives a common large set
+        for that <tt class="verbatim">i</tt>, not a threshold uniform in <tt class="verbatim">i</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Lift convergence</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">The estimates apply to each fixed reference array and
+        component. The component set and the domain are finite-dimensional, so
+        pointwise convergence on a basis yields operator-norm convergence; no
+        uniform convergence in <tt class="verbatim">i</tt> is assumed from the
+        ultrafilter.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Marked input and receiver output</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">springs</tt> takes an arbitrary marked sequence
+        with three separately quantified limits. <tt class="verbatim">Prosper.vote</tt>
+        supplies one eventual bound uniform over target vectors, and for each
+        positive error a possibly different eventual tail uniform over source
+        vectors.</td>
+      </tr></tbody>
+    </table>
+    <h2 id="auto-4"><a id="correspondence-and-proof-boundaries"></a>Correspondence and proof boundaries<span style="margin-left: 1em"></span></h2>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Step</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Source evidence at the pinned
+        revision</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Sensor statement and weight</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Trace.Terrace.Prosper</tt>, <tt class="verbatim">.hueK</tt>,
+        <tt class="verbatim">.Lease</tt>, <tt class="verbatim">.springs</tt>, <tt class="verbatim">Lean/YM/TraceExtension/Terrace/Lease.lean</tt>.
+        <tt class="verbatim">Prosper.alpha</tt> is operator convergence; <tt class="verbatim">vote</tt>
+        has real-linear functionals on <tt class="verbatim">H</tt> with eventual bound
+        and epsilon-uniform weighted defect.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Covariant spaces, section, kernel, Ward normalization</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Trace.Terrace.plate</tt>, <tt class="verbatim">.Vbase</tt>,
+        <tt class="verbatim">.Stem5</tt>, <tt class="verbatim">.Stem5_kernel</tt>, <tt class="verbatim">.Stem5_alive</tt>,
+        <tt class="verbatim">.section5</tt>, <tt class="verbatim">Lean/YM/TraceExtension/Terrace/Vector.lean</tt>;
+        <tt class="verbatim">YM.Trace.rho</tt>, <tt class="verbatim">.rho_vector</tt>, <tt class="verbatim">.rho_eom</tt>,
+        <tt class="verbatim">Lean/YM/TraceExtension/Foundation/Dilate.lean</tt>.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Selected chart</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Trace.Terrace.Spun</tt>, <tt class="verbatim">.lensP</tt>,
+        <tt class="verbatim">.fisc</tt>, <tt class="verbatim">Lean/YM/TraceExtension/Terrace/Prism.lean</tt>;
+        <tt class="verbatim">YM.Trace.Terrace.crown</tt>, <tt class="verbatim">.prize</tt>, <tt
+        class="verbatim">.arrive_t</tt>, <tt class="verbatim">Lean/YM/TraceExtension/Terrace/Path.lean</tt>;
+        <tt class="verbatim">.swale</tt> in <tt class="verbatim">Bang.lean</tt> and <tt class="verbatim">.Vault</tt>
+        in <tt class="verbatim">Insert.lean</tt>. The proof of <tt class="verbatim">lensP</tt>
+        uses terminal projection, signed/reality symmetry, positive
+        normalization, and convergence of transported lifts. This unit cites
+        their output as a draft dependency, not as independently verified
+        chart production.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Limit of sensor maps</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Trace.Terrace.fitV</tt>, <tt class="verbatim">.plumage</tt>,
+        <tt class="verbatim">.scout</tt>, <tt class="verbatim">Lean/YM/TraceExtension/Terrace/Delta.lean</tt>;
+        <tt class="verbatim">springs</tt> converts the positively diverging weighted
+        marked-field limit to the unweighted one and applies <tt class="verbatim">scout</tt>.
+        The manuscript spells out the decomposition and triangular
+        repair.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Weighted receiver</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Trace.Terrace.permute</tt>, <tt class="verbatim">.spend</tt>,
+        <tt class="verbatim">.expenses</tt>, <tt class="verbatim">Delta.lean</tt>. The previously
+        written Lemma <tt class="verbatim">lem:ex-lattice-trace-weighted-price</tt>
+        proves the same finite-dimensional result. The manuscript applies it
+        after proving <tt class="verbatim">s_i&rarr;f</tt> and checks both weighted
+        limits. Source functionals are real-linear; finite dimensionality
+        makes the continuous formulation equivalent.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Special medium producer</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">YM.Trace.Slate.medium</tt> and <tt class="verbatim">.canal</tt>,
+        <tt class="verbatim">Lean/YM/TraceExtension/Slate/Phantom.lean</tt>; <tt class="verbatim">.aspiring</tt>,
+        <tt class="verbatim">.legacy</tt>, <tt class="verbatim">.rungs</tt>, <tt class="verbatim">Lean/YM/TraceExtension/Slate/Garnet.lean</tt>.
+        The manuscript denotes the transported chosen and reference responses
+        by <tt class="verbatim">&#x1D596;_j</tt> and <tt class="verbatim">&#x1D5D0;_j</tt>,
+        distinct from the postlevel function <tt class="verbatim">q(j)</tt> and the
+        finite-volume coefficient <tt class="verbatim">z&#x0303;_j</tt>. For the same
+        selected postlevels the medium is <tt class="verbatim">Z.&beta;(n_i)&#x207B;&sup1;
+        &bull; Shine5 Z X n_i &minus; Shine5 Z L.Z n_i</tt>. <tt class="verbatim">aspiring</tt>
+        supplies its limit and weighted Ward limit; its <tt class="verbatim">taxA</tt>
+        is <tt class="verbatim">AgeK(1/5)</tt> by <tt class="verbatim">YM.Trace.Slate.taxA</tt> in
+        <tt class="verbatim">Lean/YM/TraceExtension/Slate/Spite.lean</tt>, hence equals
+        <tt class="verbatim">hueK</tt>. <tt class="verbatim">legacy</tt> with <tt class="verbatim">p=1</tt>
+        supplies <tt class="verbatim">&beta;&#x0302;_{n_i} &bull; s_i(medium
+        n_i)&rarr;0</tt>; <tt class="verbatim">rungs</tt> uses eventual <tt class="verbatim">&#x1D51E;_i&le;&beta;&#x0302;_{n_i}</tt>
+        to apply <tt class="verbatim">springs</tt>. The scalar medium argument and the
+        priced-mission detector lemma are already written in parent chapters;
+        the new section invokes both with their displayed conditions and
+        proves only the last age-weight comparison. The finite-volume mission,
+        price and detector producers remain dependencies; see <tt class="verbatim">blueprint/units/YM-000026/trace-weighted-estimates-evidence.md</tt>
+        and <tt class="verbatim">trace-small-means-evidence.md</tt>.</td>
+      </tr></tbody>
+    </table>
+    <h2 id="auto-5"><a id="literature-and-editorial-decisions"></a>Literature and editorial decisions<span style="margin-left: 1em"></span></h2>
+    <p>
+      Searched <tt class="verbatim">blueprint/background/</tt> and relevant <tt class="verbatim">Bots/notes/</tt>
+      for trace, receiver, finite-dimensional perturbation and Ward results;
+      no accepted matching external receiver theorem was located. Checked M.
+      Winklmeier, <em>Functional Analysis</em>, Theorem 2.10, p. 29, <a href="https://math.uniandes.edu.co/~mwinklme/teaching/FuncAna/FA-lecture_notes.pdf">https://math.uniandes.edu.co/~mwinklme/teaching/FuncAna/FA-lecture_notes.pdf</a>
+      : on a Banach space <tt class="verbatim">||T||&lt;1</tt> makes <tt class="verbatim">id&minus;T</tt>
+      invertible by the Neumann series with inverse norm bounded by <tt class="verbatim">(1&minus;||T||)&#x207B;&sup1;</tt>.
+      Finite-dimensional <tt class="verbatim">E</tt> is Banach, and the manuscript
+      applies it to <tt class="verbatim">T=id&minus;T_i</tt> after norm convergence; the
+      specific rank-one/weighted argument is the existing proved manuscript
+      lemma, not a claim that this reference proves it. No extra bibliography
+      dependency is needed for the elementary geometric-series step, whose
+      application is explicit. This unit groups the source's finite-basis
+      continuity, decomposition, triangular repair, and operator-norm
+      extraction by mathematical purpose.
+    </p>
+    <p>
+      The three displayed curvature-jet tests give evaluation rows <tt class="verbatim">(0,2,0)</tt>,
+      <tt class="verbatim">(1,2,0)</tt>, <tt class="verbatim">(1,2,1)</tt> on the raw vectors <tt
+      class="verbatim">momentum1</tt>, <tt class="verbatim">momentum2</tt>, <tt class="verbatim">eom</tt>.
+      Their derivative jets obey the cyclic Bianchi identity, and the
+      displayed polynomial potential realizes them. Together with the parent
+      free-rank upper bound three, they prove the raw basis used in <tt class="verbatim">bareCoordinates</tt>;
+      these tests are a reorganization, not a verbatim transcription of the
+      source's <tt class="verbatim">test_m</tt> and <tt class="verbatim">test_n</tt>.
+    </p>
+    <p>
+      The <a href="../../../docs/notation.html">notation protocol</a> and <a href="../../glossary.html">shared glossary</a>
+      govern integration. Here <tt class="verbatim">&#x1D51E;_i</tt> is the <tt class="verbatim">1/5</tt>
+      age at the postlevel; it is distinct from the shared mesh <tt class="verbatim">a_N</tt>
+      and the parent chapter's local field dilation <tt class="verbatim">a_i</tt>. The
+      chart normalization <tt class="verbatim">c_i</tt> is distinct from <tt class="verbatim">&#x1D51E;_i</tt>
+      and <tt class="verbatim">b_n</tt>. No shared glossary edit is made. The parent
+      manuscript already owns the receiver proof, the free rank, and the
+      scalar medium argument; they are cited rather than duplicated.
+    </p>
+    <h2 id="auto-6"><a id="outstanding-obligations"></a>Outstanding obligations<span style="margin-left: 1em"></span></h2>
+    <p>
+      The conclusion is conditional on the displayed exact chart and
+      marked-vector inputs; the existence of the inputs in the full selected
+      run, the detailed source crosswalk, and the full upstream dependency
+      chain require independent correspondence and mathematical review. In
+      particular the <tt class="verbatim">legacy</tt> field estimate uses the mission,
+      finite-cover/local-price, derivative and probe hypotheses and is not
+      implied by scalar Ward cancellation. A limited lexical scan of locally
+      available imported modules found one textual <tt class="verbatim">admit</tt>
+      match: the field of the conditional structure <tt class="verbatim">YM.Further.RootedInteractingRemainder.Appointment</tt>
+      (<tt class="verbatim">Lean/YM/Further/ROOTED_INTERACTING_REMAINDER/Station.lean</tt>),
+      not an <tt class="verbatim">admit</tt> tactic. Import reachability does not
+      establish that <tt class="verbatim">springs</tt> depends on this structure, and
+      the scan cannot inspect missing external imports or prove absence of
+      placeholders. No fresh Lean build or target-specific
+      elaborated-type/kernel/axiom replay has been performed, and internal
+      agent checks do not establish responsible independent human acceptance.
+      This is not a proof of the whole existence theorem. Actual local checks
+      are recorded in <tt class="verbatim">validation.md</tt>.
+    </p>
+    <h2 id="auto-7"><a id="revision-response-to-independent-review-126-corrected-by-127"></a>Revision response to independent review #126, corrected
+    by #127<span style="margin-left: 1em"></span></h2>
+    <p>
+      Revision basis <tt class="verbatim">84a6a9371caddd2f9967b9d6924e156ec097610e</tt>
+      on <tt class="verbatim">codex/existence-monograph</tt>; session <tt class="verbatim">TrishenGunaratnam-terra-issue33-revision-20261113</tt>.
+      The 2026-11-13 mathematics and correspondence reports remain read-only;
+      their fingerprint belongs to the earlier content and is not renewed
+      here.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Review item</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Revision and correspondence boundary</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">R1</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Immediately before <tt class="verbatim">prop:trace-prosper-sensor</tt>,
+        (S1)&ndash;(S7) state the selected clock, chart, shared fused filter
+        and joint limits, tested-map and lift receipts, one-step quantifiers,
+        budget/oddness, and arbitrary marked-vector limits. The derived
+        statements now have labels <tt class="verbatim">lem:trace-sensor-arch-ratio</tt>,
+        <tt class="verbatim">lem:trace-sensor-initial-price</tt>, <tt class="verbatim">lem:trace-sensor-transport-price</tt>,
+        and <tt class="verbatim">lem:trace-sensor-lift-limit</tt>, each with its
+        argument. The initial, transport and lift lemmas consume
+        (S1)&ndash;(S6), not the marked input (S7). The finite-volume bound
+        and transport price are proved from the displayed primitive receipts,
+        not introduced as new sensor assumptions.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">R2</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">The one-factor invariant argument cites <tt class="verbatim">sec:ex-lattice-trace-free-rank</tt>;
+        #127 corrects the earlier claim that it was missing. No support
+        chapter is edited.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">R3</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">&#x1D5A0;,&#x1D5B3; : V &rarr; V</tt> are
+        explicitly complex-linear endomorphisms of the finite grade-five
+        coefficient space. At the pinned source, <tt class="verbatim">YM.Next.Rank.Price.Tested</tt>
+        takes an endomorphism of <tt class="verbatim">C.label d</tt> (<tt class="verbatim">Lean/YM/Next/RANK/Matrices.lean</tt>),
+        and <tt class="verbatim">awake</tt> maps <tt class="verbatim">C.label d</tt> to itself.
+        Finite-dimensional injectivity implies bijectivity.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">R4</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">The selected ultrafilter is explicitly required to refine
+        the fused-order filter; the source condition is <tt class="verbatim">hb :
+        (&#x1D4DB; : Filter (&#x2115; &times; &#x2115;)) &le; F.fuse</tt> in
+        <tt class="verbatim">Lean/YM/TraceExtension/Terrace/Lease.lean</tt>. The proof
+        uses its coordinate-tail consequences, with the fixed-i finite
+        intersection kept separate.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">R5</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">The local wrapper deliberately omits <tt class="verbatim">trace-local-charge.tex</tt>
+        and <tt class="verbatim">trace-mission-price.tex</tt>; it documents the
+        corresponding external labels <tt class="verbatim">prop:ex-lattice-charge-bounds</tt>
+        and <tt class="verbatim">prop:ex-trace-mission-price-transfer</tt>. Their
+        definitions were located in those files; no fictitious label or
+        support-file edit is used. The wrapper is not the full integration
+        build.</td>
+      </tr></tbody>
+    </table>
+    <p>
+      Source was re-read at <tt class="verbatim">YM.Trace.Terrace.Prosper</tt> and <tt
+      class="verbatim">.springs</tt> in <tt class="verbatim">Lean/YM/TraceExtension/Terrace/Lease.lean</tt>,
+      <tt class="verbatim">.lensP</tt> and <tt class="verbatim">Spun.starts</tt> in <tt class="verbatim">Terrace/Prism.lean</tt>,
+      <tt class="verbatim">.scout</tt> and <tt class="verbatim">.expenses</tt> in <tt class="verbatim">Terrace/Delta.lean</tt>,
+      <tt class="verbatim">Sceptre.step</tt> in <tt class="verbatim">Terrace/Knell.lean</tt>, and
+      <tt class="verbatim">PostT</tt> in <tt class="verbatim">Terrace/Base.lean</tt>. <tt class="verbatim">Sceptre.step</tt>
+      quantifies over each <tt class="verbatim">d &le; 5</tt> and fixed admissible <tt
+      class="verbatim">m</tt>, then an eventual period tail, uniformly over every <tt
+      class="verbatim">N &gt; m</tt> and label. The prose specializes to degree five.
+      <tt class="verbatim">Prosper.vote</tt>'s eventual receiver bound is uniform in
+      every target vector; its weighted estimate is for each positive error
+      followed by an eventual tail uniform in every source vector. Neither the
+      source's structured upstream assumptions nor the later medium producer
+      are claimed to follow solely from this revision's display.
+    </p>
+    <div class="ym-unit-nav">
+      <a class="ym-prev" href="../YM-000026/correspondence.html">&larr; YM-000026</a><span class="ym-part"><font class="ym-here">YM-000033:
+      Selected trace sensor and weighted Ward limit (draft)</font><font class="ym-sep">&middot;</font><a
+      href="HANDOFF.html">HANDOFF</a><font class="ym-sep">&middot;</font><a href="validation.html">validation</a></span><a
+      class="ym-next" href="../YM-000034/correspondence.html">YM-000034 &rarr;</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Review of a proof unit &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <div class="ym-unit-nav">
+      <a class="ym-prev" href="../../YM-000033/correspondence.html">&larr; YM-000033</a><span class="ym-part"><a href="../correspondence.html">YM-000034:
+      Trace branch moment limits and weighted washout (draft)</a><font class="ym-sep">&middot;</font><a
+      href="../HANDOFF.html">HANDOFF</a><font class="ym-sep">&middot;</font><a href="../validation.html">validation</a></span>
+    </div>
+    <p>
+      <h1>Review of a proof unit</h1><a id="review-of-a-proof-unit"></a>
+    </p>
+    <ul>
+      <li>
+        <p>
+          Unit: YM-000034, <tt class="verbatim">blueprint/units/YM-000034/</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Role: mathematical validity
+        </p>
+      </li>
+      <li>
+        <p>
+          Human reviewer: <tt class="verbatim">hairer</tt> (account under which this
+          report is submitted; no human acceptance is recorded by this report)
+        </p>
+      </li>
+      <li>
+        <p>
+          Agent assistance: the whole review was done by a Claude (Anthropic)
+          agent session, <tt class="verbatim">hairer-claude-issue34-review-20261113</tt>.
+          The unit was drafted with GPT-6.1 Terra (Codex), so the reviewing
+          model family differs from the authoring one.
+        </p>
+      </li>
+      <li>
+        <p>
+          Content SHA-256: <tt class="verbatim">59b66debcf4ebb92ff4ff13f8c71ab481350e623ed61dc37fd91ddabd60f1ba7</tt>
+          (<tt class="verbatim">python3 scripts/check_blueprint.py --fingerprint
+          YM-000034</tt> at <tt class="verbatim">69c254b</tt>)
+        </p>
+      </li>
+      <li>
+        <p>
+          Manuscript files and labels: <tt class="verbatim">manuscript/existence/trace-branch-moments.tex</tt>
+          (<tt class="verbatim">sec:ex-trace-branch-moments</tt>, <tt class="verbatim">prop:ex-branch-moments</tt>,
+          <tt class="verbatim">prop:ex-branch-raw-fast</tt>, <tt class="verbatim">prop:ex-branch-washout</tt>,
+          equations <tt class="verbatim">eq:ex-branch-*</tt>), read in full. From the
+          support files in <tt class="verbatim">unit.json</tt>: in <tt class="verbatim">trace-free-rank.tex</tt>,
+          the &quot;Low-grade invariant labels&quot; subsection and the
+          existence of <tt class="verbatim">lem:ex-trace-free-stress-basis</tt>, which
+          are the only parts the chapter cites. <tt class="verbatim">ope-filtration.tex</tt>
+          is not cited by the chapter (R2). <tt class="verbatim">preamble.tex</tt> was
+          not reviewed.
+        </p>
+      </li>
+      <li>
+        <p>
+          Source revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Review task and PR: issue <a href="https://github.com/hairer/humanise-yang-mills/issues/34">#34</a> (claim by <tt class="verbatim">hairer</tt>,
+          13 November 2026); author PR #70; this report's PR: draft against
+          <tt class="verbatim">codex/existence-monograph</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Outcome: <strong>no required change; two minor requests (R1,
+          R2).</strong> No mathematical error found. Acceptance would be local
+          and conditional on the explicitly listed chart, recording, transport
+          and purchase inputs.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-1"><a id="findings-and-evidence"></a>Findings and evidence<span style="margin-left: 1em"></span></h2>
+    <p>
+      Checked step by step:
+    </p>
+    <ol>
+      <li>
+        <p>
+          <strong>Material tensor (lines 61&ndash;120).</strong> Injectivity
+          of \(w \mapsto \mathcal{S} (w)\) on the jets \(F_{01} = v\), giving
+          the \((2, 2)\) and \((0, 0)\) entries \(2 w_2 |v|^2\) and \((w_1 + 2
+          w_2) |v|^2\), and \(F_{02} = F_{12} = v\), giving \((0, 1)\) entry
+          \(w_3 |v|^2\). Symmetry and invariance under the signed and real
+          average. \(\text{tr} M (w) = 4 (w_1 + 4 w_2) \mathcal{O}\). The
+          traces \(0, 0, 4\mathcal{O}\) for \(w^0 = (- 1, \tfrac{1}{4}, -
+          1)\), \(w^- = (0, 0, 1)\), \(w^+ = (0, \tfrac{1}{4}, 0)\). The
+          coefficients \(w^{\pm}\) agree with the displayed correction fields
+          \(J^{\pm}\).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Chart identity (lines 122&ndash;160).</strong> \(V_{k, c}
+          B_k x = c \hspace{0.17em} \pi A_k^{- 1} KA_k x\). The difference
+          from \(c \hspace{0.17em} \pi x\) is a multiple of \(\pi A_k^{- 1}
+          e_0 = a_k^{- 4} \boldsymbol{1}_4\), which centring removes.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Coefficient limit (lines 170&ndash;230).</strong> \(\|z -
+          \vartheta_k^{- 2} K \Gamma v\|_{\infty} \leqslant \vartheta_k^{- 2} 
+          \|
+\xi - \Gamma v\|_{\text{c}} \leqslant \delta_k\), using \(z =
+          \vartheta_k^{- 2} K \xi\). Then the two-set bound \(\| \textsf{R} \|
+          \delta_k + \|T\| \varepsilon\), preserved by the fixed-\(k\)
+          ultrafilter limit, and the order \(k \to \infty\) before
+          \(\varepsilon \downarrow 0\). The principal-witness argument is
+          sound as a deduction from its stated local inputs:
+        </p>
+        <ul>
+          <li>
+            <p>
+              the invariant linear functional on a simple algebra vanishes;
+            </p>
+          </li>
+          <li>
+            <p>
+              the Hessian kills infinitesimal gauge directions because the
+              first variation vanishes;
+            </p>
+          </li>
+          <li>
+            <p>
+              the elementary-direction bound \(16 (1 + \max (r_i, r_j))^4\);
+            </p>
+          </li>
+          <li>
+            <p>
+              the compactness-by-contradiction upgrade, using injectivity of
+              \(T\).
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Slow trace (lines 338&ndash;354).</strong> \(\| \text{tr}
+          W^b_k \| \leqslant 4 \| \textsf{R} \| \delta_k\) for \(b \in \{0,
+          -\}\). The remark that \(\hat{\beta}_k^p \delta_k \to \infty\) is
+          correct: \(\tfrac{1}{4} (\log y)^2 \leqslant 4 \sqrt{y}\).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Moment-map convergence (lines 355&ndash;615).</strong>
+        </p>
+        <ul>
+          <li>
+            <p>
+              Injectivity of \(\pi_0\) at grade four via the
+              constant-curvature affine Maxwell solutions, and \(\mathcal{O}
+              \neq 0\) (value \(\tfrac{1}{2} |v|^2\)).
+            </p>
+          </li>
+          <li>
+            <p>
+              The recentring bound \(\|K (\mathcal{N}v
+              -\mathcal{T}v)\|_{\text{c}} \leqslant 2
+              \alpha
+\|K\mathcal{T}v\|_{\text{c}}\), and the lift scaling
+              \(\vartheta^{- 2} a^4\) with \(\beta (a_m h)^4\).
+            </p>
+          </li>
+          <li>
+            <p>
+              The one-step factor \(4 g\) and the backward induction.
+            </p>
+          </li>
+          <li>
+            <p>
+              The summit bound \(0 \leqslant g_j \leqslant 2 \text{Gate}
+              (\hat{\beta}_j)\), so \(\hat{\beta}_{\text{summit}} /
+              \hat{\beta} \to 1\), and the scheduled budget \(32 (1 + 2 \log
+              x) (\log x)^{48} \leqslant e^{(\log \log x)^2 / 10}\)
+              eventually.
+            </p>
+          </li>
+          <li>
+            <p>
+              The \(Z_i / X_i\) combination, and \(\textsf{M}_i \mathcal{A}_i
+              x = \pi_0 x - \langle U_i \pi_0 x \rangle
+\boldsymbol{1}^0_4\).
+              The latter uses \(\pi Y_i = U_i\) and the eventual transport of
+              the unit, which is correctly flagged as an input.
+            </p>
+          </li>
+          <li>
+            <p>
+              The Neumann inverse with \(\|\mathcal{A}_i^{- 1} - 1\| \leqslant
+              2 \|\mathcal{A}_i - 1\|\).
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong><tt class="verbatim">prop:ex-branch-moments</tt>.</strong> The
+          chart-array identity is the chart identity applied to \((\textsf{R}
+          \text{sym} x)_{ac}\) after commuting \(B_k\) with the average. The
+          limit is \(\text{sym} (\mathfrak{c}_0 \pi_0 \mathcal{S}(w^b)) = M
+          (w^b)\). Correct.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Recording machinery (lines 660&ndash;920).</strong>
+        </p>
+        <ul>
+          <li>
+            <p>
+              Grade-three fields are multiples of the unit (one factor at
+              most; the invariant linear part vanishes).
+            </p>
+          </li>
+          <li>
+            <p>
+              Detection inequality <tt class="verbatim">eq:ex-branch-moving-detector</tt>.
+            </p>
+          </li>
+          <li>
+            <p>
+              The radius bound \(R (x) = O (x^{122 / 32}) = o (x^4)\).
+            </p>
+          </li>
+          <li>
+            <p>
+              The geometric tail \(\text{tail}_{k + 1} \leqslant \tfrac{2}{3}
+              \text{tail}_k\), using \(a_{k + 1} \leqslant a_k / 3\) and
+              \(J_{k + 1} \leqslant J_k + 1\).
+            </p>
+          </li>
+          <li>
+            <p>
+              The rooted price is fast for every \(\eta < 1 / 8\).
+            </p>
+          </li>
+        </ul>
+        <p>
+          All correct as deductions from the stated purchase and spectator
+          inputs.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><tt class="verbatim">prop:ex-branch-raw-fast</tt>.</strong> The
+          averaged functional \(\Lambda^{\sigma}_k\) over \(n_k = \lceil e^{(1
+          - \tau) s_k} \rceil\) displacements telescopes the difference
+          identity to \(| \Lambda^{\sigma}_k w_{d, k} | \leqslant
+          D^{\sigma}_{d, k} + 2 E^{\sigma}_{d,
+k} / (a_k n_k)\). The endpoint
+          values agree by the grade-three unit property. Only a finite
+          intersection of large sets is used at each fixed \(k\). The false
+          branch is exactly zero; the principal trace is exactly \(\sum_d
+          \nabla_d Q_d\). Correct. The explicit rate \((1 + s)^5 e^{- s / 8}\)
+          with \(n_k = \lceil e^{s_k} / (1 + s_k) \rceil\) is also correct.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><tt class="verbatim">prop:ex-branch-washout</tt>.</strong> \(\text{tr}
+          t^b_k = |\mathcal{G}|^{- 1}  \sum_g \mathfrak{c} \rho_g (y^b_k)\) is
+          fast and centred. With \(\pi r^b_k = q^b_k\), the chart identity
+          gives \(\hat{\beta}^p \text{tr} (\textsf{P}_i t^b) = \textsf{M}_i
+          (\hat{\beta}^p
+B_{k_i} r^b_{k_i}) \to 0\), because \(\|B_k \|
+          \leqslant C \hat{\beta}_k e^{\ell_k}\) is subexponential. The
+          explicit rate exponent \(p + 6\) and the true-branch divergence
+          (limit trace \(4\mathcal{O} \neq 0\)) are correct.
+        </p>
+      </li>
+    </ol>
+    <p>
+      <strong>Support files after the author's build.</strong> The chapter is
+      unchanged since PR #70. <tt class="verbatim">trace-free-rank.tex</tt> and <tt
+      class="verbatim">preamble.tex</tt> are also unchanged. <tt class="verbatim">ope-filtration.tex</tt>
+      was revised by C05 (<tt class="verbatim">8b15d44</tt>, <tt class="verbatim">5d68524</tt>),
+      but the chapter does not cite it.
+    </p>
+    <p>
+      <strong>Existing results.</strong> The tools are the Neumann series,
+      finite-dimensional compactness and norm equivalence, Schur-type colour
+      facts (proved in <tt class="verbatim">trace-free-rank.tex</tt>), and the
+      closed-ball/ultrafilter passage. All are elementary and used correctly.
+      No literature result would replace the chart bookkeeping.
+    </p>
+    <h2 id="auto-2"><a id="required-changes-and-remaining-uncertainty"></a>Required changes and remaining uncertainty<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          <strong>R1 (minor).</strong> Two propositions cite their hypotheses
+          loosely. <tt class="verbatim">prop:ex-branch-raw-fast</tt> says &quot;Assume
+          the recording and test properties above&quot;. <tt class="verbatim">prop:ex-branch-washout</tt>
+          says &quot;Under the recording and transport estimates&quot;. Cite
+          the labels instead (<tt class="verbatim">eq:ex-branch-book-current</tt>&ndash;<tt
+          class="verbatim">eq:ex-branch-book-tensor</tt>, <tt class="verbatim">eq:ex-branch-recorded-difference</tt>,
+          the separation and continuity of \(L^{\sigma}_d\), the grade-three
+          unit property). Also label the transport bound \(\|B_k \| \leqslant
+          C \hat{\beta}_k e^{\ell_k}\) (around line 1030) and cite it in the
+          washout. <tt class="verbatim">prop:ex-branch-moments</tt> already does this
+          well.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>R2 (minor).</strong> <tt class="verbatim">ope-filtration.tex</tt> is
+          listed in <tt class="verbatim">unit.json</tt> and input by <tt class="verbatim">evidence/wrapper.tex</tt>,
+          but the chapter never cites it. Since the C05 revisions it brings
+          seven undefined references into the wrapper build: the two the
+          author recorded plus five <tt class="verbatim">finite-rank-*</tt> labels.
+          Remove it from the unit and the wrapper, or say what it supplies.
+        </p>
+      </li>
+    </ul>
+    <p>
+      Not checked: the production of the inputs, which are hypotheses by
+      design (finite-volume purchases, spectator estimates, local Hessian
+      comparisons, point limits, chart one-point convergence); <tt class="verbatim">preamble.tex</tt>;
+      and the rest of the support files.
+    </p>
+    <h2 id="auto-3"><a id="acceptance"></a>Acceptance<span style="margin-left: 1em"></span></h2>
+    <p>
+      No acceptance is recorded. The responsible human reviewer may record
+      local acceptance, conditional on the listed inputs, either now or after
+      R1&ndash;R2 (which change the fingerprint only if the chapter or <tt
+      class="verbatim">unit.json</tt> is edited).
+    </p>
+    <div class="ym-unit-nav">
+      <a class="ym-prev" href="../../YM-000033/correspondence.html">&larr; YM-000033</a><span class="ym-part"><a href="../correspondence.html">YM-000034:
+      Trace branch moment limits and weighted washout (draft)</a><font class="ym-sep">&middot;</font><a
+      href="../HANDOFF.html">HANDOFF</a><font class="ym-sep">&middot;</font><a href="../validation.html">validation</a></span>
+    </div>
+  </body>
+</html>

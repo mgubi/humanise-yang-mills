@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Review of a proof unit &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <div class="ym-unit-nav">
+      <span class="ym-part"><a href="../correspondence.html">YM-000022: Logarithmic asymptotics of the running
+      inverse coefficient (draft)</a><font class="ym-sep">&middot;</font><a href="../evidence/index.html">evidence</a><font
+      class="ym-sep">&middot;</font><a href="../proof.html">proof</a></span><a class="ym-next" href="../../YM-000026/correspondence.html">YM-000026
+      &rarr;</a>
+    </div>
+    <p>
+      <h1>Review of a proof unit</h1><a id="review-of-a-proof-unit"></a>
+    </p>
+    <ul>
+      <li>
+        <p>
+          Unit: YM-000022, <tt class="verbatim">blueprint/units/YM-000022/</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Role: mathematical validity
+        </p>
+      </li>
+      <li>
+        <p>
+          Human reviewer: schmittj (no acceptance recorded; see the last
+          section)
+        </p>
+      </li>
+      <li>
+        <p>
+          Agent assistance: one Claude Opus reviewer agent, coordinated by a
+          Claude session. The agent checked the argument, opened the cited
+          sources and wrote this report. No other model was used.
+        </p>
+      </li>
+      <li>
+        <p>
+          Content SHA-256: <tt class="verbatim">37a404dea24a3001c320680e4b25334e619d6865178c86e3d85993bb4000168f</tt>
+          (<tt class="verbatim">python3 scripts/check_blueprint.py --fingerprint
+          YM-000022</tt> at commit <tt class="verbatim">d4be082</tt>, head of draft PR
+          #111; this equals the fingerprint recorded in the revision README)
+        </p>
+      </li>
+      <li>
+        <p>
+          Reviewed content: commit <tt class="verbatim">d4be082</tt> (&quot;docs: repair
+          running-coefficient positivity and source anchors&quot;), the single
+          revision commit on top of <tt class="verbatim">47762e9</tt>. File SHA-256: <tt
+          class="verbatim">manuscript/pilots/running-coupling.tex</tt> <tt class="verbatim">3f10d3ac67788342c85ed368691b8ea35b81bbc052ec1dd7a67c9a7e1d02a0ca</tt>;
+          <tt class="verbatim">manuscript/preamble.tex</tt> <tt class="verbatim">0827ef173e55ac6cf7b9726f3cbaaa5be93a5dfac8ffb2cfdf7b3faed65e90df</tt>;
+          <tt class="verbatim">manuscript/references.bib</tt> <tt class="verbatim">2d5d144741d57e970b239c69184b7566f90aa9355293026cfe26f37f0f73dbb7</tt>;
+          <tt class="verbatim">correspondence.md</tt> <tt class="verbatim">ab7053e8121e39802821ddbc2872160b91d4722aa686b66f25e0ccea9f17958c</tt>;
+          <tt class="verbatim">unit.json</tt> <tt class="verbatim">cfc20482faefa90b34cca4d903b0b21620efd55e60dd333cbeb69b8b96986731</tt>;
+          <tt class="verbatim">revisions/mgubi-astra-22-repair-20261113/README.md</tt>
+          <tt class="verbatim">2cba60fb7c67fc7c761611f18ec5973b8b074061c85db89a1d539678dd157cd3</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Manuscript files and labels: <tt class="verbatim">manuscript/pilots/running-coupling.tex</tt>
+          (<tt class="verbatim">sec:running-coefficient</tt>, <tt class="verbatim">eq:running</tt>,
+          <tt class="verbatim">prop:uniform-extraction</tt>, <tt class="verbatim">prop:running-asymptotic</tt>),
+          <tt class="verbatim">manuscript/preamble.tex</tt>, <tt class="verbatim">manuscript/references.bib</tt>.
+          The list in <tt class="verbatim">unit.json</tt> is complete for this section.
+        </p>
+      </li>
+      <li>
+        <p>
+          Source revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Review task and PR: <a href="https://github.com/hairer/humanise-yang-mills/issues/22">issue #22</a>, review claim by session
+          <tt class="verbatim">schmittj-claude-review22-rev-20261113</tt>; author
+          revision in draft PR #111.
+        </p>
+      </li>
+      <li>
+        <p>
+          Outcome: changes requested (one small citation gap; the mathematics
+          is otherwise correct). This is an agent review without human
+          acceptance.
+        </p>
+      </li>
+    </ul>
+    <p>
+      I am not an author of this unit. The previous reviewer (mgubi) is now
+      credited as an author of this revision, so the reports <tt class="verbatim">reviews/*-mgubi.md</tt>
+      cannot serve as review of the current fingerprint; this report is
+      independent of them in that sense, although I read them.
+    </p>
+    <h2 id="auto-1"><a id="findings-and-evidence"></a>Findings and evidence<span style="margin-left: 1em"></span></h2>
+    <p>
+      I reviewed the whole section, not only the diff, and recomputed every
+      step.
+    </p>
+    <h3 id="auto-2"><a id="inner-product-and-positive-definiteness-new-text"></a>Inner product and positive definiteness (new text)<span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      Correct. For <tt class="verbatim">X</tt> in the Lie algebra, <tt class="verbatim">t &#x21A6;
+      exp(tX)</tt> is a curve of unitary matrices with value <tt class="verbatim">I</tt>
+      and derivative <tt class="verbatim">X</tt> at <tt class="verbatim">0</tt>; differentiating
+      <tt class="verbatim">exp(tX)^* exp(tX) = I</tt> gives <tt class="verbatim">X^* + X = 0</tt>.
+      The form <tt class="verbatim">&#x27E8;X,Y&#x27E9; = &minus;r_G^{-1} Re tr(XY)</tt>
+      is real bilinear and symmetric (<tt class="verbatim">tr(XY) = tr(YX)</tt>). On
+      skew-Hermitian matrices <tt class="verbatim">&minus;tr(XX) = tr(X^*X) =
+      &Sigma;_{a,b} |X_{ab}|^2</tt>, which is real and positive for <tt class="verbatim">X
+      &ne; 0</tt>, so the form is an inner product on <tt class="verbatim">&#x1D524;</tt>;
+      the sign convention is right. The class of algebras is exactly the one
+      the hypotheses give: real subalgebras of <tt class="verbatim">u(r_G)</tt>, i.e.
+      Lie algebras of closed subgroups of <tt class="verbatim">U(r_G)</tt> (compact
+      type). The display writes <tt class="verbatim">r_G^{-1} tr(X^*X)</tt> without <tt
+      class="verbatim">Re</tt>; this is harmless because the trace is real (NIT).
+    </p>
+    <h3 id="auto-3"><a id="casimir-constant-basis-independence-nonzero-dimension-new-text"></a>Casimir constant, basis independence, nonzero dimension
+    (new text)<span style="margin-left: 1em"></span></h3>
+    <p>
+      Correct. If <tt class="verbatim">f_i = &Sigma;_j q_{ij} e_j</tt> with <tt class="verbatim">q</tt>
+      orthogonal, linearity of <tt class="verbatim">ad</tt> gives <tt class="verbatim">&Sigma;_i
+      (ad f_i)^2 = &Sigma;_{j,k} (q&#x1D40;q)_{jk} ad e_j ad e_k = &Sigma;_j
+      (ad e_j)^2</tt>; any two orthonormal bases are related by such a <tt
+      class="verbatim">q</tt>, so <tt class="verbatim">C_&#x1D524;</tt> is basis independent. A
+      nonabelian algebra contains a nonzero element, so <tt class="verbatim">dim_&#x211D;
+      &#x1D524; &ge; 1</tt> and the division is legitimate. Only the
+      nonabelian clause of simplicity is used here (and for positivity below);
+      the section keeps the full simplicity hypothesis, which is harmless and
+      matches the source.
+    </p>
+    <h3 id="auto-4"><a id="positivity-of-b_0g"></a>Positivity of <tt class="verbatim">b_0(G)</tt><span style="margin-left: 1em"></span></h3>
+    <p>
+      Correct. I rechecked <tt class="verbatim">&#x27E8;[X,Y],Z&#x27E9; =
+      &minus;&#x27E8;Y,[X,Z]&#x27E9;</tt>: both sides equal <tt class="verbatim">&minus;r_G^{-1}
+      Re(tr(XYZ) &minus; tr(YXZ))</tt> after cycling <tt class="verbatim">tr(YZX) =
+      tr(XYZ)</tt>. Hence each <tt class="verbatim">ad e_j</tt> is skew-adjoint, <tt
+      class="verbatim">&minus;Tr_&#x1D524;((ad e_j)^2) = Tr((ad e_j)&#x1D40; ad e_j) =
+      &Sigma;_&#x2113; &#x2016;[e_j,e_&#x2113;]&#x2016;^2</tt>, and <tt class="verbatim">C_&#x1D524;
+      = (dim &#x1D524;)^{-1} &Sigma;_{j,&#x2113;}
+      &#x2016;[e_j,e_&#x2113;]&#x2016;^2</tt>. If all <tt class="verbatim">[e_j,e_&#x2113;]</tt>
+      vanished, bilinearity would make <tt class="verbatim">&#x1D524;</tt> abelian; so
+      <tt class="verbatim">C_&#x1D524; &gt; 0</tt> and <tt class="verbatim">b_0(G) = 11
+      C_&#x1D524;/(48&pi;^2) &gt; 0</tt>.
+    </p>
+    <p>
+      Normalisation check (my hand computation, offered for orientation; not a
+      claim of the section): for <tt class="verbatim">SU(N)</tt> in the defining
+      representation, <tt class="verbatim">e_a = i&radic;(2N) T^a</tt> with <tt class="verbatim">tr(T^aT^b)
+      = &delta;_{ab}/2</tt> is orthonormal, <tt class="verbatim">[e_a,e_b] =
+      &minus;&radic;(2N) f_{abc} e_c</tt>, so <tt class="verbatim">C_&#x1D524; = 2N
+      &middot; N(N^2&minus;1)/(N^2&minus;1) = 2N^2</tt> and <tt class="verbatim">2b_0(G)
+      = 11N^2/(12&pi;^2)</tt>. With the conventional <tt class="verbatim">&beta; =
+      2N/g_{std}^2</tt> and <tt class="verbatim">b_0^{std} = 11N/(48&pi;^2)</tt> one
+      gets <tt class="verbatim">&beta; &asymp; 2N &middot; 2b_0^{std} log(a^{-1}) =
+      11N^2/(12&pi;^2) log(a^{-1})</tt>, consistent with <tt class="verbatim">c =
+      2b_0(G)</tt>. So the constant is the expected one; but <tt class="verbatim">b_0(G)</tt>
+      is <tt class="verbatim">2N b_0^{std}</tt> for <tt class="verbatim">SU(N)</tt>, and <tt
+      class="verbatim">g = &beta;^{-1/2} = g_{std}/&radic;(2N)</tt> (NIT; see suggestion
+      3).
+    </p>
+    <h3 id="auto-5"><a id="scale-divergence"></a>Scale divergence<span style="margin-left: 1em"></span></h3>
+    <p>
+      Correct: <tt class="verbatim">a_m^{-1} = &Pi;_{j&lt;m} B_j</tt> with integers <tt
+      class="verbatim">B_j &ge; 3</tt>, so <tt class="verbatim">s_m = &Sigma;_{j&lt;m} log B_j
+      &ge; m log 3 &rarr; &infin;</tt>. Here <tt class="verbatim">s_0 = 0</tt>; only
+      eventual positivity is used.
+    </p>
+    <h3 id="auto-6"><a id="the-running-estimate-eqrunning"></a>The running estimate <tt class="verbatim">eq:running</tt><span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      Stated correctly as an explicit outstanding input: one fixed intercept
+      <tt class="verbatim">&beta;&#x0304;</tt>, and for every <tt class="verbatim">&eta; &gt;
+      0</tt> a threshold <tt class="verbatim">m_0(&eta;)</tt> uniform in <tt class="verbatim">N
+      &ge; m</tt> and <tt class="verbatim">p</tt>. The section does not claim to prove
+      it. Quantifier order (<tt class="verbatim">&forall;&eta; &exist;m_0 &forall;m &ge;
+      m_0 &forall;N &ge; m &forall;p</tt>) matches what the propositions use.
+    </p>
+    <h3 id="auto-7"><a id="propuniform-extraction"></a><tt class="verbatim">prop:uniform-extraction</tt><span style="margin-left: 1em"></span></h3>
+    <p>
+      Correct. With <tt class="verbatim">&eta; = &epsilon;/2</tt> and <tt class="verbatim">s_m
+      &gt; 2(|A|+1)/&epsilon;</tt>: <tt class="verbatim">|&beta;/s_m &minus; c| &le;
+      |&beta; &minus; (A + c s_m)|/s_m + |A|/s_m &le; &epsilon;/2 +
+      |A|/s_m</tt>, and <tt class="verbatim">|A|/s_m &lt; &epsilon;|A|/(2(|A|+1)) &lt;
+      &epsilon;/2</tt>. Both thresholds depend on <tt class="verbatim">&epsilon;</tt>
+      only. No sign of <tt class="verbatim">A</tt> or <tt class="verbatim">c</tt> is used.
+    </p>
+    <h3 id="auto-8"><a id="proprunning-asymptotic"></a><tt class="verbatim">prop:running-asymptotic</tt><span style="margin-left: 1em"></span></h3>
+    <p>
+      Correct, conditional on <tt class="verbatim">eq:running</tt> and <tt class="verbatim">c =
+      2b_0(G) &gt; 0</tt>. Substituting <tt class="verbatim">m = i</tt>, <tt class="verbatim">N =
+      N(i)</tt>, <tt class="verbatim">p = k(i)</tt> is legitimate once <tt class="verbatim">i &le;
+      N(i)</tt>; uniformity in <tt class="verbatim">p</tt> is what frees <tt class="verbatim">k</tt>.
+      Taking <tt class="verbatim">&epsilon; = c/2</tt> gives <tt class="verbatim">x_i &gt; c/2
+      &gt; 0</tt> and <tt class="verbatim">&beta; = s_i x_i &gt; 0</tt> eventually.
+      Lebl's rules are applied on the positive tail, and the
+      finite-modification remark handles their &quot;for all <tt class="verbatim">n</tt>&quot;
+      hypotheses. The identity <tt class="verbatim">1/&radic;x_i =
+      &radic;s_i/&radic;&beta; = g &radic;(log a_i^{-1})</tt> holds on that
+      tail. There is only one limit, so no order-of-limits issue arises. NIT:
+      the proposition's statement does not name its standing hypotheses (the
+      fixed family with <tt class="verbatim">eq:running</tt>, and the nonabelian/simple
+      <tt class="verbatim">&#x1D524;</tt> giving <tt class="verbatim">c &gt; 0</tt>); they are
+      only in the preceding paragraph and in the proof's first line.
+    </p>
+    <h3 id="auto-9"><a id="closing-remark"></a>Closing remark<span style="margin-left: 1em"></span></h3>
+    <p>
+      Correct as worded. At <tt class="verbatim">N(i) = i</tt> the coefficient is the
+      one in the bare density <tt class="verbatim">exp(&minus;&beta; &Sigma;_faces (1
+      &minus; r_G^{-1} Re tr U_p))</tt> (see the Lean-correspondence report).
+      The section does not write this action out; doing so in one line would
+      let readers compare with the usual Wilson normalisation (suggestion 4).
+    </p>
+    <h3 id="auto-10"><a id="literature"></a>Literature<span style="margin-left: 1em"></span></h3>
+    <p>
+      Lebl, <em>Basic Analysis I</em>, Propositions 2.2.5(iv) and 2.2.6: I did
+      not refetch the page; the previous mathematics review (<tt class="verbatim">reviews/mathematics-mgubi.md</tt>)
+      records its statements and hash, the propositions as quoted there are
+      the standard ones and apply as used, and the scalar proofs are unchanged
+      by this revision.
+    </p>
+    <p>
+      Hall, arXiv:math-ph/0005032v1: I downloaded the versioned PDF on 13
+      November 2026 (<tt class="verbatim">https://arxiv.org/pdf/math-ph/0005032v1</tt>,
+      128 pages, SHA-256 <tt class="verbatim">2be9f80ed20b18b361c759d386dfd6804d5f9b31cb94b547a29883fa78f8f7f1</tt>)
+      and read the cited passages. Chapter 3, Definition 3.13 (printed p. 36):
+      the Lie algebra of a matrix Lie group is the set of <tt class="verbatim">X</tt>
+      with <tt class="verbatim">e^{tX} &isin; G</tt> for all real <tt class="verbatim">t</tt>.
+      Section 5.4 of Chapter 3 (printed p. 37): <tt class="verbatim">e^{tX}</tt> is
+      unitary for all <tt class="verbatim">t</tt> iff <tt class="verbatim">X^* = &minus;X</tt>, by
+      differentiating at <tt class="verbatim">t = 0</tt>. Theorem 3.16 (printed pp.
+      40&ndash;41): <tt class="verbatim">g</tt> is closed under real scalars, sums and
+      <tt class="verbatim">XY &minus; YX</tt>. Hall's &quot;matrix Lie group&quot; is a
+      subgroup of <tt class="verbatim">GL(n;&#x2102;)</tt> closed in <tt class="verbatim">GL(n;&#x2102;)</tt>;
+      a closed subgroup of <tt class="verbatim">U(r_G)</tt> is one. The citations are
+      precise and applicable. However, they appear only in the revision
+      README; neither the manuscript nor the correspondence's literature
+      section cites Hall (finding 1).
+    </p>
+    <h3 id="auto-11"><a id="build"></a>Build<span style="margin-left: 1em"></span></h3>
+    <p>
+      I built <tt class="verbatim">manuscript/main.tex</tt> out of tree with <tt class="verbatim">latexmk
+      -pdf</tt> (exit 0, three pages); the log has no warnings, undefined
+      references or over/underfull boxes, and <tt class="verbatim">pdftotext</tt> finds
+      no <tt class="verbatim">??</tt>. I did not visually inspect the rendered pages.
+    </p>
+    <h2 id="auto-12"><a id="required-changes-and-remaining-uncertainty"></a>Required changes and remaining uncertainty<span style="margin-left: 1em"></span></h2>
+    <ol>
+      <li>
+        <p>
+          <strong>GAP (citation): define <tt class="verbatim">&#x1D524;</tt> and cite
+          the facts that make it a Lie algebra.</strong> The section never
+          defines <tt class="verbatim">&#x1D524;</tt>; its first new sentence
+          (&quot;Since <tt class="verbatim">exp(tX)</tt> is unitary for <tt class="verbatim">X
+          &isin; &#x1D524;</tt>&quot;) silently uses the one-parameter
+          definition, and the definition of <tt class="verbatim">C_&#x1D524;</tt> needs
+          <tt class="verbatim">ad e_j</tt> to map <tt class="verbatim">&#x1D524;</tt> into itself,
+          i.e. closure of <tt class="verbatim">&#x1D524;</tt> under commutators, which
+          for the one-parameter set is a theorem (it needs the Lie product
+          formula and closedness of <tt class="verbatim">G</tt> for sums). The phrase
+          &quot;with nonabelian simple real Lie algebra <tt class="verbatim">&#x1D524;</tt>&quot;
+          presupposes this without reference. Smallest repair: one sentence,
+          &quot;Here <tt class="verbatim">&#x1D524; = {X : e^{tX} &isin; G for all t
+          &isin; &#x211D;}</tt>, a finite-dimensional real Lie algebra under
+          <tt class="verbatim">[X,Y] = XY &minus; YX</tt> [Hall, Definition 3.13 and
+          Theorem 3.16]&quot;, plus a <tt class="verbatim">references.bib</tt> entry for
+          the versioned arXiv source (and optionally Hall &sect;5.4 next to
+          the derivative argument). The author has already checked these
+          passages; they should also be listed in the correspondence's
+          literature section. The previous review raised this only as
+          optional, so it is a new request.
+        </p>
+      </li>
+    </ol>
+    <p>
+      Suggestions, not required:
+    </p>
+    <ol>
+      <li>
+        <p>
+          State the standing hypotheses in <tt class="verbatim">prop:running-asymptotic</tt>
+          (&quot;Assume <tt class="verbatim">eq:running</tt>; <tt class="verbatim">&#x1D524;</tt>
+          nonabelian&quot;).
+        </p>
+      </li>
+      <li>
+        <p>
+          Note that <tt class="verbatim">b_0(G)</tt> is not the conventional one-loop
+          coefficient: for <tt class="verbatim">SU(N)</tt>, <tt class="verbatim">b_0(G) = 2N
+          b_0^{std}</tt> and <tt class="verbatim">g = g_{std}/&radic;(2N)</tt> (my
+          computation above; to be verified independently if included).
+        </p>
+      </li>
+      <li>
+        <p>
+          Write out the bare Wilson action <tt class="verbatim">&beta; &Sigma;_p (1
+          &minus; r_G^{-1} Re tr U_p)</tt> in the closing remark.
+        </p>
+      </li>
+    </ol>
+    <p>
+      Not checked: the running estimate <tt class="verbatim">eq:running</tt> and the
+      construction that is said to supply it (an explicit input of the unit);
+      Lebl's page was not refetched; the rendered PDF was not inspected
+      visually.
+    </p>
+    <h3 id="auto-13"><a id="commands-run"></a>Commands run<span style="margin-left: 1em"></span></h3>
+    <pre class="verbatim" xml:space="preserve">
+git log --oneline -5; git diff d4be082~1 d4be082
+sha256sum manuscript/pilots/running-coupling.tex manuscript/preamble.tex manuscript/references.bib blueprint/units/YM-000022/{correspondence.md,unit.json} blueprint/units/YM-000022/revisions/mgubi-astra-22-repair-20261113/README.md
+python3 scripts/check_blueprint.py                      # Blueprint structure OK: 2 units. Lean and mathematics were not verified.
+python3 scripts/check_blueprint.py --fingerprint YM-000022   # 37a404de&hellip;168f
+curl -sSL -o hall.pdf https://arxiv.org/pdf/math-ph/0005032v1; pdftotext -layout hall.pdf hall.txt   # scratch directory
+latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=&lt;scratch&gt; main.tex   # exit 0</pre>
+    <h2 id="auto-14"><a id="acceptance"></a>Acceptance<span style="margin-left: 1em"></span></h2>
+    <p>
+      Not recorded. This is an agent review without human acceptance; any edit
+      in response changes the fingerprint and needs renewed review.
+    </p>
+    <div class="ym-unit-nav">
+      <span class="ym-part"><a href="../correspondence.html">YM-000022: Logarithmic asymptotics of the running
+      inverse coefficient (draft)</a><font class="ym-sep">&middot;</font><a href="../evidence/index.html">evidence</a><font
+      class="ym-sep">&middot;</font><a href="../proof.html">proof</a></span><a class="ym-next" href="../../YM-000026/correspondence.html">YM-000026
+      &rarr;</a>
+    </div>
+  </body>
+</html>

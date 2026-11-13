@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Review of a proof unit &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <div class="ym-unit-nav">
+      <a class="ym-prev" href="../../YM-000033/correspondence.html">&larr; YM-000033</a><span class="ym-part"><a href="../correspondence.html">YM-000034:
+      Trace branch moment limits and weighted washout (draft)</a><font class="ym-sep">&middot;</font><a
+      href="../HANDOFF.html">HANDOFF</a><font class="ym-sep">&middot;</font><a href="../validation.html">validation</a></span>
+    </div>
+    <p>
+      <h1>Review of a proof unit</h1><a id="review-of-a-proof-unit"></a>
+    </p>
+    <ul>
+      <li>
+        <p>
+          Unit: YM-000034, <tt class="verbatim">blueprint/units/YM-000034/</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Role: Lean correspondence
+        </p>
+      </li>
+      <li>
+        <p>
+          Human reviewer: <tt class="verbatim">hairer</tt> (account under which this
+          report is submitted; no human acceptance is recorded by this report)
+        </p>
+      </li>
+      <li>
+        <p>
+          Agent assistance: the whole review was done by a Claude (Anthropic)
+          agent session, <tt class="verbatim">hairer-claude-issue34-review-20261113</tt>.
+          The unit was drafted with GPT-6.1 Terra (Codex).
+        </p>
+      </li>
+      <li>
+        <p>
+          Content SHA-256: <tt class="verbatim">59b66debcf4ebb92ff4ff13f8c71ab481350e623ed61dc37fd91ddabd60f1ba7</tt>
+          (<tt class="verbatim">python3 scripts/check_blueprint.py --fingerprint
+          YM-000034</tt> at <tt class="verbatim">69c254b</tt>)
+        </p>
+      </li>
+      <li>
+        <p>
+          Manuscript files and labels: <tt class="verbatim">manuscript/existence/trace-branch-moments.tex</tt>,
+          <tt class="verbatim">prop:ex-branch-moments</tt>, <tt class="verbatim">prop:ex-branch-washout</tt>;
+          <tt class="verbatim">blueprint/units/YM-000034/correspondence.md</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Source revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Review task and PR: issue <a href="https://github.com/hairer/humanise-yang-mills/issues/34">#34</a>; author PR #70; this
+          report's PR: draft against <tt class="verbatim">codex/existence-monograph</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Outcome: <strong>accepted locally for the items checked below; the
+          input correspondence is only partly covered.</strong> No discrepancy
+          found and no required change. <strong>No Lean was
+          elaborated:</strong> the toolchain is unreachable from the review
+          environment, so <tt class="verbatim">#print axioms</tt> for <tt class="verbatim">nearing_h</tt>
+          and <tt class="verbatim">muteP</tt> was not run.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-1"><a id="findings-and-evidence"></a>Findings and evidence<span style="margin-left: 1em"></span></h2>
+    <p>
+      All by reading the pinned source (<tt class="verbatim">Lean/YM/TraceExtension/Shelves/Pear.lean</tt>
+      and the definitions below).
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>Branches.</strong> <tt class="verbatim">Bend := Option Bool</tt> (<tt
+          class="verbatim">Slate/Pave.lean</tt> 23): <tt class="verbatim">none</tt> is the
+          principal branch (<tt class="verbatim">Zn.Meld</tt>), and <tt class="verbatim">some
+          c</tt> are the corrections <tt class="verbatim">Plint G n c</tt> built from
+          <tt class="verbatim">Toca c</tt> (<tt class="verbatim">Margin/Mallet.lean</tt>
+          15&ndash;16). <tt class="verbatim">Toca true</tt> is \(\tfrac{1}{4} \sum\) of
+          the diagonal pair labels on the diagonal; <tt class="verbatim">Toca false</tt>
+          is the off-diagonal pair sum. These are the manuscript's \(J^+\) and
+          \(J^-\). The manuscript's \(\{0, -, +\}\) is <tt class="verbatim">{none, some
+          false, some true}</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Coefficients.</strong> <tt class="verbatim">BornZ i = i.elim (-tribe)
+          azure</tt>, with <tt class="verbatim">tribe = ![1,-1/4,1]</tt> (<tt class="verbatim">Slate/April.lean</tt>
+          26&ndash;27) and <tt class="verbatim">azure M = if M then ![0,1/4,0] else
+          ![0,0,1]</tt> (<tt class="verbatim">Margin/Mallet.lean</tt> 14). This gives
+          \(w^0 = (- 1, \tfrac{1}{4}, - 1)\), \(w^+ = (0, \tfrac{1}{4}, 0)\),
+          \(w^- = (0, 0, 1)\).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Material tensor.</strong> <tt class="verbatim">materialB C t =
+          material (Cells.standard C) (Fin.cons 0 (BornZ t))</tt> (<tt class="verbatim">Pear.lean</tt>
+          50). <tt class="verbatim">material S w a b = fromPol S (stress G w a b)</tt>,
+          with <tt class="verbatim">fromPol = S.project &#x2218; coords</tt> (<tt class="verbatim">Push/STRESS_FLUX/Lift.lean</tt>
+          24, 147). <tt class="verbatim">stress</tt> is, on the diagonal, <tt class="verbatim">t 0
+          &bull; unit + t 1 &bull; &Sigma;_i pair a i a i + t 2 &bull;
+          &Sigma;&Sigma; pair i j i j</tt>, and off the diagonal <tt class="verbatim">t
+          3 &bull; &Sigma;_i pair a i b i</tt> (<tt class="verbatim">Polynomial.lean</tt>
+          177&ndash;179). With <tt class="verbatim">t 0 = 0</tt> this is \(\pi_0
+          \mathcal{S} (w) = M (w)\). <tt class="verbatim">pair_value</tt> reads
+          \(\langle F_{ab}, F_{cd} \rangle\) with no extra factor, matching
+          the manuscript's \(P_{ij, kl}\).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>First proposition.</strong> <tt class="verbatim">chartB</tt> says <tt
+          class="verbatim">Phase4 J V Z j (baron S X k) = inter (Moment4 &hellip;
+          (Shine4 Z X k)) &middot;</tt> for <tt class="verbatim">k = Stern V j</tt>,
+          with <tt class="verbatim">inter f a b = &frac12;(f a b + f b a)</tt> (<tt
+          class="verbatim">Shelves/Tonic.lean</tt> 49). This is the chart-array
+          identity, with \(\textsf{M}_i\) = <tt class="verbatim">Moment4</tt>, the
+          transported averaged coefficients = <tt class="verbatim">Shine4</tt> (<tt
+          class="verbatim">swale</tt> of <tt class="verbatim">OrbitT</tt>), and \(\text{sym}\) =
+          <tt class="verbatim">inter</tt>. <tt class="verbatim">nearing_h</tt> concludes <tt
+          class="verbatim">Tendsto (fun k =&gt; Phase4 J V Z k (baron S P' (Stern V k)))
+          atTop (&#x1D4DD; (materialB C B))</tt>. Its hypotheses <tt class="verbatim">hZ
+          : Tendsto (Moment4 Z J V) atTop (&#x1D4DD; (Hill4 C))</tt> and <tt
+          class="verbatim">tiara</tt> (<tt class="verbatim">Shine4 &rarr; BillC (BornZ B)</tt>)
+          are the moment input <tt class="verbatim">eq:ex-branch-moment-input</tt> and
+          the coefficient input <tt class="verbatim">eq:ex-branch-coefficient-input</tt>.
+          <tt class="verbatim">Courtis</tt> (<tt class="verbatim">Hill4 C (BillC F&#x1D63; w) =
+          material &hellip; (Fin.cons 0 w)</tt>) is the step \(\mathfrak{c}_0
+          \pi_0 \mathcal{S} (w) = M (w)\), proved there from the vanishing
+          expectation of the pair labels. The summit indexing <tt class="verbatim">Stern
+          V k</tt> is the manuscript's \(k_i\).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Washout.</strong> <tt class="verbatim">muteP p (hl : B &ne; some
+          true)</tt> concludes <tt class="verbatim">Tendsto (fun i =&gt; H!(Stern V i)^p
+          &bull; &Sigma;_a Phase4 J V Z i (baron S P' (Stern V i)) a a) atTop
+          (&#x1D4DD; 0)</tt> for every natural <tt class="verbatim">p</tt>. This is <tt
+          class="verbatim">eq:ex-branch-washout</tt> for \(b \in \{0, -\}\) and each
+          fixed \(p \in \mathbb{N}\), with the clock evaluated at the summit
+          level. The proof route (<tt class="verbatim">Thin</tt> gives <tt class="verbatim">Fast</tt>
+          of the raw diagonal sums <tt class="verbatim">Zees</tt>; <tt class="verbatim">centering</tt>
+          fixes them via <tt class="verbatim">stitch_k</tt>; <tt class="verbatim">Vigor</tt> with
+          <tt class="verbatim">hZ</tt>) mirrors <tt class="verbatim">prop:ex-branch-raw-fast</tt>
+          followed by <tt class="verbatim">prop:ex-branch-washout</tt>.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-2"><a id="required-changes-and-remaining-uncertainty"></a>Required changes and remaining uncertainty<span style="margin-left: 1em"></span></h2>
+    <p>
+      No required change for this role.
+    </p>
+    <p>
+      Not checked:
+    </p>
+    <ul>
+      <li>
+        <p>
+          Elaboration, and the axiom prints of <tt class="verbatim">nearing_h</tt>, <tt
+          class="verbatim">muteP</tt> and <tt class="verbatim">chartB</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The bodies and hypotheses of <tt class="verbatim">tiara</tt>, <tt class="verbatim">Thin</tt>,
+          <tt class="verbatim">Vigor</tt>, <tt class="verbatim">heroicB</tt>, <tt class="verbatim">strikes</tt>,
+          <tt class="verbatim">Dash.arcing</tt>, <tt class="verbatim">stitch_k</tt>, <tt class="verbatim">OrbitT</tt>,
+          <tt class="verbatim">swale</tt>, <tt class="verbatim">Moment4</tt>, <tt class="verbatim">Shine4</tt>
+          and <tt class="verbatim">baron</tt>, beyond their roles above.
+        </p>
+      </li>
+      <li>
+        <p>
+          The structured hypotheses <tt class="verbatim">Grant</tt>, <tt class="verbatim">Rod</tt>,
+          <tt class="verbatim">Gondola</tt>, <tt class="verbatim">StarPath</tt>, <tt class="verbatim">CellHyp</tt>,
+          <tt class="verbatim">Sceptre</tt>, <tt class="verbatim">PostT</tt>, <tt class="verbatim">Stock.Tabs</tt>
+          and <tt class="verbatim">supportQ</tt>. The correspondence record lists them
+          as inputs, and I found nothing inconsistent in what I read.
+        </p>
+      </li>
+    </ul>
+    <p>
+      A reviewer with a working Lean setup should run the axiom prints and
+      confirm the elaborated statements of <tt class="verbatim">nearing_h</tt> and <tt
+      class="verbatim">muteP</tt>.
+    </p>
+    <h2 id="auto-3"><a id="acceptance"></a>Acceptance<span style="margin-left: 1em"></span></h2>
+    <p>
+      No acceptance is recorded. A responsible human reviewer may record
+      Lean-correspondence acceptance for the checked scope, preferably after
+      the axiom prints have been run.
+    </p>
+    <div class="ym-unit-nav">
+      <a class="ym-prev" href="../../YM-000033/correspondence.html">&larr; YM-000033</a><span class="ym-part"><a href="../correspondence.html">YM-000034:
+      Trace branch moment limits and weighted washout (draft)</a><font class="ym-sep">&middot;</font><a
+      href="../HANDOFF.html">HANDOFF</a><font class="ym-sep">&middot;</font><a href="../validation.html">validation</a></span>
+    </div>
+  </body>
+</html>
