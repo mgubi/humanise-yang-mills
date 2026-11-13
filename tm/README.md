@@ -4,8 +4,10 @@ This folder holds a GNU TeXmacs version of the Markdown pages of the
 repository and of the LaTeX manuscript, and an HTML site exported from it.
 The pages are found automatically: every `*.md` tracked in git (or
 untracked and not ignored), except under `tm/`, `.github/` (issue and pull
-request templates, task drafts) and `Lean/` (the imported formalisation;
-links to its files go to GitHub). A new page is picked up by the next build
+request templates, task drafts), `Lean/` (the imported formalisation;
+links to its files go to GitHub) and `blueprint/units/*/handoff/` (the
+agents' working files of each proof unit: ledgers, hashes, validation
+notes; links to them go to GitHub too). A new page is picked up by the next build
 without any change here. The LaTeX manuscript (`manuscript/main.tex` and
 its `\input` files) becomes one more document, `manuscript/main.tm`. The
 Markdown and LaTeX files are the source: everything here except the
@@ -176,6 +178,7 @@ All fixes are made by the scripts, uniformly; nothing is edited by hand.
 | Placeholders such as `<issue URL>` in `templates/` are read as HTML tags and dropped (on GitHub too) | `prep.py`: written ⟨issue URL⟩ (not in code, not HTML tags, not autolinks, not in formulas) |
 | Text inside a formula (`\text{(§II, …)}`) exported in the internal Cork encoding, not UTF-8 | `corkfix.py`: bytes that are not UTF-8 read as Cork and rewritten (mgubi/texmacs#869, item 11) |
 | `<rightarrow>`, `<alpha>` … in text inside a formula exported as `{\rightarrow}` inside `\text{}`, shown literally by MathJax (mgubi/texmacs#869, item 12) | `post.py` warns; none at present |
+| Tabs in fenced code (console output) kept as unparsed source (`md-source`) | `prep.py`: expanded to spaces (tab stops of 8) |
 | The importer keeps the Markdown source next to the parsed text (`md-source`, …) | `post.py`: unwrapped; HTML comments dropped |
 | `<details><summary>` (raw HTML) | `post.py`: `ym-details` (a collapsible `<details>` in HTML) |
 | Code fences with a language | `post.py`: the code block is kept, the language dropped (the `mermaid` diagram of the README is shown as code) |

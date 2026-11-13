@@ -28,6 +28,7 @@
 #   MAX_HTML_DIR   the max-html plugin; default ~/.TeXmacs/plugins/max-html.
 #   YM_BUILD_DIR   scratch folder (kept after the run if given).
 #   YM_TIMEOUT     seconds allowed per TeXmacs run (default 1800).
+#   YM_HTML_BATCH  pages exported to HTML per TeXmacs run (default 40).
 #   YM_REPO_URL, YM_REPO_BRANCH  where links to non-page files point
 #                  (default: the origin remote, branch main).
 
@@ -204,7 +205,16 @@ if (( ${#export_[@]} )); then
     printf '%s\t%s\n' "$stage/$p" "$html/${p%.tm}.html" >> "$B/html.lst"
   done
   echo "html: ${#export_[@]} pages"
-  tm_run "$B/html.log" "(ym-html-all \"$B/html.lst\")"
+  # in batches, one TeXmacs run each (YM_HTML_BATCH pages, default 40): a
+  # single session slows down as the documents accumulate, and every run
+  # has its own time limit
+  rm -f "$B"/html.part.*
+  split -l "${YM_HTML_BATCH:-40}" "$B/html.lst" "$B/html.part."
+  : > "$B/html.log"
+  for part in "$B"/html.part.*; do
+    tm_run "$part.log" "(ym-html-all \"$part\")" || { cat "$part.log" >> "$B/html.log"; exit 1; }
+    cat "$part.log" >> "$B/html.log"
+  done
   for p in "${export_[@]}"; do
     [[ -s "$html/${p%.tm}.html" ]] || { echo "missing $html/${p%.tm}.html" >&2; exit 1; }
   done

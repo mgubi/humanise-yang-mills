@@ -35,6 +35,9 @@ OUT = os.path.abspath(sys.argv[2])
 # the imported Lean source. The LaTeX manuscript itself is converted by
 # tex_prep.py / tex_post.py into manuscript/main.tm
 EXCLUDE = ('tm/', '.github/', 'Lean/')
+# agents' working files of the proof units (ledgers, hashes, validation
+# notes of each hand-off): not converted; links to them go to GitHub
+EXCLUDE_RE = re.compile(r'^blueprint/units/[^/]+/handoff/')
 MANUSCRIPT = 'manuscript/main.tex'
 
 
@@ -51,7 +54,7 @@ def collection():
         for d, ds, fs in os.walk(REPO):
             ds[:] = [x for x in ds if not x.startswith('.')]
             files += [os.path.relpath(os.path.join(d, f), REPO) for f in fs if f.endswith('.md')]
-    files = [f for f in files if not f.startswith(EXCLUDE) and
+    files = [f for f in files if not f.startswith(EXCLUDE) and not EXCLUDE_RE.match(f) and
              os.path.exists(os.path.join(REPO, f))]
     return sorted(set(files), key=lambda f: (f.count('/'), f != 'README.md' and not f.endswith('/README.md'), f))
 
@@ -132,7 +135,9 @@ def placeholders(text):
             fenced = not fenced
             out.append(line)
         elif fenced:
-            out.append(line)
+            # tabs in code (console output): spaces, as a terminal shows
+            # them; the importer keeps a tab as unparsed source (md-source)
+            out.append(line.expandtabs(8))
         else:
             chunk.append(line)
     if chunk:
