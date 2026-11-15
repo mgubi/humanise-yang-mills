@@ -59,6 +59,25 @@
     <p>
       <h1>Review of a proof unit</h1><a id="review-of-a-proof-unit"></a>
     </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Findings and evidence</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Required changes and remaining uncertainty</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-2">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Acceptance</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Addendum: elaboration and axioms (15 November 2026)</b> <span
+        style="margin-left: 5mm"></span> <a href="#auto-4">3</a>
+      </p>
+    </div>
     <ul>
       <li>
         <p>
@@ -248,6 +267,56 @@
       No acceptance is recorded. A responsible human reviewer may record
       Lean-correspondence acceptance for the checked scope, preferably after
       the axiom prints have been run.
+    </p>
+    <h2 id="auto-4"><a id="addendum-elaboration-and-axioms-15-november-2026"></a>Addendum: elaboration and axioms (15 November
+    2026)<span style="margin-left: 1em"></span></h2>
+    <p>
+      Run on 15 November 2026 by <tt class="verbatim">hairer</tt> on macOS (arm64), Lean
+      4.32.0 (commit <tt class="verbatim">8c9756b28d64dab099da31a4c09229a9e6a2ef35</tt>,
+      the pinned toolchain), against a full local build of <tt class="verbatim">Lean/</tt>
+      (<tt class="verbatim">lake build Solution YM.TraceExtension.Terrace.Lease
+      YM.TraceExtension.Shelves.Pear</tt>: <tt class="verbatim">Build completed
+      successfully (18121 jobs)</tt>). The check files were compiled with <tt
+      class="verbatim">lean -DmaxHeartbeats=0 -DmaxRecDepth=4096</tt> and the <tt class="verbatim">LEAN_PATH</tt>
+      of <tt class="verbatim">lake env</tt>. The script is <tt class="verbatim">lean-review-checks.sh</tt>
+      (agent-written; local, not committed). The source files read for this
+      review have the same SHA-256 on that machine as at the pin.
+    </p>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">#check</tt> of <tt class="verbatim">YM.Trace.Shelves.nearing_h</tt>,
+          <tt class="verbatim">muteP</tt> and <tt class="verbatim">chartB</tt> elaborates. The
+          printed statements agree with the correspondence above. <tt class="verbatim">nearing_h</tt>
+          concludes <tt class="verbatim">Tendsto (fun k =&gt; Phase4 J V Z k (baron S P'
+          (Stern V k))) atTop (&#x1D4DD; (materialB C B))</tt> under the
+          moment hypothesis <tt class="verbatim">Tendsto (Moment4 Z J V) atTop
+          (&#x1D4DD; (Hill4 C))</tt>. <tt class="verbatim">muteP</tt> concludes, for
+          every <tt class="verbatim">p : &#x2115;</tt> and <tt class="verbatim">B &ne; some
+          true</tt>, <tt class="verbatim">Tendsto (fun i =&gt; hatBeta (Stern V i) ^ p
+          &bull; &sum; a, Phase4 &hellip; a a) atTop (&#x1D4DD; 0)</tt>. Its
+          further hypotheses are <tt class="verbatim">PostT</tt>, <tt class="verbatim">Stock.Tabs</tt>,
+          <tt class="verbatim">Sceptre</tt>, <tt class="verbatim">supportQ</tt>, <tt class="verbatim">F.PointLimits
+          C S</tt> and <tt class="verbatim">CellHyp C F</tt>, all inputs listed in <tt
+          class="verbatim">correspondence.md</tt>. <tt class="verbatim">chartB</tt> is the
+          chart-array identity, with <tt class="verbatim">inter</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">#print axioms</tt> for each of the three: <tt class="verbatim">[propext,
+          Classical.choice, Quot.sound]</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">Pear.lean</tt> <tt class="verbatim">74005276&hellip;be09</tt>.
+        </p>
+      </li>
+    </ul>
+    <p>
+      This closes the &quot;not run&quot; item above. No independent kernel
+      replay was run.
     </p>
     <div class="ym-unit-nav">
       <a class="ym-prev" href="../../YM-000033/correspondence.html">&larr; YM-000033</a><span class="ym-part"><a href="../correspondence.html">YM-000034:

@@ -60,6 +60,25 @@
     <p>
       <h1>Review of a proof unit</h1><a id="review-of-a-proof-unit"></a>
     </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Findings and evidence</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Required changes and remaining uncertainty</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-2">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Acceptance</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Addendum: elaboration and axioms (15 November 2026)</b> <span
+        style="margin-left: 5mm"></span> <a href="#auto-4">3</a>
+      </p>
+    </div>
     <ul>
       <li>
         <p>
@@ -288,6 +307,52 @@
       No acceptance is recorded. A responsible human reviewer may record
       Lean-correspondence acceptance for the checked scope, preferably after
       the axiom print has been run.
+    </p>
+    <h2 id="auto-4"><a id="addendum-elaboration-and-axioms-15-november-2026"></a>Addendum: elaboration and axioms (15 November
+    2026)<span style="margin-left: 1em"></span></h2>
+    <p>
+      Run on 15 November 2026 by <tt class="verbatim">hairer</tt> on macOS (arm64), Lean
+      4.32.0 (commit <tt class="verbatim">8c9756b28d64dab099da31a4c09229a9e6a2ef35</tt>,
+      the pinned toolchain), against a full local build of <tt class="verbatim">Lean/</tt>
+      (<tt class="verbatim">lake build Solution YM.TraceExtension.Terrace.Lease
+      YM.TraceExtension.Shelves.Pear</tt>: <tt class="verbatim">Build completed
+      successfully (18121 jobs)</tt>). The check files were compiled with <tt
+      class="verbatim">lean -DmaxHeartbeats=0 -DmaxRecDepth=4096</tt> and the <tt class="verbatim">LEAN_PATH</tt>
+      of <tt class="verbatim">lake env</tt>. The script is <tt class="verbatim">lean-review-checks.sh</tt>
+      (agent-written; local, not committed). The source files read for this
+      review have the same SHA-256 on that machine as at the pin.
+    </p>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">#check @YM.Trace.Terrace.Prosper</tt> and <tt class="verbatim">#check
+          @YM.Trace.Terrace.springs</tt> elaborate. The printed statement of
+          <tt class="verbatim">springs</tt> has exactly the hypotheses and conclusion
+          described above (<tt class="verbatim">steep</tt>, <tt class="verbatim">C.Makes</tt>, <tt
+          class="verbatim">&#x1D4DB; &le; F.fuse</tt>, <tt class="verbatim">Scrim</tt>, <tt class="verbatim">Gondola</tt>,
+          <tt class="verbatim">Sceptre</tt>, <tt class="verbatim">PostT</tt>, <tt class="verbatim">G.Simple</tt>,
+          <tt class="verbatim">Spun</tt>, and the three marked limits with weight <tt
+          class="verbatim">hueK &hellip; (Stern V i)</tt>), with conclusion <tt class="verbatim">Prosper
+          V hG a s</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">#print axioms YM.Trace.Terrace.springs</tt>: <tt class="verbatim">[propext,
+          Classical.choice, Quot.sound]</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">Lease.lean</tt> <tt class="verbatim">7a8a4bed&hellip;8dee</tt>, <tt
+          class="verbatim">Delta.lean</tt> <tt class="verbatim">ed76fb26&hellip;e29d</tt>, <tt
+          class="verbatim">Prism.lean</tt> <tt class="verbatim">c0360eee&hellip;7e81</tt>.
+        </p>
+      </li>
+    </ul>
+    <p>
+      This closes the &quot;not run&quot; item above. No independent kernel
+      replay (lean4checker or Comparator) was run.
     </p>
     <div class="ym-unit-nav">
       <a class="ym-prev" href="../../YM-000026/correspondence.html">&larr; YM-000026</a><span class="ym-part"><a href="../correspondence.html">YM-000033:
