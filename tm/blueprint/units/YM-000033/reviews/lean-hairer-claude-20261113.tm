@@ -17,6 +17,25 @@
 
   <ym-title|Review of a proof unit><label|review-of-a-proof-unit>
 
+  <\table-of-contents|toc>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Findings and
+    evidence> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-1><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Required
+    changes and remaining uncertainty> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-2><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Acceptance>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-3><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Addendum:
+    elaboration and axioms (15 November 2026)>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-4><vspace|0.5fn>
+  </table-of-contents>
+
   <\itemize-minus>
     <item>Unit: YM-000033, <verbatim|blueprint/units/YM-000033/>
 
@@ -181,6 +200,41 @@
   Lean-correspondence acceptance for the checked scope, preferably after the
   axiom print has been run.
 
+  <section|Addendum: elaboration and axioms (15 November
+  2026)><label|addendum-elaboration-and-axioms-15-november-2026>
+
+  Run on 15 November 2026 by <verbatim|hairer> on macOS (arm64), Lean 4.32.0
+  (commit <verbatim|8c9756b28d64dab099da31a4c09229a9e6a2ef35>, the pinned
+  toolchain), against a full local build of <verbatim|Lean/> (<verbatim|lake
+  build Solution YM.TraceExtension.Terrace.Lease
+  YM.TraceExtension.Shelves.Pear>: <verbatim|Build completed successfully
+  (18121 jobs)>). The check files were compiled with <verbatim|lean
+  -DmaxHeartbeats=0 -DmaxRecDepth=4096> and the <verbatim|LEAN_PATH> of
+  <verbatim|lake env>. The script is <verbatim|lean-review-checks.sh>
+  (agent-written; local, not committed). The source files read for this
+  review have the same SHA-256 on that machine as at the pin.
+
+  <\itemize-minus>
+    <item><verbatim|#check @YM.Trace.Terrace.Prosper> and <verbatim|#check
+    @YM.Trace.Terrace.springs> elaborate. The printed statement of
+    <verbatim|springs> has exactly the hypotheses and conclusion described
+    above (<verbatim|steep>, <verbatim|C.Makes>, <verbatim|\<b-cal-L\>
+    \<leq\> F.fuse>, <verbatim|Scrim>, <verbatim|Gondola>,
+    <verbatim|Sceptre>, <verbatim|PostT>, <verbatim|G.Simple>,
+    <verbatim|Spun>, and the three marked limits with weight <verbatim|hueK
+    \<ldots\> (Stern V i)>), with conclusion <verbatim|Prosper V hG a s>.
+
+    <item><verbatim|#print axioms YM.Trace.Terrace.springs>:
+    <verbatim|[propext, Classical.choice, Quot.sound]>.
+
+    <item><verbatim|Lease.lean> <verbatim|7a8a4bed\<ldots\>8dee>,
+    <verbatim|Delta.lean> <verbatim|ed76fb26\<ldots\>e29d>,
+    <verbatim|Prism.lean> <verbatim|c0360eee\<ldots\>7e81>.
+  </itemize-minus>
+
+  This closes the "not run" item above. No independent kernel replay
+  (lean4checker or Comparator) was run.
+
   <ym-unit-nav|<hlink|\<leftarrow\> YM-000026|../../YM-000026/correspondence.tm>|<hlink|YM-000033:
   Selected trace sensor and weighted Ward limit
   (draft)|../correspondence.tm><ym-nav-sep><hlink|HANDOFF|../HANDOFF.tm><ym-nav-sep><hlink|validation|../validation.tm>|<hlink|YM-000034
@@ -196,9 +250,11 @@
 <\references>
   <\collection>
     <associate|acceptance|<tuple|3|3>>
+    <associate|addendum-elaboration-and-axioms-15-november-2026|<tuple|4|3>>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-2|<tuple|2|2>>
     <associate|auto-3|<tuple|3|3>>
+    <associate|auto-4|<tuple|4|3>>
     <associate|findings-and-evidence|<tuple|1|1>>
     <associate|required-changes-and-remaining-uncertainty|<tuple|2|2>>
     <associate|review-of-a-proof-unit|<tuple|?|1>>
@@ -219,6 +275,11 @@
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Acceptance>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Addendum:
+      elaboration and axioms (15 November 2026)>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-4><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
