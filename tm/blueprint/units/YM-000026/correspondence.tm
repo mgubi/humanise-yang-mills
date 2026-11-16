@@ -6,7 +6,7 @@
   <ym-nav|<hlink|Home|../../../index.tm><ym-nav-sep><hlink|The
   theorem|../../public-statement.tm><ym-nav-sep><hlink|Proof
   outline|../../outline.tm><ym-nav-sep><hlink|Unit
-  plan|../../unit-plan.tm><ym-nav-sep><hlink|Blueprint|../../index.tm><ym-nav-sep><hlink|Manuscript|../../../manuscript/index.tm><ym-nav-sep><hlink|Glossary|../../glossary.tm><ym-nav-sep><hlink|Notation|../../../docs/notation.tm><ym-nav-sep><hlink|Source
+  plan|../../unit-plan.tm><ym-nav-sep><hlink|Blueprint|../../index.tm><ym-nav-sep><hlink|Manuscript|../../../manuscript/index.tm><ym-nav-sep><hlink|Monograph|../../../manuscript/existence.tm><ym-nav-sep><hlink|Glossary|../../glossary.tm><ym-nav-sep><hlink|Notation|../../../docs/notation.tm><ym-nav-sep><hlink|Source
   audit|../../../source/audit.tm><ym-nav-sep><hlink|Literature|../../external-map.tm><ym-nav-sep><hlink|Proof
   standard|../../../docs/proof-standard.tm><ym-nav-sep><hlink|Contributing|../../../CONTRIBUTING.tm>>
 
@@ -297,7 +297,7 @@
     proof. Independent agent review finds and checks corrections; human
     acceptance remains outstanding.
 
-    <item>Authoritative text: <hlink|existence.tex|https://github.com/hairer/humanise-yang-mills/blob/main/manuscript/existence.tex>,
+    <item>Authoritative text: <hlink|existence.tex|../../../manuscript/existence.tm>,
     with separate mathematical sections under
     <verbatim|manuscript/existence/>.
 

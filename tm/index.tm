@@ -6,11 +6,29 @@
   <ym-nav|<ym-nav-here|Home><ym-nav-sep><hlink|The
   theorem|blueprint/public-statement.tm><ym-nav-sep><hlink|Proof
   outline|blueprint/outline.tm><ym-nav-sep><hlink|Unit
-  plan|blueprint/unit-plan.tm><ym-nav-sep><hlink|Blueprint|blueprint/index.tm><ym-nav-sep><hlink|Manuscript|manuscript/index.tm><ym-nav-sep><hlink|Glossary|blueprint/glossary.tm><ym-nav-sep><hlink|Notation|docs/notation.tm><ym-nav-sep><hlink|Source
+  plan|blueprint/unit-plan.tm><ym-nav-sep><hlink|Blueprint|blueprint/index.tm><ym-nav-sep><hlink|Manuscript|manuscript/index.tm><ym-nav-sep><hlink|Monograph|manuscript/existence.tm><ym-nav-sep><hlink|Glossary|blueprint/glossary.tm><ym-nav-sep><hlink|Notation|docs/notation.tm><ym-nav-sep><hlink|Source
   audit|source/audit.tm><ym-nav-sep><hlink|Literature|blueprint/external-map.tm><ym-nav-sep><hlink|Proof
   standard|docs/proof-standard.tm><ym-nav-sep><hlink|Contributing|CONTRIBUTING.tm>>
 
   <ym-title|Humanise Yang-Mills><label|humanise-yang-mills>
+
+  <\ym-manuscript-link>
+    <strong|The LaTeX documents, converted to HTML from their source:>
+
+    <\itemize>
+      <item><hlink|The four-dimensional Yang\UMills construction: Foundations
+      and the existence argument (manuscript/existence.tex)|manuscript/existence.tm>
+
+      <item><hlink|Yang\UMills: mathematical exposition
+      (manuscript/main.tex)|manuscript/main.tm>
+
+      <item><hlink|YM-000033: Selected trace sensor and weighted Ward limit,
+      evidence/wrapper (blueprint/units/YM-000033/evidence/wrapper.tex)|blueprint/units/YM-000033/evidence/wrapper.tm>
+
+      <item><hlink|YM-000034: Trace branch moment limits and weighted
+      washout, evidence/wrapper (blueprint/units/YM-000034/evidence/wrapper.tex)|blueprint/units/YM-000034/evidence/wrapper.tm>
+    </itemize>
+  </ym-manuscript-link>
 
   <\table-of-contents|toc>
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Contribute an
@@ -191,7 +209,7 @@
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-2|<tuple|2|2>>
     <associate|auto-3|<tuple|3|2>>
-    <associate|auto-4|<tuple|4|2>>
+    <associate|auto-4|<tuple|4|3>>
     <associate|auto-5|<tuple|5|3>>
     <associate|auto-6|<tuple|6|3>>
     <associate|before-opening-the-queue|<tuple|5|3>>
@@ -199,7 +217,7 @@
     <associate|how-the-work-fits-together|<tuple|2|2>>
     <associate|humanise-yang-mills|<tuple|?|1>>
     <associate|licence|<tuple|6|3>>
-    <associate|prior-dependency-mapping|<tuple|4|2>>
+    <associate|prior-dependency-mapping|<tuple|4|3>>
     <associate|repository-map|<tuple|3|2>>
   </collection>
 </references>

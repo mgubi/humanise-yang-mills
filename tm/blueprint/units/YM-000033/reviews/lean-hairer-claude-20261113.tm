@@ -6,13 +6,13 @@
   <ym-nav|<hlink|Home|../../../../index.tm><ym-nav-sep><hlink|The
   theorem|../../../public-statement.tm><ym-nav-sep><hlink|Proof
   outline|../../../outline.tm><ym-nav-sep><hlink|Unit
-  plan|../../../unit-plan.tm><ym-nav-sep><hlink|Blueprint|../../../index.tm><ym-nav-sep><hlink|Manuscript|../../../../manuscript/index.tm><ym-nav-sep><hlink|Glossary|../../../glossary.tm><ym-nav-sep><hlink|Notation|../../../../docs/notation.tm><ym-nav-sep><hlink|Source
+  plan|../../../unit-plan.tm><ym-nav-sep><hlink|Blueprint|../../../index.tm><ym-nav-sep><hlink|Manuscript|../../../../manuscript/index.tm><ym-nav-sep><hlink|Monograph|../../../../manuscript/existence.tm><ym-nav-sep><hlink|Glossary|../../../glossary.tm><ym-nav-sep><hlink|Notation|../../../../docs/notation.tm><ym-nav-sep><hlink|Source
   audit|../../../../source/audit.tm><ym-nav-sep><hlink|Literature|../../../external-map.tm><ym-nav-sep><hlink|Proof
   standard|../../../../docs/proof-standard.tm><ym-nav-sep><hlink|Contributing|../../../../CONTRIBUTING.tm>>
 
   <ym-unit-nav|<hlink|\<leftarrow\> YM-000026|../../YM-000026/correspondence.tm>|<hlink|YM-000033:
   Selected trace sensor and weighted Ward limit
-  (draft)|../correspondence.tm><ym-nav-sep><hlink|HANDOFF|../HANDOFF.tm><ym-nav-sep><hlink|validation|../validation.tm>|<hlink|YM-000034
+  (draft)|../correspondence.tm><ym-nav-sep><hlink|HANDOFF|../HANDOFF.tm><ym-nav-sep><hlink|evidence/wrapper|../evidence/wrapper.tm><ym-nav-sep><hlink|validation|../validation.tm>|<hlink|YM-000034
   \<rightarrow\>|../../YM-000034/correspondence.tm>>
 
   <ym-title|Review of a proof unit><label|review-of-a-proof-unit>
@@ -237,7 +237,7 @@
 
   <ym-unit-nav|<hlink|\<leftarrow\> YM-000026|../../YM-000026/correspondence.tm>|<hlink|YM-000033:
   Selected trace sensor and weighted Ward limit
-  (draft)|../correspondence.tm><ym-nav-sep><hlink|HANDOFF|../HANDOFF.tm><ym-nav-sep><hlink|validation|../validation.tm>|<hlink|YM-000034
+  (draft)|../correspondence.tm><ym-nav-sep><hlink|HANDOFF|../HANDOFF.tm><ym-nav-sep><hlink|evidence/wrapper|../evidence/wrapper.tm><ym-nav-sep><hlink|validation|../validation.tm>|<hlink|YM-000034
   \<rightarrow\>|../../YM-000034/correspondence.tm>>
 </body>
 
@@ -252,11 +252,11 @@
     <associate|acceptance|<tuple|3|3>>
     <associate|addendum-elaboration-and-axioms-15-november-2026|<tuple|4|3>>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-2|<tuple|2|2>>
+    <associate|auto-2|<tuple|2|3>>
     <associate|auto-3|<tuple|3|3>>
     <associate|auto-4|<tuple|4|3>>
     <associate|findings-and-evidence|<tuple|1|1>>
-    <associate|required-changes-and-remaining-uncertainty|<tuple|2|2>>
+    <associate|required-changes-and-remaining-uncertainty|<tuple|2|3>>
     <associate|review-of-a-proof-unit|<tuple|?|1>>
   </collection>
 </references>

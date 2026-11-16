@@ -110,13 +110,14 @@
 
   <\active*>
     <\src-comment>
-      A prominent link (from the README of the manuscript to the manuscript).
+      Prominent links (from the home page and the README of a folder to
+      the LaTeX documents converted to pages).
     </src-comment>
   </active*>
 
   <assign|ym-manuscript-link|<\macro|body>
     <\padded>
-      <strong|<arg|body>>
+      <arg|body>
     </padded>
   </macro>>
 

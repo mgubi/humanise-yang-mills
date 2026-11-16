@@ -14,13 +14,17 @@
 
     <assign|ym-section-resets|<macro|<reset-counter|proposition-env>>>
 
+    <assign|paragraph-toc|<macro|name|>>
+
+    <assign|subparagraph-toc|<macro|name|>>
+
     \;
   </hide-preamble>
 
   <ym-nav|<hlink|Home|../index.tm><ym-nav-sep><hlink|The
   theorem|../blueprint/public-statement.tm><ym-nav-sep><hlink|Proof
   outline|../blueprint/outline.tm><ym-nav-sep><hlink|Unit
-  plan|../blueprint/unit-plan.tm><ym-nav-sep><hlink|Blueprint|../blueprint/index.tm><ym-nav-sep><hlink|Manuscript|index.tm><ym-nav-sep><hlink|Glossary|../blueprint/glossary.tm><ym-nav-sep><hlink|Notation|../docs/notation.tm><ym-nav-sep><hlink|Source
+  plan|../blueprint/unit-plan.tm><ym-nav-sep><hlink|Blueprint|../blueprint/index.tm><ym-nav-sep><hlink|Manuscript|index.tm><ym-nav-sep><hlink|Monograph|existence.tm><ym-nav-sep><hlink|Glossary|../blueprint/glossary.tm><ym-nav-sep><hlink|Notation|../docs/notation.tm><ym-nav-sep><hlink|Source
   audit|../source/audit.tm><ym-nav-sep><hlink|Literature|../blueprint/external-map.tm><ym-nav-sep><hlink|Proof
   standard|../docs/proof-standard.tm><ym-nav-sep><hlink|Contributing|../CONTRIBUTING.tm>>
 
@@ -199,7 +203,7 @@
   defined through a physical observable would require a separate matching
   theorem.
 
-  <\bibliography|bib|tm-alpha|references>
+  <\bibliography|bib|tm-alpha|main>
     <\bib-list|2>
       <bibitem*|Hal00><label|bib-hall2000>Brian<nbsp>C.<nbsp>Hall.
       <newblock>An elementary introduction to groups and representations.
@@ -227,8 +231,7 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-2|<tuple|1|2>>
-    <associate|auto-3|<tuple|1.2|3>>
+    <associate|auto-2|<tuple|1.2|3>>
     <associate|bib-hall2000|<tuple|Hal00|3>>
     <associate|bib-lebl|<tuple|Leb|3>>
     <associate|eq:running|<tuple|1|2>>
@@ -253,13 +256,9 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
-      <with|par-left|<quote|3tab>|<with|font-size|<quote|0.92>|Input from the
-      lattice construction. <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-2>>>
-
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|References>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-3><vspace|0.5fn>
+      <no-break><pageref|auto-2><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

@@ -380,6 +380,7 @@ def rel(frm, to):
 NAV = [('index.tm', 'Home'), ('blueprint/public-statement.tm', 'The theorem'),
        ('blueprint/outline.tm', 'Proof outline'), ('blueprint/unit-plan.tm', 'Unit plan'),
        ('blueprint/index.tm', 'Blueprint'), ('manuscript/index.tm', 'Manuscript'),
+       ('manuscript/existence.tm', 'Monograph'),
        ('blueprint/glossary.tm', 'Glossary'), ('docs/notation.tm', 'Notation'),
        ('source/audit.tm', 'Source audit'), ('blueprint/external-map.tm', 'Literature'),
        ('docs/proof-standard.tm', 'Proof standard'), ('CONTRIBUTING.tm', 'Contributing')]
@@ -388,7 +389,7 @@ NAV = [('index.tm', 'Home'), ('blueprint/public-statement.tm', 'The theorem'),
 def nav_bar(page):
     items = []
     for f, name in NAV:
-        if f not in pages:
+        if f not in pages and f not in data.get('latex', {}):
             continue
         if f == page:
             items.append(['ym-nav-here', cork(name)])
@@ -416,7 +417,8 @@ def unit_bar(page):
     head = cork(u['unit'] + ': ' + u['title'] + (' (' + u['status'] + ')' if u['status'] else ''))
     mid = [['ym-nav-here', head] if page == u['file'] else ['hlink', head, rel(page, u['file'])]]
     for f in u['pages']:
-        if f == u['file'] or f.count('/') > u['file'].count('/') + (1 if f.endswith('/index.tm') else 0):
+        if f == u['file'] or (f.count('/') > u['file'].count('/') + (1 if f.endswith('/index.tm') else 0)
+                              and f not in data.get('latex', {})):
             continue
         # short names: the path inside the unit folder (evidence/README.md
         # -> evidence, proof.md -> proof)
@@ -440,6 +442,31 @@ def math_text_check(x, in_math=False, in_text=False):
     t = in_text or (m and x[0] == 'text')
     for k in x[1:]:
         math_text_check(k, m, t)
+
+
+def latex_links(page):
+    """the LaTeX documents converted to pages: on the home page all of
+    them, on the README of a folder (index.tm) those of that folder; one
+    link each, with the title and the source file"""
+    docs = data.get('latex', {})
+    d = os.path.dirname(page)
+    if page == 'index.tm':
+        mine = sorted(docs, key=lambda p: (p.count('/'), p))
+        intro = 'The LaTeX documents, converted to HTML from their source:'
+    elif os.path.basename(page) == 'index.tm':
+        mine = sorted(p for p in docs if os.path.dirname(p) == d)
+        intro = 'Read the LaTeX documents of this folder (HTML versions, converted from the source):'
+    else:
+        return []
+    if not mine:
+        return []
+    items = []
+    for p in mine:
+        title, src = docs[p]['title'], docs[p]['source']
+        label = title if title == src else f'{title} ({os.path.basename(src) if page != "index.tm" else src})'
+        items.append(['concat', ['hlink', cork(label), rel(page, p)]])
+    return [['ym-manuscript-link', ['document', ['strong', cork(intro)], ['itemize', ['document'] +
+                                                               [['concat', ['item']] + i[1:] for i in items]]]]]
 
 
 # --- main -----------------------------------------------------------------
@@ -475,11 +502,7 @@ def process(page, meta):
     if nsec >= 4:
         toc = [['table-of-contents', 'toc', ['document', '']]]
     bottom = [ub] if ub else []
-    if page == 'manuscript/index.tm' and data.get('manuscript'):
-        # the README of the LaTeX manuscript: link to its TeXmacs version
-        link = ['ym-manuscript-link', ['hlink', cork('Read the manuscript (HTML version, converted from the LaTeX source)'),
-                                       rel(page, data['manuscript'])]]
-        first = first + [link]
+    first = first + latex_links(page)
     doc[1:] = top + first + toc + rest + bottom
     # the package is copied next to the documents of every folder (a
     # relative path such as ../../ym-outline is not resolved by TeXmacs)

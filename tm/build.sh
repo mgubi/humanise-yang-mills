@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# Regenerate the TeXmacs documents (tm/**/*.tm) from the Markdown sources of
-# the repository, then export them to the HTML site in tm/html/.
+# Regenerate the TeXmacs documents (tm/**/*.tm) from the Markdown sources and
+# the LaTeX documents (every .tex outside tm/ with \begin{document}) of the
+# repository, then export them to the HTML site in tm/html/.
 #
 #   tm/build.sh            Markdown -> .tm -> HTML, only what changed
 #   tm/build.sh --no-html  Markdown -> .tm only
@@ -9,22 +10,25 @@
 #
 # Builds are incremental: tm/.build-state.json, written after every
 # successful build, records what each page was built from (scripts/plan.py).
-# A page is rebuilt when its Markdown, the pages its links resolve against,
-# or its navigation data changed, or when its output is missing or was
-# edited. Everything is rebuilt when there is no record, the set of pages
-# changed, the tools changed (tm/scripts, tm/ym-outline.ts, tm/resources,
-# this file, max-html, TeXmacs), or with --full. After an incremental build
+# A page is rebuilt when its Markdown (for a LaTeX document: its flattened
+# source), the pages its links resolve against, or its navigation data
+# changed, when its output is missing or was edited, or when the tools of
+# a stage that makes it changed (Markdown import, LaTeX import, HTML export;
+# TeXmacs counts by its version, for all three; see STAGES in plan.py).
+# Everything is rebuilt when there is no record, the set of pages changed,
+# this file or plan.py changed, or with --full. After an incremental build
 # the links of the whole site are checked; a broken link that the last full
 # build did not have triggers a full rebuild.
 #
-# The Markdown files are only read. Everything is built in a scratch folder
+# The Markdown and LaTeX files are only read. Everything is built in a scratch folder
 # ($YM_BUILD_DIR, default: a fresh temporary folder) and installed into tm/
 # at the end, only if every step succeeded.
 #
 # Environment:
 #   TEXMACS_BIN    TeXmacs Upsilon (Qt port) executable; default: searched in
-#                  /Applications, ~/Applications and ~/Downloads
-#                  ("TeXmacs Upsilon Qt.app" or "TeXmacs Upsilon.app").
+#                  /Applications, ~/Applications and ~/Downloads, first
+#                  "TeXmacs Upsilon Qt.app" in all three, then
+#                  "TeXmacs Upsilon.app" (which may open windows).
 #   MAX_HTML_DIR   the max-html plugin; default ~/.TeXmacs/plugins/max-html.
 #   YM_BUILD_DIR   scratch folder (kept after the run if given).
 #   YM_TIMEOUT     seconds allowed per TeXmacs run (default 1800).
@@ -61,9 +65,12 @@ done
 # --- TeXmacs and the max-html plugin ---------------------------------------
 tm_bin=${TEXMACS_BIN:-}
 if [[ -z "$tm_bin" ]]; then
-  for c in "/Applications/TeXmacs Upsilon Qt.app" "/Applications/TeXmacs Upsilon.app" \
-           "$HOME/Applications/TeXmacs Upsilon Qt.app" "$HOME/Applications/TeXmacs Upsilon.app" \
-           "$HOME/Downloads/TeXmacs Upsilon Qt.app" "$HOME/Downloads/TeXmacs Upsilon.app"; do
+  # the Qt port first, in every location: only it honours
+  # QT_QPA_PLATFORM=offscreen (the other macOS build opens windows)
+  for c in "/Applications/TeXmacs Upsilon Qt.app" "$HOME/Applications/TeXmacs Upsilon Qt.app" \
+           "$HOME/Downloads/TeXmacs Upsilon Qt.app" \
+           "/Applications/TeXmacs Upsilon.app" "$HOME/Applications/TeXmacs Upsilon.app" \
+           "$HOME/Downloads/TeXmacs Upsilon.app"; do
     if [[ -x "$c/Contents/MacOS/TeXmacs" ]]; then tm_bin="$c/Contents/MacOS/TeXmacs"; break; fi
   done
 fi
@@ -106,15 +113,17 @@ stage=$B/stage
 mkdir -p "$stage"
 
 # --- 1. Markdown -> patched Markdown (links, anchors); plan -----------------
-if [[ $mode != html ]]; then
-  python3 "$scripts/prep.py" "$repo" "$B/md"
-  # the LaTeX manuscript: flattened and patched (tex_prep.py)
-  if [[ -f "$repo/manuscript/main.tex" ]]; then
-    python3 "$scripts/tex_prep.py" "$repo" "$B/md/tex"
-  fi
-else
-  mkdir -p "$B/md"
-fi
+# (also with --html: the LaTeX documents' metadata and bibliographies are
+# needed for the export and the checks)
+python3 "$scripts/prep.py" "$repo" "$B/md"
+# the LaTeX documents: each flattened and patched (tex_prep.py) into
+# md/tex/<page without .tm>/ (doc.tex, meta.json, references.bib)
+while IFS=$'\t' read -r src page; do
+  [[ -n $src ]] || continue
+  python3 "$scripts/tex_prep.py" "$repo" "$src" "$B/md/tex/${page%.tm}"
+done < "$B/md/latex.tsv"
+# is_latex PAGE: the page is a LaTeX document
+is_latex() { [[ -f "$B/md/tex/${1%.tm}/meta.json" ]]; }
 tools=$(python3 "$scripts/plan.py" tools "$here" "$tm_bin" "$max_html")
 python3 "$scripts/plan.py" plan "$state" "$here" "$B/md" "$mode" "$full" "$tools" "$B/plan"
 kind=$(cat "$B/plan/kind")
@@ -128,14 +137,13 @@ fi
 (( ${#pages[@]} )) || { echo "no pages found" >&2; exit 1; }
 
 # --- 2-4. Markdown -> .tm for the pages to convert --------------------------
-manuscript=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1])).get("manuscript") or "")' "$B/md/pages.json" 2>/dev/null || true)
 if (( ${#convert[@]} )); then
   mkdir -p "$B/raw" "$B/post"
   : > "$B/import.lst"; : > "$B/undump.lst"; : > "$B/latex.lst"
   for t in "${convert[@]}"; do
     f=${t//\//__}; f=${f%.tm}.scm
-    if [[ $t == "$manuscript" ]]; then
-      printf '%s\t%s\n' "$B/md/tex/main.tex" "$B/raw/$f" >> "$B/latex.lst"
+    if is_latex "$t"; then
+      printf '%s\t%s\n' "$B/md/tex/${t%.tm}/doc.tex" "$B/raw/$f" >> "$B/latex.lst"
     else
       printf '%s\t%s\n' "$B/md/${t%.tm}.md" "$B/raw/$f" >> "$B/import.lst"
     fi
@@ -148,10 +156,13 @@ if (( ${#convert[@]} )); then
     python3 "$scripts/post.py" "$B/md/pages.json" "$B/raw" "$B/post" "$B/plan/convert.lst"
   fi
   if [[ -s "$B/latex.lst" ]]; then
-    echo "import: the LaTeX manuscript"
+    echo "import: $(wc -l < "$B/latex.lst" | tr -d ' ') LaTeX documents"
     tm_run "$B/latex.log" "(ym-import-latex-all \"$B/latex.lst\")"
-    f=${manuscript//\//__}; f=${f%.tm}.scm
-    python3 "$scripts/tex_post.py" "$B/md/pages.json" "$B/md/tex" "$B/raw/$f" "$B/post/$f" "$manuscript"
+    for t in "${convert[@]}"; do
+      is_latex "$t" || continue
+      f=${t//\//__}; f=${f%.tm}.scm
+      python3 "$scripts/tex_post.py" "$B/md/pages.json" "$B/md/tex/${t%.tm}" "$B/raw/$f" "$B/post/$f" "$t"
+    done
   fi
   tm_run "$B/undump.log" "(ym-undump-all \"$B/undump.lst\")"
   for t in "${convert[@]}"; do
@@ -172,13 +183,17 @@ while IFS= read -r l; do [[ -n $l ]] && work+=("$l"); done < <(printf '%s\n' ${c
 for p in ${work[@]+"${work[@]}"}; do
   cp "$here/ym-outline.ts" "$here/ym-manuscript.ts" "$stage/$(dir_of "$p")/"
 done
-# the bibliography database next to the manuscript, if it has a bibliography
-[[ -z $manuscript && -f "$here/manuscript/main.tm" ]] && manuscript=manuscript/main.tm
-bib=$B/md/tex/references.bib; [[ -f $bib ]] || bib=$repo/manuscript/references.bib
+# the bibliography database of every LaTeX document next to it, as
+# <name of the page>.bib (tex_post.py): one copy per document
 # (the tag is written <\bibliography|...> as a block: match "bibliography|")
-if [[ -n $manuscript && -f "$stage/$manuscript" && -f $bib ]] && grep -aq 'bibliography|bib|' "$stage/$manuscript"; then
-  cp "$bib" "$stage/$(dir_of "$manuscript")/references.bib"
-fi
+for p in ${work[@]+"${work[@]}"}; do
+  is_latex "$p" || continue
+  bib=$B/md/tex/${p%.tm}/references.bib
+  if grep -aq 'bibliography|bib|' "$stage/$p"; then
+    [[ -f $bib ]] || { echo "error: $p has a bibliography, the source none" >&2; exit 1; }
+    cp "$bib" "$stage/${p%.tm}.bib"
+  fi
+done
 
 # check: tags that the style does not define (primitives excepted)
 if (( ${#convert[@]} )); then
@@ -188,11 +203,13 @@ if (( ${#convert[@]} )); then
   prims='arg|around|around\*|assign|big|cell|concat|cwith|datoms|document|frac|htab|long-arrow|macro|mid|next-line|no-break|repeat|row|rprime|rsub|rsup|space|sqrt|table|tformat|twith|vspace|vspace\*|with|wide|wide\*|left|right|tabular|lsub|lsup|rsup|neg|tree|op|line-break|new-line|image|tuple|value|if|equal|unequal|or|and|not|merge|quote|compound|hlink|label|reference|move|resize|hspace|surround|new-page|page-break|no-page-break|no-indent|yes-indent'
   undef=$(grep -a '^YM-UNDEF' "$B/check.log" | grep -avE " ($prims)\$" || true)
   if [[ -n "$undef" ]]; then echo "warning: undefined tags:"; printf '%s\n' "$undef" | sed "s|$stage/||"; fi
-  # in the manuscript an undefined tag is a conversion error: the HTML export
-  # drops the whole content of an undefined block (e.g. samepage)
-  if [[ -n $manuscript ]] && printf '%s\n' "$undef" | grep -q " $stage/$manuscript "; then
-    echo "error: undefined tags in the manuscript (see above)" >&2; exit 1
-  fi
+  # in a LaTeX document an undefined tag is a conversion error: the HTML
+  # export drops the whole content of an undefined block (e.g. samepage)
+  for p in "${convert[@]}"; do
+    if is_latex "$p" && printf '%s\n' "$undef" | grep -qF " $stage/$p "; then
+      echo "error: undefined tags in the LaTeX document $p (see above)" >&2; exit 1
+    fi
+  done
 fi
 
 # --- 5. typeset (table of contents) and export to HTML ----------------------
@@ -299,21 +316,40 @@ print("\n".join(sorted(set(json.load(open(sys.argv[2]))) - old)))' "$state" "$br
       exec "$self" --full "${args[@]}"
     fi
   elif [[ $(python3 -c 'import json,sys; print(len(json.load(open(sys.argv[1]))))' "$broken") != 0 ]]; then
-    echo "WARNING: the site has broken links (listed above); they come from the Markdown"
+    echo "WARNING: the site has broken links (listed above); they come from the sources (Markdown links, \\ref to labels a LaTeX document does not define)"
   fi
-  # every \label of the LaTeX source has its anchor in the HTML
-  if [[ -n $manuscript && -f "$B/md/tex/meta.json" && -f "$here/html/${manuscript%.tm}.html" ]]; then
-    python3 "$scripts/labelcheck.py" "$B/md/tex/meta.json" "$here/html/${manuscript%.tm}.html" || exit 1
-  fi
-  # broken links inside the manuscript (labels, citations, its table of
-  # contents) are conversion errors, never source errors: stop, without
-  # recording the build, so that CI neither commits nor publishes it
+  # every \label of the LaTeX source of a document has its anchor in its
+  # HTML page
+  for p in "${pages[@]}"; do
+    if is_latex "$p" && [[ -f "$here/html/${p%.tm}.html" ]]; then
+      printf '%s: ' "$p"
+      python3 "$scripts/labelcheck.py" "$B/md/tex/${p%.tm}/meta.json" "$here/html/${p%.tm}.html" || exit 1
+    fi
+  done
+  # broken links inside a LaTeX document (labels, citations, its table of
+  # contents) are conversion errors: stop, without recording the build, so
+  # that CI neither commits nor publishes it. Except a reference to a label
+  # that the LaTeX source of the document does not define (meta.json,
+  # "undefined_refs"): a problem of the source, printed as a warning.
   internal=$(python3 -c '
-import json, sys
-print("\n".join(b for b in json.load(open(sys.argv[1]))
-               if b.startswith("manuscript/main.html -> #") or b.startswith("manuscript/main.html -> main.html#")))' "$broken")
+import json, os, sys
+broken, tex = json.load(open(sys.argv[1])), sys.argv[2]
+for p in sys.argv[3:]:
+    meta = os.path.join(tex, p[:-3], "meta.json")
+    if not os.path.exists(meta):
+        continue
+    undefined = set(json.load(open(meta, encoding="utf-8")).get("undefined_refs", []))
+    page = p[:-3] + ".html"
+    for b in broken:
+        for pre in (page + " -> #", page + " -> " + os.path.basename(page) + "#"):
+            if b.startswith(pre):
+                frag = b[len(pre):]
+                if frag in undefined:
+                    print("warning: " + b + " (the label is not defined in the LaTeX source)", file=sys.stderr)
+                else:
+                    print(b)' "$broken" "$B/md/tex" "${pages[@]}")
   if [[ -n "$internal" ]]; then
-    echo "error: broken links inside the manuscript:" >&2
+    echo "error: broken links inside a LaTeX document:" >&2
     printf '%s\n' "$internal" >&2
     exit 1
   fi

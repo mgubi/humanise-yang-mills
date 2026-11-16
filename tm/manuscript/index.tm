@@ -6,14 +6,23 @@
   <ym-nav|<hlink|Home|../index.tm><ym-nav-sep><hlink|The
   theorem|../blueprint/public-statement.tm><ym-nav-sep><hlink|Proof
   outline|../blueprint/outline.tm><ym-nav-sep><hlink|Unit
-  plan|../blueprint/unit-plan.tm><ym-nav-sep><hlink|Blueprint|../blueprint/index.tm><ym-nav-sep><ym-nav-here|Manuscript><ym-nav-sep><hlink|Glossary|../blueprint/glossary.tm><ym-nav-sep><hlink|Notation|../docs/notation.tm><ym-nav-sep><hlink|Source
+  plan|../blueprint/unit-plan.tm><ym-nav-sep><hlink|Blueprint|../blueprint/index.tm><ym-nav-sep><ym-nav-here|Manuscript><ym-nav-sep><hlink|Monograph|existence.tm><ym-nav-sep><hlink|Glossary|../blueprint/glossary.tm><ym-nav-sep><hlink|Notation|../docs/notation.tm><ym-nav-sep><hlink|Source
   audit|../source/audit.tm><ym-nav-sep><hlink|Literature|../blueprint/external-map.tm><ym-nav-sep><hlink|Proof
   standard|../docs/proof-standard.tm><ym-nav-sep><hlink|Contributing|../CONTRIBUTING.tm>>
 
   <ym-title|Mathematical manuscript><label|mathematical-manuscript>
 
-  <ym-manuscript-link|<hlink|Read the manuscript (HTML version, converted
-  from the LaTeX source)|main.tm>>
+  <\ym-manuscript-link>
+    <strong|Read the LaTeX documents of this folder (HTML versions, converted
+    from the source):>
+
+    <\itemize>
+      <item><hlink|The four-dimensional Yang\UMills construction: Foundations
+      and the existence argument (existence.tex)|existence.tm>
+
+      <item><hlink|Yang\UMills: mathematical exposition (main.tex)|main.tm>
+    </itemize>
+  </ym-manuscript-link>
 
   LaTeX is the authoritative mathematical text from the first draft onward.
   Write sections here as soon as their local statements and input interfaces

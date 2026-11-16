@@ -6,13 +6,13 @@
   <ym-nav|<hlink|Home|../../../index.tm><ym-nav-sep><hlink|The
   theorem|../../public-statement.tm><ym-nav-sep><hlink|Proof
   outline|../../outline.tm><ym-nav-sep><hlink|Unit
-  plan|../../unit-plan.tm><ym-nav-sep><hlink|Blueprint|../../index.tm><ym-nav-sep><hlink|Manuscript|../../../manuscript/index.tm><ym-nav-sep><hlink|Glossary|../../glossary.tm><ym-nav-sep><hlink|Notation|../../../docs/notation.tm><ym-nav-sep><hlink|Source
+  plan|../../unit-plan.tm><ym-nav-sep><hlink|Blueprint|../../index.tm><ym-nav-sep><hlink|Manuscript|../../../manuscript/index.tm><ym-nav-sep><hlink|Monograph|../../../manuscript/existence.tm><ym-nav-sep><hlink|Glossary|../../glossary.tm><ym-nav-sep><hlink|Notation|../../../docs/notation.tm><ym-nav-sep><hlink|Source
   audit|../../../source/audit.tm><ym-nav-sep><hlink|Literature|../../external-map.tm><ym-nav-sep><hlink|Proof
   standard|../../../docs/proof-standard.tm><ym-nav-sep><hlink|Contributing|../../../CONTRIBUTING.tm>>
 
   <ym-unit-nav|<hlink|\<leftarrow\> YM-000033|../YM-000033/correspondence.tm>|<ym-nav-here|YM-000034:
   Trace branch moment limits and weighted washout
-  (draft)><ym-nav-sep><hlink|HANDOFF|HANDOFF.tm><ym-nav-sep><hlink|validation|validation.tm>|>
+  (draft)><ym-nav-sep><hlink|HANDOFF|HANDOFF.tm><ym-nav-sep><hlink|evidence/wrapper|evidence/wrapper.tm><ym-nav-sep><hlink|validation|validation.tm>|>
 
   <ym-title|Branch moments and trace washout: source
   correspondence><label|branch-moments-and-trace-washout-source-correspondence>
@@ -1268,7 +1268,7 @@
 
   <ym-unit-nav|<hlink|\<leftarrow\> YM-000033|../YM-000033/correspondence.tm>|<ym-nav-here|YM-000034:
   Trace branch moment limits and weighted washout
-  (draft)><ym-nav-sep><hlink|HANDOFF|HANDOFF.tm><ym-nav-sep><hlink|validation|validation.tm>|>
+  (draft)><ym-nav-sep><hlink|HANDOFF|HANDOFF.tm><ym-nav-sep><hlink|evidence/wrapper|evidence/wrapper.tm><ym-nav-sep><hlink|validation|validation.tm>|>
 </body>
 
 <\initial>

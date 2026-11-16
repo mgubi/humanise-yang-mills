@@ -5,7 +5,7 @@
 <\body>
   <ym-nav|<hlink|Home|../index.tm><ym-nav-sep><ym-nav-here|The
   theorem><ym-nav-sep><hlink|Proof outline|outline.tm><ym-nav-sep><hlink|Unit
-  plan|unit-plan.tm><ym-nav-sep><hlink|Blueprint|index.tm><ym-nav-sep><hlink|Manuscript|../manuscript/index.tm><ym-nav-sep><hlink|Glossary|glossary.tm><ym-nav-sep><hlink|Notation|../docs/notation.tm><ym-nav-sep><hlink|Source
+  plan|unit-plan.tm><ym-nav-sep><hlink|Blueprint|index.tm><ym-nav-sep><hlink|Manuscript|../manuscript/index.tm><ym-nav-sep><hlink|Monograph|../manuscript/existence.tm><ym-nav-sep><hlink|Glossary|glossary.tm><ym-nav-sep><hlink|Notation|../docs/notation.tm><ym-nav-sep><hlink|Source
   audit|../source/audit.tm><ym-nav-sep><hlink|Literature|external-map.tm><ym-nav-sep><hlink|Proof
   standard|../docs/proof-standard.tm><ym-nav-sep><hlink|Contributing|../CONTRIBUTING.tm>>
 

@@ -6,7 +6,7 @@
   <ym-nav|<hlink|Home|../index.tm><ym-nav-sep><hlink|The
   theorem|../blueprint/public-statement.tm><ym-nav-sep><hlink|Proof
   outline|../blueprint/outline.tm><ym-nav-sep><hlink|Unit
-  plan|../blueprint/unit-plan.tm><ym-nav-sep><hlink|Blueprint|../blueprint/index.tm><ym-nav-sep><hlink|Manuscript|../manuscript/index.tm><ym-nav-sep><hlink|Glossary|../blueprint/glossary.tm><ym-nav-sep><ym-nav-here|Notation><ym-nav-sep><hlink|Source
+  plan|../blueprint/unit-plan.tm><ym-nav-sep><hlink|Blueprint|../blueprint/index.tm><ym-nav-sep><hlink|Manuscript|../manuscript/index.tm><ym-nav-sep><hlink|Monograph|../manuscript/existence.tm><ym-nav-sep><hlink|Glossary|../blueprint/glossary.tm><ym-nav-sep><ym-nav-here|Notation><ym-nav-sep><hlink|Source
   audit|../source/audit.tm><ym-nav-sep><hlink|Literature|../blueprint/external-map.tm><ym-nav-sep><hlink|Proof
   standard|proof-standard.tm><ym-nav-sep><hlink|Contributing|../CONTRIBUTING.tm>>
 
