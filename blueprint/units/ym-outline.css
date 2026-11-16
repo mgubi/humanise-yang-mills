@@ -45,3 +45,24 @@ details[open] > summary { margin-bottom: .4em; }
 .ym-revision { font-size: 13px; color: #555; margin: .2em 0 .8em;
   padding: .3em .6em; border-left: 3px solid #bbb; background: #f6f6f6; text-align: left; }
 .ym-revision code { font-size: 12px; }
+/* LaTeX documents split into chapter pages (scripts/split.py): the chapter
+   bar, the table of contents of the contents page, and the entries of the
+   side panel that lead to another chapter page (as max-html does for the
+   entries of the same page: the whole entry is the link). */
+.ym-chapter-nav { font-size: 15px; display: flex; justify-content: space-between; gap: 1em;
+                  margin: .6em 0 1.2em; padding-bottom: .5em; border-bottom: 1px solid var(--rule); }
+.ym-chapter-nav > * { flex: 1 1 0; }
+.ym-chapter-nav .ym-chapter-up { text-align: center; flex: 0 0 auto; }
+.ym-chapter-nav .ym-chapter-next { text-align: right; }
+body > .ym-chapter-nav:last-of-type { margin-top: 2.5em; padding-top: .6em; padding-bottom: 0;
+                                      border-top: 1px solid var(--rule); border-bottom: 0; }
+@media (max-width: 700px) {
+  .ym-chapter-nav { flex-direction: column; gap: .2em; }
+  .ym-chapter-nav > * { text-align: left !important; }
+}
+.ym-contents { margin: 2em 0; }
+.ym-contents p { margin: .15em 0; }
+.ym-contents p.ym-toc-1 { margin-top: .9em; font-weight: 600; }
+.ym-contents p.ym-toc-2 { padding-left: 2.2em; }
+.max-toc p a[href*=".html#auto-"] { position: absolute; inset: 0; font-size: 0; color: transparent; }
+.max-toc p a[href*=".html#auto-"]:focus-visible { outline: 2px solid var(--link); border-radius: 4px; }
