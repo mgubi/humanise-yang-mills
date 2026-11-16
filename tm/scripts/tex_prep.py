@@ -54,6 +54,10 @@ Patches:
   * user macros whose name begins with \\path, \\verb, \\url or \\href
     (e.g. \\pathaction, read by the importer as \\path + verbatim): renamed
     \\tmrenameNAME, renamed back by tex_post.py.
+A document whose flattened source is over SPLIT_BYTES (500 kB) is
+published as a contents page and one page per top-level \\section
+(meta.json "split", "chapters": the sections, their page names and labels;
+build.sh, split.py).
 Numbering that the conversion does not reproduce (any other \\makeatletter
 block, \\numberwithin, \\setcounter, \\renewcommand{\\the...}, a theorem
 numbered within anything but section, ...) stops the build: wrong numbers
@@ -494,6 +498,46 @@ def bibliography(s):
     open(os.path.join(OUT, 'references.bib'), 'w', encoding='utf-8').write('\n'.join(data))
 
 
+# documents whose flattened source is larger are split into chapter pages
+SPLIT_BYTES = 500000
+
+
+def slug(t):
+    t = re.sub(r'[^a-z0-9]+', '-', t.lower()).strip('-')
+    if len(t) > 50:
+        t = t[:50].rsplit('-', 1)[0]
+    return t or 'section'
+
+
+def chapters(s, bib):
+    r"""the top-level sections of the body (\section, \section*) and the
+    bibliography, in order: number (None for \section*), title, the name of
+    its page (<n>-<slug>, or <slug>; "references" for the bibliography) and
+    the labels defined in it. (Labels before the first section stay on the
+    contents page.)"""
+    body = s[s.find(r'\begin{document}'):]
+    out, n = [], 0
+    for m in re.finditer(r'\\section(\*?)\s*\{', body):
+        title = latex_text(body[m.end():balanced(body, m.end() - 1) - 1])
+        if m.group(1):
+            name = slug(title)
+            out.append({'number': None, 'title': title, 'file': name, 'start': m.start()})
+        else:
+            n += 1
+            out.append({'number': n, 'title': title, 'file': f'{n}-{slug(title)}', 'start': m.start()})
+    if bib:
+        out.append({'number': None, 'title': 'References', 'file': 'references',
+                    'start': body.find(r'\bibliography{')})
+    for i, c in enumerate(out):
+        end = out[i + 1]['start'] if i + 1 < len(out) else len(body)
+        c['labels'] = re.findall(r'\\(?:label|tmitemlabel)\{([^{}]*)\}', body[c['start']:end])
+        del c['start']
+    names = [c['file'] for c in out]
+    if len(set(names)) != len(names):
+        raise SystemExit('tex_prep: two top-level sections give the same page name: ' + ', '.join(names))
+    return out
+
+
 def main():
     s = read(os.path.join(REPO, SRC))
     if r'\begin{document}' not in s:
@@ -541,6 +585,10 @@ def main():
         print(f'tex_prep: warning: {SRC}: reference to a label the document does not define: {r}')
     bibliography(s)
     meta['bibliography'] = os.path.exists(os.path.join(OUT, 'references.bib'))
+    meta['chapters'] = chapters(s, meta['bibliography'])
+    # a large document is published as one page per top-level section
+    # (build.sh, split.py): its contents page and its chapters
+    meta['split'] = len(s.encode()) > SPLIT_BYTES and len(meta['chapters']) >= 2
     json.dump(meta, open(os.path.join(OUT, 'meta.json'), 'w', encoding='utf-8'), ensure_ascii=False)
     open(os.path.join(OUT, 'inputs.txt'), 'w').write(''.join(f + '\n' for f in sorted(set(inputs))))
     print(f'tex_prep: {SRC}: {len(set(inputs))} files, {len(s.splitlines())} lines')

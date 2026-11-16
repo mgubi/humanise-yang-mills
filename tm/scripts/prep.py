@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Prepare the Markdown sources for the TeXmacs import (step 1 of build.sh).
 
-    prep.py REPO OUTDIR
+    prep.py REPO OUTDIR [--latex]
 
 Reads the Markdown collection of REPO (every *.md that git tracks or would
 track, i.e. untracked but not ignored, except under tm/) (never modifies it) and writes a
@@ -15,7 +15,9 @@ ignored, outside tm/) that contains \\begin{document}, are pages too: x.tex
 becomes x.tm (converted by tex_prep.py and tex_post.py). They are listed in
 pages.json ("latex": page -> source, title) and in OUTDIR/latex.tsv
 (source, page). The other .tex files (chapters, preambles, templates) are
-not pages.
+not pages. With --latex, only OUTDIR/latex.tsv is written: build.sh runs
+tex_prep.py on these documents before the full run, which reads their
+meta.json for the documents split into chapter pages.
 
 Patches (all uniform, all on a temporary copy):
   * links to other pages of the collection: `x.md#frag` -> `x.tm#frag`
@@ -23,7 +25,9 @@ Patches (all uniform, all on a temporary copy):
     mirrored;
   * links to folders with a converted README (blueprint/, docs/, ...)
     -> its index.tm;
-  * links to a LaTeX document: its page (`x.tex#frag` -> `x.tm#frag`);
+  * links to a LaTeX document: its page (`x.tex#frag` -> `x.tm#frag`; for
+    a document split into chapter pages, `x/<chapter>.tm#label` when the
+    label is in a chapter);
   * links to other files of the repository (Lean/, unit.json, LICENSE,
     the chapters manuscript/*/*.tex, scripts/): absolute links to the
     repository on GitHub;
@@ -234,9 +238,30 @@ def main():
     pages = collection()
     known = {p: target_of(p) for p in pages}
     latex = latex_documents()
+    os.makedirs(OUT, exist_ok=True)
+    with open(os.path.join(OUT, 'latex.tsv'), 'w') as f:
+        for p, v in sorted(latex.items()):
+            f.write(f"{v['source']}\t{p}\n")
+    if '--latex' in sys.argv[3:]:
+        return              # only the list of LaTeX documents, for tex_prep.py
     clash = sorted(set(latex) & {t[:-3] + '.tm' for t in known.values()})
     if clash:
         raise SystemExit('prep: a LaTeX document and a Markdown page give the same page: ' + ', '.join(clash))
+    # documents split into chapter pages (tex_prep.py, meta.json "split"):
+    # label -> the page holding it; no Markdown page in their folder
+    chapter_of = {}
+    for p in latex:
+        mf = os.path.join(OUT, 'tex', p[:-3], 'meta.json')
+        m = json.load(open(mf, encoding='utf-8')) if os.path.exists(mf) else {}
+        if not m.get('split'):
+            continue
+        latex[p]['split'] = True
+        inside = sorted(t for t in known.values() if t.startswith(p[:-3] + '/'))
+        if inside:
+            raise SystemExit(f'prep: Markdown pages in the folder of the chapter pages of {p}: ' + ', '.join(inside))
+        for c in m['chapters']:
+            for l in c['labels']:
+                chapter_of[(p, l)] = p[:-3] + '/' + c['file'] + '.tm'
     # x.tex -> its page
     latex_src = {v['source']: k for k, v in latex.items()}
     anchors = {p: anchors_of(open(os.path.join(REPO, p), encoding='utf-8').read()) for p in pages}
@@ -263,7 +288,8 @@ def main():
                     full = readme
             if full in latex_src:
                 stats['tex-links'] += 1
-                new = os.path.relpath(latex_src[full], sdir or '.')
+                # a label of a document split into chapters: its chapter page
+                new = os.path.relpath(chapter_of.get((latex_src[full], frag), latex_src[full]), sdir or '.')
                 return m.group(1) + new + hsh + frag + m.group(3)
             if full in known:
                 stats['md-links'] += 1
@@ -342,9 +368,6 @@ def main():
     with open(os.path.join(OUT, 'manifest.tsv'), 'w') as f:
         for p in pages:
             f.write(f'{p}\t{known[p]}\n')
-    with open(os.path.join(OUT, 'latex.tsv'), 'w') as f:
-        for p, v in sorted(latex.items()):
-            f.write(f"{v['source']}\t{p}\n")
     print(f"prep: {len(pages)} Markdown pages, {len(latex)} LaTeX documents ({', '.join(sorted(latex))}), "
           f"{stats['md-links']} page links, {stats['tex-links']} links to LaTeX documents, "
           f"{stats['repo-links']} repository links, {stats['anchors']} heading anchors")

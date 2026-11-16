@@ -115,15 +115,26 @@ mkdir -p "$stage"
 # --- 1. Markdown -> patched Markdown (links, anchors); plan -----------------
 # (also with --html: the LaTeX documents' metadata and bibliographies are
 # needed for the export and the checks)
-python3 "$scripts/prep.py" "$repo" "$B/md"
-# the LaTeX documents: each flattened and patched (tex_prep.py) into
-# md/tex/<page without .tm>/ (doc.tex, meta.json, references.bib)
+# the LaTeX documents first: each flattened and patched (tex_prep.py) into
+# md/tex/<page without .tm>/ (doc.tex, meta.json, references.bib); prep.py
+# reads their meta.json (links to labels of a document split into chapters)
+python3 "$scripts/prep.py" "$repo" "$B/md" --latex
 while IFS=$'\t' read -r src page; do
   [[ -n $src ]] || continue
   python3 "$scripts/tex_prep.py" "$repo" "$src" "$B/md/tex/${page%.tm}"
 done < "$B/md/latex.tsv"
+python3 "$scripts/prep.py" "$repo" "$B/md"
 # is_latex PAGE: the page is a LaTeX document
 is_latex() { [[ -f "$B/md/tex/${1%.tm}/meta.json" ]]; }
+# is_split PAGE: a LaTeX document published as a contents page and chapter
+# pages in html/<page without .tm>/ (split.py)
+is_split() { is_latex "$1" && grep -q '"split": true' "$B/md/tex/${1%.tm}/meta.json"; }
+# pages_of PAGE: its HTML files (the page, and its chapter pages)
+pages_of() {
+  local h=$1/${2%.tm}
+  printf '%s\n' "$h.html"
+  if is_latex "$2" && [[ -d $h ]]; then find "$h" -maxdepth 1 -name '*.html' | sort; fi
+}
 tools=$(python3 "$scripts/plan.py" tools "$here" "$tm_bin" "$max_html")
 python3 "$scripts/plan.py" plan "$state" "$here" "$B/md" "$mode" "$full" "$tools" "$B/plan"
 kind=$(cat "$B/plan/kind")
@@ -239,6 +250,13 @@ if (( ${#export_[@]} )); then
   if grep -a 'Could not load BibTeX\|bibtex.*error' "$B/html.log" >&2; then
     echo "bibliography not generated (log: $B/html.log)" >&2; exit 1
   fi
+  # a large LaTeX document: a contents page and one page per chapter, cut
+  # from the page of the whole document (numbers and references unchanged)
+  for p in "${export_[@]}"; do
+    if is_split "$p"; then
+      python3 "$scripts/split.py" "$B/md/tex/${p%.tm}/meta.json" "$html/${p%.tm}.html"
+    fi
+  done
 fi
 
 # --- 6. install --------------------------------------------------------------
@@ -266,10 +284,16 @@ done
 if [[ $mode != tm ]]; then
   for p in ${export_[@]+"${export_[@]}"}; do
     mkdir -p "$here/html/$(dir_of "$p")"; cp "$html/${p%.tm}.html" "$here/html/${p%.tm}.html"
+    # the chapter pages of a LaTeX document (the old ones removed; prep.py
+    # makes sure that no Markdown page lives in that folder)
+    if is_latex "$p"; then
+      rm -rf "$here/html/${p%.tm}"
+      if [[ -d $html/${p%.tm} ]]; then cp -R "$html/${p%.tm}" "$here/html/${p%.tm}"; fi
+    fi
   done
   # text inside formulas exported in Cork instead of UTF-8 (scripts/corkfix.py)
   if (( ${#export_[@]} )); then
-    fix=(); for p in "${export_[@]}"; do fix+=("$here/html/${p%.tm}.html"); done
+    fix=(); for p in "${export_[@]}"; do while IFS= read -r f; do fix+=("$f"); done < <(pages_of "$here/html" "$p"); done
     python3 "$scripts/corkfix.py" "${fix[@]}"
   fi
   # stylesheets and scripts next to the pages of every folder
@@ -323,7 +347,8 @@ print("\n".join(sorted(set(json.load(open(sys.argv[2]))) - old)))' "$state" "$br
   for p in "${pages[@]}"; do
     if is_latex "$p" && [[ -f "$here/html/${p%.tm}.html" ]]; then
       printf '%s: ' "$p"
-      python3 "$scripts/labelcheck.py" "$B/md/tex/${p%.tm}/meta.json" "$here/html/${p%.tm}.html" || exit 1
+      files=(); while IFS= read -r f; do files+=("$f"); done < <(pages_of "$here/html" "$p")
+      python3 "$scripts/labelcheck.py" "$B/md/tex/${p%.tm}/meta.json" "${files[@]}" || exit 1
     fi
   done
   # broken links inside a LaTeX document (labels, citations, its table of
@@ -339,15 +364,19 @@ for p in sys.argv[3:]:
     if not os.path.exists(meta):
         continue
     undefined = set(json.load(open(meta, encoding="utf-8")).get("undefined_refs", []))
-    page = p[:-3] + ".html"
+    page, folder = p[:-3] + ".html", p[:-3] + "/"
     for b in broken:
-        for pre in (page + " -> #", page + " -> " + os.path.basename(page) + "#"):
-            if b.startswith(pre):
-                frag = b[len(pre):]
-                if frag in undefined:
-                    print("warning: " + b + " (the label is not defined in the LaTeX source)", file=sys.stderr)
-                else:
-                    print(b)' "$broken" "$B/md/tex" "${pages[@]}")
+        src, _, href = b.partition(" -> ")
+        if src != page and not src.startswith(folder):
+            continue
+        path, _, frag = href.partition("#")
+        tgt = os.path.normpath(os.path.join(os.path.dirname(src), path)) if path else src
+        if tgt != page and not tgt.startswith(folder):
+            continue                    # a link to another page of the site
+        if frag in undefined:
+            print("warning: " + b + " (the label is not defined in the LaTeX source)", file=sys.stderr)
+        else:
+            print(b)' "$broken" "$B/md/tex" "${pages[@]}")
   if [[ -n "$internal" ]]; then
     echo "error: broken links inside a LaTeX document:" >&2
     printf '%s\n' "$internal" >&2

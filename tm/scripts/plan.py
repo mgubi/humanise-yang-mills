@@ -59,7 +59,7 @@ STAGES = {
     'latex': ['scripts/prep.py', 'scripts/tex_prep.py', 'scripts/tex_post.py', 'scripts/post.py',
               'scripts/stree.py', 'scripts/figures.py', 'scripts/tmio.scm', 'ym-outline.ts',
               'ym-manuscript.ts'],
-    'html': ['scripts/tmio.scm', 'scripts/corkfix.py', 'scripts/stamp.py', 'scripts/linkcheck.py',
+    'html': ['scripts/tmio.scm', 'scripts/split.py', 'scripts/corkfix.py', 'scripts/stamp.py', 'scripts/linkcheck.py',
              'scripts/labelcheck.py', 'scripts/normalize_ids.py', 'resources/', '<max-html>'],
     'build': ['build.sh', 'scripts/plan.py'],
 }
@@ -169,6 +169,18 @@ def existing_pages(tmdir):
     return sorted(out)
 
 
+def html_sha(tmdir, p, latex):
+    """hash of the installed HTML of a page; for a LaTeX document, together
+    with its chapter pages (html/<page without .tm>/*.html, split.py)"""
+    h = file_sha(os.path.join(tmdir, html_of(p)))
+    d = os.path.join(tmdir, 'html', p[:-3])
+    if h is None or not latex or not os.path.isdir(d):
+        return h
+    parts = [h] + [f + ' ' + (file_sha(os.path.join(d, f)) or '-')
+                   for f in sorted(os.listdir(d)) if f.endswith('.html')]
+    return sha('\n'.join(parts).encode())
+
+
 def html_of(p):
     return 'html/' + p[:-3] + '.html'
 
@@ -217,7 +229,7 @@ def plan(state_path, tmdir, mddir, mode, full, tools, outdir):
                 elif old.get('conv_tools') != tools[stage(p)]:
                     conv.append(p); why[p] = f'tools of the {stage(p)} stage changed (or TeXmacs)'
             if mode != 'tm':
-                html_now = file_sha(os.path.join(tmdir, html_of(p)))
+                html_now = html_sha(tmdir, p, stage(p) == 'latex')
                 if p in conv:
                     exp.append(p)
                 elif html_now is None or html_now != old.get('html'):
@@ -260,7 +272,7 @@ def record(state_path, tmdir, mddir, mode, converted, exported, broken, tools, r
         if p in conv:
             o['conv_tools'] = tools[stage(p)]
         if p in exp:
-            o['html'] = file_sha(os.path.join(tmdir, html_of(p)))
+            o['html'] = html_sha(tmdir, p, stage(p) == 'latex')
             o['html_from'] = o['tm']
             o['html_tools'] = tools['html']
         elif p in conv and mode != 'tm':

@@ -76,7 +76,7 @@ the stages that made them. The tools are split by stage (`STAGES` in
 |---|---|---|
 | `md` | `prep.py`, `post.py`, `stree.py`, `tmio.scm`, `ym-outline.ts` | converts and exports the Markdown pages again |
 | `latex` | `tex_prep.py`, `tex_post.py`, `prep.py`, `post.py`, `stree.py`, `figures.py`, `tmio.scm`, `ym-outline.ts`, `ym-manuscript.ts` | converts and exports the LaTeX documents again |
-| `html` | `tmio.scm`, `corkfix.py`, `stamp.py`, `linkcheck.py`, `labelcheck.py`, `normalize_ids.py`, `resources/`, `max-html` | exports every page again |
+| `html` | `tmio.scm`, `split.py`, `corkfix.py`, `stamp.py`, `linkcheck.py`, `labelcheck.py`, `normalize_ids.py`, `resources/`, `max-html` | exports every page again |
 | `build` | `build.sh`, `plan.py`, any other file of `scripts/` or `resources/` | rebuilds everything |
 
 TeXmacs counts in the three first stages, identified by its version (on
@@ -136,6 +136,7 @@ documents"; a repository secret `SITE_PUSH_TOKEN` (a token with the
 | `scripts/normalize_ids.py` | reproducible link ids in the saved documents |
 | `scripts/plan.py` | incremental builds: what to rebuild, and the record `.build-state.json` |
 | `scripts/linkcheck.py` | links and anchors of the whole site |
+| `scripts/split.py` | a large LaTeX document: its HTML page cut into a contents page and chapter pages |
 | `scripts/labelcheck.py` | every `\label` of a LaTeX document has its anchor in its HTML page |
 | `scripts/stamp.py` | the revision note on the home page |
 | `index.tm`, `CONTRIBUTING.tm`, `blueprint/*.tm`, `docs/*.tm`, `source/*.tm`, … | generated documents (every `README.md` becomes `index.tm`) |
@@ -219,6 +220,38 @@ README of a folder (`manuscript/README.md`) those of its folder.
   such references, its comment expects two.)
 - `manuscript/README.md` is a page too (`manuscript/index`), with links to
   the documents of `manuscript/`.
+
+### Chapter pages
+
+A LaTeX document whose flattened source is over 500 kB (`SPLIT_BYTES` in
+`tex_prep.py`; today only the monograph) is published as a contents page
+and one page per top-level `\section`. It is still imported, typeset and
+exported whole, so every number (sections, theorems, equations, citations)
+is that of the whole document; `split.py` then cuts the exported page at its
+top-level headings:
+
+- `manuscript/existence.html` (the URL of the document) is the contents page:
+  navigation bar, title, front matter and the table of contents (sections
+  and subsections, as `tocdepth` 2), whose entries link to the chapter pages;
+- `manuscript/existence/<n>-<slug>.html` (e.g. `3-the-wilson-lattice-and-the-quadratic.html`),
+  one per section, and `manuscript/existence/references.html` for the
+  bibliography: navigation bar, a chapter bar (previous, contents, next) at
+  the top and the bottom, the table of contents as the side panel, the
+  section. The names come from the LaTeX source (`meta.json`, "chapters").
+- Every link to an anchor of the document (`\ref`, `\eqref`, `\cite`, the
+  table of contents) points to the page that holds it. Markdown links to
+  `existence.tex#label` are rewritten by `prep.py` to the chapter page of the
+  label (it reads the `meta.json` of `tex_prep.py`, which therefore runs
+  first); links to `existence.tex` go to the contents page.
+- The folder `html/manuscript/existence/` holds only these pages: the HTML
+  site has no other page there (`prep.py` stops if a Markdown page would be
+  there; links to the `.tex` chapters of `manuscript/existence/` go to
+  GitHub), and it is emptied before each split.
+- Checks: the top-level headings of the page are the sections of the source
+  (count, numbers, every label on the page of its section), every anchor is
+  on exactly one page, and the label and link checks cover the chapter
+  pages. The incremental build records the hash of the contents page and
+  all chapter pages together.
 
 ## Conversion problems and their fixes
 
