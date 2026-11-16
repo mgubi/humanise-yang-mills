@@ -46,17 +46,28 @@
       theorem</a><font class="ym-sep">&middot;</font><a href="../blueprint/outline.html">Proof outline</a><font
       class="ym-sep">&middot;</font><a href="../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
       href="../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><font class="ym-here">Manuscript</font><font
-      class="ym-sep">&middot;</font><a href="../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
-      href="../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../source/audit.html">Source
-      audit</a><font class="ym-sep">&middot;</font><a href="../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
-      href="../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../CONTRIBUTING.html">Contributing</a>
+      class="ym-sep">&middot;</font><a href="existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../CONTRIBUTING.html">Contributing</a>
     </div>
     <p>
       <h1>Mathematical manuscript</h1><a id="mathematical-manuscript"></a>
     </p>
     <div class="ym-callout">
-      <a href="main.html">Read the manuscript (HTML version, converted from the LaTeX
-      source)</a>
+      <p>
+        <strong>Read the LaTeX documents of this folder (HTML versions,
+        converted from the source):</strong>
+      </p>
+      <ul>
+        <li>
+          <p>
+            <a href="existence.html">The four-dimensional Yang&ndash;Mills construction:
+            Foundations and the existence argument (existence.tex)</a>
+          </p>
+        </li>
+      </ul>
     </div>
     <p>
       LaTeX is the authoritative mathematical text from the first draft
@@ -67,27 +78,30 @@
       conceal a missing argument.
     </p>
     <p>
-      <tt class="verbatim">main.tex</tt> assembles section files with <tt class="verbatim">\input</tt>.
-      <tt class="verbatim">preamble.tex</tt> defines shared notation and theorem
-      environments; <tt class="verbatim">references.bib</tt> holds conventional
-      references. The running-coefficient pilot is the first section, owned by
-      <a href="../blueprint/units/YM-000022/correspondence.html">YM-000022</a>. Its blueprint contains correspondence and review
-      evidence, not a second version of the proof.
+      <tt class="verbatim">existence.tex</tt> is the monograph: its preamble defines
+      shared notation and theorem environments, and it assembles the section
+      files in <tt class="verbatim">existence/</tt> with <tt class="verbatim">\input</tt>. <tt
+      class="verbatim">references.bib</tt> holds conventional references (BibTeX, <tt
+      class="verbatim">alpha</tt> style). The running-coefficient section <tt class="verbatim">existence/running-coupling.tex</tt>
+      is owned by <a href="../blueprint/units/YM-000022/correspondence.html">YM-000022</a>. Its blueprint contains
+      correspondence and review evidence, not a second version of the proof.
     </p>
     <h2 id="auto-1"><a id="build-and-inspect"></a>Build and inspect<span style="margin-left: 1em"></span></h2>
     <p>
-      From the repository root, with a TeX distribution providing latexmk and
-      BibTeX:
+      From the repository root, with a TeX distribution providing latexmk,
+      BibTeX and the scalable T1 fonts (<tt class="verbatim">cm-super</tt>):
     </p>
     <pre class="verbatim" xml:space="preserve">
 mkdir -p manuscript/build
 cd manuscript
-latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex</pre>
+latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build existence.tex</pre>
     <p>
-      The result is <tt class="verbatim">manuscript/build/main.pdf</tt>. Build products
-      are ignored by Git. Inspect the rendered pages after changes; resolve
-      missing references and layout warnings before submission. CI builds the
-      manuscript as well as checking metadata.
+      The result is <tt class="verbatim">manuscript/build/existence.pdf</tt>; build
+      products there are ignored by Git. The repository also tracks a compiled
+      snapshot <tt class="verbatim">manuscript/existence.pdf</tt>. Inspect the rendered
+      pages after changes; resolve missing references and layout warnings
+      before submission. CI builds the manuscript as well as checking
+      metadata.
     </p>
     <h2 id="auto-2"><a id="writing-and-review"></a>Writing and review<span style="margin-left: 1em"></span></h2>
     <p>
@@ -105,7 +119,7 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex</pre
       array, including nested inputs, macros and bibliography. Shared
       support-file edits invalidate every listed dependent unit's review
       fingerprint. Claim shared-file edits explicitly; adding a section also
-      needs a bounded edit to <tt class="verbatim">main.tex</tt>.
+      needs a bounded edit to <tt class="verbatim">existence.tex</tt>.
     </p>
     <p>
       Draft status is visible in the assembled manuscript; inclusion does not
