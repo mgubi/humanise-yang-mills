@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Review of a proof unit &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <div class="ym-unit-nav">
+      <a class="ym-prev" href="../../YM-000026/correspondence.html">&larr; YM-000026</a><span class="ym-part"><a href="../correspondence.html">YM-000033:
+      Selected trace sensor and weighted Ward limit (draft)</a><font class="ym-sep">&middot;</font><a
+      href="../HANDOFF.html">HANDOFF</a><font class="ym-sep">&middot;</font><a href="../validation.html">validation</a></span><a
+      class="ym-next" href="../../YM-000034/correspondence.html">YM-000034 &rarr;</a>
+    </div>
+    <p>
+      <h1>Review of a proof unit</h1><a id="review-of-a-proof-unit"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Findings and evidence</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">2</a>
+      </p>
+      <p>
+        Responses to the earlier findings <span style="margin-left: 5mm"></span> <a href="#auto-2">2</a>
+      </p>
+      <p>
+        Re-verification of the revised mathematics <span style="margin-left: 5mm"></span> <a
+        href="#auto-3">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Optional suggestions (not required)</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-4">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Evidence (commands actually run, at <tt>b0bfc78</tt>)</b> <span
+        style="margin-left: 5mm"></span> <a href="#auto-5">5</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Acceptance</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">5</a>
+      </p>
+    </div>
+    <ul>
+      <li>
+        <p>
+          Unit: YM-000033, <tt class="verbatim">blueprint/units/YM-000033/</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Role: mathematical validity (renewed review of revision 1)
+        </p>
+      </li>
+      <li>
+        <p>
+          Human reviewer: <tt class="verbatim">ADB991</tt> (account under which this
+          report is submitted; ADB991 had not reviewed it before submission,
+          and no human acceptance is recorded by this report)
+        </p>
+      </li>
+      <li>
+        <p>
+          Agent assistance: the whole review was done by a Claude (Anthropic)
+          agent session, <tt class="verbatim">ADB991-claude-20261113-f80c</tt>, running
+          as a scheduled agent. This account authored no part of YM-000033 and
+          did not write review #126/#127. The revision was drafted with Codex
+          (GPT family), so the reviewing model family differs from the
+          authoring one.
+        </p>
+      </li>
+      <li>
+        <p>
+          Content SHA-256: <tt class="verbatim">ad3b82466a1b69b610548e1af518251def5ac1cd4a6bc5757a91b3cc46cba4aa</tt>
+          (<tt class="verbatim">python3 scripts/check_blueprint.py --fingerprint
+          YM-000033</tt> at <tt class="verbatim">codex/existence-monograph</tt> <tt
+          class="verbatim">b0bfc78</tt>; equal to the author's recorded revision
+          fingerprint). All ten file hashes in <tt class="verbatim">revision-candidate.json</tt>
+          match this base.
+        </p>
+      </li>
+      <li>
+        <p>
+          Manuscript files and labels: <tt class="verbatim">manuscript/existence/trace-prosper-sensor.tex</tt>,
+          read in full (645 lines): <tt class="verbatim">lem:trace-sensor-arch-ratio</tt>,
+          <tt class="verbatim">lem:trace-sensor-initial-price</tt>, <tt class="verbatim">lem:trace-sensor-transport-price</tt>,
+          <tt class="verbatim">lem:trace-sensor-lift-limit</tt>, the list
+          (S1)&ndash;(S7), <tt class="verbatim">prop:trace-prosper-sensor</tt>,
+          equations <tt class="verbatim">eq:trace-sensor-*</tt>. Support: the subsection
+          &quot;Low-grade invariant labels&quot; of <tt class="verbatim">trace-free-rank.tex</tt>
+          (for R2) and the statement of <tt class="verbatim">lem:ex-lattice-trace-weighted-price</tt>
+          in <tt class="verbatim">trace-weighted-estimates.tex</tt>. <tt class="verbatim">preamble.tex</tt>
+          not reviewed.
+        </p>
+      </li>
+      <li>
+        <p>
+          Source revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Review task and PR: issue <a href="https://github.com/hairer/humanise-yang-mills/issues/33">#33</a>, claim <a href="https://github.com/hairer/humanise-yang-mills/issues/33#issuecomment-6856591729">https://github.com/hairer/humanise-yang-mills/issues/33#issuecomment-6856591729</a>;
+          revision PR #134 (head <tt class="verbatim">0076542</tt>, merged at <tt class="verbatim">b13f2ef</tt>);
+          this report's PR: report-only draft against <tt class="verbatim">codex/existence-monograph</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Outcome: <strong>no change required.</strong> R1, R2, R3, R4 and R5
+          of review #126 (as corrected in #127) are resolved. No mathematical
+          error was found in the revised text. Four optional presentation
+          suggestions (S1&ndash;S4 below; named O1&ndash;O4 to avoid a clash
+          with the chapter's (S1)&ndash;(S7)). Acceptance would be local and
+          conditional on the inputs (S1)&ndash;(S7).
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-1"><a id="findings-and-evidence"></a>Findings and evidence<span style="margin-left: 1em"></span></h2>
+    <h3 id="auto-2"><a id="responses-to-the-earlier-findings"></a>Responses to the earlier findings<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          <strong>R1 (required): resolved.</strong> The inputs are now the
+          numbered list (S1)&ndash;(S7) (lines 503&ndash;561), immediately
+          before <tt class="verbatim">prop:trace-prosper-sensor</tt>. The four derived
+          results are labelled lemmas with proofs: arch ratio (117&ndash;145),
+          initial-level price (231&ndash;361), transport price
+          (363&ndash;475), lift convergence (477&ndash;501). The proposition
+          cites them. I checked that every
+          &quot;assume&quot;/&quot;suppose&quot; in the chapter is covered by
+          the list:
+        </p>
+        <ul>
+          <li>
+            <p>
+              clock, block sizes, arch scales and \(n_i = q (k_i)\)
+              (105&ndash;115) &rarr; (S1);
+            </p>
+          </li>
+          <li>
+            <p>
+              chart formulas, \(PY_i = X_i\), intertwining, \(fU = \text{id}\)
+              (147&ndash;213) &rarr; (S2);
+            </p>
+          </li>
+          <li>
+            <p>
+              ultrafilter refining the fused order, joint transport, running
+              parameter and lift convergence (240&ndash;262) &rarr; (S3);
+            </p>
+          </li>
+          <li>
+            <p>
+              \(\textsf{A}, \textsf{T}\) endomorphisms with unit, injectivity
+              of \(\textsf{A}\), the two bounds of <tt class="verbatim">eq:trace-sensor-tested-price</tt>,
+              the lift formula and \(\textsf{A} = d_{k_i}^{- 5}
+              \text{Col}_{k_i}\) (274&ndash;345) &rarr; (S4);
+            </p>
+          </li>
+          <li>
+            <p>
+              threshold ratio and residual bound <tt class="verbatim">eq:trace-sensor-raw-step</tt>
+              with the quantifier &quot;each fixed \(j\), eventually in
+              \(\nu\), uniformly in \(N > j\) and label&quot; (418&ndash;431)
+              &rarr; (S5);
+            </p>
+          </li>
+          <li>
+            <p>
+              column budget and preservation of oddness (416&ndash;417,
+              433&ndash;435) &rarr; (S6);
+            </p>
+          </li>
+          <li>
+            <p>
+              the marked limits &rarr; (S7), which the proposition states
+              separately in <tt class="verbatim">eq:trace-sensor-marked</tt>.
+            </p>
+          </li>
+        </ul>
+        <p>
+          Nothing is used that is not in the list. The &quot;Suppose
+          finite-volume coefficients &hellip; satisfy <tt class="verbatim">eq:trace-sensor-finite-price</tt>&quot;
+          (248&ndash;256) and &quot;suppose &hellip; <tt class="verbatim">eq:trace-sensor-step-input</tt>&quot;
+          (373&ndash;381) are derived inside the same proofs (355&ndash;357
+          and 455&ndash;472), so they are not extra hypotheses (see O2).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>R2 (nit): resolved.</strong> Line 316&ndash;317 now cites
+          Section <tt class="verbatim">sec:ex-lattice-trace-free-rank</tt>. Its
+          subsection &quot;Low-grade invariant labels&quot; (<tt class="verbatim">trace-free-rank.tex</tt>
+          line 12) contains the invariant-linear-form argument.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>R3 (minor): resolved.</strong> Line 277: \(\textsf{A},
+          \textsf{T} : \textsf{V} \to \textsf{V}\) are endomorphisms. The
+          dimension sentence is gone. Injectivity of \(\textsf{T}\) follows
+          from the first bound and injectivity of \(\textsf{A}\)
+          (288&ndash;290); finite dimension gives invertibility. Correct.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>R4 (nit): resolved.</strong> Lines 240&ndash;245 and (S3):
+          the selected ultrafilter refines the fused order, \(\mathcal{L}
+          \leqslant \mathcal{F}_{\text{fuse}}\), and only coordinate tails are
+          used. I checked that the fused-order filter contains both tails (see
+          the Lean report: both coordinate sequences are strictly increasing).
+          Then the fixed-\(i\) set &quot;eventually in \(\nu\) for each \(k_i
+          \leqslant j < n_i\), and \(N \geqslant n_i\)&quot; is in
+          \(\mathcal{L}\): a finite intersection of an &quot;eventually in the
+          period&quot; set (uniform in \(N > j\)) and a mesh tail.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>R5 (record): resolved.</strong> The wrapper (<tt class="verbatim">evidence/wrapper.tex</tt>)
+          now documents the two external labels in a comment. My build
+          reproduces exactly those warnings (see Evidence).
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-3"><a id="re-verification-of-the-revised-mathematics"></a>Re-verification of the revised mathematics<span style="margin-left: 1em"></span></h3>
+    <p>
+      I rechecked each derivation in the changed text.
+    </p>
+    <ol>
+      <li>
+        <p>
+          <strong>Lemma <tt class="verbatim">lem:trace-sensor-arch-ratio</tt>.</strong>
+          Let \(\chi = \hat{\beta}_k\), \(g = (\log \chi)^{48}\), \(q (k) = m
+          + 1\). Minimality gives \(\ell_m - \ell_k \leqslant g\). For large
+          \(k\), \(\gamma g \leqslant \chi\), so \(\hat{\beta}_m \leqslant 2
+          \chi\). Then \(\log L_m \leqslant L_m \leqslant \log \hat{\beta}_m
+          \leqslant \log 2 \chi
+\leqslant g\). So \(0 \leqslant \ell_{q (k)} -
+          \ell_k \leqslant 2 g\), and \(\hat{\beta}_{q (k)} / \hat{\beta}_k
+          \to 1\). With \(\hat{\beta}_j \geqslant \gamma \ell_j\), <tt class="verbatim">eq:trace-sensor-clock-input</tt>
+          gives \(b_j / \hat{\beta}_j \to 1\), hence the claim. Correct.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Lemma <tt class="verbatim">lem:trace-sensor-initial-price</tt>.</strong>
+        </p>
+        <ul>
+          <li>
+            <p>
+              Centring: with \(c = (\textsf{T} v)_0\) and \(v^{\circ} = v -
+              c\boldsymbol{1}\), \(\textsf{T} v^{\circ} = \textsf{T} v - ce_0
+              = \text{core} \textsf{T} v\) and \(\text{core} \textsf{A}
+              v^{\circ} = \text{core} \textsf{A} v\). From \(| \textsf{A}
+              v^{\circ} |_1 \leqslant \tfrac{1}{2} | \textsf{A} v^{\circ} |_1
+              +
+| \textsf{T} v^{\circ} |_1\) we get \(| \textsf{A} v^{\circ}
+              |_1 \leqslant 2 | \text{core} \textsf{T} v|_1\). The second
+              bound <strong>applied at \(v^{\circ}\)</strong>, then
+              \(\text{core}\), gives <tt class="verbatim">eq:trace-sensor-centered-price</tt>.
+              Correct (O1).
+            </p>
+          </li>
+          <li>
+            <p>
+              Calibration: \(\text{Dil}_{\xi} \textsf{T} \lambda_i =
+              \text{Pos}_{\sigma_i} p = \sigma_i^5 p\) because the nonzero
+              nonunit coordinates of the odd \(p\) have position degree 5.
+              \(\text{Dil}_{\xi^{- 1}}\) multiplies factor-degree-2
+              coordinates by \(\xi^{- 2} = \beta_i \vartheta_{k_i}^2\). So
+              \(\text{core} \textsf{T} \lambda_i = \beta_i \vartheta_{k_i}^2
+              \sigma_i^5 p\). Multiplying the centred price by
+              \(\vartheta_{k_i}^{- 2} d_{k_i}^5\) and using \(r_i = d_{k_i}
+              \sigma_i\) gives \(|Z_i - \beta_i r_i^5 p|_1 \leqslant 2 \eta_i
+              \beta_i r_i^5 |p|_1\), which is <tt class="verbatim">eq:trace-sensor-finite-price</tt>.
+              Correct.
+            </p>
+          </li>
+          <li>
+            <p>
+              The degree classification (311&ndash;322) is the same argument
+              as before, now with the R2 reference. Correct.
+            </p>
+          </li>
+          <li>
+            <p>
+              Limits: \(Z_i (\omega) \to \vartheta_{k_i}^{- 2} \text{core} M
+              (k_i) y_i = W_{k_i} y_i\) by (S3) applied to \(v (\omega) =
+              \lambda_i (\omega) \to y_i\); \(B_i (\omega) \to b_{k_i} r_i^5 =
+              D_i\). The non-strict inequality passes to the ultrafilter
+              limit. Correct, with the volume limit at fixed \(i\).
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Lemma <tt class="verbatim">lem:trace-sensor-transport-price</tt>.</strong>
+        </p>
+        <ul>
+          <li>
+            <p>
+              Telescoping with \(a = \delta_i / N_i \leqslant 1 / N_i\): from
+              \(|z_{j + 1} |_1 \leqslant 2 |z_{n_i} |_1\), the step bound
+              \(\tfrac{\delta_i}{2 N_i} |z_{j + 1} |_1 \leqslant a |z_{n_i}
+              |_1\). Correct.
+            </p>
+          </li>
+          <li>
+            <p>
+              Grade scaling <tt class="verbatim">eq:trace-sensor-grade-scaling</tt>:
+              block factor \(L_j^0 = 1\), dilation factor \((\vartheta_j /
+              \vartheta_{j + 1})^2\) on the nonunit coordinates of the odd
+              \(\tilde{z}_{j + 1}\). Correct.
+            </p>
+          </li>
+          <li>
+            <p>
+              Budget: \(\hat{\beta}_{n_i} \leqslant 2 \chi\); \(\log L_j
+              \geqslant \log 3 \geqslant 1\) gives \(N_i \leqslant 2 (\log
+              \chi)^{48}\); \(C_{j + 1} \leqslant \log \hat{\beta}_{j + 1}
+              \leqslant 2 \log \chi\); monotonicity gives \(A_{1 / 2}  (j + 1)
+              \geqslant A_{1 / 2} (k_i)\). Then \(2 N_i \cdot 4 g_j \leqslant
+              32 (\log \chi)^{48}  (1 + 2 \log \chi) / A_{1 / 2}
+(k_i)
+              \leqslant A_{- 2 / 5} (k_i) = \delta_i\), because a fixed power
+              of \(\log \chi\) is eventually below \(A_{1 / 10} (k_i)\).
+              Correct.
+            </p>
+          </li>
+          <li>
+            <p>
+              Quantifiers: the finite intersection over \(k_i \leqslant j <
+              n_i\) with \(N \geqslant n_i\) is taken for fixed \(i\) before
+              the ultrafilter limit. This matches (S5).
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <strong>Lemma <tt class="verbatim">lem:trace-sensor-lift-limit</tt>.</strong>
+          \((u_i h)_{\alpha} = c_i^{- 1} W_{n_i} y_i = (b_{k_i} / b_{n_i})
+          \textsf{R}_i\). The bound \(| \textsf{R}_i - p|_1 \leqslant (2
+          \eta_i + \delta_i)  (1 - \delta_i)^{- 1}
+|p|_1\) follows: \(\delta
+          (1 + 2 \eta) / (1 - \delta) + 2 \eta = (2 \eta + \delta) / (1 -
+          \delta)\). With <tt class="verbatim">lem:trace-sensor-arch-ratio</tt>, \(u_i h
+          \to Uh\). Finite dimension gives operator-norm convergence. Correct.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Proposition.</strong> The proof is unchanged in substance
+          from the version reviewed in #126 (item 8 there), which I re-read.
+          \(T_i = u_i f + A \otimes v_i \to \text{id}\), \(s_i T_i = f + A
+          \otimes s_i (v_i)\), \(\|s_i - f\| \leqslant (\|A\|\|s_i
+          (v_i)\|+\|f\| \epsilon_i) / (1 - \epsilon_i)\), then <tt class="verbatim">lem:ex-lattice-trace-weighted-price</tt>
+          with \((s_i, u_i, v_i, \mathfrak{a}_i)\). The statement now has
+          &quot;for all sufficiently large \(i\), \(| \mu_i (h) | \leqslant C
+          \|h\|\)&quot; and one tail per \(\varepsilon\), uniform in \(y\).
+          Correct.
+        </p>
+      </li>
+    </ol>
+    <p>
+      <strong>Existing results.</strong> The tools remain the Neumann series
+      (cited in <tt class="verbatim">correspondence.md</tt> to Winklmeier, Thm 2.10) and
+      the rank-one receiver lemma proved in <tt class="verbatim">trace-weighted-estimates.tex</tt>.
+      I know of no literature result that would shorten the chart and
+      calibration bookkeeping.
+    </p>
+    <h2 id="auto-4"><a id="optional-suggestions-not-required"></a>Optional suggestions (not required)<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          <strong>O1 (clarity), lines 295&ndash;299.</strong> &quot;Applying
+          core to the second bound&quot; should say &quot;applied to
+          \(v^{\circ}\)&quot;. At \(v\) itself the bound has \(| \textsf{A}
+          v|_1\) on the right, which need not be at most \(2 | \text{core}
+          \textsf{T} v|_1\).
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>O2 (presentation).</strong> The lemmas cite
+          &quot;(S1)&ndash;(S6) below&quot; before the list appears (line
+          229). Two proofs also open with &quot;Suppose &hellip;&quot; for
+          statements they derive later (248&ndash;256, 372&ndash;381). Moving
+          the list before Lemma <tt class="verbatim">lem:trace-sensor-initial-price</tt>,
+          and stating the finite-volume price and the one-step price as claims
+          to be proved, would read more directly. The proposition statement
+          also contains a proof sentence (&quot;By Lemmas &hellip;, the stated
+          chart has an eventual right inverse &hellip;&quot;), which could
+          move to the proof.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>O3 (scaffolding), line 340.</strong> &quot;On the selected
+          tail, where \(i \geqslant 5\)&quot; comes from the Lean indexing of
+          the lift (<tt class="verbatim">heightV</tt>, with <tt class="verbatim">5 &lt; i+1</tt>;
+          see <tt class="verbatim">correspondence.md</tt> line 33). In the monograph,
+          &quot;on the selected tail&quot; suffices.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>O4 (wording), lines 243&ndash;245.</strong> &quot;Write
+          \(\mathcal{F}_{\text{fuse}}\) for its fused-order filter&quot;
+          &mdash; &quot;its&quot; refers to the order, not the ultrafilter.
+          Suggest: &quot;Write \(\mathcal{F}_{\text{fuse}}\) for the
+          fused-order filter on pairs; the selected ultrafilter satisfies
+          \(\mathcal{L} \leqslant \mathcal{F}_{\text{fuse}}\), so it contains
+          both coordinate tails.&quot;
+        </p>
+      </li>
+    </ul>
+    <p>
+      Not checked: the production of the inputs (S1)&ndash;(S7), which by
+      design are hypotheses; <tt class="verbatim">preamble.tex</tt>; the parts of the
+      support chapters not cited here.
+    </p>
+    <h2 id="auto-5"><a id="evidence-commands-actually-run-at-b0bfc78"></a>Evidence (commands actually run, at <tt class="verbatim">b0bfc78</tt>)<span
+    style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">python3 scripts/check_blueprint.py</tt>: &quot;Blueprint
+          structure OK: 4 units. Lean and mathematics were not verified.&quot;
+          (also after adding these reports)
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">python3 -m unittest discover -s tests</tt>: 22 tests, OK.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">python3 scripts/check_blueprint.py --fingerprint
+          YM-000033</tt>: <tt class="verbatim">ad3b82466a1b69b610548e1af518251def5ac1cd4a6bc5757a91b3cc46cba4aa</tt>;
+          SHA-256 of all ten files listed in <tt class="verbatim">revision-candidate.json</tt>
+          recomputed: all match.
+        </p>
+      </li>
+      <li>
+        <p>
+          From <tt class="verbatim">manuscript/</tt>, <tt class="verbatim">pdflatex
+          -interaction=nonstopmode -halt-on-error
+          -output-directory=&lt;scratch&gt;
+          ../blueprint/units/YM-000033/evidence/wrapper.tex</tt>, twice: exit
+          0 both times, 21 pages. Warnings: only <tt class="verbatim">prop:ex-lattice-charge-bounds</tt>
+          (pages 11, 12) and <tt class="verbatim">prop:ex-trace-mission-price-transfer</tt>
+          (page 6), the two documented external labels; one inherited 5.3389pt
+          overfull box in the receiver paragraph. Pages 14&ndash;21 rendered
+          with <tt class="verbatim">pdftoppm -r 70</tt> and inspected (pages 17 and 20
+          in detail): lemma headings, the (S1)&ndash;(S7) list and the
+          proposition render correctly.
+        </p>
+      </li>
+      <li>
+        <p>
+          Lean: source text read with <tt class="verbatim">grep</tt>/<tt class="verbatim">sed</tt>
+          only (paths in the Lean report). No elaboration.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-6"><a id="acceptance"></a>Acceptance<span style="margin-left: 1em"></span></h2>
+    <p>
+      No acceptance is recorded by this report. A responsible human may record
+      local mathematical acceptance at fingerprint <tt class="verbatim">ad3b8246&hellip;46cba4aa</tt>,
+      conditional on (S1)&ndash;(S7). O1&ndash;O4 are optional; any edit would
+      change the fingerprint.
+    </p>
+    <div class="ym-unit-nav">
+      <a class="ym-prev" href="../../YM-000026/correspondence.html">&larr; YM-000026</a><span class="ym-part"><a href="../correspondence.html">YM-000033:
+      Selected trace sensor and weighted Ward limit (draft)</a><font class="ym-sep">&middot;</font><a
+      href="../HANDOFF.html">HANDOFF</a><font class="ym-sep">&middot;</font><a href="../validation.html">validation</a></span><a
+      class="ym-next" href="../../YM-000034/correspondence.html">YM-000034 &rarr;</a>
+    </div>
+  </body>
+</html>

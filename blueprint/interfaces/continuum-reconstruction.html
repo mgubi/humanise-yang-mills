@@ -66,23 +66,39 @@
         <b>Candidate input/output contracts</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">2</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Calibration, field algebra and the public projection</b> <span
+        style="margin-left: 5mm"></span> <a href="#auto-3">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
         <b>Conceptual graph and source-graph limit</b> <span style="margin-left: 5mm"></span> <a
-        href="#auto-3">4</a>
+        href="#auto-4">6</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Notation handoff to issue #10</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">5</a>
+        <b>Notation handoff to issue #10</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">7</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Open questions and review gates</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">5</a>
+        <b>Open questions and review gates</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">7</a>
       </p>
       <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Evidence and limits</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">6</a>
+        <b>Response to the PR #18 review and G01 P9</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-7">8</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Response to independent review #228 (R1&ndash;R5)</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-8">9</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Evidence and limits</b> <span style="margin-left: 5mm"></span> <a href="#auto-9">10</a>
       </p>
     </div>
     <p>
-      <strong>Status:</strong> author draft for <a href="https://github.com/hairer/humanise-yang-mills/issues/11">issue #11</a>, not an
-      accepted proof-unit assignment. <strong>Source:</strong> imported
-      OpenAI-YM revision <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>.
+      <strong>Status:</strong> author draft for <a href="https://github.com/hairer/humanise-yang-mills/issues/11">issue #11</a>,
+      revised for <a href="https://github.com/hairer/humanise-yang-mills/issues/160">issue #160</a> in response to the independent
+      correspondence review of PR #18 and to G01 proposed patch P9 (see <a
+      href="#response-to-the-pr-18-review-and-g01-p9">Response to the review</a>); includes the bounded R1&ndash;R5
+      response to <a href="https://github.com/hairer/humanise-yang-mills/pull/228">review #228</a> recorded below; not an accepted
+      proof-unit assignment. <strong>Source:</strong> imported OpenAI-YM
+      revision <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>.
       <strong>Navigation map:</strong> Scott Armstrong's compiled map at <a
       href="https://github.com/scottnarmstrong/yang-mills-informalization/tree/8f3c7ccaeabb17b0f928bc1a2e75328691de3032"><tt class="verbatim">8f3c7ccaeabb17b0f928bc1a2e75328691de3032</tt></a>, as
       recorded in <a href="../external-map.html">the local map</a>. The map supplies candidate
@@ -136,6 +152,42 @@
       and additional internal conclusions.
     </p>
     <p>
+      <strong>Two orders.</strong> The joint receipts state two different
+      ordered limits. In <tt class="verbatim">YangMills.constructed</tt> (<tt class="verbatim">Lean/Construction.lean</tt>,
+      the conjunct at line 23), <tt class="verbatim">YM.R2IGoals.Broad.refine</tt> and
+      <tt class="verbatim">YM.Nonperturbative.continuum_with_position_tests</tt>, the
+      displayed Wilson clause is <tt class="verbatim">{ mesh := .full, per := (p.refine
+      q).per }.Ordered C S</tt>: the <strong>full</strong> mesh sequence at
+      the refined periods. The final structure <tt class="verbatim">F : YM.Spec.Final C
+      (p.refine q) S</tt> is indexed by the refined order, whose mesh
+      component is <tt class="verbatim">p.mesh &#x2218; q.mesh</tt> (<tt class="verbatim">Order.refine</tt>
+      composes both components, <tt class="verbatim">Lean/YM/Extraction/Orders.lean</tt>),
+      and contains <tt class="verbatim">F.room.ordered : (p.refine q).Ordered C S</tt>;
+      in <tt class="verbatim">YangMills.jointExistence</tt>, where <tt class="verbatim">p.mesh</tt>
+      is the identity, this mesh component is <tt class="verbatim">q.mesh</tt>. The
+      public <tt class="verbatim">Properties</tt> takes a period sequence only; its
+      clause <tt class="verbatim">wilson</tt> is <tt class="verbatim">WilsonFamily.Converges
+      ((p.refine q).per) &hellip;</tt>, which demands the full mesh limit at
+      every suitable period, and <tt class="verbatim">YangMills.wilsonLimit</tt> (<tt
+      class="verbatim">Lean/HierarchyBridge.lean</tt> 44&ndash;56) obtains it from the
+      full-mesh <tt class="verbatim">Ordered</tt> conjunct, not from <tt class="verbatim">F.room.ordered</tt>.
+      So full-mesh Wilson convergence and refined-mesh field extraction are
+      distinct outputs, and the checkable PU-16 output for the public endpoint
+      is the full-mesh statement. The full-mesh output is
+      <strong>derived</strong>, rather than a second independent compactness
+      extraction: <tt class="verbatim">YM.FullVolume.Final.from_spec</tt> (<tt class="verbatim">Lean/YM/FullVolume/Finale/Program.lean</tt>
+      117&ndash;126) combines <tt class="verbatim">F.room.ordered</tt> with PU-15's <tt
+      class="verbatim">PositionsUV R.family .full</tt>. At each suitable fixed period,
+      the latter supplies convergence of the full mesh sequence; its limit
+      equals the refined-mesh row limit by <tt class="verbatim">tendsto_nhds_unique</tt>
+      after composition with <tt class="verbatim">f.mesh.cofinal</tt>. The period-stage
+      limit is then the one already in <tt class="verbatim">F.room.ordered</tt>. <tt
+      class="verbatim">YM.R2IGoals.fromFunded</tt> calls exactly this argument with <tt
+      class="verbatim">hJ.fullMesh</tt> (<tt class="verbatim">Lean/YM/R2I/Campaign/Accepted.lean</tt>
+      165). It does not promote <tt class="verbatim">copies</tt> or <tt class="verbatim">corrected</tt>
+      to the full-mesh order.
+    </p>
+    <p>
       An <tt class="verbatim">Ordered</tt> receipt is not a diagonal limit. <tt class="verbatim">YM.Extraction.Order.limits</tt>
       first takes the mesh limit at each suitable fixed period, then the
       period limit of those mesh-limit values (<tt class="verbatim">Lean/YM/Extraction/Orders.lean</tt>).
@@ -182,7 +234,13 @@
         (<tt class="verbatim">Lean/YM/R2I/Campaign/Accepted.lean</tt>); <tt class="verbatim">YM.FullVolume.Final.Jewel</tt>
         (<tt class="verbatim">Lean/YM/FullVolume/Finale/Program.lean</tt>); <tt class="verbatim">YangMills.wilsonFamily</tt>
         and <tt class="verbatim">YangMills.regular</tt> (<tt class="verbatim">Lean/WilsonBridge.lean</tt>,
-        <tt class="verbatim">Lean/HierarchyBridge.lean</tt>).</td>
+        <tt class="verbatim">Lean/HierarchyBridge.lean</tt>). <tt class="verbatim">YangMills.regular
+        : g.IsSimple &rarr; C.Makes &rarr; WilsonRegularity (wilsonFamily
+        C)</tt> needs only <tt class="verbatim">C.Makes</tt> (the <tt class="verbatim">cutoff</tt>
+        field of <tt class="verbatim">YM.Spec.Seed</tt>); its <tt class="verbatim">running</tt>
+        clause uses the slope <tt class="verbatim">2&middot;Pert.Asymptotics.b0
+        g.core</tt>, the bare-coefficient case of unit YM-000022 (not traced
+        further).</td>
         <td style="border-right: 1px solid; border-bottom: 1px solid">PU-05&ndash;PU-13 and BG inputs, <strong>prove</strong> the
         selected-run, full-mesh UV and regularity statements. Suppress
         campaign bookkeeping only after checking it carries no extra
@@ -191,14 +249,39 @@
       </tr><tr>
         <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><strong>PU-16</strong>, <tt class="verbatim">blueprint/units/&lt;new-issue-16&gt;/</tt></td>
         <td style="border-right: 1px solid; border-bottom: 1px solid">The <em>same</em> <tt class="verbatim">R.family</tt>; an arbitrary
-        <tt class="verbatim">p : Extraction.Order</tt>; funded bounds and an eventual
-        full-mesh UV estimate.</td>
+        <tt class="verbatim">p : Extraction.Order</tt>; funded bounds and <tt class="verbatim">YM.FullVolume.PositionsUV
+        R.family .full</tt> from PU-15 (the fixed-period full-mesh limit
+        input).</td>
         <td style="border-right: 1px solid; border-bottom: 1px solid">A refinement <tt class="verbatim">q</tt>, table <tt class="verbatim">S</tt>,
-        ordered two-stage Wilson limits on <tt class="verbatim">p.refine q</tt>, generic
-        point limits, and a Euclidean <tt class="verbatim">S.Hierarchy</tt> with its
-        precise fields: basic laws, real spin, translations, reflection
-        positivity both for words and smeared tests, smoothness and capped
-        growth. <tt class="verbatim">YM.Extraction.Order.Ordered</tt> / <tt class="verbatim">PointLimits</tt>
+        ordered two-stage Wilson limits <strong>both</strong> on the full-mesh
+        order <tt class="verbatim">{ mesh := .full, per := (p.refine q).per }</tt> (the
+        checkable public output, see &quot;Two orders&quot;) and on <tt class="verbatim">p.refine
+        q</tt>, generic point limits, and a Euclidean <tt class="verbatim">S.Hierarchy</tt>
+        with its precise fields: basic laws, real spin, translations,
+        reflection positivity both for words and smeared tests, smoothness and
+        capped growth. <strong><tt class="verbatim">YM.Spec.Seed</tt> is not the PU-16
+        output contract.</strong> Of its six fields, PU-16 owns <tt class="verbatim">ordered</tt>,
+        <tt class="verbatim">generic</tt> and <tt class="verbatim">kernel</tt>; <tt class="verbatim">cutoff
+        : C.Makes</tt> is the PU-15 family property; <tt class="verbatim">copies :
+        YM.Cells.CellHyp C f</tt> and <tt class="verbatim">corrected :
+        YM.Cells.RankWidths C f S</tt> are rank-side data assigned to
+        candidate PU-11 in <a href="rank-determinant-stress.html"><tt class="verbatim">rank-determinant-stress.md</tt></a>,
+        Contract B (C13 edge C13-to-C14-stress-history). The source theorem
+        <tt class="verbatim">YM.MergeProof.Accent.rated</tt> (<tt class="verbatim">Lean/YM/MergeProof/Powder.lean</tt>
+        48&ndash;54) returns the <strong>whole</strong> <tt class="verbatim">Seed</tt>,
+        including <tt class="verbatim">ordered</tt>, <tt class="verbatim">generic</tt> and <tt
+        class="verbatim">kernel</tt>, and starts with <tt class="verbatim">YM.Extraction.crops</tt>
+        (<tt class="verbatim">Lean/YM/Extraction/Held.lean</tt> 136). Thus this
+        ownership split is editorial; no separate source producer of only
+        PU-16's three fields is identified here. <tt class="verbatim">YM.MergeProof.Acme.emanate</tt>
+        (<tt class="verbatim">Lean/YM/MergeProof/Emanate.lean</tt> 31&ndash;36) consumes
+        both <tt class="verbatim">s.copies</tt> and <tt class="verbatim">s.corrected</tt>: its <tt
+        class="verbatim">readyA</tt> call also takes <tt class="verbatim">s.cutoff</tt>, <tt
+        class="verbatim">s.ordered</tt>, <tt class="verbatim">s.generic</tt> and <tt class="verbatim">s.kernel</tt>,
+        and obtains the dimension bound from <tt class="verbatim">Next.UVStress.cap_given
+        s.corrected</tt>. A PU-16 assembly takes the rank-side pair as stated
+        inputs; the stress handoff must retain both and the other used seed
+        fields. <tt class="verbatim">YM.Extraction.Order.Ordered</tt> / <tt class="verbatim">PointLimits</tt>
         (<tt class="verbatim">Lean/YM/Extraction/Limits.lean</tt>), <tt class="verbatim">YM.Spec.Seed</tt>
         (<tt class="verbatim">Lean/YM/Spec/Closed.lean</tt>), <tt class="verbatim">YM.Table.Hierarchy</tt>
         (<tt class="verbatim">Lean/YM/Euclid/Words.lean</tt>); the combined source
@@ -220,7 +303,29 @@
         it is not an arbitrary phase mixture. <tt class="verbatim">YM.OS.Spread.Resolution.Out</tt>,
         <tt class="verbatim">YM.OS.Selection</tt>, <tt class="verbatim">YM.OS.Selection.Certificate</tt>,
         <tt class="verbatim">YM.OS.Spread.Resolution.barycenter</tt> (<tt class="verbatim">Lean/YM/Phase/Mixture.lean</tt>);
-        <tt class="verbatim">YM.Spec.Final.phase</tt> (<tt class="verbatim">Lean/YM/Spec/Closed.lean</tt>).</td>
+        <tt class="verbatim">YM.Spec.Final.phase</tt> (<tt class="verbatim">Lean/YM/Spec/Closed.lean</tt>).
+        <strong>Ownership of the certificate fields.</strong> <tt class="verbatim">Final.phase
+        : Materializes sector &alpha; _</tt> has two parts. <tt class="verbatim">transport
+        : Spec.Locals X h</tt> (inclusions, derivatives, orientation, rotation
+        laws, <tt class="verbatim">Maxwell.Ranks</tt>, conservation, tensoriality and
+        <tt class="verbatim">charges : StressLaws S &hellip;</tt> for the unselected
+        table) is <strong>not</strong> a PU-17 output: it belongs to the
+        derivative, rank and stress units (PU-11, PU-20). <tt class="verbatim">phase :
+        OS.Selection.Certificate</tt> has the fields <tt class="verbatim">lengths</tt>,
+        <tt class="verbatim">still</tt>, <tt class="verbatim">decomposition</tt>, <tt class="verbatim">chosen</tt>,
+        <tt class="verbatim">states</tt>, <tt class="verbatim">sym</tt>, <tt class="verbatim">retains</tt>,
+        <tt class="verbatim">coordinates</tt>, <tt class="verbatim">calculus</tt>, <tt class="verbatim">flux</tt>,
+        <tt class="verbatim">goes</tt>, <tt class="verbatim">heat</tt>. PU-17 owns <tt class="verbatim">decomposition</tt>,
+        <tt class="verbatim">chosen</tt>, <tt class="verbatim">states</tt> (each phase table
+        satisfies <tt class="verbatim">Hierarchy</tt>), <tt class="verbatim">retains</tt>, <tt
+        class="verbatim">still</tt> and <tt class="verbatim">lengths</tt>/<tt class="verbatim">goes</tt>;
+        <tt class="verbatim">flux : &forall; i, StressLaws (C.ensemble i) J P.deriv
+        R.lie</tt> carries the stress laws to every phase and therefore
+        crosses into PU-20, and <tt class="verbatim">sym</tt>, <tt class="verbatim">coordinates</tt>,
+        <tt class="verbatim">calculus</tt> transport the rotation and derivative
+        structure of PU-20's neighbourhood to each phase. <tt class="verbatim">heat :
+        C.leaps.UniqueHeat</tt> concerns the <strong>selected</strong> chamber
+        only; uniqueness for every phase appears only in PU-19 as <tt class="verbatim">Completed.euclid</tt>.</td>
         <td style="border-right: 1px solid; border-bottom: 1px solid">PU-16, <strong>prove</strong> the spectral/phase
         representation and retention of the quotient and symmetry properties.
         Check whether the selected point is obtained by a separate extremality
@@ -231,18 +336,38 @@
         <td style="border-right: 1px solid; border-bottom: 1px solid">PU-16 hierarchy and PU-17 selected phase <tt class="verbatim">S_{x&#x2080;}</tt>;
         positive-time reflection, continuity/growth and boundary data required
         by the actual reconstruction.</td>
-        <td style="border-right: 1px solid; border-bottom: 1px solid">A selected contour and Wightman realization on a Hilbert
-        space, with normalized cyclic vacuum, dense domain, tempered
-        operator-valued distributions, adjoints, locality, Poincar&eacute;
-        covariance, spectral support in the forward cone, and uniqueness of
-        the translation-invariant vacuum. Also state the selected
-        imaginary-time root and boundary-limit identities. <tt class="verbatim">YM.OS.realization</tt>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">The <strong>unselected</strong> contour <tt class="verbatim">allWorld
+        : B.From S</tt> and the selected contour <tt class="verbatim">chosen : A.From
+        (Y.ensemble Y.atPoint)</tt>, the two contour fields of <tt class="verbatim">YM.Spec.Relativistic</tt>,
+        together with a Wightman realization on a Hilbert space, with
+        normalized cyclic vacuum, dense domain, tempered operator-valued
+        distributions, adjoints, locality, Poincar&eacute; covariance,
+        spectral support in the forward cone, and uniqueness of the
+        translation-invariant vacuum. Also state the selected imaginary-time
+        root and boundary-limit identities. <tt class="verbatim">YM.OS.realization</tt>
         (<tt class="verbatim">Lean/YM/OS/Dynamics.lean</tt>) constructs a chamber from
         <tt class="verbatim">S.Hierarchy</tt>; <tt class="verbatim">YM.Spec.Relativistic</tt> /
         <tt class="verbatim">YM.Spec.Final.realization</tt> (<tt class="verbatim">Lean/YM/Spec/Closed.lean</tt>),
         <tt class="verbatim">YM.Boundary.Wightman.Realizes</tt> (<tt class="verbatim">Lean/YM/Fields/System.lean</tt>),
         and <tt class="verbatim">YM.Boundary.Contour.From</tt> (<tt class="verbatim">Lean/YM/Boundary/Contour.lean</tt>)
-        describe the stronger endpoint.</td>
+        describe the stronger endpoint. The fields of <tt class="verbatim">Wightman.Realizes</tt>
+        are <tt class="verbatim">induced</tt>, <tt class="verbatim">letters</tt>, <tt class="verbatim">total</tt>,
+        <tt class="verbatim">adj</tt>, <tt class="verbatim">meets</tt>, <tt class="verbatim">localPairs</tt>,
+        <tt class="verbatim">faithful</tt>, <tt class="verbatim">covariance</tt>, <tt class="verbatim">spectral</tt>,
+        <tt class="verbatim">forward</tt>, <tt class="verbatim">unique</tt>; the prose reading
+        above is unverified for <tt class="verbatim">Total</tt>, <tt class="verbatim">sharpPair</tt>,
+        <tt class="verbatim">realizes</tt>, <tt class="verbatim">commutes</tt>, <tt class="verbatim">notLost</tt>,
+        <tt class="verbatim">Symmetries</tt> (not unfolded), and <tt class="verbatim">faithful</tt>
+        must be listed in the output. The Wightman object is typed over the
+        unselected table (<tt class="verbatim">Final.action : Boundary.Wightman S</tt>);
+        its link to the selected phase is through <tt class="verbatim">Relativistic.chosen</tt>,
+        not through the type. <tt class="verbatim">YM.Nonperturbative.Headline.Reconstruction</tt>
+        (<tt class="verbatim">Lean/YM/Nonperturbative/HeadlineSpec.lean</tt>; fields <tt
+        class="verbatim">unselected</tt>, <tt class="verbatim">selected</tt>, <tt class="verbatim">chosen</tt>,
+        <tt class="verbatim">characters</tt>, <tt class="verbatim">average</tt>) is a ready-made
+        projection and may be the better checkable target for PU-18 (<tt
+        class="verbatim">unselected</tt>, <tt class="verbatim">selected</tt>, <tt class="verbatim">chosen</tt>)
+        and PU-19 (<tt class="verbatim">characters</tt>, <tt class="verbatim">average</tt>).</td>
         <td style="border-right: 1px solid; border-bottom: 1px solid">PU-16&ndash;PU-17, <strong>cite and apply?</strong> only
         after issue #6 checks every hypothesis of a precise OS theorem against
         these definitions; otherwise <strong>prove</strong> missing steps. <tt
@@ -262,7 +387,32 @@
         and <tt class="verbatim">YM.EveryPhase.all_characters</tt> (<tt class="verbatim">Lean/YM/EveryPhase/Extension.lean</tt>),
         <tt class="verbatim">YM.EveryPhase.barycenter</tt> (<tt class="verbatim">Lean/YM/EveryPhase/Barycenter.lean</tt>).
         The narrower public bridge is <tt class="verbatim">YangMills.publicReconstruction</tt>
-        (<tt class="verbatim">Lean/HierarchyBridge.lean</tt>).</td>
+        (<tt class="verbatim">Lean/HierarchyBridge.lean</tt>); its use of the
+        almanac/certificate arguments is separated from mathematical ownership
+        below. <tt class="verbatim">YM.EveryPhase.all_characters : &exist; L, Completed
+        F L</tt> for every <tt class="verbatim">F : Spec.Final C f S</tt> is a
+        standalone source theorem whose only input is a <tt class="verbatim">Final</tt>,
+        and <tt class="verbatim">YM.EveryPhase.barycenter</tt> holds for any <tt class="verbatim">Almanac</tt>,
+        without <tt class="verbatim">Completed</tt>. <strong>Two mixtures with different
+        owners.</strong> The pointwise Euclidean identity is a
+        <strong>PU-17</strong> output (using PU-16 translations). Although <tt
+        class="verbatim">publicReconstruction</tt> calls <tt class="verbatim">Completed.at_words</tt>,
+        <tt class="verbatim">all_characters</tt> fills this field by <tt class="verbatim">F.&alpha;.space.barycenter
+        _ F.phase.phase.decomposition F.phase.phase.chosen
+        F.room.kernel.translations</tt> (<tt class="verbatim">Lean/YM/EveryPhase/Extension.lean</tt>
+        79&ndash;80), with no field of <tt class="verbatim">L</tt>. PU-19 cites that
+        identity and owns the distinct boundary-distribution mixture <tt
+        class="verbatim">Completed.at_boundary</tt> / <tt class="verbatim">Headline.Reconstruction.average</tt>.
+        The public <tt class="verbatim">Hierarchy.Reconstructed.mixture</tt> uses the
+        former, not the latter. <strong>Integrability.</strong> The internal
+        boundary statement <tt class="verbatim">YM.Boundary.Waves.Opens</tt> (<tt class="verbatim">Lean/YM/Boundary/Contour.lean</tt>
+        89&ndash;93) has the fields <tt class="verbatim">int</tt> (integrability of the
+        restricted continuation against tests) and <tt class="verbatim">profile</tt>
+        (the limit); the public <tt class="verbatim">Hierarchy.Reconstructed.boundary</tt>
+        (<tt class="verbatim">Lean/ChallengeSpec.lean</tt> 139&ndash;143) states only
+        the limit of the integrals. A unit that proves the boundary limit
+        states integrability as part of its output, although the public bridge
+        does not consume it.</td>
         <td style="border-right: 1px solid; border-bottom: 1px solid">PU-17&ndash;PU-18, <strong>prove</strong> uniform character
         and boundary passage. Do not fold its <tt class="verbatim">continued_stress</tt>
         field into this ownership: its mathematical proof belongs to PU-20
@@ -281,24 +431,186 @@
       proposed for PU-27 to explain after the component units, not a second
       owner of their component proofs. <tt class="verbatim">YM.Nonperturbative.continuum</tt>
       is a projection of <tt class="verbatim">continuum_with_position_tests</tt>, not an
-      independent construction. The public <tt class="verbatim">YangMills.Hierarchy.Reconstructed</tt>
-      also includes label faithfulness, phase measure, smoothness, mixture,
-      analyticity and boundary identities (<tt class="verbatim">Lean/ChallengeSpec.lean</tt>);
-      these must be supplied by the named components and bridge rather than
-      inferred from the word &ldquo;reconstruction.&rdquo;
+      independent construction. The fifteen clauses of the public <tt class="verbatim">YangMills.Hierarchy.Reconstructed</tt>
+      are mapped below; none may be inferred merely from the word
+      &ldquo;reconstruction.&rdquo;
     </p>
-    <h2 id="auto-3"><a id="conceptual-graph-and-source-graph-limit"></a>Conceptual graph and source-graph limit<span style="margin-left: 1em"></span></h2>
+    <h2 id="auto-3"><a id="calibration-field-algebra-and-the-public-projection"></a>Calibration, field algebra and the public
+    projection<span style="margin-left: 1em"></span></h2>
     <p>
-      Proposed mathematical order: <strong>PU-15 &rarr; PU-16 &rarr; PU-17
-      &rarr; PU-18 &rarr; PU-19 &rarr; PU-27</strong>, with PU-13 feeding
-      PU-16 and PU-20 receiving the separate continued-stress output from
-      PU-19's source neighbourhood. PU-18 uses the selected phase; PU-19
+      <tt class="verbatim">YM.Spec.Final.calibration : YM.Spec.Calibrated C</tt> is a
+      family-level receipt, independent of the extraction order and table. Its
+      definition in <tt class="verbatim">Lean/YM/Spec/Closed.lean</tt> 58&ndash;61
+      retains the sheet, block lengths, protection/delays, directed trajectory
+      and finite histories, their <tt class="verbatim">Stays</tt> property, equality to
+      <tt class="verbatim">C.path</tt>, and the adjacent <tt class="verbatim">Move</tt> relations.
+      <strong>Proposed owner: PU-15</strong>, retaining these calibration
+      witnesses on its selected family; this is an additional output
+      requirement, not a proof supplied by this note. <tt class="verbatim">YM.Pert.withFinal</tt>
+      (<tt class="verbatim">Lean/YM/Pert/Construction.lean</tt> 21&ndash;31) takes <tt
+      class="verbatim">Calibrated C</tt> as an input and places it in <tt class="verbatim">Final</tt>;
+      <tt class="verbatim">Run.extractible17</tt> supplies that argument from its
+      reception data. <tt class="verbatim">YM.Nonperturbative.existence</tt> (<tt class="verbatim">Lean/YM/Nonperturbative/Headlines.lean</tt>
+      26) projects <tt class="verbatim">F.calibration</tt> for the corresponding
+      conjunct of <tt class="verbatim">YangMills.constructed</tt>. This immediate path
+      does not independently verify production of those trajectory witnesses.
+    </p>
+    <p>
+      <tt class="verbatim">Final.sector : YM.Spec.Algebra S</tt> is data comprising <tt
+      class="verbatim">derivatives : DiffPlan S</tt>, <tt class="verbatim">turns : Rotation
+      S</tt>, and <tt class="verbatim">energy : Stress S</tt>. Its construction and laws
+      belong to the derivative/rank/stress units (PU-11/PU-20 neighbourhood),
+      <strong>outside PU-15&ndash;PU-19</strong>; PU-17/PU-18 consume this
+      same algebra through <tt class="verbatim">Materializes</tt>/<tt class="verbatim">Relativistic</tt>.
+      In <tt class="verbatim">Pert.withFinal</tt>, it is exactly <tt class="verbatim">&#x27E8;W,
+      mill M I c U, J&#x27E9;</tt>, with the equality retained by <tt class="verbatim">Run.extractible17</tt>.
+      In particular neither the existence of <tt class="verbatim">S.Hierarchy</tt> nor
+      the phase barycenter alone supplies this algebra or <tt class="verbatim">Locals.injection</tt>.
+    </p>
+    <p>
+      The following is the complete field-order map of <tt class="verbatim">YangMills.Hierarchy.Reconstructed</tt>
+      (<tt class="verbatim">Lean/ChallengeSpec.lean</tt> 117&ndash;143), checked against
+      <tt class="verbatim">YangMills.publicReconstruction</tt> (<tt class="verbatim">Lean/HierarchyBridge.lean</tt>
+      79&ndash;133). Proposed unit owners name mathematical obligations;
+      existing source arguments remain unchanged.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Public clause</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Immediate source used by the bridge</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Proposed mathematical owner/input</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">axioms</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">view_axioms _ F.realization.qt</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-18 selected Wightman realization and public
+        projection.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">faithful</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">F.realization.qt.faithful</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-18 label faithfulness.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">injective</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">S.pin_inj</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-16 exposition of the all-spectator quotient definition:
+        for every table, <tt class="verbatim">S.Field d = L.Ref d &#x29F8; S.null
+        d</tt>, where <tt class="verbatim">null</tt> is the kernel of <tt class="verbatim">replies</tt>.
+        The induced response map <tt class="verbatim">S.spectra d</tt> is injective (<tt
+        class="verbatim">S.faithfully</tt>), and its codomain restriction <tt class="verbatim">S.pin
+        d</tt> remains injective (<tt class="verbatim">Lean/YM/Euclid/Null.lean</tt>,
+        <tt class="verbatim">Union.lean</tt>). This is a quotient fact, not an
+        additional analytic input.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">acts</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">S.alive 0 F.room.kernel.laws</tt>, <tt class="verbatim">S.pin_inj</tt>,
+        then <tt class="verbatim">qt.faithful</tt> on the nonzero unit label</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-16 nonzero grade-zero unit and PU-18 faithful
+        realization.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">covers</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">F.sector.derivatives.covered
+        F.room.kernel.laws.toSymmetric F.phase.transport.injection</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-16 symmetry together with the derivative unit's <tt
+        class="verbatim">DiffPlan</tt> and <tt class="verbatim">Spec.Locals.injection</tt>
+        (PU-11/PU-20 neighbourhood); not PU-17 spectral decomposition
+        alone.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">represents</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">S.representative</tt>, <tt class="verbatim">S.rep</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-16 exposition of the same quotient: for every table, the
+        surjective quotient map <tt class="verbatim">S.project d</tt> has a chosen
+        linear section <tt class="verbatim">S.representative d</tt>, with <tt class="verbatim">S.project
+        d (S.representative d v) = v</tt> by <tt class="verbatim">S.rep</tt> (<tt class="verbatim">Lean/YM/Euclid/Null.lean</tt>).
+        This representative identity is a quotient fact, not an additional
+        analytic input.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">normalized</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">F.phase.phase.decomposition.normalized</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-17 probability measure.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">fullSupport</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">F.phase.phase.decomposition.support</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-17 full support on the character space.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">permutation</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">S.class_perm</tt> applied to <tt class="verbatim">(spectate
+        F s).laws.toSymmetric</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-16 mixed hierarchy; PU-17 <tt class="verbatim">Certificate.states</tt>
+        for character hierarchies.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">smooth</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">S.class_smooth</tt> applied to <tt class="verbatim">(spectate
+        F s).smooth</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-16 mixed hierarchy; PU-17 <tt class="verbatim">Certificate.states</tt>
+        for characters.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">characterContinuity</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Certificate.chosen</tt> identifies a separated
+        word with a compressed-algebra evaluation; <tt class="verbatim">decomposition.weak</tt>
+        supplies continuity</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-17 on the actual character space.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">mixture</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">h.at_words</tt>, followed by <tt class="verbatim">S.readAt</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-17 barycenter with PU-16 translations; see the separate
+        ownership of the two mixtures.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">analytic</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">F.realization.chosen.heat.hol</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-18 selected contour.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">root</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">F.realization.chosen.heat.roots</tt>, after the
+        position identity</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-18 selected imaginary-time roots.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">boundary</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">F.realization.chosen.emerges.profile</tt>, with
+        <tt class="verbatim">publicMoment _ F.realization.qt.meets</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-18 selected boundary limit linked to the Hilbert-space
+        vacuum moments; <tt class="verbatim">Opens.int</tt> is an additional internal
+        output, not consumed by this public clause.</td>
+      </tr></tbody>
+    </table>
+    <p>
+      <strong>Literal call versus smaller mathematical interface.</strong> The
+      current <tt class="verbatim">publicReconstruction</tt> signature does take <tt
+      class="verbatim">L : EveryPhase.Almanac F</tt> and <tt class="verbatim">h :
+      EveryPhase.Completed F L</tt>, and its proof calls <tt class="verbatim">h.at_words</tt>.
+      It does not use an almanac field, <tt class="verbatim">at_boundary</tt>, <tt
+      class="verbatim">Relativistic.allWorld</tt>, or <tt class="verbatim">Headline.Reconstruction</tt>.
+      Since the proof of <tt class="verbatim">at_words</tt> above is already PU-17's
+      barycenter, none of the specifically PU-19 every-character
+      Wightman/boundary results is needed for these fifteen mathematical
+      clauses. A smaller projected theorem could take that barycenter identity
+      directly; no such Lean refactoring is made or claimed here. The existing
+      <tt class="verbatim">constructed</tt>/<tt class="verbatim">jointExistence</tt> proof still
+      obtains <tt class="verbatim">L,h</tt> along the full source route. The stronger
+      internal conjuncts of <tt class="verbatim">constructed</tt> retain <tt class="verbatim">Independent.Core</tt>,
+      <tt class="verbatim">Headline.Reconstruction</tt> and the all-character <tt class="verbatim">view
+      (L.actors i).Axioms</tt> conclusions, which do need the PU-19 data. The
+      public <tt class="verbatim">hierarchy F Q</tt> itself mentions no <tt class="verbatim">L</tt>.
+      This distinction does not assert a new independent proof of the public
+      OPE or trace producers.
+    </p>
+    <h2 id="auto-4"><a id="conceptual-graph-and-source-graph-limit"></a>Conceptual graph and source-graph limit<span style="margin-left: 1em"></span></h2>
+    <p>
+      Proposed mathematical order for the stronger internal endpoint:
+      <strong>PU-15 &rarr; PU-16 &rarr; PU-17 &rarr; PU-18 &rarr; PU-19 &rarr;
+      PU-27</strong>, with PU-13 feeding PU-16 and PU-20 receiving the
+      separate continued-stress output from PU-19's source neighbourhood. For
+      the public reconstruction clauses, the projected path goes from PU-18 to
+      PU-27 without requiring the specifically PU-19 results; it also retains
+      the derivative-side <tt class="verbatim">covers</tt> input above. This is a
+      proposed mathematical split, not a claim that the current public source
+      proof avoids the larger receipt. PU-18 uses the selected phase; PU-19
       applies and strengthens the reconstruction across all characters and
       proves mixture of boundary distributions. This order is acyclic only
       after projecting <tt class="verbatim">Spec.Final</tt> and <tt class="verbatim">Broad.refine</tt>
-      into the smaller mathematical interfaces above. No independent source
-      theorem for every projection has yet been identified; the split is an
-      editorial proof obligation, not a Lean refactoring.
+      into the smaller mathematical interfaces above. For PU-19 there is a
+      standalone source theorem, <tt class="verbatim">YM.EveryPhase.all_characters</tt>,
+      whose only input is a <tt class="verbatim">Final</tt>; for PU-16&ndash;PU-18 no
+      independent source theorem for the projection has been identified. The
+      split is an editorial proof obligation, not a Lean refactoring.
     </p>
     <p>
       The compiled map's source-unit links (including V.3 &rarr; II.1) and
@@ -338,7 +650,7 @@
       This classification is provisional pending an independent correspondence
       review.
     </p>
-    <h2 id="auto-4"><a id="notation-handoff-to-issue-10"></a>Notation handoff to issue #10<span style="margin-left: 1em"></span></h2>
+    <h2 id="auto-5"><a id="notation-handoff-to-issue-10"></a>Notation handoff to issue #10<span style="margin-left: 1em"></span></h2>
     <p>
       The shared glossary and notation protocol belong to <a href="https://github.com/hairer/humanise-yang-mills/issues/10">issue
       #10</a>; the following is a question list, not a local glossary edit.
@@ -385,7 +697,7 @@
         Hilbert space.</td>
       </tr></tbody>
     </table>
-    <h2 id="auto-5"><a id="open-questions-and-review-gates"></a>Open questions and review gates<span style="margin-left: 1em"></span></h2>
+    <h2 id="auto-6"><a id="open-questions-and-review-gates"></a>Open questions and review gates<span style="margin-left: 1em"></span></h2>
     <ol>
       <li>
         <p>
@@ -399,23 +711,47 @@
       </li>
       <li>
         <p>
-          The selected <tt class="verbatim">Spec.Final</tt> is produced within <tt
-          class="verbatim">YM.PhysicalNext.Repeat.Legato.Run.extractible17</tt> (<tt
-          class="verbatim">Lean/YM/RG17/Joint.lean</tt>), while <tt class="verbatim">YM.R2IGoals.Broad.refine</tt>
-          adds all-character reconstruction. A reviewer must confirm the
-          smallest exact source declarations that support each proposed
-          projected theorem, and whether the PU-16 compactness and
-          Euclidean-hierarchy output needs two issue tasks. Until then, the
-          paths above are issue-ready <em>candidates</em>, not claims that
-          five independent theorems already exist.
+          The selected <tt class="verbatim">Spec.Final</tt> is produced, given an <tt
+          class="verbatim">OPE.Package</tt> hypothesis, within <tt class="verbatim">YM.PhysicalNext.Repeat.Legato.Run.extractible17</tt>
+          (<tt class="verbatim">Lean/YM/RG17/Joint.lean</tt>, which returns <tt class="verbatim">&exist;
+          g S F X, OPE.Services &hellip; &and; FirstExtension F X</tt>), while
+          <tt class="verbatim">YM.R2IGoals.Broad.refine</tt> adds all-character
+          reconstruction. A reviewer must confirm the smallest exact source
+          declarations that support each proposed projected theorem, and
+          whether the PU-16 compactness and Euclidean-hierarchy output needs
+          two issue tasks. The whole-seed output of <tt class="verbatim">Accent.rated</tt>
+          has the same splitting problem: its extraction starts with <tt
+          class="verbatim">Extraction.crops</tt>, while its returned seed includes both
+          PU-16 and rank-side fields. Until these interfaces are proved or
+          matched, the paths above are issue-ready <em>candidates</em>, not
+          claims that five independent theorems already exist.
         </p>
       </li>
       <li>
         <p>
-          <tt class="verbatim">EveryPhase.Completed.continued_stress</tt> crosses into
-          PU-20. Its assumptions and use by the public theorem need the PU-20
-          owner to agree on a shared interface; this audit assigns only the
-          reconstruction and mixture fields to PU-19.
+          The reconstruction units cross into PU-20 at three places, not one:
+          <tt class="verbatim">Spec.Locals</tt> (via <tt class="verbatim">Final.phase.transport</tt>,
+          including <tt class="verbatim">charges : StressLaws</tt> for the unselected
+          table), <tt class="verbatim">OS.Selection.Certificate.flux</tt> (stress laws
+          for every phase), and <tt class="verbatim">EveryPhase.Completed.continued_stress</tt>.
+          The public <tt class="verbatim">covers</tt> clause adds a specific
+          derivative-side crossing through <tt class="verbatim">Spec.Locals.injection</tt>
+          and <tt class="verbatim">DiffPlan.covered</tt>. Their assumptions and use by
+          the public theorem need the derivative/PU-20 owners to agree on a
+          shared interface; this audit assigns only the phase decomposition
+          (PU-17) and the reconstruction and boundary-distribution mixture
+          fields (PU-19).
+        </p>
+      </li>
+      <li>
+        <p>
+          Whether <tt class="verbatim">Relativistic.allWorld</tt> (the unselected
+          contour) is proved independently of the phase mixture, or from it,
+          was not traced; this note assigns it to PU-18 as a stated output,
+          and PU-19's <tt class="verbatim">Completed.at_boundary</tt> and <tt class="verbatim">Headline.Reconstruction.average</tt>
+          consume it. The public <tt class="verbatim">Reconstructed</tt> bridge does not
+          use it, as the fifteen-clause map shows. This consumer check does
+          not resolve its internal proof route.
         </p>
       </li>
       <li>
@@ -429,7 +765,182 @@
         </p>
       </li>
     </ol>
-    <h2 id="auto-6"><a id="evidence-and-limits"></a>Evidence and limits<span style="margin-left: 1em"></span></h2>
+    <h2 id="auto-7"><a id="response-to-the-pr-18-review-and-g01-p9"></a>Response to the PR #18 review and G01 P9<span style="margin-left: 1em"></span></h2>
+    <p>
+      Review: <a href="https://github.com/hairer/humanise-yang-mills/pull/18#issuecomment-6818538839">PR #18 comment</a> (mgubi, at <tt class="verbatim">713f977</tt>).
+      G01 P9: <a href="https://github.com/hairer/humanise-yang-mills/blob/main/blueprint/units/YM-000026/handoff/results/G01/proposed-patches.md#p9-additions-for-the-11-interface-note-for-its-owner"><tt class="verbatim">proposed-patches.md</tt></a>. This table
+      records the PR #170 response; the ownership corrections from subsequent
+      review #228 are incorporated below, especially the separation of the two
+      mixture owners.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Item</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Response</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Requested 1: <tt class="verbatim">Spec.Seed</tt> fields <tt class="verbatim">cutoff</tt>,
+        <tt class="verbatim">copies</tt>, <tt class="verbatim">corrected</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Edited (PU-16 row): <tt class="verbatim">ordered</tt>, <tt class="verbatim">generic</tt>,
+        <tt class="verbatim">kernel</tt> to PU-16; <tt class="verbatim">cutoff</tt> to PU-15; <tt
+        class="verbatim">Accent.rated</tt> produces the whole seed, so PU-16/rank
+        ownership is an editorial split; both <tt class="verbatim">copies</tt> and <tt
+        class="verbatim">corrected</tt>, with the other seed fields, are consumed by
+        stress (R4 below).</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Requested 2: unselected contour <tt class="verbatim">allWorld</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Edited (PU-18 row): stated as a PU-18 output together with
+        <tt class="verbatim">chosen</tt>; open question 4 records that its proof route
+        was not traced.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Requested 3: <tt class="verbatim">Certificate.flux</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Edited (PU-17 row, open question 3): certificate fields
+        assigned; <tt class="verbatim">flux</tt>, <tt class="verbatim">sym</tt>, <tt class="verbatim">coordinates</tt>,
+        <tt class="verbatim">calculus</tt> and <tt class="verbatim">Spec.Locals</tt> cross into
+        PU-20.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Requested 4: two orders</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Edited (&quot;Two orders&quot; paragraph, PU-16 row), with
+        the P9.1 wording.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Observation: <tt class="verbatim">all_characters</tt> standalone</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Edited (PU-19 row, conceptual graph).</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Observation: phasewise vs selected uniqueness</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Edited (PU-17 row: <tt class="verbatim">heat</tt> selected only, <tt
+        class="verbatim">Completed.euclid</tt> every phase).</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Observation: Wightman typed over <tt class="verbatim">S</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Edited (PU-18 row).</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Observation: <tt class="verbatim">regular</tt> needs only <tt class="verbatim">C.Makes</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Edited (PU-15 row).</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Observation: <tt class="verbatim">extractible17</tt> conditional on
+        <tt class="verbatim">OPE.Package</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Edited (open question 2).</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Observation: <tt class="verbatim">Headline.Reconstruction</tt>
+        projection</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Edited (PU-18 row).</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Not checked by reviewer: reading of <tt class="verbatim">Realizes</tt>;
+        <tt class="verbatim">faithful</tt> omitted</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Field list added and <tt class="verbatim">faithful</tt> named; the
+        prose reading is marked unverified for the definitions not
+        unfolded.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">P9.1 full-mesh public output</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Edited (&quot;Two orders&quot;).</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">P9.2 pointwise mixture vs boundary-distribution
+        mixture</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Distinct statements retained; corrected ownership is PU-17
+        for the pointwise barycenter and PU-19 for the boundary mixture (R1
+        below), rather than both belonging to PU-19.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">P9.3 integrability <tt class="verbatim">Opens.int</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Edited (PU-19 row).</td>
+      </tr></tbody>
+    </table>
+    <h2 id="auto-8"><a id="response-to-independent-review-228-r1r5"></a>Response to independent review #228 (R1&ndash;R5)<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      Bounded author session <tt class="verbatim">mgubi-astra-interface160-response-20261113</tt>,
+      <a href="https://github.com/hairer/humanise-yang-mills/issues/160#issuecomment-6863374433">claim</a>. Review #228 is frozen at <tt class="verbatim">55bb3f4bdd647a6ff91875d981855c5edae05ada</tt>;
+      reviewed note #170 is <tt class="verbatim">fdfd0867fed13baca9b31d154a2cd394ca78ba1b</tt>
+      (identical note at base <tt class="verbatim">69b2631f7a3d3c4176ca0084d8607cb9d8d124a2</tt>,
+      SHA-256 <tt class="verbatim">c6748f0844a71a0d35f859b2ca62ed69be8b6fb4835e3116f36d343b7aa3c558</tt>).
+      This is author work, not independent acceptance by the account that
+      reviewed the original note.
+    </p>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Request</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Checked response</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">R1: two mixtures</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">PU-17 owns the pointwise barycenter. The actual <tt class="verbatim">all_characters</tt>
+        proof of <tt class="verbatim">at_words</tt> uses
+        decomposition/chosen/translations and no almanac field. PU-19 cites it
+        and owns the boundary-distribution mixture. P9.2's ownership wording
+        is corrected here without editing G01's historical proposal.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">R2: public clauses and dependencies</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">All fifteen clauses are mapped to the immediate terms and
+        proposed owners above, including derivative-side <tt class="verbatim">covers</tt>,
+        unit-label <tt class="verbatim">acts</tt>, <tt class="verbatim">characterContinuity</tt>
+        and the <tt class="verbatim">qt.meets</tt> link in <tt class="verbatim">boundary</tt>. The
+        literal L/Completed signature and <tt class="verbatim">h.at_words</tt> call are
+        preserved; only the smaller mathematical dependency is
+        distinguished.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">R3: full mesh</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">from_spec</tt> combines <tt class="verbatim">F.room.ordered</tt>
+        and <tt class="verbatim">PositionsUV &hellip; .full</tt>, identifies their
+        fixed-period limits by subsequence uniqueness and retains the period
+        limit. Both orders remain in the output; no rank receipt is asserted
+        on the full-mesh order.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">R4: whole seed and stress</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">rated</tt> returns the entire seed and begins
+        with <tt class="verbatim">Extraction.crops</tt>. <tt class="verbatim">emanate</tt> passes
+        copies and corrected, as well as the other used seed fields, to the
+        stress construction. The proposed split remains an editorial proof
+        obligation.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">R5: calibration and sector</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Family-level calibration retention is proposed for PU-15,
+        with its immediate input/projection route shown. Sector data and their
+        laws remain outside PU-15&ndash;PU-19 with derivative/rank/stress
+        ownership. No new supplier proof is claimed.</td>
+      </tr></tbody>
+    </table>
+    <h2 id="auto-9"><a id="evidence-and-limits"></a>Evidence and limits<span style="margin-left: 1em"></span></h2>
+    <p>
+      R1&ndash;R5 author-response validation (13 November 2026): inspected the
+      immediate definitions and proof terms in <tt class="verbatim">Lean/ChallengeSpec.lean</tt>,
+      <tt class="verbatim">Lean/HierarchyBridge.lean</tt>, <tt class="verbatim">Lean/YM/Spec/Closed.lean</tt>,
+      <tt class="verbatim">Lean/YM/EveryPhase/Extension.lean</tt>, <tt class="verbatim">Lean/YM/Phase/Mixture.lean</tt>,
+      <tt class="verbatim">Lean/YM/FullVolume/Finale/Program.lean</tt>, <tt class="verbatim">Lean/YM/FullVolume/Profiles.lean</tt>,
+      <tt class="verbatim">Lean/YM/R2I/Campaign/Accepted.lean</tt>, <tt class="verbatim">Lean/YM/MergeProof/Powder.lean</tt>,
+      <tt class="verbatim">Lean/YM/Extraction/Held.lean</tt>, <tt class="verbatim">Lean/YM/MergeProof/Emanate.lean</tt>,
+      <tt class="verbatim">Lean/YM/Pert/Construction.lean</tt>, <tt class="verbatim">Lean/YM/RG17/Joint.lean</tt>,
+      <tt class="verbatim">Lean/YM/Nonperturbative/Headlines.lean</tt>, <tt class="verbatim">Lean/Construction.lean</tt>
+      and <tt class="verbatim">Lean/Solution.lean</tt> at the source pin above. These
+      checks support the displayed fields, calls and local
+      limit-identification argument; they do not audit the full analytic
+      producers, the rest of <tt class="verbatim">rated</tt>, or the untraced <tt class="verbatim">allWorld</tt>
+      proof. The source versions are frozen by repository base <tt class="verbatim">69b2631f7a3d3c4176ca0084d8607cb9d8d124a2</tt>;
+      per-file SHA-256 fingerprints are included in the response PR. <tt
+      class="verbatim">python3 scripts/check_blueprint.py</tt> passed (four proof
+      units); <tt class="verbatim">git diff --check</tt> passed; the only changed file
+      is this note, with <tt class="verbatim">Lean/</tt> and source metadata unchanged.
+      No new Lean build, axiom replay or LaTeX build was run for this
+      Markdown-only change. Independent mathematical and correspondence
+      acceptance remains unset; the prior review fingerprint is not refreshed.
+    </p>
+    <p>
+      Revision for #160 (13 November 2026): read at the pin <tt class="verbatim">Lean/YM/Spec/Closed.lean</tt>
+      (<tt class="verbatim">Seed</tt>, <tt class="verbatim">Locals</tt>, <tt class="verbatim">Materializes</tt>,
+      <tt class="verbatim">Relativistic</tt>, <tt class="verbatim">Final</tt>), <tt class="verbatim">Lean/YM/Phase/Mixture.lean</tt>
+      136&ndash;150 (<tt class="verbatim">Selection.Certificate</tt>), <tt class="verbatim">Lean/YM/Fields/System.lean</tt>
+      124 ff. (<tt class="verbatim">Wightman.Realizes</tt> field names), <tt class="verbatim">Lean/YM/EveryPhase/Extension.lean</tt>
+      (<tt class="verbatim">Completed</tt> fields, <tt class="verbatim">all_characters</tt>), <tt
+      class="verbatim">Lean/YM/EveryPhase/Barycenter.lean</tt> 75&ndash;76, <tt class="verbatim">Lean/YM/Nonperturbative/HeadlineSpec.lean</tt>
+      75&ndash;81, <tt class="verbatim">Lean/YM/RG17/Joint.lean</tt> 61&ndash;65, <tt
+      class="verbatim">Lean/YM/Boundary/Contour.lean</tt> 89&ndash;93, <tt class="verbatim">Lean/ChallengeSpec.lean</tt>
+      136&ndash;143, <tt class="verbatim">Lean/HierarchyBridge.lean</tt> 16&ndash;18,
+      44&ndash;56, 100&ndash;112, <tt class="verbatim">Lean/Construction.lean</tt> 23,
+      <tt class="verbatim">Lean/YM/R2I/Campaign/Accepted.lean</tt> 141, <tt class="verbatim">Lean/YM/Cells/{Packing,Corrected}.lean</tt>
+      (definitions of <tt class="verbatim">CellHyp</tt>, <tt class="verbatim">RankWidths</tt>);
+      and the ownership records <tt class="verbatim">blueprint/interfaces/rank-determinant-stress.md</tt>
+      (Contract B) and <tt class="verbatim">results/C13/ledger.md</tt>
+      (C13-to-C14-stress-history). No Lean elaboration in this revision; the
+      reviewer's [E] evidence is reused with its stated scope.
+    </p>
+    <p>
+      Original draft:
+    </p>
     <p>
       Read-only searches and inspections actually run from repository root on
       11 November 2026: <tt class="verbatim">rg</tt> over the named declarations and

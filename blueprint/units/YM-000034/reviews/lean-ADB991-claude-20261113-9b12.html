@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Review of a proof unit &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <div class="ym-unit-nav">
+      <a class="ym-prev" href="../../YM-000033/correspondence.html">&larr; YM-000033</a><span class="ym-part"><a href="../correspondence.html">YM-000034:
+      Trace branch moment limits and weighted washout (draft)</a><font class="ym-sep">&middot;</font><a
+      href="../HANDOFF.html">HANDOFF</a><font class="ym-sep">&middot;</font><a href="../validation.html">validation</a></span>
+    </div>
+    <p>
+      <h1>Review of a proof unit</h1><a id="review-of-a-proof-unit"></a>
+    </p>
+    <ul>
+      <li>
+        <p>
+          Unit: YM-000034, <tt class="verbatim">blueprint/units/YM-000034/</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Role: Lean correspondence (renewed review of revision 1)
+        </p>
+      </li>
+      <li>
+        <p>
+          Human reviewer: <tt class="verbatim">ADB991</tt> (account under which this
+          report is submitted; ADB991 had not reviewed it before submission,
+          and no human acceptance is recorded by this report)
+        </p>
+      </li>
+      <li>
+        <p>
+          Agent assistance: the whole review was done by a Claude (Anthropic)
+          agent session, <tt class="verbatim">ADB991-claude-20261113-9b12</tt>, running
+          as a scheduled agent. This account authored no part of YM-000034 and
+          did not write review #128.
+        </p>
+      </li>
+      <li>
+        <p>
+          Content SHA-256: <tt class="verbatim">01500ca93fd84b5d773c55a5fc4c4467f972175de13dce410f8f3bc8b12ed989</tt>
+          (<tt class="verbatim">python3 scripts/check_blueprint.py --fingerprint
+          YM-000034</tt> at PR #140 head <tt class="verbatim">b5d640286cc7128779dd14976ea920af4d7d136a</tt>)
+        </p>
+      </li>
+      <li>
+        <p>
+          Manuscript files and labels: <tt class="verbatim">manuscript/existence/trace-branch-moments.tex</tt>:
+          the revised labels <tt class="verbatim">eq:ex-branch-recorded-difference</tt>,
+          <tt class="verbatim">eq:ex-branch-recorded-traces</tt>, <tt class="verbatim">eq:ex-branch-transport-bound</tt>,
+          <tt class="verbatim">prop:ex-branch-raw-fast</tt>, <tt class="verbatim">prop:ex-branch-washout</tt>;
+          <tt class="verbatim">blueprint/units/YM-000034/correspondence.md</tt> (new
+          section &quot;Revision response to independent review #128&quot;)
+        </p>
+      </li>
+      <li>
+        <p>
+          Source revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>
+          (Lean tree <tt class="verbatim">328ad19b404d2db2a578319ea3e4eba4b27e34ef</tt>,
+          unchanged by the PR)
+        </p>
+      </li>
+      <li>
+        <p>
+          Review task and PR: issue <a href="https://github.com/hairer/humanise-yang-mills/issues/34">#34</a>, claim <a href="https://github.com/hairer/humanise-yang-mills/issues/34#issuecomment-6855003177">https://github.com/hairer/humanise-yang-mills/issues/34#issuecomment-6855003177</a>;
+          revision PR #140; this report's PR: report-only draft against <tt
+          class="verbatim">codex/existence-monograph</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Outcome: <strong>accepted locally for the items checked below; no
+          discrepancy found and no required change.</strong> <strong>No Lean
+          was elaborated</strong>: no pinned toolchain or Mathlib cache is
+          reachable from this environment. Evidence is source text only.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-1"><a id="findings-and-evidence"></a>Findings and evidence<span style="margin-left: 1em"></span></h2>
+    <p>
+      This report checks the new correspondence claims of the revision. The
+      correspondence of <tt class="verbatim">chartB</tt>, <tt class="verbatim">nearing_h</tt>, <tt
+      class="verbatim">muteP</tt>, <tt class="verbatim">Bend</tt> and <tt class="verbatim">BornZ</tt> was
+      checked in #128 and is not repeated. I re-read the target statements at
+      <tt class="verbatim">Lean/YM/TraceExtension/Shelves/Pear.lean</tt> lines 56, 66
+      and 74: <tt class="verbatim">muteP (p:&#x2115;)(hl: B&ne;some true)</tt> concludes
+      <tt class="verbatim">Tendsto (fun i =&gt; H! (P! i)^p &bull; &sum; a, Phase4
+      &hellip; a a) atTop (&#x1D4DD; 0)</tt>. This is <tt class="verbatim">prop:ex-branch-washout</tt>
+      for each fixed \(p\) and \(b \in \{0, -\}\).
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong><tt class="verbatim">eq:ex-branch-recorded-difference</tt> &harr; <tt
+          class="verbatim">YM.Trace.Shelves.beacon_h</tt></strong> (<tt class="verbatim">Shelves/Wilt.lean</tt>
+          35). Its first conjunct is <tt class="verbatim">Fold &hellip; (d+1) (twig i f
+          0) (l &bull; step i) = (C.S.a k)&#x207B;&sup1; &bull; (Z (l+1) - Z
+          l)</tt>, with <tt class="verbatim">Z y = Fold &hellip; d (f 0) (y &bull; step
+          i)</tt>: the grade-\((d + 1)\) recording of the forward difference
+          equals \(a_k^{- 1}\) times the difference of displaced grade-\(d\)
+          recordings. The factor comes from <tt class="verbatim">Fold_more</tt>/<tt
+          class="verbatim">accol</tt> (<tt class="verbatim">alto &hellip; (d+1) = a&#x207B;&sup1;
+          &middot; alto &hellip; d</tt>). This is the manuscript's \(a_k^{- 1}
+          = a_k^{- 4} / a_k^{- 3}\). The displacement is handled by <tt class="verbatim">Fold_step</tt>,
+          which is the translation-covariance remark. Matches.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Linearity &harr; <tt class="verbatim">YM.Trace.Shelves.fade_w</tt></strong>
+          (<tt class="verbatim">Wilt.lean</tt> 24): <tt class="verbatim">Fold</tt> of a finite sum
+          is the sum of the <tt class="verbatim">Fold</tt>s, under the envelope
+          hypotheses. Matches &quot;the finite-volume correlation is linear in
+          its inserted observable&quot;.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><tt class="verbatim">eq:ex-branch-recorded-traces</tt>, false branch
+          &harr; <tt class="verbatim">YM.Trace.Margin.Plint_thin</tt></strong> (<tt
+          class="verbatim">Margin/White.lean</tt> 51): <tt class="verbatim">&sum; i, Plint G n
+          false i i = 0</tt>. With <tt class="verbatim">Toca false i i = 0</tt> (<tt
+          class="verbatim">Margin/Mallet.lean</tt> 15), this is \(J^-_{aa} = 0\). The
+          tested version follows from <tt class="verbatim">fade_w</tt>. Matches.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><tt class="verbatim">eq:ex-branch-recorded-traces</tt>, principal
+          branch &harr; <tt class="verbatim">YM.Trace.Turret.cones</tt></strong> (<tt
+          class="verbatim">Turret/Mark.lean</tt> 21): <tt class="verbatim">&sum; i, paceX r Z i i
+          = &sum; i, twig i (pluck r Z i)</tt>. <tt class="verbatim">paceX</tt> (line
+          16) is the principal tensor \(J^0\) as displayed in the setup: the
+          \((0, 0)\) entry is \(\sum \nabla Q^{[r]} - \sum_{j \ne 0}
+          J^{[r]}_{jj}\); for \(b < a\) it is \(J^{[r]}_{ba} - \sum \nabla
+          H^{[r]}\); otherwise \(J^{[r]}_{ab}\). <tt class="verbatim">pluck r Z k =
+          frost (Z.Q k) r</tt> is the localized current \(Q^{[r]}_k\). <tt
+          class="verbatim">twig</tt> (<tt class="verbatim">Perfect/Riff.lean</tt> 10) is the
+          forward difference \(J (x + e_a) - J (x)\). Matches.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong><tt class="verbatim">eq:ex-branch-transport-bound</tt> &harr; <tt
+          class="verbatim">YM.Trace.Shelves.simG</tt></strong> (<tt class="verbatim">Shelves/Route.lean</tt>
+          51): for <tt class="verbatim">hk : C.ref d &le; k</tt>, <tt class="verbatim">&#x2016;swale
+          Z d k v&#x2016; &le; H! k * (exp (columnLogs A k) * (extra+1)) *
+          &#x2016;v&#x2016;</tt>. The proof takes <tt class="verbatim">le_of_tendsto</tt>
+          of the norm along the ultrafilter limit <tt class="verbatim">topPitch</tt> of
+          the finite-volume maps <tt class="verbatim">spine</tt>, at fixed \(k\) and
+          \(v\). So: \(B_k\) = <tt class="verbatim">swale Z 4 k</tt>, \(\hat{\beta}_k\)
+          = <tt class="verbatim">H! k</tt>, \(\ell_k\) = <tt class="verbatim">Work.D01.columnLogs
+          A k</tt>, and \(C\) = <tt class="verbatim">extra+1</tt> of the grade's label
+          level, which depends only on the label coordinates as the text says.
+          &quot;Sufficiently large \(k\)&quot; is the cutoff <tt class="verbatim">C.ref
+          d</tt>. The fixed-\(k\), fixed-\(v\) limit order matches the prose.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Affine clock &harr; <tt class="verbatim">YM.Trace.Shelves.hawker</tt></strong>
+          (<tt class="verbatim">Route.lean</tt> 45). <tt class="verbatim">hatBeta = bar +
+          slopeConstant &middot; scale</tt> is <tt class="verbatim">Calms &hellip;
+          0</tt>, that is, \(O (e^{as})\) for every \(a > 0\): subexponential.
+          <strong>Washout step &harr; <tt class="verbatim">YM.Trace.Shelves.cine</tt></strong>
+          (<tt class="verbatim">Route.lean</tt> 60). For <tt class="verbatim">Fast f</tt> and each
+          <tt class="verbatim">p</tt>, the sequence \(\hat{\beta}^p \cdot\)<tt class="verbatim">swale</tt>\((f)\)
+          is <tt class="verbatim">Fast</tt>. It combines <tt class="verbatim">hawker</tt>
+          (powers), <tt class="verbatim">Pull.curtain</tt> (the column factor) and <tt
+          class="verbatim">simG</tt>. This is exactly the revised washout's use of <tt
+          class="verbatim">eq:ex-branch-transport-bound</tt> &quot;with \(\ell_k = o
+          (s_k)\) and the affine clock&quot;.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>R2.</strong> The PR changes no Lean file. <tt class="verbatim">unit.json</tt>'s
+          declarations (<tt class="verbatim">nearing_h</tt>, <tt class="verbatim">muteP</tt>, <tt
+          class="verbatim">chartB</tt>) are unchanged. Only the manuscript support list
+          loses <tt class="verbatim">ope-filtration.tex</tt>, and that file contributed
+          no label used here (see the mathematics report).
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-2"><a id="required-changes-and-remaining-uncertainty"></a>Required changes and remaining uncertainty<span style="margin-left: 1em"></span></h2>
+    <p>
+      None required. Not done: Lean elaboration, <tt class="verbatim">#check</tt> and
+      <tt class="verbatim">#print axioms</tt> for the target declarations, and kernel
+      replay. The author's inherited-replay argument in <tt class="verbatim">correspondence.md</tt>
+      was read but not re-verified. The upstream construction of the
+      hypotheses (<tt class="verbatim">Gondola</tt>, <tt class="verbatim">Grant</tt>, <tt class="verbatim">steep</tt>,
+      the <tt class="verbatim">Scrim</tt>/<tt class="verbatim">Moonlit</tt> data and the other
+      section variables of <tt class="verbatim">Route.lean</tt> and <tt class="verbatim">Pear.lean</tt>)
+      was not traced beyond the lines cited.
+    </p>
+    <h2 id="auto-3"><a id="acceptance"></a>Acceptance<span style="margin-left: 1em"></span></h2>
+    <p>
+      No acceptance is recorded by this report. A responsible human may record
+      local Lean-correspondence acceptance at fingerprint <tt class="verbatim">01500ca9&hellip;2ed989</tt>
+      for the items above.
+    </p>
+    <div class="ym-unit-nav">
+      <a class="ym-prev" href="../../YM-000033/correspondence.html">&larr; YM-000033</a><span class="ym-part"><a href="../correspondence.html">YM-000034:
+      Trace branch moment limits and weighted washout (draft)</a><font class="ym-sep">&middot;</font><a
+      href="../HANDOFF.html">HANDOFF</a><font class="ym-sep">&middot;</font><a href="../validation.html">validation</a></span>
+    </div>
+  </body>
+</html>

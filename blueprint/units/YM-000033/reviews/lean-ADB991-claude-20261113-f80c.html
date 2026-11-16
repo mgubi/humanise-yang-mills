@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Review of a proof unit &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <div class="ym-unit-nav">
+      <a class="ym-prev" href="../../YM-000026/correspondence.html">&larr; YM-000026</a><span class="ym-part"><a href="../correspondence.html">YM-000033:
+      Selected trace sensor and weighted Ward limit (draft)</a><font class="ym-sep">&middot;</font><a
+      href="../HANDOFF.html">HANDOFF</a><font class="ym-sep">&middot;</font><a href="../validation.html">validation</a></span><a
+      class="ym-next" href="../../YM-000034/correspondence.html">YM-000034 &rarr;</a>
+    </div>
+    <p>
+      <h1>Review of a proof unit</h1><a id="review-of-a-proof-unit"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Findings and evidence</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Optional record item</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Required changes and remaining uncertainty</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-3">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Acceptance</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">3</a>
+      </p>
+    </div>
+    <ul>
+      <li>
+        <p>
+          Unit: YM-000033, <tt class="verbatim">blueprint/units/YM-000033/</tt>
+        </p>
+      </li>
+      <li>
+        <p>
+          Role: Lean correspondence (renewed review of revision 1)
+        </p>
+      </li>
+      <li>
+        <p>
+          Human reviewer: <tt class="verbatim">ADB991</tt> (account under which this
+          report is submitted; ADB991 had not reviewed it before submission,
+          and no human acceptance is recorded by this report)
+        </p>
+      </li>
+      <li>
+        <p>
+          Agent assistance: the whole review was done by a Claude (Anthropic)
+          agent session, <tt class="verbatim">ADB991-claude-20261113-f80c</tt>, running
+          as a scheduled agent. This account authored no part of YM-000033 and
+          did not write review #126/#127.
+        </p>
+      </li>
+      <li>
+        <p>
+          Content SHA-256: <tt class="verbatim">ad3b82466a1b69b610548e1af518251def5ac1cd4a6bc5757a91b3cc46cba4aa</tt>
+          (<tt class="verbatim">python3 scripts/check_blueprint.py --fingerprint
+          YM-000033</tt> at <tt class="verbatim">codex/existence-monograph</tt> <tt
+          class="verbatim">b0bfc78</tt>)
+        </p>
+      </li>
+      <li>
+        <p>
+          Manuscript files and labels: <tt class="verbatim">manuscript/existence/trace-prosper-sensor.tex</tt>
+          (the list (S1)&ndash;(S7), <tt class="verbatim">prop:trace-prosper-sensor</tt>,
+          <tt class="verbatim">eq:trace-sensor-weight</tt>, <tt class="verbatim">eq:trace-sensor-tested-price</tt>,
+          <tt class="verbatim">eq:trace-sensor-raw-step</tt>); <tt class="verbatim">blueprint/units/YM-000033/correspondence.md</tt>,
+          sections &quot;Formal hypothesis crosswalk&quot;, &quot;Quantifier
+          checkpoints&quot; and &quot;Revision response to independent review
+          #126, corrected by #127&quot;
+        </p>
+      </li>
+      <li>
+        <p>
+          Source revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>
+          (Lean tree <tt class="verbatim">328ad19b404d2db2a578319ea3e4eba4b27e34ef</tt>;
+          no Lean file changed by PR #134)
+        </p>
+      </li>
+      <li>
+        <p>
+          Review task and PR: issue <a href="https://github.com/hairer/humanise-yang-mills/issues/33">#33</a>, claim <a href="https://github.com/hairer/humanise-yang-mills/issues/33#issuecomment-6856591729">https://github.com/hairer/humanise-yang-mills/issues/33#issuecomment-6856591729</a>;
+          revision PR #134; this report's PR: report-only draft against <tt
+          class="verbatim">codex/existence-monograph</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Outcome: <strong>accepted locally for the items checked below; no
+          discrepancy found and no required change.</strong> One optional
+          record item (L1). <strong>No Lean was elaborated</strong>: no pinned
+          toolchain or Mathlib cache is reachable from this environment.
+          Evidence is source text only.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-1"><a id="findings-and-evidence"></a>Findings and evidence<span style="margin-left: 1em"></span></h2>
+    <p>
+      This report checks the source claims that the revision added or changed.
+      The broader crosswalk was checked in #126 and is not repeated.
+    </p>
+    <ul>
+      <li>
+        <p>
+          <strong>Target statement.</strong> <tt class="verbatim">YM.Trace.Terrace.Prosper</tt>
+          (<tt class="verbatim">Lean/YM/TraceExtension/Terrace/Lease.lean</tt>
+          27&ndash;31): <tt class="verbatim">alpha : Tendsto s atTop (&#x1D4DD;
+          Vbase)</tt>, and <tt class="verbatim">vote</tt>: there are <tt class="verbatim">&mu;
+          i</tt> and <tt class="verbatim">c &ge; 0</tt> with <tt class="verbatim">&forall;&#x1DA0;
+          i, &forall; y, &#x2016;&mu; i y&#x2016; &le;
+          c&#x2016;y&#x2016;</tt>, and for each <tt class="verbatim">e &gt; 0</tt>, <tt
+          class="verbatim">&forall;&#x1DA0; i, &forall; y, &#x2016;hueK A (Stern V i) *
+          (&mu; i (s i y) &minus; Lease U# h y)&#x2016; &le;
+          e&#x2016;y&#x2016;</tt>. This is the conclusion of <tt class="verbatim">prop:trace-prosper-sensor</tt>
+          as revised: one eventual bound uniform in \(h\), and one tail per
+          \(\varepsilon\) uniform in \(y\). Matches.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Marked inputs (S7) &harr; <tt class="verbatim">springs</tt>
+          arguments</strong> (<tt class="verbatim">Lease.lean</tt> 34&ndash;35): <tt
+          class="verbatim">hv : v &rarr; Stem5 U#</tt> (\(v_i \to x\)), <tt class="verbatim">hk :
+          hueK &bull; s i (v i) &rarr; 0</tt>, <tt class="verbatim">hw : hueK * Lease (v
+          i) &rarr; 0</tt>. Matches <tt class="verbatim">eq:trace-sensor-marked</tt>.
+          The section hypotheses <tt class="verbatim">hZ, H, hb, hr, hq, K, &theta;, hG,
+          hp</tt> are the source of (S1)&ndash;(S6) as recorded in the
+          crosswalk.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>Weight and postselected level (S1) &harr; <tt class="verbatim">hueK</tt>,
+          <tt class="verbatim">AgeK</tt>, <tt class="verbatim">Stern</tt>, <tt class="verbatim">summit</tt>.</strong>
+          <tt class="verbatim">hueK Y i = AgeK Y (1/5) i</tt> (<tt class="verbatim">Lease.lean</tt>
+          24); <tt class="verbatim">AgeK A a i = Wave a (A.clock.hatBeta i)</tt> (<tt
+          class="verbatim">Terrace/Look.lean</tt> 10); <tt class="verbatim">Wave a x = exp (a *
+          (log (log x))^2)</tt> (<tt class="verbatim">Zn/Have.lean</tt> 8&ndash;10). <tt
+          class="verbatim">Stern V i = summit A (V i).k</tt> (<tt class="verbatim">Gondola.lean</tt>
+          32), and <tt class="verbatim">summit A j = Nat.find (goal A j)</tt>, the least
+          \(i > j\) with <tt class="verbatim">(log hatBeta j)^48 &le; scale i &minus;
+          scale j</tt> (<tt class="verbatim">Terrace/Base.lean</tt> 17&ndash;22). So
+          \(\mathfrak{a}_i = \exp \{ \tfrac{1}{5} (\log \log
+          \hat{\beta}_{n_i})^2 \}\) with \(n_i = q (k_i)\), as in <tt class="verbatim">eq:trace-sensor-weight</tt>
+          and (S1). Matches.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>R3 &harr; <tt class="verbatim">YM.Next.Rank.Price.Tested</tt></strong>
+          (<tt class="verbatim">Lean/YM/Next/RANK/Matrices.lean</tt> 67&ndash;72). <tt
+          class="verbatim">read : C.label d &rarr;&#x2097;[&#x2102;] C.label d</tt> is
+          an endomorphism with <tt class="verbatim">unit : read (C.refUnit d) = e0</tt>
+          and <tt class="verbatim">score : coeffSize (awake v &minus; read v) &le;
+          coeffSize (awake v)/2</tt>. <tt class="verbatim">awake D k N p v =
+          (a_k^D)&#x207B;&sup1; &bull; columns &hellip; v</tt> (line 30) is
+          the manuscript's \(\textsf{A} = d_{k_i}^{- 5} \text{Col}_{k_i}\) at
+          \(D = 5\). Matches the first bound of <tt class="verbatim">eq:trace-sensor-tested-price</tt>
+          and the R3 row of the correspondence.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>R4 &harr; <tt class="verbatim">hb : (&#x1D4DB; : Filter
+          (&#x2115;&times;&#x2115;)) &le; F.fuse</tt></strong> (<tt class="verbatim">Lease.lean</tt>
+          15). <tt class="verbatim">Order.fuse f = map (fun i =&gt; (f.mesh i.2, f.per
+          i.1)) (atTop.curry atTop)</tt> (<tt class="verbatim">Lean/YM/Extraction/Inherited.lean</tt>
+          27). By <tt class="verbatim">Order.fused</tt>, an event is in <tt class="verbatim">fuse</tt>
+          iff <tt class="verbatim">f.late</tt>, i.e. <tt class="verbatim">&forall;&#x1DA0; k,
+          &forall;&#x1DA0; j, A (f.mesh j) (f.per k)</tt> (<tt class="verbatim">Extraction/Orders.lean</tt>
+          47). <tt class="verbatim">mesh</tt> and <tt class="verbatim">per</tt> are <tt class="verbatim">Sequence</tt>s,
+          strictly increasing (<tt class="verbatim">Orders.lean</tt> 14&ndash;16, <tt
+          class="verbatim">Sequence.cofinal</tt>). So <tt class="verbatim">fuse</tt>, and hence
+          <tt class="verbatim">&#x1D4DB;</tt>, contains both tails \(\{N \geqslant n\}\)
+          and \(\{\nu \geqslant \nu_0 \}\), and the set &quot;eventually in
+          the period, for all \(N > j\)&quot; for each \(j\). The manuscript's
+          first coordinate is the mesh index and the second the period, as in
+          <tt class="verbatim">fuse</tt>. Matches.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>(S5) &harr; <tt class="verbatim">YM.Trace.Terrace.Sceptre.step</tt></strong>
+          (<tt class="verbatim">Terrace/Knell.lean</tt> 63&ndash;65): <tt class="verbatim">&forall;
+          d m, d &le; 5 &rarr; C.ref d &le; m &rarr; &forall;&#x1DA0; p,
+          &forall; N, m &lt; N &rarr; &forall; v</tt>, <tt class="verbatim">b/a &le;
+          2</tt> and the residual bound with <tt class="verbatim">scaled (a/b)</tt> and
+          <tt class="verbatim">vowel</tt> (block), with <tt class="verbatim">a, b</tt> the budget
+          thresholds at <tt class="verbatim">m, m+1</tt>. The quantifier order (fixed
+          level, eventually in the period, uniform in \(N > m\) and the label)
+          is the one in (S5). The thresholds are deterministic (<tt class="verbatim">C.path.levels</tt>),
+          so the ratio bound does not depend on \(\omega\); the manuscript's
+          &quot;on the same set&quot; is harmless. Matches.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-2"><a id="optional-record-item"></a>Optional record item<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          <strong>L1.</strong> (S4) assumes that \(\textsf{A}\) is injective.
+          In the source this is not a separate field. <tt class="verbatim">Tested.bijective</tt>
+          (<tt class="verbatim">Matrices.lean</tt> 78&ndash;86) derives bijectivity of
+          <tt class="verbatim">read</tt> from <tt class="verbatim">Tested.cost</tt> and <tt class="verbatim">reference_size</tt>
+          (line 58), the lower bound <tt class="verbatim">coeffSize v &le; outward C d k
+          * (C.S.a k)^d * coeffSize (awake C d k N p v)</tt>, which holds
+          under <tt class="verbatim">C.Makes</tt> with <tt class="verbatim">C.ref d &le; k &le;
+          N</tt>. The R3 row of <tt class="verbatim">correspondence.md</tt> cites <tt
+          class="verbatim">Tested</tt> but not this supplier. Adding <tt class="verbatim">reference_size</tt>/<tt
+          class="verbatim">Tested.bijective</tt> to the crosswalk would show where the
+          injectivity input comes from. This is not a discrepancy.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-3"><a id="required-changes-and-remaining-uncertainty"></a>Required changes and remaining uncertainty<span style="margin-left: 1em"></span></h2>
+    <p>
+      None required. Not done: Lean elaboration, <tt class="verbatim">#check</tt> and
+      <tt class="verbatim">#print axioms</tt> for <tt class="verbatim">springs</tt> and <tt class="verbatim">Prosper</tt>,
+      and kernel replay. The production of the section hypotheses (<tt class="verbatim">Gondola</tt>,
+      <tt class="verbatim">steep</tt>, <tt class="verbatim">Scrim</tt>, <tt class="verbatim">Sceptre</tt>,
+      <tt class="verbatim">PostT</tt>, <tt class="verbatim">Spun</tt>, <tt class="verbatim">C.Makes</tt>)
+      was not traced beyond the lines cited.
+    </p>
+    <h2 id="auto-4"><a id="acceptance"></a>Acceptance<span style="margin-left: 1em"></span></h2>
+    <p>
+      No acceptance is recorded by this report. A responsible human may record
+      local Lean-correspondence acceptance at fingerprint <tt class="verbatim">ad3b8246&hellip;46cba4aa</tt>
+      for the items above.
+    </p>
+    <div class="ym-unit-nav">
+      <a class="ym-prev" href="../../YM-000026/correspondence.html">&larr; YM-000026</a><span class="ym-part"><a href="../correspondence.html">YM-000033:
+      Selected trace sensor and weighted Ward limit (draft)</a><font class="ym-sep">&middot;</font><a
+      href="../HANDOFF.html">HANDOFF</a><font class="ym-sep">&middot;</font><a href="../validation.html">validation</a></span><a
+      class="ym-next" href="../../YM-000034/correspondence.html">YM-000034 &rarr;</a>
+    </div>
+  </body>
+</html>

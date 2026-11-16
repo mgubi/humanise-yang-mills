@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Renewed review of the interface note: construction to
+    reconstruction (#160, PR #244) &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Renewed review of the interface note: construction to reconstruction
+      (#160, PR #244)</h1><a id="renewed-review-of-the-interface-note-construction-to-reconstruction-160-pr-244"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Method and limits</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>R1&ndash;R5 of review #228: status [S]</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-2">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Changes requested</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Optional</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Also confirmed [S]</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">5</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Not checked</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">5</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Recommendation</b> <span style="margin-left: 5mm"></span> <a href="#auto-7">5</a>
+      </p>
+    </div>
+    <ul>
+      <li>
+        <p>
+          Reviewed file: <tt class="verbatim">blueprint/interfaces/continuum-reconstruction.md</tt>
+          at draft PR #244, head <tt class="verbatim">6097bd5a381349674f1d364486b1816b26392fd4</tt>.
+          PR #244 is the author response, by session <tt class="verbatim">mgubi-astra-interface160-response-20261113</tt>,
+          to review #228 (R1&ndash;R5).
+        </p>
+      </li>
+      <li>
+        <p>
+          Content SHA-256: <tt class="verbatim">3df158a0c57ab41f783e104047049951da15046ce6550be2388cca9a9da238c9</tt>.
+          This matches the hash in the author's handoff.
+        </p>
+      </li>
+      <li>
+        <p>
+          Base: <tt class="verbatim">codex/existence-monograph</tt> @ <tt class="verbatim">69b2631f7a3d3c4176ca0084d8607cb9d8d124a2</tt>.
+          The note there (as reviewed in #228) has SHA-256 <tt class="verbatim">c6748f08&hellip;a3c558</tt>.
+          PR #244 changes no other file.
+        </p>
+      </li>
+      <li>
+        <p>
+          Source revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>,
+          which is <tt class="verbatim">Lean/</tt> in this repository. <tt class="verbatim">Lean/</tt>
+          is identical at the base and at <tt class="verbatim">6097bd5</tt>. <tt class="verbatim">sha256sum
+          -c Lean/SOURCES.sha256</tt> reports 9,497 files OK.
+        </p>
+      </li>
+      <li>
+        <p>
+          Role: Lean correspondence, renewed, with a check of the mathematical
+          meaning of the new ownership statements.
+        </p>
+      </li>
+      <li>
+        <p>
+          Human reviewer: ADB991. No acceptance is recorded.
+        </p>
+      </li>
+      <li>
+        <p>
+          Agent assistance: Claude Code (Anthropic), running as a scheduled
+          agent on behalf of ADB991 (session <tt class="verbatim">ADB991-claude-20261113-6bb7</tt>),
+          did the inspection and wrote this report. ADB991 had not read it
+          before it was submitted. No subagents were used.
+        </p>
+      </li>
+      <li>
+        <p>
+          Review task: <a href="https://github.com/hairer/humanise-yang-mills/issues/160">issue #160</a>, claim <a href="https://github.com/hairer/humanise-yang-mills/issues/160#issuecomment-6863545621">https://github.com/hairer/humanise-yang-mills/issues/160#issuecomment-6863545621</a>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Independence: ADB991 wrote review #228, which this response answers.
+          It did not write the note (#18, #170), the author response (#244),
+          the PR #18 review or G01 P9.
+        </p>
+      </li>
+      <li>
+        <p>
+          Outcome: <strong>R1&ndash;R5 resolved; one minor correction
+          requested (N1), plus two optional wording points (N2, N3).</strong>
+          Every source statement added by PR #244 that I checked is accurate,
+          with one exception. The fifteen-clause map labels <tt class="verbatim">injective</tt>
+          and <tt class="verbatim">represents</tt> as open PU-16 inputs. In fact both
+          hold for every <tt class="verbatim">Table</tt> by construction (N1).
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-1"><a id="method-and-limits"></a>Method and limits<span style="margin-left: 1em"></span></h2>
+    <p>
+      Evidence level: <strong>[S]</strong> means source text read at the pin,
+      including binders and the proof terms quoted below. <strong>Nothing was
+      elaborated.</strong> This sandbox cannot reach the Mathlib cache, so <tt
+      class="verbatim">lake</tt> cannot build dependencies. The PR body lists 17 frozen
+      input files with SHA-256 hashes. I checked all 17 against the base (<tt
+      class="verbatim">sha256sum -c</tt>), and all match.
+    </p>
+    <p>
+      Files read at the pin for this review:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">ChallengeSpec.lean</tt> 117&ndash;143 (<tt class="verbatim">Reconstructed</tt>);
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">HierarchyBridge.lean</tt> 16&ndash;45, 79&ndash;133 (<tt
+          class="verbatim">hierarchy</tt>, <tt class="verbatim">publicReconstruction</tt>);
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">Construction.lean</tt> (whole);
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/Spec/Closed.lean</tt> 28&ndash;100 (<tt class="verbatim">Algebra</tt>,
+          <tt class="verbatim">Calibrated</tt>, <tt class="verbatim">Final</tt>);
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/EveryPhase/Extension.lean</tt> 60&ndash;80;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/OPE/Eye/Views.lean</tt> 26&ndash;30 (<tt class="verbatim">spectator</tt>,
+          <tt class="verbatim">spectate</tt>);
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/Euclid/Union.lean</tt> 1&ndash;40;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/Euclid/Null.lean</tt> 1&ndash;105;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/Euclid/Words.lean</tt> 103;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/Euclid/Lift.lean</tt> 108&ndash;113 (statements);
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/FullVolume/Finale/Program.lean</tt> 117&ndash;126,
+          148;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/FullVolume/Profiles.lean</tt> 25&ndash;33;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/R2I/Campaign/Accepted.lean</tt> 150&ndash;165;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/MergeProof/Powder.lean</tt> 48&ndash;54;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/Extraction/Held.lean</tt> 136;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/MergeProof/Emanate.lean</tt> 15, 31&ndash;36;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/Next/UV_STRESS/Invert.lean</tt> 108&ndash;110;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/Pert/Construction.lean</tt> 21&ndash;31;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/RG17/Joint.lean</tt> 61&ndash;90;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/Nonperturbative/Headlines.lean</tt> 20&ndash;30;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/Price/Intent.lean</tt> 26&ndash;55;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/PCalc/Band.lean</tt> 26&ndash;36;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM/Shoot/Reach.lean</tt> 93.
+        </p>
+      </li>
+    </ul>
+    <p>
+      The proofs of <tt class="verbatim">all_characters</tt>' other fields, of <tt
+      class="verbatim">rated</tt> past line 54 and of <tt class="verbatim">Relativistic.allWorld</tt>
+      were not read. Neither PR #244 nor this review claims anything about
+      them.
+    </p>
+    <h2 id="auto-2"><a id="r1r5-of-review-228-status-s"></a>R1&ndash;R5 of review #228: status [S]<span style="margin-left: 1em"></span></h2>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Item</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Response in PR #244</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Verdict</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">R1, two mixtures</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">The pointwise identity is assigned to PU-17. <tt class="verbatim">all_characters</tt>
+        fills <tt class="verbatim">at_words</tt> by <tt class="verbatim">F.&alpha;.space.barycenter
+        _ F.phase.phase.decomposition F.phase.phase.chosen
+        F.room.kernel.translations</tt> (Extension.lean 79&ndash;80), which
+        uses no field of <tt class="verbatim">L</tt>. The boundary mixture <tt class="verbatim">at_boundary</tt>
+        / <tt class="verbatim">Headline.Reconstruction.average</tt> is assigned to
+        PU-19. The P9.2 response-table row is corrected.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><strong>Resolved.</strong> Lines 79&ndash;80 are exact. The
+        statement of <tt class="verbatim">at_words</tt> (Extension.lean 68&ndash;69)
+        mentions only <tt class="verbatim">F.&alpha;</tt> and <tt class="verbatim">S</tt>, not <tt
+        class="verbatim">L</tt>, so the PU-17 ownership is a property of the statement,
+        not only of this proof.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">R2, public clauses</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">A fifteen-clause table is given. The &quot;literal call
+        versus smaller interface&quot; paragraph says that <tt class="verbatim">publicReconstruction</tt>
+        takes <tt class="verbatim">L, h</tt> but uses only <tt class="verbatim">h.at_words</tt>,
+        and that the stronger conjuncts of <tt class="verbatim">constructed</tt> still
+        need PU-19.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><strong>Resolved</strong>, apart from N1. The clause count
+        and order match <tt class="verbatim">Reconstructed</tt> (ChallengeSpec
+        117&ndash;143). Each &quot;immediate source&quot; entry matches the
+        bridge proof term (HierarchyBridge 81&ndash;132). <tt class="verbatim">constructed</tt>
+        passes <tt class="verbatim">core.reconstruction</tt> as <tt class="verbatim">h</tt> and
+        keeps <tt class="verbatim">Independent.Core</tt>, <tt class="verbatim">Headline.Reconstruction</tt>
+        and <tt class="verbatim">&forall; i, (view (L.actors i)).Axioms</tt> as separate
+        conjuncts (Construction.lean 25&ndash;27, 37&ndash;39).</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">R3, full mesh</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">from_spec</tt> (Program.lean 117&ndash;126)
+        combines <tt class="verbatim">F.room.ordered</tt> with <tt class="verbatim">PositionsUV
+        R.family .full</tt>. It identifies the limits by <tt class="verbatim">tendsto_nhds_unique
+        (hx.comp f.mesh.cofinal) (hD p h)</tt> and keeps <tt class="verbatim">hV</tt>.
+        <tt class="verbatim">fromFunded</tt> calls it with <tt class="verbatim">hJ.fullMesh</tt>
+        (Accepted.lean 165).</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><strong>Resolved.</strong> All anchors are exact. <tt
+        class="verbatim">Jewel.fullMesh : PositionsUV R.family
+        Extraction.Sequence.full</tt> is at Program.lean 148. The note's
+        statement that no rank receipt is moved to the full-mesh order agrees
+        with the docstring at Program.lean 115&ndash;116 (&quot;Not asserting
+        CellHyp etc on that order&quot;).</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">R4, whole seed</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">rated</tt> (Powder.lean 48&ndash;54) returns <tt
+        class="verbatim">&exist; s : Seed C (f.refine g) T, &hellip;</tt> and starts
+        with <tt class="verbatim">Extraction.crops</tt> (Held.lean 136). <tt class="verbatim">emanate</tt>
+        (Emanate.lean 31&ndash;36) passes <tt class="verbatim">s.cutoff s.ordered
+        s.generic s.kernel s.copies</tt> and <tt class="verbatim">cap_given
+        s.corrected</tt> to <tt class="verbatim">readyA</tt>.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><strong>Resolved.</strong> &quot;Dimension bound&quot; is
+        accurate: <tt class="verbatim">cap_given : Cells.RankWidths C F S &rarr;
+        DimAbove S</tt>, where <tt class="verbatim">DimAbove S := &forall; d, finrank
+        (S.Field d) &le; finrank ((Bel L).Field d)</tt> (Invert.lean
+        108&ndash;110).</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">R5, calibration and sector</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">Final.calibration : Calibrated C</tt> is a
+        family-level receipt, proposed for PU-15. <tt class="verbatim">withFinal</tt>
+        takes it as input, <tt class="verbatim">extractible17</tt> supplies it from <tt
+        class="verbatim">hT.reception</tt>, and <tt class="verbatim">existence</tt> projects <tt
+        class="verbatim">F.calibration</tt> (Headlines.lean 26). <tt class="verbatim">Final.sector
+        : Algebra S</tt> has fields <tt class="verbatim">derivatives</tt>, <tt class="verbatim">turns</tt>
+        and <tt class="verbatim">energy</tt>, and is assigned outside
+        PU-15&ndash;PU-19.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><strong>Resolved.</strong> <tt class="verbatim">Calibrated</tt>
+        (Closed.lean 58&ndash;61) depends on <tt class="verbatim">C</tt> only. <tt
+        class="verbatim">Algebra</tt> (Closed.lean 28&ndash;31) has exactly these three
+        fields. <tt class="verbatim">withFinal</tt> (Construction.lean 21&ndash;31)
+        returns <tt class="verbatim">h.sector = &#x27E8;W, mill M I c U, J&#x27E9;</tt>.
+        See N2 for one wording point.</td>
+      </tr></tbody>
+    </table>
+    <h2 id="auto-3"><a id="changes-requested"></a>Changes requested<span style="margin-left: 1em"></span></h2>
+    <p>
+      <strong>N1 (minor, correction): <tt class="verbatim">injective</tt> and <tt class="verbatim">represents</tt>
+      are structural facts about every table.</strong> The new table
+      describes:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">injective</tt> (<tt class="verbatim">S.pin_inj</tt>) as a
+          &quot;Proposed PU-16 table/physical-label input; its construction is
+          not established here and does not follow from extraction bounds
+          alone&quot;;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">represents</tt> (<tt class="verbatim">S.representative</tt>, <tt
+          class="verbatim">S.rep</tt>) as a &quot;Proposed PU-16 table/quotient
+          representative input; no quotient construction is certified
+          here&quot;.
+        </p>
+      </li>
+    </ul>
+    <p>
+      At the pin, neither depends on any property of the particular table:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">Table.Field d</tt> is <em>defined</em> as <tt class="verbatim">L.Ref
+          d &#x29F8; S.null d</tt> (Null.lean 74). Here <tt class="verbatim">S.null d =
+          ker (S.replies d)</tt> is the space of reference labels whose
+          correlations with every separated exterior word vanish (Null.lean
+          31&ndash;34, criterion 36&ndash;42).
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">pin d</tt> is the codomain restriction of <tt class="verbatim">spectra
+          d = (S.null d).liftQ (S.replies d)</tt> (Union.lean 25&ndash;26,
+          Null.lean 93). <tt class="verbatim">pin_inj</tt> is proved for every <tt
+          class="verbatim">S : Table L</tt> from <tt class="verbatim">faithfully</tt>, which is
+          <tt class="verbatim">ker_liftQ_eq_bot</tt> (Union.lean 29&ndash;30, Null.lean
+          97&ndash;98).
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">representative</tt> is a linear right inverse of the
+          quotient map, obtained by choice. <tt class="verbatim">rep</tt> is its
+          defining property, and both hold for every table (Null.lean
+          87&ndash;91).
+        </p>
+      </li>
+    </ul>
+    <p>
+      So the mathematical content of these two clauses is the
+      <em>definition</em> of the physical label space: the quotient of the
+      reference labels by the null space of the Euclidean correlations, which
+      is a standard OS-type quotient. Two facts then follow: the induced map
+      into functions on exterior words is injective, and the
+      finite-dimensional quotient has a linear section. No unit has to produce
+      these from extraction data, so they are not open inputs. Suggested
+      wording for both rows: &quot;holds for every table by the quotient
+      definition of <tt class="verbatim">Table.Field</tt> (<tt class="verbatim">Lean/YM/Euclid/Null.lean</tt>,
+      <tt class="verbatim">Union.lean</tt>); the monograph must state this definition
+      where the physical labels are introduced (PU-16 or notation), with no
+      further proof obligation&quot;. <tt class="verbatim">acts</tt> is different: it
+      really does use a PU-16 hypothesis, <tt class="verbatim">S.Basic</tt> via <tt
+      class="verbatim">F.room.kernel.laws</tt> in <tt class="verbatim">S.alive</tt> (Null.lean
+      102), and the table states this correctly.
+    </p>
+    <h2 id="auto-4"><a id="optional"></a>Optional<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          <strong>N2 (wording).</strong> In the &quot;Final.sector&quot;
+          paragraph, &quot;with the equality retained by <tt class="verbatim">Run.extractible17</tt>&quot;
+          overstates what the statement exports. In <tt class="verbatim">extractible17</tt>
+          the equality <tt class="verbatim">hFa</tt> is passed to <tt class="verbatim">attached</tt>
+          to prove <tt class="verbatim">Pert.FirstExtension F X</tt> (Joint.lean
+          88&ndash;90), but its conclusion does not export it. Downstream
+          consumers cannot recover <tt class="verbatim">F.sector = &#x27E8;W, mill M I c
+          U, J&#x27E9;</tt> from the statement. &quot;used internally by&quot;
+          would be accurate.
+        </p>
+      </li>
+      <li>
+        <p>
+          <strong>N3 (reading of <tt class="verbatim">Calibrated</tt>).</strong> The
+          prose &quot;sheet, block lengths, protection/delays, directed
+          trajectory and finite histories&quot; was checked for <tt class="verbatim">Sheet</tt>
+          and for <tt class="verbatim">Rolls</tt> (<tt class="verbatim">L : &#x2115; &rarr;
+          Side</tt>, large, odd and monotone; Intent.lean 26&ndash;53), which
+          are the block side lengths. <tt class="verbatim">Trail B.a p</tt> is <tt
+          class="verbatim">&forall; m, Rep G (a.S.side m p)</tt> (Reach.lean 93), a
+          sequence indexed by all scales <tt class="verbatim">m</tt>. Only the <tt
+          class="verbatim">Move</tt> relation is restricted to <tt class="verbatim">m &lt; N</tt>,
+          so &quot;finite histories&quot; is an interpretation. I did not
+          unfold <tt class="verbatim">Protection</tt>, <tt class="verbatim">Delays</tt>, <tt
+          class="verbatim">Bar</tt>, <tt class="verbatim">Wait</tt>, <tt class="verbatim">Stays</tt> or <tt
+          class="verbatim">Move</tt>. Since the note proposes this as a PU-15 output
+          requirement, the PU-15 author should take the field meanings from
+          the definitions, not from this summary.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-5"><a id="also-confirmed-s"></a>Also confirmed [S]<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          In the <tt class="verbatim">permutation</tt> and <tt class="verbatim">smooth</tt> rows,
+          <tt class="verbatim">spectate F s</tt> is <tt class="verbatim">U.room.kernel</tt> for
+          the mixed viewer and <tt class="verbatim">U.phase.phase.states _</tt> for a
+          character (Views.lean 30). So the PU-16/PU-17 split in those rows is
+          exact. <tt class="verbatim">class_perm</tt> and <tt class="verbatim">class_smooth</tt>
+          (Lift.lean 108, 113) are general lemmas with <tt class="verbatim">Symmetric</tt>/<tt
+          class="verbatim">Smooth</tt> hypotheses.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">covers</tt> uses <tt class="verbatim">F.sector.derivatives.covered
+          F.room.kernel.laws.toSymmetric F.phase.transport.injection</tt>
+          (HierarchyBridge 90). <tt class="verbatim">DiffPlan.covered</tt> (Union.lean
+          40) needs <tt class="verbatim">S.Symmetric</tt> and <tt class="verbatim">P.Inclusions
+          S</tt>, so the derivative-side crossing that the note adds to open
+          question 3 is real.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">boundary</tt> rewrites with <tt class="verbatim">publicMoment _
+          F.realization.qt.meets</tt> (HierarchyBridge 123&ndash;128), and <tt
+          class="verbatim">emerges.int</tt> is not used. This matches the row and the
+          earlier P9.3 finding.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">hierarchy F Q</tt> (HierarchyBridge 27&ndash;43) mentions
+          no almanac. Its <tt class="verbatim">phaseMeasure</tt> is <tt class="verbatim">F.&alpha;.space.&mu;</tt>
+          and its <tt class="verbatim">selected</tt> is <tt class="verbatim">F.&alpha;.atPoint</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The &quot;literal call&quot; paragraph correctly avoids claiming a
+          Lean refactoring, and correctly keeps <tt class="verbatim">constructed</tt>'s
+          source route through <tt class="verbatim">L, h</tt>.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-6"><a id="not-checked"></a>Not checked<span style="margin-left: 1em"></span></h2>
+    <p>
+      No <tt class="verbatim">#print axioms</tt>, kernel replay or LaTeX build was run
+      (the change is Markdown only). The literature side (#6) was not
+      addressed. The unchanged parts of the note were reviewed in #228 and
+      were not re-read here, beyond the diff context.
+    </p>
+    <h2 id="auto-7"><a id="recommendation"></a>Recommendation<span style="margin-left: 1em"></span></h2>
+    <p>
+      After N1, which changes two table cells, no further correspondence
+      review of this note is needed for R1&ndash;R5. The note can go to human
+      acceptance together with #228 and this report. N2 and N3 are optional.
+      This is an agent-assisted review, not an acceptance.
+    </p>
+  </body>
+</html>

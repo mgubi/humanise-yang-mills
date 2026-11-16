@@ -60,6 +60,23 @@
     <p>
       <h1>Validation of the draft public candidate</h1><a id="validation-of-the-draft-public-candidate"></a>
     </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Snapshot and scope</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Commands actually run</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Limits</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2026-11-13 revision for issue #34</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">2</a>
+      </p>
+    </div>
     <h2 id="auto-1"><a id="snapshot-and-scope"></a>Snapshot and scope<span style="margin-left: 1em"></span></h2>
     <ul>
       <li>
@@ -139,6 +156,88 @@
       responsible human mathematical and Lean-correspondence acceptance is
       still required.
     </p>
+    <h2 id="auto-4"><a id="2026-11-13-revision-for-issue-34"></a>2026-11-13 revision for issue #34<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Isolated checkout <tt class="verbatim">/private/tmp/ym-issue34-revision-20261113</tt>,
+          branch <tt class="verbatim">codex/issue-34-revision-20261113</tt>; fetched
+          upstream basis <tt class="verbatim">bac6004b01919c9d0e5958bdadc85e2d34f22732</tt>.
+          The Lean tree at the basis is <tt class="verbatim">328ad19b404d2db2a578319ea3e4eba4b27e34ef</tt>;
+          the source pin remains <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Rechecked the live issue and claim, original PR #70, reports in
+          #128, and the source entry points and immediate definitions listed
+          in the revised correspondence. No current overlapping author claim
+          was observed.
+        </p>
+      </li>
+      <li>
+        <p>
+          A Python scan found 18 distinct <tt class="verbatim">ref</tt>/<tt class="verbatim">eqref</tt>/<tt
+          class="verbatim">autoref</tt> targets in the original branch chapter, 15
+          labels in <tt class="verbatim">ope-filtration.tex</tt> and an empty
+          intersection; no local <tt class="verbatim">newcommand</tt>, <tt class="verbatim">renewcommand</tt>,
+          <tt class="verbatim">def</tt>, <tt class="verbatim">DeclareMathOperator</tt> or <tt
+          class="verbatim">newtheorem</tt> definitions were found in that file. This
+          justifies removing it from this wrapper and unit support list. The
+          subsequent two-pass LaTeX log independently checks the resulting
+          local references.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">python3 scripts/check_blueprint.py</tt> passed: 4 units,
+          with no Lean or mathematics verified. <tt class="verbatim">git diff
+          --check</tt> passed during authoring; final committed-diff
+          whitespace and unit fingerprint are recorded below.
+        </p>
+      </li>
+      <li>
+        <p>
+          From <tt class="verbatim">manuscript/</tt>, twice ran <tt class="verbatim">pdflatex
+          -interaction=nonstopmode -halt-on-error -jobname=issue34
+          -output-directory=/private/tmp/ym-issue34-tex
+          ../blueprint/units/YM-000034/evidence/wrapper.tex</tt>. Both passes
+          exited 0; final PDF has 20 pages, with no undefined references or
+          over/underfull box warnings. <tt class="verbatim">pdftoppm -f 14 -l 20
+          -scale-to 1100 -png</tt> rendered the revised pages; all seven were
+          visually inspected, including test and recording hypotheses,
+          raw-fast proposition and washout proof.
+        </p>
+      </li>
+      <li>
+        <p>
+          No fresh Lean elaboration, axiom print, import-closure audit or
+          kernel replay was run. The prior agent review does not carry to the
+          new fingerprint. Local wrapper validation is not full-manuscript
+          integration; the same-data chart, quantitative purchases, recording
+          and physical trace producer obligations remain separate.
+        </p>
+      </li>
+      <li>
+        <p>
+          Revision unit fingerprint from <tt class="verbatim">python3
+          scripts/check_blueprint.py --fingerprint YM-000034</tt>: <tt class="verbatim">01500ca93fd84b5d773c55a5fc4c4467f972175de13dce410f8f3bc8b12ed989</tt>.
+          This includes the revised correspondence and the three manuscript
+          paths retained in <tt class="verbatim">unit.json</tt>. Prior reports and null
+          approvals are unchanged; they do not certify the revised
+          fingerprint.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">git diff --check bac6004b01919c9d0e5958bdadc85e2d34f22732
+          0da39b29c8321989e55065d8c4a6af609cd9df85</tt> passed on the
+          committed mathematical revision. The final candidate adds only this
+          validation line and its updated manifest entry; its committed diff
+          is also checked.
+        </p>
+      </li>
+    </ul>
     <div class="ym-unit-nav">
       <a class="ym-prev" href="../YM-000033/correspondence.html">&larr; YM-000033</a><span class="ym-part"><a href="correspondence.html">YM-000034:
       Trace branch moment limits and weighted washout (draft)</a><font class="ym-sep">&middot;</font><a

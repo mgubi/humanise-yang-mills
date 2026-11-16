@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Renewed review of the N1 response: construction-to-reconstruction
+    note (#160, PR #244) &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a
+      href="../../../docs/notation.html">Notation</a><font class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source
+      audit</a><font class="ym-sep">&middot;</font><a href="../../external-map.html">Literature</a><font class="ym-sep">&middot;</font><a
+      href="../../../docs/proof-standard.html">Proof standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Renewed review of the N1 response: construction-to-reconstruction
+      note (#160, PR #244)</h1><a id="renewed-review-of-the-n1-response-construction-to-reconstruction-note-160-pr-244"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Method and limits</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Check of each new statement</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Optional points</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Checks run</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Handoff</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">3</a>
+      </p>
+    </div>
+    <ul>
+      <li>
+        <p>
+          Reviewed file: <tt class="verbatim">blueprint/interfaces/continuum-reconstruction.md</tt>
+          at draft PR #244, head <tt class="verbatim">dcb24ba3e0c5b2b7e211365481ca14d131e88a32</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Content SHA-256: <tt class="verbatim">5213d9dd0a1f1cfdc64da5319b8bc55a9c027386317eadb52e409d59e192e822</tt>.
+          This matches the hash in the author handoff (<a href="https://github.com/hairer/humanise-yang-mills/issues/160#issuecomment-6863764244">https://github.com/hairer/humanise-yang-mills/issues/160#issuecomment-6863764244</a>).
+        </p>
+      </li>
+      <li>
+        <p>
+          Delta reviewed: <tt class="verbatim">6097bd5..dcb24ba</tt>, one commit
+          (&quot;docs: classify reconstruction quotient facts
+          accurately&quot;), 2 lines changed, both in the fifteen-clause table
+          (rows <tt class="verbatim">injective</tt> and <tt class="verbatim">represents</tt>). At
+          <tt class="verbatim">6097bd5</tt> the note had SHA-256 <tt class="verbatim">3df158a0&hellip;a238c9</tt>,
+          the version reviewed in #246.
+        </p>
+      </li>
+      <li>
+        <p>
+          Base: <tt class="verbatim">codex/existence-monograph</tt> @ <tt class="verbatim">69b2631f7a3d3c4176ca0084d8607cb9d8d124a2</tt>.
+          Against the base, PR #244 still changes only this one file.
+        </p>
+      </li>
+      <li>
+        <p>
+          Source revision: <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>
+          (<tt class="verbatim">Lean/</tt>). <tt class="verbatim">git diff --quiet 69b2631 dcb24ba
+          -- Lean</tt> reports no change.
+        </p>
+      </li>
+      <li>
+        <p>
+          Role: Lean correspondence, renewed, limited to the delta.
+        </p>
+      </li>
+      <li>
+        <p>
+          Human reviewer: ADB991. No acceptance is recorded.
+        </p>
+      </li>
+      <li>
+        <p>
+          Agent assistance: Claude Code (Anthropic), running as a scheduled
+          agent on behalf of ADB991 (session <tt class="verbatim">ADB991-claude-20261113-cf2e</tt>),
+          did the inspection and wrote this report. ADB991 had not read it
+          before it was submitted. No subagents were used.
+        </p>
+      </li>
+      <li>
+        <p>
+          Review task: <a href="https://github.com/hairer/humanise-yang-mills/issues/160">issue #160</a>, claim <a href="https://github.com/hairer/humanise-yang-mills/issues/160#issuecomment-6864323021">https://github.com/hairer/humanise-yang-mills/issues/160#issuecomment-6864323021</a>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Independence: ADB991 wrote reviews #228 and #246, which requested
+          these changes. It did not write the note (#18, #170) or the author
+          responses (#244).
+        </p>
+      </li>
+      <li>
+        <p>
+          Outcome: <strong>N1 resolved. No change required.</strong> The rest
+          of the note is unchanged since #246, so that review's findings on
+          R1&ndash;R5 still apply to this version.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-1"><a id="method-and-limits"></a>Method and limits<span style="margin-left: 1em"></span></h2>
+    <p>
+      Evidence level: source text read at the pin, including binders and <tt
+      class="verbatim">variable</tt> scopes. <strong>Nothing was elaborated.</strong>
+      Mathlib is unreachable from this sandbox, so <tt class="verbatim">lake</tt> cannot
+      build dependencies. Files read: <tt class="verbatim">Lean/YM/Euclid/Null.lean</tt>
+      1&ndash;105 and its section structure (<tt class="verbatim">variable</tt>, <tt
+      class="verbatim">section</tt>, <tt class="verbatim">end</tt> lines); <tt class="verbatim">Lean/YM/Euclid/Union.lean</tt>
+      1&ndash;32.
+    </p>
+    <h2 id="auto-2"><a id="check-of-each-new-statement"></a>Check of each new statement<span style="margin-left: 1em"></span></h2>
+    <table style="width: 100%">
+      <tbody><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Statement in the new cells</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Source</strong></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Verdict</strong></td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">For every table, <tt class="verbatim">S.Field d = L.Ref d &#x29F8;
+        S.null d</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">abbrev Field (d : &#x2115;) := L.Ref d &#x29F8;
+        S.null d</tt> (Null.lean 74), in <tt class="verbatim">namespace Table</tt> under
+        <tt class="verbatim">variable (S : Table L)</tt> only (Null.lean 28&ndash;29).
+        The first extra hypothesis, <tt class="verbatim">H : S.RealSpin</tt>, enters at
+        line 112, after all the declarations used here.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Accurate.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">null</tt> is the kernel of <tt class="verbatim">replies</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">def null (d : &#x2115;) := LinearMap.ker
+        (S.replies d)</tt> (Null.lean 34); <tt class="verbatim">replies</tt> pairs a
+        label with every separated exterior word (Null.lean 31&ndash;32,
+        structure <tt class="verbatim">Exterior</tt> 22&ndash;26).</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Accurate.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">The induced response map <tt class="verbatim">S.spectra d</tt> is
+        injective (<tt class="verbatim">S.faithfully</tt>)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">spectra d := (S.null d).liftQ (S.replies d)
+        le_rfl</tt> (93); <tt class="verbatim">faithfully d : Injective (S.spectra
+        d)</tt>, by <tt class="verbatim">ker_liftQ_eq_bot</tt> (97&ndash;98).</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Accurate.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Its codomain restriction <tt class="verbatim">S.pin d</tt> remains
+        injective</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">pin d := (S.spectra d).codRestrict
+        S.observations &hellip;</tt> (Union.lean 26&ndash;27); <tt class="verbatim">pin_inj</tt>
+        from <tt class="verbatim">S.faithfully</tt> (29&ndash;30), under <tt class="verbatim">variable
+        (S : Table L)</tt> only (20&ndash;21).</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Accurate.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">S.project d</tt> is the surjective quotient
+        map</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">abbrev project (d : &#x2115;) := (S.null
+        d).mkQ</tt> (75); <tt class="verbatim">onto d : Surjective (S.project d)</tt>
+        (84).</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Accurate.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">S.representative d</tt> is a chosen linear
+        section, <tt class="verbatim">S.project d (S.representative d v) = v</tt> by <tt
+        class="verbatim">S.rep</tt></td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">representative d : S.Field d
+        &rarr;&#x2097;[&#x2102;] L.Ref d</tt>, the <tt class="verbatim">choose</tt> of
+        <tt class="verbatim">exists_rightInverse_of_surjective</tt> (87&ndash;88); <tt
+        class="verbatim">rep</tt> (90&ndash;91) is the stated identity.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Accurate. &quot;Chosen&quot; is right: the section is a
+        noncanonical choice, which does not matter for the clause.</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">&quot;a quotient fact, not an additional analytic
+        input&quot; (both rows)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">No hypothesis on the table beyond <tt class="verbatim">S : Table
+        L</tt> is used.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Accurate.</td>
+      </tr></tbody>
+    </table>
+    <p>
+      The <tt class="verbatim">acts</tt> row still separately requires the nonzero
+      grade-zero unit (<tt class="verbatim">S.alive</tt>) and the faithful realization,
+      and the <tt class="verbatim">covers</tt> row the derivative plan. The new wording
+      does not blur these, which was the concern behind N1.
+    </p>
+    <h2 id="auto-3"><a id="optional-points"></a>Optional points<span style="margin-left: 1em"></span></h2>
+    <p>
+      N2 and N3 of #246 (optional wording) are not addressed in this delta.
+      They stay optional.
+    </p>
+    <h2 id="auto-4"><a id="checks-run"></a>Checks run<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">git diff --stat 6097bd5 dcb24ba</tt>: one file, 2
+          insertions, 2 deletions.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">git diff --name-only 69b2631 dcb24ba</tt>: only <tt
+          class="verbatim">blueprint/interfaces/continuum-reconstruction.md</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">git diff --quiet 69b2631 dcb24ba -- Lean</tt>: no change.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">sha256sum</tt> of the note at <tt class="verbatim">dcb24ba</tt>:
+          <tt class="verbatim">5213d9dd&hellip;e192e822</tt>, which matches the handoff.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">python3 scripts/check_blueprint.py</tt> and <tt class="verbatim">python3
+          -m unittest discover -s tests</tt> on this report branch (results in
+          the PR body).
+        </p>
+      </li>
+      <li>
+        <p>
+          Not run: Lean elaboration and <tt class="verbatim">#print axioms</tt> (Mathlib
+          unreachable); no LaTeX, since the delta is Markdown only.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-5"><a id="handoff"></a>Handoff<span style="margin-left: 1em"></span></h2>
+    <p>
+      With N1 resolved, the correspondence review of this note (#228, #246,
+      this report) has no open required change. The note can go to human
+      acceptance. This is an agent-assisted review, not an acceptance.
+    </p>
+  </body>
+</html>
