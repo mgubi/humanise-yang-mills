@@ -199,19 +199,19 @@
   defined through a physical observable would require a separate matching
   theorem.
 
-  <\bibliography|bib|tm-plain|references>
+  <\bibliography|bib|tm-alpha|references>
     <\bib-list|2>
-      <bibitem*|1><label|bib-hall2000>Brian<nbsp>C.<nbsp>Hall. <newblock>An
-      elementary introduction to groups and representations.
+      <bibitem*|Hal00><label|bib-hall2000>Brian<nbsp>C.<nbsp>Hall.
+      <newblock>An elementary introduction to groups and representations.
       <newblock>arXiv:math-ph/0005032v1, 31 May 2000, 2000. <newblock>Chapter
       3, Definition 3.13 and Theorem 3.16, pp. 36 and 40\U41.
       <slink|https://arxiv.org/pdf/math-ph/0005032v1>.<newblock>
 
-      <bibitem*|2><label|bib-lebl>Ji°í Lebl.
+      <bibitem*|Leb><label|bib-lebl>Ji°í Lebl.
       <newblock><with|font-shape|italic|Basic Analysis: Introduction to Real
       Analysis>, <localize|volume><nbsp>I. <newblock>Author-maintained
-      electronic edition, n.d. <newblock>HTML edition, Section 2.2,
-      Propositions 2.2.5(iv) and 2.2.6; inspected 11 November 2026.
+      electronic edition. <newblock>HTML edition, Section 2.2, Propositions
+      2.2.5(iv) and 2.2.6; inspected 11 November 2026.
       <slink|https://jirilebl.github.io/ra/html/sec_factslimsseqs.html>.<newblock>
     </bib-list>
   </bibliography>
@@ -229,8 +229,8 @@
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-2|<tuple|1|2>>
     <associate|auto-3|<tuple|1.2|3>>
-    <associate|bib-hall2000|<tuple|1|3>>
-    <associate|bib-lebl|<tuple|2|3>>
+    <associate|bib-hall2000|<tuple|Hal00|3>>
+    <associate|bib-lebl|<tuple|Leb|3>>
     <associate|eq:running|<tuple|1|2>>
     <associate|prop:running-asymptotic|<tuple|1.2|2>>
     <associate|prop:uniform-extraction|<tuple|1.1|2>>

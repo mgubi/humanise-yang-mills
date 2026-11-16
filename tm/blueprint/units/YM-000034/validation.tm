@@ -17,6 +17,24 @@
   <ym-title|Validation of the draft public
   candidate><label|validation-of-the-draft-public-candidate>
 
+  <\table-of-contents|toc>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Snapshot and
+    scope> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-1><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Commands
+    actually run> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-2><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Limits>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-3><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|2026-11-13
+    revision for issue #34> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-4><vspace|0.5fn>
+  </table-of-contents>
+
   <section|Snapshot and scope><label|snapshot-and-scope>
 
   <\itemize-minus>
@@ -73,6 +91,62 @@
   inputs remain explicit draft obligations. Independent responsible human
   mathematical and Lean-correspondence acceptance is still required.
 
+  <section|2026-11-13 revision for issue #34><label|2026-11-13-revision-for-issue-34>
+
+  <\itemize-minus>
+    <item>Isolated checkout <verbatim|/private/tmp/ym-issue34-revision-20261113>,
+    branch <verbatim|codex/issue-34-revision-20261113>; fetched upstream
+    basis <verbatim|bac6004b01919c9d0e5958bdadc85e2d34f22732>. The Lean tree
+    at the basis is <verbatim|328ad19b404d2db2a578319ea3e4eba4b27e34ef>; the
+    source pin remains <verbatim|3456e5e75cf8d4cd558955a5c7638fba2d68f464>.
+
+    <item>Rechecked the live issue and claim, original PR #70, reports in
+    #128, and the source entry points and immediate definitions listed in the
+    revised correspondence. No current overlapping author claim was observed.
+
+    <item>A Python scan found 18 distinct
+    <verbatim|ref>/<verbatim|eqref>/<verbatim|autoref> targets in the
+    original branch chapter, 15 labels in <verbatim|ope-filtration.tex> and
+    an empty intersection; no local <verbatim|newcommand>,
+    <verbatim|renewcommand>, <verbatim|def>, <verbatim|DeclareMathOperator>
+    or <verbatim|newtheorem> definitions were found in that file. This
+    justifies removing it from this wrapper and unit support list. The
+    subsequent two-pass LaTeX log independently checks the resulting local
+    references.
+
+    <item><verbatim|python3 scripts/check_blueprint.py> passed: 4 units, with
+    no Lean or mathematics verified. <verbatim|git diff --check> passed
+    during authoring; final committed-diff whitespace and unit fingerprint
+    are recorded below.
+
+    <item>From <verbatim|manuscript/>, twice ran <verbatim|pdflatex
+    -interaction=nonstopmode -halt-on-error -jobname=issue34
+    -output-directory=/private/tmp/ym-issue34-tex
+    ../blueprint/units/YM-000034/evidence/wrapper.tex>. Both passes exited 0;
+    final PDF has 20 pages, with no undefined references or over/underfull
+    box warnings. <verbatim|pdftoppm -f 14 -l 20 -scale-to 1100 -png>
+    rendered the revised pages; all seven were visually inspected, including
+    test and recording hypotheses, raw-fast proposition and washout proof.
+
+    <item>No fresh Lean elaboration, axiom print, import-closure audit or
+    kernel replay was run. The prior agent review does not carry to the new
+    fingerprint. Local wrapper validation is not full-manuscript integration;
+    the same-data chart, quantitative purchases, recording and physical trace
+    producer obligations remain separate.
+
+    <item>Revision unit fingerprint from <verbatim|python3
+    scripts/check_blueprint.py --fingerprint YM-000034>:
+    <verbatim|01500ca93fd84b5d773c55a5fc4c4467f972175de13dce410f8f3bc8b12ed989>.
+    This includes the revised correspondence and the three manuscript paths
+    retained in <verbatim|unit.json>. Prior reports and null approvals are
+    unchanged; they do not certify the revised fingerprint.
+
+    <item><verbatim|git diff --check bac6004b01919c9d0e5958bdadc85e2d34f22732
+    0da39b29c8321989e55065d8c4a6af609cd9df85> passed on the committed
+    mathematical revision. The final candidate adds only this validation line
+    and its updated manifest entry; its committed diff is also checked.
+  </itemize-minus>
+
   <ym-unit-nav|<hlink|\<leftarrow\> YM-000033|../YM-000033/correspondence.tm>|<hlink|YM-000034:
   Trace branch moment limits and weighted washout
   (draft)|correspondence.tm><ym-nav-sep><hlink|HANDOFF|HANDOFF.tm><ym-nav-sep><ym-nav-here|validation>|>
@@ -87,11 +161,13 @@
 
 <\references>
   <\collection>
+    <associate|2026-11-13-revision-for-issue-34|<tuple|4|2>>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-2|<tuple|2|1>>
-    <associate|auto-3|<tuple|3|1>>
+    <associate|auto-3|<tuple|3|2>>
+    <associate|auto-4|<tuple|4|2>>
     <associate|commands-actually-run|<tuple|2|1>>
-    <associate|limits|<tuple|3|1>>
+    <associate|limits|<tuple|3|2>>
     <associate|snapshot-and-scope|<tuple|1|1>>
     <associate|validation-of-the-draft-public-candidate|<tuple|?|1>>
   </collection>
@@ -111,6 +187,10 @@
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Limits>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2026-11-13
+      revision for issue #34> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-4><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

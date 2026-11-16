@@ -41,6 +41,10 @@
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Unresolved
     obligations and validation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-6><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Revision
+    response to independent review #128> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-7><vspace|0.5fn>
   </table-of-contents>
 
   <\itemize-minus>
@@ -1211,6 +1215,57 @@
     stress construction remain outside scope.
   </itemize-minus>
 
+  <section|Revision response to independent review
+  #128><label|revision-response-to-independent-review-128>
+
+  Revision basis <verbatim|bac6004b01919c9d0e5958bdadc85e2d34f22732> on
+  <verbatim|codex/existence-monograph>; session
+  <verbatim|TrishenGunaratnam-terra-issue34-revision-20261113>. Existing
+  review reports are read-only and their old fingerprint is not renewed.
+
+  <block|<tformat|<twith|table-width|1par>|<twith|table-hmode|exact>|<cwith|1|-1|1|-1|cell-hyphen|t>|<cwith|1|1|1|-1|cell-bborder|1ln>|<cwith|1|1|1|-1|cell-valign|bottom>|<table|<row|<cell|<strong|Item>>|<cell|<strong|Response
+  and evidence>>>|<row|<cell|R1>|<cell|<verbatim|prop:ex-branch-raw-fast> now
+  cites all three recording inequalities <verbatim|eq:ex-branch-book-current>\U<verbatim|eq:ex-branch-book-tensor>,
+  the finite-volume linearity and difference identity
+  <verbatim|eq:ex-branch-recorded-difference>, and the explicitly labelled
+  tested trace identities <verbatim|eq:ex-branch-recorded-traces>.
+  <verbatim|eq:ex-branch-test-properties> states continuity and separation;
+  <verbatim|eq:ex-branch-grade-three-unit> states the unit-insertion property
+  and is cited at the telescoping step. The trace identities make explicit
+  the old prose's exact false-zero and principal-divergence inputs; they do
+  not replace the recording or finite-volume purchases. The bound derived
+  from calibrated finite-volume columns and the fixed-scale limit is labelled
+  <verbatim|eq:ex-branch-transport-bound> and cited in
+  <verbatim|prop:ex-branch-washout> and its proof, with
+  <verbatim|ell_k=o(s_k)> and the affine clock.>>|<row|<cell|R2>|<cell|The
+  owned chapter's <verbatim|ref>/<verbatim|eqref>/<verbatim|autoref> targets
+  have empty intersection with all labels in <verbatim|ope-filtration.tex>;
+  that file defines no local TeX macros or theorem environments. A two-pass
+  wrapper after removing it from <verbatim|unit.json> and the wrapper has no
+  unresolved references. <verbatim|trace-free-rank.tex> and the preamble
+  remain the actual support files. The support-list change alters the
+  fingerprint; the existing null approval fields are unchanged.>>>>>
+
+  At pinned source <verbatim|3456e5e75cf8d4cd558955a5c7638fba2d68f464>,
+  reread <verbatim|YM.Trace.Shelves.chartB>, <verbatim|.nearing_h>,
+  <verbatim|.muteP>, <verbatim|.materialB> and <verbatim|.Zees> in
+  <verbatim|Lean/YM/TraceExtension/Shelves/Pear.lean>: the coefficient and
+  moment limits retain the same branch and selected data; the washout
+  quantifies over each fixed <verbatim|p : \<bbb-N\>> for <verbatim|B \<neq\>
+  some true>. The <verbatim|Bend>/<verbatim|BornZ> mapping in the existing
+  table above remains <verbatim|none>, <verbatim|some false>, <verbatim|some
+  true> = <verbatim|0,-,+>; no branch or limit has been identified with
+  another. The raw recorded trace identities are the tested-correlation
+  versions of the finite-volume identities already identified above as
+  <verbatim|YM.Trace.Margin.Plint_thin>, <verbatim|YM.Trace.Turret.cones>,
+  <verbatim|YM.Trace.Shelves.beacon_h> and <verbatim|.fade_w>. The labelled
+  bound retains the fixed-<verbatim|k>, fixed-vector ultrafilter passage; the
+  source route remains <verbatim|.simG>, <verbatim|.hawker> and
+  <verbatim|.cine> in <verbatim|Lean/YM/TraceExtension/Shelves/Route.lean>.
+  These are textual correspondence checks and preserve the chart, recording,
+  transport and purchase inputs, not proof that their full upstream
+  construction has been closed.
+
   <ym-unit-nav|<hlink|\<leftarrow\> YM-000033|../YM-000033/correspondence.tm>|<ym-nav-here|YM-000034:
   Trace branch moment limits and weighted washout
   (draft)><ym-nav-sep><hlink|HANDOFF|HANDOFF.tm><ym-nav-sep><hlink|validation|validation.tm>|>
@@ -1231,11 +1286,13 @@
     <associate|auto-4|<tuple|2|8>>
     <associate|auto-5|<tuple|3|17>>
     <associate|auto-6|<tuple|4|17>>
+    <associate|auto-7|<tuple|5|18>>
     <associate|branch-moments-and-trace-washout-source-correspondence|<tuple|?|1>>
     <associate|crosswalk|<tuple|2|8>>
     <associate|exact-incoming-receipts-and-their-status|<tuple|1.2|5>>
     <associate|literature-and-editorial-decisions|<tuple|3|17>>
     <associate|notation-and-inputs|<tuple|1|1>>
+    <associate|revision-response-to-independent-review-128|<tuple|5|18>>
     <associate|source-endpoint-hypothesis-ledger|<tuple|1.1|2>>
     <associate|unresolved-obligations-and-validation|<tuple|4|17>>
   </collection>
@@ -1267,6 +1324,11 @@
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Unresolved
       obligations and validation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Revision
+      response to independent review #128>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-7><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

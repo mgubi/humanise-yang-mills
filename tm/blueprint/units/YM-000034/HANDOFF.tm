@@ -17,6 +17,24 @@
   <ym-title|Branch moments and trace washout: integration
   handoff><label|branch-moments-and-trace-washout-integration-handoff>
 
+  <\table-of-contents|toc>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Established
+    local result> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-1><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Retained inputs
+    and review status> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-2><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Integration>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-3><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|2026-11-13
+    revision for #128> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-4><vspace|0.5fn>
+  </table-of-contents>
+
   Refs #34; Refs #26. Unit YM-000034.
 
   <section|Established local result><label|established-local-result>
@@ -48,6 +66,21 @@
   target version before integration. Actual local checks and their limits are
   recorded in validation.md.
 
+  <section|2026-11-13 revision for #128><label|2026-11-13-revision-for-128>
+
+  The bounded revision addresses R1 and R2; the response table is in
+  <verbatim|correspondence.md>. It is based on upstream
+  <verbatim|bac6004b01919c9d0e5958bdadc85e2d34f22732>. The now-unused OPE
+  filtration support entry is removed from this unit and wrapper; the actual
+  branch, free-rank and preamble inputs remain. The prior review fingerprint
+  is stale for the revised chapter and support list. Fresh independent
+  mathematics and Lean-correspondence review is required at the new
+  fingerprint; existing reports and null approval fields remain untouched.
+  The local conclusions remain conditional on the recorded chart, recording,
+  transport and purchase inputs, and do not finish the physical trace
+  construction. No public action, claim release or responsible human
+  acceptance is asserted by this revision.
+
   <ym-unit-nav|<hlink|\<leftarrow\> YM-000033|../YM-000033/correspondence.tm>|<hlink|YM-000034:
   Trace branch moment limits and weighted washout
   (draft)|correspondence.tm><ym-nav-sep><ym-nav-here|HANDOFF><ym-nav-sep><hlink|validation|validation.tm>|>
@@ -62,9 +95,11 @@
 
 <\references>
   <\collection>
+    <associate|2026-11-13-revision-for-128|<tuple|4|2>>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-2|<tuple|2|1>>
     <associate|auto-3|<tuple|3|1>>
+    <associate|auto-4|<tuple|4|2>>
     <associate|branch-moments-and-trace-washout-integration-handoff|<tuple|?|1>>
     <associate|established-local-result|<tuple|1|1>>
     <associate|integration|<tuple|3|1>>
@@ -86,6 +121,10 @@
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Integration>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2026-11-13
+      revision for #128> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-4><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
