@@ -18,15 +18,6 @@
     <\itemize>
       <item><hlink|The four-dimensional Yang\UMills construction: Foundations
       and the existence argument (manuscript/existence.tex)|manuscript/existence.tm>
-
-      <item><hlink|Yang\UMills: mathematical exposition
-      (manuscript/main.tex)|manuscript/main.tm>
-
-      <item><hlink|YM-000033: Selected trace sensor and weighted Ward limit,
-      evidence/wrapper (blueprint/units/YM-000033/evidence/wrapper.tex)|blueprint/units/YM-000033/evidence/wrapper.tm>
-
-      <item><hlink|YM-000034: Trace branch moment limits and weighted
-      washout, evidence/wrapper (blueprint/units/YM-000034/evidence/wrapper.tex)|blueprint/units/YM-000034/evidence/wrapper.tm>
     </itemize>
   </ym-manuscript-link>
 
@@ -209,7 +200,7 @@
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-2|<tuple|2|2>>
     <associate|auto-3|<tuple|3|2>>
-    <associate|auto-4|<tuple|4|3>>
+    <associate|auto-4|<tuple|4|2>>
     <associate|auto-5|<tuple|5|3>>
     <associate|auto-6|<tuple|6|3>>
     <associate|before-opening-the-queue|<tuple|5|3>>
@@ -217,7 +208,7 @@
     <associate|how-the-work-fits-together|<tuple|2|2>>
     <associate|humanise-yang-mills|<tuple|?|1>>
     <associate|licence|<tuple|6|3>>
-    <associate|prior-dependency-mapping|<tuple|4|3>>
+    <associate|prior-dependency-mapping|<tuple|4|2>>
     <associate|repository-map|<tuple|3|2>>
   </collection>
 </references>

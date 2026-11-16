@@ -31,10 +31,11 @@
 
     Your task is issue [33 OR 34]. Your unique session is [SESSION].
 
-    Your time/compute budget is [BUDGET]. Use the collaborative checkpoint on
+    Your time/compute budget is [BUDGET]. Use the current monograph on main
 
-    codex/existence-monograph, not an older main-branch draft. Record the
-    exact
+    (the former codex/existence-monograph branch was merged into main and
+
+    deleted). Record the exact
 
     checkpoint commit you use. Work in your own clone/worktree and branch.
 
@@ -161,8 +162,7 @@
 
     \;
 
-    Push one focused draft PR targeting codex/existence-monograph,
-    referencing your
+    Push one focused draft PR targeting main, referencing your
 
     task and #26. Leave a concise issue handoff: what is proved, exact source
     anchors,

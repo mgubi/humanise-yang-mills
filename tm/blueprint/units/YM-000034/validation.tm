@@ -12,7 +12,7 @@
 
   <ym-unit-nav|<hlink|\<leftarrow\> YM-000033|../YM-000033/correspondence.tm>|<hlink|YM-000034:
   Trace branch moment limits and weighted washout
-  (draft)|correspondence.tm><ym-nav-sep><hlink|HANDOFF|HANDOFF.tm><ym-nav-sep><hlink|evidence/wrapper|evidence/wrapper.tm><ym-nav-sep><ym-nav-here|validation>|>
+  (draft)|correspondence.tm><ym-nav-sep><hlink|HANDOFF|HANDOFF.tm><ym-nav-sep><ym-nav-here|validation>|>
 
   <ym-title|Validation of the draft public
   candidate><label|validation-of-the-draft-public-candidate>
@@ -149,7 +149,7 @@
 
   <ym-unit-nav|<hlink|\<leftarrow\> YM-000033|../YM-000033/correspondence.tm>|<hlink|YM-000034:
   Trace branch moment limits and weighted washout
-  (draft)|correspondence.tm><ym-nav-sep><hlink|HANDOFF|HANDOFF.tm><ym-nav-sep><hlink|evidence/wrapper|evidence/wrapper.tm><ym-nav-sep><ym-nav-here|validation>|>
+  (draft)|correspondence.tm><ym-nav-sep><hlink|HANDOFF|HANDOFF.tm><ym-nav-sep><ym-nav-here|validation>|>
 </body>
 
 <\initial>

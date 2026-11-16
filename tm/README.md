@@ -11,11 +11,14 @@ notes; links to them go to GitHub too). A new page is picked up by the next buil
 without any change here. Every LaTeX document, i.e. every `.tex` file (tracked,
 or untracked and not ignored) outside `tm/` that contains
 `\begin{document}`, becomes one more document at the same path:
-`manuscript/existence.tex` (the monograph, 250 chapters) → `manuscript/existence.tm`,
-`manuscript/main.tex` → `manuscript/main.tm`, and the evidence wrappers of
-proof units `blueprint/units/<ID>/evidence/wrapper.tex` →
-`…/wrapper.tm`. The other `.tex` files (chapters, `preamble.tex`,
-templates) are not pages; links to them go to GitHub. The
+today `manuscript/existence.tex` (the monograph, about 250 chapters) →
+`manuscript/existence.tm`; the evidence wrappers of proof units
+(`blueprint/units/<ID>/evidence/wrapper.tex` → `…/wrapper.tm`) too, when
+they compile. A document whose `\input` files do not exist (the wrappers of
+YM-000033 and YM-000034 still input `preamble`, which upstream removed on
+16 November 2026) is not converted: `prep.py` says so in a warning, and
+links to it go to GitHub. The other `.tex` files (chapters, templates) are
+not pages; links to them go to GitHub. The
 Markdown and LaTeX files are the source: everything here except the
 scripts, the styles and this file is generated, and the build only reads the
 sources.
@@ -123,7 +126,7 @@ documents"; a repository secret `SITE_PUSH_TOKEN` (a token with the
 | `build.sh` | the driver |
 | `publish.sh` | copies `html/` to `gh-pages` and pushes |
 | `ym-outline.ts` | the style package (navigation bars, page title, HTML renderings, MathJax configuration); uses `max-html` |
-| `ym-manuscript.ts` | the package of the LaTeX documents, after `ym-outline`: numbered sections, equations through the document, MathJax `\hyperref` |
+| `ym-manuscript.ts` | the package of the LaTeX documents, after `ym-outline`: numbered sections and equations, MathJax `\hyperref` |
 | `resources/ym-outline.css` | additions to `max-html.css` for the site |
 | `scripts/prep.py` | step 1: patched copy of the Markdown (links, anchors, placeholders), the list of proof units and of the LaTeX documents |
 | `scripts/tmio.scm` | TeXmacs side: import, writing the `.tm`, tag check, typesetting and HTML export |
@@ -136,7 +139,7 @@ documents"; a repository secret `SITE_PUSH_TOKEN` (a token with the
 | `scripts/labelcheck.py` | every `\label` of a LaTeX document has its anchor in its HTML page |
 | `scripts/stamp.py` | the revision note on the home page |
 | `index.tm`, `CONTRIBUTING.tm`, `blueprint/*.tm`, `docs/*.tm`, `source/*.tm`, … | generated documents (every `README.md` becomes `index.tm`) |
-| `manuscript/existence.tm`, `manuscript/main.tm`, `blueprint/units/*/evidence/wrapper.tm` | generated: the LaTeX documents |
+| `manuscript/existence.tm` | generated: the LaTeX documents |
 | `*/ym-outline.ts`, `*/ym-manuscript.ts` | generated copies of the styles in every subfolder (TeXmacs does not resolve `../../ym-outline` in the style tuple); edit only the ones in `tm/` |
 | `html/` | generated site (not committed; published on `gh-pages`) |
 
@@ -183,11 +186,13 @@ README of a folder (`manuscript/README.md`) those of its folder.
   with the section for `[section]`, unnumbered environments for
   `\newtheorem*`, `plain` → `render-theorem`, `definition`/`remark` →
   `render-remark`. Equations are numbered through the document, as in the
-  article class. A `\label` after `\paragraph` or `\subparagraph` gets the
+  article class, or `section.n` with `\numberwithin{equation}{section}` in
+  the preamble. A `\label` after `\paragraph` or `\subparagraph` gets the
   number of the enclosing (sub(sub))section, as in LaTeX; a `\label` in a
   `\notag` row goes to the next numbered row. `\setcounter{tocdepth}{n}`
   is honoured by the table of contents (default 3, as in the article class).
-- Numbering that this does not reproduce stops the build: `\numberwithin`,
+- Numbering that this does not reproduce stops the build: any other
+  `\numberwithin`,
   `\counterwithin`, `\setcounter` (other than `tocdepth`),
   `\renewcommand{\the…}`, `\appendix`, `\newcounter`, a `\makeatletter`
   block (other than one that only sets the layout of the table of
@@ -210,8 +215,8 @@ README of a folder (`manuscript/README.md`) those of its folder.
   defined twice (`tex_prep.py`); a broken link inside the page. Except: a
   `\ref` to a label that the document's LaTeX source does not define is a
   problem of the source (LaTeX prints ?? too), reported as a warning by
-  `tex_prep.py` and by the link check. The wrapper of YM-000033 has 13 such
-  references (its comment expects two).
+  `tex_prep.py` and by the link check. (The wrapper of YM-000033 had 13
+  such references, its comment expects two.)
 - `manuscript/README.md` is a page too (`manuscript/index`), with links to
   the documents of `manuscript/`.
 
@@ -246,9 +251,9 @@ All fixes are made by the scripts, uniformly; nothing is edited by hand.
 - LaTeX bibliography labels: `tm-alpha` gives `MVV25` where BibTeX's `alpha`
   gives `MKVV25` (a hyphenated surname, Munthe-Kaas), and orders the two
   `Bał85` entries by title with the leading "The" (`d`/`e` swapped).
-- The evidence wrappers of YM-000033 and YM-000034 use `\mathscr` (in
-  `trace-free-rank.tex`) without `mathrsfs`; LaTeX stops there, the
-  conversion does not.
+- The evidence wrappers of YM-000033 and YM-000034 input `preamble`, which
+  no longer exists, and use `\mathscr` (in `trace-free-rank.tex`) without
+  `mathrsfs`: they do not compile, and are not converted.
 
 - Broken in the source: `blueprint/units/YM-000022/evidence/pilot-provenance.md`
   links to `glossary.md#-gauge-group-and-spacetime` (the anchor is

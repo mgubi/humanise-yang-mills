@@ -80,6 +80,29 @@ def latex_text(t):
     return re.sub(r'\s+', ' ', t.replace('---', '\u2014').replace('--', '\u2013').replace('~', ' ')).strip()
 
 
+def missing_inputs(src):
+    """the \\input files of the LaTeX document src (recursively) that do not
+    exist, looked for as tex_prep.py does: in the folder of src, then in
+    manuscript/. Such a document does not compile: a problem of the source,
+    the document is not converted."""
+    search = [os.path.dirname(src), 'manuscript']
+    missing, seen, todo = [], set(), [os.path.join(REPO, src)]
+    while todo:
+        path = todo.pop()
+        if path in seen:
+            continue
+        seen.add(path)
+        text = re.sub(r'(?<!\\)%.*', '', open(path, encoding='utf-8').read())
+        for name in re.findall(r'\\input\{([^}]*)\}', text):
+            name = name if name.endswith('.tex') else name + '.tex'
+            found = [os.path.join(REPO, d, name) for d in search if os.path.isfile(os.path.join(REPO, d, name))]
+            if found:
+                todo.append(os.path.normpath(found[0]))
+            else:
+                missing.append(name)
+    return sorted(set(missing))
+
+
 def latex_documents():
     """the LaTeX documents: .tex files outside tm/ with \\begin{document}
     (outside comments); page -> {source, title}"""
@@ -89,6 +112,11 @@ def latex_documents():
             continue
         text = re.sub(r'(?<!\\)%.*', '', open(os.path.join(REPO, f), encoding='utf-8').read())
         if not re.search(r'\\begin\{document\}', text):
+            continue
+        missing = missing_inputs(f)
+        if missing:
+            print(f'prep: warning: {f}: ' + ', '.join(missing) + ' not found (in its folder or manuscript/): '
+                  'not converted, links to it go to GitHub')
             continue
         pre = text.split('\\begin{document}')[0]
         title = re.search(r'\\title\{((?:[^{}]|\{[^{}]*\})*)\}', pre)

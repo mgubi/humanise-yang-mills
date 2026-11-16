@@ -19,8 +19,6 @@
     <\itemize>
       <item><hlink|The four-dimensional Yang\UMills construction: Foundations
       and the existence argument (existence.tex)|existence.tm>
-
-      <item><hlink|Yang\UMills: mathematical exposition (main.tex)|main.tm>
     </itemize>
   </ym-manuscript-link>
 
@@ -30,18 +28,19 @@
   required before writing. State outstanding inputs exactly and track their
   status in the linked blueprint unit; never conceal a missing argument.
 
-  <verbatim|main.tex> assembles section files with <verbatim|\\input>.
-  <verbatim|preamble.tex> defines shared notation and theorem environments;
-  <verbatim|references.bib> holds conventional references. The
-  running-coefficient pilot is the first section, owned by
-  <hlink|YM-000022|../blueprint/units/YM-000022/correspondence.tm>. Its
-  blueprint contains correspondence and review evidence, not a second version
-  of the proof.
+  <verbatim|existence.tex> is the monograph: its preamble defines shared
+  notation and theorem environments, and it assembles the section files in
+  <verbatim|existence/> with <verbatim|\\input>. <verbatim|references.bib>
+  holds conventional references (BibTeX, <verbatim|alpha> style). The
+  running-coefficient section <verbatim|existence/running-coupling.tex> is
+  owned by <hlink|YM-000022|../blueprint/units/YM-000022/correspondence.tm>.
+  Its blueprint contains correspondence and review evidence, not a second
+  version of the proof.
 
   <section|Build and inspect><label|build-and-inspect>
 
-  From the repository root, with a TeX distribution providing latexmk and
-  BibTeX:
+  From the repository root, with a TeX distribution providing latexmk, BibTeX
+  and the scalable T1 fonts (<verbatim|cm-super>):
 
   <\shell-code>
     mkdir -p manuscript/build
@@ -49,13 +48,14 @@
     cd manuscript
 
     latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build
-    main.tex
+    existence.tex
   </shell-code>
 
-  The result is <verbatim|manuscript/build/main.pdf>. Build products are
-  ignored by Git. Inspect the rendered pages after changes; resolve missing
-  references and layout warnings before submission. CI builds the manuscript
-  as well as checking metadata.
+  The result is <verbatim|manuscript/build/existence.pdf>; build products
+  there are ignored by Git. The repository also tracks a compiled snapshot
+  <verbatim|manuscript/existence.pdf>. Inspect the rendered pages after
+  changes; resolve missing references and layout warnings before submission.
+  CI builds the manuscript as well as checking metadata.
 
   <section|Writing and review><label|writing-and-review>
 
@@ -72,7 +72,7 @@
   nested inputs, macros and bibliography. Shared support-file edits
   invalidate every listed dependent unit's review fingerprint. Claim
   shared-file edits explicitly; adding a section also needs a bounded edit to
-  <verbatim|main.tex>.
+  <verbatim|existence.tex>.
 
   Draft status is visible in the assembled manuscript; inclusion does not
   imply acceptance. Independent mathematical and Lean-correspondence reviews

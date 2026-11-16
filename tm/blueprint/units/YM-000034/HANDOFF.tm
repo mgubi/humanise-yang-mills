@@ -12,7 +12,7 @@
 
   <ym-unit-nav|<hlink|\<leftarrow\> YM-000033|../YM-000033/correspondence.tm>|<hlink|YM-000034:
   Trace branch moment limits and weighted washout
-  (draft)|correspondence.tm><ym-nav-sep><ym-nav-here|HANDOFF><ym-nav-sep><hlink|evidence/wrapper|evidence/wrapper.tm><ym-nav-sep><hlink|validation|validation.tm>|>
+  (draft)|correspondence.tm><ym-nav-sep><ym-nav-here|HANDOFF><ym-nav-sep><hlink|validation|validation.tm>|>
 
   <ym-title|Branch moments and trace washout: integration
   handoff><label|branch-moments-and-trace-washout-integration-handoff>
@@ -83,7 +83,7 @@
 
   <ym-unit-nav|<hlink|\<leftarrow\> YM-000033|../YM-000033/correspondence.tm>|<hlink|YM-000034:
   Trace branch moment limits and weighted washout
-  (draft)|correspondence.tm><ym-nav-sep><ym-nav-here|HANDOFF><ym-nav-sep><hlink|evidence/wrapper|evidence/wrapper.tm><ym-nav-sep><hlink|validation|validation.tm>|>
+  (draft)|correspondence.tm><ym-nav-sep><ym-nav-here|HANDOFF><ym-nav-sep><hlink|validation|validation.tm>|>
 </body>
 
 <\initial>

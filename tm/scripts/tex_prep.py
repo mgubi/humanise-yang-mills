@@ -22,9 +22,10 @@ Patches:
   * \\input{f}: inlined (recursively);
   * \\today: the date of the last commit touching the files read (so that
     the output does not change from day to day);
-  * theorem declarations (\\newtheorem, \\theoremstyle): recorded in
-    meta.json, from which tex_post.py writes the TeXmacs environments with
-    the same counters and numbering;
+  * theorem declarations (\\newtheorem, \\theoremstyle) and
+    \\numberwithin{equation}{section}: recorded in meta.json, from which
+    tex_post.py writes the TeXmacs environments with the same counters and
+    numbering;
   * a \\makeatletter block that only sets the layout of the table of
     contents (\\l@section, \\@pnumwidth, \\@tocrmarg, ...): dropped;
   * \\setcounter{tocdepth}{n}: marker \\tmtocdepth{n} (tex_post.py);
@@ -159,7 +160,8 @@ def numbering(s):
                          'within': within or (known[shared]['within'] if shared in known else '')})
     if re.search(r'\\makeatletter', s):
         errors.append(r'\makeatletter block')
-    allowed = [r'\\setcounter\{tocdepth\}\{\d\}', r'\\newtheorem', r'\\theoremstyle']
+    allowed = [r'\\setcounter\{tocdepth\}\{\d\}', r'\\newtheorem', r'\\theoremstyle',
+               r'\\numberwithin\{equation\}\{section\}']
     for m in re.finditer(r'\\(?:renewcommand\*?\{\\the[A-Za-z]+\}|setcounter|addtocounter|stepcounter|'
                          r'numberwithin|counterwithin\*?|counterwithout\*?|@addtoreset|appendix\b|'
                          r'newcounter|swapnumbers)[^\n]*', s):
@@ -307,8 +309,11 @@ def titles(s, envs):
 
 
 def latex_text(t):
+    """the text of a LaTeX title: line breaks -> ': ', commands dropped
+    (as in prep.py)"""
+    t = re.sub(r'\\\\(\[[^\]]*\])?\s*', ': ', t)
     t = re.sub(r'\\[a-zA-Z]+\s*', '', t).replace('{', '').replace('}', '')
-    return t.replace('---', '\u2014').replace('--', '\u2013').replace('~', ' ').strip()
+    return re.sub(r'\s+', ' ', t.replace('---', '\u2014').replace('--', '\u2013').replace('~', ' ')).strip()
 
 
 # a \makeatletter block that only sets the layout of the table of contents
@@ -501,6 +506,11 @@ def main():
     s = rename_macros(s)
     s = s.replace(r'\today', commit_date())
     meta['theorems'] = numbering(s)
+    # \\numberwithin{equation}{section} (the only one numbering() lets
+    # through): equations numbered section.n, reset with the section
+    meta['equations_within'] = 'section' if re.search(r'\\numberwithin\{equation\}\{section\}', pre) else ''
+    if re.search(r'\\numberwithin', s.split(r'\begin{document}', 1)[1]):
+        raise SystemExit(r'tex_prep: \numberwithin in the body of the document')
     s = demoted_sections(s)
     s = gathered(s)
     s = notag_labels(s)

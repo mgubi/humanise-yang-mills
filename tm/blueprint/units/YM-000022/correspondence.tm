@@ -41,10 +41,9 @@
 
   <strong|Draft; independent mathematical and Lean-correspondence reviews
   pending.> The authoritative mathematical text is <hlink|the LaTeX
-  section|https://github.com/hairer/humanise-yang-mills/blob/main/manuscript/pilots/running-coupling.tex>,
-  labels <verbatim|sec:running-coefficient>,
-  <verbatim|prop:uniform-extraction>, and <verbatim|prop:running-asymptotic>.
-  There is no separate Markdown proof.
+  section|../../../manuscript/pilots/running-coupling.tex>, labels
+  <verbatim|sec:running-coefficient>, <verbatim|prop:uniform-extraction>, and
+  <verbatim|prop:running-asymptotic>. There is no separate Markdown proof.
 
   Human contributor: hairer. Agent assistance: Codex for
   exposition/integration; GPT-6 Luna for bounded Lean extraction. Human

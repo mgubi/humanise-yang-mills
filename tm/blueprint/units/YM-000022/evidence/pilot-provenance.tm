@@ -26,7 +26,7 @@
   <strong|Status:> Draft for independent mathematical and Lean-correspondence
   review. This pilot follows the scope of the unpublished <hlink|T08 task
   draft|https://github.com/hairer/humanise-yang-mills/blob/main/.github/task-drafts/T08-running-coupling-pilot.md>.
-  The proof is in <hlink|running-coupling.tex|https://github.com/hairer/humanise-yang-mills/blob/main/manuscript/pilots/running-coupling.tex>.
+  The proof is in <hlink|running-coupling.tex|../../../../manuscript/pilots/running-coupling.tex>.
   Imported source revision is OpenAI-YM commit
   <hlink|3456e5e75cf8d4cd558955a5c7638fba2d68f464|https://github.com/yang-mills-group/OpenAI-YM-20261028/tree/3456e5e75cf8d4cd558955a5c7638fba2d68f464>.
 

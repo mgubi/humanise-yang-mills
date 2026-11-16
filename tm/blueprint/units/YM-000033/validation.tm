@@ -12,7 +12,7 @@
 
   <ym-unit-nav|<hlink|\<leftarrow\> YM-000026|../YM-000026/correspondence.tm>|<hlink|YM-000033:
   Selected trace sensor and weighted Ward limit
-  (draft)|correspondence.tm><ym-nav-sep><hlink|HANDOFF|HANDOFF.tm><ym-nav-sep><hlink|evidence/wrapper|evidence/wrapper.tm><ym-nav-sep><ym-nav-here|validation>|<hlink|YM-000034
+  (draft)|correspondence.tm><ym-nav-sep><hlink|HANDOFF|HANDOFF.tm><ym-nav-sep><ym-nav-here|validation>|<hlink|YM-000034
   \<rightarrow\>|../YM-000034/correspondence.tm>>
 
   <ym-title|Validation of the draft public
@@ -146,7 +146,7 @@
 
   <ym-unit-nav|<hlink|\<leftarrow\> YM-000026|../YM-000026/correspondence.tm>|<hlink|YM-000033:
   Selected trace sensor and weighted Ward limit
-  (draft)|correspondence.tm><ym-nav-sep><hlink|HANDOFF|HANDOFF.tm><ym-nav-sep><hlink|evidence/wrapper|evidence/wrapper.tm><ym-nav-sep><ym-nav-here|validation>|<hlink|YM-000034
+  (draft)|correspondence.tm><ym-nav-sep><hlink|HANDOFF|HANDOFF.tm><ym-nav-sep><ym-nav-here|validation>|<hlink|YM-000034
   \<rightarrow\>|../YM-000034/correspondence.tm>>
 </body>
 

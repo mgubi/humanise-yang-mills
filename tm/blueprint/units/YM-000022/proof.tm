@@ -17,7 +17,7 @@
   <ym-title|Proof moved to LaTeX><label|proof-moved-to-latex>
 
   The authoritative mathematical text is now
-  <hlink|running-coupling.tex|https://github.com/hairer/humanise-yang-mills/blob/main/manuscript/pilots/running-coupling.tex>.
+  <hlink|running-coupling.tex|../../../manuscript/pilots/running-coupling.tex>.
   See <hlink|correspondence.md|correspondence.tm> for inputs, source mapping
   and evidence. This file preserves existing links; it is not a second proof
   or review record.

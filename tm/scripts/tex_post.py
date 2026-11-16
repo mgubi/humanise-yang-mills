@@ -120,6 +120,10 @@ def theorem_setup():
             if t['within'] == 'section':
                 resets.append(['reset-counter', g])
         out.append(['new-env', env, name, g, render])
+    if meta.get('equations_within') == 'section':
+        # \\numberwithin{equation}{section}
+        out.append(['assign', 'display-equation', ['macro', 'nr', ['concat', ['the-section'], '.', ['arg', 'nr']]]])
+        resets.append(['reset-equation'])
     if resets:
         out.append(['assign', 'ym-section-resets',
                     ['macro', resets[0] if len(resets) == 1 else ['concat'] + resets]])

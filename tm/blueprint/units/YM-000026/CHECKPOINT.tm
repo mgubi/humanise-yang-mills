@@ -54,10 +54,12 @@
   <\itemize-minus>
     <item>Parent coordination: <hlink|https://github.com/hairer/humanise-yang-mills/issues/26|https://github.com/hairer/humanise-yang-mills/issues/26>.
 
-    <item>Branch: <verbatim|codex/existence-monograph>; helper PRs target
-    this branch. Record the actual checkpoint commit in your claim. The
-    maintainer merged PR41; the final handoff draft and exact commit are
-    linked from issue26.
+    <item>Branch: <verbatim|main>; helper PRs target <verbatim|main>. (The
+    former <verbatim|codex/existence-monograph> branch was merged into
+    <verbatim|main> and deleted on 16 November 2026; commit hashes recorded
+    against it remain in <verbatim|main>'s history.) Record the actual
+    checkpoint commit in your claim. The maintainer merged PR41; the final
+    handoff draft and exact commit are linked from issue26.
 
     <item>Article: <verbatim|manuscript/existence.tex>; compiled snapshot
     <verbatim|manuscript/existence.pdf> has872 pages. Page count describes
