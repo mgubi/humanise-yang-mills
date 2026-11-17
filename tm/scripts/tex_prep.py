@@ -662,7 +662,7 @@ def paragraph_labels(s):
     sec = sub = subsub = 0
     out, k = [], 0
     for m in re.finditer(r'\\(section|subsection|subsubsection)(\*?)\{|'
-                         r'\\(?:sub)?paragraph\*?\{((?:[^{}]|\{[^{}]*\})*)\}(\s*)\\label\{([^{}]*)\}', s):
+                         r'\\(?:sub)?paragraph\*?\{((?:[^{}]|\{[^{}]*\})*)\}(\s*(?:\\phantomsection\s*)?)\\label\{([^{}]*)\}', s):
         if m.group(1) and not m.group(2):
             if m.group(1) == 'section':
                 sec, sub, subsub = sec + 1, 0, 0
