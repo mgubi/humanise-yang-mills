@@ -129,6 +129,17 @@ is_latex() { [[ -f "$B/md/tex/${1%.tm}/meta.json" ]]; }
 # is_split PAGE: a LaTeX document published as a contents page and chapter
 # pages in html/<page without .tm>/ (split.py)
 is_split() { is_latex "$1" && grep -q '"split": true' "$B/md/tex/${1%.tm}/meta.json"; }
+# has_figures PAGE: a LaTeX document with TikZ pictures, published as
+# SVG images in <page>-figures/ (figures.py; the committed ones in tm/ are
+# the cache: TeX is needed only for new or changed pictures)
+has_figures() { is_latex "$1" && ! grep -q '"figures": \[\]' "$B/md/tex/${1%.tm}/meta.json"; }
+while IFS=$'\t' read -r src page; do
+  if [[ -n $src ]] && has_figures "$page"; then
+    # (references in the pictures resolved from the previous build)
+    python3 "$scripts/figures.py" render "$B/md/tex/${page%.tm}/meta.json" "$here/$page" \
+      "$B/md/tex/${page%.tm}/figures" "$here/${page%.tm}-figures"
+  fi
+done < "$B/md/latex.tsv"
 # pages_of PAGE: its HTML files (the page, and its chapter pages)
 pages_of() {
   local h=$1/${2%.tm}
@@ -205,13 +216,19 @@ for p in ${work[@]+"${work[@]}"}; do
     cp "$bib" "$stage/${p%.tm}.bib"
   fi
 done
+# the pictures next to the document (<page>-figures/fig-N.svg)
+for p in ${work[@]+"${work[@]}"}; do
+  if has_figures "$p"; then
+    rm -rf "$stage/${p%.tm}-figures"; cp -R "$B/md/tex/${p%.tm}/figures" "$stage/${p%.tm}-figures"
+  fi
+done
 
 # check: tags that the style does not define (primitives excepted)
 if (( ${#convert[@]} )); then
   : > "$B/check.lst"
   for p in "${convert[@]}"; do printf '%s\t-\n' "$stage/$p" >> "$B/check.lst"; done
   tm_run "$B/check.log" "(ym-tagcheck-all \"$B/check.lst\")"
-  prims='arg|around|around\*|assign|big|cell|concat|cwith|datoms|document|frac|htab|long-arrow|macro|mid|next-line|no-break|repeat|row|rprime|rsub|rsup|space|sqrt|table|tformat|twith|vspace|vspace\*|with|wide|wide\*|left|right|tabular|lsub|lsup|rsup|neg|tree|op|line-break|new-line|image|tuple|value|if|equal|unequal|or|and|not|merge|quote|compound|hlink|label|reference|move|resize|hspace|surround|new-page|page-break|no-page-break|no-indent|yes-indent'
+  prims='arg|around|around\*|assign|big|cell|concat|cwith|datoms|document|frac|htab|long-arrow|macro|mid|next-line|no-break|repeat|row|rprime|rsub|rsup|space|sqrt|table|tformat|twith|vspace|vspace\*|with|wide|wide\*|left|right|tabular|lsub|lsup|rsup|neg|tree|op|line-break|new-line|image|tuple|value|if|equal|unequal|or|and|not|merge|quote|compound|hlink|label|reference|move|resize|hspace|surround|new-page|page-break|no-page-break|no-indent|yes-indent|number'
   undef=$(grep -a '^YM-UNDEF' "$B/check.log" | grep -avE " ($prims)\$" || true)
   if [[ -n "$undef" ]]; then echo "warning: undefined tags:"; printf '%s\n' "$undef" | sed "s|$stage/||"; fi
   # in a LaTeX document an undefined tag is a conversion error: the HTML
@@ -233,6 +250,11 @@ if (( ${#export_[@]} )); then
     printf '%s\t%s\n' "$stage/$p" "$html/${p%.tm}.html" >> "$B/html.lst"
   done
   echo "html: ${#export_[@]} pages"
+  # the pictures as they are at the export (figures.py html)
+  rm -rf "$B/figsnap"
+  for p in "${export_[@]}"; do
+    if has_figures "$p"; then mkdir -p "$B/figsnap/$p"; cp -R "$stage/${p%.tm}-figures/." "$B/figsnap/$p/"; fi
+  done
   # in batches, one TeXmacs run each (YM_HTML_BATCH pages, default 40): a
   # single session slows down as the documents accumulate, and every run
   # has its own time limit
@@ -250,6 +272,16 @@ if (( ${#export_[@]} )); then
   if grep -a 'Could not load BibTeX\|bibtex.*error' "$B/html.log" >&2; then
     echo "bibliography not generated (log: $B/html.log)" >&2; exit 1
   fi
+  # pictures: references resolved again from the document just typeset
+  # (recompiled if a number changed); the exported copies replaced by links
+  # to <page>-figures/fig-N.svg
+  for p in "${export_[@]}"; do
+    if has_figures "$p"; then
+      python3 "$scripts/figures.py" render "$B/md/tex/${p%.tm}/meta.json" "$stage/$p" \
+        "$stage/${p%.tm}-figures" "$stage/${p%.tm}-figures" --strict
+      python3 "$scripts/figures.py" html "$html/${p%.tm}.html" "$B/figsnap/$p" "$stage/${p%.tm}-figures"
+    fi
+  done
   # a large LaTeX document: a contents page and one page per chapter, cut
   # from the page of the whole document (numbers and references unchanged)
   for p in "${export_[@]}"; do
@@ -269,6 +301,7 @@ if [[ $kind == full && $mode != html ]]; then
   find "$here" -mindepth 2 \( -name '*.tm' -o -name 'ym-outline.ts' -o -name 'ym-manuscript.ts' \) \
        -not -path "$here/html/*" -not -path "$here/scripts/*" -not -path "$here/resources/*" -delete
   rm -f "$here"/*.tm
+  find "$here" -mindepth 2 -type d -name '*-figures' -not -path "$here/html/*" -prune -exec rm -rf {} +
 fi
 if [[ $kind == full && $mode != tm ]]; then
   rm -rf "$here/html"
@@ -280,6 +313,8 @@ while IFS= read -r d; do
 done < <(for p in "${pages[@]}"; do dir_of "$p"; done | sort -u)
 for p in ${work[@]+"${work[@]}"}; do
   mkdir -p "$here/$(dir_of "$p")"; cp "$stage/$p" "$here/$p"
+  # the pictures (also the cache of figures.py)
+  if has_figures "$p"; then rm -rf "$here/${p%.tm}-figures"; cp -R "$stage/${p%.tm}-figures" "$here/${p%.tm}-figures"; fi
 done
 if [[ $mode != tm ]]; then
   for p in ${export_[@]+"${export_[@]}"}; do
@@ -289,6 +324,8 @@ if [[ $mode != tm ]]; then
     if is_latex "$p"; then
       rm -rf "$here/html/${p%.tm}"
       if [[ -d $html/${p%.tm} ]]; then cp -R "$html/${p%.tm}" "$here/html/${p%.tm}"; fi
+      rm -rf "$here/html/${p%.tm}-figures"
+      if [[ -d $html/${p%.tm}-figures ]]; then cp -R "$html/${p%.tm}-figures" "$here/html/${p%.tm}-figures"; fi
     fi
   done
   # text inside formulas exported in Cork instead of UTF-8 (scripts/corkfix.py)

@@ -166,6 +166,18 @@ def numbering(s):
         errors.append(r'\makeatletter block')
     allowed = [r'\\setcounter\{tocdepth\}\{\d\}', r'\\newtheorem', r'\\theoremstyle',
                r'\\numberwithin\{equation\}\{section\}']
+    # a theorem with a counter of its own, not reset by sections (Theorem A,
+    # B of a main theorem): its number format, \renewcommand{\theX}{\Alph{X}}
+    # in the preamble, and \setcounter{X}{N} anywhere (tex_post.py)
+    own = [t['env'] for t in theorems if t['numbered'] and t['counter'] == t['env'] and not t['within']]
+    for t in theorems:
+        if t['env'] in own:
+            f = re.search(r'\\renewcommand\*?\{\\the' + t['env'] + r'\}\{\\(Alph|alph|Roman|roman|arabic)\{'
+                          + t['env'] + r'\}\}', pre)
+            if f:
+                t['format'] = f.group(1)
+                allowed.append(re.escape(f.group(0)))
+            allowed.append(r'\\setcounter\{' + t['env'] + r'\}\{\d+\}')
     for m in re.finditer(r'\\(?:renewcommand\*?\{\\the[A-Za-z]+\}|setcounter|addtocounter|stepcounter|'
                          r'numberwithin|counterwithin\*?|counterwithout\*?|@addtoreset|appendix\b|'
                          r'newcounter|swapnumbers)[^\n]*', s):
@@ -185,7 +197,12 @@ PAGINATION = [r'\\begin\{samepage\}', r'\\end\{samepage\}',
               r'\\clearpage\b', r'\\cleardoublepage\b', r'\\newpage\b',
               r'\\[Nn]eedspace\*?\{[^{}]*\}', r'\\enlargethispage\*?\{[^{}]*\}',
               r'\\allowdisplaybreaks(?:\[[0-4]\])?', r'\\displaybreak(?:\[[0-4]\])?',
-              r'\\(?:small|med|big)break\b', r'\\filbreak\b', r'\\goodbreak\b']
+              r'\\(?:small|med|big)break\b', r'\\filbreak\b', r'\\goodbreak\b',
+              # multiple columns (an HTML page has one; multicols itself
+              # is treated as a group in groups())
+              # hyperref anchors without text (the HTML has its own)
+              r'\\phantomsection\b',
+              r'\\raggedcolumns\b', r'\\columnbreak\b', r'\\interlinepenalty\s*=?\s*-?\d+']
 
 
 def pagination(s):
@@ -316,15 +333,259 @@ def latex_text(t):
     """the text of a LaTeX title: line breaks -> ': ', commands dropped
     (as in prep.py)"""
     t = re.sub(r'\\\\(\[[^\]]*\])?\s*', ': ', t)
+    t = re.sub(r'\\([_&%#$])', r'\1', t)
     t = re.sub(r'\\[a-zA-Z]+\s*', '', t).replace('{', '').replace('}', '')
     return re.sub(r'\s+', ' ', t.replace('---', '\u2014').replace('--', '\u2013').replace('~', ' ')).strip()
+
+
+# --- ported from the pipeline of yang-mills-informalization (tm/scripts/tex_prep.py)
+
+# TikZ pictures: rendered to SVG by figures.py (standalone LaTeX + dvisvgm),
+# included as images. The importer cannot read them (latex_preview).
+FIG_PACKAGES = r"""\documentclass[11pt,dvisvgm]{standalone}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{xcolor}
+\usepackage{tikz}
+"""
+
+
+
+def definitions(pre):
+    r"""macro definitions of the preamble (\newcommand, \DeclareMathOperator,
+    ... with balanced braces), \usetikzlibrary and \definecolor: what a
+    figure may use. Counter formats (\renewcommand{\the...}) are left out."""
+    out = []
+    for m in re.finditer(r'\\(?:(?:re|provide)?newcommand\*?|DeclareMathOperator\*?|usetikzlibrary|definecolor|tikzset)(?![A-Za-z])', pre):
+        i = m.end()
+        # arguments: {..} and [..] groups, balanced
+        while True:
+            while i < len(pre) and pre[i] in ' \t':
+                i += 1
+            if i < len(pre) and pre[i] == '{':
+                i = balanced(pre, i)
+            elif i < len(pre) and pre[i] == '[':
+                i = pre.index(']', i) + 1
+            else:
+                break
+        d = pre[m.start():i]
+        if not re.match(r'\\renewcommand\*?\{\\the', d):
+            out.append(d)
+    return '\n'.join(out)
+
+
+def figures(s, pre):
+    r"""\begin{tikzpicture}...\end{tikzpicture} -> \tmfigure{N}; the sources
+    (standalone documents, \ref still unresolved) go to meta.json. A picture
+    alone in a displayed formula becomes a centred block (an image cannot be
+    part of a MathJax formula); one inside other mathematics stops the build."""
+    head = FIG_PACKAGES + definitions(pre) + '\n\\begin{document}\n'
+    figs = []
+
+    def rep(m):
+        figs.append(head + m.group(0) + '\n\\end{document}\n')
+        return r'\tmfigure{%d}' % len(figs)
+    s = re.sub(r'\\begin\{tikzpicture\}.*?\\end\{tikzpicture\}', rep, s, flags=re.S)
+    s = re.sub(r'\\begin\{(equation\*?|displaymath)\}\s*(\\tmfigure\{\d+\})\s*\\end\{\1\}',
+               r'\\begin{center}\2\\end{center}', s)
+    s = re.sub(r'\\\[\s*(\\tmfigure\{\d+\})\s*\\\]', r'\\begin{center}\1\\end{center}', s)
+    for m in re.finditer(r'\\tmfigure\{\d+\}', s):
+        if in_math(s, m.start()):
+            raise SystemExit('tex_prep: a TikZ picture inside a formula: ' + s[max(0, m.start() - 80):m.end()])
+    return s, figs
+
+
+def in_math(s, pos):
+    r"""is pos inside $...$ or a display environment (rough: enough for the
+    check of figures)"""
+    before = s[:pos]
+    if len(re.findall(r'(?<!\\)\$', before)) % 2:
+        return True
+    opens = [m for m in re.finditer(r'\\(begin|end)\{(equation|align|gather|multline|eqnarray|displaymath)\*?\}', before)]
+    return bool(opens) and opens[-1].group(1) == 'begin'
+
+
+def equation_alias(s):
+    """\\equationalias{X} right after a display: X is one more label of the
+    display's (last) number, i.e. a \\label{X} inside it. Anywhere else it
+    stops the build."""
+    s = re.sub(r'\\end\{(equation|align|gather|multline|eqnarray)(\*?)\}(\s*)\\equationalias\{([^{}]*)\}',
+               lambda m: '\\label{%s}\\end{%s%s}%s' % (m.group(4), m.group(1), m.group(2), m.group(3)), s)
+    rest = re.findall(r'\\equationalias\{[^{}]*\}', s)
+    if rest:
+        raise SystemExit('tex_prep: \\equationalias not right after a display: ' + ', '.join(rest))
+    return s
+
+
+def contents_lines(s):
+    r"""\section*{X}\addcontentsline{toc}{section}{X}: TeXmacs adds unnumbered
+    sections to the table of contents by itself, drop the line; any other
+    \addcontentsline stops the build"""
+    s = re.sub(r'(\\(?:sub)*section\*\{[^{}]*\}(?:\s*\\label\{[^{}]*\})?)\s*\\addcontentsline\{toc\}\{(?:sub)*section\}\{[^{}]*\}',
+               r'\1', s)
+    m = re.search(r'\\addcontentsline\{[^\n]*', s)
+    if m:
+        raise SystemExit('tex_prep: \\addcontentsline not after a starred section: ' + m.group(0))
+    return s
+
+
+def bibliography_group(s):
+    r"""{\small \bibliography{...}}: the importer attaches \bibliographystyle
+    only to a bibliography outside a group"""
+    return re.sub(r'\{\s*\\(?:small|footnotesize|scriptsize|normalsize)\s*(\\bibliography\{[^{}]*\})\s*\}', r'\1', s)
+
+
+def roman(n, upper=False):
+    out = ''
+    for v, r in ((1000, 'm'), (900, 'cm'), (500, 'd'), (400, 'cd'), (100, 'c'), (90, 'xc'),
+                 (50, 'l'), (40, 'xl'), (10, 'x'), (9, 'ix'), (5, 'v'), (4, 'iv'), (1, 'i')):
+        while n >= v:
+            out += r; n -= v
+    return out.upper() if upper else out
+
+
+def counter_text(fmt, n):
+    """an enumitem template (\roman*, \arabic*, ...) for item n"""
+    reps = {r'\roman*': roman(n), r'\Roman*': roman(n, True), r'\arabic*': str(n),
+            r'\alph*': chr(96 + n) if 0 < n < 27 else str(n), r'\Alph*': chr(64 + n) if 0 < n < 27 else str(n)}
+    for k, v in reps.items():
+        fmt = fmt.replace(k, v)
+    return fmt
+
+
+def split_options(o):
+    out, depth, cur = [], 0, ''
+    for c in o:
+        if c == '{':
+            depth += 1
+        elif c == '}':
+            depth -= 1
+        if c == ',' and depth == 0:
+            out.append(cur); cur = ''
+        else:
+            cur += c
+    return out + [cur]
+
+
+def list_labels(s):
+    r"""enumerate[label=..., ref=..., start=...] (enumitem): the importer
+    drops the options, so the items would be numbered 1., 2., ... and refer
+    to 1, 2, ...: every item gets its LaTeX label (\item[(ii)]), and a
+    \label in the item text (not inside an inner environment) the LaTeX
+    reference text, as \tmitemlabel{key}{text} (tex_post.py). Innermost
+    lists first."""
+    pat = re.compile(r'\\begin\{enumerate\}\[([^\[\]]*(?:\[[^\[\]]*\][^\[\]]*)*)\]')
+    while True:
+        # an enumerate with options that contains no other enumerate with options
+        m = None
+        for c in pat.finditer(s):
+            end = s.find(r'\end{enumerate}', c.end())
+            inner = s[c.end():end]
+            if r'\begin{enumerate}' not in inner:
+                m = c
+                break
+        if m is None:
+            # an enumerate with options around plain ones: take the outermost
+            m = pat.search(s)
+            if m is None:
+                return s
+        opts = {}
+        for o in split_options(m.group(1)):
+            k, _, v = o.partition('=')
+            opts[k.strip()] = v.strip()
+        # the body: up to the matching \end{enumerate}
+        depth, i = 1, m.end()
+        for e in re.finditer(r'\\(begin|end)\{enumerate\}', s[m.end():]):
+            depth += 1 if e.group(1) == 'begin' else -1
+            if depth == 0:
+                j = m.end() + e.start()
+                break
+        else:
+            raise SystemExit('tex_prep: unbalanced enumerate')
+        body = s[m.end():j]
+        label = opts.get('label')
+        if not label:
+            s = s[:m.start()] + r'\begin{enumerate}' + body + s[j:]
+            continue
+        label = re.sub(r'\\textup\{((?:[^{}]|\{[^{}]*\})*)\}', r'\1', label)
+        ref = re.sub(r'\\textup\{((?:[^{}]|\{[^{}]*\})*)\}', r'\1', opts.get('ref', label))
+        n = int(opts.get('start', '1') or 1) - 1
+        # items of this list: \item at depth 0 (inner environments skipped)
+        out, k, depth = [], 0, 0
+        toks = list(re.finditer(r'\\begin\{[^}]*\}|\\end\{[^}]*\}|\\item\b(\[[^\]]*\])?|\\label\{([^{}]*)\}', body))
+        cur_ref = None
+        for t in toks:
+            out.append(body[k:t.start()]); k = t.end()
+            x = t.group(0)
+            if x.startswith(r'\begin'):
+                depth += 1; out.append(x)
+            elif x.startswith(r'\end'):
+                depth -= 1; out.append(x)
+            elif x.startswith(r'\item') and depth == 0:
+                n += 1
+                if t.group(1):
+                    cur_ref = None
+                    out.append(x)
+                else:
+                    cur_ref = counter_text(ref, n)
+                    out.append(r'\item[' + counter_text(label, n) + ']')
+            elif x.startswith(r'\label') and depth == 0 and cur_ref is not None:
+                out.append(r'\tmitemlabel{' + t.group(2) + '}{' + cur_ref + '}')
+            else:
+                out.append(x)
+        out.append(body[k:])
+        s = s[:m.start()] + r'\begin{enumerate}' + ''.join(out) + s[j:]
+
+
+def tags(s):
+    r"""\tag{T} in an equation -> marker \tmtag{T} (math, without $):
+    tex_post.py gives the equation the number T without counting it.
+    \tag anywhere else stops the build."""
+    def rep(m):
+        body = m.group(2)
+        t = re.search(r'\\tag\{((?:[^{}]|\{[^{}]*\})*)\}', body)
+        if not t:
+            return m.group(0)
+        tag = t.group(1).strip()
+        if tag.startswith('$') and tag.endswith('$'):
+            tag = tag[1:-1]
+        return '\\begin{equation}' + body[:t.start()] + body[t.end():] + '\\tmtag{' + tag + '}\\end{equation}'
+    # (equation* too: \tag numbers it)
+    s = re.sub(r'\\begin\{equation(\*?)\}(.*?)\\end\{equation\1\}', rep, s, flags=re.S)
+    m = re.search(r'\\tag\*?\{', s)
+    if m:
+        raise SystemExit('tex_prep: \\tag outside an equation: ' + s[max(0, m.start() - 80):m.start() + 40])
+    return s
+
+
+def groups(s):
+    r"""multicols is treated as a group. The importer ignores
+    \begingroup/\endgroup, so a font size set inside one would run to the end
+    of the document (and swallow the bibliography): sizes and paragraph
+    spacing inside a group are dropped with the group (an HTML page keeps its
+    own sizes)."""
+    body_start = s.find(r'\begin{document}')
+    pre, body = (s[:body_start], s[body_start:]) if body_start >= 0 else ('', s)
+    body = re.sub(r'\\begin\{multicols\*?\}\{\d+\}', r'\\begingroup ', body)
+    body = re.sub(r'\\end\{multicols\*?\}', r'\\endgroup ', body)
+    def group(m):
+        g = re.sub(r'\\(?:tiny|scriptsize|footnotesize|small|normalsize|large|Large)\b\s*', '', m.group(1))
+        g = re.sub(r'\\setlength\{?\\(?:parindent|parskip|itemsep|columnsep)\}?\{[^{}]*\}\s*', '', g)
+        return g
+    body = re.sub(r'\\begingroup\b(.*?)\\endgroup\b', group, body, flags=re.S)
+    if re.search(r'\\(?:begingroup|endgroup)\b', body):
+        raise SystemExit('tex_prep: nested or unbalanced \\begingroup/\\endgroup')
+    return pre + body
 
 
 # a \makeatletter block that only sets the layout of the table of contents
 # (dotted lines, widths of the numbers): an HTML table of contents has none
 TOC_LAYOUT = [r'\\renewcommand\*?\s*\{?\\l@(?:part|chapter|(?:sub)*section|(?:sub)?paragraph|figure|table)\}?'
               r'\s*\{\\@dottedtocline\{\d\}\{[0-9.]+(?:em|pt|mm|cm|in)\}\{[0-9.]+(?:em|pt|mm|cm|in)\}\}',
-              r'\\renewcommand\*?\s*\{?\\@(?:pnumwidth|tocrmarg|dotsep)\}?\s*\{[0-9.]+(?:em|pt|mm|cm|in)?\}']
+              r'\\renewcommand\*?\s*\{?\\@(?:pnumwidth|tocrmarg|dotsep)\}?\s*\{[0-9.]+(?:em|pt|mm|cm|in)?\}',
+              # \equationalias{X} (handled by equation_alias): one more label of
+              # the number of the display before it
+              r'\\providecommand\{\\equationalias\}\[1\]\{\\protected@write\\@auxout\{\}\{\\string\\newlabel\{#1\}'
+              r'\{\{\\theequation\}\{\\thepage\}\{\}\{equation\.\\theHequation\}\{\}\}\}\}']
 
 
 def makeat(s):
@@ -545,20 +806,33 @@ def main():
     pre = s.split(r'\begin{document}')[0]
     title = re.search(r'\\title\{((?:[^{}]|\{[^{}]*\})*)\}', pre)
     meta = {'source': SRC, 'title': latex_text(title.group(1)) if title else None, 'preamble': pre}
+    s, meta['figures'] = figures(s, pre)
     s = makeat(s)
     s = tocdepth(s)
     s = rename_macros(s)
     s = s.replace(r'\today', commit_date())
     meta['theorems'] = numbering(s)
+    for t in meta['theorems']:
+        if 'format' in t:   # (tex_post.py sets the format)
+            s = re.sub(r'\\renewcommand\*?\{\\the' + t['env'] + r'\}\{\\' + t['format'] + r'\{' + t['env'] + r'\}\}', '', s)
+        # \setcounter{X}{N}: marker, an assignment of the counter (tex_post.py)
+        s = re.sub(r'\\setcounter\{' + re.escape(t['env']) + r'\}\{(\d+)\}',
+                   lambda m, e=t['env']: '\\tmsetcounter{%s}{%s}' % (e, m.group(1)), s)
     # \\numberwithin{equation}{section} (the only one numbering() lets
     # through): equations numbered section.n, reset with the section
     meta['equations_within'] = 'section' if re.search(r'\\numberwithin\{equation\}\{section\}', pre) else ''
     if re.search(r'\\numberwithin', s.split(r'\begin{document}', 1)[1]):
         raise SystemExit(r'tex_prep: \numberwithin in the body of the document')
+    s = equation_alias(s)
     s = demoted_sections(s)
     s = gathered(s)
     s = notag_labels(s)
+    s = tags(s)
+    s = list_labels(s)
     s = paragraph_labels(s)
+    s = contents_lines(s)
+    s = bibliography_group(s)
+    s = groups(s)
     s = longtables(s)
     # \begin{aligned} followed by whitespace and "[": amsmath reads an
     # optional position argument only right after the \begin, so "[...]"

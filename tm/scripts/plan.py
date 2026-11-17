@@ -57,9 +57,9 @@ STAGES = {
     'md': ['scripts/prep.py', 'scripts/post.py', 'scripts/stree.py', 'scripts/tmio.scm',
            'ym-outline.ts'],
     'latex': ['scripts/prep.py', 'scripts/tex_prep.py', 'scripts/tex_post.py', 'scripts/post.py',
-              'scripts/stree.py', 'scripts/figures.py', 'scripts/tmio.scm', 'ym-outline.ts',
+              'scripts/stree.py', 'scripts/figures.py', 'scripts/install-tex.sh', 'scripts/tmio.scm', 'ym-outline.ts',
               'ym-manuscript.ts'],
-    'html': ['scripts/tmio.scm', 'scripts/split.py', 'scripts/corkfix.py', 'scripts/stamp.py', 'scripts/linkcheck.py',
+    'html': ['scripts/tmio.scm', 'scripts/split.py', 'scripts/figures.py', 'scripts/corkfix.py', 'scripts/stamp.py', 'scripts/linkcheck.py',
              'scripts/labelcheck.py', 'scripts/normalize_ids.py', 'resources/', '<max-html>'],
     'build': ['build.sh', 'scripts/plan.py'],
 }
@@ -173,12 +173,15 @@ def html_sha(tmdir, p, latex):
     """hash of the installed HTML of a page; for a LaTeX document, together
     with its chapter pages (html/<page without .tm>/*.html, split.py)"""
     h = file_sha(os.path.join(tmdir, html_of(p)))
-    d = os.path.join(tmdir, 'html', p[:-3])
-    if h is None or not latex or not os.path.isdir(d):
+    if h is None or not latex:
         return h
-    parts = [h] + [f + ' ' + (file_sha(os.path.join(d, f)) or '-')
-                   for f in sorted(os.listdir(d)) if f.endswith('.html')]
-    return sha('\n'.join(parts).encode())
+    parts = [h]
+    for sub, ext in ((p[:-3], '.html'), (p[:-3] + '-figures', '.svg')):
+        d = os.path.join(tmdir, 'html', sub)
+        if os.path.isdir(d):
+            parts += [sub + '/' + f + ' ' + (file_sha(os.path.join(d, f)) or '-')
+                      for f in sorted(os.listdir(d)) if f.endswith(ext)]
+    return h if len(parts) == 1 else sha('\n'.join(parts).encode())
 
 
 def html_of(p):

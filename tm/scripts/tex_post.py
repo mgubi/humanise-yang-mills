@@ -98,6 +98,8 @@ def pair_brackets(x):
     return x
 
 
+# \Alph etc. -> the formats of <number|..|..>
+NUMBER_FORMATS = {'Alph': 'Alpha', 'alph': 'alpha', 'Roman': 'Roman', 'roman': 'roman', 'arabic': 'arabic'}
 RENDER = {'plain': 'render-theorem', 'definition': 'render-remark', 'remark': 'render-remark'}
 
 
@@ -114,7 +116,12 @@ def theorem_setup():
             continue
         g = t['counter'] + '-env'
         if t['counter'] == env:
-            nr = ['concat', ['the-section'], '.', ['arg', 'nr']] if t['within'] == 'section' else ['arg', 'nr']
+            nr = ['arg', 'nr']
+            if t.get('format'):
+                # \renewcommand{\theX}{\Alph{X}}
+                nr = ['number', nr, NUMBER_FORMATS[t['format']]]
+            if t['within'] == 'section':
+                nr = ['concat', ['the-section'], '.', nr]
             out += [['new-counter-group', g], ['group-common-counter', g],
                     ['assign', 'display-' + g, ['macro', 'nr', nr]]]
             if t['within'] == 'section':
@@ -350,6 +357,29 @@ def cell_length(v):
     return f'{sum(float(m.group(1)) * PT[m.group(2)] for m in parts):g}pt'
 
 
+def equation_tags(x):
+    """an equation with the marker <tmtag|T> (\\tag{T}, tex_prep.py): numbered
+    T, without counting it (equation-nr bound locally)"""
+    if not isinstance(x, list):
+        return x
+    x = [x[0]] + [equation_tags(k) for k in x[1:]]
+    if x[0] == 'equation':
+        found = []
+
+        def strip(y):
+            if isinstance(y, list):
+                if y[0] == 'tmtag':
+                    found.append(y[1] if len(y) == 2 else ['concat'] + y[1:])
+                    return None
+                return [y[0]] + [z for z in (strip(k) for k in y[1:]) if z is not None]
+            return y
+        x = strip(x)
+        if found:
+            return ['with', 'equation-nr', ['value', 'equation-nr'],
+                    'the-equation', ['macro', found[0]], x]
+    return x
+
+
 def toc_depth(doc):
     """<tmtocdepth|n> (\\setcounter{tocdepth}{n}) dropped; the levels below n
     (default 3, as in the article class) get no entry in the table of
@@ -416,6 +446,21 @@ def rewrite(x):
     if x[0] == 'hyperref*' and len(x) == 3 and isinstance(x[1], str):
         # \\hyperref[label]{text}: a link to the label
         return ['hlink', rewrite(x[2]), '#' + x[1]]
+    if x[0] == 'tmsetcounter' and len(x) == 3 and all(isinstance(a, str) for a in x[1:]) and x[2].isdigit():
+        # \setcounter{X}{N} of a theorem counter: the next number is N+1
+        if not any(t['env'] == x[1] and t['counter'] == x[1] for t in meta.get('theorems', [])):
+            raise SystemExit(f'tex_post: \\setcounter of an unknown theorem counter {x[1]}')
+        return ['assign', x[1] + '-env-nr', x[2]]
+    if x[0] == 'tmfigure' and len(x) == 2 and isinstance(x[1], str) and x[1].isdigit():
+        # a TikZ picture (tex_prep.py), rendered by figures.py into
+        # <page>-figures/fig-N.svg next to the document
+        svg = os.path.join(TEXDIR, 'figures', f'fig-{x[1]}.svg')
+        head = open(svg, encoding='utf-8').read(2000)
+        w = re.search(r"width='([0-9.]+)pt'", head)
+        h = re.search(r"height='([0-9.]+)pt'", head)
+        if not (w and h):
+            raise SystemExit(f'tex_post: no size in {svg}')
+        return ['image', f'{BIBNAME}-figures/fig-{x[1]}.svg', w.group(1) + 'pt', h.group(1) + 'pt', '', '']
     if x[0] == 'tmitemlabel' and len(x) == 3 and isinstance(x[1], str):
         # \\paragraph{..}\\label{L}: the LaTeX reference text (tex_prep.py)
         return ['with', 'the-label', x[2] if isinstance(x[2], str) else stree.text_of(x[2]), ['label', x[1]]]
@@ -454,6 +499,7 @@ def main():
         meta['title'] = title
     doc = rewrite(doc)
     doc = titles(doc)
+    doc = equation_tags(doc)
     operator_macros(doc)
     doc = operator_spacing(doc)
     display_numbers(doc)
@@ -476,7 +522,7 @@ def main():
         return isinstance(x, list) and (x[0] == tag or any(has(k, tag) for k in x[1:]))
     if meta.get('bibliography') and not has(doc, 'bibliography'):
         raise SystemExit(f'tex_post: {PAGE}: the \\bibliography of the source was lost in the import')
-    for marker in ('tmitemlabel', 'tmtocdepth', 'tmdueto', 'tmproofof'):
+    for marker in ('tmitemlabel', 'tmtocdepth', 'tmdueto', 'tmproofof', 'tmtag', 'tmsetcounter', 'tmfigure'):
         if has(doc, marker):
             raise SystemExit(f'tex_post: {PAGE}: marker {marker} left in the document')
     stree.dump(tree, OUT)

@@ -80,6 +80,7 @@ def collection():
 def latex_text(t):
     """the text of a LaTeX title: line breaks -> ': ', commands dropped"""
     t = re.sub(r'\\\\(\[[^\]]*\])?\s*', ': ', t)
+    t = re.sub(r'\\([_&%#$])', r'\1', t)
     t = re.sub(r'\\[a-zA-Z]+\s*', '', t).replace('{', '').replace('}', '')
     return re.sub(r'\s+', ' ', t.replace('---', '\u2014').replace('--', '\u2013').replace('~', ' ')).strip()
 

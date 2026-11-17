@@ -18,6 +18,9 @@
     <\itemize>
       <item><hlink|The four-dimensional Yang\UMills construction: Foundations
       and the existence argument (manuscript/existence.tex)|manuscript/existence.tm>
+
+      <item><hlink|HumanizeYM_v2: The construction of four-dimensional
+      quantum Yang\UMills theory (manuscript/HumanizeYM_v2/main.tex)|manuscript/HumanizeYM_v2/main.tm>
     </itemize>
   </ym-manuscript-link>
 
@@ -200,7 +203,7 @@
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-2|<tuple|2|2>>
     <associate|auto-3|<tuple|3|2>>
-    <associate|auto-4|<tuple|4|2>>
+    <associate|auto-4|<tuple|4|3>>
     <associate|auto-5|<tuple|5|3>>
     <associate|auto-6|<tuple|6|3>>
     <associate|before-opening-the-queue|<tuple|5|3>>
@@ -208,7 +211,7 @@
     <associate|how-the-work-fits-together|<tuple|2|2>>
     <associate|humanise-yang-mills|<tuple|?|1>>
     <associate|licence|<tuple|6|3>>
-    <associate|prior-dependency-mapping|<tuple|4|2>>
+    <associate|prior-dependency-mapping|<tuple|4|3>>
     <associate|repository-map|<tuple|3|2>>
   </collection>
 </references>
