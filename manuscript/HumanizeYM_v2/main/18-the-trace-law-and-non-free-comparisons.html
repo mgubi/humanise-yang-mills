@@ -1,0 +1,3094 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>18 The trace law and non-free comparisons &ndash; HumanizeYM_v2: The construction of four-dimensional quantum
+    Yang&ndash;Mills theory &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1], hyperref: [bs +
+    'href{###1}{#2}', 2, '']}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="toggle" style="display: none">
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+    </div>
+<div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+
+    <div class="ym-chapter-nav"><span class="ym-chapter-prev"><a href="17-phases-and-reconstruction.html">&larr; 17 Phases and reconstruction</a></span><span class="ym-chapter-up"><a href="../main.html">Contents</a></span><span class="ym-chapter-next"><a href="19-products-and-contact-subtractions.html">19 Products and contact subtractions &rarr;</a></span></div>
+<div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 2em; margin-bottom: 1em">
+        <b><font style="font-size: 119.0%">I<span style="margin-left: 1em"></span>The theorem and the architecture
+        of its proof</font></b> <span style="margin-left: 5mm"></span> <a href="../main.html#auto-1">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>1<span style="margin-left: 1em"></span>The result</b> <span style="margin-left: 5mm"></span> <a href="1-the-result.html#auto-2">4</a>
+      </p>
+      <p>
+        1.1<span style="margin-left: 1em"></span>Proof status <span style="margin-left: 5mm"></span> <a href="1-the-result.html#auto-3">6</a>
+      </p>
+      <p>
+        1.2<span style="margin-left: 1em"></span>Earlier work and the method <span style="margin-left: 5mm"></span>
+        <a href="1-the-result.html#auto-4">6</a>
+      </p>
+      <p>
+        1.3<span style="margin-left: 1em"></span>Reading guide <span style="margin-left: 5mm"></span> <a href="1-the-result.html#auto-6">8</a>
+      </p>
+      <p>
+        1.4<span style="margin-left: 1em"></span>Notation and conventions <span style="margin-left: 5mm"></span>
+        <a href="1-the-result.html#auto-8">8</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2<span style="margin-left: 1em"></span>Definitions</b> <span style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-9">9</a>
+      </p>
+      <p>
+        2.1<span style="margin-left: 1em"></span>The gauge group and the Wilson measure <span
+        style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-10">9</a>
+      </p>
+      <p>
+        2.2<span style="margin-left: 1em"></span>Wilson families and their correlations <span
+        style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-11">10</a>
+      </p>
+      <p>
+        2.3<span style="margin-left: 1em"></span>Local fields <span style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-13">12</a>
+      </p>
+      <p>
+        2.4<span style="margin-left: 1em"></span>Euclidean properties <span style="margin-left: 5mm"></span> <a
+        href="2-definitions.html#auto-14">14</a>
+      </p>
+      <p>
+        2.5<span style="margin-left: 1em"></span>Field spaces and phases <span style="margin-left: 5mm"></span> <a
+        href="2-definitions.html#auto-15">15</a>
+      </p>
+      <p>
+        2.6<span style="margin-left: 1em"></span>Wightman theories <span style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-16">15</a>
+      </p>
+      <p>
+        2.7<span style="margin-left: 1em"></span>The trace and product statements <span style="margin-left: 5mm"></span>
+        <a href="2-definitions.html#auto-17">16</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>3<span style="margin-left: 1em"></span>The main theorem</b> <span style="margin-left: 5mm"></span> <a
+        href="3-the-main-theorem.html#auto-18">17</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>4<span style="margin-left: 1em"></span>Strategy of the proof</b> <span style="margin-left: 5mm"></span>
+        <a href="4-strategy-of-the-proof.html#auto-19">19</a>
+      </p>
+      <p>
+        4.1<span style="margin-left: 1em"></span>Why the ultraviolet induction closes <span
+        style="margin-left: 5mm"></span> <a href="4-strategy-of-the-proof.html#auto-21">19</a>
+      </p>
+      <p>
+        4.2<span style="margin-left: 1em"></span>Tuning, uniqueness and convergence <span style="margin-left: 5mm"></span>
+        <a href="4-strategy-of-the-proof.html#auto-25">23</a>
+      </p>
+      <p>
+        4.3<span style="margin-left: 1em"></span>Rotations <span style="margin-left: 5mm"></span> <a href="4-strategy-of-the-proof.html#auto-27">24</a>
+      </p>
+      <p>
+        4.4<span style="margin-left: 1em"></span>Phases and reconstruction <span style="margin-left: 5mm"></span>
+        <a href="4-strategy-of-the-proof.html#auto-28">25</a>
+      </p>
+      <p>
+        4.5<span style="margin-left: 1em"></span>The trace <span style="margin-left: 5mm"></span> <a href="4-strategy-of-the-proof.html#auto-29">25</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>5<span style="margin-left: 1em"></span>The renormalization group</b> <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-30">26</a>
+      </p>
+      <p>
+        5.1<span style="margin-left: 1em"></span>Scales and the block map <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-31">26</a>
+      </p>
+      <p>
+        5.2<span style="margin-left: 1em"></span>The density and its norms <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-32">28</a>
+      </p>
+      <p>
+        5.3<span style="margin-left: 1em"></span>The inductive step <span style="margin-left: 5mm"></span> <a
+        href="5-the-renormalization-group.html#auto-35">31</a>
+      </p>
+      <p>
+        5.4<span style="margin-left: 1em"></span>Multiscale trajectories <span style="margin-left: 5mm"></span> <a
+        href="5-the-renormalization-group.html#auto-36">32</a>
+      </p>
+      <p>
+        5.5<span style="margin-left: 1em"></span>Local fields under blocking <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-38">34</a>
+      </p>
+      <p>
+        5.6<span style="margin-left: 1em"></span>Uniform bounds and the fixed-volume limit <span
+        style="margin-left: 5mm"></span> <a href="5-the-renormalization-group.html#auto-39">35</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>6<span style="margin-left: 1em"></span>The continuum limit, stress, phases, trace and
+        products</b> <span style="margin-left: 5mm"></span> <a href="6-the-continuum-limit-stress-phases-trace-and.html#auto-40">36</a>
+      </p>
+      <p>
+        6.1<span style="margin-left: 1em"></span>The volume limit and the field calculus <span
+        style="margin-left: 5mm"></span> <a href="6-the-continuum-limit-stress-phases-trace-and.html#auto-41">36</a>
+      </p>
+      <p>
+        6.2<span style="margin-left: 1em"></span>Stress and rotations <span style="margin-left: 5mm"></span> <a
+        href="6-the-continuum-limit-stress-phases-trace-and.html#auto-42">38</a>
+      </p>
+      <p>
+        6.3<span style="margin-left: 1em"></span>Phases and reconstruction <span style="margin-left: 5mm"></span>
+        <a href="6-the-continuum-limit-stress-phases-trace-and.html#auto-43">41</a>
+      </p>
+      <p>
+        6.4<span style="margin-left: 1em"></span>Trace and products <span style="margin-left: 5mm"></span> <a
+        href="6-the-continuum-limit-stress-phases-trace-and.html#auto-44">43</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>7<span style="margin-left: 1em"></span>Deduction of the main theorem</b> <span style="margin-left: 5mm"></span>
+        <a href="7-deduction-of-the-main-theorem.html#auto-45">46</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>8<span style="margin-left: 1em"></span>A weaker existence statement</b> <span style="margin-left: 5mm"></span>
+        <a href="8-a-weaker-existence-statement.html#auto-46">47</a>
+      </p>
+      <p>
+        8.1<span style="margin-left: 1em"></span>Hierarchy data and the conditions Q0&ndash;Q6
+        <span style="margin-left: 5mm"></span> <a href="8-a-weaker-existence-statement.html#auto-47">48</a>
+      </p>
+      <p>
+        8.2<span style="margin-left: 1em"></span>A generalized free-field example <span style="margin-left: 5mm"></span>
+        <a href="8-a-weaker-existence-statement.html#auto-48">49</a>
+      </p>
+      <p>
+        8.3<span style="margin-left: 1em"></span>Conventions for hierarchy data <span style="margin-left: 5mm"></span>
+        <a href="8-a-weaker-existence-statement.html#auto-49">51</a>
+      </p>
+      <p>
+        8.4<span style="margin-left: 1em"></span>An averaged countertest <span style="margin-left: 5mm"></span> <a
+        href="8-a-weaker-existence-statement.html#auto-50">52</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>9<span style="margin-left: 1em"></span>Constants and order of choice</b> <span style="margin-left: 5mm"></span>
+        <a href="9-constants-and-order-of-choice.html#auto-51">52</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Index of notation</b> <span style="margin-left: 5mm"></span> <a href="index-of-notation.html#auto-53">54</a>
+      </p>
+      <p style="margin-top: 2em; margin-bottom: 1em">
+        <b><font style="font-size: 119.0%">II<span style="margin-left: 1em"></span>Proofs</font></b> <span style="margin-left: 5mm"></span>
+        <a href="index-of-notation.html#auto-54">57</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>10<span style="margin-left: 1em"></span>Local polynomial fields</b> <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-55">57</a>
+      </p>
+      <p>
+        10.1<span style="margin-left: 1em"></span>Labels, test holonomies and the Taylor map
+        <span style="margin-left: 5mm"></span> <a href="10-local-polynomial-fields.html#auto-56">58</a>
+      </p>
+      <p>
+        10.2<span style="margin-left: 1em"></span>Taylor-normalized sections <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-58">59</a>
+      </p>
+      <p>
+        10.3<span style="margin-left: 1em"></span>Small-field bounds <span style="margin-left: 5mm"></span> <a
+        href="10-local-polynomial-fields.html#auto-59">61</a>
+      </p>
+      <p>
+        10.4<span style="margin-left: 1em"></span>Auxiliary equation sections <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-60">62</a>
+      </p>
+      <p>
+        10.5<span style="margin-left: 1em"></span>Example: the curvature square <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-61">66</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>11<span style="margin-left: 1em"></span>Gauges and block integration</b> <span style="margin-left: 5mm"></span>
+        <a href="11-gauges-and-block-integration.html#auto-62">67</a>
+      </p>
+      <p>
+        11.1<span style="margin-left: 1em"></span>The block kernel <span style="margin-left: 5mm"></span> <a href="11-gauges-and-block-integration.html#auto-63">68</a>
+      </p>
+      <p>
+        11.2<span style="margin-left: 1em"></span>Free quadratic forms <span style="margin-left: 5mm"></span> <a
+        href="11-gauges-and-block-integration.html#auto-66">72</a>
+      </p>
+      <p>
+        11.3<span style="margin-left: 1em"></span>The stationary background and Gaussian
+        coordinates <span style="margin-left: 5mm"></span> <a href="11-gauges-and-block-integration.html#auto-67">79</a>
+      </p>
+      <p>
+        11.4<span style="margin-left: 1em"></span>Inverse, vertex and Ward estimates <span
+        style="margin-left: 5mm"></span> <a href="11-gauges-and-block-integration.html#auto-69">85</a>
+      </p>
+      <p>
+        11.5<span style="margin-left: 1em"></span>The local large-field energy <span style="margin-left: 5mm"></span>
+        <a href="11-gauges-and-block-integration.html#auto-70">93</a>
+      </p>
+      <p>
+        11.6<span style="margin-left: 1em"></span>Sector Gaussian integration <span style="margin-left: 5mm"></span>
+        <a href="11-gauges-and-block-integration.html#auto-72">100</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>12<span style="margin-left: 1em"></span>Path actions and the one-loop coupling</b>
+        <span style="margin-left: 5mm"></span> <a href="12-path-actions-and-the-one-loop-coupling.html#auto-76">112</a>
+      </p>
+      <p>
+        12.1<span style="margin-left: 1em"></span>Curvature coordinates and the path action
+        <span style="margin-left: 5mm"></span> <a href="12-path-actions-and-the-one-loop-coupling.html#auto-77">112</a>
+      </p>
+      <p>
+        12.2<span style="margin-left: 1em"></span>Fourth-order matching <span style="margin-left: 5mm"></span> <a
+        href="12-path-actions-and-the-one-loop-coupling.html#auto-78">114</a>
+      </p>
+      <p>
+        12.3<span style="margin-left: 1em"></span>The determinant comparison <span style="margin-left: 5mm"></span>
+        <a href="12-path-actions-and-the-one-loop-coupling.html#auto-79">119</a>
+      </p>
+      <p>
+        12.4<span style="margin-left: 1em"></span>The one-loop coefficient <span style="margin-left: 5mm"></span>
+        <a href="12-path-actions-and-the-one-loop-coupling.html#auto-80">122</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>13<span style="margin-left: 1em"></span>Activities and the inductive step</b> <span
+        style="margin-left: 5mm"></span> <a href="13-activities-and-the-inductive-step.html#auto-81">129</a>
+      </p>
+      <p>
+        13.1<span style="margin-left: 1em"></span>The local expansion <span style="margin-left: 5mm"></span> <a
+        href="13-activities-and-the-inductive-step.html#auto-82">132</a>
+      </p>
+      <p>
+        13.2<span style="margin-left: 1em"></span>Local quadratic subtraction <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-84">150</a>
+      </p>
+      <p>
+        13.3<span style="margin-left: 1em"></span>Forced fusion, activity bounds and the reset
+        <span style="margin-left: 5mm"></span> <a href="13-activities-and-the-inductive-step.html#auto-85">152</a>
+      </p>
+      <p>
+        13.4<span style="margin-left: 1em"></span>Continuity at fixed volume <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-86">158</a>
+      </p>
+      <p>
+        13.5<span style="margin-left: 1em"></span>The Wilson start <span style="margin-left: 5mm"></span> <a href="13-activities-and-the-inductive-step.html#auto-87">159</a>
+      </p>
+      <p>
+        13.6<span style="margin-left: 1em"></span>The specified recursion <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-88">161</a>
+      </p>
+      <p>
+        13.7<span style="margin-left: 1em"></span>Weighted analytic estimates <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-89">163</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>14<span style="margin-left: 1em"></span>Trajectories, marked fields and ultraviolet
+        convergence</b> <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-90">177</a>
+      </p>
+      <p>
+        14.1<span style="margin-left: 1em"></span>Trajectories and tuning <span style="margin-left: 5mm"></span>
+        <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-91">178</a>
+      </p>
+      <p>
+        14.2<span style="margin-left: 1em"></span>Marked fields and volume-uniform estimates
+        <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-92">185</a>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.1<span style="margin-left: 1em"></span>One marked insertion <span
+        style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-93">185</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.2<span style="margin-left: 1em"></span>Chessboard seminorms and
+        replicated sources <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-94">192</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.3<span style="margin-left: 1em"></span>Negligible errors and local
+        matching <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-95">200</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.4<span style="margin-left: 1em"></span>Equation identities and
+        coefficient corrections <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-96">204</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.5<span style="margin-left: 1em"></span>Comparison with free fields
+        <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-97">207</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.6<span style="margin-left: 1em"></span>Bounds for lattice differences
+        <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-98">217</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.7<span style="margin-left: 1em"></span>Bounded approximations <span
+        style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-99">220</a></font>
+      </p>
+      <p>
+        14.3<span style="margin-left: 1em"></span>Full ultraviolet convergence <span style="margin-left: 5mm"></span>
+        <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-100">224</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>15<span style="margin-left: 1em"></span>Infinite volume and field calculus</b> <span
+        style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-102">231</a>
+      </p>
+      <p>
+        15.1<span style="margin-left: 1em"></span>Volume limits <span style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-103">231</a>
+      </p>
+      <p>
+        15.2<span style="margin-left: 1em"></span>Separated cells and negligible errors <span
+        style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-104">233</a>
+      </p>
+      <p>
+        15.3<span style="margin-left: 1em"></span>Quotient fields <span style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-105">234</a>
+      </p>
+      <p>
+        15.4<span style="margin-left: 1em"></span>Euclidean properties <span style="margin-left: 5mm"></span> <a
+        href="15-infinite-volume-and-field-calculus.html#auto-106">237</a>
+      </p>
+      <p>
+        15.5<span style="margin-left: 1em"></span>Repeated reflected words <span style="margin-left: 5mm"></span>
+        <a href="15-infinite-volume-and-field-calculus.html#auto-107">238</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>16<span style="margin-left: 1em"></span>Free fields, Ward identities and
+        rotations</b> <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-108">239</a>
+      </p>
+      <p>
+        16.1<span style="margin-left: 1em"></span>Free fields <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-109">240</a>
+      </p>
+      <p>
+        16.2<span style="margin-left: 1em"></span>Lattice inputs <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-111">247</a>
+      </p>
+      <p>
+        16.3<span style="margin-left: 1em"></span>Free comparison and the conserved line <span
+        style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-112">254</a>
+      </p>
+      <p>
+        16.4<span style="margin-left: 1em"></span>Coordinate reflection spaces and spectral
+        estimates <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-113">257</a>
+      </p>
+      <p>
+        16.5<span style="margin-left: 1em"></span>Ward identities and rotations <span style="margin-left: 5mm"></span>
+        <a href="16-free-fields-ward-identities-and-rotations.html#auto-114">263</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>17<span style="margin-left: 1em"></span>Phases and reconstruction</b> <span style="margin-left: 5mm"></span>
+        <a href="17-phases-and-reconstruction.html#auto-115">270</a>
+      </p>
+      <p>
+        17.1<span style="margin-left: 1em"></span>Compression and phases <span style="margin-left: 5mm"></span> <a
+        href="17-phases-and-reconstruction.html#auto-116">270</a>
+      </p>
+      <p>
+        17.2<span style="margin-left: 1em"></span>Reconstruction <span style="margin-left: 5mm"></span> <a href="17-phases-and-reconstruction.html#auto-119">276</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>18<span style="margin-left: 1em"></span>The trace law and non-free comparisons</b>
+        <span style="margin-left: 5mm"></span> <a href="#auto-120">284</a>
+      </p>
+      <p>
+        18.1<span style="margin-left: 1em"></span>Trace and spectrum <span style="margin-left: 5mm"></span> <a
+        href="#auto-121">284</a>
+      </p>
+      <p>
+        18.2<span style="margin-left: 1em"></span>Precise non-free comparisons <span style="margin-left: 5mm"></span>
+        <a href="#auto-125">301</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>19<span style="margin-left: 1em"></span>Products and contact subtractions</b> <span
+        style="margin-left: 5mm"></span> <a href="19-products-and-contact-subtractions.html#auto-126">305</a>
+      </p>
+      <p>
+        19.1<span style="margin-left: 1em"></span>Products and nested clusters <span style="margin-left: 5mm"></span>
+        <a href="19-products-and-contact-subtractions.html#auto-127">310</a>
+      </p>
+      <p>
+        19.2<span style="margin-left: 1em"></span>Contact subtractions <span style="margin-left: 5mm"></span> <a
+        href="19-products-and-contact-subtractions.html#auto-129">323</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>References</b> <span style="margin-left: 5mm"></span> <a href="references.html#auto-131">332</a>
+      </p>
+    </div>
+<h2 id="auto-120"><a id="sec:partII-I"></a>18<span style="margin-left: 1em"></span>The trace law and non-free
+    comparisons<span style="margin-left: 1em"></span></h2>
+    <p>
+      This section proves Theorem <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:TR">6.18</a> and the non-free
+      comparisons. The stress tensor \(T\) of Section <a href="16-free-fields-ward-identities-and-rotations.html#sec:partII-G">16</a> is
+      normalized by its comparison with the free Maxwell stress (Proposition
+      <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:SC">6.11</a>), and the free stress is traceless. So this comparison
+      cannot determine the first nonzero trace term, which is smaller by the
+      inverse running coupling (Table <a href="#tab:I-orders">9</a>). That term corresponds
+      to the one-loop trace anomaly [<a href="references.html#bib-CollinsDuncanJoglekar1977">9</a>]; we compute its
+      coefficient from a lattice Ward identity, with a rate. The proof of
+      Theorem <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:TR">6.18</a> has five steps.
+    </p>
+    <ol>
+      <dt>
+        (1)
+      </dt><dd>
+        <p>
+          \(L = T^{\text{Max}}\), \(D = \delta_{ab} \mathcal{O}_{F^2}\) and
+          \(\Xi\) span the centered real symmetric \(H_4\)-tensorial tensors
+          of degree four; a functional \(\rho_{\text{tr}}\) reads the trace
+          from the divergence <class style="font-style: normal">(<a href="#eq:I-rho">18.3</a>)</class>.
+        </p>
+      </dd>
+      <dt>
+        (2)
+      </dt><dd>
+        <p>
+          A lattice stress current (Definition <a href="#def:I-current">18.4</a>) has
+          divergence equal to the action variation up to a defect, which block
+          transfer <class style="font-style: normal">(<a href="#eq:I-transfer-map">18.4</a>)</class> makes small;
+          block transfer also keeps the trace and antisymmetric part of the
+          current lattice differences.
+        </p>
+      </dd>
+      <dt>
+        (3)
+      </dt><dd>
+        <p>
+          Lemma <a href="#lem:I-regulator">18.5</a> computes the regulated Ward coefficient \(-
+          12 \kappa_G\). Lemma <a href="#lem:I-transfer">18.8</a> carries it to continuum
+          fields along the radii of Lemma <a href="#lem:I-radii">18.3</a>, with the rate of
+          Lemma <a href="#lem:I-stability">18.6</a>.
+        </p>
+      </dd>
+      <dt>
+        (4)
+      </dt><dd>
+        <p>
+          A conserved combination of these fields is a multiple of \(T\); its
+          \(D\)-coefficient tends to \(d_2 = - \kappa_G / 4\) (Proposition <a
+          href="#prop:I-coefficient">18.9</a>).
+        </p>
+      </dd>
+      <dt>
+        (5)
+      </dt><dd>
+        <p>
+          Positivity makes \(G_{\Theta}\) nonincreasing. This turns comparison
+          along subsequences, which uses frames, into the frame-free limit at
+          every radius (Figure <a href="#fig:I-squeeze">18</a>).
+        </p>
+      </dd>
+    </ol>
+    <p>
+      Section <a href="#sec:partII-I.2">18.2</a> proves the non-free comparisons, each with its
+      comparison class: no two-point statement excludes a generalized free
+      field with the same spectral measure. In the selected phase, on no
+      interval \((0, \delta)\) does \(G_{\Theta}\) agree with a finite Wick
+      profile (Proposition <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:NF">6.19</a>).
+    </p>
+    <p>
+      Throughout, retain the fields, inclusions and units of Definition <a
+      href="2-definitions.html#def:D10">2.12</a> and Proposition <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:FC">6.4</a>, the tensor of Theorem
+      <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:ST">6.10</a>, and the selected reconstruction of Theorem <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:RC">6.16</a>.
+      The symbols \(\tau, e_{\text{tr}}, \Theta, G_{\Theta}\) and \(A_G\) have
+      the meanings of Definition <a href="6-the-continuum-limit-stress-phases-trace-and.html#def:D16">6.17</a>. Write \(\Phi_{\Theta} (f)
+      = \Phi (\iota_4 \Theta, f)\), and use the word domain of item <a href="2-definitions.html#def:W1">W1</a>
+      of Definition <a href="2-definitions.html#def:wightman">2.14</a>.
+    </p>
+    <h3 id="auto-121"><a id="sec:partII-I.1"></a>18.1<span style="margin-left: 1em"></span>Trace and spectrum<span style="margin-left: 1em"></span></h3>
+    <p>
+      Centering must hold on the common operator domain, as well as in
+      separated correlations. The proof below identifies the subtraction after
+      continuation.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">18.1</class>. </strong><i><class
+        style="font-style: normal"><strong>(Centering as an operator identity) </strong></class><a
+        id="lem:I1.1"></a> For every \(f \in \mathcal{S}\), on the word domain,</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle \Phi_{\Theta} (f) = \Phi (\iota_4 \tau, f) -
+          e_{\text{tr}} \left( \int f
+\right) \text{Id}_{\mathcal{H}}, \qquad
+          \langle \Omega, \Phi_{\Theta} (f)
+\Omega \rangle = 0 \hspace{0.17em}
+          .\)
+        </center></i>
+      </div>
+    </div>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong class="enunciation-name">Proof. </strong>Unit deletion (Definition <a href="2-definitions.html#def:E1-E3">2.9</a>)
+      and the quotient calculus of Lemma <a href="15-infinite-volume-and-field-calculus.html#lem:F2">15.5</a> remove the unit
+      insertion; the continuation of Lemma <a href="17-phases-and-reconstruction.html#lem:H2.1">17.5</a> and the field
+      realization of Lemma <a href="17-phases-and-reconstruction.html#lem:H-fields">17.7</a> carry this to the operators.
+      Deleting the unit insertion leaves a Euclidean correlation independent
+      of its position. On each ordered-time region its continuation is
+      therefore constant in that variable. The identity theorem on the
+      connected continuation domain \(\mathcal{Z}_n\) of Definition <a href="2-definitions.html#def:D15">2.16</a>,
+      applied successively in each time variable, identifies it with the
+      correlation containing the unit. Boundary values and smearing give
+      \(\langle u, \Phi (\iota_4 \boldsymbol{1}_4, f) v \rangle = (\int f)
+      \langle u,
+v \rangle\) for word vectors \(u, v\). Density and linearity
+      give the identity. The zero Euclidean one-point function continues to
+      zero and has zero boundary distribution, proving the centering
+      assertion.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      We use the Fourier convention of Section <a href="6-the-continuum-limit-stress-phases-trace-and.html#sec:trace-products">6.4</a>:
+    </p>
+    <center>
+      \(\displaystyle \hat{f}_+ (\mathbf{p}) = \int e^{i\mathbf{p} \cdot x} f
+      (x)  \hspace{0.17em}
+dx, \qquad (\mathcal{W}_{\text{rel}} \psi)
+      (\mathbf{p}) = \int e^{i\mathbf{p}
+\cdot (y - x)} \psi (x, y) 
+      \hspace{0.17em} dx \hspace{0.17em} dy
+\hspace{0.17em} .\)
+    </center>
+    <p>
+      In particular, \(\mathcal{W}_{\text{rel}} (\bar{f} \otimes h) =
+      \overline{\hat{f}_+} \hat{h}_+\). Write \(W_2^{\xi_{\ast}}  (\Theta,
+      \Theta ; \bar{f} \otimes h) = \langle \Phi_{\Theta}
+(f) \Omega,
+      \Phi_{\Theta} (h) \Omega \rangle\) for the joint tempered boundary
+      distribution of Lemma <a href="17-phases-and-reconstruction.html#lem:H2.1">17.5</a>. The next lemma constructs its
+      positive measure.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">18.2</class>. </strong><i><class
+        style="font-style: normal"><strong>(Unique trace spectral measure) </strong></class><a id="lem:I1.2"></a>
+        There is a unique positive tempered-growth Borel measure
+        \(\mu_{\Theta}\), supported in \(\bar{V}_+\), such that</i>
+      </p>
+      <i><center>
+        \(\displaystyle d \mu_{\Phi_{\Theta} (f) \Omega} = | \hat{f}_+ |^2 
+        \hspace{0.17em} d
+\mu_{\Theta} \qquad (f \in \mathcal{S})
+        \hspace{0.17em} .\)
+      </center></i>
+      <p>
+        <i>It is Lorentz invariant in momentum variables, and</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle \begin{array}{rlll}
+  W_2^{\xi_{\ast}}  (\Theta,
+          \Theta ; \psi) & = \int \mathcal{W}_{\text{rel}}
+  \psi
+          \hspace{0.17em} d \mu_{\Theta} &  & (\psi \in \mathcal{S}_2),\\
+ 
+          G_{\Theta} (r) & = \int e^{- r\mathbf{p}^4}  \hspace{0.17em} d
+          \mu_{\Theta}
+  &  & (r > 0) \hspace{0.17em} .
+\end{array}\)
+        </center></i>
+      </div>
+    </div>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>The measure is built from the positive
+      boundary distributions of Lemma <a href="17-phases-and-reconstruction.html#lem:H2.1">17.5</a>. For \(v_f =
+      \Phi_{\Theta} (f) \Omega\), translation covariance gives \(\hat{h}_+ (P)
+      v_f = \hat{f}_+ (P) v_h\). Here \(\hat{h}_+ (P) = \int \hat{h}_+
+      (\mathbf{p})  \hspace{0.17em} d \textsf{E}
+(\mathbf{p})\), with
+      \(\textsf{E}\) the joint translation spectral resolution of Theorem <a
+      href="6-the-continuum-limit-stress-phases-trace-and.html#prop:RC">6.16</a>. Both sides smear the field with \(f \ast h\). Choose
+      tests whose transforms do not vanish on successively larger balls. On
+      such a ball define \(d \mu_{\Theta} = | \hat{f}_+ |^{- 2} d \mu_{v_f}\).
+      The displayed identity makes these definitions agree on overlaps.
+      Polarization gives \(\langle v_f, v_h \rangle = \int
+      \overline{\hat{f}_+} \hat{h}_+ 
+\hspace{0.17em} d \mu_{\Theta}\).
+      Product tests determine the joint distribution.
+    </p>
+    <p>
+      The spectrum condition gives cone support. Schwartz continuity, applied
+      to inverse transforms of cutoffs equal to one on \(\{|\mathbf{p}|
+      \leqslant R\}\), gives \(\mu_{\Theta} (\{|\mathbf{p}| \leqslant R\})
+      \leqslant C (1 + R)^k\). Lemma <a href="17-phases-and-reconstruction.html#lem:H2.4">17.11</a> continues \(T\) to a
+      symmetric Hermitian Lorentz tensor. Contraction and invariance of the
+      unit (Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G3.1">16.17</a>) make \(\iota_4 \Theta\) a Hermitian
+      Lorentz scalar. Covariance of \(W_2\) and uniqueness of the measure give
+      Lorentz invariance.
+    </p>
+    <p style="margin-bottom: 1em">
+      Tempered growth and \(|\mathbf{p}| \leqslant \sqrt{2} \mathbf{p}^4\) on
+      the cone make the Fourier&ndash;Laplace integral holomorphic at positive
+      imaginary time, with boundary \(W_2\). To identify it with the Euclidean
+      continuation of Lemma <a href="17-phases-and-reconstruction.html#lem:H2.1">17.5</a>, take enough primitives to
+      obtain continuous boundary values, using the polynomial boundary bound
+      <class style="font-style: normal">(<a href="17-phases-and-reconstruction.html#eq:H-poly">17.8</a>)</class>. Their zero difference extends
+      by Schwarz reflection [<a href="references.html#bib-Rudin1987">29</a>, Theorem 11.14]; holomorphic
+      uniqueness and differentiation give equality and the Laplace formula. In
+      particular \(G_{\Theta}\) is real, nonnegative and nonincreasing.<span
+      style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      <h5>Comparison at prescribed radii.<span style="margin-left: 1em"></span></h5>
+      <div style="display: inline">
+        Use the scaling frames of Definition <a href="6-the-continuum-limit-stress-phases-trace-and.html#def:D12">6.6</a>:
+        \(\textsf{U}_{i, d}^{\text{sc}} : M_d^{\text{Max}} \to F_d\). Insert
+        \(\textsf{U}_{i, d}^{\text{sc}} A\) at \(r_i x\), and read tensors by
+        \(r_i^4 (\textsf{U}_{i, 4}^{\text{sc}})^{- 1}\). Write \(x^{(i)}\) for
+        nearest points to \(x\) in \(r_i^{- 1} a_{n_i} \mathbb{Z}^4\). Jets
+        use positional derivatives of smooth interpolants and their normalized
+        lattice differences, including derivatives of the inserted fields. A
+        shell flux is the integral against \(- \partial_a \chi\) in Definition
+        <a href="6-the-continuum-limit-stress-phases-trace-and.html#def:D13">6.8</a>. Define \(\beta_i = \lim_{(N, p)} \beta_{N, p, k_i}\)
+        along the ordered limits retained in the proof of Lemma <a href="15-infinite-volume-and-field-calculus.html#lem:F2">15.5</a>;
+        the radius level \(n_i\) precedes the insertion level \(k_i\).
+      </div>
+    </p>
+    <p>
+      The next lemma extends Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G2.1">16.8</a> to prescribed radii. Its
+      proof also transfers the derivative argument of <class style="font-style: normal">(<a href="16-free-fields-ward-identities-and-rotations.html#eq:G-derivative-limit">16.23</a>)</class>
+      to these frames.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">18.3</class>. </strong><i><class
+        style="font-style: normal"><strong>(Prescribed radii) </strong></class><a id="lem:I-radii"></a> Every
+        positive null sequence has a subsequence \((r_i)\), with frames
+        \(\textsf{U}_{i, d}^{\text{sc}}\) making \((r_i, \textsf{U}_{i,
+        \cdot}^{\text{sc}})\) a stable scaling sequence (Definition <a href="6-the-continuum-limit-stress-phases-trace-and.html#def:D12">6.6</a>)
+        and levels \(n_i < k_i\) tending to infinity, such that:</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><ol>
+          <dt>
+            (i)
+          </dt><dd>
+            <p>
+              the couplings satisfy
+            </p>
+            <table width="100%">
+              <tr>
+                <td align="center" width="100%"><a id="eq:I-adjustable"></a>\(\displaystyle \beta_i \to
+                \infty, \qquad \frac{\log (1 / r_i)}{\beta_i} \to \kappa_G^{-
+                1}
+\hspace{0.17em} ;\)</td>
+                <td align="right">(18.1)</td>
+              </tr>
+            </table>
+          </dd>
+          <dt>
+            (ii)
+          </dt><dd>
+            <p>
+              for every arity \(n_{\text{ar}} \geqslant 1\), degrees \(d_j
+              \leqslant D\), labels \(A_j^{(i)} \to A_j\) and compact
+              \(\mathcal{K} \subset \text{Gen}_{n_{\text{ar}}}\),
+            </p>
+            <center>
+              \(\displaystyle \sup_{x \in \mathcal{K}} | S_{n_{\text{ar}}}
+              (\textsf{U}_{i,
+\boldsymbol{d}}^{\text{sc}} \boldsymbol{A}^{(i)}
+              ; r_i x^{(i)}) -
+S^{\text{Max}}_{n_{\text{ar}}} (\boldsymbol{A};
+              x) | \to 0 \hspace{0.17em},\)
+            </center>
+            <p>
+              the same holds for each fixed jet. On compact subsets of
+              \(\text{Conf}_{n_{\text{ar}}}\), the unrounded correlations
+              converge in \(C^{\infty}\), and the corresponding
+              translation-shell fluxes converge;
+            </p>
+          </dd>
+          <dt>
+            (iii)
+          </dt><dd>
+            <p>
+              for \(n_{\text{ar}} = 2\) without derivatives, the rounded
+              comparison in (ii) holds uniformly over the phases.
+            </p>
+          </dd>
+        </ol></i>
+      </div>
+    </div>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>The proof follows the finite-dimensional
+      construction of Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G2.1">16.8</a>, with radii placed in comparison
+      windows. The source estimates of Lemmas <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E-Gaussian-sources">14.26</a> and <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E-replication">14.15</a>
+      control the windows, and Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E-displacement">14.29</a> moves the insertion
+      points.
+    </p>
+    <p>
+      <em>Radii and levels.</em> Put \(M_n = M^{\text{cut}}_n\). At radius
+      level \(n\) allow
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I-reading"></a>\(\displaystyle r (n, u) = a_n M_n^u,
+        \qquad u \in [\alpha_0, \alpha_0 + 1], \qquad k (n) =
+\min \{m > n :
+        \log (a_n / a_m) \geqslant (\log \hat{\beta}_n)^{48}
+        \}
+\hspace{0.17em} .\)</td>
+        <td align="right">(18.2)</td>
+      </tr>
+    </table>
+    <p>
+      The separation in \(k (n)\) leaves room for all fixed-degree marked
+      transports; its logarithmic size is negligible compared with
+      \(\hat{\beta}_n\). For degree \(D\) and an arity bound \(n_{\text{ar}}
+      \geqslant 2\) choose comparison exponents \(\alpha_0, \alpha_1,
+      \alpha_2\) and \(c\) with
+    </p>
+    <center>
+      \(\displaystyle c < 0, \quad \alpha_1 + 6 < \alpha_0, \quad \alpha_2 + 5
+      < \alpha_0 + c, \quad
+(\alpha_0 - \alpha_1) Dn_{\text{ar}} + c < 0,
+      \quad (\alpha_0 - \alpha_2)
+Dn_{\text{ar}} - \alpha_0 - c < 0
+      \hspace{0.17em} .\)
+    </center>
+    <p>
+      Choose the differences \(\alpha_0 - \alpha_1 > 6\), then \(- c >
+      (\alpha_0 - \alpha_1) Dn_{\text{ar}}\), then \(\alpha_0 - \alpha_2 > 5 -
+      c\), and finally increase all three \(\alpha_j\) together until
+      \(\alpha_2 \geqslant Dn_{\text{ar}} + 10\) and \((\alpha_0 - \alpha_2)
+      Dn_{\text{ar}} - \alpha_0 - c < 0\).
+    </p>
+    <p>
+      <em>Comparison windows.</em> We first obtain comparison windows at every
+      sufficiently late radius level, rather than only the intervals selected
+      in Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E1.1">14.2</a>. For each of the three exponents \(b =
+      \alpha_j + u - \alpha_0\), stop backwards from \(n\) when the
+      accumulated logarithmic block length first exceeds \((b + 2) \log M_n\),
+      then stop again after another \(10 \log B_n\). The entry bounds fixed in
+      Section <a href="14-trajectories-marked-fields-and-ultraviolet.html#sec:partII-E.1">14.1</a> give \(\ell_m \leqslant \log \hat{\beta}_m\)
+      at every level \(m\). Each overshoot is therefore \(O (\log \log
+      \hat{\beta}_n) = o (\log M_n)\), so the resulting cell side is at most
+      \(a_n M_n^{b + 5}\). All levels in these windows tend to infinity and
+      their couplings have ratio tending to one. The accumulated source loss
+      satisfies
+    </p>
+    <center>
+      \(\displaystyle \log \prod_{m \text{in the window}} \mathcal{C}_{J_m}
+      \leqslant (\sup_{m
+\text{in the window}} J_m^{- 2})  \sum_{m \text{in
+      the window}} \log \ell_m =
+o (\log M_n),\)
+    </center>
+    <p>
+      by <class style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E-log-cost">14.11</a>)</class>. Thus these windows
+      satisfy the window hypotheses (Win1)&ndash;(Win3) stated before Lemma <a
+      href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E-source-polynomial">14.25</a>: its initial rounding error is \(M_n^{- b}\), its
+      covariance and healthy-chart errors are smaller than any required fixed
+      inverse power of \(M_n\) after entry, and its source recurrence <class
+      style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E-source-step">14.45</a>)</class> has total linear loss \(M_n^{o
+      (1)}\). The entry bounds of Section <a href="14-trajectories-marked-fields-and-ultraviolet.html#sec:partII-E.1">14.1</a> include the
+      comparison requirements <class style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E-Gaussian-entry">14.10</a>)</class> for
+      the finitely many arities admitted at each stage. At mark weight
+      \(M_n^{1 / (8 n_{\text{ar}})}\) the resulting error is at most \(M_n^{-
+      3 / 4}\). The normalized integral is bounded by <class style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E-positive-ratio">14.47</a>)</class>;
+      its stage constant is at most \(\log M_n / (16 n_{\text{ar}})\) after
+      entry. These estimates are uniform in \(u \in [\alpha_0, \alpha_0 + 1]\)
+      and do not require a window to remain in one stage.
+    </p>
+    <p>
+      <em>Chessboard seminorms.</em> At its own normalization a singleton
+      therefore has chessboard seminorm at most \(1 + |S^{\text{Max}}_1 (A)
+      |\). Indeed coefficient extraction at amplitude \(e^{2 q}\), \(q = \log
+      M_n / (16 n_{\text{ar}})\), bounds its centered seminorm by \(e^{q - 2
+      q} \leqslant 1\). Expand a degree-\(D\) label in weight-homogeneous
+      basis vectors. Changing from exponent \(\alpha_1 + u - \alpha_0\) to
+      \(u\) multiplies a weight-\(j\) coordinate by \(M_n^{(\alpha_0 -
+      \alpha_1) j}\), hence bounds this seminorm by \(CM_n^{(\alpha_0 -
+      \alpha_1) D}\). Include all signed and conjugated basis vectors in the
+      finite comparison request. The chessboard inequality <class style="font-style: normal">(<a
+      href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E-chess">14.19</a>)</class> then bounds their reflected products by the
+      product of these seminorms. The same calculation with \(\alpha_2\) gives
+      seminorms \(CM_n^{(\alpha_0 - \alpha_2) D}\). The \(\alpha_2\) cell
+      sides are \(o (r (n, u) \delta_n)\) for \(\delta_n = M_n^c\); the
+      \(\alpha_1\) cell sides are \(o (r (n, u))\). Apply Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E-displacement">14.29</a>
+      only when every coordinate hybrid of the two physical configurations has
+      periodic coordinate separation at least \(4 r (n, u) \delta_n\). The
+      centered level \(D_{\text{cen}}\) can be chosen with
+      \(a_{D_{\text{cen}}} < r (n, u) \delta_n\); the insertions and their
+      single-axis reflections are interior by <class style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E-window-geometry">14.41</a>)</class>.
+      At small radii these periodic separations equal the ordinary coordinate
+      separations on the fixed compact set. The lemma bounds the positional
+      difference by the product of the seminorms times \(4 n_{\text{ar}} /
+      \delta_n\). With scaled mesh \(h^{\text{mesh}}_n = M_n^{- u}\), the two
+      errors are consequently bounded by
+    </p>
+    <center>
+      \(\displaystyle CM_n^{(\alpha_0 - \alpha_1) Dn_{\text{ar}}} \delta_n,
+      \qquad CM_n^{(\alpha_0 -
+\alpha_2) Dn_{\text{ar}}} h^{\text{mesh}}_n /
+      \delta_n \hspace{0.17em} .\)
+    </center>
+    <p>
+      These are the contributions of coordinate-coincidence strips of width
+      \(4 \delta_n\) and interpolation across one mesh cell; include a strip
+      for each coordinate hybrid, a finite union of volume \(O (\delta_n)\)
+      since \(h^{\text{mesh}}_n = o (\delta_n)\). For the strip bound, the
+      unrounded word has the first bound of <class style="font-style: normal">(<a href="16-free-fields-ward-identities-and-rotations.html#eq:G-lattice-input">16.13</a>)</class>
+      on the entire compact subset of \(\text{Conf}_{n_{\text{ar}}}\),
+      including coordinate ties. Indeed, use a translated coarser tiling with
+      margins at least three \(\alpha_1\) cell sides and diameter \(o (r (n,
+      u))\); adjacent-ratio growth and its logarithmic upper bound permit such
+      a neighbouring coarser level. Excluding the finitely many bad
+      translation intervals for the anchors puts the pairwise distinct points
+      into different cells. Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:F1a">14.11</a> and the chessboard
+      inequality <class style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E-chess">14.19</a>)</class> then give the
+      displayed \(CM_n^{(\alpha_0 - \alpha_1) Dn_{\text{ar}}}\) bound there.
+      Outside the strips apply Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E-displacement">14.29</a> on each fine-cutoff
+      grid before taking the ordered limit; the same comparison identifies the
+      unrounded and rounded values. Both errors vanish uniformly in \(u \in
+      [\alpha_0, \alpha_0 + 1]\) by the choice of the comparison exponents.
+      For the remaining error, use the corrected Gaussian source of Lemma <a
+      href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E-Gaussian-sources">14.26</a> on every subset of the \(n_{\text{ar}}\) slots, as in
+      <class style="font-style: normal">(<a href="16-free-fields-ward-identities-and-rotations.html#eq:G-source-root">16.16</a>)</class>. The weighted mode norm in
+      the proof of Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E-replication">14.15</a> is submultiplicative at every
+      arity. Coefficient extraction at the amplitudes just chosen gives
+      \(\varepsilon_n \leqslant CM_n^{- 1 / (16 n_{\text{ar}})} \to 0\) for
+      the complete reflected array.
+    </p>
+    <p>
+      <em>Phase uniformity.</em> By Lemma <a href="17-phases-and-reconstruction.html#lem:H-roots">17.2</a> and the lattice
+      paragraph after it, these seminorm bounds on every repeated reflected
+      product bound the norm of the corresponding compressed zero-energy
+      operator, hence its value at every character of the phase algebra of
+      Theorem <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:PH">6.13</a>. This gives (iii), including moving
+      coefficients by finite-dimensional multilinearity.
+    </p>
+    <p>
+      <em>Every small radius lies in a window.</em> By the same entry bound
+      \(\ell_m \leqslant \log \hat{\beta}_m\), applied to both adjacent stage
+      ratios, \(\ell_n \leqslant M_{n + 1}\) eventually. Monotonicity of
+      \(M_n\) gives \(r (n, \alpha_0) \leqslant r (n + 1, \alpha_0 + 1)\),
+      while \(r (n, \alpha_0) \to 0\). First crossing of any prescribed small
+      radius, followed by continuity in \(u\), puts that radius in one of
+      these intervals. Diagonal extraction over degrees, arities, compact sets
+      and jet orders gives \(n_i, k_i = k (n_i)\) and frames, using Lemma <a
+      href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.1a">14.8</a> for symmetries and units and the recursive correction
+      <class style="font-style: normal">(<a href="16-free-fields-ward-identities-and-rotations.html#eq:G-correct-frames">16.22</a>)</class> for inclusions. Fix the
+      exponents before each extraction, and require \((\alpha_0 + 1) \log
+      M_{n_i} \leqslant (\log \hat{\beta}_{n_i})^{48}\).
+    </p>
+    <p style="margin-bottom: 1em">
+      <em>Jets and couplings.</em> First integrate the rounded comparison
+      against a bounded test supported in a compact subset of
+      \(\text{Conf}_{n_{\text{ar}}}\). The coordinate strips and interpolation
+      errors just estimated, together with \(\varepsilon_n\) and the modulus
+      of continuity of the free correlations, give the tested estimate <class
+      style="font-style: normal">(<a href="16-free-fields-ward-identities-and-rotations.html#eq:G-tested-error">16.21</a>)</class> on the present windows. Thus the
+      unrounded correlations converge locally in \(L^1\) on
+      \(\text{Conf}_{n_{\text{ar}}}\), even where coordinate differences
+      vanish. Use the same diagonal sequence and frames for these tests and
+      for every degree needed below. The argument of <class style="font-style: normal">(<a href="16-free-fields-ward-identities-and-rotations.html#eq:G-derivative-limit">16.23</a>)</class>
+      then applies with Proposition <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:FC">6.4</a>: finitely many tested
+      free responses have convergent matrices and bounded left inverses, and
+      integration by parts identifies the tested derivative \(r_i
+      (\textsf{U}_{i, d + 1}^{\text{sc}})^{- 1} \partial_a
+      \textsf{U}_{i,
+d}^{\text{sc}} A\) with the response of
+      \(\partial_a^{\text{Max}} A\). Iterating gives local \(L^1\) convergence
+      of every mixed derivative; the Fourier-inversion argument of Corollary
+      <a href="16-free-fields-ward-identities-and-rotations.html#cor:G-smooth">16.9</a> upgrades it to \(C^{\infty}\) convergence on compact
+      subsets of \(\text{Conf}_{n_{\text{ar}}}\). In particular, integration
+      on a fixed compact shell gives the flux limit on these same frames,
+      including the coordinate-tie sets crossed by the shell. Minimality of
+      \(k (n)\) gives \(\log (a_n / a_{k (n)}) = O ((\log \hat{\beta}_n)^{48})
+      = o (\hat{\beta}_n)\). The running law of Theorem <a href="5-the-renormalization-group.html#prop:MT">5.6</a>, in
+      <class style="font-style: normal">(<a href="5-the-renormalization-group.html#eq:I12-drift-sum">5.14</a>)</class>, gives \(\beta_i /
+      \hat{\beta}_{k_i} \to 1\). Since \(\hat{\beta}_n = \bar{\beta} +
+      \kappa_G \log (1 / a_n)\), the imposed bound on \(u \log M_n\) proves
+      <class style="font-style: normal">(<a href="#eq:I-adjustable">18.1</a>)</class>.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      <h5>Tensor coordinates.<span style="margin-left: 1em"></span></h5>
+      <div style="display: inline">
+        Set \(L = T^{\text{Max}}\), \(D_{ab} = \delta_{ab}
+        \mathcal{O}_{F^2}\), and \(\Xi_{aa} = 0\), \(\Xi_{ab} = \sum_{c,
+        \alpha} : F_{ac}^{\alpha} F_{bc}^{\alpha}\): for \(a \ne b\). In the
+        notation of <class style="font-style: normal">(<a href="16-free-fields-ward-identities-and-rotations.html#eq:G-free-tensor">16.2</a>)</class>, \(L = - Q +
+        \tfrac{1}{4} \delta Q_{\text{tot}}\), \(\Xi_{ab} = (1 - \delta_{ab})
+        Q_{ab}\) and \(D = \tfrac{1}{4} \delta Q_{\text{tot}}\); in the basis
+        \(Z^{(1)}, Z^{(2)}, Z^{(3)}\) of the proof of Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G1.1">16.1</a>,
+      </div>
+    </p>
+    <center>
+      \(\displaystyle L = - \tfrac{1}{2} Z^{(1)} + \tfrac{1}{4} Z^{(2)} -
+      Z^{(3)}, \qquad \Xi =
+Z^{(3)}, \qquad D = \tfrac{1}{2} Z^{(1)} +
+      \tfrac{1}{4} Z^{(2)}
+\hspace{0.17em} .\)
+    </center>
+    <p>
+      By that proof, these three tensors span the centered real symmetric
+      \(H_4\)-tensorial tensors of degree four.
+    </p>
+    <p>
+      Write \(\langle F_{ac}, F_{bc} \rangle = \sum_{\alpha} :
+      F^{\alpha}_{ac}
+F^{\alpha}_{bc}\): and similarly with derivatives.
+      Before imposing the Maxwell equation, divergence has three coordinates,
+      represented in component \(b\) by
+    </p>
+    <center>
+      \(\displaystyle \sum_c \langle F_{bc}, \partial_b F_{bc} \rangle, \quad
+      \sum_{a, c} \langle
+F_{ac}, \partial_b F_{ac} \rangle, \quad \sum_{a, c}
+      \langle F_{bc},
+\partial_a F_{ac} \rangle \hspace{0.17em} .\)
+    </center>
+    <p>
+      For diagonal entries \(z_0  \sum_c \langle F_{ac}, F_{ac} \rangle + z_1 
+      \sum_{b, c} \langle F_{bc},
+F_{bc} \rangle\) and off-diagonal entries
+      \(z_2  \sum_c \langle F_{ac}, F_{bc} \rangle\), the divergence
+      coordinates are \((2 (z_0 - z_2), 2 z_1 + z_2 / 2, z_2)\). Indeed
+      Bianchi gives \(\sum_{a, c} \langle F_{ac}, \partial_a F_{bc} \rangle =
+      \frac{1}{2}  \sum_{a,
+c} \langle F_{ac}, \partial_b F_{ac} \rangle\).
+      Thus the functional \(\rho_{\text{tr}}  (x, y, z) = - 2 x - 8 y\)
+      satisfies
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I-rho"></a>\(\displaystyle \rho_{\text{tr}}
+        (\text{div}_{\text{raw}} \hspace{0.17em} B)
+\mathcal{O}_{F^2} = -
+        \text{tr} \hspace{0.17em} B, \qquad \rho_{\text{tr}}
+(\text{div}
+        \hspace{0.17em} L) = \rho_{\text{tr}} (\text{div} \hspace{0.17em}
+\Xi)
+        = 0, \qquad \rho_{\text{tr}} (\text{div} \hspace{0.17em} D) = -
+        4
+\hspace{0.17em} .\)</td>
+        <td align="right">(18.3)</td>
+      </tr>
+    </table>
+    <p>
+      It annihilates the third coordinate, the Maxwell equation direction.
+      Write \(R_5 \cong \mathbb{R}^3\) for this raw space and \(V_5\) for the
+      space of real \(H_4\)-covariant axis vectors in
+      \((M_5^{\text{Max}})^4\). The free Maxwell quotient map \(s : R_5 \to
+      V_5\) is onto, with \(\ker s =\mathbb{R}v_{\text{eom}}\),
+      \(v_{\text{eom}} = (0, 0, 1)\) and \(\rho_{\text{tr}} (v_{\text{eom}}) =
+      0\); thus \(V_5\) is two dimensional.
+    </p>
+    <p>
+      <h5>Lattice stress current.<span style="margin-left: 1em"></span></h5>
+      <div style="display: inline">
+        We construct the lattice insertions from plaquette curvatures. Let
+        \(\textsf{S} = \textsf{S}_{N, m}\) be the leading analytic path action
+        without its coupling, defined in Section <a href="12-path-actions-and-the-one-loop-coupling.html#subsec:C-matching">12.2</a>, and let
+        \(\textsf{s}_a q (x) = q (x + e_a)\) be the lattice shift.
+      </div>
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Definition <class style="font-style: normal">18.4</class>. </strong><class
+      style="font-style: normal"><strong>(Lattice stress current) </strong></class><a id="def:I-current"></a> At
+      a site \(x\) put \(f_{ab} (x) = \text{proj}_{\mathfrak{g}} (U_{\square
+      (x ; a, b)} - U_{\square
+(x ; a, b)}^{- 1}) / 2\) and
+    </p>
+    <center>
+      \(\displaystyle J_{ab} = \frac{\delta_{ab}}{4}  \sum_{c, d} \langle
+      f_{cd}, f_{cd} \rangle -
+\sum_c \langle f_{ac}, f_{bc} \rangle, \qquad
+      (Y_b^x)_e =\boldsymbol{1}_{e^- =
+x} f_{b, e^{\text{dir}}} (x)
+      \hspace{0.17em} .\)
+    </center>
+    <p style="margin-bottom: 1em">
+      With \(\nabla_a = \sum_{j = 1}^4 c^{\nabla}_j  (\textsf{s}_a^j -
+      \textsf{s}_a^{- j})\) and \((c^{\nabla}_1, c^{\nabla}_2, c^{\nabla}_3,
+      c^{\nabla}_4) = (4 / 5, - 1 / 5, 4
+/ 105, - 1 / 280)\), the Ward defect
+      is \(\mathcal{E}_b = \sum_a \nabla_a J_{ab} - D \textsf{S} [Y_b]\).
+    </p>
+    <p>
+      The current \(J\) is the lattice form of \(T^{\text{Max}}\), and \(Y_b\)
+      is the initial left displacement. Initially \(\text{tr} \hspace{0.17em}
+      J = 0\) and \(J_{ab} - J_{ba} = 0\), so these data satisfy the
+      identities (a)&ndash;(b) of Lemma <a href="#lem:I-regulator">18.5</a> below with \(q = 0\)
+      and \(\textsf{t} = 0\).
+    </p>
+    <p>
+      <h5>Block transfer.<span style="margin-left: 1em"></span></h5>
+      <div style="display: inline">
+        The averaging kernels must respect the particular difference
+        \(\nabla_a\). For odd block ratio \(\ell\), define commuting finite
+        sums
+      </div>
+    </p>
+    <center>
+      \(\displaystyle \textsf{M}_a = \ell^{- 1}  \sum_{j = 0}^{\ell - 1}
+      \textsf{s}_a^j, \qquad
+\textsf{G}_a = \sum_{j = 1}^4 c^{\nabla}_j 
+      \sum_{v = - j}^{j - 1}
+\textsf{s}_a^v, \qquad \textsf{N}_a =
+      \textsf{G}_a^{(\ell)} \textsf{M}_a,
+\qquad \textsf{K}_0 = \prod_a
+      \textsf{M}_a \textsf{N}_a \hspace{0.17em} .\)
+    </center>
+    <p>
+      Here \(\textsf{G}_a^{(\ell)}\) is \(\textsf{G}_a\) with every shift
+      replaced by its \(\ell\)th power, and \(\textsf{G}_a \hspace{0.17em}
+      (\textsf{s}_a - 1) = \nabla_a\). Put \(\textsf{K}_a = \textsf{G}_a
+      \textsf{M}_a \prod_{c \ne a} \textsf{M}_c
+\textsf{N}_c\) and
+      \(\textsf{K}_a^{\text{edge}} = \textsf{N}_a \prod_{c \ne a}
+      \textsf{M}_c
+\textsf{N}_c\). Since \(\textsf{M}_a (\textsf{s}_a - 1) =
+      \ell^{- 1}  (\textsf{s}_a^{\ell} - 1)\),
+    </p>
+    <center>
+      \(\displaystyle \textsf{K}_0 \nabla_a = \ell^{- 1}
+      \nabla_a^{\text{coarse}} \textsf{K}_a,
+\qquad \textsf{K}_0 (\textsf{s}_a
+      - 1) = \ell^{- 1}  (\textsf{s}_a^{\ell} - 1)
+\textsf{K}_a^{\text{edge}},
+      \qquad \textsf{K}_a - \textsf{K}_0 =
+(\textsf{s}_a^{\ell} - 1)
+      \textsf{K}_a^{\text{tr}} \hspace{0.17em} .\)
+    </center>
+    <p>
+      The last quotient is a finite Laurent polynomial: \(\textsf{G}_a -
+      \textsf{G}_a^{(\ell)} \textsf{M}_a\) vanishes modulo
+      \(\textsf{s}_a^{\ell} - 1\) after multiplication by \(\textsf{M}_a\),
+      because \(\textsf{M}_a\) averages all residue classes and both factors
+      \(\textsf{G}_a, \textsf{G}_a^{(\ell)}\) have mass one. Polynomial
+      division defines \(\textsf{K}_a^{\text{tr}}\). The support radius of
+      \(\textsf{K}_0\) is at most \(56 \ell\), its mass is one and its
+      absolute coefficient sum is at most \(32^4\).
+    </p>
+    <p>
+      For Lemma <a href="11-gauges-and-block-integration.html#lem:B3">11.6</a>'s stationary background \(U_{\text{stat}}
+      (V)\), stationary substitution is \(\mathcal{I}F (V) = F
+      (U_{\text{stat}} (V))\). The stationary equation is \(D_U  (\textsf{S} +
+      \textsf{S}_{\text{block}}) = 0\) on the gauge-fixed fine variations.
+      Retain the stationary coarse frame \(h_{\text{fr}}\) from the
+      coordinates preceding Lemma <a href="11-gauges-and-block-integration.html#lem:B4">11.7</a>, and write
+      \(Q^{\text{pred}} (U) = (Q_e^{\text{pred}} (U))_e\) and \(\tilde{Q}  (U,
+      h) = (Q^{\text{pred}} (U))^h\) for the predictor in that frame. Its
+      fine-coordinate differential is
+    </p>
+    <center>
+      \(\displaystyle R_f \eta = \left. \frac{d}{ds} \right|_{s = 0} \log
+      (\tilde{Q} (e^{s \eta} U,
+h_{\text{fr}}) \tilde{Q} (U, h_{\text{fr}})^{-
+      1}) \hspace{0.17em} .\)
+    </center>
+    <p>
+      For the root correction, let \(\varrho_x  (y ; \eta)\) be minus the
+      uniform average of the signed sums of \(\eta\) over the frame routes
+      from \(y\) to the patch points, as in the proof of Lemma <a href="11-gauges-and-block-integration.html#lem:B3">11.6</a>.
+      Define scalar coefficients \(b_{x, e}\) by
+    </p>
+    <center>
+      \(\displaystyle \sum_e b_{x, e} \eta_e = \varrho_x  (0 ; \eta) - \sum_y
+      w_y^{\text{av}}
+\varrho_x  (y ; \eta) \hspace{0.17em} .\)
+    </center>
+    <p>
+      Let \(g_{x, e} = h_{\text{fr}} (x) U (\gamma_{x, e})\), where
+      \(\gamma_{x, e}\) is the fixed coordinate route from the embedded root
+      \(x\) to \(e^-\). The root map and its coarse gauge variation are
+    </p>
+    <center>
+      \(\displaystyle (R_0 \eta) (x) = \sum_e b_{x, e} \text{Ad} (g_{x, e})
+      \eta_e, \qquad (d_V
+\phi)_e = \phi (e^-) - \text{Ad} (V_e) \phi (e^+)
+      \hspace{0.17em} .\)
+    </center>
+    <p>
+      The transfer formula uses the map \(R_f + d_V R_0\) evaluated at the
+      stationary pair. Set \(\mathcal{I}_{\ast} Y = (R_f + d_V R_0) Y
+      (U_{\text{stat}} (V))\). With \(\delta_a = \textsf{s}_a - 1\), transfer
+      by
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I-transfer-map"></a>\(\displaystyle J'_{ab} = \ell^4
+        \textsf{K}_a \mathcal{I}J_{ab}, \quad Y'_b = \ell^5
+\textsf{K}_0
+        \mathcal{I}_{\ast} Y_b, \quad \mathcal{E}'_b = \ell^5
+\textsf{K}_0
+        \mathcal{I}\mathcal{E}_b, \quad q'_a =
+        \ell^3
+\textsf{K}_a^{\text{edge}} \mathcal{I}q_a + \ell^4
+        \textsf{K}_a^{\text{tr}}
+\mathcal{I}J_{aa} \hspace{0.17em} .\)</td>
+        <td align="right">(18.4)</td>
+      </tr>
+    </table>
+    <p>
+      The identification of \(R_f + d_V R_0\) with the coarse-link
+      displacement entering the Ward variation remains an input: it requires
+      the nonlinear root-frame differential and endpoint covariance, including
+      the frame term once. In particular, the frame variation of the predictor
+      itself is based at \(\tilde{Q}\), whereas \(d_V\) is based at \(V\);
+      their conversion must be justified in the required tests and norms.
+      Conjugation invariance can remove their difference in a class-function
+      first variation, but does not by itself give a vector bound. The flat
+      relation between the rooted and centred stationary tangents in Lemma <a
+      href="11-gauges-and-block-integration.html#lem:B3">11.6</a> alone does not establish the needed identity. The current
+      estimates below also require its affine and quadratic bounds in the same
+      coordinates.
+    </p>
+    <p>
+      The kernel identities preserve the relation \(\text{tr} \hspace{0.17em}
+      J = \sum_a \delta_a q_a\); for a traceless initial current one can start
+      with \(q_a = 0\). The antisymmetric part, which need not remain zero, is
+      likewise a sum of forward differences: its new correction in direction
+      \(a\) is \(\ell^4 \textsf{K}_a^{\text{tr}} \mathcal{I}J_{ab}\) and in
+      direction \(b\) is \(- \ell^4 \textsf{K}_b^{\text{tr}}
+      \mathcal{I}J_{ba}\), in addition to the transferred old differences.
+    </p>
+    <p>
+      For an analytic local function \(F\), its degree-\(d\) Taylor map
+      \(\text{Tay}_d \hspace{0.17em} F\) (Section <a href="2-definitions.html#sec:local-fields">2.3</a>) is, on a
+      radial jet \(\textsf{j}\), \(\sum_{v = 0}^d [\varepsilon^v] F (U
+      (\text{sc}_{\varepsilon} \textsf{j}))\), in the basis of Definition <a
+      href="2-definitions.html#def:D07">2.7</a>. The weighted Taylor map is \(t_m^{\textsf{N}}
+      \text{Tay}_d \hspace{0.17em} F\), with the factor-count operator of
+      Definition <a href="2-definitions.html#def:D08">2.8</a>. Symmetrize \(J\), average over \(H_4\) and
+      conjugation, apply the degree-four Taylor map and marked transport, and
+      subtract the mixture mean. Call the resulting field \(B_i^L\). The same
+      operations on the local contractions defining \(\Xi, D\) give
+      \(B_i^{\Xi}, B_i^D\).
+    </p>
+    <p>
+      <h5>Extraction of the scalar coefficient.<span style="margin-left: 1em"></span></h5>
+      <div style="display: inline">
+        We first calculate the scalar coefficient before marked transport.
+        For a chart function \(F\) define its Hessian Fourier kernel by
+      </div>
+    </p>
+    <center>
+      \(\displaystyle \hat{F}_{c \alpha, c \alpha}  (p, q) = \sum_{x, y} e^{i
+      (p \cdot x + q \cdot
+y)} D^2 F (0) [e_{x, c, \alpha}, e_{y, c, \alpha}]
+      \hspace{0.17em} .\)
+    </center>
+    <p>
+      Fix a colour \(\alpha\). For a family \(F_b\) write
+    </p>
+    <center>
+      \(\displaystyle \begin{aligned}
+  \textsf{l} (F) & = \text{Re} \sum_{a
+      \ne c, b} i [z^2 t] \widehat{F_b}_{c
+  \alpha, c \alpha} (ze_a, - ze_a +
+      te_b),\\
+  \textsf{q} (F) & = | \Lambda |^{- 1} \text{Re} \sum_{a \ne c}
+      [z^2] 
+  \hat{F}_{c \alpha, c \alpha}  (ze_a, - ze_a) \hspace{0.17em}
+      .
+\end{aligned}\)
+    </center>
+    <p>
+      Coefficients use \([z^r t^s] F = (r!s!)^{- 1} \partial_z^r \partial_t^s
+      F (0)\). Put \(\textsf{h} (F) = \textsf{l} (F) - \frac{1}{2} \text{Re}
+      \sum_{a \ne c} [z^2]
+\widehat{F_c}_{c \alpha, c \alpha} (ze_a, -
+      ze_a)\). The Haar coefficient is \(\mathfrak{h} (Y) = \textsf{h}
+      (\text{div}_{\text{Haar}} \hspace{0.17em} Y)\); the subtraction corrects
+      the lattice derivative. Define
+    </p>
+    <center>
+      \(\displaystyle \Gamma_{\mu} = \tfrac{1}{2} \log \det (H + dd^{\ast} +
+      \mu^2 I) - \log \det
+(d^{\ast} d + \mu^2 I), \quad R_{\Lambda} (\mu) =
+      \textsf{q} (\Gamma_{\mu}),
+\quad \mathcal{D}_{\Lambda} (\mu) = - \mu
+      R_{\Lambda}' (\mu),\)
+    </center>
+    <p>
+      where \(H\) is the left Hessian of \(\textsf{S}\) and \(d\) is the
+      infinitesimal gauge insertion. For \(a > 0\) and \(r \in \mathbb{N}\),
+      with \(\|x\| = |x|_{\infty}\) in the kernel's lattice units, put
+    </p>
+    <center>
+      \(\displaystyle \vartheta_{a, r} (x) = e^{a \|x\|}  (1 +\|x\|)^r
+      \hspace{0.17em} .\)
+    </center>
+    <p>
+      For a chart function anchored at \(o\), its weighted order-\(r\)
+      seminorm is the sum of absolute link coefficients of \(D^r F (0)\)
+      against \(\prod_{v = 1}^r \vartheta_{a, r}  (e_v^- - o)\); for a
+      displacement use its link components. These weights control the spatial
+      moments in the momentum derivatives below. Write \(F \equiv_4 G\) if the
+      field derivatives of \(F\) and \(G\) at zero agree through order four.
+      The next lemma computes the scalar coefficient; its proof follows.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">18.5</class>. </strong><i><class
+        style="font-style: normal"><strong>(Regulated Ward coefficient) </strong></class><a id="lem:I-regulator"></a>
+        Fix a level \(k\), a weight \(a > 0\) and \(C < \infty\). For \(\nu
+        \in \mathbb{N}\) let \(N_{\nu} > k\) and let \((J, Y, \mathcal{E}, q,
+        \textsf{t})^{(\nu)}\) be translation-invariant local data on the
+        level-\(k\) torus of period \(n_{\nu} \to \infty\), with \(\textsf{S}
+        = \textsf{S}_{N_{\nu}, k}\), such that</i>
+      </p>
+      <i><ol>
+        <dt>
+          (a)
+        </dt><dd>
+          <p>
+            \(D \textsf{S} [Y_b] \equiv_4 \sum_a \nabla_a J_{ab}
+            -\mathcal{E}_b\);
+          </p>
+        </dd>
+        <dt>
+          (b)
+        </dt><dd>
+          <p>
+            \(\text{tr} \hspace{0.17em} J = \sum_a \delta_a q_a\) and \(J_{ab}
+            - J_{ba} = \sum_c \delta_c \textsf{t}_{abc}\);
+          </p>
+        </dd>
+        <dt>
+          (c)
+        </dt><dd>
+          <p>
+            the \(a\)-weighted seminorms of orders \(2\)&ndash;\(4\) of \(J,
+            Y, q, \textsf{t}\) are at most \(C\);
+          </p>
+        </dd>
+        <dt>
+          (d)
+        </dt><dd>
+          <p>
+            those of \(\mathcal{E}\), and the deviations of the zero-field
+            Hessians of \(J\) and \(Y\) from their free values on tests of
+            weight at most \(4\) and \(5\), are at most \(\varepsilon_{\nu}
+            \to 0\).
+          </p>
+        </dd>
+      </ol></i>
+      <p style="margin-bottom: 1em">
+        <i>Then, for every colour, \(\mathfrak{h} (Y^{(\nu)}) \to - 12
+        \kappa_G\).</i>
+      </p>
+    </div>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>The inputs are the normalization of
+      \(\kappa_G\) (Definition <a href="2-definitions.html#def:D01">2.1</a>), the kinetic and quadratic
+      cancellations and the classical matching of the path action (Lemmas <a
+      href="12-path-actions-and-the-one-loop-coupling.html#lem:C2">12.4</a> and <a href="12-path-actions-and-the-one-loop-coupling.html#lem:C4">12.6</a>), and the one-loop coefficient of
+      Lemma <a href="12-path-actions-and-the-one-loop-coupling.html#lem:C7">12.9</a>. Write \(\mathcal{R}_{\mu} = (H + dd^{\ast} +
+      \mu^2 I)^{- 1}\), \(\mathcal{G}_{\mu} = (d^{\ast} d + \mu^2 I)^{- 1}\).
+      For \(\Psi_s (U) = e^{sY (U)} U\) let \(\mathcal{Y}_U (z) = \partial_s
+      |_0 \log (\Psi_s (e^z U) \Psi_s (U)^{- 1})\) and \(\mathcal{V}=
+      D\mathcal{Y}_U (0)\). If \(\mathcal{J}_U\) is the mixed derivative of
+      \(\log (\text{gauge}_{e^v} (e^z U) U^{- 1})\) in \(v, z\) at zero, gauge
+      invariance gives \(Hd = -\mathcal{N}\), \(\mathcal{N}= D \textsf{S}
+      [\mathcal{J}_U]\), hence
+    </p>
+    <center>
+      \(\displaystyle \mathcal{R}_{\mu} d = d\mathcal{G}_{\mu}
+      +\mathcal{R}_{\mu}
+\mathcal{N}\mathcal{G}_{\mu} \hspace{0.17em} .\)
+    </center>
+    <p>
+      The product rule for \(D^2 (D \textsf{S} [Y])\) and cyclicity of trace
+      now give
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I-contact"></a>\(\displaystyle \tfrac{1}{2} \text{tr}
+        (\mathcal{R}_{\mu} D^2 (D \textsf{S} [Y])) -
+\text{div}_{\text{Haar}}
+        \hspace{0.17em} Y = D \Gamma_{\mu} [Y] - \mu^2
+\text{tr}
+        (\mathcal{R}_{\mu} \mathcal{V}) + D \textsf{S} [Z],\)</td>
+        <td align="right">(18.5)</td>
+      </tr>
+    </table>
+    <p>
+      with \(Z = \frac{1}{2} \text{contr} (\mathcal{R}_{\mu}, D^2
+      \mathcal{Y}_U (0)) -
+\text{contr} (\mathcal{G}_{\mu}
+      d^{\ast}
+(\mathcal{V}+\mathcal{V}^{\ast})\mathcal{R}_{\mu},
+      \mathcal{J}_U)\). Contractions sum the indicated matrix indices.
+    </p>
+    <p>
+      <em>Cancellation.</em> The leading quadratic kernel of an invariant
+      scalar action at the required momentum order is a colour multiple of
+      \(|p|^2 I - p \otimes p\). Write \(X_{acb}\) for the coefficient of
+      momentum \(e_a\) in the diagonal polarization-\(c\) entry of \(DY_b\),
+      with its colour indices contracted against the action kernel. Gauge
+      covariance makes the mixed polarization term \(- X_{cac}\) and gives
+      \(X_{aaa} = 0\). In the tested variation the three terms, after summing
+      the intermediate polarization, are
+    </p>
+    <center>
+      \(\displaystyle - 2 X_{aca} - X_{cac} + \sum_b X_{bcb}  \qquad (a \ne c)
+      .\)
+    </center>
+    <p>
+      Summing over \(a \ne c\) makes the first and second sums \(- 3 \sum_{b,
+      c} X_{bcb}\), cancelling the third sum. Higher momentum orders do not
+      contribute. This applies to \(D \Gamma_{\mu} [Y]\), \(D \textsf{S} [Z]\)
+      and the further action variation below, uniformly on each fixed \(\mu
+      \in [\delta, 1]\). For the first term on the left of <class style="font-style: normal">(<a
+      href="#eq:I-contact">18.5</a>)</class>, substitute \(D \textsf{S} [Y_b] \equiv_4 \sum_a
+      \nabla_a J_{ab} -\mathcal{E}_b\). The coefficient linear in the total
+      momentum \(te_b\) selects \(a = b\); summing \(b\) gives \(\text{tr}
+      \hspace{0.17em} J = \sum_a \delta_a q_a\). Its additional total-momentum
+      factor has zero coefficient linear in \(t\). The defect
+      \(\mathcal{E}_b\) tends to zero in the weighted seminorms, so its
+      contracted coefficient does too. The correction in \(\mathfrak{h}\)
+      tends to zero by the same identity.
+    </p>
+    <p>
+      <em>The regulator term.</em> For \(\chi (x) =\boldsymbol{1}_{x = 0}\)
+      define \(M_b h (x) = \chi (x) h_b (x)\), \((D_b h)_a (x) = \delta_a \chi
+      (x) h_b (x)\) and \((T_b^{(r)} h) (x) = \delta_b \chi (x) h (x)\) on
+      \(r\)-forms, \(r = 0, 1\). Set
+    </p>
+    <center>
+      \(\displaystyle W_b^{(1)} = \text{sym} (\mathcal{V}_b - dM_b - D_b) +
+      \tfrac{1}{2} T_b^{(1)},
+\qquad W_b^{(0)} = \text{sym} (M_b d) -
+      \tfrac{1}{2} T_b^{(0)},\)
+    </center>
+    <p>
+      where \(\text{sym} \hspace{0.17em} A = (A + A^{\ast}) / 2\). The inverse
+      identity above yields
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  \text{tr} (\mathcal{R}_{\mu}
+      \mathcal{V}_b) = & \text{tr} \left(
+  \mathcal{R}_{\mu} (D_b -
+      \tfrac{1}{2} T_b^{(1)}) \right) + \tfrac{1}{2}
+  \text{tr}
+      (\mathcal{G}_{\mu} T_b^{(0)}) + D \textsf{S} [Z_b'] +
+  \text{Rem}_b,\\
+
+      \text{Rem}_b = & \text{tr} (\mathcal{R}_{\mu} W_b^{(1)}) + \text{tr}
+ 
+      (\mathcal{G}_{\mu} W_b^{(0)}), \qquad Z_b' = \text{contr}
+      (\mathcal{G}_{\mu}
+  M_b \mathcal{R}_{\mu}, \mathcal{J}_U)
+      .
+\end{array}\)
+    </center>
+    <p>
+      The tested \(D_b\) term tends to \(\textsf{q} (\text{tr} \hspace{0.17em}
+      \mathcal{R}_{\mu})\); each of the four \(T_b^{(r)}\) terms tends to
+      \(\textsf{q} (\text{tr} \hspace{0.17em} \mathcal{R}_{\mu})\) or
+      \(\textsf{q} (\text{tr} \hspace{0.17em} \mathcal{G}_{\mu})\)
+      respectively. This follows by summing \(\delta_b \chi\) against the two
+      Fourier waves: its symbol is \(e^{- it} - 1 = - it + O (t^2)\), paired
+      with the factor \(i\) in \(\textsf{l}\). Translation invariance
+      identifies the local anchor sum with the volume-normalized trace in
+      \(\textsf{q}\). Consequently their sum is \(- \textsf{q} (\text{tr}
+      \hspace{0.17em} \mathcal{R}_{\mu}) + 2 \textsf{q}
+(\text{tr}
+      \hspace{0.17em} \mathcal{G}_{\mu})\). Differentiation of
+      \(\Gamma_{\mu}\) in \(\mu\) gives the same expression multiplied by
+      \(\mu^2\), namely \(\mathcal{D}_{\Lambda} (\mu)\). We have proved
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I-regulated-ward"></a>\(\displaystyle \mathfrak{h} (Y)
+        =\mathcal{D}_{\Lambda} (\mu) + \mu^2 \textsf{l} (\text{Rem})
++ o
+        (1),\)</td>
+        <td align="right">(18.6)</td>
+      </tr>
+    </table>
+    <p>
+      with error uniform on every fixed \([\delta, 1]\).
+    </p>
+    <p>
+      For the remainder, the inverse-kernel argument in the proof of <class
+      style="font-style: normal">(<a href="12-path-actions-and-the-one-loop-coupling.html#eq:C-integrand">12.3</a>)</class> applies with the scalar regulator
+      \(\mu^2 I\): \(\| \partial^r R_{\mu} (q)\| \leqslant C (|q| + \mu)^{- 2
+      - r}\). Differentiating \(R_{\mu} A_{\mu} = I\) once more gives the same
+      bound for \(r = 3\). Hypotheses (c)&ndash;(d) give bounded weighted
+      derivatives of \(W^{(r)}\). Their zero-background symbols and first
+      momentum derivatives tend to zero, as does the zero-momentum first field
+      insertion: the free curvature displacement cancels \(dM_b + D_b -
+      \frac{1}{2} T_b^{(1)}\) in the displayed formula. Put \(z = |q| + \mu\).
+      Taylor expansion gives factors \(z^2, z, 1\) for the zero-, one- and
+      two-field insertions of these symbols. In the product rule they pair
+      with inverse bounds \(Cz^{- 4}, Cz^{- 3}, Cz^{- 2}\), respectively. Thus
+      the scaled derivative bound through order three is \(C (z^2 z^{- 4} + 2
+      zz^{- 3} + z^{- 2}) \leqslant C' z^{- 2}\). Unscaling the quadratic
+      coefficient gives \(Cz^{- 4} \leqslant C' z^{- 5}\). In four dimensions
+      the integral of this bound is at most \(C / \mu\): the ball \(|q|
+      \leqslant \mu\) costs \(C / \mu\), and the annulus \(2^j \mu < |q|
+      \leqslant 2^{j + 1} \mu\) costs \(C \mu^{- 1} 2^{- j}\). At fixed \(\mu
+      > 0\) the finite sums converge; hence \(| \mu^2 \textsf{l} (\text{Rem})
+      | \leqslant C \mu + o (1)\) with \(C\) independent of \(\mu \leqslant
+      1\).
+    </p>
+    <p style="margin-bottom: 1em">
+      The proof of <class style="font-style: normal">(<a href="12-path-actions-and-the-one-loop-coupling.html#eq:C-integrand">12.3</a>)</class>, with \(\mu^2 I\)
+      in place of its regulator, gives \(|R (\mu) - 12 \kappa_G \log \mu |
+      \leqslant C\) for \(0 < \mu \leqslant 1\). Here \(R / 12\) is the
+      coefficient \(\alpha_b\) of this scalar-regulated kernel: the Hessian is
+      twice the quadratic-action kernel, exactly the factor \(2\) in that
+      coefficient. At fixed positive \(\mu\), Riemann sums give \(R_{\Lambda}
+      (\mu) \to R (\mu)\). Choose \(u < 0\), then a length \(L_{\ast} > 0\).
+      Once the period controls the endpoints, the mean value theorem on \([u -
+      L_{\ast}, u]\) selects \(\mu_{\Lambda} \in [e^{u - L_{\ast}}, e^u]\)
+      with \(|\mathcal{D}_{\Lambda} (\mu_{\Lambda}) + 12 \kappa_G | \leqslant
+      (2 C + o (1))
+/ L_{\ast}\). Apply <class style="font-style: normal">(<a href="#eq:I-regulated-ward">18.6</a>)</class>
+      on this fixed interval, then let \(u \to - \infty\) and \(L_{\ast} \to
+      \infty\). This proves the limit without differentiating an asymptotic
+      error.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      <h5>A stability lemma.<span style="margin-left: 1em"></span></h5>
+      <div style="display: inline">
+        The next lemma gives a criterion for raw coefficient maps to converge
+        to the free quotient map \(s\). It also turns a nearly null vector of
+        these maps into functionals that read \(\rho_{\text{tr}}\) with a
+        rate.
+      </div>
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em; margin-bottom: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">18.6</class>. </strong><i><class
+        style="font-style: normal"><strong>(Stability of the trace functional) </strong></class><a
+        id="lem:I-stability"></a> Let \(E, H\) be finite-dimensional real normed spaces, \(s :
+        E \to H\) linear with a right inverse \(t\) and \(\ker s
+        =\mathbb{R}v\), \(v \ne 0\), and \(\rho : E \to \mathbb{R}\) linear.
+        Let \(s_i : E \to H\) and \(t_i : H \to E\) be linear with \(s_i t_i =
+        I\) and \(t_i \to t\), let \(v_i \to v\), and let \(e_i \geqslant 1\)
+        satisfy \(e_i  \|s_i v_i \| \to 0\) and \(e_i \rho (v_i) \to 0\). Then
+        \(s_i \to s\), the functionals \(\lambda_i = \rho t_i\) are uniformly
+        bounded, and \(e_i  \| \lambda_i s_i - \rho \| \to 0\).</i>
+      </p>
+    </div>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>Put \(k_i = v_i - t_i s_i v_i\). Then
+      \(s_i k_i = 0\), and \(k_i \to v\) since \(t_i\) is bounded and \(s_i
+      v_i \to 0\). The maps \(\Phi_i  (h, c) = t_i h + ck_i\) from \(H \times
+      \mathbb{R}\) to \(E\) converge to \(\Phi (h, c) = th + cv\), which is
+      injective (apply \(s\)) and hence invertible, as \(\dim E = \dim H +
+      1\). So \(\Phi_i^{- 1} \to \Phi^{- 1}\); since \(s_i \Phi_i  (h, c) =
+      h\), also \(s_i \to s\). For \(y \in E\) write \(\Phi_i^{- 1} y = (s_i
+      y, c_i (y))\), so that \(y - t_i s_i y = c_i (y) k_i\) and \(|c_i (y) |
+      \leqslant C \|y\|\) uniformly in \(i\). Then
+    </p>
+    <center>
+      \(\displaystyle \lambda_i s_i y - \rho (y) = - c_i (y) \rho (k_i) = -
+      c_i (y)  (\rho (v_i) -
+\rho (t_i s_i v_i)) .\)
+    </center>
+    <p style="margin-bottom: 1em">
+      Hence \(e_i  \| \lambda_i s_i - \rho \| \leqslant C \left( e_i | \rho
+      (v_i) | +\| \rho
+\| \sup_j \|t_j \| \hspace{0.17em} e_i \|s_i v_i \|
+      \right) \to 0\). Boundedness of \(\lambda_i\) follows from \(t_i \to
+      t\).<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      The following reduction isolates the comparison needed to construct the
+      right inverses. It requires no convergence rate for the inverses; the
+      rate in Lemma <a href="#lem:I-stability">18.6</a> comes from the separate estimates on
+      \(v_i\).
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">18.7</class>. </strong><i><class
+        style="font-style: normal"><strong>(Right inverses from a fixed complement)
+        </strong></class><a id="lem:I-complement"></a> Let \(E, H\) be finite-dimensional normed
+        spaces and let \(s : E \to H\) be onto. Choose a complement \(C\) of
+        \(\ker s\), and let \(t : H \to C \subset E\) be the inverse of
+        \(s|_C\). If linear maps \(s_i : E \to H\) satisfy \(\varepsilon_i =
+        \|(s_i - s) t\| \to 0\), then for all sufficiently large \(i\) the
+        maps</i>
+      </p>
+      <i><center>
+        \(\displaystyle t_i = t (s_i t)^{- 1} : H \longrightarrow E\)
+      </center></i>
+      <p>
+        <i>are right inverses of \(s_i\) and converge to \(t\). More
+        precisely, whenever \(\varepsilon_i < 1\),</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle \|t_i - t\| \leqslant \frac{\|t\| \varepsilon_i}{1 -
+          \varepsilon_i}
+\hspace{0.17em} .\)
+        </center></i>
+      </div>
+    </div>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong class="enunciation-name">Proof. </strong>Since \(st = I_H\), the map \(s_i t\)
+      differs from \(I_H\) by an operator of norm \(\varepsilon_i\). The
+      Neumann series therefore gives \((s_i t)^{- 1}\) and bounds its
+      difference from \(I_H\) by \(\varepsilon_i / (1 - \varepsilon_i)\). The
+      stated identities and estimate follow by composition with \(t\).<span
+      style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      <h5>Transfer to the continuum.<span style="margin-left: 1em"></span></h5>
+      <div style="display: inline">
+        Put \(b_i = \hat{\beta}_{k_i}\), \(E_i = \exp ((\log \log b_i)^2 /
+        5)\), \(R_i = \exp ((\log \log b_i)^2 / 6)\), and \(\textsf{A}_i =
+        \beta_i r_i^4 (\textsf{U}_{i, 4}^{\text{sc}})^{- 1}\), \(K_i = \beta_i
+        r_i^5 (\textsf{U}_{i, 5}^{\text{sc}})^{- 1} \text{div}\). The frames
+        intertwine signed permutations and conjugation, so \(K_i\) maps
+        centered real symmetric \(H_4\)-tensorial tensors into \(V_5\); on the
+        span of such tensors its kernel is the conserved line of Lemma <a
+        href="16-free-fields-ward-identities-and-rotations.html#lem:G2.2">16.10</a>. Functionals below act on \(V_5\), with any fixed
+        norm.
+      </div>
+    </p>
+    <div style="margin-top: 1em; margin-bottom: 1em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em"><center>
+            <font style="font-size: 84.0%"><table id="tab:I-orders" style="display: inline-table; vertical-align: middle">
+              <tbody><tr>
+                <td style="text-align: center; vertical-align: middle; border-top: 1px solid; border-bottom: 1px solid">Quantity</td>
+                <td style="text-align: center; vertical-align: middle; border-top: 1px solid; border-bottom: 1px solid">Behaviour as the radius tends to zero</td>
+                <td style="text-align: center; vertical-align: middle; border-top: 1px solid; border-bottom: 1px solid">Proved in</td>
+              </tr><tr>
+                <td style="text-align: center; vertical-align: middle">stress insertion \(r^4 T_{ab}\)</td>
+                <td style="text-align: center; vertical-align: middle">tends to \(T^{\text{Max}}_{ab}\), which is
+                traceless</td>
+                <td style="text-align: center; vertical-align: middle">Proposition <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:SC">6.11</a></td>
+              </tr><tr>
+                <td style="text-align: center; vertical-align: middle">running coupling \(\beta_i\)</td>
+                <td style="text-align: center; vertical-align: middle">\(\beta_i / \log (1 / r_i) \to \kappa_G\)</td>
+                <td style="text-align: center; vertical-align: middle">Lemma <a href="#lem:I-radii">18.3</a></td>
+              </tr><tr>
+                <td style="text-align: center; vertical-align: middle">scalar trace coefficient</td>
+                <td style="text-align: center; vertical-align: middle">\(r_i^4 (\textsf{U}_{i, 4}^{\text{sc}})^{- 1}
+                \Theta = - \kappa_G \beta_i^{- 1}
+\mathcal{O}_{F^2} + o
+                (\beta_i^{- 1})\)</td>
+                <td style="text-align: center; vertical-align: middle">Proposition <a href="#prop:I-coefficient">18.9</a></td>
+              </tr><tr>
+                <td style="text-align: center; vertical-align: middle; border-bottom: 1px solid">trace two-point function</td>
+                <td style="text-align: center; vertical-align: middle; border-bottom: 1px solid">\(r^8 \log^2 (1 / r) \hspace{0.17em} G_{\Theta} (r)
+                \to A_G\)</td>
+                <td style="text-align: center; vertical-align: middle; border-bottom: 1px solid">Theorem <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:TR">6.18</a></td>
+              </tr></tbody>
+            </table> </font>
+          </center></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; height: 0.5em"></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><div class="caption">
+            <font style="font-size: 84.1%"><p>
+              <b>Table 9. </b><a id="auto-122"></a>Orders of the stress comparison:
+              along the sequence of Proposition <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:SC">6.11</a>, the radii
+              of Lemma <a href="#lem:I-radii">18.3</a>, and all radii. Heuristically the
+              last row is the square of the third times the free correlation
+              \(A_G |x|^{- 8}\) of \(\mathcal{O}_{F^2}\).
+            </p></font>
+          </div></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p>
+      <h5>Why a rate is needed.<span style="margin-left: 1em"></span></h5>
+      <div style="display: inline">
+        The divergence of the amplified stress field \(\beta_i B_i^L\) may
+        grow like \(R_i\). Proposition <a href="#prop:I-coefficient">18.9</a> cancels it with
+        multiples of \(B_i^{\Xi}, B_i^D\) of that size and reads the trace
+        coefficient from that of \(B_i^D\) with functionals \(\lambda_i\). An
+        error of \(\lambda_i\) thus enters multiplied by up to \(R_i\); an
+        error that merely tends to zero would not suffice. It must be \(o
+        (E_i^{- 1})\), and \(R_i / E_i = \exp (- (\log \log b_i)^2 / 30) \to
+        0\). The next lemma transfers the scalar coefficient to \(V_5\) at
+        this accuracy; its proof follows. Here \(\Upsilon\) ranges over the
+        indicated tensors.
+      </div>
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">18.8</class>. </strong><i><class
+        style="font-style: normal"><strong>(Fourth-order Ward transfer) </strong></class><a id="lem:I-transfer"></a>
+        There are uniformly bounded real functionals \(\lambda_i\) on \(V_5\)
+        and \(C < \infty\), depending only on the chosen construction, such
+        that the divergences satisfy</i>
+      </p>
+      <i><table width="100%">
+        <tr>
+          <td align="center" width="100%"><a id="eq:I-divergence"></a>\(\displaystyle \
+
+\begin{aligned}
+  &
+          \| \beta_i K_i B_i^L \| \leqslant CR_i, \qquad \lambda_i  (\beta_i
+          K_i
+  B_i^L) \to - \kappa_G,\\
+  & K_i B_i^{\Upsilon} \to
+          \text{div}^{\text{Max}} \hspace{0.17em} \Upsilon,
+  \qquad E_i 
+          \left[ \lambda_i (K_i B_i^{\Upsilon}) - \rho_{\text{tr}}
+ 
+          (\text{div}_{\text{raw}} \hspace{0.17em} \Upsilon) \right] \to 0
+          \quad
+  (\Upsilon = \Xi, D),
+\end{aligned}\)</td>
+          <td align="right">(18.7)</td>
+        </tr>
+      </table></i>
+      <p>
+        <i>and the tensors satisfy</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><table width="100%">
+          <tr>
+            <td align="center" width="100%"><a id="eq:I-tensor"></a>\(\displaystyle \textsf{A}_i
+            B_i^{\Upsilon} \to \Upsilon (\Upsilon = L, \Xi, D), \qquad
+            b_i^p
+\text{tr} (\textsf{A}_i B_i^{\Upsilon}) \to 0 (\Upsilon = L,
+            \Xi ; p \in
+\mathbb{N}), \qquad \beta_i / b_i \to 1
+            \hspace{0.17em} .\)</td>
+            <td align="right">(18.8)</td>
+          </tr>
+        </table></i>
+      </div>
+    </div>
+    <p>
+      Thus \(\lambda_i\) reads \(\rho_{\text{tr}}\), that is \(- 4\) times the
+      \(D\)-coefficient, of a divergence with error \(o (E_i^{- 1})\), and its
+      value on the stress divergence, of size \(O (R_i)\), is the coefficient
+      of Lemma <a href="#lem:I-regulator">18.5</a> divided by \(12\).
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>We verify the hypotheses of Lemma <a
+      href="#lem:I-regulator">18.5</a> for the transferred current, compute the finite
+      coefficient at each level, and read it along the radii of Lemma <a href="#lem:I-radii">18.3</a>.
+      The stationary kernels (Lemmas <a href="11-gauges-and-block-integration.html#lem:B3">11.6</a>&ndash;<a href="11-gauges-and-block-integration.html#lem:B6">11.10</a>)
+      control the transfer, and Lemmas <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.2">14.7</a>&ndash;<a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.2a">14.9</a>
+      control marked transport.
+    </p>
+    <p>
+      The proof has five parts, and each has its own reason for smallness
+      (Table <a href="#tab:I-transfer-rates">10</a>). The current estimates are a contraction under
+      repeated block transfer. The finite coefficient is accurate because of
+      the thresholds and the exponential tails. The trace of the current is an
+      exact forward difference; this, with the matching gain of marked
+      transport, gives the equation direction its rates, and Lemma <a href="#lem:I-stability">18.6</a>
+      turns that rate into the accuracy of \(\lambda_i\). The tensor traces
+      are small for a different reason: the same forward difference becomes
+      small after averaging over many sites. No single power count covers all
+      five. The choices are made in this order: the block ratios and entry
+      couplings of the stages, once and for all, so that transfer contracts;
+      at a fixed level \(k\), the transfer depth and the period; then the
+      ordered limit at that \(k\); and finally \(k = k_i\) along the radii.
+      Since \(M^{\text{cut}}_k = e^{h_k}\) with \(h_k = (\log \log
+      \hat{\beta}_k)^2\), the multipliers of the statement are \(E_i =
+      (M^{\text{cut}}_{k_i})^{1 / 5}\) and \(R_i = (M^{\text{cut}}_{k_i})^{1 /
+      6}\).
+    </p>
+    <div style="margin-top: 1em; margin-bottom: 1em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em"><center>
+            <font style="font-size: 84.0%"><table id="tab:I-transfer-rates" style="display: inline-table; vertical-align: middle">
+              <tbody><tr>
+                <td style="text-align: center; vertical-align: middle; border-top: 1px solid; border-bottom: 1px solid">Part</td>
+                <td style="text-align: center; vertical-align: middle; border-top: 1px solid; border-bottom: 1px solid">Quantity made small</td>
+                <td style="text-align: center; vertical-align: middle; border-top: 1px solid; border-bottom: 1px solid">Reason</td>
+                <td style="text-align: center; vertical-align: middle; border-top: 1px solid; border-bottom: 1px solid">Bound used</td>
+              </tr><tr>
+                <td style="text-align: center; vertical-align: middle">Current estimates</td>
+                <td style="text-align: center; vertical-align: middle">normalized defects of orders \(2\)&ndash;\(4\)</td>
+                <td style="text-align: center; vertical-align: middle">one transfer acts on them by a triangular map with
+                small entries</td>
+                <td style="text-align: center; vertical-align: middle">\(O (2^{- n_{\text{step}}})\)</td>
+              </tr><tr>
+                <td style="text-align: center; vertical-align: middle">Finite coefficient</td>
+                <td style="text-align: center; vertical-align: middle">the four errors in <class style="font-style: normal">(<a href="#eq:I-five-pieces">18.9</a>)</class></td>
+                <td style="text-align: center; vertical-align: middle">thresholds, kernel and path tails, forced activity
+                bound</td>
+                <td style="text-align: center; vertical-align: middle">each \(o (e^{- h_k})\);\(\| \Sigma_k \| \leqslant C
+                (M^{\text{cut}}_k)^{1 / 6}\)</td>
+              </tr><tr>
+                <td style="text-align: center; vertical-align: middle">Equation direction</td>
+                <td style="text-align: center; vertical-align: middle">\(\rho_{\text{tr}} (j (k))\) and \(s_i
+                (v_i^{\text{eq}})\)</td>
+                <td style="text-align: center; vertical-align: middle">trace of the current is a forward difference;
+                matching gain \(e^{- H_n / 8}\)</td>
+                <td style="text-align: center; vertical-align: middle">\(Ce^{- h_k / 4}\) and \(o (b_i^{- p})\)</td>
+              </tr><tr>
+                <td style="text-align: center; vertical-align: middle">Stability</td>
+                <td style="text-align: center; vertical-align: middle">\(\lambda_i s_i - \rho_{\text{tr}}\)</td>
+                <td style="text-align: center; vertical-align: middle">Lemma <a href="#lem:I-stability">18.6</a></td>
+                <td style="text-align: center; vertical-align: middle">\(o (E_i^{- 1})\)</td>
+              </tr><tr>
+                <td style="text-align: center; vertical-align: middle; border-bottom: 1px solid">Tensor traces</td>
+                <td style="text-align: center; vertical-align: middle; border-bottom: 1px solid">\(\text{tr} (\textsf{A}_i B_i^L)\)</td>
+                <td style="text-align: center; vertical-align: middle; border-bottom: 1px solid">averaging a forward difference over \(m\)
+                sites</td>
+                <td style="text-align: center; vertical-align: middle; border-bottom: 1px solid">\(O (a_k^{\eta_0 / 2})\), so \(o (b_i^{- p})\)</td>
+              </tr></tbody>
+            </table> </font>
+          </center></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; height: 0.5em"></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><div class="caption">
+            <font style="font-size: 84.1%"><p>
+              <b>Table 10. </b><a id="auto-123"></a>The five parts of the proof of Lemma
+              <a href="#lem:I-transfer">18.8</a>. The readout error \(o (E_i^{- 1})\) is
+              multiplied by coefficients of size \(O (R_i)\), and \(R_i / E_i
+              \to 0\).
+            </p></font>
+          </div></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p>
+      <em>Current estimates.</em> Subject to the joint-coordinate transfer
+      input above, the transfer identities give (a) of Lemma <a href="#lem:I-regulator">18.5</a>;
+      the estimates for (c)&ndash;(d) use the same input. Differentiating the
+      stationary equation eliminates its fine variation. Fourth-order matching
+      in Lemma <a href="12-path-actions-and-the-one-loop-coupling.html#lem:C4">12.6</a> preserves \(\sum_a \nabla_a J_{ab}
+      -\mathcal{E}_b \equiv_4 D \textsf{S} [Y_b]\). The kernel identities
+      above give (b), preserving the trace and antisymmetric parts as
+      differences. Work after stage \(j \geqslant 7\) and choose \(0 < a <
+      c_j\), with \(c_j\) the kernel decay exponent of Lemma <a href="11-gauges-and-block-integration.html#lem:B3">11.6</a>.
+      Its kernel bound applies through polynomial degree three. Divide the
+      order-\(r\) current defect by \((\log \hat{\beta}_m)^r\). At orders \(r
+      = 3, 4\), the linearized stationary fields contribute \(\ell^{- 2}\)
+      each, so transfer costs \(C_j \ell^{5 - 2 r}\). At order two the matched
+      low-momentum terms must first be removed. The affine and quadratic parts
+      of a stationary test field have weighted sizes \(C_j  (1 + |x|) /
+      \ell^2\) and \(C_j  (1 + |x|)^2 / \ell^3\); the remainder is at most
+      \(C_j  (1 + |x|)^3 / \ell^4\), by Lemmas <a href="11-gauges-and-block-integration.html#lem:B3">11.6</a> and <a href="11-gauges-and-block-integration.html#lem:B5">11.9</a>.
+      Without the subtraction, the affine&ndash;affine and
+      affine&ndash;quadratic products, with factors \(\ell^{- 4}\) and
+      \(\ell^{- 5}\), would cost \(\ell\) and \(1\) after multiplication by
+      \(\ell^5\), and transfer would not contract them. Subtracting them
+      leaves quadratic&ndash;quadratic and affine&ndash;remainder products,
+      each with factor \(\ell^{- 6}\). Multiplication by \(\ell^5\) gives
+      \(C_j / \ell\). A bounded matched contribution gives the additional
+      \(C_j / (\log \hat{\beta}_m)^2\). More precisely the order-two factor is
+      bounded by
+    </p>
+    <center>
+      \(\displaystyle C_j  \left\{ \frac{1}{(\log \hat{\beta}_m)^2} +
+      \frac{(\log \hat{\beta}_{m +
+1})^2 + 1}{\ell_m (\log \hat{\beta}_m)^2}
+      \right\} .\)
+    </center>
+    <p>
+      Both terms are small once the ratio and the coupling are large. Thus the
+      three orders gain for different reasons: \(\ell^{- 3}\) at order four,
+      \(\ell^{- 1}\) at order three, and at order two the two displayed terms,
+      after the subtraction. Nonlinear chain-rule partitions involve fewer
+      than \(r\) derivatives and gain inverse logarithmic powers. So one
+      transfer maps the vector of normalized defects of orders \(2, 3, 4\) by
+      a lower-triangular matrix: its diagonal entries are the factors just
+      computed, and the entries below the diagonal, which carry the defects of
+      lower orders, contain a quotient \((\log \hat{\beta}_{m + 1})^{r'} /
+      (\log \hat{\beta}_m)^r\) with \(r' < r\). Choose each ratio large, then
+      its entry coupling large; every entry is then small, and the map
+      contracts by \(1 / 2\). After \(n_{\text{step}}\) transfers the
+      normalized defects are \(O (2^{- n_{\text{step}}})\).
+    </p>
+    <p>
+      <em>The finite coefficient.</em> At level \(k\) set \(h_k = (\log \log
+      \hat{\beta}_k)^2\) and use \(M_k = M^{\text{cut}}_k\). Define
+      \(\text{Tay}_{5, k} = t_k^{- 2} t_k^{\textsf{N}} \text{Tay}_5\),
+      followed by real \(H_4\) averaging. Haar integration by parts in the
+      density gives the degree-five coefficient in the form
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I-five-pieces"></a>\(\displaystyle \Sigma_k = \text{Tay}_{5,
+        k} (\text{div}_{\text{Haar}} \hspace{0.17em} Y -
+D\mathcal{L}_k [Y]) +
+        \varepsilon_{\text{stat}} + \varepsilon_{\text{tail}}
+        +
+\varepsilon_{\text{cl}} + \varepsilon_{\text{mark}} \hspace{0.17em}
+        .\)</td>
+        <td align="right">(18.9)</td>
+      </tr>
+    </table>
+    <p>
+      Here \(\mathcal{L}_k\) is the quadratic loop action of Definition <a
+      href="12-path-actions-and-the-one-loop-coupling.html#def:D23">12.2</a> at level \(k\). The errors are stationary substitution,
+      omitted loop paths, the classical defect and the marked remainder. Each
+      has norm at most \(e^{- h_k}\): truncate stationary kernels and loop
+      paths at \(C_j (\log \hat{\beta}_k)^2\), using the kernel decay in the
+      proof of Lemma <a href="11-gauges-and-block-integration.html#lem:B3">11.6</a> and the path bound of Lemma <a href="12-path-actions-and-the-one-loop-coupling.html#lem:C1">12.3</a>.
+      These exponential tails bound \(\varepsilon_{\text{stat}}\) and
+      \(\varepsilon_{\text{tail}}\) after the finite projection losses. The
+      activity caps <class style="font-style: normal">(<a href="5-the-renormalization-group.html#eq:I12-activity-caps">5.12</a>)</class> and the
+      threshold <class style="font-style: normal">(<a href="5-the-renormalization-group.html#eq:I12-scales">5.2</a>)</class> bound
+      \(\varepsilon_{\text{cl}}\) in the seminorm of Definition <a href="5-the-renormalization-group.html#def:D05a">5.3</a>:
+    </p>
+    <center>
+      \(\displaystyle t_k^{- 2} \epsilon_k^{\text{reg}} = \hat{\beta}_k^{- 1 /
+      10} M_k^{- 2}
+\hspace{0.17em} .\)
+    </center>
+    <p>
+      For \(\varepsilon_{\text{mark}}\), Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.2a">14.9</a> cancels the
+      radial Taylor coefficients through degree five on nonwrapping supports.
+      The Taylor remainder has an additional small-field factor, at most one
+      after entry. The fixed projection and localization powers of \(M_k\)
+      therefore give \(C_j \hat{\beta}_k^{- \eta_j} M_k^{C_j}\) with \(\eta_j
+      = 1 / 10\). For the forced term, Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.2">14.7</a> leaves
+      \((\epsilon_k^{\text{for}})^{1 / 2} = e^{- M_k^{1 / 5} / 2}\), and Lemma
+      <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.2a">14.9</a> retains the original eligibility event. Thus the bound
+      is \(C_j \hat{\beta}_k^{- \eta_j} M_k^{C_j} + C_j \hat{\beta}_k^{C_j}
+      e^{- M_k^{1 /
+5} / 2}\) after the finite projection losses. A wrapping
+      support reaches distance \(n_{p, k} / 10\) from its anchor, where
+      \(n_{p, k} = L_p D_k\), so its covering number is at least \(n_{p, k} /
+      [10 (2 B_k + 1)] - 1\). Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.2">14.7</a> at support exponent
+      \(98\), at which the scale choices of Section <a href="14-trajectories-marked-fields-and-ultraviolet.html#sec:partII-E.1">14.1</a> retain
+      its estimates, bounds its projected contribution by
+    </p>
+    <center>
+      \(\displaystyle C_j \hat{\beta}_k^{C_j} M_k^{C_j} \exp \hspace{-0.17em}
+      \left\{ - \frac{n_{p,
+k}}{5 (2 B_k + 1)} + 2 \right\} \hspace{0.17em}
+      .\)
+    </center>
+    <p>
+      The wrapping bound vanishes on the ordered period tails at fixed \(k\).
+      The nonwrapping bounds are \(o (e^{- h_k})\) after entry, because \(M_k
+      = e^{h_k}\) grows more slowly than every power of \(\hat{\beta}_k\) but
+      its fifth root eventually exceeds every power of \(\log \hat{\beta}_k\).
+      Indeed, with \(x = \log \log \hat{\beta}_k\), so that \(h_k = x^2\), the
+      normalization of \(\varepsilon_{\text{cl}}\) above is \(e^{- 2 h_k}
+      \hat{\beta}_k^{- 1 / 10}\), and
+    </p>
+    <center>
+      \(\displaystyle e^{h_k} C_j \hat{\beta}_k^{- \eta_j} M_k^{C_j} = C_j
+      e^{(C_j + 1) x^2 - e^x /
+10}, \qquad e^{h_k} C_j \hat{\beta}_k^{C_j}
+      e^{- M_k^{1 / 5} / 2} \leqslant
+C_j e^{C_j e^x + x^2 - e^{2 x} / 2} 
+      \quad (x \geqslant 10),\)
+    </center>
+    <p>
+      using \(M_k^{1 / 5} = e^{x^2 / 5} \geqslant e^{2 x} = (\log
+      \hat{\beta}_k)^2\) for \(x \geqslant 10\). Both tend to zero.
+    </p>
+    <p>
+      The loop term in <class style="font-style: normal">(<a href="#eq:I-five-pieces">18.9</a>)</class> has zero
+      \(\rho_{\text{tr}}\) coefficient. If \(H_{\text{loop}}\) is its
+      quadratic link kernel, differentiation of \(D\mathcal{L}_k [Y]\) pairs
+      \(H_{\text{loop}}\) with \(DY\). The cubic momentum test is a sum of
+      pairings of constant and quadratic polynomial links and of two affine
+      polynomial links. Constant links are pure gauge; \(H_{\text{loop}}\)
+      also kills affine links by both moment cancellations of Lemma <a href="12-path-actions-and-the-one-loop-coupling.html#lem:C2">12.4</a>.
+      Thus every pairing vanishes. The lattice correction in \(\mathfrak{h}\)
+      is the corresponding correction to this Taylor coefficient. Choose the
+      transfer depth and period at this fixed \(k\) so that \(\mathfrak{h}
+      (Y)\) differs from \(- 12 \kappa_G\) by at most \(\hat{\beta}_k^{-
+      100}\), using Lemma <a href="#lem:I-regulator">18.5</a>. Choose the momentum-Taylor
+      approximation to its finite local Taylor coefficient within
+      \(\hat{\beta}_k^{- 30}\). The exact Taylor-coefficient identity gives
+      the factor \(1 / 12\) for the twelve ordered transverse planes. Delayed
+      entry bounds the retained loops \(2 M_k^{\theta_{J_k}}\) and stage
+      losses by \(M_k^{1 / 6}\). Therefore
+    </p>
+    <center>
+      \(\displaystyle \| \Sigma_k \| \leqslant CM_k^{1 / 6}, \qquad |
+      \rho_{\text{tr}} (\Sigma_k)
+-\mathfrak{h}(Y) / 12| \leqslant 4 \|
+      \rho_{\text{tr}} \| e^{- h_k} +
+\hat{\beta}_k^{- 30} / 12
+      \hspace{0.17em} .\)
+    </center>
+    <p>
+      At fixed \(k\), take any joint ordered limit point of the bounded
+      coefficient families along the ordered tails <class style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E2-tails">14.28</a>)</class>,
+      and denote its real averaged coefficient by \(\Sigma_k\). All closed
+      bounds survive; \(S\) and the maps converging in the proof of Lemma <a
+      href="15-infinite-volume-and-field-calculus.html#lem:F2">15.5</a> retain their fixed limits. Thus \(\rho_{\text{tr}}
+      (\Sigma_k) \to - \kappa_G\) and \(\| \Sigma_{k_i} \| \leqslant CR_i\).
+    </p>
+    <p>
+      <em>The equation direction.</em> Let \(s_i : R_5 \to V_5\) be
+      degree-five marked transport followed by \(\beta_i r_i^5 (\textsf{U}_{i,
+      5}^{\text{sc}})^{- 1}\). Let \(j_i\) be the raw coefficient of the
+      transferred current's divergence after the same threshold normalization.
+      At fixed \(k\), the Taylor coefficient of the local current has zero
+      \(\rho_{\text{tr}}\) component by <class style="font-style: normal">(<a href="#eq:I-rho">18.3</a>)</class>:
+      simplicity makes the degree-three Taylor coefficient of its trace a
+      unit, whose forward difference vanishes. The stationary and marked
+      remainder estimates compare the transported coefficient with this Taylor
+      coefficient within \(Ce^{- h_k / 4}\). Include the current components in
+      the joint ordered limit point, denoting their value by \(j (k)\).
+      Closedness preserves \(| \rho_{\text{tr}} (j (k)) | \leqslant Ce^{- h_k
+      / 4}\) for every such value. With \(j_i = j (k_i)\), Taylor matching
+      consequently gives
+    </p>
+    <center>
+      \(\displaystyle j_i \to - v_{\text{eom}}, \quad | \rho_{\text{tr}} (j_i)
+      | \leqslant Ce^{-
+h_{k_i} / 4}, \quad v_i^{\text{eq}} = \beta_i^{- 1}
+      \Sigma_{k_i} - j_i \to
+v_{\text{eom}} \hspace{0.17em} .\)
+    </center>
+    <p>
+      In particular \(E_i \rho_{\text{tr}} (v_i^{\text{eq}}) \to 0\), since
+      \(E_i / \beta_i \to 0\) and \(\rho_{\text{tr}} (\Sigma_{k_i})\) is
+      bounded. It remains to show \(b_i^p s_i (v_i^{\text{eq}}) \to 0\) for
+      every \(p\); this takes four steps.
+    </p>
+    <p>
+      <em>Step 1: exterior moments vanish.</em> Localize \(\Sigma_{k_i} -
+      \beta_i j_i\) before transport, with a fixed degree-four spectator. Its
+      exterior moment is zero by Haar integration by parts, since the varied
+      link is outside the spectator stencil.
+    </p>
+    <p>
+      <em>Step 2: the spatial tail is small.</em> Let \(v_X\) be regular
+      majorants rooted at the insertion anchor and \(c_X = \text{cov}_{B_k}
+      (X)\). The support exponent in Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.2">14.7</a> is \(\sigma_j =
+      100\) (item <a href="14-trajectories-marked-fields-and-ultraviolet.html#it:E-columns">1</a> of Section <a href="14-trajectories-marked-fields-and-ultraviolet.html#sec:partII-E.1">14.1</a>). Thus, for
+      every \(q > 0\),
+    </p>
+    <center>
+      \(\displaystyle \sum_{c_X \geqslant q} e^{98 c_X} v_X \leqslant e^{- 2
+      q}  \sum_X e^{100 c_X}
+v_X .\)
+    </center>
+    <p>
+      The same inequality holds for the normalized forced majorants. Since
+      every nonzero marked support contains its anchor, a connected term
+      reaching a spectator at distance \(R\) in level-\(k\) units has \(c_X
+      \geqslant R / (2 B_k + 1) - 1\). Shorter terms retain the zero exterior
+      moment.
+    </p>
+    <p>
+      <em>Step 3: the matched residual is \(e^{- H_n / 100}\).</em> Use <class
+      style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E-backward-match-level">14.34</a>)</class>, starting at \(k (n)\) and ending at
+      \(n \geqslant m_{\text{ref}} (5)\), and replicate by <class style="font-style: normal">(<a
+      href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E-residual-root">14.25</a>)</class>. Across logarithmic length \(H_n = (\log
+      \hat{\beta}_n)^{48}\) the matching gain is \(e^{- H_n / 8}\). The fixed
+      degree-five projections, threshold factors and transport columns cost
+      \(e^{o (H_n)}\): the logarithms of the threshold costs are \(O (\log
+      \hat{\beta}_n)\), and the column cost is bounded by \(H_n \sup_{m
+      \geqslant n} J_m^{- 2}\). Fix the tiling level \(m = m (n) < n\) by the
+      first backward crossing of \(B_n^2\); eventually \(m (n) \geqslant
+      m_{\text{ref}} (5)\). If \(\ell = \max_{m \leqslant v < n} \ell_v\),
+      then
+    </p>
+    <center>
+      \(\displaystyle B_n^2 \leqslant a_m / a_n \leqslant \ell B_n^2, \qquad
+      (a_m / a_n)^4 q_n + 6
+\leqslant \ell^4 B_n^8 q_n + 6 = o (H_n)
+      \hspace{0.17em} .\)
+    </center>
+    <p>
+      Indeed \(\ell \leqslant \log \hat{\beta}_n\) and \(B_n = O ((\log
+      \hat{\beta}_n)^2)\). Also \(q_n = O ((\log \hat{\beta}_n)^2)\) uniformly
+      by <class style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E-vacuum-majorant">14.1</a>)</class>, since the stage-cost bound
+      in the order of choice (Section <a href="9-constants-and-order-of-choice.html#sec:constants">9</a>) gives \(1 +
+      A^{\text{path}}_{J_n} \leqslant \ell_{n - 1} \leqslant \log
+      \hat{\beta}_n\), and \(c_{\text{dir}, j} \leqslant 1\). Their product is
+      \(O ((\log \hat{\beta}_n)^{22}) = o (H_n)\). The source tolerances
+      \(\zeta_{e, k} = \hat{\beta}_k^{- (q^{\text{ht}}_e + 4)}\) fixed in
+      Section <a href="14-trajectories-marked-fields-and-ultraviolet.html#sec:partII-E">14</a> before <class style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E-attachment-allowance">14.6</a>)</class>
+      give \(\log \zeta_{e, n}^{- 1} = O (\log \hat{\beta}_n) = o (H_n)\), so
+      their factor in <class style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E-residual-root">14.25</a>)</class> also costs
+      \(e^{o (H_n)}\). The support tail of Step 2 is smaller, since \(R\)
+      grows exponentially in \(H_n\). At radius level \(n\), multiplication of
+      the physical two-point error by \(a_n^5\) cancels the factor \(a_n^{-
+      5}\) in the replicated mark weight. The resulting bound is
+    </p>
+    <center>
+      \(\displaystyle \exp \{- H_n / 8 + o (H_n)\} \leqslant e^{- H_n / 100}\)
+    </center>
+    <p>
+      after entry.
+    </p>
+    <p>
+      <em>Step 4: rescaling to the radii.</em> To pass to the full radius
+      normalization multiply by \((r_i / a_{n_i})^5\). We may require \(u_i
+      \leqslant \log \log \hat{\beta}_{n_i}\) in the diagonal extraction. The
+      extra scaling factor is then at most \(\exp (5 (\log \log
+      \hat{\beta}_{n_i})^3)\), while \(b_i / \hat{\beta}_{n_i} \to 1\). Thus
+      each rescaled evaluation after multiplication by \(b_i^p\) is bounded by
+    </p>
+    <center>
+      \(\displaystyle Cb_i^p \exp \{5 (\log \log \hat{\beta}_{n_i})^3 -
+      H_{n_i} / 100\}
+\longrightarrow 0 \hspace{0.17em} .\)
+    </center>
+    <p>
+      Finite separating free two-point tests give \(b_i^p s_i
+      (v_i^{\text{eq}}) \to 0\).
+    </p>
+    <p>
+      <em>Stability.</em> In the coordinates of <class style="font-style: normal">(<a href="#eq:I-rho">18.3</a>)</class>,
+      let \(e_1, e_2, e_3\) be the standard basis of \(R_5\), and choose \(C =
+      \text{span} (e_1, e_2)\) as a complement of \(\ker s =\mathbb{R}e_3\).
+      Lemma <a href="#lem:I-complement">18.7</a> reduces the construction of convergent right
+      inverses to the two column limits
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I-raw-columns"></a>\(\displaystyle s_i e_1 \longrightarrow
+        se_1, \qquad s_i e_2 \longrightarrow se_2 .\)</td>
+        <td align="right">(18.10)</td>
+      </tr>
+    </table>
+    <p>
+      These are statements about the actual normalized marked map, not merely
+      the quotient correlations of Lemma <a href="#lem:I-radii">18.3</a>. They require a
+      comparison of the selected degree-five raw coefficients on the same
+      history, keeping the threshold, coupling and radius-frame
+      normalizations. The later comparison with tensor divergences also
+      requires the degree-four and degree-five marked extractions and their
+      finite differences to be matched, including centering. These
+      implications remain open. Conditional on <class style="font-style: normal">(<a href="#eq:I-raw-columns">18.10</a>)</class>,
+      Lemmas <a href="#lem:I-complement">18.7</a> and <a href="#lem:I-stability">18.6</a>, with \(v_i =
+      v_i^{\text{eq}}\), \(\rho = \rho_{\text{tr}}\) and \(e_i = E_i \leqslant
+      b_i\), give \(s_i \to s\), bounded \(\lambda_i = \rho_{\text{tr}} t_i\)
+      and \(\| \lambda_i s_i - \rho_{\text{tr}} \| = o (E_i^{- 1})\). The
+      remaining comparison uses the transported raw source \(j_i^{\Upsilon}
+      \in R_5\) for each \(\Upsilon = \Xi, D\). Put \(w_{\Upsilon} =
+      \text{div}_{\text{raw}} \hspace{0.17em} \Upsilon\) and
+      \(\delta_i^{\Upsilon} = K_i B_i^{\Upsilon} - s_i j_i^{\Upsilon}\). The
+      required same-history estimates are
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I-transported-source"></a>\(\displaystyle j_i^{\Upsilon} \to
+        w_{\Upsilon}, \qquad E_i  [\rho_{\text{tr}}
+(j_i^{\Upsilon}) -
+        \rho_{\text{tr}} (w_{\Upsilon})] \to 0, \qquad E_i
+        \|
+\delta_i^{\Upsilon} \| \to 0.\)</td>
+        <td align="right">(18.11)</td>
+      </tr>
+    </table>
+    <p>
+      They and the comparison \(\beta_i K_i B_i^L - s_i \Sigma_{k_i} \to 0\)
+      remain conditional on the corresponding marked and finite-difference
+      inputs. In particular, <class style="font-style: normal">(<a href="#eq:I-transported-source">18.11</a>)</class> does
+      not assert a rate for the whole difference \(j_i^{\Upsilon} -
+      w_{\Upsilon}\). Given these estimates, \(K_i B_i^{\Upsilon} \to
+      sw_{\Upsilon} = \text{div}^{\text{Max}} \hspace{0.17em}
+\Upsilon\); also
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  E_i  [\lambda_i (K_i B_i^{\Upsilon})
+      - \rho_{\text{tr}} (w_{\Upsilon})] = &
+  E_i  (\lambda_i s_i -
+      \rho_{\text{tr}}) (j_i^{\Upsilon}) + E_i 
+  [\rho_{\text{tr}}
+      (j_i^{\Upsilon}) - \rho_{\text{tr}} (w_{\Upsilon})]\\
+  & + E_i
+      \lambda_i (\delta_i^{\Upsilon}) \longrightarrow 0.
+\end{array}\)
+    </center>
+    <p>
+      The first term tends to zero because the \(j_i^{\Upsilon}\) are bounded,
+      and the last because the \(\lambda_i\) are bounded. The accuracy of the
+      readout is fixed before it meets the growing coefficient: in
+    </p>
+    <center>
+      \(\displaystyle \lambda_i  (\beta_i K_i B_i^L) = \rho_{\text{tr}}
+      (\Sigma_{k_i}) + (\lambda_i
+s_i - \rho_{\text{tr}}) (\Sigma_{k_i}) +
+      \lambda_i  (\beta_i K_i B_i^L - s_i
+\Sigma_{k_i}),\)
+    </center>
+    <p>
+      the first term tends to \(- \kappa_G\), the second is \(o (E_i^{- 1})
+      \cdot O (R_i)\) and the third tends to zero because the \(\lambda_i\)
+      are bounded. Since \(\|s_i \Sigma_{k_i} \| \leqslant CR_i\) and \(R_i /
+      E_i \to 0\), this and the three-term formula for \(\Upsilon = \Xi, D\)
+      give <class style="font-style: normal">(<a href="#eq:I-divergence">18.7</a>)</class>, conditional on the
+      inverse, equation-direction and transported-source estimates above.
+    </p>
+    <p>
+      <em>Tensor traces.</em> Taylor matching gives \(\textsf{A}_i
+      B_i^{\Upsilon} \to \Upsilon\). Since \(L\) is traceless, this alone
+      gives only \(\text{tr} (\textsf{A}_i B_i^L) \to 0\), without a rate.
+      Proposition <a href="#prop:I-coefficient">18.9</a> multiplies this trace by \(\beta_i\), so a
+      rate is required. It does not come from the readout functionals; it
+      comes from the structure of the trace, as follows. The trace of \(\Xi\)
+      is zero; the transferred trace of \(L\) is a forward difference. Its
+      degree-three projection is a unit, since simplicity leaves no
+      nonconstant invariant below degree four. For the degree-three stencil
+      and its degree-four difference, fix \(k_0\) so late that its backward
+      crossing \(m_0 = m (k_0)\) satisfies \(m_{\text{ref}} (4) \leqslant m_0
+      < k_0\) and \(B_{k_0}^2 \leqslant a_{m_0} / a_{k_0}\). Match at
+      \(m_{\text{ref}} (4)\), stop at \(k_0\) and replicate at the fixed pair
+      \((m_0, k_0)\). Equations <class style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E-backward-match-level">14.34</a>)</class> and
+      <class style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E-residual-root">14.25</a>)</class> give
+    </p>
+    <center>
+      \(\displaystyle C_{k_0} e^{- (s_k - s_{k_0}) / 8} = O (a_k^{1 / 8})
+      \hspace{0.17em} .\)
+    </center>
+    <p>
+      The constant includes the reciprocal source tolerance, thresholds and
+      \(\exp \{(a_{m_0} / a_{k_0})^4 q_{k_0} + 6\}\). Coefficient conversions
+      grow as \(e^{o (s_k)}\), giving endpoint error \(O (a_k^{\eta_0})\) for
+      any fixed \(0 < \eta_0 < 1 / 8\) after entry. Truncating the support
+      sums above at \(c_X = \eta_0 s_k\) leaves a tail at most \(a_k^{2
+      \eta_0}\), and decreasing \(\eta_0\) absorbs all finite losses. This
+      estimate is uniform for endpoints in a fixed small neighbourhood of the
+      separating tests. Average the degree-four difference over \(m = \lfloor
+      a_k^{- 1 + \eta_0 / 2} \rfloor\) consecutive sites. In physical units
+      the average of \(m\) consecutive forward differences telescopes to the
+      difference of the two endpoint values divided by the window length
+      \(ma_k\). The unit parts of the two endpoints are equal and cancel,
+      leaving at most twice the endpoint error; and \(ma_k \to 0\), so the
+      window shrinks to a point. Thus
+    </p>
+    <center>
+      \(\displaystyle \frac{2 Ca_k^{\eta_0}}{ma_k} = O (a_k^{\eta_0 / 2}),
+      \qquad ma_k = O
+(a_k^{\eta_0 / 2}) \longrightarrow 0.\)
+    </center>
+    <p style="margin-bottom: 1em">
+      The averaged testing functionals converge to the original separating
+      functionals by smoothness, so a finite separating matrix still has a
+      bounded left inverse. They therefore bound the trace coefficient by \(O
+      (a_k^{\eta_0 / 2})\). Subexponential inverse transport preserves \(o
+      (b_i^{- p})\) for every \(p\), proving the trace assertion in <class
+      style="font-style: normal">(<a href="#eq:I-tensor">18.8</a>)</class>; Lemma <a href="#lem:I-radii">18.3</a> gives its
+      coupling assertion.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      Conservation converts these divergence estimates into the scalar
+      coefficient.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Proposition <class style="font-style: normal">18.9</class>.
+        </strong><i><class style="font-style: normal"><strong>(Scalar trace coefficient)
+        </strong></class><a id="prop:I-coefficient"></a> Along the radii of Lemma <a href="#lem:I-radii">18.3</a>,</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><table width="100%">
+          <tr>
+            <td align="center" width="100%"><a id="eq:I-coefficient"></a>\(\displaystyle \beta_i r_i^4
+            (\textsf{U}_{i, 4}^{\text{sc}})^{- 1} \Theta \longrightarrow
+            -
+\kappa_G \mathcal{O}_{F^2} \hspace{0.17em} .\)</td>
+            <td align="right">(18.12)</td>
+          </tr>
+        </table></i>
+      </div>
+    </div>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>The deduction below uses Lemma <a href="#lem:I-transfer">18.8</a>,
+      whose raw right-inverse convergence remains open as noted in its proof.
+      Subject to that interface, we cancel the divergence of \(\beta_i B_i^L\)
+      with the two other tensors, read the trace coefficient with
+      \(\lambda_i\), and identify the resulting conserved tensor with \(T\)
+      through the conserved line of Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G2.2">16.10</a> and the
+      normalized shell Ward identities of Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G3.2">16.18</a>. The free
+      divergences of \(\Xi, D\) are independent: a kernel combination would be
+      a multiple of \(L\), impossible in these two tensor coordinates (Lemma
+      <a href="16-free-fields-ward-identities-and-rotations.html#lem:G1.1">16.1</a>). Thus \(f_i : \mathbb{R}^2 \to V_5\), \(f_i (c) = c_0
+      K_i B_i^{\Xi} + c_1 K_i B_i^D\), are eventually invertible with bounded
+      inverses by <class style="font-style: normal">(<a href="#eq:I-divergence">18.7</a>)</class>. Set \(c_i = -
+      f_i^{- 1}  (\beta_i K_i B_i^L)\). Then \(|c_i | \leqslant CR_i\) and
+    </p>
+    <center>
+      \(\displaystyle X_i = \beta_i B_i^L + c_{i, 0} B_i^{\Xi} + c_{i, 1}
+      B_i^D\)
+    </center>
+    <p>
+      is conserved. Applying \(\lambda_i\) to its zero divergence gives the
+      exact identity
+    </p>
+    <center>
+      \(\displaystyle 4 c_{i, 1} = \lambda_i  (\beta_i K_i B_i^L) + c_{i, 0}
+      \lambda_i  (K_i
+B_i^{\Xi}) + c_{i, 1}  [\lambda_i (K_i B_i^D) + 4]
+      \hspace{0.17em} .\)
+    </center>
+    <p>
+      The last two terms are \(O (R_i) \cdot o (E_i^{- 1})\) by <class style="font-style: normal">(<a
+      href="#eq:I-divergence">18.7</a>)</class> and <class style="font-style: normal">(<a href="#eq:I-rho">18.3</a>)</class>;
+      since \(R_i / E_i \to 0\) they vanish, and \(c_{i, 1} \to - \kappa_G / 4
+      = d_2\), where \(d_2 = - b_0 / 2\) is the trace coefficient of Section
+      <a href="6-the-continuum-limit-stress-phases-trace-and.html#sec:trace-products">6.4</a>.
+    </p>
+    <p>
+      Equation <class style="font-style: normal">(<a href="#eq:I-tensor">18.8</a>)</class> and \(R_i / \beta_i
+      \to 0\) give \(r_i^4 (\textsf{U}_{i, 4}^{\text{sc}})^{- 1} X_i \to L\).
+      For its weighted trace, the common amplification \(\textsf{A}_i =
+      \beta_i r_i^4 (\textsf{U}_{i, 4}^{\text{sc}})^{- 1}\) gives
+    </p>
+    <center>
+      \(\displaystyle \beta_i \text{tr} (r_i^4 (\textsf{U}_{i,
+      4}^{\text{sc}})^{- 1} X_i) = \beta_i
+\text{tr} (\textsf{A}_i B_i^L) +
+      c_{i, 0} \text{tr} (\textsf{A}_i B_i^{\Xi}) +
+c_{i, 1} \text{tr}
+      (\textsf{A}_i B_i^D) .\)
+    </center>
+    <p>
+      The first two terms tend to zero by <class style="font-style: normal">(<a href="#eq:I-tensor">18.8</a>)</class>,
+      \(\beta_i / b_i \to 1\) and \(|c_i | \leqslant CR_i = o (b_i)\); the
+      last tends to \(4 d_2 \mathcal{O}_{F^2}\). Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G2.2">16.10</a> now
+      gives \(X_i = \nu_i T\) with \(\nu_i \in \mathbb{R}\): the tensors
+      \(X_i\) are centered in the mixture by construction, and Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G3.2">16.18</a>
+      gives the centered, nonzero tensor \(T\). By Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G1.1">16.1</a>,
+      choose \(A \in M_4^{\text{Max}}\), a separating spectator functional
+      \(o\), and an axis \(b\) with \(y = o (\partial_b^{\text{Max}} A) \ne
+      0\). For these fixed tests the flux of \(r_i^4 (\textsf{U}_{i,
+      4}^{\text{sc}})^{- 1} X_i\) tends to the flux of \(L\), namely \(y\), by
+      Lemma <a href="#lem:I-radii">18.3</a>. The flux of \(T\), multiplied by \(r_i\), tends
+      to \(y\) by the normalized Ward identity of Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G3.2">16.18</a> and
+      the jet limit of Lemma <a href="#lem:I-radii">18.3</a>. The first flux is \(\nu_i\)
+      times the second. Dividing by the latter proves \(\nu_i \to 1\). This
+      gives the weighted trace limit for \(T\).
+    </p>
+    <p style="margin-bottom: 1em">
+      Finally \(\Theta = \sum_a T_{aa} - e_{\text{tr}} \boldsymbol{1}_4\) and
+      \((\textsf{U}_{i, 4}^{\text{sc}})^{- 1} \boldsymbol{1}_4
+      =\boldsymbol{1}_4\). The extra term has size \(|e_{\text{tr}} | \beta_i
+      r_i^4 \to 0\) by <class style="font-style: normal">(<a href="#eq:I-adjustable">18.1</a>)</class>.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <div style="margin-top: 1em; margin-bottom: 1em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em"><center>
+            <img class="image" height="147.236259714852" src="../main-figures/fig-19.svg" width="409.58606477919125"></img><a id="fig:I-squeeze"></a> 
+          </center></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; height: 0.5em"></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><div class="caption">
+            <font style="font-size: 84.1%"><p>
+              <b>Figure 18. </b><a id="auto-124"></a>The squeeze. Only \(G_{\Theta}\) is
+              monotone (Lemma <a href="#lem:I1.2">18.2</a>). For lattice-rounded
+              separations \(t_{i, \pm} \to t_{\pm}\), \(t_- < 1 < t_+\), the
+              outer values, times \(r_i^8 \log^2 (1 / r_i)\), tend to \(A_G
+              t_{\pm}^{- 8}\) along the radii of Lemma <a href="#lem:I-radii">18.3</a>;
+              letting \(t_{\pm} \to 1\) gives the limit \(A_G\). Every null
+              sequence has such a subsequence.
+            </p></font>
+          </div></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof of Theorem <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:TR">6.18</a>. </strong>The
+      phase-table reflection identity E2 of Definition <a href="2-definitions.html#def:E1-E3">2.9</a> and
+      the reality of \(T\) in Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G3.2">16.18</a> make \(e_{\text{tr}}\)
+      real. Lemmas <a href="16-free-fields-ward-identities-and-rotations.html#lem:G3.1">16.17</a>, <a href="16-free-fields-ward-identities-and-rotations.html#lem:G3.2">16.18</a> and <a href="17-phases-and-reconstruction.html#lem:H2.4">17.11</a>
+      show that \(\Theta\) is real and \(O (4)\) invariant and that its
+      continued label is Hermitian and Lorentz scalar. Lemma <a href="#lem:I1.1">18.1</a>
+      gives vacuum centering. For the asymptotic, take any prescribed positive
+      null sequence and the subsequence in <class style="font-style: normal">(<a href="#eq:I-adjustable">18.1</a>)</class>.
+      By Proposition <a href="#prop:I-coefficient">18.9</a>, the phase comparison, and the free
+      normalization in Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G1.1">16.1</a>, every generic pair \(x = (x_0,
+      x_1)\) with \(|x| < 100\) and \(\text{sep}_{\infty} (x) > 1 / 100\),
+      with \(x^{(i)} \in r_i^{- 1} a_{n_i} \mathbb{Z}^4\) nearest to \(x\),
+      satisfies
+    </p>
+    <center>
+      \(\displaystyle r_i^8 \log^2 (1 / r_i) G_{\Theta} (r_i |x_0^{(i)} -
+      x_1^{(i)} |)
+\longrightarrow \frac{A_G}{|x_0 - x_1 |^8} \hspace{0.17em}
+      .\)
+    </center>
+    <p>
+      Translation and \(O (4)\) invariance (Lemma <a href="17-phases-and-reconstruction.html#lem:H1.3">17.3</a>) give
+      \(S_2^{\xi_{\ast}}  (\Theta, \Theta ; rx_0, rx_1) = G_{\Theta} (r|x_0 -
+      x_1 |)\). Here \(\kappa_G^{- 2} (4 d_2)^2 = 1\), so the amplitude does
+      not depend on \(\kappa_G\).
+    </p>
+    <p style="margin-bottom: 1em">
+      Take \(x_0 = 0\) and \(x_1 = (t / 2, t / 2, t / 2, t / 2)\), with \(1 /
+      2 < t < 2\). This pair is generic and has distance \(t\). Monotonicity
+      from Lemma <a href="#lem:I1.2">18.2</a> bounds the lower limit at radius \(r_i\) by
+      \(A_G / t^8\) for \(t > 1\), and the upper limit by that expression for
+      \(t < 1\) (Figure <a href="#fig:I-squeeze">18</a>). Let \(t \to 1\). The limit along
+      this subsequence is \(A_G\). The subsequence criterion gives the
+      full-radius limit. Here \(A_G = 3 d_{\mathfrak{g}} / \pi^4 > 0\) since
+      \(d_{\mathfrak{g}} \geqslant 1\); identifying it uses \(d_2 = - \kappa_G
+      / 4 \ne 0\). Thus \(\Theta \ne 0\).<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      The following high-energy law follows from Theorem <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:TR">6.18</a> and
+      Lemma <a href="#lem:I1.2">18.2</a>, as proved below.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">18.10</class>. </strong><i><class
+        style="font-style: normal"><strong>(High-energy trace limit) </strong></class><a id="lem:I1.3"></a>
+        For every \(\varphi \in C_c  (\mathbb{R}^4 ; \mathbb{C}) \cup
+        \mathcal{S}\),</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle \lim_{R_{\text{E}} \to \infty} R_{\text{E}}^{- 8}
+          (\log R_{\text{E}})^2  \int
+\varphi (\mathbf{p}/ R_{\text{E}}) 
+          \hspace{0.17em} d \mu_{\Theta}
+(\mathbf{p}) = \frac{A_G}{1536 \pi} 
+          \int_{\bar{V}_+} \textsf{m}
+(\mathbf{p})^2 \varphi (\mathbf{p}) 
+          \hspace{0.17em} d^4 \mathbf{p}
+\hspace{0.17em} .\)
+        </center></i>
+      </div>
+    </div>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>The rescaled spectral measures are
+      controlled through their Laplace transforms, which the trace law
+      determines (Definition <a href="6-the-continuum-limit-stress-phases-trace-and.html#def:D16">6.17</a>, Lemma <a href="#lem:I1.2">18.2</a>). Put
+      \(\nu_{R_{\text{E}}} = R_{\text{E}}^{- 8} \log^2 R_{\text{E}}
+      \hspace{0.17em}
+\mu_{\Theta} (R_{\text{E}} \hspace{0.17em} \cdot)\). For
+      every future timelike Laplace covector \(u\), with the Euclidean pairing
+      \(u \cdot \mathbf{p}\) of item <a href="2-definitions.html#def:W0">W0</a> of Definition <a href="2-definitions.html#def:wightman">2.14</a>,
+      which is the Minkowski pairing of \(\mathbf{p}\) with the future
+      timelike \((- u^1, - u^2, - u^3, u^4)\), Lorentz invariance reduces its
+      transform to the time-axis transform at \(s = \sqrt{\textsf{m} (u)}\).
+      Hence
+    </p>
+    <center>
+      \(\displaystyle \int e^{- u \cdot \mathbf{p}}  \hspace{0.17em} d
+      \nu_{R_{\text{E}}} =
+R_{\text{E}}^{- 8} \log^2 R_{\text{E}}
+      \hspace{0.17em} G_{\Theta} (s /
+R_{\text{E}}) \longrightarrow A_G s^{-
+      8} \hspace{0.17em} .\)
+    </center>
+    <p>
+      To identify the constant, write \(t =\mathbf{p}^4\) and integrate the
+      spatial radius \(q\):
+    </p>
+    <center>
+      \(\displaystyle \int_{\bar{V}_+} e^{- st} \textsf{m} (\mathbf{p})^2 
+      \hspace{0.17em} d^4
+\mathbf{p}= 4 \pi \int_0^{\infty} e^{- st}  \int_0^t
+      q^2  (t^2 - q^2)^2 
+\hspace{0.17em} dq \hspace{0.17em} dt = 1536 \pi
+      s^{- 8} \hspace{0.17em} .\)
+    </center>
+    <p>
+      The \(s = 1\) transform bounds compact masses, so diagonal extraction
+      and Riesz representation [<a href="references.html#bib-Rudin1987">29</a>, Theorem 2.14] give vague
+      subsequential limits. The \(u / 2\) transform controls the \(u\)-damped
+      tail, so every limit has the displayed transforms. Holomorphic
+      uniqueness in each coordinate for timelike real part, then Fourier
+      inversion on product Schwartz tests against the finite damped measures
+      [<a href="references.html#bib-Rudin1987">29</a>, Theorems 10.18 and 9.11], identify every limit with
+      the cone density in the statement.
+    </p>
+    <p>
+      For Schwartz tests positivity gives
+    </p>
+    <center>
+      \(\displaystyle \nu_{R_{\text{E}}}  \{\mathbf{p}^4 \leqslant R\}
+      \leqslant e \hspace{0.17em}
+R_{\text{E}}^{- 8} \log^2 R_{\text{E}}
+      \hspace{0.17em} G_{\Theta}
+((R_{\text{E}} R)^{- 1}) \leqslant CR^8 
+      \qquad (R \geqslant 1, R_{\text{E}}
+\geqslant R_{\text{E}, 0})
+      \hspace{0.17em} .\)
+    </center>
+    <p style="margin-bottom: 1em">
+      Use the trace law at \(1 / (R_{\text{E}} R)\) and \(\log R_{\text{E}}
+      \leqslant \log (R_{\text{E}} R)\). A Schwartz bound of order greater
+      than eight sums the dyadic energy tails uniformly, since \(|\mathbf{p}|
+      \leqslant \sqrt{2} \mathbf{p}^4\) on the cone. The \(C_c\) limit then
+      gives the Schwartz limit.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      For \(\psi_{R_{\text{E}}}  (x, y) = R_{\text{E}}^8 \psi (R_{\text{E}}
+      x,
+R_{\text{E}} y)\), \(\mathcal{W}_{\text{rel}} \psi_{R_{\text{E}}}
+      (\mathbf{p})
+=\mathcal{W}_{\text{rel}} \psi (\mathbf{p}/
+      R_{\text{E}})\). For \(\psi \in \mathcal{S}_2\),
+      \(\mathcal{W}_{\text{rel}} \psi \in \mathcal{S}\). Substitution in Lemma
+      <a href="#lem:I1.3">18.10</a> gives the position-space consequence
+    </p>
+    <center>
+      \(\displaystyle R_{\text{E}}^{- 8} \log^2 R_{\text{E}}  \hspace{0.17em}
+      W_2^{\xi_{\ast}} 
+(\Theta, \Theta ; \psi_{R_{\text{E}}}) \longrightarrow
+      \frac{A_G}{1536 \pi} 
+\int_{\bar{V}_+} \textsf{m} (\mathbf{p})^2
+      \mathcal{W}_{\text{rel}} \psi
+(\mathbf{p})  \hspace{0.17em} d^4
+      \mathbf{p} \hspace{0.17em} .\)
+    </center>
+    <h3 id="auto-125"><a id="sec:partII-I.2"></a>18.2<span style="margin-left: 1em"></span>Precise non-free
+    comparisons<span style="margin-left: 1em"></span></h3>
+    <p>
+      A finite Wick profile of Definition <a href="2-definitions.html#def:D17">2.18</a> is, at small
+      distance, a finite sum of terms \(r^a \log^k r\) with \(a \in
+      \mathbb{Z}\) and \(k \geqslant 0\), plus a bounded remainder; the trace
+      law requires the negative logarithmic power \(\log^{- 2} (1 / r)\). This
+      gives the following exclusion; its proof follows.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">18.11</class>. </strong><i><class
+        style="font-style: normal"><strong>(Finite Wick obstruction) </strong></class><a id="lem:I2.1"></a>
+        For every finite Wick profile \(W_{\text{Wick}}\) and every \(\delta >
+        0\), there is \(r \in (0, \delta)\) such that</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle G_{\Theta} (r) \ne W_{\text{Wick}} (r)
+          \hspace{0.17em} .\)
+        </center></i>
+      </div>
+    </div>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>We expand each profile at small \(r\) and
+      compare with the positive limit of Theorem <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:TR">6.18</a>. For one
+      factor, polar coordinates and \(\omega_{m_{\text{sh}}} =
+      \sqrt{m_{\text{sh}}^2 + q^2}\) give
+    </p>
+    <center>
+      \(\displaystyle K_{m_{\text{sh}}, k_E, h_{\text{mom}}} (r) = \frac{1}{2}
+      \left( \int_{S^2}
+h_{\text{mom}} \right) 
+      \int_{m_{\text{sh}}}^{\infty}
+\omega_{m_{\text{sh}}}^{k_E} 
+      (\omega_{m_{\text{sh}}}^2 -
+m_{\text{sh}}^2)^{(j_h + 1) / 2} e^{- r
+      \omega_{m_{\text{sh}}}} 
+\hspace{0.17em} d \omega_{m_{\text{sh}}}
+      \hspace{0.17em} .\)
+    </center>
+    <p>
+      For \(m_{\text{sh}} = 0\) this is proportional to \(r^{- j_h - k_E -
+      2}\). Otherwise split at \(2 m_{\text{sh}}\); the bounded interval is
+      analytic. On the tail expand \((1 - m_{\text{sh}}^2 /
+      \omega_{m_{\text{sh}}}^2)^{(j_h + 1) / 2}\). Taking enough terms makes
+      the remainder integrable with any prescribed number of energy moments,
+      hence gives a Taylor remainder of the required order. The retained terms
+      are \(I_a (r) = \int_{2 m_{\text{sh}}}^{\infty} v^a e^{- rv} 
+      \hspace{0.17em} dv\), \(a \in \mathbb{Z}\). Integrate explicitly for \(a
+      \geqslant 0\); \(I_{- 1}' = - e^{- 2 m_{\text{sh}} r} / r\) gives the
+      logarithm, and \(I_a' = - I_{a + 1}\) gives all lower powers. Only
+      nonnegative logarithmic powers occur. For products, choose each
+      remainder order above the other factors' pole orders.
+    </p>
+    <p style="margin-bottom: 1em">
+      Thus \(\text{Re} \hspace{0.17em} W_{\text{Wick}} = \sum_{a, k} c_{a, k}
+      r^a \log^k r
++ O (1)\) with finitely many terms. After multiplying by
+      \(r^8 \log^2 (1 / r)\), the terms with \(a > - 8\) vanish. Among the
+      others, the least \(a\), then largest \(k\), gives a nonzero divergent
+      leading term. A finite limit is therefore zero. Lemma <a href="#lem:I1.2">18.2</a>
+      makes \(G_{\Theta}\) real, so equality with \(W_{\text{Wick}}\) implies
+      equality with its real part. The positive trace limit contradicts
+      equality on \((0, \delta)\), proving also Proposition <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:NF">6.19</a>.<span
+      style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      To describe polynomial mass-shell Wick contractions, put \(q_m
+      (\mathbf{k}) = (\mathbf{k}, \sqrt{m^2 + |\mathbf{k}|^2})\), \(m
+      \geqslant 0\). Fix a finite set of elementary field indices, with
+      elements \(\textsf{x}, \textsf{x}'\); words \(u, u'\) list its elements.
+      For words of length \(k\), \(\pi\) ranges over permutations of \(\{1,
+      \ldots, k\}\). Comparison data specify finite mass&ndash;polynomial
+      lists \(\mathcal{M}_{\text{pair}}  (\textsf{x}, \textsf{x}')\), with \(P
+      \in \mathbb{C} [\mathbf{p}^1, \ldots, \mathbf{p}^4]\), and complex
+      contraction coefficients \(c (u, u', \pi)\).
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Definition <class style="font-style: normal">18.12</class>. </strong><class
+      style="font-style: normal"><strong>(Polynomial mass-shell pairings) </strong></class><a id="def:D28"></a>
+      Set
+    </p>
+    <center>
+      \(\displaystyle v_{m, P} (\mathbf{k}) = \frac{P (q_m (\mathbf{k}))}{2
+      \omega_m (\mathbf{k})},
+\qquad L_{m, P} (\varphi) = \int v_{m, P}
+      (\mathbf{k}) \varphi (q_m
+(\mathbf{k}))  \hspace{0.17em} d^3 \mathbf{k}
+      \hspace{0.17em} .\)
+    </center>
+    <p>
+      For words \(u = (\textsf{x}_i)_{i = 1}^k\), \(u' = (\textsf{x}'_i)_{i =
+      1}^k\), define the convolutions of the functionals \(L_{m, P}\) by
+    </p>
+    <center>
+      \(\displaystyle \textsf{P} (u, u' ; \varphi) = \sum_{\pi} c (u, u', \pi)
+      \sum_{(m_i, P_i) \in
+\prod_i \mathcal{M}_{\text{pair}}  (\textsf{x}_i,
+      \textsf{x}'_{\pi (i)})} \int
+\prod_i v_{m_i, P_i} (\mathbf{k}_i) 
+      \hspace{0.17em} \varphi \left( \sum_i
+q_{m_i} (\mathbf{k}_i) \right) 
+      \prod_i d^3 \mathbf{k}_i \hspace{0.17em} .\)
+    </center>
+    <p style="margin-bottom: 1em">
+      For unequal lengths put \(\textsf{P} = 0\). A zero denominator at zero
+      momentum gives value zero.
+    </p>
+    <p>
+      For finite polynomial fields \(Q = \sum_i \alpha_i u_i\), including
+      empty words, the bilinear pairing is \(W^{\text{pol}}  (Q, Q' ; \varphi)
+      = \sum_{i, j} \alpha_i \alpha'_j \textsf{P}
+(u_i, u'_j ; \varphi)\).
+      Empty contractions evaluate \(\varphi\) at zero. The shell measure has
+      no \((2 \pi)^{- 3}\) factor.
+    </p>
+    <p>
+      The next lemma separates each comparison by one product test; its proof
+      follows.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">18.13</class>. </strong><i><class
+        style="font-style: normal"><strong>(Polynomial countertest) </strong></class><a id="lem:I2.2"></a>
+        For every comparison data and every \(Q, Q'\), there are \(f, h \in
+        \mathcal{S}\) with compactly supported \(\mathcal{W}_{\text{rel}}
+        (\bar{f} \otimes h)\) such that</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle \langle \Phi_{\Theta} (f) \Omega, \Phi_{\Theta} (h)
+          \Omega \rangle \ne
+W^{\text{pol}}  (Q, Q' ; \mathcal{W}_{\text{rel}}
+          (\bar{f} \otimes h))
+\hspace{0.17em} .\)
+        </center></i>
+      </div>
+    </div>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong class="enunciation-name">Proof. </strong>Equality for all product tests would
+      identify the two spectral representations, hence \(G_{\Theta}\) with a
+      finite Wick profile, which Lemma <a href="#lem:I2.1">18.11</a> excludes. In detail,
+      equality for all product tests implies equality for every \(\varphi \in
+      C_c^{\infty}\): choose \(\hat{h}_+ = \varphi\) and real \(\hat{f}_+ =
+      1\) on its support. Approximate \(e^{- r\mathbf{p}^4}\) by compact
+      cutoffs. Dominated convergence applies: Lemma <a href="#lem:I1.2">18.2</a> controls
+      \(\mu_{\Theta}\); exponential damping controls comparison polynomials at
+      infinity, and \(d^3 \mathbf{k}/ |\mathbf{k}|\) is integrable at zero.
+      Expanding the numerators into monomials factors the integrals into the
+      kernels of Definition <a href="2-definitions.html#def:D17">2.18</a>, with the empty words giving
+      constants. Hence \(G_{\Theta} (r) = W_{\text{Wick}} (r)\) for all \(r >
+      0\), contrary to Lemma <a href="#lem:I2.1">18.11</a>.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      For the photon comparison use Hilbert tensor products.
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Definition <class style="font-style: normal">18.14</class>. </strong><class
+      style="font-style: normal"><strong>(Ambient and physical Maxwell Fock spaces)
+      </strong></class><a id="def:D29"></a> For \(n \in \mathbb{N}\) colours put
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{c}
+  d \sigma (\mathbf{k}) = \frac{d^3
+      \mathbf{k}}{2 |\mathbf{k}|}, \qquad
+  \Pi_{ab} (\mathbf{k}) =
+      \delta_{ab} - \frac{\mathbf{k}_a
+  \mathbf{k}_b}{|\mathbf{k}|^2},\\
+ 
+      \mathcal{K}_n = L^2  (d \sigma ; \mathbb{C}^n \otimes \mathbb{C}^3),
+      \qquad
+  \mathcal{F}_n = \bigoplus_{k \geqslant 0}
+      \mathcal{K}_n^{\otimes k}, \qquad
+  \mathcal{F}_n^{\text{phys}} =
+      \bigoplus_{k \geqslant 0} \text{Sym}^k (\Pi
+  \mathcal{K}_n)
+      \hspace{0.17em} .
+\end{array}\)
+    </center>
+    <p style="margin-bottom: 1em">
+      The measure has no atom at zero momentum, so the value of \(\Pi\) there
+      is immaterial, and \(\Pi\) acts pointwise almost everywhere. Thus a
+      physical vector is symmetric and transverse in each slot. Translations
+      multiply sector \(k\) by \(\exp \{iz \cdot \sum_j (\mathbf{k}_j,
+      |\mathbf{k}_j |)\}\). The sector-zero unit is \(\Omega_0\).
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Definition <class style="font-style: normal">18.15</class>. </strong><class
+      style="font-style: normal"><strong>(Coherent comparison vectors) </strong></class><a id="def:D30"></a>
+      For Schwartz tests \(h = (h_{\alpha, a})\), put
+    </p>
+    <center>
+      \(\displaystyle v_h  (\alpha, a ; \mathbf{k}) = |\mathbf{k}|  \sum_b
+      \Pi_{ab} (\mathbf{k}) 
+\hat{h}_{\alpha, b, +}  (\mathbf{k},
+      |\mathbf{k}|), \qquad \mathcal{E} (h) =
+e^{- \|v_h \|^2 / 2} 
+      \bigoplus_{k \geqslant 0} \frac{v_h^{\otimes
+k}}{\sqrt{k!}}
+      \hspace{0.17em} .\)
+    </center>
+    <p style="margin-bottom: 1em">
+      A comparison \(U : \mathcal{H} \to \mathcal{F}_n\) is a complex linear
+      isometry with image in \(\mathcal{F}_n^{\text{phys}}\), \(U \Omega =
+      \Omega_0\), intertwining translations. Set \(\psi_U (f) = U
+      \Phi_{\Theta} (f) \Omega\).
+    </p>
+    <p>
+      Real tests have real components. Causal separation means \(\textsf{m} (x
+      - y) < 0\) for every pair of points in their closed supports, where
+      \(\textsf{m} (x) = (x^4)^2 - \sum_{a = 1}^3 (x^a)^2\).
+    </p>
+    <p>
+      Lemma <a href="#lem:I2.2">18.13</a> compares two-point functions only. The Fock
+      test asks more: an embedding of the interacting states into photon Fock
+      space under which the trace field is local relative to the free Maxwell
+      field. Relative locality would impose the equality excluded below.
+      Formally, let \(W (h)\) be Weyl operators of the free Maxwell field with
+      \(W (h) \Omega_0 =\mathcal{E} (h)\) and \(W (h)^{\ast} = W (- h)\). If
+      \(U \Phi_{\Theta} (f) U^{\ast}\) commuted with \(W (h)\) for \(h\)
+      causally separated from \(f\), then, since \(U^{\ast} \Omega_0 =
+      \Omega\) and \(\iota_4 \Theta\) is Hermitian,
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  \langle \mathcal{E}(- h), \psi_U (f)
+      \rangle & = \langle \Omega_0, W (h) U
+  \Phi_{\Theta} (f) U^{\ast}
+      \Omega_0 \rangle\\
+  & = \langle \Omega_0, U \Phi_{\Theta} (f) U^{\ast}
+      W (h) \Omega_0 \rangle =
+  \langle \psi_U (\bar{f}), \mathcal{E}(h)
+      \rangle \hspace{0.17em} .
+\end{array}\)
+    </center>
+    <p>
+      Weyl operators enter only this motivation. The lemma compares the two
+      matrix elements directly, and its proof uses spectral growth without
+      restricting particle amplitudes.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">18.16</class>. </strong><i><class
+        style="font-style: normal"><strong>(Fock countertest) </strong></class><a id="lem:I2.3"></a> For
+        every \(n \geqslant 0\) and every comparison \(U\), for every ball
+        about zero there are Schwartz \(f\) compactly supported in that ball
+        and real compactly supported Schwartz \(h_{\alpha, a}\), each causally
+        separated from \(f\), such that</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle \langle \mathcal{E}(- h), \psi_U (f) \rangle \ne
+          \langle \psi_U (\bar{f}),
+\mathcal{E}(h) \rangle \hspace{0.17em} .\)
+        </center></i>
+      </div>
+    </div>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>The proof combines the spectral
+      representation (Lemma <a href="#lem:I1.2">18.2</a>), the high-energy law (Lemma <a
+      href="#lem:I1.3">18.10</a>) and translation covariance (Lemma <a href="17-phases-and-reconstruction.html#lem:H2.1">17.5</a>)
+      with the dilation behaviour of local photon amplitudes. Fix a ball and
+      suppose equality always holds.
+    </p>
+    <p>
+      <em>Sector amplitudes.</em> Set \(p_j = (\mathbf{k}_j, |\mathbf{k}_j
+      |)\) and \(p_{\text{tot}} = \sum_j p_j\). The convolution argument of
+      Lemma <a href="#lem:I1.2">18.2</a> gives sector amplitudes \(Y_{k, s}\), with \(s\)
+      listing colour and spatial indices:
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I-sector"></a>\(\displaystyle \psi_U (f)_{k, s} =
+        \hat{f}_+ (p_{\text{tot}}) Y_{k, s}, \qquad \mu_{\Theta}
+=
+        (p_{\text{tot}})_{\ast}  \sum_{k, s} |Y_{k, s} |^2 d \sigma^{\otimes
+        k}
+\hspace{0.17em} .\)</td>
+        <td align="right">(18.13)</td>
+      </tr>
+    </table>
+    <p>
+      Box masses are finite. Cauchy&ndash;Schwarz and polynomial spectral
+      growth give integrability against sufficiently high inverse polynomials
+      in each momentum.
+    </p>
+    <p>
+      The common sector unitary \(i^k\) preserves the equality, physical
+      vectors and translations. Write \(\textsf{Y} = i^k Y_{k, s}\).
+    </p>
+    <p>
+      <em>Locality and doubling.</em> Expand the coherent equality in a real
+      parameter multiplying \(h\), justified by Cauchy&ndash;Schwarz and the
+      exponential series. Polarization and complexification give independent
+      complex slot tests. Transversality removes the projector in contractions
+      with physical waves. Shrink nonnegative unit-integral \(f\) to zero.
+      Then \(| \hat{f}_+ | \leqslant 1\) and \(\hat{f}_+ \to 1\); dominated
+      convergence gives, for \(g_j\) supported spacelike to zero,
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I-remote"></a>\(\displaystyle \int \textsf{Y}
+        (\boldsymbol{k})  \prod_j [|\mathbf{k}_j | \hat{g}_{j, -}
+(p_j)] 
+        \hspace{0.17em} d \sigma^{\otimes k} = \int
+        \overline{\textsf{Y}
+(\boldsymbol{k})} \prod_j [|\mathbf{k}_j |
+        \hat{g}_{j, +} (p_j)] 
+\hspace{0.17em} d \sigma^{\otimes k}
+        \hspace{0.17em} .\)</td>
+        <td align="right">(18.14)</td>
+      </tr>
+    </table>
+    <p>
+      Here \(\hat{g}_- (p) = \hat{g}_+  (- p)\); the sector factors \(i^k\)
+      give exactly these signs.
+    </p>
+    <p>
+      Fix other slots and use \(g (x, t) = a (x) \eta_{\epsilon}^{(b)} (t)\),
+      with \(\eta_{\epsilon}\) approximating unit mass and \(b = 0, 1\). If
+      \(0 \not\in \text{supp} \hspace{0.17em} a\), these are spacelike for
+      small \(\epsilon\). Thus both Cauchy data of <class style="font-style: normal">(<a href="#eq:I-remote">18.14</a>)</class>
+      are supported at zero. Weighted integrability bounds their order by
+      \(J\), independently of the other tests.
+    </p>
+    <p>
+      Each datum depends only on the \(J\)-jet: multiplication by a cutoff in
+      \(B (0, \epsilon)\) leaves the distribution unchanged. For a
+      zero-\(J\)-jet test, Taylor's formula bounds derivatives through order
+      \(J\) by \(O (\epsilon)\); let \(\epsilon \downarrow 0\).
+    </p>
+    <p>
+      The next paragraph proves a uniqueness implication: a combination of
+      sector amplitudes whose two Cauchy data vanish is zero almost
+      everywhere. It is applied below to a polynomial in the doubling operator
+      applied to \(\textsf{Y}\), not to \(\textsf{Y}\) itself. The massless
+      wave equation separates the frequency branches from these two Cauchy
+      data away from zero momentum. After smearing other slots, each branch is
+      integrable, bounded and holomorphic in its timelike tube, with
+      continuous real boundary. For such a combination with zero Cauchy data,
+      vanishing persists under small translations of the other spacelike
+      tests. Schwarz reflection and holomorphic uniqueness [<a href="references.html#bib-Rudin1987">29</a>,
+      Theorems 11.14 and 10.18] make the zero set invariant under adding
+      \(\mathbb{R}u\) for every future timelike \(u\). These vectors span
+      \(\mathbb{R}^4\), giving vanishing at every real translation. Successive
+      Fourier inversion [<a href="references.html#bib-Rudin1987">29</a>, Theorem 9.11] of the smeared
+      integrable amplitudes gives zero almost everywhere. Countably many
+      shrinking bumps remove the other tests: their transforms are eventually
+      nonzero at each momentum.
+    </p>
+    <p>
+      Let \(D_j \textsf{Y} (\boldsymbol{k}) = \textsf{Y} (\mathbf{k}_1,
+      \ldots,
+2\mathbf{k}_j, \ldots, \mathbf{k}_k)\). In the time-order-\(b\)
+      Cauchy datum (\(b = 0, 1\)), this substitution gives \(2^{- 3 - b}\)
+      times the datum at \(a (x) \mapsto 8 a (2 x)\), from \(d \sigma
+      (2\mathbf{k}) = 4 d \sigma (\mathbf{k})\) and \(|\mathbf{k}|^{1 + b}\).
+      Spatial jets of order \(l\) scale by \(2^{3 + l}\), giving eigenvalues
+      \(2^{l - b}\). Choose a polynomial that annihilates this
+      finite-dimensional dilation action on both Cauchy jets. The uniqueness
+      implication then makes the same polynomial in \(D_j\) annihilate
+      \(\textsf{Y}\): for some \(J'\),
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I-doubling"></a>\(\displaystyle \prod_{a = 0}^{J' - 1}
+        (D_j - 2^{a - 1}) \textsf{Y} = 0 \qquad \text{in every
+slot } j
+        \hspace{0.17em} .\)</td>
+        <td align="right">(18.15)</td>
+      </tr>
+    </table>
+    <p>
+      <em>Growth.</em> For \(R = 2^l\) let \(M_{\textsf{Y}} (R) =
+      \int_{|\mathbf{k}_j | \leqslant R} | \textsf{Y} |^2 d
+\sigma^{\otimes
+      k}\). By <class style="font-style: normal">(<a href="#eq:I-sector">18.13</a>)</class> and the trace law,
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I-small-mass"></a>\(\displaystyle M_{\textsf{Y}} (2^l)
+        \leqslant \mu_{\Theta} \{\mathbf{p}^4 \leqslant (k + 1)
+2^l \}, \qquad
+        2^{- 8 l} M_{\textsf{Y}} (2^l) \longrightarrow 0
+\hspace{0.17em}
+        .\)</td>
+        <td align="right">(18.16)</td>
+      </tr>
+    </table>
+    <p>
+      For the limit, bound the energy mass by \(e \hspace{0.17em} G_{\Theta}
+      (((k + 1) 2^l)^{- 1})\).
+    </p>
+    <p>
+      Lagrange interpolation in the commuting \(D_j\) splits \(\textsf{Y}\)
+      into joint eigencomponents \(D_j \textsf{Y}_{\boldsymbol{e}} = 2^{e_j -
+      1} \textsf{Y}_{\boldsymbol{e}}\). Each is a finite combination of
+      doubled copies, so retains <class style="font-style: normal">(<a href="#eq:I-small-mass">18.16</a>)</class>.
+      Moreover \(M_{\textsf{Y}_{\boldsymbol{e}}} (2^l) = 2^{2 l \sum_j
+      e_j}
+M_{\textsf{Y}_{\boldsymbol{e}}} (1)\), since \(d \sigma
+      (2\mathbf{k}) = 4 d \sigma (\mathbf{k})\). If \(e_j = 0\), contraction
+      preserves box mass, contradicting local square integrability and absence
+      of an atom at zero unless the component vanishes. Equation <class style="font-style: normal">(<a
+      href="#eq:I-small-mass">18.16</a>)</class> excludes \(\sum_j e_j \geqslant 4\). Thus \(e_j
+      \geqslant 1\), \(\sum_j e_j \leqslant 3\), and \(k \leqslant 3\), with
+      box mass \(\leqslant CR^6\) for dyadic \(R \geqslant 1\). The vacuum
+      sector vanishes by Lemma <a href="#lem:I1.1">18.1</a> and \(U \Omega = \Omega_0\).
+    </p>
+    <p style="margin-bottom: 1em">
+      Summing <class style="font-style: normal">(<a href="#eq:I-sector">18.13</a>)</class> gives \(\mu_{\Theta}
+      \{\mathbf{p}^4 \leqslant R\} \leqslant CR^6\) at dyadic \(R \geqslant
+      1\). Multiplication by \(R^{- 8} \log^2 R\) gives zero in the limit,
+      contradicting Lemma <a href="#lem:I1.3">18.10</a> on a nonnegative compact test in
+      \(\{0 <\mathbf{p}^4 < 1, \textsf{m} (\mathbf{p}) > 0\}\).<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      An averaged form of this countertest, in which the coherent vectors are
+      moved by maps that preserve physical inner products and fix the image of
+      \(U\), is Lemma <a href="8-a-weaker-existence-statement.html#lem:I2.4">8.10</a> in Section <a href="8-a-weaker-existence-statement.html#sec:correspondence">8</a>.
+    </p>
+    
+    <div class="ym-chapter-nav"><span class="ym-chapter-prev"><a href="17-phases-and-reconstruction.html">&larr; 17 Phases and reconstruction</a></span><span class="ym-chapter-up"><a href="../main.html">Contents</a></span><span class="ym-chapter-next"><a href="19-products-and-contact-subtractions.html">19 Products and contact subtractions &rarr;</a></span></div>
+</body>
+</html>

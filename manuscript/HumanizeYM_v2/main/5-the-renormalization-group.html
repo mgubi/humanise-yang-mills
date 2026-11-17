@@ -1,0 +1,1723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>5 The renormalization group &ndash; HumanizeYM_v2: The construction of four-dimensional quantum
+    Yang&ndash;Mills theory &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1], hyperref: [bs +
+    'href{###1}{#2}', 2, '']}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="toggle" style="display: none">
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+    </div>
+<div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+
+    <div class="ym-chapter-nav"><span class="ym-chapter-prev"><a href="4-strategy-of-the-proof.html">&larr; 4 Strategy of the proof</a></span><span class="ym-chapter-up"><a href="../main.html">Contents</a></span><span class="ym-chapter-next"><a href="6-the-continuum-limit-stress-phases-trace-and.html">6 The continuum limit, stress, phases, trace and products &rarr;</a></span></div>
+<div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 2em; margin-bottom: 1em">
+        <b><font style="font-size: 119.0%">I<span style="margin-left: 1em"></span>The theorem and the architecture
+        of its proof</font></b> <span style="margin-left: 5mm"></span> <a href="../main.html#auto-1">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>1<span style="margin-left: 1em"></span>The result</b> <span style="margin-left: 5mm"></span> <a href="1-the-result.html#auto-2">4</a>
+      </p>
+      <p>
+        1.1<span style="margin-left: 1em"></span>Proof status <span style="margin-left: 5mm"></span> <a href="1-the-result.html#auto-3">6</a>
+      </p>
+      <p>
+        1.2<span style="margin-left: 1em"></span>Earlier work and the method <span style="margin-left: 5mm"></span>
+        <a href="1-the-result.html#auto-4">6</a>
+      </p>
+      <p>
+        1.3<span style="margin-left: 1em"></span>Reading guide <span style="margin-left: 5mm"></span> <a href="1-the-result.html#auto-6">8</a>
+      </p>
+      <p>
+        1.4<span style="margin-left: 1em"></span>Notation and conventions <span style="margin-left: 5mm"></span>
+        <a href="1-the-result.html#auto-8">8</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2<span style="margin-left: 1em"></span>Definitions</b> <span style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-9">9</a>
+      </p>
+      <p>
+        2.1<span style="margin-left: 1em"></span>The gauge group and the Wilson measure <span
+        style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-10">9</a>
+      </p>
+      <p>
+        2.2<span style="margin-left: 1em"></span>Wilson families and their correlations <span
+        style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-11">10</a>
+      </p>
+      <p>
+        2.3<span style="margin-left: 1em"></span>Local fields <span style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-13">12</a>
+      </p>
+      <p>
+        2.4<span style="margin-left: 1em"></span>Euclidean properties <span style="margin-left: 5mm"></span> <a
+        href="2-definitions.html#auto-14">14</a>
+      </p>
+      <p>
+        2.5<span style="margin-left: 1em"></span>Field spaces and phases <span style="margin-left: 5mm"></span> <a
+        href="2-definitions.html#auto-15">15</a>
+      </p>
+      <p>
+        2.6<span style="margin-left: 1em"></span>Wightman theories <span style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-16">15</a>
+      </p>
+      <p>
+        2.7<span style="margin-left: 1em"></span>The trace and product statements <span style="margin-left: 5mm"></span>
+        <a href="2-definitions.html#auto-17">16</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>3<span style="margin-left: 1em"></span>The main theorem</b> <span style="margin-left: 5mm"></span> <a
+        href="3-the-main-theorem.html#auto-18">17</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>4<span style="margin-left: 1em"></span>Strategy of the proof</b> <span style="margin-left: 5mm"></span>
+        <a href="4-strategy-of-the-proof.html#auto-19">19</a>
+      </p>
+      <p>
+        4.1<span style="margin-left: 1em"></span>Why the ultraviolet induction closes <span
+        style="margin-left: 5mm"></span> <a href="4-strategy-of-the-proof.html#auto-21">19</a>
+      </p>
+      <p>
+        4.2<span style="margin-left: 1em"></span>Tuning, uniqueness and convergence <span style="margin-left: 5mm"></span>
+        <a href="4-strategy-of-the-proof.html#auto-25">23</a>
+      </p>
+      <p>
+        4.3<span style="margin-left: 1em"></span>Rotations <span style="margin-left: 5mm"></span> <a href="4-strategy-of-the-proof.html#auto-27">24</a>
+      </p>
+      <p>
+        4.4<span style="margin-left: 1em"></span>Phases and reconstruction <span style="margin-left: 5mm"></span>
+        <a href="4-strategy-of-the-proof.html#auto-28">25</a>
+      </p>
+      <p>
+        4.5<span style="margin-left: 1em"></span>The trace <span style="margin-left: 5mm"></span> <a href="4-strategy-of-the-proof.html#auto-29">25</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>5<span style="margin-left: 1em"></span>The renormalization group</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-30">26</a>
+      </p>
+      <p>
+        5.1<span style="margin-left: 1em"></span>Scales and the block map <span style="margin-left: 5mm"></span>
+        <a href="#auto-31">26</a>
+      </p>
+      <p>
+        5.2<span style="margin-left: 1em"></span>The density and its norms <span style="margin-left: 5mm"></span>
+        <a href="#auto-32">28</a>
+      </p>
+      <p>
+        5.3<span style="margin-left: 1em"></span>The inductive step <span style="margin-left: 5mm"></span> <a
+        href="#auto-35">31</a>
+      </p>
+      <p>
+        5.4<span style="margin-left: 1em"></span>Multiscale trajectories <span style="margin-left: 5mm"></span> <a
+        href="#auto-36">32</a>
+      </p>
+      <p>
+        5.5<span style="margin-left: 1em"></span>Local fields under blocking <span style="margin-left: 5mm"></span>
+        <a href="#auto-38">34</a>
+      </p>
+      <p>
+        5.6<span style="margin-left: 1em"></span>Uniform bounds and the fixed-volume limit <span
+        style="margin-left: 5mm"></span> <a href="#auto-39">35</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>6<span style="margin-left: 1em"></span>The continuum limit, stress, phases, trace and
+        products</b> <span style="margin-left: 5mm"></span> <a href="6-the-continuum-limit-stress-phases-trace-and.html#auto-40">36</a>
+      </p>
+      <p>
+        6.1<span style="margin-left: 1em"></span>The volume limit and the field calculus <span
+        style="margin-left: 5mm"></span> <a href="6-the-continuum-limit-stress-phases-trace-and.html#auto-41">36</a>
+      </p>
+      <p>
+        6.2<span style="margin-left: 1em"></span>Stress and rotations <span style="margin-left: 5mm"></span> <a
+        href="6-the-continuum-limit-stress-phases-trace-and.html#auto-42">38</a>
+      </p>
+      <p>
+        6.3<span style="margin-left: 1em"></span>Phases and reconstruction <span style="margin-left: 5mm"></span>
+        <a href="6-the-continuum-limit-stress-phases-trace-and.html#auto-43">41</a>
+      </p>
+      <p>
+        6.4<span style="margin-left: 1em"></span>Trace and products <span style="margin-left: 5mm"></span> <a
+        href="6-the-continuum-limit-stress-phases-trace-and.html#auto-44">43</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>7<span style="margin-left: 1em"></span>Deduction of the main theorem</b> <span style="margin-left: 5mm"></span>
+        <a href="7-deduction-of-the-main-theorem.html#auto-45">46</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>8<span style="margin-left: 1em"></span>A weaker existence statement</b> <span style="margin-left: 5mm"></span>
+        <a href="8-a-weaker-existence-statement.html#auto-46">47</a>
+      </p>
+      <p>
+        8.1<span style="margin-left: 1em"></span>Hierarchy data and the conditions Q0&ndash;Q6
+        <span style="margin-left: 5mm"></span> <a href="8-a-weaker-existence-statement.html#auto-47">48</a>
+      </p>
+      <p>
+        8.2<span style="margin-left: 1em"></span>A generalized free-field example <span style="margin-left: 5mm"></span>
+        <a href="8-a-weaker-existence-statement.html#auto-48">49</a>
+      </p>
+      <p>
+        8.3<span style="margin-left: 1em"></span>Conventions for hierarchy data <span style="margin-left: 5mm"></span>
+        <a href="8-a-weaker-existence-statement.html#auto-49">51</a>
+      </p>
+      <p>
+        8.4<span style="margin-left: 1em"></span>An averaged countertest <span style="margin-left: 5mm"></span> <a
+        href="8-a-weaker-existence-statement.html#auto-50">52</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>9<span style="margin-left: 1em"></span>Constants and order of choice</b> <span style="margin-left: 5mm"></span>
+        <a href="9-constants-and-order-of-choice.html#auto-51">52</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Index of notation</b> <span style="margin-left: 5mm"></span> <a href="index-of-notation.html#auto-53">54</a>
+      </p>
+      <p style="margin-top: 2em; margin-bottom: 1em">
+        <b><font style="font-size: 119.0%">II<span style="margin-left: 1em"></span>Proofs</font></b> <span style="margin-left: 5mm"></span>
+        <a href="index-of-notation.html#auto-54">57</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>10<span style="margin-left: 1em"></span>Local polynomial fields</b> <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-55">57</a>
+      </p>
+      <p>
+        10.1<span style="margin-left: 1em"></span>Labels, test holonomies and the Taylor map
+        <span style="margin-left: 5mm"></span> <a href="10-local-polynomial-fields.html#auto-56">58</a>
+      </p>
+      <p>
+        10.2<span style="margin-left: 1em"></span>Taylor-normalized sections <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-58">59</a>
+      </p>
+      <p>
+        10.3<span style="margin-left: 1em"></span>Small-field bounds <span style="margin-left: 5mm"></span> <a
+        href="10-local-polynomial-fields.html#auto-59">61</a>
+      </p>
+      <p>
+        10.4<span style="margin-left: 1em"></span>Auxiliary equation sections <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-60">62</a>
+      </p>
+      <p>
+        10.5<span style="margin-left: 1em"></span>Example: the curvature square <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-61">66</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>11<span style="margin-left: 1em"></span>Gauges and block integration</b> <span style="margin-left: 5mm"></span>
+        <a href="11-gauges-and-block-integration.html#auto-62">67</a>
+      </p>
+      <p>
+        11.1<span style="margin-left: 1em"></span>The block kernel <span style="margin-left: 5mm"></span> <a href="11-gauges-and-block-integration.html#auto-63">68</a>
+      </p>
+      <p>
+        11.2<span style="margin-left: 1em"></span>Free quadratic forms <span style="margin-left: 5mm"></span> <a
+        href="11-gauges-and-block-integration.html#auto-66">72</a>
+      </p>
+      <p>
+        11.3<span style="margin-left: 1em"></span>The stationary background and Gaussian
+        coordinates <span style="margin-left: 5mm"></span> <a href="11-gauges-and-block-integration.html#auto-67">79</a>
+      </p>
+      <p>
+        11.4<span style="margin-left: 1em"></span>Inverse, vertex and Ward estimates <span
+        style="margin-left: 5mm"></span> <a href="11-gauges-and-block-integration.html#auto-69">85</a>
+      </p>
+      <p>
+        11.5<span style="margin-left: 1em"></span>The local large-field energy <span style="margin-left: 5mm"></span>
+        <a href="11-gauges-and-block-integration.html#auto-70">93</a>
+      </p>
+      <p>
+        11.6<span style="margin-left: 1em"></span>Sector Gaussian integration <span style="margin-left: 5mm"></span>
+        <a href="11-gauges-and-block-integration.html#auto-72">100</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>12<span style="margin-left: 1em"></span>Path actions and the one-loop coupling</b>
+        <span style="margin-left: 5mm"></span> <a href="12-path-actions-and-the-one-loop-coupling.html#auto-76">112</a>
+      </p>
+      <p>
+        12.1<span style="margin-left: 1em"></span>Curvature coordinates and the path action
+        <span style="margin-left: 5mm"></span> <a href="12-path-actions-and-the-one-loop-coupling.html#auto-77">112</a>
+      </p>
+      <p>
+        12.2<span style="margin-left: 1em"></span>Fourth-order matching <span style="margin-left: 5mm"></span> <a
+        href="12-path-actions-and-the-one-loop-coupling.html#auto-78">114</a>
+      </p>
+      <p>
+        12.3<span style="margin-left: 1em"></span>The determinant comparison <span style="margin-left: 5mm"></span>
+        <a href="12-path-actions-and-the-one-loop-coupling.html#auto-79">119</a>
+      </p>
+      <p>
+        12.4<span style="margin-left: 1em"></span>The one-loop coefficient <span style="margin-left: 5mm"></span>
+        <a href="12-path-actions-and-the-one-loop-coupling.html#auto-80">122</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>13<span style="margin-left: 1em"></span>Activities and the inductive step</b> <span
+        style="margin-left: 5mm"></span> <a href="13-activities-and-the-inductive-step.html#auto-81">129</a>
+      </p>
+      <p>
+        13.1<span style="margin-left: 1em"></span>The local expansion <span style="margin-left: 5mm"></span> <a
+        href="13-activities-and-the-inductive-step.html#auto-82">132</a>
+      </p>
+      <p>
+        13.2<span style="margin-left: 1em"></span>Local quadratic subtraction <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-84">150</a>
+      </p>
+      <p>
+        13.3<span style="margin-left: 1em"></span>Forced fusion, activity bounds and the reset
+        <span style="margin-left: 5mm"></span> <a href="13-activities-and-the-inductive-step.html#auto-85">152</a>
+      </p>
+      <p>
+        13.4<span style="margin-left: 1em"></span>Continuity at fixed volume <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-86">158</a>
+      </p>
+      <p>
+        13.5<span style="margin-left: 1em"></span>The Wilson start <span style="margin-left: 5mm"></span> <a href="13-activities-and-the-inductive-step.html#auto-87">159</a>
+      </p>
+      <p>
+        13.6<span style="margin-left: 1em"></span>The specified recursion <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-88">161</a>
+      </p>
+      <p>
+        13.7<span style="margin-left: 1em"></span>Weighted analytic estimates <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-89">163</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>14<span style="margin-left: 1em"></span>Trajectories, marked fields and ultraviolet
+        convergence</b> <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-90">177</a>
+      </p>
+      <p>
+        14.1<span style="margin-left: 1em"></span>Trajectories and tuning <span style="margin-left: 5mm"></span>
+        <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-91">178</a>
+      </p>
+      <p>
+        14.2<span style="margin-left: 1em"></span>Marked fields and volume-uniform estimates
+        <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-92">185</a>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.1<span style="margin-left: 1em"></span>One marked insertion <span
+        style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-93">185</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.2<span style="margin-left: 1em"></span>Chessboard seminorms and
+        replicated sources <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-94">192</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.3<span style="margin-left: 1em"></span>Negligible errors and local
+        matching <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-95">200</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.4<span style="margin-left: 1em"></span>Equation identities and
+        coefficient corrections <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-96">204</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.5<span style="margin-left: 1em"></span>Comparison with free fields
+        <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-97">207</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.6<span style="margin-left: 1em"></span>Bounds for lattice differences
+        <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-98">217</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.7<span style="margin-left: 1em"></span>Bounded approximations <span
+        style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-99">220</a></font>
+      </p>
+      <p>
+        14.3<span style="margin-left: 1em"></span>Full ultraviolet convergence <span style="margin-left: 5mm"></span>
+        <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-100">224</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>15<span style="margin-left: 1em"></span>Infinite volume and field calculus</b> <span
+        style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-102">231</a>
+      </p>
+      <p>
+        15.1<span style="margin-left: 1em"></span>Volume limits <span style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-103">231</a>
+      </p>
+      <p>
+        15.2<span style="margin-left: 1em"></span>Separated cells and negligible errors <span
+        style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-104">233</a>
+      </p>
+      <p>
+        15.3<span style="margin-left: 1em"></span>Quotient fields <span style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-105">234</a>
+      </p>
+      <p>
+        15.4<span style="margin-left: 1em"></span>Euclidean properties <span style="margin-left: 5mm"></span> <a
+        href="15-infinite-volume-and-field-calculus.html#auto-106">237</a>
+      </p>
+      <p>
+        15.5<span style="margin-left: 1em"></span>Repeated reflected words <span style="margin-left: 5mm"></span>
+        <a href="15-infinite-volume-and-field-calculus.html#auto-107">238</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>16<span style="margin-left: 1em"></span>Free fields, Ward identities and
+        rotations</b> <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-108">239</a>
+      </p>
+      <p>
+        16.1<span style="margin-left: 1em"></span>Free fields <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-109">240</a>
+      </p>
+      <p>
+        16.2<span style="margin-left: 1em"></span>Lattice inputs <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-111">247</a>
+      </p>
+      <p>
+        16.3<span style="margin-left: 1em"></span>Free comparison and the conserved line <span
+        style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-112">254</a>
+      </p>
+      <p>
+        16.4<span style="margin-left: 1em"></span>Coordinate reflection spaces and spectral
+        estimates <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-113">257</a>
+      </p>
+      <p>
+        16.5<span style="margin-left: 1em"></span>Ward identities and rotations <span style="margin-left: 5mm"></span>
+        <a href="16-free-fields-ward-identities-and-rotations.html#auto-114">263</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>17<span style="margin-left: 1em"></span>Phases and reconstruction</b> <span style="margin-left: 5mm"></span>
+        <a href="17-phases-and-reconstruction.html#auto-115">270</a>
+      </p>
+      <p>
+        17.1<span style="margin-left: 1em"></span>Compression and phases <span style="margin-left: 5mm"></span> <a
+        href="17-phases-and-reconstruction.html#auto-116">270</a>
+      </p>
+      <p>
+        17.2<span style="margin-left: 1em"></span>Reconstruction <span style="margin-left: 5mm"></span> <a href="17-phases-and-reconstruction.html#auto-119">276</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>18<span style="margin-left: 1em"></span>The trace law and non-free comparisons</b>
+        <span style="margin-left: 5mm"></span> <a href="18-the-trace-law-and-non-free-comparisons.html#auto-120">284</a>
+      </p>
+      <p>
+        18.1<span style="margin-left: 1em"></span>Trace and spectrum <span style="margin-left: 5mm"></span> <a
+        href="18-the-trace-law-and-non-free-comparisons.html#auto-121">284</a>
+      </p>
+      <p>
+        18.2<span style="margin-left: 1em"></span>Precise non-free comparisons <span style="margin-left: 5mm"></span>
+        <a href="18-the-trace-law-and-non-free-comparisons.html#auto-125">301</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>19<span style="margin-left: 1em"></span>Products and contact subtractions</b> <span
+        style="margin-left: 5mm"></span> <a href="19-products-and-contact-subtractions.html#auto-126">305</a>
+      </p>
+      <p>
+        19.1<span style="margin-left: 1em"></span>Products and nested clusters <span style="margin-left: 5mm"></span>
+        <a href="19-products-and-contact-subtractions.html#auto-127">310</a>
+      </p>
+      <p>
+        19.2<span style="margin-left: 1em"></span>Contact subtractions <span style="margin-left: 5mm"></span> <a
+        href="19-products-and-contact-subtractions.html#auto-129">323</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>References</b> <span style="margin-left: 5mm"></span> <a href="references.html#auto-131">332</a>
+      </p>
+    </div>
+<h2 id="auto-30"><a id="sec:renormalization"></a>5<span style="margin-left: 1em"></span>The renormalization group<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      This section defines the block map, the coordinates of the effective
+      densities and their norms, and states the inductive step, the multiscale
+      theorem and the two ultraviolet results built on them. Fix \(\textsf{b}
+      > 0\). Throughout we use the common choices of Sections <a href="10-local-polynomial-fields.html#sec:partII-A">10</a>&ndash;<a
+      href="14-trajectories-marked-fields-and-ultraviolet.html#sec:partII-E">14</a>, made once for the group realization and the penalty in the
+      order of Section <a href="9-constants-and-order-of-choice.html#sec:constants">9</a>; constants may depend on these choices,
+      and further dependence is stated where it occurs.
+    </p>
+    <h3 id="auto-31"><a id="sec:block-map"></a>5.1<span style="margin-left: 1em"></span>Scales and the block map<span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      With odd ratios \(\ell_m \geqslant 3\), set
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I12-levels"></a>\(\displaystyle D_0 = 1, \qquad D_{m + 1}
+        = \ell_m D_m, \qquad a_m = D_m^{- 1}, \qquad s_m =
+\log D_m
+        \hspace{0.17em} .\)</td>
+        <td align="right">(5.1)</td>
+      </tr>
+    </table>
+    <p>
+      Level \(m\) has spacing \(a_m\), and blocking passes from level \(m +
+      1\) to level \(m\); the level-\(m\) torus has side \(L_p D_m\) in
+      lattice units and \(L_p\) in physical units. The cutoff sequence of the
+      family is \(D_N\). Each level carries the stage \(J_m\) of Section <a
+      href="4-strategy-of-the-proof.html#sec:closes">4.1</a>. The endpoint coupling \(\bar{\beta} > 1\) is chosen large
+      (item 7 of Table <a href="9-constants-and-order-of-choice.html#tab:constant-choices">3</a>), and
+    </p>
+    <center>
+      <a id="eq:I12-scales"></a><a id="eq:I12-scales-b"></a>\(\displaystyle \begin{array}{rlllll}
+ 
+      \hat{\beta}_m & = \bar{\beta} + \kappa_G s_m, & M^{\text{cut}}_m & =
+      \exp
+  ((\log \log \hat{\beta}_m)^2), & t_m & = \hat{\beta}_m^{- 1 / 2}
+
+      M^{\text{cut}}_m, \hspace{3cm}   \text{(5.2)} \\
+  B_m & = \lceil (\log
+      \hat{\beta}_m)^2 \rceil, & \epsilon_m^{\text{reg}} & =
+ 
+      \hat{\beta}_m^{- 11 / 10}, & \epsilon_m^{\text{for}} & = e^{-
+ 
+      (M^{\text{cut}}_m)^{1 / 5}} \hspace{0.17em} . \hspace{3cm}  
+      \text{(5.3)} 
+\end{array}\)
+    </center>
+    <p>
+      The reference coupling \(\hat{\beta}_m\) follows the leading running
+      slope; \(t_m\) separates small from large plaquette fields; \(B_m\) is
+      the radius of the support weights; and \(\epsilon_m^{\text{reg}}\),
+      \(\epsilon_m^{\text{for}}\) are the bounds kept by the induction for the
+      regular and forced activity sums (Section <a href="4-strategy-of-the-proof.html#sec:closes">4.1</a> explains
+      these sizes). They depend on the reference coupling, so they stay fixed
+      as the actual coupling varies in the band \(\mathfrak{B}_m =
+      [\hat{\beta}_m / 2, 2 \hat{\beta}_m]\). The physical periods \(L_p\) are
+      strictly increasing multiples of four, every positive integer divides
+      \(L_p\) for infinitely many \(p\), and \(L_p D_m \geqslant 100 (B_m +
+      1)\). At stage \(j\), \(\mathfrak{q}_j\) is the derivative order,
+      \(\varpi_j\) the spatial power, \(\sigma_j\) the support exponent and
+      \(\omega_j^{\text{RG}} \geqslant 0\) the coupling drift bound (Section
+      <a href="9-constants-and-order-of-choice.html#sec:constants">9</a>).
+    </p>
+    <p>
+      At a step \(m + 1 \to m\), the fine links \(U\) and coarse links \(V\)
+      live on \(\Lambda_{L_p D_{m + 1}}\) and \(\Lambda_{L_p D_m}\); put \(j =
+      J_{m + 1}\), \(\ell = \ell_m\) and \(\mathbb{B}_R = \{- R, \ldots,
+      R\}^4\). Fine transports between two coarse endpoints are compared after
+      expressing them in the same frames. A frame is a gauge transformation
+      \(h_{y, z} \in G\) at each fine site \(\ell y + z\) of the patch of
+      radius \((j + 3) \ell\) around \(\ell y\), built from parallel
+      transports in the patch (Definitions <a href="11-gauges-and-block-integration.html#def:D20a">11.1</a>&ndash;<a href="11-gauges-and-block-integration.html#def:D21">11.3</a>).
+      For a coarse edge \(e = (y, a)\) the framed straight connector is
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I12-framed-connector"></a>\(\displaystyle Y_{e, z} = h_{y, z}
+        \left( \prod_{r = 0}^{\ell - 1} U (\ell y + z + re_a, a)
+\right) h_{y
+        + e_a, z}^{- 1} \hspace{0.17em},\)</td>
+        <td align="right">(5.4)</td>
+      </tr>
+    </table>
+    <p>
+      the fine transport from \(\ell y + z\) to \(\ell (y + e_a) + z\) in the
+      frames at its ends. With \(\text{Unif}\) the uniform probability on a
+      box and \(\ast j\) the \(j\)-fold convolution, the averaging weights and
+      the predictor are
+    </p>
+    <center>
+      <a id="eq:I12-predictor"></a>\(\displaystyle \begin{array}{c}
+  w_z^{\text{av}} =
+      (\text{Unif} (\mathbb{B}_{(\ell - 1) / 2}))^{\ast j} (z),
+  \qquad
+      \bar{Y}_e = \sum_z w_z^{\text{av}} Y_{e, z} \hspace{0.17em},\\
+ 
+      Q_e^{\text{pred}} = \text{argmin}_{u \in G} \sum_z w_z^{\text{av}}
+      \text{pr}
+  (Y_{e, z} u^{- 1}) = \text{argmin}_{u \in G} \| \bar{Y}_e -
+      u\|_{\text{F}}
+  \hspace{0.17em} . \hspace{3cm}   \text{(5.5)}
+      
+\end{array}\)
+    </center>
+    <p>
+      The second form holds because \(\text{pr} (Yu^{- 1}) = (2 n_G)^{- 1} 
+      \|Y - u\|_{\text{F}}^2\) for unitary \(Y, u\): the predictor is the
+      point of \(G\) nearest to the weighted average of the connectors, an
+      average of group variables taken through the ambient matrices. On a good
+      patch the connectors lie near one another, and this branch, on which the
+      minimizer is unique, is used when the minimum lies below a fixed cutoff.
+      Where the frame test or the predictor test fails, the kernel chooses at
+      random, an axial frame from a finite list or a single connector \(Y_{e,
+      z}\) with probability \(w^{\text{av}}_z\); these branches complete the
+      kernel on the remaining configurations (Section <a href="11-gauges-and-block-integration.html#sec:partII-B">11</a> gives
+      the decision rules, summarized in Table <a href="11-gauges-and-block-integration.html#tab:B-branches">4</a> and Figure <a
+      href="11-gauges-and-block-integration.html#fig:B-predictor">11</a>). A tag \(\alpha_{\text{tag}}\) records these discrete
+      choices and nothing else: for each coarse site a frame label \((z, o)\),
+      an offset \(z \in \mathbb{B}_{(j + 3) \ell}\) and an order \(o\) of the
+      four axes, and for each coarse edge an offset \(z \in \mathbb{B}_{(j +
+      3) \ell}\) selecting a connector; on the minimizing branches the label
+      is drawn uniformly and does not affect the kernel. Tags are drawn with
+      probabilities
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I12-tag-mass"></a>\(\displaystyle \lambda^{\text{tag}}  (U,
+        \alpha_{\text{tag}}) \geqslant 0, \qquad
+\sum_{\alpha_{\text{tag}}}
+        \lambda^{\text{tag}}  (U, \alpha_{\text{tag}}) = 1
+\hspace{0.17em}
+        .\)</td>
+        <td align="right">(5.6)</td>
+      </tr>
+    </table>
+    <p>
+      Given \(U\) and the tag, the coarse links are independent, each
+      concentrated within about \((\textsf{b} \beta)^{- 1 / 2}\) of its
+      predictor, with the normalized density \(q_{\gamma} (u) = e^{- \gamma
+      \text{pr} (u)} / \int_G e^{- \gamma \text{pr}} 
+\hspace{0.17em} dh\);
+      the block penalty plays the role of the smearing parameter of soft
+      block-spin transformations.
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Definition <class style="font-style: normal">5.1</class>. </strong><class
+      style="font-style: normal"><strong>(Exact block map) </strong></class><a id="def:D04"></a> For fine
+      links \(U\) and coarse links \(V\), define
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  k^{(m)}_{\beta} (U, V) & =
+      \sum_{\alpha_{\text{tag}}} \lambda^{\text{tag}} 
+  (U,
+      \alpha_{\text{tag}})  \prod_{e \text{coarse}} q_{\textsf{b} \beta} 
+      (V_e
+  Q_e^{\text{pred}} (U, \alpha_{\text{tag}})^{- 1}),\\
+ 
+      (\mathcal{B}^{(m)}_{\beta} f) (V) & = \int k^{(m)}_{\beta} (U, V) f (U)
+      
+  \hspace{0.17em} dU \hspace{0.17em},
+\end{array}\)
+    </center>
+    <p style="margin-bottom: 1em">
+      with probability Haar measures on both link sets.
+    </p>
+    <p>
+      For fixed \(U\) and tag, right invariance of Haar measure makes each
+      coarse factor integrate to one; summing the tag masses gives \(\int
+      k^{(m)}_{\beta} (U, V)  \hspace{0.17em} dV = 1\). Hence, for integrable
+      \(f\),
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I12-partition-preservation"></a>\(\displaystyle \int
+        (\mathcal{B}^{(m)}_{\beta} f) (V)  \hspace{0.17em} dV = \int f (U)
+        
+\hspace{0.17em} dU \hspace{0.17em} :\)</td>
+        <td align="right">(5.7)</td>
+      </tr>
+    </table>
+    <p>
+      the map integrates one scale exactly and keeps the partition integral.
+      Branches, measurability and symmetries of the kernel are proved in
+      Section <a href="11-gauges-and-block-integration.html#sec:partII-B">11</a>.
+    </p>
+    <p>
+      Probabilistically, a block step is the following experiment. Let \(U\)
+      have law \(f (U)  \hspace{0.17em} dU / \int f\) for an integrable \(f
+      \geqslant 0\) with \(\int f > 0\); draw a tag with probabilities
+      \(\lambda^{\text{tag}}  (U, \cdot)\); and put \(V_e = R_e
+      Q_e^{\text{pred}}  (U, \alpha_{\text{tag}})\), where the \(R_e\) have
+      density \(q_{\textsf{b} \beta}\) and are independent of each other and
+      of \((U, \alpha_{\text{tag}})\). The pair \((U, V)\) then has law \(f
+      (U) k^{(m)}_{\beta} (U, V)  \hspace{0.17em} dU \hspace{0.17em} dV / \int
+      f\), and by Fubini the law of \(V\) has density
+      \(\mathcal{B}^{(m)}_{\beta} f / \int f\) with respect to Haar measure.
+      Exactness refers to this identity, which includes every branch of the
+      kernel. It does not mean that the coarse density is again a Wilson
+      density; Section <a href="#sec:density">5.2</a> gives the coordinates in which it is
+      written.
+    </p>
+    <h3 id="auto-32"><a id="sec:density"></a>5.2<span style="margin-left: 1em"></span>The density and its norms<span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      The density produced by the integrations records four things: the
+      leading curvature action with its running coupling, the
+      field-independent scalar accumulated so far, small local corrections on
+      small-field supports, and the contributions of large-field regions. At
+      level \(m\) write \(\Lambda = \Lambda_{L_p D_m}\). The flagged sites
+      \(\text{Flag}_m (U)\), or large-field sites, are the sites incident to a
+      plaquette whose chord exceeds \(t_m\); a support is healthy, or
+      small-field in the sense of Ba&#x0142;aban, if it contains none. Flags
+      are gauge invariant, because plaquette chords are: the transform of the
+      identity configuration in Section <a href="2-definitions.html#sec:wilson">2.1</a> has no flagged site,
+      however far its links are from the identity. A regular activity
+      \(E_i^{\text{reg}}\) is a Borel real gauge-invariant function, local on
+      its support \(X_i\), anchored at \(o_i \in X_i\) and vanishing at the
+      flat configuration; it is used only on healthy supports. A forced
+      activity \(K_i^{\text{for}}\), one of the large-field polymer
+      activities, is local on its support \(Y_i\) and carries a nonempty
+      inventory \(I_i \subset Y_i\) of flagged sites; it vanishes off its
+      eligibility event
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I12-forced-eligibility"></a>\(\displaystyle
+        \mathcal{E}_i^{\text{elig}} = \{U : Y_i \cap \text{Flag}_m (U) = I_i
+        \} \cap
+\mathcal{E}_i^{\text{extra}}, \qquad K_i^{\text{for}} (U) = 0
+        \quad (U \not\in
+\mathcal{E}_i^{\text{elig}}) \hspace{0.17em} .\)</td>
+        <td align="right">(5.8)</td>
+      </tr>
+    </table>
+    <p>
+      The first condition fixes exactly which sites of \(Y_i\) are flagged.
+      The extra event is a fixed Borel gauge-invariant test supplied with the
+      activity, which reads only links with both endpoints in \(Y_i\) and the
+      flags in \(Y_i\); it distinguishes local alternatives with the same
+      support and inventory. The activity families are countable.
+    </p>
+    <p>
+      The path action carries the kinetic coefficient and the quadratic
+      corrections generated by integration. At level \(m\) abbreviate the
+      clipping constants and relaxation length of item 4 of Table <a href="9-constants-and-order-of-choice.html#tab:constant-choices">3</a>,
+    </p>
+    <center>
+      \(\displaystyle c_{\text{dir}} = c_{\text{dir}, J_m}, \qquad
+      c_{\text{lin}} = c_{\text{lin},
+J_m}, \qquad 0 < 16 c_{\text{lin}} <
+      c_{\text{dir}} \leqslant \min
+(\gamma_{J_m}, 1), \qquad R^{\text{rel}} =
+      R_{J_m}^{\text{rel}}
+\hspace{0.17em},\)
+    </center>
+    <p>
+      where \(\gamma_j > 0\) is half a uniform lower bound for the free
+      effective plaquette forms of Lemma <a href="11-gauges-and-block-integration.html#lem:B2">11.5</a>. Distances are
+      periodic maximum-coordinate distances in lattice units: on a torus of
+      side \(n\), \(\text{dist} (x, y) = \min_{z \in n\mathbb{Z}^4} |
+      \tilde{x} - \tilde{y} +
+z|_{\infty}\) for lifts \(\tilde{x}, \tilde{y}
+      \in \mathbb{Z}^4\). Set
+    </p>
+    <center>
+      <a id="eq:I12-clipping"></a>\(\displaystyle \begin{array}{rl}
+  \text{clip}_t (r) & =
+      \left\{ \begin{array}{ll}
+    c_{\text{dir}} r^2 / 2, & r \leqslant
+      t,\\
+    c_{\text{lin}} tr, & r > t,
+  \end{array} \right.\\
+ 
+      \chi^{\text{rel}}_{m, x} (U) & =\boldsymbol{1} \hspace{-0.17em} \{
+      \text{ch}
+  (U_{y ; ab}) \leqslant t_m e^{\text{dist} (x, y) /
+      R^{\text{rel}}} \text{
+  for every } y, a < b \} \hspace{0.17em} .
+      \hspace{3cm}   \text{(5.9)} 
+\end{array}\)
+    </center>
+    <p>
+      For each plaquette orientation \(\mathfrak{p}= (a, b)\), let
+      \(\mathcal{F}_{\mathfrak{p}i}  (U, x)\) be a curvature
+      \(\text{proj}_{\mathfrak{g}} (U_{\square} - U_{\square}^{- 1}) / 2\),
+      with the orthogonal projection for the metric of Definition <a href="2-definitions.html#def:D01">2.1</a>,
+      transported along a specified finite path to \(x\), and put
+      \(\mathcal{L}_{\mathfrak{p}}^{\text{path}} (U, x) = \sum_i
+      r_{\mathfrak{p}i}
+\mathcal{F}_{\mathfrak{p}i}  (U, x)\), a smeared
+      lattice curvature at \(x\). The action splits the effective kinetic form
+      into a clipped part, quadratic below \(t_m\) and linear beyond, and the
+      remaining positive form, written as a sum of squares with one row per
+      \((x, \mathfrak{p})\); a row is switched off once some plaquette exceeds
+      its distance-relaxed threshold, that is, when the <em>relaxed threshold
+      test</em> \(\chi^{\text{rel}}_{m, x}\) of <class style="font-style: normal">(<a href="#eq:I12-clipping">5.9</a>)</class>
+      vanishes. With \(\mathfrak{a}_i^{(q)} (U, x)\), \(q = 2, 3, 4\), the
+      fixed real invariant \(q\)-linear expressions in transported curvatures,
+      each multiplied by the health indicator of its footprint (the union of
+      its slot footprints and the anchor; Definition <a href="12-path-actions-and-the-one-loop-coupling.html#def:D22">12.1</a>),
+    </p>
+    <center>
+      <a id="eq:I12-path-action"></a>\(\displaystyle \begin{array}{rl}
+ 
+      (P^{\text{path}})^{\text{raw}}_{N, m} (\beta, U) & = \beta \sum_{x,
+ 
+      \mathfrak{p}} \left[ \text{clip}_{t_m} (\text{ch} (U_{x ;
+      \mathfrak{p}})) +
+  \tfrac{1}{2} \chi^{\text{rel}}_{m, x} (U)
+ 
+      |\mathcal{L}_{\mathfrak{p}}^{\text{path}} (U, x) |^2 \right]\\
+  & \quad
+      + \beta \sum_{x, i} (\mathfrak{a}_i^{(3)} +\mathfrak{a}_i^{(4)}) 
+  (U,
+      x) + \sum_{x, i} \mathfrak{a}_i^{(2)} (U, x), \hspace{3cm}  
+ 
+      \text{(5.10)} \\
+  P^{\text{path}}_{N, m} (\beta, U) & = |H_4 |^{- 1} 
+      \sum_{h \in H_4}
+  (P^{\text{path}})^{\text{raw}}_{N, m} (\beta,
+      h^{\ast} U) \hspace{0.17em},
+\end{array}\)
+    </center>
+    <p>
+      where \(h^{\ast} U\) transports links by the lattice isometry \(h\). The
+      path coefficients and multilinear expressions are independent of \(p\)
+      (Definitions <a href="12-path-actions-and-the-one-loop-coupling.html#def:D22">12.1</a>&ndash;<a href="12-path-actions-and-the-one-loop-coupling.html#def:D23">12.2</a>, Lemmas <a href="12-path-actions-and-the-one-loop-coupling.html#lem:C1">12.3</a>&ndash;<a
+      href="12-path-actions-and-the-one-loop-coupling.html#lem:C2">12.4</a>); the action is affine in \(\beta\),
+    </p>
+    <center>
+      \(\displaystyle P^{\text{path}}_{N, m} (\beta, U) = \beta
+      \hspace{0.17em} \partial_{\beta}
+P^{\text{path}}_{N, m} (U) +
+      P^{\text{path}}_{N, m} (0, U) \hspace{0.17em},\)
+    </center>
+    <p>
+      where, after the average over \(H_4\), \(\partial_{\beta}
+      P^{\text{path}}_{N, m}\) collects the clipped plaquette terms, the row
+      squares with their switches \(\chi^{\text{rel}}_{m, x}\) and the cubic
+      and quartic terms, and \(P^{\text{path}}_{N, m} (0, \cdot)\) the
+      quadratic terms \(\mathfrak{a}_i^{(2)}\). The clip drops at \(r = t\)
+      from \(c_{\text{dir}} t^2 / 2\) to \(c_{\text{lin}} t^2\). Accordingly
+      the density coordinates are Borel functions; derivatives are taken only
+      on healthy configurations with the masks held fixed, so coupling
+      derivatives never differentiate the flag boundary. The positive linear
+      branch beyond the threshold is what the local large-field energy bound
+      (Lemma <a href="11-gauges-and-block-integration.html#lem:B-D1">11.12</a>) uses.
+    </p>
+    <p>
+      For these fixed path actions and thresholds, a <em>representation</em>
+      at level \(m\) is the datum
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I12-representation"></a>\(\displaystyle \rho = (\beta,
+        v_{\text{sc}}, (X_i, o_i, E_i^{\text{reg}})_i, (Y_i,
+        I_i,
+\mathcal{E}_i^{\text{extra}}, K_i^{\text{for}})_i)
+        \hspace{0.17em},\)</td>
+        <td align="right">(5.11)</td>
+      </tr>
+    </table>
+    <p>
+      with scalar normalization per site \(v_{\text{sc}}\) (a constant in the
+      effective density, not the vacuum vector of Section <a href="6-the-continuum-limit-stress-phases-trace-and.html#sec:phases">6.3</a>)
+      and running coupling \(\beta (\rho) = \beta\). The running coupling is
+      thus a coordinate fixed by the choice of path action: the coefficient of
+      the fixed function \(\partial_{\beta} P^{\text{path}}_{N, m}\), whose
+      quadratic part is normalized so that \(\beta\) is the coefficient of the
+      squared curvature at zero momentum at every level, while the quadratic
+      terms \(\mathfrak{a}_i^{(2)}\) carry no curvature-square term (Lemma <a
+      href="12-path-actions-and-the-one-loop-coupling.html#lem:C2">12.4</a>). It is not read off from the whole density, which also
+      contains \(v_{\text{sc}}\) and the activities. Let \(\mathfrak{F}_m
+      (U)\) be the set of finite \(\mathfrak{a} \subset \mathbb{N}\) such that
+      the supports \(Y_i\), \(i \in \mathfrak{a}\), are pairwise disjoint and
+      \(\bigcup_{i \in \mathfrak{a}} I_i = \text{Flag}_m (U)\): the exact
+      covers of the flagged sites.
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Definition <class style="font-style: normal">5.2</class>. </strong><class
+      style="font-style: normal"><strong>(Effective density) </strong></class><a id="def:D06"></a> For a
+      representation \(\rho\), put
+    </p>
+    <center style="margin-bottom: 1em">
+      \(\displaystyle \begin{array}{rl}
+  \mathcal{V}_{\rho} (U) & =
+      P^{\text{path}}_{N, m} (\beta, U) + \sum_i
+  \boldsymbol{1}_{X_i
+      \hspace{0.17em} \text{healthy}} E_i^{\text{reg}} (U) -
+  v_{\text{sc}} |
+      \Lambda |,\\
+  \text{dens} \hspace{0.17em} \rho (U) & =
+      e^{-\mathcal{V}_{\rho} (U)} 
+  \sum_{\mathfrak{a} \in \mathfrak{F}_m
+      (U)} \prod_{i \in \mathfrak{a}}
+  K_i^{\text{for}} (U) \hspace{0.17em}
+      .
+\end{array}\)
+    </center>
+    <p>
+      If there are no flagged sites, \(\mathfrak{F}_m (U) = \{\varnothing\}\)
+      and the forced sum is one. Otherwise every flagged site lies in exactly
+      one selected support, but the sum runs over all exact covers: one
+      support may carry two flags in one term while two disjoint supports
+      carry one flag each in another (Figure <a href="#fig:covers">7</a>). The local
+      regularity of the activities and the restrictions on forced terms are
+      Definitions <a href="13-activities-and-the-inductive-step.html#def:D24">13.1</a>&ndash;<a href="13-activities-and-the-inductive-step.html#def:D25">13.2</a>.
+    </p>
+    <div style="margin-top: 1em; margin-bottom: 1em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em"><center>
+            <img class="image" height="108.03595895838401" src="../main-figures/fig-7.svg" width="498.6917466001864"></img><a id="fig:covers"></a> 
+          </center></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; height: 0.5em"></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><div class="caption">
+            <font style="font-size: 84.1%"><p>
+              <b>Figure 7. </b><a id="auto-33"></a>Exact covers of two flagged sites
+              (dots). (a) One support carries both flags; the dashed line
+              marks the larger region its eligibility test inspects. (b) Two
+              disjoint supports carry one flag each. Both selections occur in
+              the sum of Definition <a href="#def:D06">5.2</a>, which does not choose a
+              canonical cover. (c) Overlapping supports are not a cover.
+            </p></font>
+          </div></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p>
+      For a link \(e\) let \(e^-\) be its initial site. The left derivative
+      \(D^L_{\dot{\mathcal{A}}}\) differentiates the increments \(U_e \mapsto
+      e^{t \dot{\mathcal{A}}_e} U_e\), with \(\dot{\mathcal{A}}_e \in
+      \mathfrak{g}\) normed by Definition <a href="2-definitions.html#def:D01">2.1</a>.
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Definition <class style="font-style: normal">5.3</class>. </strong><class
+      style="font-style: normal"><strong>(Local derivative seminorm) </strong></class><a id="def:D05a"></a>
+      For a regular activity anchored at \(o_i\), set
+    </p>
+    <center>
+      \(\displaystyle \|E_i^{\text{reg}} \|_m = \sup_{0 \leqslant q \leqslant
+      \mathfrak{q}_{J_m}}
+\sup_{U, \dot{\mathcal{A}}_1, \ldots,
+      \dot{\mathcal{A}}_q} |
+D^L_{\dot{\mathcal{A}}_1} \cdots
+      D^L_{\dot{\mathcal{A}}_q} E_i^{\text{reg}}
+(U) | \hspace{0.17em},\)
+    </center>
+    <p style="margin-bottom: 1em">
+      over configurations healthy on \(X_i\) and directions with \(|
+      (\dot{\mathcal{A}}_k)_e | \leqslant t_m  (1 + \text{dist}
+      (e^-,
+o_i))^{\varpi_{J_m}}\), \(1 \leqslant k \leqslant q\).
+    </p>
+    <p>
+      The seminorm measures ordered local derivatives in units of the
+      permitted field size. For a support \(X\), let \(\text{cov}_{B_m} (X)\)
+      be the least number of radius-\(B_m\) lattice balls with connected union
+      covering \(X\); the exponential weight below penalizes supports that
+      need many such balls.
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Definition <class style="font-style: normal">5.4</class>. </strong><class
+      style="font-style: normal"><strong>(Weighted activity sums) </strong></class><a id="def:D05b"></a> For
+      nonnegative majorants \(e_i^{\text{maj}} \geqslant \|E_i^{\text{reg}}
+      \|_m\) and \(k_i^{\text{maj}} \geqslant \sup_U |K_i^{\text{for}} (U)
+      |\), define
+    </p>
+    <center style="margin-bottom: 1em">
+      \(\displaystyle \mathcal{E}_m = \sup_x  \sum_{o_i = x} e^{\sigma_{J_m}
+      \text{cov}_{B_m} (X_i)}
+e_i^{\text{maj}}, \qquad \mathcal{K}_m = \sup_x 
+      \sum_{x \in Y_i}
+e^{\sigma_{J_m} \text{cov}_{B_m} (Y_i)}
+      k_i^{\text{maj}} \hspace{0.17em} .\)
+    </center>
+    <p>
+      The two sums are formed differently (Figure <a href="#fig:weighted-sums">8</a>). The regular
+      sum at \(x\) counts the activities anchored at \(x\), whatever their
+      supports, so each regular activity is counted once, at the site from
+      which its derivative directions are weighted (Definition <a href="#def:D05a">5.3</a>).
+      The forced sum at \(x\) counts every forced activity whose support
+      contains \(x\), so the weight \(e^{\sigma_{J_m} \text{cov}_{B_m}
+      (Y_i)}\) charges a large support at each of its sites; if \(x\) is
+      flagged, every activity that covers \(x\) in a term of Definition <a
+      href="#def:D06">5.2</a> is counted there. Section <a href="13-activities-and-the-inductive-step.html#sec:partII-D">13</a> converts
+      anchored bounds into containing-site bounds where needed, at the cost of
+      the number of possible anchors of a support.
+    </p>
+    <div style="margin-top: 1em; margin-bottom: 1em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em"><center>
+            <img class="image" height="141.446317998848" src="../main-figures/fig-8.svg" width="387.3902481144744"></img><a id="fig:weighted-sums"></a> 
+          </center></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; height: 0.5em"></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><div class="caption">
+            <font style="font-size: 84.1%"><p>
+              <b>Figure 8. </b><a id="auto-34"></a>The weighted sums of Definition <a
+              href="#def:D05b">5.4</a> at a site \(x\). (a) The regular sum counts the
+              activities anchored at \(x\) (solid supports), whatever their
+              extent; the dashed support contains \(x\) but is anchored at
+              \(o_i \ne x\) and is counted at \(o_i\). (b) The forced sum
+              counts every activity whose support contains \(x\) (solid),
+              whatever its inventory (crosses); overlapping supports both
+              count, since the sum runs over activities, not covers. The
+              dashed support does not contain \(x\).
+            </p></font>
+          </div></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <p>
+      The induction keeps the bounds
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I12-activity-caps"></a>\(\displaystyle \mathcal{E}_m \leqslant
+        \epsilon_m^{\text{reg}}, \qquad \mathcal{K}_m
+\leqslant
+        \epsilon_m^{\text{for}} \hspace{0.17em} .\)</td>
+        <td align="right">(5.12)</td>
+      </tr>
+    </table>
+    <p>
+      These numerical bounds do not by themselves define the classes on which
+      the step acts. The Wilson start is the continuous curve
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I12-Wilson-initialization"></a>\(\displaystyle \beta \longmapsto
+        \rho^{\text{W}}_{\beta}, \qquad \beta
+(\rho^{\text{W}}_{\beta}) =
+        \beta, \qquad \text{dens} \hspace{0.17em}
+\rho^{\text{W}}_{\beta} =
+        e^{- \beta E^{\text{W}}_{L_p D_N}}  \quad (\beta \in
+\mathfrak{B}_N)
+        \hspace{0.17em},\)</td>
+        <td align="right">(5.13)</td>
+      </tr>
+    </table>
+    <p>
+      with scalar normalization zero (Lemma <a href="13-activities-and-the-inductive-step.html#lem:D3">13.16</a>). The
+      <em>admissible classes</em> consist of everything reachable from it. Let
+      \(\mathcal{I}_{N, p} = \{\rho^{\text{W}}_{\beta} : \beta \in
+      \mathfrak{B}_N \}\) and \(\mathcal{A}_{N, N, p} =\mathcal{I}_{N, p}\).
+      For \(m < N\), a representation at level \(m\) belongs to
+      \(\mathcal{A}_{N, m, p}\) if it is obtained from some \(\rho' \in
+      \mathcal{A}_{N, m + 1, p}\) with coupling in \(\mathfrak{B}_{m + 1}\) by
+      one block step of Section <a href="13-activities-and-the-inductive-step.html#sec:partII-D">13</a>: its path is
+      \(P^{\text{path}}_{N, m}\), its activities are produced by local
+      subtraction, path replacement and fusion, its coupling is that of
+      \(\rho'\) plus the one-loop coefficient \(\alpha_{N, m}\) of Lemma <a
+      href="12-path-actions-and-the-one-loop-coupling.html#lem:C7">12.9</a> and a correction bounded by the first inequality of
+      <class style="font-style: normal">(<a href="13-activities-and-the-inductive-step.html#eq:D-retained">13.24</a>)</class>, and its density is the block
+      integral of the density of \(\rho'\) (the precise conditions precede
+      Lemma <a href="13-activities-and-the-inductive-step.html#lem:D2">13.17</a>). Membership is a property of a single
+      representation; in particular the classes contain the outputs of the
+      step construction on continuous curves and their restrictions to closed
+      subintervals. Let \(\mathcal{R}_{N, m, p} \subset \mathcal{A}_{N, m, p}
+      \times \mathcal{A}_{N, m +
+1, p}\) be the set of the corresponding
+      output&ndash;input pairs. Every member satisfies Definitions <a href="13-activities-and-the-inductive-step.html#def:D24">13.1</a>&ndash;<a
+      href="13-activities-and-the-inductive-step.html#def:D25">13.2</a>, the path bounds of Lemmas <a href="12-path-actions-and-the-one-loop-coupling.html#lem:C1">12.3</a>&ndash;<a
+      href="12-path-actions-and-the-one-loop-coupling.html#lem:C2">12.4</a> and <class style="font-style: normal">(<a href="#eq:I12-activity-caps">5.12</a>)</class> (Lemma <a
+      href="13-activities-and-the-inductive-step.html#lem:D3">13.16</a> at the Wilson start, Lemmas <a href="13-activities-and-the-inductive-step.html#lem:D1">13.12</a> and <a
+      href="13-activities-and-the-inductive-step.html#lem:D2">13.17</a> at later levels). A curve \(u \mapsto \rho_u\) in
+      \(\mathcal{A}_{N, m, p}\) is continuous (Definition <a href="13-activities-and-the-inductive-step.html#def:D25a">13.3</a>)
+      if its supports, anchors, inventories and extra tests do not depend on
+      \(u\), its coupling and scalar normalization are continuous, and, as \(u
+      \to u_0\), the differences of regular derivatives on healthy
+      configurations and of forced values in supremum norm admit majorants
+      whose weighted sums tend to zero.
+    </p>
+    <h3 id="auto-35"><a id="sec:inductive-step"></a>5.3<span style="margin-left: 1em"></span>The inductive step<span style="margin-left: 1em"></span></h3>
+    <p>
+      Exact integration removes one scale. Extracting its marginal
+      curvature-square term into the coupling leaves a bounded drift error and
+      returns a density in the next admissible class.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Theorem <class style="font-style: normal">5.5</class>. </strong><i><class
+        style="font-style: normal"><strong>(RG. One step) </strong></class><a id="prop:RG"></a> For every
+        \(N, p\), \(m < N\), reals \(u_0 \leqslant u_1\) and continuous
+        \(\rho'_u \in \mathcal{A}_{N, m + 1, p}\) with \(\beta'_u = \beta
+        (\rho'_u) \in \mathfrak{B}_{m + 1}\) for all \(u \in [u_0, u_1]\),
+        there is a continuous \(\rho_u \in \mathcal{A}_{N, m, p}\) with
+        \((\rho_u, \rho'_u) \in \mathcal{R}_{N, m, p}\) and, for every \(u \in
+        [u_0, u_1]\) and coarse configuration \(V\),</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle \begin{array}{rl}
+  \text{dens} \hspace{0.17em}
+          \rho_u (V) & = (\mathcal{B}^{(m)}_{\beta'_u}
+  \text{dens}
+          \hspace{0.17em} \rho'_u) (V),\\
+  \beta (\rho_u) & = \beta'_u -
+          \kappa_G \log \ell_m + e_u, \qquad |e_u |
+  \leqslant \omega_{J_{m +
+          1}}^{\text{RG}} \hspace{0.17em} .
+\end{array}\)
+        </center></i>
+      </div>
+    </div>
+    <p>
+      <em>Idea of the proof</em> (Sections <a href="11-gauges-and-block-integration.html#sec:partII-B">11</a>&ndash;<a href="13-activities-and-the-inductive-step.html#sec:partII-D">13</a>;
+      the proof follows Lemma <a href="13-activities-and-the-inductive-step.html#lem:D2">13.17</a>).
+    </p>
+    <ol>
+      <dt>
+        Step 1
+      </dt><dd>
+        <p>
+          The density identity is exact because the output coordinates rewrite
+          the block-integrated density on every configuration (Lemma <a href="13-activities-and-the-inductive-step.html#lem:D5">13.13</a>);
+          by <class style="font-style: normal">(<a href="#eq:I12-partition-preservation">5.7</a>)</class> the partition integral
+          is kept. Approximation enters only the coupling drift and the
+          activity estimates.
+        </p>
+      </dd>
+      <dt>
+        Step 2
+      </dt><dd>
+        <p>
+          On small fields, gauge fixing in a rooted block-tree gauge and the
+          stationary background turn the local integral into a Gaussian
+          integral with its determinant and Haar-coordinate factors; the
+          large-field lower bound (Lemma <a href="11-gauges-and-block-integration.html#lem:B-D1">11.12</a>) supplies
+          suppression of the forced terms.
+        </p>
+      </dd>
+      <dt>
+        Step 3
+      </dt><dd>
+        <p>
+          Classical fourth-order matching fixes the local terms, and the
+          background curvature-square coefficient of the one-loop action,
+          assembled from the inherited quadratic loop term, the fluctuation
+          determinant and the Haar Jacobian, gives the change \(- \kappa_G
+          \log \ell_m\) up to a stage-bounded error (Lemma <a href="12-path-actions-and-the-one-loop-coupling.html#lem:C7">12.9</a>).
+        </p>
+      </dd>
+      <dt>
+        Step 4
+      </dt><dd>
+        <p>
+          The local expansion, the contraction of inherited terms and the
+          five-torus localization (Lemma <a href="4-strategy-of-the-proof.html#lem:five-torus">4.1</a>) give the regular
+          bound; forced fusion gives the forced bound; the scalar coupling
+          reset absorbs the residual kinetic coefficient (Lemma <a href="13-activities-and-the-inductive-step.html#lem:C8">13.14</a>).
+        </p>
+      </dd>
+    </ol>
+    <p>
+      The bound \(\omega_j^{\text{RG}}\) depends only on the stage, not on
+      \(N, p\), the interval or the curve. Since \(\hat{\beta}_m =
+      \hat{\beta}_{m + 1} - \kappa_G \log \ell_m\), a step changes \(\beta -
+      \hat{\beta}\) by \(e_u\) only.
+    </p>
+    <h3 id="auto-36"><a id="sec:trajectories"></a>5.4<span style="margin-left: 1em"></span>Multiscale trajectories<span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      A trajectory is a tuple \(\rho_{N, p, m} \in \mathcal{A}_{N, m, p}\),
+      \(0 \leqslant m \leqslant N\), with \(\rho_{N, p, N} \in \mathcal{I}_{N,
+      p}\) and \((\rho_{N, p, m}, \rho_{N, p, m + 1}) \in \mathcal{R}_{N, m,
+      p}\) for \(m < N\); write \(\beta_{N, p, m} = \beta (\rho_{N, p, m})\).
+      The bare coupling is selected by shooting. Put \(\mathfrak{T}_m =
+      [\bar{\beta} + \tfrac{\kappa_G}{2} s_m, \bar{\beta} + 2
+\kappa_G s_m]
+      \subset \mathfrak{B}_m\), so that \(\mathfrak{T}_0 = \{ \bar{\beta}
+      \}\). Start with the Wilson curve on \(\mathfrak{T}_N\). Suppose a
+      closed parameter interval has level-\((m + 1)\) couplings in
+      \(\mathfrak{T}_{m + 1}\), taking its end values at its endpoints. Since
+      \(s_{m + 1} = s_m + \log \ell_m\) and \(|e_u | \leqslant
+      \omega^{\text{RG}}_{J_{m + 1}} \leqslant \tfrac{\kappa_G}{4}
+\log
+      \ell_m\) (item 5 of Table <a href="9-constants-and-order-of-choice.html#tab:constant-choices">3</a>), the output couplings at the
+      two endpoints satisfy
+    </p>
+    <center>
+      \(\displaystyle \beta \leqslant \bar{\beta} + \tfrac{\kappa_G}{2} s_m -
+      \tfrac{\kappa_G}{4}
+\log \ell_m < \min \mathfrak{T}_m, \qquad \beta
+      \geqslant \bar{\beta} + 2
+\kappa_G s_m + \tfrac{3 \kappa_G}{4} \log
+      \ell_m > \max \mathfrak{T}_m
+\hspace{0.17em} .\)
+    </center>
+    <p>
+      The intermediate value theorem gives a closed subinterval whose
+      couplings lie in \(\mathfrak{T}_m\) and take its end values at its
+      endpoints. After \(N\) steps the level-zero coupling is \(\bar{\beta}\).
+      The couplings are chosen this way for all \(N, p\) before any sequence
+      of volume indices is prescribed. Trajectories for different cutoffs thus
+      share the coupling \(\bar{\beta}\) at level zero; their scalar
+      normalizations and activities need not agree (Figure <a href="#fig:two-cutoffs">9</a>),
+      and Proposition <a href="#prop:fixed-level">5.7</a> below compares them at a fixed level as
+      the cutoff grows.
+    </p>
+    <div style="margin-top: 1em; margin-bottom: 1em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em"><center>
+            <img class="image" height="101.23078624658241" src="../main-figures/fig-9.svg" width="576.4232319166864"></img><a id="fig:two-cutoffs"></a> 
+          </center></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; height: 0.5em"></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><div class="caption">
+            <font style="font-size: 84.1%"><p>
+              <b>Figure 9. </b><a id="auto-37"></a>Trajectories for two cutoffs \(N <
+              N'\) at one volume, from the Wilson start at the cutoff (left)
+              to level zero (right); each arrow is a block step, and levels
+              are aligned vertically. Both reach the coupling \(\bar{\beta}\)
+              at level zero; their scalar normalizations and activities need
+              not agree. At a fixed level \(m\) (dashed), Proposition <a href="#prop:fixed-level">5.7</a>
+              states convergence of the couplings and activities as the cutoff
+              tends to infinity, subject to cutoff continuity in the activity
+              norms and convergence of the path drift.
+            </p></font>
+          </div></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Theorem <class style="font-style: normal">5.6</class>. </strong><i><class
+        style="font-style: normal"><strong>(MT. Multiscale trajectory) </strong></class><a id="prop:MT"></a>
+        There are bare couplings \(\beta_{N, p}\) and trajectories \((\rho_{N,
+        p, m})_{m = 0}^N\), for all \(N, p \in \mathbb{N}\), with \(\rho_{N,
+        p, N} = \rho^{\text{W}}_{\beta_{N, p}}\) and \(\beta_{N, p, N} =
+        \beta_{N, p}\), satisfying</i>
+      </p>
+      <i><center>
+        \(\displaystyle \begin{array}{c}
+  \beta_{N, p, 0} = \bar{\beta},
+        \qquad \beta_{N, p, m} \in \mathfrak{B}_m 
+  \quad (0 \leqslant m
+        \leqslant N),\\
+  \text{dens} \hspace{0.17em} \rho_{N, p, m}
+        =\mathcal{B}^{(m)}_{\beta_{N, p,
+  m + 1}} \text{dens} \hspace{0.17em}
+        \rho_{N, p, m + 1}  \quad (m < N)
+  \hspace{0.17em} .
+\end{array}\)
+      </center></i>
+      <p>
+        <i>For every \(\varepsilon > 0\), some \(m_0 (\varepsilon)\)
+        satisfies</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle | \beta_{N, p, m} - \kappa_G s_m | \leqslant
+          \varepsilon s_m  \qquad (N
+\geqslant m \geqslant m_0, p \in
+          \mathbb{N}) \hspace{0.17em} .\)
+        </center></i>
+      </div>
+    </div>
+    <p>
+      The proof is the shooting argument above (Section <a href="14-trajectories-marked-fields-and-ultraviolet.html#sec:partII-E.1">14.1</a>,
+      Lemmas <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E1.1">14.2</a>&ndash;<a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E1.2">14.3</a>). Fix these
+      trajectories for all later constructions. The drift bound of Theorem <a
+      href="#prop:RG">5.5</a> holds on every adjacent pair, and all their integrals
+      equal \(Z_{L_p D_N, \beta_{N, p}}\) by <class style="font-style: normal">(<a href="#eq:I12-partition-preservation">5.7</a>)</class>
+      and the Wilson start. Summing the drift from the fixed endpoint gives
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I12-drift-sum"></a>\(\displaystyle | \beta_{N, p, m} -
+        \hat{\beta}_m | \leqslant \sum_{i = 0}^{m - 1}
+\omega_{J_{i +
+        1}}^{\text{RG}} \hspace{0.17em} .\)</td>
+        <td align="right">(5.14)</td>
+      </tr>
+    </table>
+    <p>
+      Item 5 of Table <a href="9-constants-and-order-of-choice.html#tab:constant-choices">3</a> bounds the sum by \((\kappa_G / 4) s_m\),
+      which also keeps the couplings in \(\mathfrak{B}_m\). Its stronger bound
+      \(\omega_{J_{i + 1}}^{\text{RG}} \leqslant J_{i + 1}^{- 2} \log \ell_i\)
+      makes the sum \(o (s_m)\): split it at a fixed level and bound the tail
+      by \(\sup_{i \geqslant i_0} J_{i + 1}^{- 2}\) times \(s_m\). Since \(J_i
+      \to \infty\) and \(s_m \to \infty\), the finite initial sum and
+      \(\bar{\beta}\) disappear after division by \(s_m\), uniformly in \(N
+      \geqslant m\) and \(p\). As \(\omega_j^{\text{RG}} \geqslant 1\), the
+      same bound forces \(\log \ell_m \geqslant J_{m + 1}^2 \to \infty\): the
+      block ratios must grow, and the level choices also give \(\log \ell_m /
+      s_m \to 0\). The step construction of Theorem <a href="#prop:RG">5.5</a> is fixed
+      once on whole continuous curves (Lemma <a href="13-activities-and-the-inductive-step.html#lem:D2">13.17</a>); the
+      trajectories it produces from \(\rho^{\text{W}}_{\beta}\), and their
+      restrictions, form the <em>specified recursion</em>, to which the
+      trajectories of Theorem <a href="#prop:MT">5.6</a> belong. Different cutoffs are
+      compared through the following limit.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em; margin-bottom: 1em">
+        <strong class="enunciation-name">Proposition <class style="font-style: normal">5.7</class>.
+        </strong><i><class style="font-style: normal"><strong>(Fixed-level convergence)
+        </strong></class><a id="prop:fixed-level"></a> For fixed \(p\) and \(m\), as \(N \to
+        \infty\) along the full sequence, the couplings \(\beta_{N, p, m}\) of
+        Theorem <a href="#prop:MT">5.6</a> converge, and the activity coordinates of
+        \(\rho_{N, p, m}\) converge in the weighted spaces \(\mathcal{X}_{m,
+        p}\) of <class style="font-style: normal">(<a href="13-activities-and-the-inductive-step.html#eq:D-common-norm">13.25</a>)</class>. No convergence of
+        the scalar normalizations is asserted.</i>
+      </p>
+    </div>
+    <p>
+      <em>Idea of the proof</em> (Lemmas <a href="13-activities-and-the-inductive-step.html#lem:D-cutoff-continuity">13.22</a> and <a href="13-activities-and-the-inductive-step.html#lem:D-fixed-level">13.25</a>).
+      The truncated-coordinate comparison and uniqueness argument require
+      cutoff continuity in the full activity norms and convergence of the path
+      drift; those inputs remain open. The argument uses geometric truncation,
+      not compactness of a ball in an infinite-dimensional space. The
+      running-coupling coordinates lie in fixed compact intervals, so a
+      diagonal argument gives subsequential limits. At a fixed higher level
+      \(k\), replace the activity coordinate by zero and run the same maps
+      down to level \(m\): the error is at most \((8 g_{\ast})^{k - m}\) with
+      \(g_{\ast} = 1 / 128\), uniformly in the cutoff, while the truncated
+      coordinates converge by the cutoff compatibility of finitely many step
+      maps (Lemma <a href="13-activities-and-the-inductive-step.html#lem:D-cutoff-continuity">13.22</a>). Letting \(k \to \infty\) gives the
+      activity limits. Two limits have the same endpoint \(\bar{\beta}\), and
+      their distance \(\mathfrak{d}_{\infty}\) satisfies
+      \(\mathfrak{d}_{\infty} \leqslant 8 g_{\ast} \mathfrak{d}_{\infty}\), so
+      they coincide.
+    </p>
+    <h3 id="auto-38"><a id="sec:marked"></a>5.5<span style="margin-left: 1em"></span>Local fields under blocking<span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      Blocking a density that carries one insertion returns a density of the
+      same form: the unmarked density times a local insertion with new
+      coefficients, plus regular remainders with vanishing Taylor coefficients
+      through order \(d\) and forced remainders attached to large fields. The
+      coefficients evolve linearly, and the insertions of Definition <a href="2-definitions.html#def:D08">2.8</a>
+      are normalized by prescribing them at the reference level. Choose the
+      reference level \(m_{\text{ref}} (d)\) with \(J_{m_{\text{ref}} (d)}
+      \geqslant d + 3\) and \(\mathfrak{q}_{J_m} \geqslant d + 1\),
+      \(\varpi_{J_m} \geqslant d\) for \(m \geqslant m_{\text{ref}} (d)\)
+      (Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.1">14.7</a>). Fix \(N \geqslant m_{\text{ref}} (d)\);
+      starting from a fine-cutoff coefficient vector \(\mathbf{v} \in V_d\),
+      the marked density at the origin is initialized and blocked by
+    </p>
+    <center>
+      <a id="eq:I12-marked-evolution"></a>\(\displaystyle \begin{array}{rl}
+  H^{\text{ins}}_{N, p, N ;
+      d}  (\mathbf{v}; U) & = \text{dens}
+  \hspace{0.17em} \rho_{N, p, N} (U)
+      \hspace{0.17em} P_d^{\text{loc}} [t_N^{-
+  \textsf{N}} \mathbf{v}] (0 ;
+      U), \hspace{3cm}   \text{(5.15)} \\
+  H^{\text{ins}}_{N, p, m ; d}
+      (\mathbf{v}) & = \ell_m^d
+  \mathcal{B}^{(m)}_{\beta_{N, p, m + 1}}
+      H^{\text{ins}}_{N, p, m + 1 ; d}
+  (\mathbf{v})  \quad (m_{\text{ref}}
+      (d) \leqslant m < N) \hspace{0.17em} .
+  \hspace{3cm}  
+      \text{(5.16)}
+\end{array}\)
+    </center>
+    <p>
+      For fixed \(N, p, d\), the transfer construction chooses coefficient
+      vectors \(\mathbf{x}_m (\mathbf{v})\) and regular and forced remainders
+      \(R_{m, i}^{\text{reg}} (\mathbf{v})\), \(Q_{m, i}^{\text{for}}
+      (\mathbf{v})\), all linear in \(\mathbf{v}\). Write \(\mathbf{x}_m =
+      x_{m, 0} \boldsymbol{1}+\mathbf{x}_m^{\circ}\) and \(\rho_m = \rho_{N,
+      p, m}\). The regular remainders have supports \(Z_{m, i}\) containing
+      the origin. Their sum and the forced remainder are
+    </p>
+    <center>
+      <a id="eq:I12-marked-remainders"></a>\(\displaystyle \begin{array}{rl}
+ 
+      \mathcal{R}_m^{\text{reg}}  (\mathbf{v}; U) & = \sum_i
+      \boldsymbol{1}_{Z_{m,
+  i} \hspace{0.17em} \text{healthy}} R_{m,
+      i}^{\text{reg}}  (\mathbf{v}; U),\\
+  \mathcal{R}_m^{\text{for}} 
+      (\mathbf{v}; U) & = e^{-\mathcal{V}_{\rho_m}
+  (U)}  \sum_{\mathfrak{a}
+      \in \mathfrak{F}_m (U)} \sum_{i \in \mathfrak{a}}
+  Q_{m,
+      i}^{\text{for}}  (\mathbf{v}; U)  \prod_{j \in \mathfrak{a} \setminus
+ 
+      \{i\}} K_j^{\text{for}} (U) \hspace{0.17em}, \hspace{3cm}  
+      \text{(5.17)} 
+\end{array}\)
+    </center>
+    <p>
+      with all unmarked quantities taken from \(\rho_m\). The marked density
+      has the exact decomposition
+    </p>
+    <center>
+      <a id="eq:I12-marked-representation"></a>\(\displaystyle \begin{array}{l}
+  H^{\text{ins}}_{N, p, m ;
+      d}  (\mathbf{v}; U) = \text{dens} \hspace{0.17em}
+  \rho_m (U)  \left[
+      x_{m, 0} (\mathbf{v}) +\boldsymbol{1}_{\Sigma_d
+  \hspace{0.17em}
+      \text{healthy}} P_d^{\text{loc}} [t_m^{- \textsf{N}}
+ 
+      \mathbf{x}_m^{\circ} (\mathbf{v})] (0 ; U) \right]\\
+  + \text{dens}
+      \hspace{0.17em} \rho_m (U) \mathcal{R}_m^{\text{reg}} 
+  (\mathbf{v}; U)
+      +\mathcal{R}_m^{\text{for}}  (\mathbf{v}; U)
+  \hspace{0.17em},
+      \hspace{3cm}   \text{(5.18)} 
+\end{array}\)
+    </center>
+    <p>
+      with the stencil \(\Sigma_d\) placed at the origin of the level-\(m\)
+      torus. If \(10 \text{dist} (x, 0) < L_p D_m\) for every \(x \in Z_{m,
+      i}\), the regular remainder \(R_{m, i}^{\text{reg}}\) has zero
+      radial-jet Taylor coefficients through order \(d\); the forced
+      remainders vanish outside their unmarked eligibility events (Lemmas <a
+      href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.2">14.7</a>&ndash;<a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.2a">14.9</a>). The fixed decomposition
+      selected there gives the terminal map of Definition <a href="2-definitions.html#def:D08">2.8</a>,
+      invertible by Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.1">14.7</a>:
+    </p>
+    <center>
+      \(\displaystyle \mathbf{x}_N (\mathbf{v}) =\mathbf{v}, \qquad
+      \mathbf{x}_{m_{\text{ref}} (d)}
+(\mathbf{v}) = \textsf{Z}_{N, p, d}
+      \mathbf{v} \hspace{0.17em} .\)
+    </center>
+    <p>
+      The factor \(\ell_m^d = (a_m / a_{m + 1})^d\) uses the degree of the
+      whole space \(V_d\), and the terminal map accounts for the mixing
+      between its weights. The unit identity \(\mathbf{x}_m  (a_N^d
+      \boldsymbol{1}) = a_m^d \boldsymbol{1}\), proved with the transfer
+      symmetries (Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.1a">14.8</a>), explains why the coefficient of
+      the constant insertion is \(a_{m_{\text{ref}} (d)}^d \boldsymbol{1}\),
+      although \(V_d\) also contains polynomials of lower weight. With Theorem
+      <a href="#prop:MT">5.6</a>, these insertions specify one Wilson family; each
+      insertion is continuous, gauge invariant and local on its fixed stencil,
+      and Theorem <a href="#prop:MT">5.6</a> at \(m = N\) gives the volume-uniform slope
+      \(\kappa_G > 0\).
+    </p>
+    <h3 id="auto-39"><a id="sec:uv-limit"></a>5.6<span style="margin-left: 1em"></span>Uniform bounds and the
+    fixed-volume limit<span style="margin-left: 1em"></span></h3>
+    <p>
+      For a finite list \(\boldsymbol{l}\) of pairs \((i, a)\), with \(i\) a
+      slot and \(a\) an axis, the normalized differences and derivatives are
+    </p>
+    <center>
+      \(\displaystyle \Delta_{\boldsymbol{l}} = \prod_{(i, a) \in
+      \boldsymbol{l}} a_N^{- 1} 
+(\tau_{i, a} - 1), \qquad
+      \partial_{\boldsymbol{l}} = \prod_{(i, a) \in
+\boldsymbol{l}}
+      \partial_{x_i^a} \hspace{0.17em},\)
+    </center>
+    <p>
+      where \(\tau_{i, a}\) shifts slot \(i\) forward by one lattice link. The
+      torus separation of a lattice tuple is \(\min_{i \ne j} \min_{z \in L_p
+      \mathbb{Z}^4} | \hat{y}_i - \hat{y}_j +
+z|_{\infty}\), with value \(+
+      \infty\) for \(n \leqslant 1\), and
+    </p>
+    <center>
+      \(\displaystyle \text{Gen}_n = \{x : x_i^a \ne x_j^a \text{ for } i \ne
+      j, a = 1, \ldots, 4\},
+\qquad \text{NoHit}_{L, n} = \{x : x_i - x_j
+      \not\in L\mathbb{Z}^4 \text{ for
+} i \ne j\} \hspace{0.17em} ;\)
+    </center>
+    <p>
+      the last set excludes collisions on a torus of physical side \(L\). The
+      first result bounds lattice correlations and their differences
+      independently of the volume.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Proposition <class style="font-style: normal">5.8</class>.
+        </strong><i><class style="font-style: normal"><strong>(UB. Uniform difference bounds)
+        </strong></class><a id="prop:UB"></a> For every \(v \in \mathcal{T}^n\), finite
+        difference list \(\boldsymbol{l}\) and \(r > 0\), there are \(B (v,
+        \boldsymbol{l}, r) \geqslant 0\) and \(N_0  (v, \boldsymbol{l}, r)\)
+        such that, for every \(N \geqslant N_0\), every \(p\) and every
+        lattice tuple of torus separation at least \(r\),</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle | \Delta_{\boldsymbol{l}} M^{\text{lat}}_{N, p} (v ;
+          y) | \leqslant B
+\hspace{0.17em} .\)
+        </center></i>
+      </div>
+    </div>
+    <p>
+      <em>Idea of the proof</em> (Section <a href="14-trajectories-marked-fields-and-ultraviolet.html#sec:partII-E.2">14.2</a>). Choose an
+      intermediate level whose physical blocks fit below the separation, so
+      the insertions lie in distinct blocks. By the decomposition <class
+      style="font-style: normal">(<a href="#eq:I12-marked-representation">5.18</a>)</class>, at that level each insertion is a
+      bounded local function plus small remainders, with bounds independent of
+      \(N\) and \(p\); differences of insertions are matched in a higher
+      degree, their equation directions are removed, and the remaining
+      coefficients are tested against a finite free comparison matrix, whose
+      injectivity (Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2-free-tests">14.23</a>) rests on the free positivity of
+      Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G1.1">16.1</a>. The chessboard estimate then bounds the
+      correlation by a product of reflected moments, schematically
+    </p>
+    <center>
+      \(\displaystyle \left| \left\langle \prod_i O_i \right\rangle \right|
+      \leqslant \prod_i
+\left\langle \prod_{g \in \mathcal{G}} gO_i
+      \right\rangle^{1 / |\mathcal{G}|}\)
+    </center>
+    <p>
+      for \(O_i\) localized in distinct blocks and \(\mathcal{G}\) generated
+      by the reflections in the block boundaries; each factor is independent
+      of the volume. The reflected-moment constant is chosen before the
+      intermediate level, and only the cutoff threshold depends on it.
+    </p>
+    <p>
+      The second result removes the spacing at each fixed volume along the
+      full sequence; Section <a href="4-strategy-of-the-proof.html#sec:tuning-convergence">4.2</a> displays the Cauchy argument.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Theorem <class style="font-style: normal">5.9</class>. </strong><i><class
+        style="font-style: normal"><strong>(UV. Fixed-volume limit) </strong></class><a id="prop:UV"></a><a
+        id="thm:UV"></a> For every \(p, n\) and \(v \in \mathcal{T}^n\), there is
+        \(M^{\text{UV}}_{p, v} \in C^{\infty} (\text{NoHit}_{L_p, n})\) such
+        that, for every finite \(\boldsymbol{l}\) and every \(p\)-admissible
+        separated test \(f\),</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle \lim_{N \to \infty} a_N^{4 n}  \sum_{y \in
+          \Lambda_{L_p D_N}^n} f (\hat{y})
+\Delta_{\boldsymbol{l}}
+          M^{\text{lat}}_{N, p} (v ; y) = \int f (x)
+\partial_{\boldsymbol{l}}
+          M^{\text{UV}}_{p, v} (x)  \hspace{0.17em} dx
+\hspace{0.17em} .\)
+        </center></i>
+      </div>
+    </div>
+    <p>
+      <em>Idea of the proof</em> (Lemmas <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E3.1">14.36</a>&ndash;<a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E3.2">14.37</a>).
+      The Cauchy argument of Section <a href="4-strategy-of-the-proof.html#sec:tuning-convergence">4.2</a> gives convergence on
+      \(\bigcup_m a_m \mathbb{Z}^4\): the transferred correlations at a fixed
+      level converge, and the stopping error \(2 F_0 e^{- B_m / 64}\), with
+      \(F_0\) independent of \(m\), compares them with the original ones.
+      Proposition <a href="#prop:UB">5.8</a> extends convergence to all separated
+      positions and identifies every derivative, also at moving points
+      crossing the boundary of the chosen period cell. For \(\boldsymbol{l}=
+      \varnothing\) the left side is \(\lim_N C^{\text{lat}}_{N, p} (v ; f)\),
+      so the inner limits of Definition <a href="2-definitions.html#def:D09">2.6</a> exist at every
+      admissible volume; admissibility places the support of \(f\) inside
+      \(\text{NoHit}_{L_p, n}\). The limiting kernel is periodic in each
+      position and smooth away from periodic collisions, including where
+      positions share coordinates. The thresholds may depend on \(p\).
+    </p>
+    
+    <div class="ym-chapter-nav"><span class="ym-chapter-prev"><a href="4-strategy-of-the-proof.html">&larr; 4 Strategy of the proof</a></span><span class="ym-chapter-up"><a href="../main.html">Contents</a></span><span class="ym-chapter-next"><a href="6-the-continuum-limit-stress-phases-trace-and.html">6 The continuum limit, stress, phases, trace and products &rarr;</a></span></div>
+</body>
+</html>

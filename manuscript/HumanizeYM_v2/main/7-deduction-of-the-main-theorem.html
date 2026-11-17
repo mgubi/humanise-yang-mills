@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>7 Deduction of the main theorem &ndash; HumanizeYM_v2: The construction of four-dimensional quantum
+    Yang&ndash;Mills theory &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1], hyperref: [bs +
+    'href{###1}{#2}', 2, '']}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="toggle" style="display: none">
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+    </div>
+<div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+
+    <div class="ym-chapter-nav"><span class="ym-chapter-prev"><a href="6-the-continuum-limit-stress-phases-trace-and.html">&larr; 6 The continuum limit, stress, phases, trace and products</a></span><span class="ym-chapter-up"><a href="../main.html">Contents</a></span><span class="ym-chapter-next"><a href="8-a-weaker-existence-statement.html">8 A weaker existence statement &rarr;</a></span></div>
+<div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 2em; margin-bottom: 1em">
+        <b><font style="font-size: 119.0%">I<span style="margin-left: 1em"></span>The theorem and the architecture
+        of its proof</font></b> <span style="margin-left: 5mm"></span> <a href="../main.html#auto-1">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>1<span style="margin-left: 1em"></span>The result</b> <span style="margin-left: 5mm"></span> <a href="1-the-result.html#auto-2">4</a>
+      </p>
+      <p>
+        1.1<span style="margin-left: 1em"></span>Proof status <span style="margin-left: 5mm"></span> <a href="1-the-result.html#auto-3">6</a>
+      </p>
+      <p>
+        1.2<span style="margin-left: 1em"></span>Earlier work and the method <span style="margin-left: 5mm"></span>
+        <a href="1-the-result.html#auto-4">6</a>
+      </p>
+      <p>
+        1.3<span style="margin-left: 1em"></span>Reading guide <span style="margin-left: 5mm"></span> <a href="1-the-result.html#auto-6">8</a>
+      </p>
+      <p>
+        1.4<span style="margin-left: 1em"></span>Notation and conventions <span style="margin-left: 5mm"></span>
+        <a href="1-the-result.html#auto-8">8</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2<span style="margin-left: 1em"></span>Definitions</b> <span style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-9">9</a>
+      </p>
+      <p>
+        2.1<span style="margin-left: 1em"></span>The gauge group and the Wilson measure <span
+        style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-10">9</a>
+      </p>
+      <p>
+        2.2<span style="margin-left: 1em"></span>Wilson families and their correlations <span
+        style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-11">10</a>
+      </p>
+      <p>
+        2.3<span style="margin-left: 1em"></span>Local fields <span style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-13">12</a>
+      </p>
+      <p>
+        2.4<span style="margin-left: 1em"></span>Euclidean properties <span style="margin-left: 5mm"></span> <a
+        href="2-definitions.html#auto-14">14</a>
+      </p>
+      <p>
+        2.5<span style="margin-left: 1em"></span>Field spaces and phases <span style="margin-left: 5mm"></span> <a
+        href="2-definitions.html#auto-15">15</a>
+      </p>
+      <p>
+        2.6<span style="margin-left: 1em"></span>Wightman theories <span style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-16">15</a>
+      </p>
+      <p>
+        2.7<span style="margin-left: 1em"></span>The trace and product statements <span style="margin-left: 5mm"></span>
+        <a href="2-definitions.html#auto-17">16</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>3<span style="margin-left: 1em"></span>The main theorem</b> <span style="margin-left: 5mm"></span> <a
+        href="3-the-main-theorem.html#auto-18">17</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>4<span style="margin-left: 1em"></span>Strategy of the proof</b> <span style="margin-left: 5mm"></span>
+        <a href="4-strategy-of-the-proof.html#auto-19">19</a>
+      </p>
+      <p>
+        4.1<span style="margin-left: 1em"></span>Why the ultraviolet induction closes <span
+        style="margin-left: 5mm"></span> <a href="4-strategy-of-the-proof.html#auto-21">19</a>
+      </p>
+      <p>
+        4.2<span style="margin-left: 1em"></span>Tuning, uniqueness and convergence <span style="margin-left: 5mm"></span>
+        <a href="4-strategy-of-the-proof.html#auto-25">23</a>
+      </p>
+      <p>
+        4.3<span style="margin-left: 1em"></span>Rotations <span style="margin-left: 5mm"></span> <a href="4-strategy-of-the-proof.html#auto-27">24</a>
+      </p>
+      <p>
+        4.4<span style="margin-left: 1em"></span>Phases and reconstruction <span style="margin-left: 5mm"></span>
+        <a href="4-strategy-of-the-proof.html#auto-28">25</a>
+      </p>
+      <p>
+        4.5<span style="margin-left: 1em"></span>The trace <span style="margin-left: 5mm"></span> <a href="4-strategy-of-the-proof.html#auto-29">25</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>5<span style="margin-left: 1em"></span>The renormalization group</b> <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-30">26</a>
+      </p>
+      <p>
+        5.1<span style="margin-left: 1em"></span>Scales and the block map <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-31">26</a>
+      </p>
+      <p>
+        5.2<span style="margin-left: 1em"></span>The density and its norms <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-32">28</a>
+      </p>
+      <p>
+        5.3<span style="margin-left: 1em"></span>The inductive step <span style="margin-left: 5mm"></span> <a
+        href="5-the-renormalization-group.html#auto-35">31</a>
+      </p>
+      <p>
+        5.4<span style="margin-left: 1em"></span>Multiscale trajectories <span style="margin-left: 5mm"></span> <a
+        href="5-the-renormalization-group.html#auto-36">32</a>
+      </p>
+      <p>
+        5.5<span style="margin-left: 1em"></span>Local fields under blocking <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-38">34</a>
+      </p>
+      <p>
+        5.6<span style="margin-left: 1em"></span>Uniform bounds and the fixed-volume limit <span
+        style="margin-left: 5mm"></span> <a href="5-the-renormalization-group.html#auto-39">35</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>6<span style="margin-left: 1em"></span>The continuum limit, stress, phases, trace and
+        products</b> <span style="margin-left: 5mm"></span> <a href="6-the-continuum-limit-stress-phases-trace-and.html#auto-40">36</a>
+      </p>
+      <p>
+        6.1<span style="margin-left: 1em"></span>The volume limit and the field calculus <span
+        style="margin-left: 5mm"></span> <a href="6-the-continuum-limit-stress-phases-trace-and.html#auto-41">36</a>
+      </p>
+      <p>
+        6.2<span style="margin-left: 1em"></span>Stress and rotations <span style="margin-left: 5mm"></span> <a
+        href="6-the-continuum-limit-stress-phases-trace-and.html#auto-42">38</a>
+      </p>
+      <p>
+        6.3<span style="margin-left: 1em"></span>Phases and reconstruction <span style="margin-left: 5mm"></span>
+        <a href="6-the-continuum-limit-stress-phases-trace-and.html#auto-43">41</a>
+      </p>
+      <p>
+        6.4<span style="margin-left: 1em"></span>Trace and products <span style="margin-left: 5mm"></span> <a
+        href="6-the-continuum-limit-stress-phases-trace-and.html#auto-44">43</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>7<span style="margin-left: 1em"></span>Deduction of the main theorem</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-45">46</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>8<span style="margin-left: 1em"></span>A weaker existence statement</b> <span style="margin-left: 5mm"></span>
+        <a href="8-a-weaker-existence-statement.html#auto-46">47</a>
+      </p>
+      <p>
+        8.1<span style="margin-left: 1em"></span>Hierarchy data and the conditions Q0&ndash;Q6
+        <span style="margin-left: 5mm"></span> <a href="8-a-weaker-existence-statement.html#auto-47">48</a>
+      </p>
+      <p>
+        8.2<span style="margin-left: 1em"></span>A generalized free-field example <span style="margin-left: 5mm"></span>
+        <a href="8-a-weaker-existence-statement.html#auto-48">49</a>
+      </p>
+      <p>
+        8.3<span style="margin-left: 1em"></span>Conventions for hierarchy data <span style="margin-left: 5mm"></span>
+        <a href="8-a-weaker-existence-statement.html#auto-49">51</a>
+      </p>
+      <p>
+        8.4<span style="margin-left: 1em"></span>An averaged countertest <span style="margin-left: 5mm"></span> <a
+        href="8-a-weaker-existence-statement.html#auto-50">52</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>9<span style="margin-left: 1em"></span>Constants and order of choice</b> <span style="margin-left: 5mm"></span>
+        <a href="9-constants-and-order-of-choice.html#auto-51">52</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Index of notation</b> <span style="margin-left: 5mm"></span> <a href="index-of-notation.html#auto-53">54</a>
+      </p>
+      <p style="margin-top: 2em; margin-bottom: 1em">
+        <b><font style="font-size: 119.0%">II<span style="margin-left: 1em"></span>Proofs</font></b> <span style="margin-left: 5mm"></span>
+        <a href="index-of-notation.html#auto-54">57</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>10<span style="margin-left: 1em"></span>Local polynomial fields</b> <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-55">57</a>
+      </p>
+      <p>
+        10.1<span style="margin-left: 1em"></span>Labels, test holonomies and the Taylor map
+        <span style="margin-left: 5mm"></span> <a href="10-local-polynomial-fields.html#auto-56">58</a>
+      </p>
+      <p>
+        10.2<span style="margin-left: 1em"></span>Taylor-normalized sections <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-58">59</a>
+      </p>
+      <p>
+        10.3<span style="margin-left: 1em"></span>Small-field bounds <span style="margin-left: 5mm"></span> <a
+        href="10-local-polynomial-fields.html#auto-59">61</a>
+      </p>
+      <p>
+        10.4<span style="margin-left: 1em"></span>Auxiliary equation sections <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-60">62</a>
+      </p>
+      <p>
+        10.5<span style="margin-left: 1em"></span>Example: the curvature square <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-61">66</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>11<span style="margin-left: 1em"></span>Gauges and block integration</b> <span style="margin-left: 5mm"></span>
+        <a href="11-gauges-and-block-integration.html#auto-62">67</a>
+      </p>
+      <p>
+        11.1<span style="margin-left: 1em"></span>The block kernel <span style="margin-left: 5mm"></span> <a href="11-gauges-and-block-integration.html#auto-63">68</a>
+      </p>
+      <p>
+        11.2<span style="margin-left: 1em"></span>Free quadratic forms <span style="margin-left: 5mm"></span> <a
+        href="11-gauges-and-block-integration.html#auto-66">72</a>
+      </p>
+      <p>
+        11.3<span style="margin-left: 1em"></span>The stationary background and Gaussian
+        coordinates <span style="margin-left: 5mm"></span> <a href="11-gauges-and-block-integration.html#auto-67">79</a>
+      </p>
+      <p>
+        11.4<span style="margin-left: 1em"></span>Inverse, vertex and Ward estimates <span
+        style="margin-left: 5mm"></span> <a href="11-gauges-and-block-integration.html#auto-69">85</a>
+      </p>
+      <p>
+        11.5<span style="margin-left: 1em"></span>The local large-field energy <span style="margin-left: 5mm"></span>
+        <a href="11-gauges-and-block-integration.html#auto-70">93</a>
+      </p>
+      <p>
+        11.6<span style="margin-left: 1em"></span>Sector Gaussian integration <span style="margin-left: 5mm"></span>
+        <a href="11-gauges-and-block-integration.html#auto-72">100</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>12<span style="margin-left: 1em"></span>Path actions and the one-loop coupling</b>
+        <span style="margin-left: 5mm"></span> <a href="12-path-actions-and-the-one-loop-coupling.html#auto-76">112</a>
+      </p>
+      <p>
+        12.1<span style="margin-left: 1em"></span>Curvature coordinates and the path action
+        <span style="margin-left: 5mm"></span> <a href="12-path-actions-and-the-one-loop-coupling.html#auto-77">112</a>
+      </p>
+      <p>
+        12.2<span style="margin-left: 1em"></span>Fourth-order matching <span style="margin-left: 5mm"></span> <a
+        href="12-path-actions-and-the-one-loop-coupling.html#auto-78">114</a>
+      </p>
+      <p>
+        12.3<span style="margin-left: 1em"></span>The determinant comparison <span style="margin-left: 5mm"></span>
+        <a href="12-path-actions-and-the-one-loop-coupling.html#auto-79">119</a>
+      </p>
+      <p>
+        12.4<span style="margin-left: 1em"></span>The one-loop coefficient <span style="margin-left: 5mm"></span>
+        <a href="12-path-actions-and-the-one-loop-coupling.html#auto-80">122</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>13<span style="margin-left: 1em"></span>Activities and the inductive step</b> <span
+        style="margin-left: 5mm"></span> <a href="13-activities-and-the-inductive-step.html#auto-81">129</a>
+      </p>
+      <p>
+        13.1<span style="margin-left: 1em"></span>The local expansion <span style="margin-left: 5mm"></span> <a
+        href="13-activities-and-the-inductive-step.html#auto-82">132</a>
+      </p>
+      <p>
+        13.2<span style="margin-left: 1em"></span>Local quadratic subtraction <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-84">150</a>
+      </p>
+      <p>
+        13.3<span style="margin-left: 1em"></span>Forced fusion, activity bounds and the reset
+        <span style="margin-left: 5mm"></span> <a href="13-activities-and-the-inductive-step.html#auto-85">152</a>
+      </p>
+      <p>
+        13.4<span style="margin-left: 1em"></span>Continuity at fixed volume <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-86">158</a>
+      </p>
+      <p>
+        13.5<span style="margin-left: 1em"></span>The Wilson start <span style="margin-left: 5mm"></span> <a href="13-activities-and-the-inductive-step.html#auto-87">159</a>
+      </p>
+      <p>
+        13.6<span style="margin-left: 1em"></span>The specified recursion <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-88">161</a>
+      </p>
+      <p>
+        13.7<span style="margin-left: 1em"></span>Weighted analytic estimates <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-89">163</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>14<span style="margin-left: 1em"></span>Trajectories, marked fields and ultraviolet
+        convergence</b> <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-90">177</a>
+      </p>
+      <p>
+        14.1<span style="margin-left: 1em"></span>Trajectories and tuning <span style="margin-left: 5mm"></span>
+        <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-91">178</a>
+      </p>
+      <p>
+        14.2<span style="margin-left: 1em"></span>Marked fields and volume-uniform estimates
+        <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-92">185</a>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.1<span style="margin-left: 1em"></span>One marked insertion <span
+        style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-93">185</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.2<span style="margin-left: 1em"></span>Chessboard seminorms and
+        replicated sources <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-94">192</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.3<span style="margin-left: 1em"></span>Negligible errors and local
+        matching <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-95">200</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.4<span style="margin-left: 1em"></span>Equation identities and
+        coefficient corrections <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-96">204</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.5<span style="margin-left: 1em"></span>Comparison with free fields
+        <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-97">207</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.6<span style="margin-left: 1em"></span>Bounds for lattice differences
+        <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-98">217</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.7<span style="margin-left: 1em"></span>Bounded approximations <span
+        style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-99">220</a></font>
+      </p>
+      <p>
+        14.3<span style="margin-left: 1em"></span>Full ultraviolet convergence <span style="margin-left: 5mm"></span>
+        <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-100">224</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>15<span style="margin-left: 1em"></span>Infinite volume and field calculus</b> <span
+        style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-102">231</a>
+      </p>
+      <p>
+        15.1<span style="margin-left: 1em"></span>Volume limits <span style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-103">231</a>
+      </p>
+      <p>
+        15.2<span style="margin-left: 1em"></span>Separated cells and negligible errors <span
+        style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-104">233</a>
+      </p>
+      <p>
+        15.3<span style="margin-left: 1em"></span>Quotient fields <span style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-105">234</a>
+      </p>
+      <p>
+        15.4<span style="margin-left: 1em"></span>Euclidean properties <span style="margin-left: 5mm"></span> <a
+        href="15-infinite-volume-and-field-calculus.html#auto-106">237</a>
+      </p>
+      <p>
+        15.5<span style="margin-left: 1em"></span>Repeated reflected words <span style="margin-left: 5mm"></span>
+        <a href="15-infinite-volume-and-field-calculus.html#auto-107">238</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>16<span style="margin-left: 1em"></span>Free fields, Ward identities and
+        rotations</b> <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-108">239</a>
+      </p>
+      <p>
+        16.1<span style="margin-left: 1em"></span>Free fields <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-109">240</a>
+      </p>
+      <p>
+        16.2<span style="margin-left: 1em"></span>Lattice inputs <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-111">247</a>
+      </p>
+      <p>
+        16.3<span style="margin-left: 1em"></span>Free comparison and the conserved line <span
+        style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-112">254</a>
+      </p>
+      <p>
+        16.4<span style="margin-left: 1em"></span>Coordinate reflection spaces and spectral
+        estimates <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-113">257</a>
+      </p>
+      <p>
+        16.5<span style="margin-left: 1em"></span>Ward identities and rotations <span style="margin-left: 5mm"></span>
+        <a href="16-free-fields-ward-identities-and-rotations.html#auto-114">263</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>17<span style="margin-left: 1em"></span>Phases and reconstruction</b> <span style="margin-left: 5mm"></span>
+        <a href="17-phases-and-reconstruction.html#auto-115">270</a>
+      </p>
+      <p>
+        17.1<span style="margin-left: 1em"></span>Compression and phases <span style="margin-left: 5mm"></span> <a
+        href="17-phases-and-reconstruction.html#auto-116">270</a>
+      </p>
+      <p>
+        17.2<span style="margin-left: 1em"></span>Reconstruction <span style="margin-left: 5mm"></span> <a href="17-phases-and-reconstruction.html#auto-119">276</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>18<span style="margin-left: 1em"></span>The trace law and non-free comparisons</b>
+        <span style="margin-left: 5mm"></span> <a href="18-the-trace-law-and-non-free-comparisons.html#auto-120">284</a>
+      </p>
+      <p>
+        18.1<span style="margin-left: 1em"></span>Trace and spectrum <span style="margin-left: 5mm"></span> <a
+        href="18-the-trace-law-and-non-free-comparisons.html#auto-121">284</a>
+      </p>
+      <p>
+        18.2<span style="margin-left: 1em"></span>Precise non-free comparisons <span style="margin-left: 5mm"></span>
+        <a href="18-the-trace-law-and-non-free-comparisons.html#auto-125">301</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>19<span style="margin-left: 1em"></span>Products and contact subtractions</b> <span
+        style="margin-left: 5mm"></span> <a href="19-products-and-contact-subtractions.html#auto-126">305</a>
+      </p>
+      <p>
+        19.1<span style="margin-left: 1em"></span>Products and nested clusters <span style="margin-left: 5mm"></span>
+        <a href="19-products-and-contact-subtractions.html#auto-127">310</a>
+      </p>
+      <p>
+        19.2<span style="margin-left: 1em"></span>Contact subtractions <span style="margin-left: 5mm"></span> <a
+        href="19-products-and-contact-subtractions.html#auto-129">323</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>References</b> <span style="margin-left: 5mm"></span> <a href="references.html#auto-131">332</a>
+      </p>
+    </div>
+<h2 id="auto-45"><a id="sec:deduction"></a>7<span style="margin-left: 1em"></span>Deduction of the main theorem<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      The principal results of Sections <a href="5-the-renormalization-group.html#sec:renormalization">5</a> and <a href="6-the-continuum-limit-stress-phases-trace-and.html#sec:continuum-results">6</a>
+      concern one lattice family and one volume refinement; the deduction
+      assembles them in the order of their choices. The fixed-volume limit,
+      quotient construction, trace law, operator product and contact extension
+      inherit the unresolved inputs listed in <a href="1-the-result.html#par:proof-status">the proof-status
+      notice</a>; the deductions below are conditional on those inputs.
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof of Theorem <a href="3-the-main-theorem.html#thm:B">B</a>. </strong>
+    </p>
+    <ol>
+      <dt>
+        1
+      </dt><dd>
+        <p>
+          <a id="step:deduction-choice"></a> Fix \(G\) and \(\textsf{b} > 0\), and make the common
+          choices in the order of Section <a href="9-constants-and-order-of-choice.html#sec:constants">9</a>. The Wilson start
+          <class style="font-style: normal">(<a href="5-the-renormalization-group.html#eq:I12-Wilson-initialization">5.13</a>)</class> begins the induction,
+          Theorem <a href="5-the-renormalization-group.html#prop:RG">5.5</a> advances it, and Theorem <a href="5-the-renormalization-group.html#prop:MT">5.6</a>
+          selects trajectories reaching the common endpoint. These choices
+          precede any volume sequence.
+        </p>
+      </dd>
+      <dt>
+        2
+      </dt><dd>
+        <p>
+          <a id="step:deduction-family"></a> Fix the local sections, reference levels and terminal
+          maps on these trajectories; Definition <a href="2-definitions.html#def:D08">2.8</a> defines
+          every insertion, also below its reference level. The local sections
+          are polynomials in the links of their fixed stencils, hence
+          continuous and local, and the terminal maps change only their
+          coefficients, which preserves gauge invariance. Theorem <a href="5-the-renormalization-group.html#prop:MT">5.6</a>
+          at \(m = N\) gives the volume-uniform running law with \(b_{\ast} =
+          \kappa_G > 0\). Thus \(\mathcal{W}\) is regular (Definition <a href="2-definitions.html#def:Q1">2.5</a>).
+        </p>
+      </dd>
+      <dt>
+        3
+      </dt><dd>
+        <p>
+          <a id="step:deduction-uv"></a> Theorem <a href="5-the-renormalization-group.html#prop:UV">5.9</a> gives the full fixed-volume
+          limit for every field and difference list, so every admissible
+          separated test has a full inner limit before any volume extraction.
+          This proves (i).
+        </p>
+      </dd>
+      <dt>
+        4
+      </dt><dd>
+        <p>
+          <a id="step:deduction-volume"></a> Given a strictly increasing \(\textsf{p}\), Theorem <a
+          href="6-the-continuum-limit-stress-phases-trace-and.html#prop:IV">6.1</a> chooses \(\textsf{q}\) and \(S\) with ordered
+          convergence along \(P = \textsf{p} \circ \textsf{q}\) and properties
+          E1&ndash;E7; the same extraction fixes the corrected coefficient
+          maps. This proves the table part of (ii).
+        </p>
+      </dd>
+      <dt>
+        5
+      </dt><dd>
+        <p>
+          <a id="step:deduction-stress"></a> Define \(F_d = V_d /\mathcal{N}_d (S)\) and
+          \(\mathcal{L}\) by Definition <a href="2-definitions.html#def:D10">2.12</a>. Proposition <a
+          href="6-the-continuum-limit-stress-phases-trace-and.html#prop:FC">6.4</a> gives the inclusions and derivatives, with injective
+          response maps whose images cover \(\mathcal{L}\), and Theorem <a
+          href="6-the-continuum-limit-stress-phases-trace-and.html#prop:ST">6.10</a> gives the conserved tensor, normalized by its shell
+          fluxes, on these fields.
+        </p>
+      </dd>
+      <dt>
+        6
+      </dt><dd>
+        <p>
+          <a id="step:deduction-phase"></a> Theorem <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:PH">6.13</a> gives \(\textsf{X}, \nu,
+          S^{\xi}\) on these quotient spaces. Choose \(\xi_{\ast}\) in the
+          full-measure set with one-dimensional time-axis reflection ground
+          space (Lemma <a href="17-phases-and-reconstruction.html#lem:H1.3">17.3</a>). Theorem <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:RC">6.16</a>
+          reconstructs every phase with a unique vacuum, which proves (iii);
+          retain the theory and continuation at \(\xi_{\ast}\).
+        </p>
+      </dd>
+      <dt>
+        7
+      </dt><dd>
+        <p>
+          <a id="step:deduction-hierarchy"></a> Set \(\pi_{\text{quo}}  (d, \mathbf{c}) = (d,
+          [\mathbf{c}])\); representatives make it onto. The unit response is
+          nonzero since its one-point function is one, so faithfulness in
+          Theorem <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:RC">6.16</a> gives a nonzero acting field and, with
+          Step <a href="#step:deduction-stress">5</a>, the label clauses of Q3. Theorem <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:PH">6.13</a>
+          gives its phase clauses, and the reconstruction gives Q2 and Q4.
+          Assign arbitrary values to the quotient mixture and phase
+          correlations on the collision diagonals; this supplies the function
+          domains of Q0 and has no distributional content, unlike the contact
+          extensions constructed in Step <a href="#step:deduction-products">9</a>. Separated tests
+          vanish there, so ordered convergence is unchanged, and
+          representative independence gives \(S_n^{\text{mix}} 
+          (\pi_{\text{quo}} v ; x) = S_n  (v ; x)\) on \(\text{Conf}_n\). This
+          identifies the lattice limit \(\mathcal{W} \to S^{\text{mix}} \circ
+          \pi_{\text{quo}}\) of (ii).
+        </p>
+      </dd>
+      <dt>
+        8
+      </dt><dd>
+        <p>
+          <a id="step:deduction-trace"></a> Center the trace of the fixed tensor in the selected
+          phase by Definition <a href="6-the-continuum-limit-stress-phases-trace-and.html#def:D16">6.17</a>. Theorem <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:TR">6.18</a>
+          gives vacuum centering, the positive amplitude and the full-radius
+          law, and Proposition <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:NF">6.19</a> excludes every finite Wick
+          profile; these give Q6 and (iv).
+        </p>
+      </dd>
+      <dt>
+        9
+      </dt><dd>
+        <p>
+          <a id="step:deduction-products"></a> Choose the underlying prescription of Lemma <a href="19-products-and-contact-subtractions.html#lem:J1.1">19.6</a>
+          once, with its original fields and correlation table. Theorem <a
+          href="6-the-continuum-limit-stress-phases-trace-and.html#prop:OP">6.20</a> gives Q5 and its error bounds. Theorem <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:CT">6.21</a>
+          and Lemmas <a href="19-products-and-contact-subtractions.html#lem:J2.1">19.19</a>&ndash;<a href="19-products-and-contact-subtractions.html#lem:J2.3">19.21</a> use the same
+          prescription, with separate contact projections, separating
+          functionals and clearance, to construct real bases of the contact
+          strata and the contact extensions; the contact proof uses the
+          lattice-derived estimates of Lemma <a href="19-products-and-contact-subtractions.html#lem:J-power-separated">19.9</a> and the signed
+          transfer of Lemma <a href="19-products-and-contact-subtractions.html#lem:J-signed-layer">19.20</a>. This proves (v) and completes
+          (ii).
+        </p>
+      </dd>
+    </ol>
+    <p style="margin-bottom: 1em">
+      <span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong class="enunciation-name">Remark <class style="font-style: normal">7.1</class>. </strong><class style="font-style: normal"><strong>(Further
+      results) </strong></class><a id="rem:further-results"></a> Further conclusions about these
+      same objects are proved in Part II. Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E3.2">14.37</a> gives
+      convergence at moving points, and Lemma <a href="17-phases-and-reconstruction.html#lem:H2.3">17.9</a> the uniform
+      low-energy bounds. For the field \(\Theta\) of Step <a href="#step:deduction-trace">8</a>,
+      Lemma <a href="18-the-trace-law-and-non-free-comparisons.html#lem:I1.1">18.1</a> gives the operator identity of centering, Lemma
+      <a href="18-the-trace-law-and-non-free-comparisons.html#lem:I1.2">18.2</a> the unique spectral measure and Lemma <a href="18-the-trace-law-and-non-free-comparisons.html#lem:I1.3">18.10</a>
+      its high-energy limits. Lemmas <a href="18-the-trace-law-and-non-free-comparisons.html#lem:I2.2">18.13</a>, <a href="18-the-trace-law-and-non-free-comparisons.html#lem:I2.3">18.16</a>
+      and <a href="8-a-weaker-existence-statement.html#lem:I2.4">8.10</a> give further polynomial and Fock countertests in
+      the selected phase, and Lemmas <a href="19-products-and-contact-subtractions.html#lem:J1.4">19.13</a>&ndash;<a href="19-products-and-contact-subtractions.html#lem:J1.5">19.14</a>
+      and Remark <a href="19-products-and-contact-subtractions.html#lem:J1.3">19.15</a> nested and integrated product estimates
+      for the same prescription.
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Remark <class style="font-style: normal">7.2</class>. </strong><class style="font-style: normal"><strong>(Endpoint
+      tuning) </strong></class><a id="prop:endpoint-tuning"></a> The specified recursion also varies
+      the endpoint analytically. There is a width \(w_{\text{tun}} > 0\),
+      independent of \(N, p\), such that, for every \(N, p\) and \(s \in [- 1,
+      1]\), exactly one bare coupling \(\beta_{N, p} (s)\) starts a trajectory
+      of the specified recursion reaching \(\bar{\beta} + w_{\text{tun}} s\)
+      at level zero. It satisfies \(\beta_{N, p} (0) = \beta_{N, p}\) and has
+      a holomorphic extension \(b_{N, p}\) to \(|z| < 1\) with
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:I12-endpoint-tuning"></a>\(\displaystyle b_{N, p} (s) = \beta_{N,
+        p} (s)  \qquad (- 1 < s < 1) \hspace{0.17em} .\)</td>
+        <td align="right">(7.1)</td>
+      </tr>
+    </table>
+    <p style="margin-bottom: 1em">
+      This is Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E1.3">14.4</a>; the proofs above do not use it.
+    </p>
+    
+    <div class="ym-chapter-nav"><span class="ym-chapter-prev"><a href="6-the-continuum-limit-stress-phases-trace-and.html">&larr; 6 The continuum limit, stress, phases, trace and products</a></span><span class="ym-chapter-up"><a href="../main.html">Contents</a></span><span class="ym-chapter-next"><a href="8-a-weaker-existence-statement.html">8 A weaker existence statement &rarr;</a></span></div>
+</body>
+</html>

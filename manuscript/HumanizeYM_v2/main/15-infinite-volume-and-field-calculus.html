@@ -1,0 +1,1509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>15 Infinite volume and field calculus &ndash; HumanizeYM_v2: The construction of four-dimensional quantum
+    Yang&ndash;Mills theory &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1], hyperref: [bs +
+    'href{###1}{#2}', 2, '']}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="toggle" style="display: none">
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+    </div>
+<div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+
+    <div class="ym-chapter-nav"><span class="ym-chapter-prev"><a href="14-trajectories-marked-fields-and-ultraviolet.html">&larr; 14 Trajectories, marked fields and ultraviolet convergence</a></span><span class="ym-chapter-up"><a href="../main.html">Contents</a></span><span class="ym-chapter-next"><a href="16-free-fields-ward-identities-and-rotations.html">16 Free fields, Ward identities and rotations &rarr;</a></span></div>
+<div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 2em; margin-bottom: 1em">
+        <b><font style="font-size: 119.0%">I<span style="margin-left: 1em"></span>The theorem and the architecture
+        of its proof</font></b> <span style="margin-left: 5mm"></span> <a href="../main.html#auto-1">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>1<span style="margin-left: 1em"></span>The result</b> <span style="margin-left: 5mm"></span> <a href="1-the-result.html#auto-2">4</a>
+      </p>
+      <p>
+        1.1<span style="margin-left: 1em"></span>Proof status <span style="margin-left: 5mm"></span> <a href="1-the-result.html#auto-3">6</a>
+      </p>
+      <p>
+        1.2<span style="margin-left: 1em"></span>Earlier work and the method <span style="margin-left: 5mm"></span>
+        <a href="1-the-result.html#auto-4">6</a>
+      </p>
+      <p>
+        1.3<span style="margin-left: 1em"></span>Reading guide <span style="margin-left: 5mm"></span> <a href="1-the-result.html#auto-6">8</a>
+      </p>
+      <p>
+        1.4<span style="margin-left: 1em"></span>Notation and conventions <span style="margin-left: 5mm"></span>
+        <a href="1-the-result.html#auto-8">8</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2<span style="margin-left: 1em"></span>Definitions</b> <span style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-9">9</a>
+      </p>
+      <p>
+        2.1<span style="margin-left: 1em"></span>The gauge group and the Wilson measure <span
+        style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-10">9</a>
+      </p>
+      <p>
+        2.2<span style="margin-left: 1em"></span>Wilson families and their correlations <span
+        style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-11">10</a>
+      </p>
+      <p>
+        2.3<span style="margin-left: 1em"></span>Local fields <span style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-13">12</a>
+      </p>
+      <p>
+        2.4<span style="margin-left: 1em"></span>Euclidean properties <span style="margin-left: 5mm"></span> <a
+        href="2-definitions.html#auto-14">14</a>
+      </p>
+      <p>
+        2.5<span style="margin-left: 1em"></span>Field spaces and phases <span style="margin-left: 5mm"></span> <a
+        href="2-definitions.html#auto-15">15</a>
+      </p>
+      <p>
+        2.6<span style="margin-left: 1em"></span>Wightman theories <span style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-16">15</a>
+      </p>
+      <p>
+        2.7<span style="margin-left: 1em"></span>The trace and product statements <span style="margin-left: 5mm"></span>
+        <a href="2-definitions.html#auto-17">16</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>3<span style="margin-left: 1em"></span>The main theorem</b> <span style="margin-left: 5mm"></span> <a
+        href="3-the-main-theorem.html#auto-18">17</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>4<span style="margin-left: 1em"></span>Strategy of the proof</b> <span style="margin-left: 5mm"></span>
+        <a href="4-strategy-of-the-proof.html#auto-19">19</a>
+      </p>
+      <p>
+        4.1<span style="margin-left: 1em"></span>Why the ultraviolet induction closes <span
+        style="margin-left: 5mm"></span> <a href="4-strategy-of-the-proof.html#auto-21">19</a>
+      </p>
+      <p>
+        4.2<span style="margin-left: 1em"></span>Tuning, uniqueness and convergence <span style="margin-left: 5mm"></span>
+        <a href="4-strategy-of-the-proof.html#auto-25">23</a>
+      </p>
+      <p>
+        4.3<span style="margin-left: 1em"></span>Rotations <span style="margin-left: 5mm"></span> <a href="4-strategy-of-the-proof.html#auto-27">24</a>
+      </p>
+      <p>
+        4.4<span style="margin-left: 1em"></span>Phases and reconstruction <span style="margin-left: 5mm"></span>
+        <a href="4-strategy-of-the-proof.html#auto-28">25</a>
+      </p>
+      <p>
+        4.5<span style="margin-left: 1em"></span>The trace <span style="margin-left: 5mm"></span> <a href="4-strategy-of-the-proof.html#auto-29">25</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>5<span style="margin-left: 1em"></span>The renormalization group</b> <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-30">26</a>
+      </p>
+      <p>
+        5.1<span style="margin-left: 1em"></span>Scales and the block map <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-31">26</a>
+      </p>
+      <p>
+        5.2<span style="margin-left: 1em"></span>The density and its norms <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-32">28</a>
+      </p>
+      <p>
+        5.3<span style="margin-left: 1em"></span>The inductive step <span style="margin-left: 5mm"></span> <a
+        href="5-the-renormalization-group.html#auto-35">31</a>
+      </p>
+      <p>
+        5.4<span style="margin-left: 1em"></span>Multiscale trajectories <span style="margin-left: 5mm"></span> <a
+        href="5-the-renormalization-group.html#auto-36">32</a>
+      </p>
+      <p>
+        5.5<span style="margin-left: 1em"></span>Local fields under blocking <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-38">34</a>
+      </p>
+      <p>
+        5.6<span style="margin-left: 1em"></span>Uniform bounds and the fixed-volume limit <span
+        style="margin-left: 5mm"></span> <a href="5-the-renormalization-group.html#auto-39">35</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>6<span style="margin-left: 1em"></span>The continuum limit, stress, phases, trace and
+        products</b> <span style="margin-left: 5mm"></span> <a href="6-the-continuum-limit-stress-phases-trace-and.html#auto-40">36</a>
+      </p>
+      <p>
+        6.1<span style="margin-left: 1em"></span>The volume limit and the field calculus <span
+        style="margin-left: 5mm"></span> <a href="6-the-continuum-limit-stress-phases-trace-and.html#auto-41">36</a>
+      </p>
+      <p>
+        6.2<span style="margin-left: 1em"></span>Stress and rotations <span style="margin-left: 5mm"></span> <a
+        href="6-the-continuum-limit-stress-phases-trace-and.html#auto-42">38</a>
+      </p>
+      <p>
+        6.3<span style="margin-left: 1em"></span>Phases and reconstruction <span style="margin-left: 5mm"></span>
+        <a href="6-the-continuum-limit-stress-phases-trace-and.html#auto-43">41</a>
+      </p>
+      <p>
+        6.4<span style="margin-left: 1em"></span>Trace and products <span style="margin-left: 5mm"></span> <a
+        href="6-the-continuum-limit-stress-phases-trace-and.html#auto-44">43</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>7<span style="margin-left: 1em"></span>Deduction of the main theorem</b> <span style="margin-left: 5mm"></span>
+        <a href="7-deduction-of-the-main-theorem.html#auto-45">46</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>8<span style="margin-left: 1em"></span>A weaker existence statement</b> <span style="margin-left: 5mm"></span>
+        <a href="8-a-weaker-existence-statement.html#auto-46">47</a>
+      </p>
+      <p>
+        8.1<span style="margin-left: 1em"></span>Hierarchy data and the conditions Q0&ndash;Q6
+        <span style="margin-left: 5mm"></span> <a href="8-a-weaker-existence-statement.html#auto-47">48</a>
+      </p>
+      <p>
+        8.2<span style="margin-left: 1em"></span>A generalized free-field example <span style="margin-left: 5mm"></span>
+        <a href="8-a-weaker-existence-statement.html#auto-48">49</a>
+      </p>
+      <p>
+        8.3<span style="margin-left: 1em"></span>Conventions for hierarchy data <span style="margin-left: 5mm"></span>
+        <a href="8-a-weaker-existence-statement.html#auto-49">51</a>
+      </p>
+      <p>
+        8.4<span style="margin-left: 1em"></span>An averaged countertest <span style="margin-left: 5mm"></span> <a
+        href="8-a-weaker-existence-statement.html#auto-50">52</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>9<span style="margin-left: 1em"></span>Constants and order of choice</b> <span style="margin-left: 5mm"></span>
+        <a href="9-constants-and-order-of-choice.html#auto-51">52</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Index of notation</b> <span style="margin-left: 5mm"></span> <a href="index-of-notation.html#auto-53">54</a>
+      </p>
+      <p style="margin-top: 2em; margin-bottom: 1em">
+        <b><font style="font-size: 119.0%">II<span style="margin-left: 1em"></span>Proofs</font></b> <span style="margin-left: 5mm"></span>
+        <a href="index-of-notation.html#auto-54">57</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>10<span style="margin-left: 1em"></span>Local polynomial fields</b> <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-55">57</a>
+      </p>
+      <p>
+        10.1<span style="margin-left: 1em"></span>Labels, test holonomies and the Taylor map
+        <span style="margin-left: 5mm"></span> <a href="10-local-polynomial-fields.html#auto-56">58</a>
+      </p>
+      <p>
+        10.2<span style="margin-left: 1em"></span>Taylor-normalized sections <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-58">59</a>
+      </p>
+      <p>
+        10.3<span style="margin-left: 1em"></span>Small-field bounds <span style="margin-left: 5mm"></span> <a
+        href="10-local-polynomial-fields.html#auto-59">61</a>
+      </p>
+      <p>
+        10.4<span style="margin-left: 1em"></span>Auxiliary equation sections <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-60">62</a>
+      </p>
+      <p>
+        10.5<span style="margin-left: 1em"></span>Example: the curvature square <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-61">66</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>11<span style="margin-left: 1em"></span>Gauges and block integration</b> <span style="margin-left: 5mm"></span>
+        <a href="11-gauges-and-block-integration.html#auto-62">67</a>
+      </p>
+      <p>
+        11.1<span style="margin-left: 1em"></span>The block kernel <span style="margin-left: 5mm"></span> <a href="11-gauges-and-block-integration.html#auto-63">68</a>
+      </p>
+      <p>
+        11.2<span style="margin-left: 1em"></span>Free quadratic forms <span style="margin-left: 5mm"></span> <a
+        href="11-gauges-and-block-integration.html#auto-66">72</a>
+      </p>
+      <p>
+        11.3<span style="margin-left: 1em"></span>The stationary background and Gaussian
+        coordinates <span style="margin-left: 5mm"></span> <a href="11-gauges-and-block-integration.html#auto-67">79</a>
+      </p>
+      <p>
+        11.4<span style="margin-left: 1em"></span>Inverse, vertex and Ward estimates <span
+        style="margin-left: 5mm"></span> <a href="11-gauges-and-block-integration.html#auto-69">85</a>
+      </p>
+      <p>
+        11.5<span style="margin-left: 1em"></span>The local large-field energy <span style="margin-left: 5mm"></span>
+        <a href="11-gauges-and-block-integration.html#auto-70">93</a>
+      </p>
+      <p>
+        11.6<span style="margin-left: 1em"></span>Sector Gaussian integration <span style="margin-left: 5mm"></span>
+        <a href="11-gauges-and-block-integration.html#auto-72">100</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>12<span style="margin-left: 1em"></span>Path actions and the one-loop coupling</b>
+        <span style="margin-left: 5mm"></span> <a href="12-path-actions-and-the-one-loop-coupling.html#auto-76">112</a>
+      </p>
+      <p>
+        12.1<span style="margin-left: 1em"></span>Curvature coordinates and the path action
+        <span style="margin-left: 5mm"></span> <a href="12-path-actions-and-the-one-loop-coupling.html#auto-77">112</a>
+      </p>
+      <p>
+        12.2<span style="margin-left: 1em"></span>Fourth-order matching <span style="margin-left: 5mm"></span> <a
+        href="12-path-actions-and-the-one-loop-coupling.html#auto-78">114</a>
+      </p>
+      <p>
+        12.3<span style="margin-left: 1em"></span>The determinant comparison <span style="margin-left: 5mm"></span>
+        <a href="12-path-actions-and-the-one-loop-coupling.html#auto-79">119</a>
+      </p>
+      <p>
+        12.4<span style="margin-left: 1em"></span>The one-loop coefficient <span style="margin-left: 5mm"></span>
+        <a href="12-path-actions-and-the-one-loop-coupling.html#auto-80">122</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>13<span style="margin-left: 1em"></span>Activities and the inductive step</b> <span
+        style="margin-left: 5mm"></span> <a href="13-activities-and-the-inductive-step.html#auto-81">129</a>
+      </p>
+      <p>
+        13.1<span style="margin-left: 1em"></span>The local expansion <span style="margin-left: 5mm"></span> <a
+        href="13-activities-and-the-inductive-step.html#auto-82">132</a>
+      </p>
+      <p>
+        13.2<span style="margin-left: 1em"></span>Local quadratic subtraction <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-84">150</a>
+      </p>
+      <p>
+        13.3<span style="margin-left: 1em"></span>Forced fusion, activity bounds and the reset
+        <span style="margin-left: 5mm"></span> <a href="13-activities-and-the-inductive-step.html#auto-85">152</a>
+      </p>
+      <p>
+        13.4<span style="margin-left: 1em"></span>Continuity at fixed volume <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-86">158</a>
+      </p>
+      <p>
+        13.5<span style="margin-left: 1em"></span>The Wilson start <span style="margin-left: 5mm"></span> <a href="13-activities-and-the-inductive-step.html#auto-87">159</a>
+      </p>
+      <p>
+        13.6<span style="margin-left: 1em"></span>The specified recursion <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-88">161</a>
+      </p>
+      <p>
+        13.7<span style="margin-left: 1em"></span>Weighted analytic estimates <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-89">163</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>14<span style="margin-left: 1em"></span>Trajectories, marked fields and ultraviolet
+        convergence</b> <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-90">177</a>
+      </p>
+      <p>
+        14.1<span style="margin-left: 1em"></span>Trajectories and tuning <span style="margin-left: 5mm"></span>
+        <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-91">178</a>
+      </p>
+      <p>
+        14.2<span style="margin-left: 1em"></span>Marked fields and volume-uniform estimates
+        <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-92">185</a>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.1<span style="margin-left: 1em"></span>One marked insertion <span
+        style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-93">185</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.2<span style="margin-left: 1em"></span>Chessboard seminorms and
+        replicated sources <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-94">192</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.3<span style="margin-left: 1em"></span>Negligible errors and local
+        matching <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-95">200</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.4<span style="margin-left: 1em"></span>Equation identities and
+        coefficient corrections <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-96">204</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.5<span style="margin-left: 1em"></span>Comparison with free fields
+        <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-97">207</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.6<span style="margin-left: 1em"></span>Bounds for lattice differences
+        <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-98">217</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.7<span style="margin-left: 1em"></span>Bounded approximations <span
+        style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-99">220</a></font>
+      </p>
+      <p>
+        14.3<span style="margin-left: 1em"></span>Full ultraviolet convergence <span style="margin-left: 5mm"></span>
+        <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-100">224</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>15<span style="margin-left: 1em"></span>Infinite volume and field calculus</b> <span
+        style="margin-left: 5mm"></span> <a href="#auto-102">231</a>
+      </p>
+      <p>
+        15.1<span style="margin-left: 1em"></span>Volume limits <span style="margin-left: 5mm"></span> <a href="#auto-103">231</a>
+      </p>
+      <p>
+        15.2<span style="margin-left: 1em"></span>Separated cells and negligible errors <span
+        style="margin-left: 5mm"></span> <a href="#auto-104">233</a>
+      </p>
+      <p>
+        15.3<span style="margin-left: 1em"></span>Quotient fields <span style="margin-left: 5mm"></span> <a href="#auto-105">234</a>
+      </p>
+      <p>
+        15.4<span style="margin-left: 1em"></span>Euclidean properties <span style="margin-left: 5mm"></span> <a
+        href="#auto-106">237</a>
+      </p>
+      <p>
+        15.5<span style="margin-left: 1em"></span>Repeated reflected words <span style="margin-left: 5mm"></span>
+        <a href="#auto-107">238</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>16<span style="margin-left: 1em"></span>Free fields, Ward identities and
+        rotations</b> <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-108">239</a>
+      </p>
+      <p>
+        16.1<span style="margin-left: 1em"></span>Free fields <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-109">240</a>
+      </p>
+      <p>
+        16.2<span style="margin-left: 1em"></span>Lattice inputs <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-111">247</a>
+      </p>
+      <p>
+        16.3<span style="margin-left: 1em"></span>Free comparison and the conserved line <span
+        style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-112">254</a>
+      </p>
+      <p>
+        16.4<span style="margin-left: 1em"></span>Coordinate reflection spaces and spectral
+        estimates <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-113">257</a>
+      </p>
+      <p>
+        16.5<span style="margin-left: 1em"></span>Ward identities and rotations <span style="margin-left: 5mm"></span>
+        <a href="16-free-fields-ward-identities-and-rotations.html#auto-114">263</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>17<span style="margin-left: 1em"></span>Phases and reconstruction</b> <span style="margin-left: 5mm"></span>
+        <a href="17-phases-and-reconstruction.html#auto-115">270</a>
+      </p>
+      <p>
+        17.1<span style="margin-left: 1em"></span>Compression and phases <span style="margin-left: 5mm"></span> <a
+        href="17-phases-and-reconstruction.html#auto-116">270</a>
+      </p>
+      <p>
+        17.2<span style="margin-left: 1em"></span>Reconstruction <span style="margin-left: 5mm"></span> <a href="17-phases-and-reconstruction.html#auto-119">276</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>18<span style="margin-left: 1em"></span>The trace law and non-free comparisons</b>
+        <span style="margin-left: 5mm"></span> <a href="18-the-trace-law-and-non-free-comparisons.html#auto-120">284</a>
+      </p>
+      <p>
+        18.1<span style="margin-left: 1em"></span>Trace and spectrum <span style="margin-left: 5mm"></span> <a
+        href="18-the-trace-law-and-non-free-comparisons.html#auto-121">284</a>
+      </p>
+      <p>
+        18.2<span style="margin-left: 1em"></span>Precise non-free comparisons <span style="margin-left: 5mm"></span>
+        <a href="18-the-trace-law-and-non-free-comparisons.html#auto-125">301</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>19<span style="margin-left: 1em"></span>Products and contact subtractions</b> <span
+        style="margin-left: 5mm"></span> <a href="19-products-and-contact-subtractions.html#auto-126">305</a>
+      </p>
+      <p>
+        19.1<span style="margin-left: 1em"></span>Products and nested clusters <span style="margin-left: 5mm"></span>
+        <a href="19-products-and-contact-subtractions.html#auto-127">310</a>
+      </p>
+      <p>
+        19.2<span style="margin-left: 1em"></span>Contact subtractions <span style="margin-left: 5mm"></span> <a
+        href="19-products-and-contact-subtractions.html#auto-129">323</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>References</b> <span style="margin-left: 5mm"></span> <a href="references.html#auto-131">332</a>
+      </p>
+    </div>
+<h2 id="auto-102"><a id="sec:partII-F"></a>15<span style="margin-left: 1em"></span>Infinite volume and field
+    calculus<span style="margin-left: 1em"></span></h2>
+    <p>
+      We pass from the fixed-volume kernels of Theorem <a href="5-the-renormalization-group.html#prop:UV">5.9</a>
+      (fixed-volume limit) to correlations on \(\mathbb{R}^4\). The order of
+      limits is that of Definition <a href="2-definitions.html#def:D09">2.6</a> and Figure <a href="2-definitions.html#fig:two-limits">1</a>:
+      at every fixed admissible volume the spacing tends to zero along the
+      full cutoff sequence; only then does the volume grow, along one
+      refinement of the prescribed volume sequence that serves every field
+      list, derivative and test. Section <a href="#sec:partII-F.1">15.1</a> extracts this
+      volume limit, with all derivatives, from the uniform bounds of
+      Proposition <a href="5-the-renormalization-group.html#prop:UB">5.8</a> (Lemma <a href="#lem:F1">15.1</a>). Section <a href="#sec:partII-F.2">15.2</a>
+      bounds separated correlations cell by cell and shows that negligible
+      errors vanish in them (Lemma <a href="#lem:F1b">15.3</a>). Section <a href="#sec:partII-F.3">15.3</a>
+      identifies the quotient fields: it constructs coefficient maps for
+      inclusions and positional derivatives and proves \(\dim_{\mathbb{C}} F_d
+      = \dim_{\mathbb{C}} M_d^{\text{Max}}\) (Lemma <a href="#lem:F2">15.5</a>, which
+      proves Proposition <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:FC">6.4</a>). Section <a href="#sec:partII-F.4">15.4</a> passes
+      reflection positivity to the limit and proves the power bounds of E7
+      (Lemma <a href="#lem:F3">15.6</a>, which completes Theorem <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:IV">6.1</a>).
+      Section <a href="#sec:partII-F.5">15.5</a> bounds repeated reflected insertions, the
+      input for the slab operators of Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:H1.1">16.12</a>.
+    </p>
+    <p>
+      The Wilson family and separated tests are those of Section <a href="2-definitions.html#sec:continuum">2.2</a>,
+      the insertion labels those of Section <a href="2-definitions.html#sec:local-fields">2.3</a>, and the
+      differences those of Section <a href="5-the-renormalization-group.html#sec:uv-limit">5.6</a>. Write \(M_{p, v} =
+      M^{\text{UV}}_{p, v}\) and \(\langle F \rangle_{N, p} = \int F
+      \hspace{0.17em} d \mu_{N, p}\). Constants may depend on the fixed
+      construction; further dependence is indicated.
+    </p>
+    <p>
+      The applications of the fixed-volume limit and uniform bounds below
+      depend on the remaining inputs identified in Sections <a href="14-trajectories-marked-fields-and-ultraviolet.html#sec:partII-E.2">14.2</a>
+      and <a href="14-trajectories-marked-fields-and-ultraviolet.html#sec:partII-E.3">14.3</a>: propagation of the complete higher-marker support
+      bounds and their stopping-level restart at support exponent \(98\); the
+      same-sample guarded Gaussian comparison with its scalar and forced
+      estimates, together with an exact density and coupling tie if its course
+      is restarted; and finite-cutoff continuity of the actual marked graph
+      operator. In particular, the deductions of the stated limits, quotient
+      rank and repeated-word bounds for the selected Wilson family remain
+      conditional on these inputs. The local deductions from those inputs are
+      proved here.
+    </p>
+    <h3 id="auto-103"><a id="sec:partII-F.1"></a>15.1<span style="margin-left: 1em"></span>Volume limits<span style="margin-left: 1em"></span></h3>
+    <p>
+      Fix a strictly increasing \(\textsf{p} : \mathbb{N} \to \mathbb{N}\).
+      Proposition <a href="5-the-renormalization-group.html#prop:UB">5.8</a> bounds the lattice kernels and their
+      differences on separated sets, uniformly in the volume; one further
+      difference makes these bounds equicontinuous.
+    </p>
+    <p>
+      For comparison, \(\text{Conf}_n\) requires each pair of points to differ
+      in at least one coordinate, while \(\text{Gen}_n\) requires them to
+      differ in every coordinate. At physical period \(L\), \(\text{NoHit}_{L,
+      n}\) requires, for each pair, at least one coordinate difference outside
+      \(L\mathbb{Z}\); the periodic coordinate-generic domain requires every
+      such difference to lie outside \(L\mathbb{Z}\). The latter is contained
+      in both \(\text{Gen}_n\) and \(\text{NoHit}_{L, n}\). For two points
+      with difference \((L / 4, 0, 0, 0)\), the pair lies in
+      \(\text{NoHit}_{L, 2}\) but not \(\text{Gen}_2\); with difference \((L,
+      L, L, L)\) it lies in \(\text{Gen}_2\) but not \(\text{NoHit}_{L, 2}\).
+      Proposition <a href="5-the-renormalization-group.html#prop:UB">5.8</a> gives its cutoff threshold independently of
+      the period; the fixed-period limit of Theorem <a href="5-the-renormalization-group.html#prop:UV">5.9</a> permits
+      its cutoff threshold to depend on the period.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">15.1</class>. </strong><i><class
+        style="font-style: normal"><strong>(Volume limits) </strong></class><a id="lem:F1"></a> There are
+        a strictly increasing \(\textsf{q}\) and a complex multilinear table
+        \(S\) such that, with \(P = \textsf{p} \circ \textsf{q}\), for every
+        \(n\), label list \(v\) and difference list \(\boldsymbol{l}\),</i>
+      </p>
+      <i><table width="100%">
+        <tr>
+          <td align="center" width="100%"><a id="eq:F-conf"></a>\(\displaystyle S_n  (v ; \cdot) \in
+          C^{\infty} (\text{Conf}_n), \qquad
+\partial_{\boldsymbol{l}} M_{P
+          (k), v} \longrightarrow
+\partial_{\boldsymbol{l}} S_n  (v ; \cdot)
+          \quad \text{locally uniformly on }
+\text{Conf}_n \hspace{0.17em}
+          .\)</td>
+          <td align="right">(15.1)</td>
+        </tr>
+      </table></i>
+      <p>
+        <i>Every compact \(K \subset \text{Conf}_n\) eventually lies in
+        \(\text{NoHit}_{L_{P (k)}, n}\), and for every separated test
+        \(f\),</i>
+      </p>
+      <i><table width="100%">
+        <tr>
+          <td align="center" width="100%"><a id="eq:F-ordered"></a>\(\displaystyle C_{P (k)}^{\text{UV}} 
+          (v ; f) \longrightarrow \int f (x) S_n  (v ; x) 
+\hspace{0.17em}
+          dx.\)</td>
+          <td align="right">(15.2)</td>
+        </tr>
+      </table></i>
+      <p style="margin-bottom: 1em">
+        <i>Both convergences persist along every further refinement of
+        \(\textsf{q}\).</i>
+      </p>
+    </div>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>Fix compact sets \(K \subset K' \subset
+      \text{Conf}_n\), with \(K'\) a neighbourhood of \(K\). For large \(p\),
+      \(K'\) lies in \(\text{NoHit}_{L_p, n}\) with torus separation at least
+      some \(2 r > 0\) independent of \(p\). Proposition <a href="5-the-renormalization-group.html#prop:UB">5.8</a>
+      bounds \(\Delta_{\boldsymbol{l}} M^{\text{lat}}_{N, p}\) by \(B (v,
+      \boldsymbol{l}, r)\) near \(K'\) for large \(N\), uniformly in \(p\),
+      and by Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E3.2">14.37</a> the multilinear interpolants converge at
+      each fixed \(p\) to \(\partial_{\boldsymbol{l}} M_{p, v}\). Hence
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:F-local"></a>\(\displaystyle \sup_{p \geqslant p_0}
+        \sup_{x \in K'} | \partial_{\boldsymbol{l}} M_{p, v}
+(x) | \leqslant B
+        (v, \boldsymbol{l}, r),\)</td>
+        <td align="right">(15.3)</td>
+      </tr>
+    </table>
+    <p>
+      although the cutoff threshold may depend on \(p\). One more derivative
+      gives equicontinuity on \(K\). Arzel&agrave;&ndash;Ascoli [<a href="references.html#bib-Rudin1976">28</a>,
+      Theorem 7.25] and a diagonal extraction over compact exhaustions of
+      \(\text{Conf}_n\), arities, degree lists, basis coefficient lists and
+      difference lists, a countable family, give \(\textsf{q}\).
+      Multilinearity extends the limits to every label list, and integration
+      by parts against compactly supported tests identifies the limit of each
+      derivative with the derivative of the limit. This proves <class style="font-style: normal">(<a
+      href="#eq:F-conf">15.1</a>)</class>.
+    </p>
+    <p style="margin-bottom: 1em">
+      A compact separated set has bounded diameter, so it eventually lies in
+      \(\text{NoHit}_{L_{P (k)}, n}\). Theorem <a href="5-the-renormalization-group.html#prop:UV">5.9</a> gives, at
+      every admissible \(p\), the full inner limit \(C_p^{\text{UV}}  (v ; f)
+      = \int f \hspace{0.17em} M_{p, v}\); the support of \(f\) is eventually
+      admissible along \(P\), and local uniform convergence proves <class
+      style="font-style: normal">(<a href="#eq:F-ordered">15.2</a>)</class>. Both properties pass to
+      subsequences.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      Lemma <a href="#lem:F2">15.5</a> refines \(\textsf{q}\) once more without
+      changing \(S\); from then on \(P\) denotes the final refinement. At each
+      volume the kernel limits remain the full ultraviolet limits of Theorem
+      <a href="5-the-renormalization-group.html#prop:UV">5.9</a>: no spacing subsequence enters <class style="font-style: normal">(<a href="#eq:F-ordered">15.2</a>)</class>.
+    </p>
+    <p>
+      <h5>Symmetries of the limit.<span style="margin-left: 1em"></span></h5>
+      <div style="display: inline">
+        Permutation symmetry, the empty correlation, deletion of the
+        distinguished unit, conjugation and signed-permutation covariance hold
+        on the lattice once \(N\) exceeds the reference levels (Definition <a
+        href="2-definitions.html#def:D08">2.8</a>, Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.1a">14.8</a>). Approximating separated
+        configurations by lattice points, Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E3.2">14.37</a> and <class
+        style="font-style: normal">(<a href="#eq:F-conf">15.1</a>)</class> pass them to \(S\). For
+        translations, approximate the translation vector on the same lattice;
+        translation invariance and <class style="font-style: normal">(<a href="#eq:F-local">15.3</a>)</class>
+        give arbitrary real translations. This proves E1&ndash;E3, and <class
+        style="font-style: normal">(<a href="#eq:F-conf">15.1</a>)</class> gives E6.
+      </div>
+    </p>
+    <h3 id="auto-104"><a id="sec:partII-F.2"></a>15.2<span style="margin-left: 1em"></span>Separated cells and negligible
+    errors<span style="margin-left: 1em"></span></h3>
+    <p>
+      Chessboard seminorms, interior observables, signed images, aligned
+      tilings, anchors and margins are those of Definition <a href="14-trajectories-marked-fields-and-ultraviolet.html#def:D27">14.10</a>
+      and of the paragraphs before Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:F1a">14.11</a> and Definition <a
+      href="14-trajectories-marked-fields-and-ultraviolet.html#def:E2-small">14.17</a>. For observables \(F_1, \ldots, F_n\) in distinct cells
+      \(C_1, \ldots, C_n\) of a translated bond tiling \(\mathcal{T}\), each
+      interior to its cell, write \(\|F_h \|_{\mathcal{T}} = \|G_h
+      \|_{\mathcal{T}}\), where \(G_h\) is the base-cell observable with
+      \((G_h)_{C_h} = F_h\). The chessboard inequality <class style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E-chess">14.19</a>)</class>,
+      with the constant one in the remaining cells, gives
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:F-chess"></a>\(\displaystyle \left| \left\langle
+        \prod_{h = 1}^n F_h \right\rangle_{N, p} \right|
+\leqslant \prod_{h =
+        1}^n \|F_h \|_{\mathcal{T}} \hspace{0.17em} .\)</td>
+        <td align="right">(15.4)</td>
+      </tr>
+    </table>
+    <p>
+      The seminorm measures the cost of repeating one observation throughout
+      the box, so this bound is independent of the volume and of the distances
+      between the cells.
+    </p>
+    <p>
+      For a centered bound, the insertion's stencil links have both endpoints
+      strictly inside the cell centered at its anchor, and its seminorm in
+      that centered tiling is bounded as in Definition <a href="14-trajectories-marked-fields-and-ultraviolet.html#def:D27">14.10</a> and
+      Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.3">14.16</a>. There the constant is fixed before the cell
+      level \(m\); the sufficiently fine cutoff may depend on \(m\) but is
+      uniform in \(p\) and the anchor.
+    </p>
+    <p>
+      Separated anchors must therefore be placed in distinct cells, away from
+      the boundaries. In each axis, the translations of a tiling of side \(a\)
+      that bring one of \(n\) anchors within distance \(w\) of a cell boundary
+      form, modulo \(a\), at most \(n\) intervals of total length \(2 nw\). If
+      \(2 nw < a\), some lattice translation avoids them once \(a_N\) is
+      small. We call this the strip count. Anchors at torus sup-distance
+      greater than \(a\) never share a cell.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">15.2</class>. </strong><i><class
+        style="font-style: normal"><strong>(Separated cells) </strong></class><a id="lem:F-cells"></a> Let \(m
+        \leqslant k\) and \(n \geqslant 1\) with \(6 na_k < a_m\), and suppose
+        the insertions \(O_{N, p} (v_h, \cdot)\), \(h \leqslant n\), satisfy
+        the hypothesis of Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:F1a">14.11</a> at level \(k\) with a
+        common bound \(B\). For all sufficiently large \(N\) and all anchors
+        with pairwise torus sup-distance greater than \(a_m\),</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle \left| \left\langle \prod_{h = 1}^n O_{N, p} (v_h,
+          y_h) \right\rangle_{N, p}
+\right| \leqslant B^n .\)
+        </center></i>
+      </div>
+    </div>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong class="enunciation-name">Proof. </strong>The strip count with \(a = a_m\) and \(w
+      = 3 a_k\) gives a tiling of side \(a_m\) with the anchors in distinct
+      cells, at distance at least \(3 a_k\) from their boundaries. Lemma <a
+      href="14-trajectories-marked-fields-and-ultraviolet.html#lem:F1a">14.11</a> bounds each seminorm by \(B\), and <class style="font-style: normal">(<a
+      href="#eq:F-chess">15.4</a>)</class> gives the claim.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      A negligible error has a tolerance chosen before the cell scale
+      (Definition <a href="14-trajectories-marked-fields-and-ultraviolet.html#def:E2-small">14.17</a>), and this order makes it vanish against
+      each fixed list of spectators.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">15.3</class>. </strong><i><class
+        style="font-style: normal"><strong>(Vanishing errors) </strong></class><a id="lem:F1b"></a> For
+        every negligible error \(E\) of Definition <a href="14-trajectories-marked-fields-and-ultraviolet.html#def:E2-small">14.17</a>, fixed
+        label list \(v\), distinguished slot \(i\) and \(\delta > 0\), there
+        is \(C (v, \delta) < \infty\) such that, eventually in <class style="font-style: normal">(<a
+        href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E2-tails">14.28</a>)</class>,</i>
+      </p>
+      <i><table width="100%">
+        <tr>
+          <td align="center" width="100%"><a id="eq:F-small"></a>\(\displaystyle \left| \left\langle
+          E_{N, p} (y_i) \prod_{h \ne i} O_{N, p} (v_h, y_h)
+\right\rangle_{N,
+          p} \right| \leqslant C (v, \delta) \eta_{N, p} 
+          \qquad
+(\text{sep}_{\text{tor}} (y) \geqslant \delta)
+          \hspace{0.17em} .\)</td>
+          <td align="right">(15.5)</td>
+        </tr>
+      </table></i>
+      <p style="margin-bottom: 1em">
+        <i>Consequently its smear against any fixed separated test tends to
+        zero in that order.</i>
+      </p>
+    </div>
+    <p>
+      The error and the spectators receive distinct cells; the error pays its
+      tolerance \(\eta_{N, p}\), and each spectator a constant.
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong class="enunciation-name">Proof. </strong>Let \(n\) be the arity. Take \(m\) with
+      \(a_m < \delta\), and let \(k \geqslant m\) be the level that Definition
+      <a href="14-trajectories-marked-fields-and-ultraviolet.html#def:E2-small">14.17</a> assigns to the arity \(n\) and the lower level \(m\);
+      the error tiling has side \(a_k\). Choose \(k_{\text{sp}} \geqslant k\),
+      beyond the reference levels of the spectators, with \(3
+      a_{k_{\text{sp}}} \leqslant a_k / [8 (n + 1)]\). Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.3">14.16</a>
+      bounds the centered seminorms of all signed and conjugated images of the
+      spectators at level \(k_{\text{sp}}\) by some \(B_{\text{sp}}\). The
+      strip count with \(a = a_k\) and \(w = a_k / [4 (n + 1)]\), and \(\delta
+      > a_k\), give a tiling of side \(a_k\) with the anchors in distinct
+      cells at distance at least \(w\) from their boundaries. This margin
+      contains the integer margin <class style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E2-margin">14.29</a>)</class>,
+      including its extra lattice unit, and exceeds \(3 a_{k_{\text{sp}}}\).
+      Translating by a multiple of \(a_k\), we may take the error's cell to be
+      the base cell. Definition <a href="14-trajectories-marked-fields-and-ultraviolet.html#def:E2-small">14.17</a> bounds the seminorm of the
+      error by \(\eta_{N, p}\), and Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:F1a">14.11</a>, with tiling side
+      \(a_k\) and centered level \(k_{\text{sp}}\), bounds those of the
+      spectators by \(B_{\text{sp}}\). Now <class style="font-style: normal">(<a href="#eq:F-chess">15.4</a>)</class>
+      gives <class style="font-style: normal">(<a href="#eq:F-small">15.5</a>)</class> with \(C =
+      B_{\text{sp}}^{n - 1}\). On a compact test support the number of lattice
+      tuples times \(a_N^{4 n}\) is bounded independently of \(N, p\), which
+      proves the smeared assertion.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <h3 id="auto-105"><a id="sec:partII-F.3"></a>15.3<span style="margin-left: 1em"></span>Quotient fields<span style="margin-left: 1em"></span></h3>
+    <p>
+      Two labels represent the same field when every separated correlation
+      gives the same answer for them (Definition <a href="2-definitions.html#def:D10">2.12</a>). For a
+      degree \(d\), a slot, fixed spectators \(v\) and a separated test \(f\),
+      the one-slot functionals on \(V_d\) are
+    </p>
+    <center>
+      \(\displaystyle L_{N, p} (c) = C^{\text{lat}}_{N, p} ((d, c), v ; f),
+      \qquad L (c) = \int f
+(x_0, x)  \hspace{0.17em} S_{n + 1}  (c (x_0), v
+      (x))  \hspace{0.17em} dx_0 
+\hspace{0.17em} dx.\)
+    </center>
+    <p>
+      As \(S\) is smooth, \(\mathcal{N}_d (S)\) is the intersection of the
+      kernels of all such \(L\): it consists exactly of the labels that no
+      separated smear detects. Four inputs from Section <a href="14-trajectories-marked-fields-and-ultraviolet.html#sec:partII-E.2">14.2</a>
+      identify it, each with one task. (C1) Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.8">14.21</a>
+      represents a degree-\(d\) insertion in a degree \(e \geqslant d\), and
+      (C2) Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.9">14.22</a> its lattice difference quotient in degree
+      \(d + 1\), up to negligible errors. (C3) Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.7">14.20</a>
+      replaces a tame family in \(\ker \Pi_{d, N, p}\) by observables with
+      vanishing separated moments, up to a negligible error; <em>tame</em>
+      means the subpower bound <class style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:F-subpower">14.27</a>)</class>.
+      (C4) The free test rows of Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2-free-tests">14.23</a> and the relative
+      rank comparison of Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.10">14.28</a> keep the quotient from
+      losing dimension. The families supplied by (C1)&ndash;(C3) may have
+      unbounded coefficients; Lemma <a href="#lem:F-represent">15.4</a> turns them into fixed
+      coefficient vectors.
+    </p>
+    <p>
+      The coefficient limits are taken along a common spacing subsequence
+      \(\textsf{n}\) at every volume and a further volume refinement, in the
+      order <class style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E2-tails">14.28</a>)</class>. They do not affect the
+      kernel limits, which at each admissible volume remain the full
+      ultraviolet limits required by Definition <a href="2-definitions.html#def:D09">2.6</a>. A family in
+      a finite-dimensional space is <em>bounded</em> if its norm is bounded
+      eventually in <class style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E2-tails">14.28</a>)</class>; an <em>ordered
+      limit point</em> of countably many bounded families is their joint limit
+      along an ultrafilter containing the ordered tails. It exists by
+      compactness, and families that converge along the ordered tails keep
+      their limits, so passing to ordered limit points changes neither \(S\)
+      nor \(P\).
+    </p>
+    <p>
+      The next lemma, finite-dimensional linear algebra, converts approximate
+      representatives, which need not be bounded, into one exact
+      representative.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">15.4</class>. </strong><i><class
+        style="font-style: normal"><strong>(Representation of limits) </strong></class><a id="lem:F-represent"></a>
+        Let \(V\) be a finite-dimensional complex normed space and
+        \(\mathcal{F}\) a proper filter on an index set. Let \(\Pi_u, \Pi\) be
+        idempotents on \(V\) with \(\Pi_u \to \Pi\), and \(L_{i, u}, L_i\),
+        \(i \in I\), linear functionals with \(L_{i, u} \to L_i\) and \(\ker
+        \Pi = \bigcap_i \ker L_i\). Suppose \(x_u \in V\) satisfy, for every
+        \(i\), along \(\mathcal{F}\),</i>
+      </p>
+      <i><table width="100%">
+        <tr>
+          <td align="center" width="100%"><a id="eq:F-normalized"></a>\(\displaystyle L_{i, u} (x_u)
+          \longrightarrow t_i, \qquad L_{i, u}  ((x_u - \Pi_u x_u) / (1
++\|
+          \Pi_u x_u \|)) \longrightarrow 0.\)</td>
+          <td align="right">(15.6)</td>
+        </tr>
+      </table></i>
+      <p style="margin-bottom: 1em">
+        <i>Then some \(z \in V\) satisfies \(\Pi z = z\) and \(L_i (z) = t_i\)
+        for every \(i\).</i>
+      </p>
+    </div>
+    <p>
+      The second condition makes the null part of \(x_u\) negligible relative
+      to its retained part. If the retained parts \(\Pi_u x_u\) escaped to
+      infinity, normalizing them would produce a unit vector in the range of
+      \(\Pi\) annihilated by every \(L_i\): a null vector in the retained
+      range, which \(\ker \Pi = \bigcap_i \ker L_i\) excludes.
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>Put \(b_u = (1 +\| \Pi_u x_u \|)^{- 1}\)
+      and \(z_u = b_u \Pi_u x_u\), so \(b_u + \|z_u \| = 1\) and \(\Pi_u z_u =
+      z_u\). The pairs \((b_u, z_u)\) have a cluster point \((\lambda, z)\)
+      along \(\mathcal{F}\) in \([0, 1] \times \{\|z\| \leqslant 1\}\). As
+      \(L_{i, u} (z_u) = b_u L_{i, u} (x_u) - L_{i, u}  (b_u (x_u - \Pi_u
+      x_u))\),
+    </p>
+    <center>
+      \(\displaystyle L_i (z_u) - b_u t_i = b_u  (L_{i, u} (x_u) - t_i) -
+      L_{i, u}  (b_u (x_u -
+\Pi_u x_u)) + (L_i - L_{i, u}) (z_u)
+      \longrightarrow 0,\)
+    </center>
+    <p style="margin-bottom: 1em">
+      and \(\Pi z_u - z_u = (\Pi - \Pi_u) z_u \to 0\). Hence \(L_i (z) =
+      \lambda t_i\), \(\Pi z = z\) and \(\lambda + \|z\| = 1\). If \(\lambda =
+      0\), then \(z \in \bigcap_i \ker L_i = \ker \Pi\), so \(z = \Pi z = 0\),
+      contradicting \(\|z\| = 1\). Thus \(\lambda > 0\), and \(z / \lambda\)
+      has the required properties.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">15.5</class>. </strong><i><class
+        style="font-style: normal"><strong>(Corrected coefficient maps) </strong></class><a id="lem:F2"></a>
+        After a strictly increasing refinement of \(\textsf{q}\), which does
+        not change \(S\), there are complex linear maps \(\hat{\jmath}_{d, e}
+        : V_d \to V_e\) for \(d \leqslant e\) and \(\hat{\partial}_{d, a} :
+        V_d \to V_{d + 1}\) such that, for every \(c \in V_d\), spectator word
+        \(v (x)\) and \((x_0, x) \in \text{Conf}_{n + 1}\),</i>
+      </p>
+      <i><center>
+        <a id="eq:F-calculus"></a>\(\displaystyle \begin{array}{c}
+  S_{n + 1} 
+        (\hat{\jmath}_{d, e} c (x_0), v (x)) = S_{n + 1}  (c (x_0), v
+ 
+        (x)),\\
+  S_{n + 1}  (\hat{\partial}_{d, a} c (x_0), v (x)) =
+        \partial_{x_0^a} S_{n +
+  1}  (c (x_0), v (x)) . \hspace{3cm}  
+        \text{(15.7)} 
+\end{array}\)
+      </center></i>
+      <p style="margin-bottom: 1em">
+        <i>Moreover \(\dim_{\mathbb{C}} F_d = \dim_{\mathbb{C}}
+        M_d^{\text{Max}}\), and the induced maps \(\jmath_{d, e} [c] =
+        [\hat{\jmath}_{d, e} c]\) and \(\partial_a [c] = [\hat{\partial}_{d,
+        a} c]\) satisfy Proposition <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:FC">6.4</a>.</i>
+      </p>
+    </div>
+    <p>
+      The proof identifies the null space with the kernel of a limiting
+      projection, then applies Lemma <a href="#lem:F-represent">15.4</a> to the families of (C1)
+      and (C2).
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong><em>Limiting projections.</em><a id="F:bounded-families-tame"></a>
+      Bounded coefficient families are tame: Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.2">14.7</a> bounds
+      their inverse terminal coordinates by a fixed factor times \(\prod_{m <
+      N} C^{\text{col}}_{J_{m + 1}}\), and \(\log C^{\text{col}}_{J_{m + 1}}
+      \leqslant J_{m + 1}^{- 2} \log \ell_m\) (Section <a href="9-constants-and-order-of-choice.html#sec:constants">9</a>) with
+      \(J_m \to \infty\) makes this product grow more slowly than every power
+      of \(a_N^{- 1}\). A countable diagonal extraction, first in \(N\) at
+      every \(p\), then in the volume, retaining <class style="font-style: normal">(<a href="#eq:F-conf">15.1</a>)</class>,
+      makes the following converge: the projections of Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.6">14.19</a>,
+      which are bounded by \(C^{\Pi}_d\), the comparison lifts of Lemma <a
+      href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.10">14.28</a>, and the couplings \(\beta_{N, p, k} \in
+      \mathfrak{B}_k\), \(k \in \mathbb{N}\), of Theorem <a href="5-the-renormalization-group.html#prop:MT">5.6</a>. In
+      operator norm,
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:F-projections"></a>\(\displaystyle \Pi_{d, \textsf{n} (j),
+        p} \longrightarrow \Pi_d^{(p)}, \qquad \Pi_d^{(P
+(k))} \longrightarrow
+        \Pi_d, \qquad \Pi_d^2 = \Pi_d \hspace{0.17em},\)</td>
+        <td align="right">(15.8)</td>
+      </tr>
+    </table>
+    <p>
+      and by <class style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E2-tails">14.28</a>)</class> this iterated limit is
+      an ordered limit.
+    </p>
+    <p>
+      <em>The null space.</em> By finite dimensionality, the full fixed-volume
+      limits and <class style="font-style: normal">(<a href="#eq:F-ordered">15.2</a>)</class>, \(L_{N, p} \to L\)
+      in operator norm in the ordered limit. For fixed \(c\), the bounded
+      family \(c - \Pi_{d, N, p} c\) is tame and lies in \(\ker \Pi_{d, N,
+      p}\), so (C3) and Lemma <a href="#lem:F1b">15.3</a> give \(L_{N, p}  (c - \Pi_{d,
+      N, p} c) \to 0\). Thus \(L ((1 - \Pi_d) c) = 0\) for every \(L\):
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:F-null"></a>\(\displaystyle \ker \Pi_d \subset
+        \mathcal{N}_d (S) .\)</td>
+        <td align="right">(15.9)</td>
+      </tr>
+    </table>
+    <p>
+      For the reverse inequality, use (C4). Rearranging <class style="font-style: normal">(<a
+      href="14-trajectories-marked-fields-and-ultraviolet.html#eq:F-relative">14.39</a>)</class> isolates \(\mathcal{G}^{\nu}_I\); every other
+      term contains a nonempty \(R_J\), whose expectation is at most its
+      seminorm \(\gamma_{\nu}\) by <class style="font-style: normal">(<a href="#eq:F-chess">15.4</a>)</class>
+      with one occupied cell. Thus
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:F-rank"></a>\(\displaystyle \left| \left\langle
+        \prod_{h \in I} F^{\text{tst}}_h \right\rangle_{N,
+        p}
+-\mathcal{G}^{\nu}_I \right| \leqslant \gamma_{\nu}  \sum_{J
+        \subsetneq I}
+|\mathcal{G}^{\nu}_J |,\)</td>
+        <td align="right">(15.10)</td>
+      </tr>
+    </table>
+    <p>
+      and the sum stays bounded as \(y^{\nu, i} \to y^i\). Pass to the
+      coefficient and kernel limits. Each entry of the resulting matrix is a
+      fixed spectator functional, vanishing on \(\mathcal{N}_d (S)\), applied
+      to the limiting lift of \(\mathfrak{m}_j\); so the matrix factors
+      through \(F_d\) and has rank at most \(\dim F_d\). As \(\nu \to \infty\)
+      these matrices tend to the rank-\(\dim_{\mathbb{C}} M_d^{\text{Max}}\)
+      matrix \(\mathcal{G}\), so \(\dim F_d \geqslant \dim_{\mathbb{C}}
+      M_d^{\text{Max}}\). Ranks of converging idempotents are eventually
+      constant (if \(\|P - Q\| < 1\), then \(P\) is injective on \(\text{ran}
+      \hspace{0.17em} Q\)), so the dimension inequality of Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.6">14.19</a>
+      passes to \(\Pi_d\), and with <class style="font-style: normal">(<a href="#eq:F-null">15.9</a>)</class>,
+      \(\dim F_d \leqslant \dim V_d - \dim \ker \Pi_d \leqslant
+      \dim_{\mathbb{C}}
+M_d^{\text{Max}}\). Hence
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:F-dimension"></a>\(\displaystyle \mathcal{N}_d (S) = \ker
+        \Pi_d, \qquad \dim_{\mathbb{C}} F_d =
+\dim_{\mathbb{C}}
+        M_d^{\text{Max}} .\)</td>
+        <td align="right">(15.11)</td>
+      </tr>
+    </table>
+    <p>
+      <em>Targets.</em> For the inclusion of \(c \in V_d\), (C1) and Lemma <a
+      href="#lem:F1b">15.3</a> give a tame family \(w_{N, p} \in V_e\) whose one-slot
+      functionals tend to \(t_L = \int fS (c, \ldots)\). For the derivative in
+      slot \(i\) and axis \(a\), (C2) gives \(w_{N, p} \in V_{d + 1}\), and
+      torus summation by parts gives exactly
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:F-parts"></a>\(\displaystyle a_N^{4 n}  \sum_y f
+        (\hat{y}) \Delta_{i, a} M^{\text{lat}}_{N, p} (v ; y) =
+a_N^{4 n} 
+        \sum_y \frac{f (\hat{y} - a_N e_{i, a}) - f
+        (\hat{y})}{a_N}
+M^{\text{lat}}_{N, p} (v ; y),\)</td>
+        <td align="right">(15.12)</td>
+      </tr>
+    </table>
+    <p>
+      with \(e_{i, a}\) the coordinate vector of slot \(i\), axis \(a\). The
+      backward quotient tends to \(- \partial_{i, a} f\) with residual at most
+      \(a_N  \| \partial_{i, a}^2 f\|_{\infty} / 2\), which Proposition <a
+      href="5-the-renormalization-group.html#prop:UB">5.8</a> at order zero controls, so the target is \(t_L = - \int
+      (\partial_{i, a} f) S (c, \ldots)\).
+    </p>
+    <p>
+      <em>Representation.</em> Apply Lemma <a href="#lem:F-represent">15.4</a> in \(V_e\), with
+      \(\mathcal{F}\) the filter of ordered tails \(\{(j, k) : k \geqslant
+      k_0, j \geqslant j_0 (k)\}\), \(\Pi_u = \Pi_{e, \textsf{n} (j), P (k)}\)
+      and the one-slot functionals of degree \(e\). They converge as shown
+      above, and \(\ker \Pi_e = \bigcap \ker L\) by <class style="font-style: normal">(<a href="#eq:F-dimension">15.11</a>)</class>.
+      With \(\Pi = \Pi_{e, N, p}\), the family \((w - \Pi w) / (1 +\| \Pi
+      w\|)\) lies in \(\ker \Pi\) and is tame, being a bounded multiple of
+      \(w\) minus a family of norm at most one; (C3) and Lemma <a href="#lem:F1b">15.3</a>
+      give the second condition of <class style="font-style: normal">(<a href="#eq:F-normalized">15.6</a>)</class>.
+      The lemma gives one vector representing the target against every
+      spectator and test at once; no further subsequence is chosen for these
+      uncountably many tests. Choose such vectors on a basis of \(V_d\) and
+      extend linearly; <class style="font-style: normal">(<a href="#eq:F-conf">15.1</a>)</class> turns the
+      distributional identities into <class style="font-style: normal">(<a href="#eq:F-calculus">15.7</a>)</class>.
+    </p>
+    <p style="margin-bottom: 1em">
+      <em>Induced maps.</em> By <class style="font-style: normal">(<a href="#eq:F-calculus">15.7</a>)</class>,
+      \(\hat{\jmath}_{d, e}\) and \(\hat{\partial}_{d, a}\) carry
+      \(\mathcal{N}_d (S)\) into null spaces, so they descend to \(F_d\) and
+      satisfy the identities of Proposition <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:FC">6.4</a>; with <class
+      style="font-style: normal">(<a href="#eq:F-dimension">15.11</a>)</class> this proves that proposition. The
+      further properties listed after it (injective responses, units,
+      conjugation, \(H_4\) covariance, the positional identity in every slot)
+      follow from these identities, E1 and E2, as explained there.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      <h5>Example: the curvature square (continued).<span style="margin-left: 1em"></span></h5>
+      <div style="display: inline">
+        <a id="F:curvature-square-example"></a> Section <a href="10-local-polynomial-fields.html#sec:A-example">10.5</a> follows the label \(c_{F^2} \in
+        V_4\) of \(\frac{1}{4}  \sum_{a, b, \alpha} F^{\alpha}_{ab}
+        F^{\alpha}_{ab}\) to its insertion; in degree four the quotient
+        removes nothing. Every jet coordinate has weight at least two, and
+        since \(\mathfrak{g}\) is simple no nonzero \(\text{Ad}
+        (G)\)-invariant polynomial is linear in a \(\mathfrak{g}\)-valued jet;
+        so an element of \(V_4\) is a constant plus an invariant quadratic
+        form in the lowest jet \(\mathcal{A}_0\), that is, in the curvature at
+        the origin. The Maxwell equations do not constrain the curvature at
+        one point, so no nonzero such polynomial vanishes on every Maxwell
+        solution: the equation space \(\mathcal{I}_4\) of Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.6">14.19</a>
+        is zero. That lemma gives \(\Pi_{4, N, p} = 1\), and <class style="font-style: normal">(<a
+        href="#eq:F-dimension">15.11</a>)</class> gives \(\mathcal{N}_4 (S) = 0\). Distinct
+        degree-four labels give distinct fields, and \([c_{F^2}] \ne 0\) in
+        \(F_4\). The quotient first acts on derivatives: the lattice
+        difference quotient of the insertion of \(c_{F^2}\) is not a
+        degree-five insertion, (C2) represents it by a tame family in \(V_5\),
+        and Lemma <a href="#lem:F-represent">15.4</a> replaces that family by one vector, with
+        \(\partial_a [c_{F^2}] = [\hat{\partial}_{4, a} c_{F^2}]\). In degree
+        five, for any fixed axis \(a\), \(\mathcal{I}_5\) contains the
+        invariant contraction \(\sum_{b, c, \alpha} F^{\alpha}_{ab} 
+        \hspace{0.17em} \partial_c
+F^{\alpha}_{cb}\) of a curvature with the
+        Maxwell expression. By Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.6">14.19</a> and <class style="font-style: normal">(<a
+        href="#eq:F-dimension">15.11</a>)</class>, \(\mathcal{N}_5 (S) = \ker \Pi_5\) is
+        therefore nonzero, and \(\hat{\partial}_{4, a} c_{F^2}\) is determined
+        only modulo these limits of transported equation directions.
+      </div>
+    </p>
+    <h3 id="auto-106"><a id="sec:partII-F.4"></a>15.4<span style="margin-left: 1em"></span>Euclidean properties<span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      Lattice symmetries and positivity pass through the ordered limits; Lemma
+      <a href="#lem:F-cells">15.2</a> controls separated points as they approach one
+      another, uniformly in their diameter.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em; margin-bottom: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">15.6</class>. </strong><i><class
+        style="font-style: normal"><strong>(Euclidean properties) </strong></class><a id="lem:F3"></a> The
+        table \(S\) of Lemma <a href="#lem:F1">15.1</a> satisfies E1&ndash;E7.</i>
+      </p>
+    </div>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>E1&ndash;E3 and E6 were proved after
+      Lemma <a href="#lem:F1">15.1</a>; the positive derivative orders of E7 use <class
+      style="font-style: normal">(<a href="#eq:F-calculus">15.7</a>)</class>.
+    </p>
+    <p>
+      <em>Reflection positivity.</em> We prove E5 and deduce E4. Fix joint
+      smooth tests \(f_i\) with compact support on positive-side separated
+      configurations for an axis \(a\). Use the bond reflection \(x^a \mapsto
+      a_N - x^a\), a lattice symmetry with planes \(x^a = a_N / 2\) and \(x^a
+      = (a_N + L_p) / 2\). For large \(p, N\) the lattice smears \(F_i\) are
+      supported strictly inside the positive half-torus, with stencils
+      avoiding both planes, since the supports keep a positive distance from
+      \(x^a = 0\) and the stencils have physical radius tending to zero.
+      Periodic Wilson reflection positivity [<a href="references.html#bib-Seiler1982">30</a>, Theorem 2.1, pp.
+      14&ndash;15] gives
+    </p>
+    <center>
+      \(\displaystyle \sum_{i, j} \bar{z}_i z_j \langle \overline{F_i \circ
+      \textsf{r}_{a, N}} F_j
+\rangle_{N, p} \geqslant 0,\)
+    </center>
+    <p>
+      where \(\textsf{r}_{a, N}\) reflects configurations. Insertion
+      covariance reflects the positions and applies
+      \(\textsf{s}_a^{\text{refl}}\) to the labels; conjugation acts on the
+      labels of the first word. The reflected joint tests converge with all
+      derivatives to \(\bar{f}_i \otimes f_j\) with the first group reflected
+      through \(x^a = 0\), and all supports lie in one compact separated set.
+      Proposition <a href="5-the-renormalization-group.html#prop:UB">5.8</a> at order zero bounds the effect of the
+      moving tests by their uniform difference times a bounded weighted site
+      count. Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E3.2">14.37</a> and <class style="font-style: normal">(<a href="#eq:F-ordered">15.2</a>)</class>
+      then give a positive semidefinite limiting matrix; smoothness of \(S\)
+      makes every pairing absolutely integrable. This is E5. Concentrating
+      normalized bumps at positive-side words gives E4 by continuity.
+    </p>
+    <p>
+      <em>Power bound at order zero.</em> Take a nonempty label list and put
+      \(d_{\text{pow}} = 1 + \max_i d_i\). Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.3">14.16</a> with
+      \(\varepsilon = 1\), for the finitely many signed and conjugated images
+      of the labels, gives \(k_0\) and \(C_{\text{ctr}}\) such that their
+      centered seminorms at levels \(k \geqslant k_0\) are at most
+      \(C_{\text{ctr}} a_k^{- d_{\text{pow}}}\); these constants precede the
+      separation. The block ratios grow slowly: \(\log \ell_u / s_u \to 0\)
+      (Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E1.1">14.2</a>) gives \(\ell_u \leqslant a_u^{- 1}\)
+      eventually, so for some \(c_{\text{mesh}} > 0\) and all \(u\)
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:F-thickness"></a>\(\displaystyle a_{u + 1} \geqslant
+        c_{\text{mesh}} a_u^2 .\)</td>
+        <td align="right">(15.13)</td>
+      </tr>
+    </table>
+    <p>
+      Thus the first \(u \geqslant k_0\) with \(a_u < \delta \leqslant 1\)
+      satisfies \(a_u \geqslant c_0 \delta^2\), where \(c_0 = \min
+      (c_{\text{mesh}}, a_{k_0})\): a discrete scale lies within a fixed power
+      of any prescribed length. Fix \(0 < r \leqslant 1\) and \(x\) with
+      \(\text{sep}_{\infty} (x) \geqslant r\). Choose the first \(m \geqslant
+      k_0\) with \(a_m < r / 2\), then the first \(k \geqslant k_0\) with
+      \(a_k < a_m / [6 (n + 1)]\); then \(k \geqslant m\) and \(a_k \geqslant
+      c' (n) r^4\). Lattice approximations of \(x\) in large volumes have
+      torus separation greater than \(a_m\), so Lemma <a href="#lem:F-cells">15.2</a> bounds
+      the lattice correlation by \((C_{\text{ctr}} a_k^{-
+      d_{\text{pow}}})^n\). Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E3.2">14.37</a> and <class style="font-style: normal">(<a
+      href="#eq:F-conf">15.1</a>)</class> give
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:F-power"></a>\(\displaystyle |S_n (v ; x) | \leqslant
+        C (n, d, c) r^{- 4 d_{\text{pow}} n},\)</td>
+        <td align="right">(15.14)</td>
+      </tr>
+    </table>
+    <p>
+      with constants independent of the positions and the volume. Each
+      insertion costs its centered seminorm at a cell scale comparable to
+      \(r^4\), and the chessboard bound makes the total independent of the
+      diameter of \(x\).
+    </p>
+    <p style="margin-bottom: 1em">
+      <em>Higher orders.</em> By <class style="font-style: normal">(<a href="#eq:F-calculus">15.7</a>)</class>,
+      every coordinate derivative is a correlation with fixed degree-raised
+      labels, finitely many at each order. Apply <class style="font-style: normal">(<a href="#eq:F-power">15.14</a>)</class>
+      to each, take the largest exponent, and bound the Fr&eacute;chet norm by
+      the sum of the coordinate coefficients in an orthonormal basis of
+      \(\mathbb{R}^{4 n}\). This proves E7; for arity zero, \(S_0 = 1\).<span
+      style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong class="enunciation-name">Proof of Theorem <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:IV">6.1</a>. </strong>Compose the
+      volume refinements of Lemmas <a href="#lem:F1">15.1</a> and <a href="#lem:F2">15.5</a>.
+      Equation <class style="font-style: normal">(<a href="#eq:F-ordered">15.2</a>)</class> proves ordered
+      convergence, with the full inner limit of Theorem <a href="5-the-renormalization-group.html#prop:UV">5.9</a> at
+      every admissible volume, and Lemma <a href="#lem:F3">15.6</a> proves E1&ndash;E7.
+      The coefficient corrections change no kernel limit.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <h3 id="auto-107"><a id="sec:partII-F.5"></a>15.5<span style="margin-left: 1em"></span>Repeated reflected words<span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      Use the OS space of Definition <a href="6-the-continuum-limit-stress-phases-trace-and.html#def:D14">6.5</a>. For a word \(w\), let
+      \(w^{\ast}\) reverse it and apply conjugation to its labels, and let
+      \(\theta w = \textsf{s}_4^{\text{refl}} w^{\ast}\) be its antilinear OS
+      reflection. For \(s > 0\) and a word \(w\) with times in \((0, s)\) set
+    </p>
+    <center>
+      \(\displaystyle A_w v = w \hspace{0.17em} \tau_{se_4} v, \qquad
+      w^{\dagger} = \tau_{se_4}
+\theta w ;\)
+    </center>
+    <p>
+      \(A_w\) acts on words, and boundedness on OS classes is not assumed. A
+      word has buffer \(r\) in a slab of width \(h_{\text{sl}}\) if its points
+      have pairwise sup-distance at least \(r\) and times in \([r,
+      h_{\text{sl}} - r]\). Fix a degree bound \(d\) and a coefficient bound
+      \(R \geqslant 0\), and put \(Q = 4 (d + 1)\). The next estimate bounds
+      repeated insertion before any operator extension.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">15.7</class>. </strong><i><class
+        style="font-style: normal"><strong>(Repeated reflected words) </strong></class><a id="lem:F4"></a>
+        There is \(C_0 = C_0  (d, R) > 0\) such that every nonempty
+        length-\(n\) word \(w\) with these bounds and buffer \(0 < r \leqslant
+        1\) in a slab of width \(h_{\text{sl}}\) admits a width \(0 < s
+        \leqslant h_{\text{sl}}\) in which \(w\) has buffer \(r / 2\) and, for
+        every separated exterior word \(v\) with positive times,</i>
+      </p>
+      <i><center>
+        \(\displaystyle \|[(A_{w^{\dagger}} A_w)^j v]\|_{\text{OS}}^2
+        \leqslant B_v  [C_0^n (n /
+r)^{Qn}]^{4 j}  \qquad (j \geqslant 0),\)
+      </center></i>
+      <p style="margin-bottom: 1em">
+        <i>where \(B_v = B_v  (w, r, s) < \infty\) is independent of
+        \(j\).</i>
+      </p>
+    </div>
+    <p>
+      The operators use the chosen width \(s\), and \(s\), \(C_0\) and \(Q\)
+      precede \(v\). The main insertions occupy cells of a size chosen from
+      \(r\) alone and the exterior insertions a finer aligned tiling, so the
+      cost of the exterior does not grow with the number \(j\) of repetitions.
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>Enlarge the coefficient ball to contain
+      all signed and conjugated images in degrees at most \(d\). Lemma <a
+      href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.3">14.16</a> with \(\varepsilon = 1\) gives \(k_{\ast}\) and
+      \(B_{\ast} > 0\) such that their centered seminorms at levels
+      \(k_{\text{w}} \geqslant k_{\ast}\) are at most \(B_{\ast}
+      a_{k_{\text{w}}}^{- d_{\text{pow}}}\), \(d_{\text{pow}} = d + 1\); this
+      precedes \(n, r, w\). Choose the first \(m \geqslant k_{\ast}\) with
+      \(a_m < r / 32\) and put \(s = a_m  \lfloor h_{\text{sl}} / a_m
+      \rfloor\). As \(w\) is nonempty with buffer \(r\), \(h_{\text{sl}}
+      \geqslant 2 r\), so \(0 < s \leqslant h_{\text{sl}}\) and
+      \(h_{\text{sl}} - s < a_m\), and \(w\) has buffer \(r / 2\) in width
+      \(s\). By <class style="font-style: normal">(<a href="#eq:F-thickness">15.13</a>)</class>, \(a_m \geqslant
+      c_1 r^2\) with \(c_1 > 0\) depending on \(k_{\ast}\). Fix \(0 < \alpha
+      \leqslant 1\) with \(20 \alpha < c_1\), and choose the first
+      \(k_{\text{w}} \geqslant k_{\ast}\) with \(a_{k_{\text{w}}} < \alpha (r
+      / n)^2\). Then
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:F-repeat-scales"></a>\(\displaystyle 20 na_{k_{\text{w}}} <
+        a_m, \qquad a_{k_{\text{w}}} \geqslant c_2  (r / n)^4,
+\qquad
+        (B_{\ast} a_{k_{\text{w}}}^{- d_{\text{pow}}})^n \leqslant
+        (B_{\ast}
+c_2^{- d_{\text{pow}}})^n  (n / r)^{4 d_{\text{pow}} n}
+        .\)</td>
+        <td align="right">(15.15)</td>
+      </tr>
+    </table>
+    <p>
+      Expanding the OS norm gives a correlation of \(4 jn\) main insertions
+      and two copies of \(v\). The main insertions are separated from one
+      another and from the exterior by at least \(r / 2 > a_m\). Translations
+      by multiples of \(s\) preserve residues modulo \(a_m \mathbb{Z}^4\), so
+      the main anchors have at most \(2 n\) residue patterns, those of \(w\)
+      and \(\theta w\), for every \(j\). For nonempty \(v\), let \(t_{\min} >
+      0\) be its minimum time and choose \(m_{\text{v}} \geqslant
+      k_{\text{w}}\) with \(a_{m_{\text{v}}} < 2 t_{\min}\) and
+      \(a_{m_{\text{v}}}\) below every distance between distinct anchors of
+      \(v\). The two exterior copies have times \(\pm (2 js + t)\), \(t\) a
+      time of \(v\), so they are more than \(2 t_{\min} > a_{m_{\text{v}}}\)
+      apart for every \(j\). Choose \(k_{\text{v}} \geqslant m_{\text{v}}\),
+      beyond the exterior reference levels, with \(12 |v| a_{k_{\text{v}}} <
+      a_{m_{\text{v}}}\), and let \(X \geqslant 0\) bound the centered
+      seminorms of the exterior labels and their images at level
+      \(k_{\text{v}}\) (Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.3">14.16</a>). Neither \(m_{\text{v}}\)
+      nor \(k_{\text{v}}\) depends on \(j\).
+    </p>
+    <p>
+      The coarse tiling has side \(a_m\) and separates the main insertions;
+      the fine tiling has side \(a_{m_{\text{v}}}\), shares its origin and
+      separates the exterior insertions. Their side ratio is odd, so coarse
+      reflections preserve the fine grid and its interior margins. The strip
+      count for the \(2 n\) main residues modulo \(a_m\) with strip width \(5
+      a_{k_{\text{w}}}\), possible by <class style="font-style: normal">(<a href="#eq:F-repeat-scales">15.15</a>)</class>,
+      keeps the main anchors at distance at least \(5 a_{k_{\text{w}}}\) from
+      the coarse boundaries. A further translation by less than
+      \(a_{m_{\text{v}}} \leqslant a_{k_{\text{w}}}\) puts the \(2 |v|\)
+      exterior anchors at distance at least \(3 a_{k_{\text{v}}}\) from the
+      fine boundaries, since \(12 |v| a_{k_{\text{v}}} < a_{m_{\text{v}}}\),
+      and leaves the main anchors margin at least \(3 a_{k_{\text{w}}}\). The
+      main anchors occupy distinct coarse cells, none containing an exterior
+      anchor.
+    </p>
+    <p>
+      Apply <class style="font-style: normal">(<a href="#eq:F-chess">15.4</a>)</class> to the coarse tiling,
+      treating the product of the exterior factors in one coarse cell as one
+      observable. Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:F1a">14.11</a> bounds each main factor by
+      \(B_{\ast} a_{k_{\text{w}}}^{- d_{\text{pow}}}\). For a coarse cell with
+      \(n_C\) exterior factors, reflect their product into every coarse cell;
+      in each copy the exterior anchors are more than \(a_{m_{\text{v}}}\)
+      apart and occupy distinct fine cells, so <class style="font-style: normal">(<a href="#eq:F-chess">15.4</a>)</class>
+      for the fine tiling and Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:F1a">14.11</a> bound the coarse
+      seminorm of that product by \(X^{n_C}\). Therefore
+    </p>
+    <center>
+      \(\displaystyle \|[(A_{w^{\dagger}} A_w)^j v]\|_{\text{OS}}^2 \leqslant
+      X^{2 |v|}  (B_{\ast}
+a_{k_{\text{w}}}^{- d_{\text{pow}}})^{4 jn} .\)
+    </center>
+    <p style="margin-bottom: 1em">
+      For each fixed \(j\), lattice approximations of the anchors preserving
+      these strict margins, Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E3.2">14.37</a> and <class style="font-style: normal">(<a
+      href="#eq:F-conf">15.1</a>)</class> pass this bound to the limit; no cutoff
+      threshold uniform in \(j\) is needed. Take \(B_v = \max (1, X^{2|
+      v|})\), \(C_0 = B_{\ast} c_2^{- d_{\text{pow}}}\) and \(Q = 4
+      d_{\text{pow}}\), and use <class style="font-style: normal">(<a href="#eq:F-repeat-scales">15.15</a>)</class>.
+      For empty \(v\) omit its factors and take \(B_v = 1\).<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    
+    <div class="ym-chapter-nav"><span class="ym-chapter-prev"><a href="14-trajectories-marked-fields-and-ultraviolet.html">&larr; 14 Trajectories, marked fields and ultraviolet convergence</a></span><span class="ym-chapter-up"><a href="../main.html">Contents</a></span><span class="ym-chapter-next"><a href="16-free-fields-ward-identities-and-rotations.html">16 Free fields, Ward identities and rotations &rarr;</a></span></div>
+</body>
+</html>

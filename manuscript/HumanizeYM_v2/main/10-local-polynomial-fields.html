@@ -1,0 +1,1720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>10 Local polynomial fields &ndash; HumanizeYM_v2: The construction of four-dimensional quantum
+    Yang&ndash;Mills theory &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1], hyperref: [bs +
+    'href{###1}{#2}', 2, '']}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="toggle" style="display: none">
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+    </div>
+<div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+
+    <div class="ym-chapter-nav"><span class="ym-chapter-prev"><a href="index-of-notation.html">&larr; Index of notation</a></span><span class="ym-chapter-up"><a href="../main.html">Contents</a></span><span class="ym-chapter-next"><a href="11-gauges-and-block-integration.html">11 Gauges and block integration &rarr;</a></span></div>
+<div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 2em; margin-bottom: 1em">
+        <b><font style="font-size: 119.0%">I<span style="margin-left: 1em"></span>The theorem and the architecture
+        of its proof</font></b> <span style="margin-left: 5mm"></span> <a href="../main.html#auto-1">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>1<span style="margin-left: 1em"></span>The result</b> <span style="margin-left: 5mm"></span> <a href="1-the-result.html#auto-2">4</a>
+      </p>
+      <p>
+        1.1<span style="margin-left: 1em"></span>Proof status <span style="margin-left: 5mm"></span> <a href="1-the-result.html#auto-3">6</a>
+      </p>
+      <p>
+        1.2<span style="margin-left: 1em"></span>Earlier work and the method <span style="margin-left: 5mm"></span>
+        <a href="1-the-result.html#auto-4">6</a>
+      </p>
+      <p>
+        1.3<span style="margin-left: 1em"></span>Reading guide <span style="margin-left: 5mm"></span> <a href="1-the-result.html#auto-6">8</a>
+      </p>
+      <p>
+        1.4<span style="margin-left: 1em"></span>Notation and conventions <span style="margin-left: 5mm"></span>
+        <a href="1-the-result.html#auto-8">8</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2<span style="margin-left: 1em"></span>Definitions</b> <span style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-9">9</a>
+      </p>
+      <p>
+        2.1<span style="margin-left: 1em"></span>The gauge group and the Wilson measure <span
+        style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-10">9</a>
+      </p>
+      <p>
+        2.2<span style="margin-left: 1em"></span>Wilson families and their correlations <span
+        style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-11">10</a>
+      </p>
+      <p>
+        2.3<span style="margin-left: 1em"></span>Local fields <span style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-13">12</a>
+      </p>
+      <p>
+        2.4<span style="margin-left: 1em"></span>Euclidean properties <span style="margin-left: 5mm"></span> <a
+        href="2-definitions.html#auto-14">14</a>
+      </p>
+      <p>
+        2.5<span style="margin-left: 1em"></span>Field spaces and phases <span style="margin-left: 5mm"></span> <a
+        href="2-definitions.html#auto-15">15</a>
+      </p>
+      <p>
+        2.6<span style="margin-left: 1em"></span>Wightman theories <span style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-16">15</a>
+      </p>
+      <p>
+        2.7<span style="margin-left: 1em"></span>The trace and product statements <span style="margin-left: 5mm"></span>
+        <a href="2-definitions.html#auto-17">16</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>3<span style="margin-left: 1em"></span>The main theorem</b> <span style="margin-left: 5mm"></span> <a
+        href="3-the-main-theorem.html#auto-18">17</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>4<span style="margin-left: 1em"></span>Strategy of the proof</b> <span style="margin-left: 5mm"></span>
+        <a href="4-strategy-of-the-proof.html#auto-19">19</a>
+      </p>
+      <p>
+        4.1<span style="margin-left: 1em"></span>Why the ultraviolet induction closes <span
+        style="margin-left: 5mm"></span> <a href="4-strategy-of-the-proof.html#auto-21">19</a>
+      </p>
+      <p>
+        4.2<span style="margin-left: 1em"></span>Tuning, uniqueness and convergence <span style="margin-left: 5mm"></span>
+        <a href="4-strategy-of-the-proof.html#auto-25">23</a>
+      </p>
+      <p>
+        4.3<span style="margin-left: 1em"></span>Rotations <span style="margin-left: 5mm"></span> <a href="4-strategy-of-the-proof.html#auto-27">24</a>
+      </p>
+      <p>
+        4.4<span style="margin-left: 1em"></span>Phases and reconstruction <span style="margin-left: 5mm"></span>
+        <a href="4-strategy-of-the-proof.html#auto-28">25</a>
+      </p>
+      <p>
+        4.5<span style="margin-left: 1em"></span>The trace <span style="margin-left: 5mm"></span> <a href="4-strategy-of-the-proof.html#auto-29">25</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>5<span style="margin-left: 1em"></span>The renormalization group</b> <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-30">26</a>
+      </p>
+      <p>
+        5.1<span style="margin-left: 1em"></span>Scales and the block map <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-31">26</a>
+      </p>
+      <p>
+        5.2<span style="margin-left: 1em"></span>The density and its norms <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-32">28</a>
+      </p>
+      <p>
+        5.3<span style="margin-left: 1em"></span>The inductive step <span style="margin-left: 5mm"></span> <a
+        href="5-the-renormalization-group.html#auto-35">31</a>
+      </p>
+      <p>
+        5.4<span style="margin-left: 1em"></span>Multiscale trajectories <span style="margin-left: 5mm"></span> <a
+        href="5-the-renormalization-group.html#auto-36">32</a>
+      </p>
+      <p>
+        5.5<span style="margin-left: 1em"></span>Local fields under blocking <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-38">34</a>
+      </p>
+      <p>
+        5.6<span style="margin-left: 1em"></span>Uniform bounds and the fixed-volume limit <span
+        style="margin-left: 5mm"></span> <a href="5-the-renormalization-group.html#auto-39">35</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>6<span style="margin-left: 1em"></span>The continuum limit, stress, phases, trace and
+        products</b> <span style="margin-left: 5mm"></span> <a href="6-the-continuum-limit-stress-phases-trace-and.html#auto-40">36</a>
+      </p>
+      <p>
+        6.1<span style="margin-left: 1em"></span>The volume limit and the field calculus <span
+        style="margin-left: 5mm"></span> <a href="6-the-continuum-limit-stress-phases-trace-and.html#auto-41">36</a>
+      </p>
+      <p>
+        6.2<span style="margin-left: 1em"></span>Stress and rotations <span style="margin-left: 5mm"></span> <a
+        href="6-the-continuum-limit-stress-phases-trace-and.html#auto-42">38</a>
+      </p>
+      <p>
+        6.3<span style="margin-left: 1em"></span>Phases and reconstruction <span style="margin-left: 5mm"></span>
+        <a href="6-the-continuum-limit-stress-phases-trace-and.html#auto-43">41</a>
+      </p>
+      <p>
+        6.4<span style="margin-left: 1em"></span>Trace and products <span style="margin-left: 5mm"></span> <a
+        href="6-the-continuum-limit-stress-phases-trace-and.html#auto-44">43</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>7<span style="margin-left: 1em"></span>Deduction of the main theorem</b> <span style="margin-left: 5mm"></span>
+        <a href="7-deduction-of-the-main-theorem.html#auto-45">46</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>8<span style="margin-left: 1em"></span>A weaker existence statement</b> <span style="margin-left: 5mm"></span>
+        <a href="8-a-weaker-existence-statement.html#auto-46">47</a>
+      </p>
+      <p>
+        8.1<span style="margin-left: 1em"></span>Hierarchy data and the conditions Q0&ndash;Q6
+        <span style="margin-left: 5mm"></span> <a href="8-a-weaker-existence-statement.html#auto-47">48</a>
+      </p>
+      <p>
+        8.2<span style="margin-left: 1em"></span>A generalized free-field example <span style="margin-left: 5mm"></span>
+        <a href="8-a-weaker-existence-statement.html#auto-48">49</a>
+      </p>
+      <p>
+        8.3<span style="margin-left: 1em"></span>Conventions for hierarchy data <span style="margin-left: 5mm"></span>
+        <a href="8-a-weaker-existence-statement.html#auto-49">51</a>
+      </p>
+      <p>
+        8.4<span style="margin-left: 1em"></span>An averaged countertest <span style="margin-left: 5mm"></span> <a
+        href="8-a-weaker-existence-statement.html#auto-50">52</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>9<span style="margin-left: 1em"></span>Constants and order of choice</b> <span style="margin-left: 5mm"></span>
+        <a href="9-constants-and-order-of-choice.html#auto-51">52</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Index of notation</b> <span style="margin-left: 5mm"></span> <a href="index-of-notation.html#auto-53">54</a>
+      </p>
+      <p style="margin-top: 2em; margin-bottom: 1em">
+        <b><font style="font-size: 119.0%">II<span style="margin-left: 1em"></span>Proofs</font></b> <span style="margin-left: 5mm"></span>
+        <a href="index-of-notation.html#auto-54">57</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>10<span style="margin-left: 1em"></span>Local polynomial fields</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-55">57</a>
+      </p>
+      <p>
+        10.1<span style="margin-left: 1em"></span>Labels, test holonomies and the Taylor map
+        <span style="margin-left: 5mm"></span> <a href="#auto-56">58</a>
+      </p>
+      <p>
+        10.2<span style="margin-left: 1em"></span>Taylor-normalized sections <span style="margin-left: 5mm"></span>
+        <a href="#auto-58">59</a>
+      </p>
+      <p>
+        10.3<span style="margin-left: 1em"></span>Small-field bounds <span style="margin-left: 5mm"></span> <a
+        href="#auto-59">61</a>
+      </p>
+      <p>
+        10.4<span style="margin-left: 1em"></span>Auxiliary equation sections <span style="margin-left: 5mm"></span>
+        <a href="#auto-60">62</a>
+      </p>
+      <p>
+        10.5<span style="margin-left: 1em"></span>Example: the curvature square <span style="margin-left: 5mm"></span>
+        <a href="#auto-61">66</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>11<span style="margin-left: 1em"></span>Gauges and block integration</b> <span style="margin-left: 5mm"></span>
+        <a href="11-gauges-and-block-integration.html#auto-62">67</a>
+      </p>
+      <p>
+        11.1<span style="margin-left: 1em"></span>The block kernel <span style="margin-left: 5mm"></span> <a href="11-gauges-and-block-integration.html#auto-63">68</a>
+      </p>
+      <p>
+        11.2<span style="margin-left: 1em"></span>Free quadratic forms <span style="margin-left: 5mm"></span> <a
+        href="11-gauges-and-block-integration.html#auto-66">72</a>
+      </p>
+      <p>
+        11.3<span style="margin-left: 1em"></span>The stationary background and Gaussian
+        coordinates <span style="margin-left: 5mm"></span> <a href="11-gauges-and-block-integration.html#auto-67">79</a>
+      </p>
+      <p>
+        11.4<span style="margin-left: 1em"></span>Inverse, vertex and Ward estimates <span
+        style="margin-left: 5mm"></span> <a href="11-gauges-and-block-integration.html#auto-69">85</a>
+      </p>
+      <p>
+        11.5<span style="margin-left: 1em"></span>The local large-field energy <span style="margin-left: 5mm"></span>
+        <a href="11-gauges-and-block-integration.html#auto-70">93</a>
+      </p>
+      <p>
+        11.6<span style="margin-left: 1em"></span>Sector Gaussian integration <span style="margin-left: 5mm"></span>
+        <a href="11-gauges-and-block-integration.html#auto-72">100</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>12<span style="margin-left: 1em"></span>Path actions and the one-loop coupling</b>
+        <span style="margin-left: 5mm"></span> <a href="12-path-actions-and-the-one-loop-coupling.html#auto-76">112</a>
+      </p>
+      <p>
+        12.1<span style="margin-left: 1em"></span>Curvature coordinates and the path action
+        <span style="margin-left: 5mm"></span> <a href="12-path-actions-and-the-one-loop-coupling.html#auto-77">112</a>
+      </p>
+      <p>
+        12.2<span style="margin-left: 1em"></span>Fourth-order matching <span style="margin-left: 5mm"></span> <a
+        href="12-path-actions-and-the-one-loop-coupling.html#auto-78">114</a>
+      </p>
+      <p>
+        12.3<span style="margin-left: 1em"></span>The determinant comparison <span style="margin-left: 5mm"></span>
+        <a href="12-path-actions-and-the-one-loop-coupling.html#auto-79">119</a>
+      </p>
+      <p>
+        12.4<span style="margin-left: 1em"></span>The one-loop coefficient <span style="margin-left: 5mm"></span>
+        <a href="12-path-actions-and-the-one-loop-coupling.html#auto-80">122</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>13<span style="margin-left: 1em"></span>Activities and the inductive step</b> <span
+        style="margin-left: 5mm"></span> <a href="13-activities-and-the-inductive-step.html#auto-81">129</a>
+      </p>
+      <p>
+        13.1<span style="margin-left: 1em"></span>The local expansion <span style="margin-left: 5mm"></span> <a
+        href="13-activities-and-the-inductive-step.html#auto-82">132</a>
+      </p>
+      <p>
+        13.2<span style="margin-left: 1em"></span>Local quadratic subtraction <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-84">150</a>
+      </p>
+      <p>
+        13.3<span style="margin-left: 1em"></span>Forced fusion, activity bounds and the reset
+        <span style="margin-left: 5mm"></span> <a href="13-activities-and-the-inductive-step.html#auto-85">152</a>
+      </p>
+      <p>
+        13.4<span style="margin-left: 1em"></span>Continuity at fixed volume <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-86">158</a>
+      </p>
+      <p>
+        13.5<span style="margin-left: 1em"></span>The Wilson start <span style="margin-left: 5mm"></span> <a href="13-activities-and-the-inductive-step.html#auto-87">159</a>
+      </p>
+      <p>
+        13.6<span style="margin-left: 1em"></span>The specified recursion <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-88">161</a>
+      </p>
+      <p>
+        13.7<span style="margin-left: 1em"></span>Weighted analytic estimates <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-89">163</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>14<span style="margin-left: 1em"></span>Trajectories, marked fields and ultraviolet
+        convergence</b> <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-90">177</a>
+      </p>
+      <p>
+        14.1<span style="margin-left: 1em"></span>Trajectories and tuning <span style="margin-left: 5mm"></span>
+        <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-91">178</a>
+      </p>
+      <p>
+        14.2<span style="margin-left: 1em"></span>Marked fields and volume-uniform estimates
+        <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-92">185</a>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.1<span style="margin-left: 1em"></span>One marked insertion <span
+        style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-93">185</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.2<span style="margin-left: 1em"></span>Chessboard seminorms and
+        replicated sources <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-94">192</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.3<span style="margin-left: 1em"></span>Negligible errors and local
+        matching <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-95">200</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.4<span style="margin-left: 1em"></span>Equation identities and
+        coefficient corrections <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-96">204</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.5<span style="margin-left: 1em"></span>Comparison with free fields
+        <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-97">207</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.6<span style="margin-left: 1em"></span>Bounds for lattice differences
+        <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-98">217</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.7<span style="margin-left: 1em"></span>Bounded approximations <span
+        style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-99">220</a></font>
+      </p>
+      <p>
+        14.3<span style="margin-left: 1em"></span>Full ultraviolet convergence <span style="margin-left: 5mm"></span>
+        <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-100">224</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>15<span style="margin-left: 1em"></span>Infinite volume and field calculus</b> <span
+        style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-102">231</a>
+      </p>
+      <p>
+        15.1<span style="margin-left: 1em"></span>Volume limits <span style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-103">231</a>
+      </p>
+      <p>
+        15.2<span style="margin-left: 1em"></span>Separated cells and negligible errors <span
+        style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-104">233</a>
+      </p>
+      <p>
+        15.3<span style="margin-left: 1em"></span>Quotient fields <span style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-105">234</a>
+      </p>
+      <p>
+        15.4<span style="margin-left: 1em"></span>Euclidean properties <span style="margin-left: 5mm"></span> <a
+        href="15-infinite-volume-and-field-calculus.html#auto-106">237</a>
+      </p>
+      <p>
+        15.5<span style="margin-left: 1em"></span>Repeated reflected words <span style="margin-left: 5mm"></span>
+        <a href="15-infinite-volume-and-field-calculus.html#auto-107">238</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>16<span style="margin-left: 1em"></span>Free fields, Ward identities and
+        rotations</b> <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-108">239</a>
+      </p>
+      <p>
+        16.1<span style="margin-left: 1em"></span>Free fields <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-109">240</a>
+      </p>
+      <p>
+        16.2<span style="margin-left: 1em"></span>Lattice inputs <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-111">247</a>
+      </p>
+      <p>
+        16.3<span style="margin-left: 1em"></span>Free comparison and the conserved line <span
+        style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-112">254</a>
+      </p>
+      <p>
+        16.4<span style="margin-left: 1em"></span>Coordinate reflection spaces and spectral
+        estimates <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-113">257</a>
+      </p>
+      <p>
+        16.5<span style="margin-left: 1em"></span>Ward identities and rotations <span style="margin-left: 5mm"></span>
+        <a href="16-free-fields-ward-identities-and-rotations.html#auto-114">263</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>17<span style="margin-left: 1em"></span>Phases and reconstruction</b> <span style="margin-left: 5mm"></span>
+        <a href="17-phases-and-reconstruction.html#auto-115">270</a>
+      </p>
+      <p>
+        17.1<span style="margin-left: 1em"></span>Compression and phases <span style="margin-left: 5mm"></span> <a
+        href="17-phases-and-reconstruction.html#auto-116">270</a>
+      </p>
+      <p>
+        17.2<span style="margin-left: 1em"></span>Reconstruction <span style="margin-left: 5mm"></span> <a href="17-phases-and-reconstruction.html#auto-119">276</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>18<span style="margin-left: 1em"></span>The trace law and non-free comparisons</b>
+        <span style="margin-left: 5mm"></span> <a href="18-the-trace-law-and-non-free-comparisons.html#auto-120">284</a>
+      </p>
+      <p>
+        18.1<span style="margin-left: 1em"></span>Trace and spectrum <span style="margin-left: 5mm"></span> <a
+        href="18-the-trace-law-and-non-free-comparisons.html#auto-121">284</a>
+      </p>
+      <p>
+        18.2<span style="margin-left: 1em"></span>Precise non-free comparisons <span style="margin-left: 5mm"></span>
+        <a href="18-the-trace-law-and-non-free-comparisons.html#auto-125">301</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>19<span style="margin-left: 1em"></span>Products and contact subtractions</b> <span
+        style="margin-left: 5mm"></span> <a href="19-products-and-contact-subtractions.html#auto-126">305</a>
+      </p>
+      <p>
+        19.1<span style="margin-left: 1em"></span>Products and nested clusters <span style="margin-left: 5mm"></span>
+        <a href="19-products-and-contact-subtractions.html#auto-127">310</a>
+      </p>
+      <p>
+        19.2<span style="margin-left: 1em"></span>Contact subtractions <span style="margin-left: 5mm"></span> <a
+        href="19-products-and-contact-subtractions.html#auto-129">323</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>References</b> <span style="margin-left: 5mm"></span> <a href="references.html#auto-131">332</a>
+      </p>
+    </div>
+<h2 id="auto-55"><a id="sec:partII-A"></a>10<span style="margin-left: 1em"></span>Local polynomial fields<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      The polynomial labels of Definition <a href="2-definitions.html#def:D07">2.7</a> prescribe continuum
+      Taylor coefficients, whereas the Wilson measure integrates functions of
+      group-valued links. Local sections connect the two: polynomials in the
+      real and imaginary parts of finitely many link entries whose expansion
+      on smooth test configurations reproduces a prescribed label. They
+      initialize the renormalized insertions of Definition <a href="2-definitions.html#def:D08">2.8</a>,
+      hence the Wilson family of Theorem <a href="3-the-main-theorem.html#thm:B">B</a>.
+    </p>
+    <p>
+      To build them we recover the connection jet from finitely many
+      transported plaquette curvatures, whose linearizations are unit-square
+      circulations (Section <a href="#sec:A-sections">10.2</a>); each curvature factor costs
+      one power of the small-field threshold (Section <a href="#sec:A-bounds">10.3</a>). For
+      the equation projections of Section <a href="14-trajectories-marked-fields-and-ultraviolet.html#sec:partII-E">14</a>, Section <a href="#sec:A-equations">10.4</a>
+      constructs auxiliary sections whose regraded equation labels
+      \(\textsf{R}_d (\mathcal{I}_d)\) have exactly vanishing moments against
+      distant observables. Section <a href="#sec:A-example">10.5</a> follows the curvature
+      square through these constructions.
+    </p>
+    <p>
+      The lemmas of this section use only Part I; the idea paragraph and
+      Section <a href="#sec:A-example">10.5</a> also cite later results for illustration. The
+      gauge metric and the Wilson measure of Definitions <a href="2-definitions.html#def:D01">2.1</a>&ndash;<a
+      href="2-definitions.html#def:D02">2.3</a> fix the measurements and the one-link integration by
+      parts, Definition <a href="2-definitions.html#def:D07">2.7</a> supplies the labels, and the
+      derivative seminorm of Definition <a href="5-the-renormalization-group.html#def:D05a">5.3</a> measures the bounds.
+      The sections are chosen once for each degree, and all constants of this
+      section are fixed before the lattice volume and the stage block ratios,
+      in the order of Section <a href="9-constants-and-order-of-choice.html#sec:constants">9</a>.
+    </p>
+    <h3 id="auto-56"><a id="sec:A-labels"></a>10.1<span style="margin-left: 1em"></span>Labels, test holonomies and the
+    Taylor map<span style="margin-left: 1em"></span></h3>
+    <p>
+      Write \(\mathcal{J}_j\) for the real space of the components
+      \(\mathcal{A}_j\) in Definition <a href="2-definitions.html#def:D07">2.7</a>, the homogeneous radial
+      potentials of degree \(j + 1\). Every label in \(V_d\) is a polynomial
+      on the finite-dimensional space
+    </p>
+    <center>
+      \(\displaystyle \mathcal{J}_{\leqslant d} = \bigoplus_{j + 2 \leqslant
+      d} \mathcal{J}_j
+\hspace{0.17em} .\)
+    </center>
+    <p>
+      Radial gauge and Euler's identity give \((j + 2) \mathcal{A}_{j, a} (x)
+      = \sum_b x^b F^{(j)}_{ba} (x)\), with \(F^{(j)}\) the degree-\(j\) part
+      of the curvature; so a coordinate of \(\mathcal{A}_j\) has weight \(j +
+      2\), two for the curvature and one for each derivative, and only
+      finitely many monomials have weight at most \(d\). Adjoint action and
+      conjugation preserve both gradings. Real and imaginary parts span each
+      invariant component over \(\mathbb{C}\), giving bihomogeneous bases as
+      in Definition <a href="2-definitions.html#def:D07">2.7</a>. Conjugation in this real basis is
+      coefficientwise and agrees with conjugation of polynomial values on real
+      jets. Write \(k_i\) for the number of jet-coordinate factors in \(b_{d,
+      i}\). We identify a coefficient vector with its polynomial:
+    </p>
+    <center>
+      \(\displaystyle \mathbf{c} (\textsf{j}) = \sum_i c_i b_{d, i}
+      (\textsf{j}), \qquad b_{d, 0}
+=\boldsymbol{1} \hspace{0.17em} .\)
+    </center>
+    <p>
+      We evaluate lattice observables on the test holonomies <class style="font-style: normal">(<a
+      href="2-definitions.html#eq:I12-test-holonomy">2.3</a>)</class>, on the lattice \(\mathbb{Z}^4\) covering the
+      torus. With \(\mathcal{A}^{\leqslant d} = \sum_{j + 2 \leqslant d}
+      \mathcal{A}_j\), they are
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:A-holonomy"></a>\(\displaystyle U (h_{\text{lat}},
+        \textsf{j}) (x, a) = u (1), \qquad u' (s) = u (s) 
+\hspace{0.17em}
+        h_{\text{lat}} \mathcal{A}_a^{\leqslant d}  (h_{\text{lat}} (x
++
+        se_a)), \qquad u (0) = 1 \hspace{0.17em} .\)</td>
+        <td align="right">(10.1)</td>
+      </tr>
+    </table>
+    <p>
+      This linear equation with continuous \(\mathfrak{g}\)-valued
+      coefficients has a unique global solution [<a href="references.html#bib-Teschl2012">31</a>, Theorem
+      3.9]. It lies in the closed group \(G\), being a uniform limit of
+      products of exponentials of elements of \(\mathfrak{g}\) by Gronwall's
+      inequality [<a href="references.html#bib-Teschl2012">31</a>, Lemma 2.7], and its Volterra series shows
+      that it depends smoothly on \((h_{\text{lat}}, \textsf{j})\).
+      Homogeneity and uniqueness give
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:A-dilation"></a>\(\displaystyle U (h_{\text{lat}},
+        \textsf{j}) = U (1, \text{sc}_{h_{\text{lat}}}
+\textsf{j}), \qquad
+        \text{sc}_{h_{\text{lat}}} \textsf{j} = (h_{\text{lat}}^{j
++ 2}
+        \mathcal{A}_j)_j, \qquad U (0, \textsf{j}) = 1 \hspace{0.17em}
+        .\)</td>
+        <td align="right">(10.2)</td>
+      </tr>
+    </table>
+    <p>
+      The Taylor map of Section <a href="2-definitions.html#sec:local-fields">2.3</a> reads off the continuum
+      polynomial seen by a lattice observable. Recall that, for a smooth
+      function \(O\) of finitely many cover links, \(\text{Tay}_d
+      \hspace{0.17em} O\) is the Taylor polynomial at zero of \(\textsf{j}
+      \mapsto O (U (1, \textsf{j}))\) on \(\mathcal{J}_{\leqslant d}\), with
+      the monomials of weight above \(d\) discarded. By <class style="font-style: normal">(<a
+      href="#eq:A-dilation">10.2</a>)</class>, a monomial of weight \(w\) contributes
+      \(h_{\text{lat}}^w\) to \(O (U (h_{\text{lat}}, \textsf{j}))\). Hence
+      the derivatives of \(O (U (h_{\text{lat}}, \textsf{j}))\) at
+      \(h_{\text{lat}} = 0\) through order \(d\) are those of \(\mathbf{c}
+      (\text{sc}_{h_{\text{lat}}} \textsf{j})\) for every jet, where
+      \(\mathbf{c} \in V_d\), exactly when \(\text{Tay}_d \hspace{0.17em} O
+      =\mathbf{c}\). A local section, constructed below, is a right inverse of
+      the Taylor map, linear in the label: this is the sense of the word
+      <em>section</em>.
+    </p>
+    <p>
+      For a cover plaquette \(\square\) based at \(z\) and a path \(\gamma\)
+      from \(0\) to \(z\), write \(U_{\gamma}\) for the ordered product of
+      successive oriented links, read from the initial point to the endpoint.
+      Define the transported curvature (Figure <a href="#fig:A-transported">10</a>) by
+    </p>
+    <center>
+      \(\displaystyle \sigma_{\gamma, \square} (U) = \text{Ad} (U_{\gamma})
+      F_{\square} (U), \qquad
+F_{\square} (U) = \text{proj}_{\mathfrak{g}}
+      \frac{U_{\square} -
+U_{\square}^{- 1}}{2} \hspace{0.17em} .\)
+    </center>
+    <p>
+      The projection is orthogonal for the normalized Frobenius metric of
+      Definition <a href="2-definitions.html#def:D01">2.1</a>. These measurements transform by the adjoint
+      action at \(0\). They are real polynomial functions of the real and
+      imaginary parts of link entries, since \(U_e^{- 1} = U_e^{\ast}\).
+    </p>
+    <div style="margin-top: 1em; margin-bottom: 1em">
+      <table style="width: 100%">
+        <tbody><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em"><center>
+            <img class="image" height="80.4432746238224" src="../main-figures/fig-10.svg" width="149.95974279264001"></img><a id="fig:A-transported"></a> 
+          </center></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; height: 0.5em"></td>
+        </tr><tr>
+          <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><div class="caption">
+            <font style="font-size: 84.1%"><p>
+              <b>Figure 10. </b><a id="auto-57"></a>A transported curvature
+              \(\sigma_{\gamma, \square} = \text{Ad} (U_{\gamma}) F_{\square}
+              (U)\), drawn in one coordinate plane: the curvature of the
+              plaquette \(\square\) based at \(z\) is carried to the origin
+              along the lattice path \(\gamma\).
+            </p></font>
+          </div></td>
+        </tr></tbody>
+      </table>
+    </div>
+    <h3 id="auto-58"><a id="sec:A-sections"></a>10.2<span style="margin-left: 1em"></span>Taylor-normalized sections<span
+    style="margin-left: 1em"></span></h3>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Definition <class style="font-style: normal">10.1</class>. </strong><class
+      style="font-style: normal"><strong>(Local sections) </strong></class><a id="def:D19"></a> For a
+      finite site stencil \(\Sigma_d \subset \mathbb{Z}^4\), a local section
+      has the form
+    </p>
+    <center>
+      \(\displaystyle P_d^{\text{loc}} [\mathbf{c}] (U) = \sum_{\nu, \mu}
+      p_{\nu \mu}^{(d)}
+(\mathbf{c})  \prod_{e, \alpha, \delta} U_e  (\alpha,
+      \delta)^{\nu_{e \alpha
+\delta}} \overline{U_e  (\alpha, \delta)}^{\mu_{e
+      \alpha \delta}}
+\hspace{0.17em} .\)
+    </center>
+    <p style="margin-bottom: 1em">
+      The product uses positive links with both endpoints in \(\Sigma_d\) and
+      matrix indices \(1 \leqslant \alpha, \delta \leqslant n_G\). The sum is
+      finite over nonnegative multi-indices; each coefficient is complex
+      linear in \(\mathbf{c}\). The construction below chooses such a map to
+      represent each continuum label.
+    </p>
+    <p>
+      For a torus of side \(n_{\text{tor}}\) (the side \(s\) of Definition <a
+      href="2-definitions.html#def:D02">2.3</a>), write \([x]\) for reduction of \(x \in \mathbb{Z}^4\)
+      modulo \(n_{\text{tor}}\). Placement at a torus site \(y\) means
+      evaluation on the periodic extension \(U^{[y]}  (x, a) = U (y + [x],
+      a)\); denote it by \(P_d^{\text{loc}} [\mathbf{c}] (y ; U)\). On the
+      cover, \(P_d^{\text{loc}} [\mathbf{c}] (0 ; U) = P_d^{\text{loc}}
+      [\mathbf{c}] (U)\). For \(h \in H_4\), define the configuration and jet
+      actions by
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  (h^{\ast} U) (x, a) & = \left\{
+      \begin{array}{ll}
+    U (hx, b), & he_a = e_b,\\
+    U (hx - e_b, b)^{-
+      1}, & he_a = - e_b,
+  \end{array} \right.\\
+  (h \textsf{j})_{j, a} (z)
+      & = \sum_b h_{ab} \mathcal{A}_{j, b}  (h^{- 1} z),
+  \qquad
+      (h\mathbf{c}) (\textsf{j}) =\mathbf{c} (h^{- 1} \textsf{j})
+ 
+      \hspace{0.17em} .
+\end{array}\)
+    </center>
+    <p>
+      This action preserves homogeneity and radial gauge. Reality and
+      covariance mean
+    </p>
+    <center>
+      \(\displaystyle P_d^{\text{loc}} [\bar{\mathbf{c}}] (U) =
+      \overline{P_d^{\text{loc}}
+[\mathbf{c}] (U)}, \qquad P_d^{\text{loc}}
+      [\mathbf{c}]  (h^{\ast} U) =
+P_d^{\text{loc}} [h\mathbf{c}] (U)  \quad
+      (h \in H_4),\)
+    </center>
+    <p>
+      with conjugation as fixed above.
+    </p>
+    <p>
+      The following result supplies the sections specified in Section <a href="2-definitions.html#sec:local-fields">2.3</a>;
+      the unit normalization is exact at every configuration.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">10.2</class>. </strong><i><class
+        style="font-style: normal"><strong>(Taylor-normalized sections) </strong></class><a id="lem:A1"></a>
+        For every \(d\), a box stencil \(\Sigma_d = [- \varrho_d, \varrho_d]^4
+        \cap \mathbb{Z}^4\) and sections can be chosen gauge invariant, real
+        and \(H_4\) covariant, with \(P_d^{\text{loc}} [\boldsymbol{1}] = 1\),
+        so that, for every \(\mathbf{c} \in V_d\), radial jet \(\textsf{j}\)
+        and \(0 \leqslant q \leqslant d\),</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><table width="100%">
+          <tr>
+            <td align="center" width="100%"><a id="eq:A-Taylor"></a>\(\displaystyle \left.
+            \frac{d^q}{dh_{\text{lat}}^q} P_d^{\text{loc}} [\mathbf{c}]
+            (U
+(h_{\text{lat}}, \textsf{j})) \right|_{h_{\text{lat}} = 0} =
+            \left.
+\frac{d^q}{dh_{\text{lat}}^q}
+            \mathbf{c}(\text{sc}_{h_{\text{lat}}}
+\textsf{j})
+            \right|_{h_{\text{lat}} = 0} \hspace{0.17em} .\)</td>
+            <td align="right">(10.3)</td>
+          </tr>
+        </table></i>
+      </div>
+    </div>
+    <p>
+      Equivalently, \(\text{Tay}_d P_d^{\text{loc}} [\mathbf{c}] =\mathbf{c}\)
+      for every \(\mathbf{c} \in V_d\). The identity imposes no equality at
+      positive spacing, and no compatibility between \(P_d^{\text{loc}}\) and
+      \(P_{d + 1}^{\text{loc}}\) is required. We fix the sections constructed
+      in the following proof.
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>There are three steps: finitely many
+      curvature measurements determine the truncated jet; an equivariant
+      polynomial inverse of these measurements, composed with the label, gives
+      a section with the right Taylor map; averaging over \(H_4\) gives
+      covariance and a common stencil. If \(d < 2\), the labels are constant
+      and their constant sections suffice. Fix \(d \geqslant 2\).
+    </p>
+    <p>
+      <em>Step 1: Curvatures determine the truncated jet.</em> The
+      measurements \(\sigma_{\gamma, \square}  (U (1, \textsf{j}))\) are
+      smooth in \(\textsf{j}\), and all links equal \(1\) at \(\textsf{j} =
+      0\). The first variation of a link solution is the edge integral of the
+      potential; that of a plaquette measurement is the circulation of the
+      potential around the plaquette. Transport along \(\gamma\) contributes
+      nothing at first order, because \(F_{\square} (1) = 0\). By the
+      fundamental theorem of calculus on each edge, the circulation around the
+      unit square at \(x\) in the plane of the axes \(a < b\) is
+    </p>
+    <center>
+      \(\displaystyle N_{ab} (x) = \int_0^1 \hspace{-0.17em} \int_0^1
+      (\partial_a \mathcal{A}_b -
+\partial_b \mathcal{A}_a)  (x + \xi e_a +
+      \eta e_b)  \hspace{0.17em} d \xi
+\hspace{0.17em} d \eta \hspace{0.17em}
+      .\)
+    </center>
+    <p>
+      Suppose all these linearized measurements vanish at \(\mathcal{A}=
+      \sum_{j = 0}^{j_{\ast}} \mathcal{A}_j\). Then the polynomial \(N_{ab}\)
+      vanishes on \(\mathbb{Z}^4\), hence identically: a polynomial vanishing
+      on \(\mathbb{Z}^4\) is zero, by induction on the number of variables.
+      The averaging shifts only lower the degree, so the homogeneous part of
+      \(N_{ab}\) of degree \(j_{\ast}\) is \((\partial_a
+      \mathcal{A}_{j_{\ast}, b} - \partial_b \mathcal{A}_{j_{\ast}, a})
+(x)\).
+      It vanishes, and antisymmetry covers the other ordered pairs.
+      Differentiating the radial condition and using Euler's identity gives
+    </p>
+    <center>
+      \(\displaystyle (j_{\ast} + 2) \mathcal{A}_{j_{\ast}, b} (z) = \sum_a
+      z^a  (\partial_a
+\mathcal{A}_{j_{\ast}, b} - \partial_b
+      \mathcal{A}_{j_{\ast}, a}) (z) = 0
+\hspace{0.17em} .\)
+    </center>
+    <p>
+      Remove this component and descend in \(j_{\ast}\): the common kernel is
+      zero. Adding a measurement whenever the kernel is nonzero decreases its
+      dimension, so finitely many measurements \(\sigma_1, \ldots,
+      \sigma_{M_{\text{meas}}}\) give a joint map
+    </p>
+    <center>
+      \(\displaystyle \textsf{S} : \mathcal{J}_{\leqslant d}
+      \longrightarrow
+\mathfrak{g}^{M_{\text{meas}}}, \qquad \textsf{S}
+      (\textsf{j}) = (\sigma_l (U
+(1, \textsf{j})))_{l =
+      1}^{M_{\text{meas}}}\)
+    </center>
+    <p>
+      with injective derivative \(D \textsf{S} (0)\).
+    </p>
+    <p>
+      <em>Step 2: A polynomial inverse to the required order.</em> By
+      uniqueness of the link equation, a constant gauge transformation \(v \in
+      G\) takes the test links of \(\textsf{j}\) to those of \(\text{Ad} (v)
+      \textsf{j}\), so \(\textsf{S}\) is adjoint equivariant. The range of \(D
+      \textsf{S} (0)\) is invariant; composing the inverse of \(D \textsf{S}
+      (0)\) on it with orthogonal projection onto it gives an equivariant
+      linear map \(C : \mathfrak{g}^{M_{\text{meas}}} \to
+      \mathcal{J}_{\leqslant d}\) with \(CD \textsf{S} (0) = I\). By the
+      inverse function theorem [<a href="references.html#bib-Rudin1976">28</a>, Theorem 9.24], \(C
+      \textsf{S}\) has a local inverse \(\varphi\) near zero, smooth by
+      differentiating \(D \varphi = (D (C \textsf{S}) \circ \varphi)^{- 1}\).
+      The adjoint actions are isometric, so \(\varphi\) can be taken on
+      invariant balls, where injectivity of \(C \textsf{S}\) makes it
+      equivariant. Put \(f = \varphi \circ C\). Near zero, \(f \textsf{S}
+      (\textsf{j}) = \textsf{j}\), \(f (0) = 0\) and \(f (\text{Ad} (v) z) =
+      \text{Ad} (v) f (z)\) for \(v \in G\). Consequently the Taylor
+      polynomial \(T_d f (z) = \sum_{k = 1}^d D^k f (0) [z, \ldots, z] / k!\)
+      is adjoint equivariant and has no constant term. Define
+    </p>
+    <center>
+      \(\displaystyle Q_i (z) = b_{d, i}  (T_d f (z)), \qquad
+      \Psi_{\mathbf{c}} (U) = \sum_i c_i Q_i
+(\sigma_1 (U), \ldots,
+      \sigma_{M_{\text{meas}}} (U)) \hspace{0.17em} .\)
+    </center>
+    <p>
+      The polynomials \(Q_i\) are invariant and real on real arguments, and
+      \(Q_0 = 1\). If \(b_{d, i}\) has factor count \(k_i\), every monomial of
+      \(Q_i\) has at least \(k_i\) factors. Taylor's formula gives \(T_d f
+      (\textsf{S} (\textsf{j})) = \textsf{j} + O (| \textsf{j} |^{d + 1})\)
+      near zero, hence
+    </p>
+    <center>
+      \(\displaystyle \Psi_{\mathbf{c}}  (U (1, \textsf{j})) =\mathbf{c}
+      (\textsf{j}) +
+O_{\mathbf{c}} (| \textsf{j} |^{d + 1}), \qquad
+      \text{Tay}_d \hspace{0.17em}
+\Psi_{\mathbf{c}} =\mathbf{c}
+      \hspace{0.17em} .\)
+    </center>
+    <p>
+      The polynomial \(Q_i\) itself need not have degree at most \(d\) in the
+      curvature measurements.
+    </p>
+    <p>
+      <em>Step 3: Covariance and a common stencil.</em> Average the section by
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:A-average"></a>\(\displaystyle P_d^{\text{loc}}
+        [\mathbf{c}] (U) = \frac{1}{|H_4 |}  \sum_{h \in H_4}
+\Psi_{h^{- 1}
+        \mathbf{c}}  (h^{\ast} U) \hspace{0.17em} .\)</td>
+        <td align="right">(10.4)</td>
+      </tr>
+    </table>
+    <p>
+      Changing the summation variable to \(h' h\) proves \(P_d^{\text{loc}}
+      [\mathbf{c}]  {(h'}^{\ast} U) = P_d^{\text{loc}} [h'
+\mathbf{c}] (U)\).
+      Simultaneous adjoint covariance of the measurements gives gauge
+      invariance. The real basis and the signed-permutation action give
+      reality; the constant column remains one. The action preserves factor
+      count, so averaging retains the lower bound on the number of curvature
+      factors.
+    </p>
+    <p style="margin-bottom: 1em">
+      For a positive image direction, the pulled-back link equation has the
+      coefficient of \(h^{- 1} \textsf{j}\), namely \(h_{\text{lat}}  \sum_b
+      h_{ba} \mathcal{A}_b^{\leqslant d}  (h_{\text{lat}} h
+(x + se_a))\).
+      Reversing the parameter and inverting the transport covers a negative
+      image direction. Uniqueness gives \(h^{\ast} U (h_{\text{lat}},
+      \textsf{j}) = U (h_{\text{lat}}, h^{- 1}
+\textsf{j})\). Each term of
+      <class style="font-style: normal">(<a href="#eq:A-average">10.4</a>)</class> therefore has Taylor map
+      \(\mathbf{c}\). A signed image of a transported curvature is again a
+      transported curvature, up to sign: reversal changes \(F_{\square}\) to
+      \(- F_{\square}\), and a change of base point gives conjugation by the
+      intervening boundary transport. Enclose the finitely many resulting
+      paths and plaquettes in a box \(\Sigma_d = [- \varrho_d, \varrho_d]^4
+      \cap \mathbb{Z}^4\). This stencil contains zero and is
+      signed-permutation invariant. Expanding the finite polynomial in matrix
+      entries gives Definition <a href="#def:D19">10.1</a>. This proves <class style="font-style: normal">(<a
+      href="#eq:A-Taylor">10.3</a>)</class>, which is <class style="font-style: normal">(<a href="2-definitions.html#eq:I12-section-Taylor">2.4</a>)</class>.<span
+      style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <h3 id="auto-59"><a id="sec:A-bounds"></a>10.3<span style="margin-left: 1em"></span>Small-field bounds<span style="margin-left: 1em"></span></h3>
+    <p>
+      We bound normalized initial insertions using the ordered left
+      derivatives of Definition <a href="5-the-renormalization-group.html#def:D05a">5.3</a>. At a placement \(y\), set
+      \(Y = y + [\Sigma_d]\); being healthy on \(Y\) means that every
+      plaquette meeting \(Y\) has chord at most \(t\). A direction is
+      permitted when
+    </p>
+    <center>
+      \(\displaystyle | \dot{\mathcal{A}}_e | \leqslant t (1 + \text{dist}
+      (e^-, y))^{\varpi}
+\hspace{0.17em} .\)
+    </center>
+    <p>
+      Here \([\Sigma_d]\) is the torus image of the stencil, and \(\text{dist}
+      (x, y) = \min_{z \in n_{\text{tor}} \mathbb{Z}^4} | \tilde{x}
+      -
+\tilde{y} + z|_{\infty}\) is the periodic maximum-coordinate distance,
+      for any lifts \(\tilde{x}, \tilde{y}\).
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">10.3</class>. </strong><i><class
+        style="font-style: normal"><strong>(Section bounds) </strong></class><a id="lem:A-bounds"></a> Each
+        basis column is a polynomial in transported curvatures with at least
+        \(k_i\) factors per monomial. For all \(d, k, \varpi \in \mathbb{N}\)
+        there are finite constants \(C_{d, k, \varpi}\) and \(C_d\) such that,
+        on every torus, for every placement \(y\), \(0 < t \leqslant 1\),
+        configuration healthy on \(Y\), and permitted direction list of length
+        \(q \leqslant k\),</i>
+      </p>
+      <i><table width="100%">
+        <tr>
+          <td align="center" width="100%"><a id="eq:A-section-bound"></a>\(\displaystyle |
+          D^L_{\dot{\mathcal{A}}_1} \cdots D^L_{\dot{\mathcal{A}}_q}
+          P_d^{\text{loc}}
+[b_{d, i}] (y ; U) | \leqslant C_{d, k, \varpi}
+          t^{k_i} \hspace{0.17em} .\)</td>
+          <td align="right">(10.5)</td>
+        </tr>
+      </table></i>
+      <p>
+        <i>For arbitrary configurations,</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><table width="100%">
+          <tr>
+            <td align="center" width="100%"><a id="eq:A-global-bound"></a>\(\displaystyle \sup_{i, y, U}
+            |P_d^{\text{loc}} [b_{d, i}] (y ; U) | \leqslant
+            C_d
+\hspace{0.17em} .\)</td>
+            <td align="right">(10.6)</td>
+          </tr>
+        </table></i>
+      </div>
+    </div>
+    <p>
+      Each curvature factor is at most of the size \(t\) of the plaquettes it
+      reads, so a column with \(k_i\) factors is of order \(t^{k_i}\) on
+      healthy configurations. The proof uses the curvature polynomials
+      constructed in Lemma <a href="#lem:A1">10.2</a>.
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>First note that \(|F_{\square} (U) |
+      \leqslant \text{ch} (U_{\square})\): orthogonal projection is
+      contractive and \(\|U_{\square} - U_{\square}^{\ast} \|_{\text{F}}
+      \leqslant 2 \|U_{\square} -
+1\|_{\text{F}}\). Adjoint transport is
+      isometric, so an undifferentiated curvature measurement is bounded by
+      \(t\). An order-\(q\) left derivative of a fixed path product is a
+      finite sum of products of unitary matrices and exactly \(q\) direction
+      matrices. On the fixed stencil their norms are at most a constant times
+      \(t\), since periodic distance is bounded by cover distance. Thus each
+      differentiated measurement is \(O (t^q)\), and hence \(O (t)\) when \(q
+      \geqslant 1\). This argument also applies when cover links coincide
+      after placement: one first differentiates the cover expression and then
+      assigns the same direction to coincident links.
+    </p>
+    <p style="margin-bottom: 1em">
+      Apply the product rule to the curvature polynomials of <class style="font-style: normal">(<a
+      href="#eq:A-average">10.4</a>)</class>. Every differentiated monomial still has at
+      least \(k_i\) factors, each bounded by a constant times \(t\). There are
+      finitely many terms; since \(t \leqslant 1\), their sum gives <class
+      style="font-style: normal">(<a href="#eq:A-section-bound">10.5</a>)</class>, including order zero. Each entry of
+      a unitary matrix has absolute value at most one, so the finite
+      matrix-entry polynomial gives <class style="font-style: normal">(<a href="#eq:A-global-bound">10.6</a>)</class>.
+      The formula also gives smoothness, measurability and locality. The
+      constants depend on the sections, \(G, d, k, \varpi\) as applicable, and
+      finite maxima make them nondecreasing in the integer parameters. They
+      are fixed before the stage block ratios in Section <a href="9-constants-and-order-of-choice.html#sec:constants">9</a>.<span
+      style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      By linearity, Lemma <a href="#lem:A-bounds">10.3</a> bounds permitted derivatives of
+      \(P_d^{\text{loc}} [t^{- \textsf{N}} \mathbf{c}]\) by \(C_{d, k, \varpi}
+      \sum_i |c_i |\) on the healthy set: the factor \(t^{- k_i}\) cancels
+      \(t^{k_i}\). Taking \(t = t_N\), \(k =\mathfrak{q}_{J_N}\) and \(\varpi
+      = \varpi_{J_N}\) bounds the initial marked density of <class style="font-style: normal">(<a
+      href="5-the-renormalization-group.html#eq:I12-marked-evolution">5.15</a>)</class> on the healthy set, in the sense of Definition
+      <a href="5-the-renormalization-group.html#def:D05a">5.3</a>. On unhealthy configurations the global bound gives
+      \(C_d  \sum_i |c_i | t^{- k_i}\); the proof of Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.1">14.7</a>
+      places this contribution in a merged forced remainder of <class style="font-style: normal">(<a
+      href="5-the-renormalization-group.html#eq:I12-marked-representation">5.18</a>)</class>.
+    </p>
+    <h3 id="auto-60"><a id="sec:A-equations"></a>10.4<span style="margin-left: 1em"></span>Auxiliary equation
+    sections<span style="margin-left: 1em"></span></h3>
+    <p>
+      Exact lattice equation identities require different sections, still
+      polynomial and local with the same small-field bounds. On
+      \(\mathcal{J}_j\) define the Maxwell subspace and the equation labels by
+    </p>
+    <center>
+      \(\displaystyle \left. \mathcal{J}_j^{\text{Max}} = \left\{
+      \mathcal{A}_j : \sum_a \partial_a
+(\partial_a \mathcal{A}_{j, b} -
+      \partial_b \mathcal{A}_{j, a}) = 0 \text{for
+every } b \right\}, \qquad
+      \mathcal{I}_d = \{ p \in V_d : p |_{\prod_j
+\mathcal{J}_j^{\text{Max}}}
+      = 0 \right\} \hspace{0.17em} .\)
+    </center>
+    <p>
+      Here restriction uses only \(j + 2 \leqslant d\). Substitution into
+      \(\prod_j \mathcal{J}_j^{\text{Max}}\) preserves bidegree, so
+      \(\mathcal{I}_d\) is the direct sum of its bihomogeneous parts. Order
+      bidegrees \((w, k)\) by the lexicographic order of \((k, w)\). A
+      triangular regrading (a unipotent change of labels) is a complex-linear
+      map on \(V_d\) whose difference from the identity sends each
+      bihomogeneous polynomial into strictly later bidegrees. There are
+      finitely many bidegrees, so this difference is nilpotent and the map is
+      invertible; the map and its inverse preserve the filtration by minimum
+      factor count.
+    </p>
+    <p>
+      <h5>Idea: free equations in an interacting theory.<span style="margin-left: 1em"></span></h5>
+      <div style="display: inline">
+        Haar integration by parts in one link, a lattice
+        Schwinger&ndash;Dyson identity, shows that for \(\beta \ne 0\) the
+        force \(\mathcal{E}_e\) of <class style="font-style: normal">(<a href="#eq:A-link-equation">10.9</a>)</class>,
+        the derivative of the Wilson energy in the link \(e\), has zero
+        moments when multiplied by a function independent of \(U_e\) and by
+        observables of distant links. Its linearization is the divergence of
+        the linearized curvature, and the Maxwell equations enter only through
+        this linearization. An equation label is a sum of products with one
+        factor vanishing on Maxwell jets. Replacing that factor by forces and
+        the others by curvature measurements gives an observable with exactly
+        vanishing exterior moments, whose Taylor map is the label plus later
+        terms, produced by the higher-weight linear terms of the lattice force
+        and by nonlinear corrections. The construction therefore exhibits
+        exact lattice equations for the labels in \(\textsf{R}_d
+        (\mathcal{I}_d)\): this is the lattice form of the vanishing of
+        equation-of-motion operators at separated points. For example, put
+        \(F_{ab} = \partial_a \mathcal{A}_{0, b} - \partial_b \mathcal{A}_{0,
+        a}\) and \((\partial \cdot F)_b = \sum_c \partial_c  (\partial_c
+        \mathcal{A}_{1, b} -
+\partial_b \mathcal{A}_{1, c})\), both constant.
+        The label \(q_{\text{eq}} = \sum_b \langle (\partial \cdot F)_b,
+        (\partial \cdot F)_b
+\rangle_{\mathfrak{g}}\) lies in
+        \(\mathcal{I}_6\) and has bidegree \((6, 2)\). The only later bidegree
+        of weight at most six is \((6, 3)\), so \(\textsf{R}_6 q_{\text{eq}} -
+        q_{\text{eq}}\) is a cubic invariant polynomial in the \(F_{ab}\);
+        nothing below requires it to vanish. The equation count is shared with
+        the free theory, the separated correlations are not: Proposition <a
+        href="6-the-continuum-limit-stress-phases-trace-and.html#prop:FC">6.4</a> and <class style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E-equation-count">14.36</a>)</class> give
+        \(\dim \mathcal{N}_d (S) = \dim \mathcal{I}_d\), while in the selected
+        phase \(G_{\Theta}\) is asymptotic to \(A_G r^{- 8} \log^{- 2} (1 /
+        r)\) (Theorem <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:TR">6.18</a>), and on no interval \((0, \delta)\)
+        does \(G_{\Theta}\) agree with a finite Wick profile (Proposition <a
+        href="6-the-continuum-limit-stress-phases-trace-and.html#prop:NF">6.19</a>).
+      </div>
+    </p>
+    <p>
+      <h5>Lattice symmetries.<span style="margin-left: 1em"></span></h5>
+      <div style="display: inline">
+        We record the symmetries of the Wilson measure deferred from
+        Definition <a href="2-definitions.html#def:D02">2.3</a>. A site gauge transformation acts on
+        plaquette holonomies by conjugation, and an affine isometry
+        \(h_{\text{iso}} (x) = hx + b\) with \(h \in H_4\) by conjugation,
+        possibly after inversion; both preserve \(\text{pr}\). Product
+        probability Haar measure is invariant under fixed left and right
+        multiplication, inversion and permutation [<a href="references.html#bib-Folland2015">11</a>, Corollary
+        2.28 and Proposition 2.31]. Hence, for every integer side
+        \(n_{\text{tor}} \geqslant 1\), real \(\beta\), site gauge
+        transformation \(\gamma_{\text{g}}\) and bounded measurable \(F\),
+      </div>
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:A-Wilson-invariance"></a>\(\displaystyle \int F
+        (U^{\gamma_{\text{g}}})  \hspace{0.17em} d \mu_{n_{\text{tor}},
+        \beta}
+(U) = \int F (h_{\text{iso}}^{\ast} U)  \hspace{0.17em} d
+        \mu_{n_{\text{tor}},
+\beta} (U) = \int F (U)  \hspace{0.17em} d
+        \mu_{n_{\text{tor}}, \beta} (U)
+\hspace{0.17em} .\)</td>
+        <td align="right">(10.7)</td>
+      </tr>
+    </table>
+    <p>
+      For a torus site \(y\), put \(\mathbb{B}_r (y) = \{x : \text{dist} (x,
+      y) \leqslant r\}\). An exterior spectator outside \(\mathbb{B}_r (y)\)
+      is a bounded measurable function of the positive links having both
+      endpoints outside \(\mathbb{B}_r (y)\); it need not be gauge invariant.
+      The following identity supplies the auxiliary equation observables used
+      in Section <a href="14-trajectories-marked-fields-and-ultraviolet.html#sec:partII-E">14</a>.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Lemma <class style="font-style: normal">10.4</class>. </strong><i><class
+        style="font-style: normal"><strong>(Auxiliary equation sections) </strong></class><a id="lem:A-R4"></a>
+        For every \(d\) there are a local section \(V_d^{\text{aux}}\) as in
+        Definition <a href="#def:D19">10.1</a>, an invertible triangular regrading
+        \(\textsf{R}_d\) of \(V_d\), and \(r_d, M_d \in \mathbb{N}\) with the
+        following properties.</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><ol>
+          <dt>
+            (i)
+          </dt><dd>
+            <p>
+              The section has its own box stencil, is gauge invariant, real
+              and \(H_4\) covariant, satisfies \(V_d^{\text{aux}}
+              [\boldsymbol{1}] = 1\) and <class style="font-style: normal">(<a href="#eq:A-Taylor">10.3</a>)</class>,
+              and satisfies <class style="font-style: normal">(<a href="#eq:A-section-bound">10.5</a>)</class>&ndash;<class
+              style="font-style: normal">(<a href="#eq:A-global-bound">10.6</a>)</class> with its own constants.
+            </p>
+          </dd>
+          <dt>
+            (ii)
+          </dt><dd>
+            <p>
+              The map \(\textsf{R}_d\) fixes \(\boldsymbol{1}\) and commutes
+              with conjugation and \(H_4\).
+            </p>
+          </dd>
+          <dt>
+            (iii)
+          </dt><dd>
+            <p>
+              For every \(n_{\text{tor}} \geqslant M_d\), \(\beta \ne 0\),
+              placement \(y\), \(p \in \mathcal{I}_d\) and exterior spectator
+              \(F_{\text{ext}}\) outside \(\mathbb{B}_{r_d} (y)\),
+            </p>
+            <table width="100%">
+              <tr>
+                <td align="center" width="100%"><a id="eq:A-aux-zero"></a>\(\displaystyle \int
+                V_d^{\text{aux}} [\textsf{R}_d p] (y ; U) F_{\text{ext}} (U)
+                
+\hspace{0.17em} d \mu_{n_{\text{tor}}, \beta} (U) = 0
+                \hspace{0.17em} .\)</td>
+                <td align="right">(10.8)</td>
+              </tr>
+            </table>
+          </dd>
+        </ol></i>
+      </div>
+    </div>
+    <p>
+      The exact-equation subspace \(\textsf{R}_d (\mathcal{I}_d)\) is compared
+      with the selected primary family in Section <a href="14-trajectories-marked-fields-and-ultraviolet.html#sec:partII-E">14</a>. All choices
+      in the following proof depend only on \(G, d\) and the label basis.
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>There are three steps: one-link
+      integration by parts gives zero moments; forces realize every linear
+      functional vanishing on Maxwell jets; products of forces and curvature
+      measurements, averaged, represent equation labels up to a triangular
+      regrading, which is then inverted.
+    </p>
+    <p>
+      <em>Step 1: One-link equations.</em> Extend the curvature
+      \(F_{\square}\) of Section <a href="#sec:A-labels">10.1</a> to \(F_{ab}  (U ; x)\) for
+      ordered axes by antisymmetry, with \(F_{aa} = 0\). For a positive link
+      \(e = (x, a)\) set
+    </p>
+    <center>
+      \(\displaystyle \mathcal{E}_e (U) = \sum_{b \ne a} (F_{ab} (U ; x) -
+      \text{Ad} (U (x - e_b,
+b)^{- 1}) F_{ab} (U ; x - e_b)) \hspace{0.17em}
+      .\)
+    </center>
+    <p>
+      On a torus of side at least two, direct differentiation gives
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="eq:A-link-equation"></a>\(\displaystyle D^L_{e, A} E^{\text{W}}
+        (U) = \langle A, \mathcal{E}_e (U)
+\rangle_{\mathfrak{g}}
+        \hspace{0.17em} .\)</td>
+        <td align="right">(10.9)</td>
+      </tr>
+    </table>
+    <p>
+      Indeed, the forward plaquette contributes \(- n_G^{- 1} \text{Re}
+      \hspace{0.17em} \text{tr} (AU_{\square}) = \langle A,
+F_{\square}
+      \rangle_{\mathfrak{g}}\). The backward plaquette, rebased at \(x\),
+      contributes the negative of the transported curvature in the display.
+      These are the two incidences for each transverse axis; antisymmetry
+      gives the signs for the opposite ordering.
+    </p>
+    <p>
+      If a continuous multiplier \(g\) is independent of \(U_e\), and a
+      bounded measurable \(F_{\text{ext}}\) is also independent of \(U_e\),
+      left invariance of Haar measure gives
+    </p>
+    <center>
+      \(\displaystyle 0 = \left. \frac{d}{d \epsilon}  \int g (U)
+      F_{\text{ext}} (U) e^{- \beta
+E^{\text{W}} (U^{e, A, \epsilon})} 
+      \hspace{0.17em} dU \right|_{\epsilon = 0}
+= - \beta Z_{n_{\text{tor}},
+      \beta}  \int \langle A, \mathcal{E}_e
+\rangle_{\mathfrak{g}}
+      gF_{\text{ext}}  \hspace{0.17em} d \mu_{n_{\text{tor}},
+\beta}
+      \hspace{0.17em} .\)
+    </center>
+    <p>
+      Here \(U^{e, A, \epsilon}_e = e^{\epsilon A} U_e\) and all other links
+      are fixed. Compactness bounds the derivative of the smooth density
+      uniformly, justifying differentiation even for measurable
+      \(F_{\text{ext}}\).
+    </p>
+    <p>
+      Choose a path \(\gamma_e\) from \(0\) to \(e^-\) avoiding \(e\). If
+      \(g\) also avoids \(e\), then
+    </p>
+    <center>
+      \(\displaystyle \Upsilon_{e, \xi} (U) = \langle \xi, \text{Ad}
+      (U_{\gamma_e})\mathcal{E}_e (U)
+\rangle_{\mathfrak{g}} g (U)\)
+    </center>
+    <p>
+      has zero moment for every \(\xi \in \mathfrak{g}\) against every
+      exterior spectator. To see this, expand \(\text{Ad} (U_{\gamma_e}^{- 1})
+      \xi\) in a fixed orthonormal basis of \(\mathfrak{g}\) and apply the
+      preceding identity to each coefficient times \(gF_{\text{ext}}\). These
+      multipliers are independent of \(U_e\). There is one radius and one
+      minimum torus side for any finite collection of such expressions:
+      enlarge the radius to contain both endpoints of every varied link, and
+      the side until distinct links in their finite cover supports remain
+      distinct after wrapping. The same choices work at every placement.
+    </p>
+    <p>
+      <em>Step 2: Enough measurements with avoidance.</em> Any path can avoid
+      one specified link: replace a traversal of that link by three sides of a
+      square in a transverse direction. For each plaquette orientation only
+      finitely many base points give a plaquette containing that link.
+      Removing these points does not affect Step 1 of the proof of Lemma <a
+      href="#lem:A1">10.2</a>: if a polynomial vanishes at all but finitely many points
+      of \(\mathbb{Z}^4\), its restriction to each coordinate line through an
+      integer point has infinitely many zeros, so it vanishes on
+      \(\mathbb{Z}^4\) and hence identically. Thus curvature measurements
+      whose paths and plaquettes avoid \(e\) still have injective joint
+      linearization. Finite-dimensional duality therefore realizes every
+      linear functional on \(\mathcal{J}_{\leqslant d}\) by finitely many
+      components.
+    </p>
+    <p>
+      For every linear functional \(\ell\) on \(\mathcal{J}_j\) vanishing on
+      \(\mathcal{J}_j^{\text{Max}}\), a finite combination of force
+      linearizations equals \(\textsf{j} \mapsto \ell (\mathcal{A}_j)\) on
+      \(\mathcal{J}_{\leqslant j + 2} = \bigoplus_{i \leqslant j}
+      \mathcal{J}_i\). To see this, extend the circulations \(N_{ab}\) of Step
+      1 of the proof of Lemma <a href="#lem:A1">10.2</a> antisymmetrically. The force
+      linearization at \(e = (x, a)\) is
+    </p>
+    <center>
+      \(\displaystyle L_a  (\textsf{j} ; x) = \sum_b (N_{ab} (x) - N_{ab} (x -
+      e_b)) \hspace{0.17em}
+.\)
+    </center>
+    <p>
+      Suppose that every \(L_a  (\textsf{j} ; x)\), \(x \in \mathbb{Z}^4\),
+      vanishes for a jet \(\mathcal{A}= \sum_{i \leqslant j_{\ast}}
+      \mathcal{A}_i\). Each \(L_a  (\textsf{j} ; \cdot)\) is a polynomial,
+      hence zero. In \(N_{ab} (x) - N_{ab}  (x - e_b)\) a component
+      \(\mathcal{A}_i\) contributes a polynomial of degree at most \(i - 1\),
+      and \(\mathcal{A}_{j_{\ast}}\) contributes \(\partial_b  (\partial_a
+      \mathcal{A}_{j_{\ast}, b} - \partial_b
+\mathcal{A}_{j_{\ast}, a}) (x)\)
+      plus terms of lower degree. The part of degree \(j_{\ast} - 1\)
+      therefore gives \(\sum_b \partial_b  (\partial_a \mathcal{A}_{j_{\ast},
+      b} - \partial_b
+\mathcal{A}_{j_{\ast}, a}) = 0\), that is,
+      \(\mathcal{A}_{j_{\ast}} \in \mathcal{J}_{j_{\ast}}^{\text{Max}}\). A
+      functional of this top component annihilating
+      \(\mathcal{J}_{j_{\ast}}^{\text{Max}}\) therefore annihilates the common
+      kernel of the force measurements. Finite-dimensional duality puts it in
+      their linear span. Transport paths do not enter the linearization and
+      can be chosen to avoid their varied links. On \(\mathcal{J}_{\leqslant
+      d}\) the same combination can have additional linear terms only at
+      engineering weights above \(j_{\ast} + 2\).
+    </p>
+    <p>
+      <em>Step 3: Polynomial lifts and the triangular map.</em> Choose linear
+      projections \(\pi_j : \mathcal{J}_j \to \mathcal{J}_j^{\text{Max}}\) and
+      put \(\pi = \prod_j \pi_j\). A polynomial belongs to \(\mathcal{I}_d\)
+      precisely when \(p \circ \pi = 0\). For a product of linear coordinates,
+    </p>
+    <center>
+      \(\displaystyle \prod_{i = 1}^{k_{\text{tot}}} \ell_i - \prod_{i =
+      1}^{k_{\text{tot}}} (\ell_i
+\circ \pi) = \sum_{i = 1}^{k_{\text{tot}}}
+      \left[ \prod_{l < i} (\ell_l \circ
+\pi) \right]  (\ell_i - \ell_i \circ
+      \pi)  \prod_{l > i} \ell_l
+\hspace{0.17em} .\)
+    </center>
+    <p>
+      Consequently every bihomogeneous equation label is a finite sum of
+      products with one linear factor vanishing on some
+      \(\mathcal{J}_j^{\text{Max}}\), with the same engineering weight and
+      factor count. The individual factors need not be invariant. We use the
+      Taylor map \(\text{Tay}_d\) of Section <a href="#sec:A-labels">10.1</a>; every
+      coordinate has weight at least two. Call a lattice observable \(O\) a
+      lift of a bihomogeneous polynomial \(q\) if \(\text{Tay}_d
+      \hspace{0.17em} O - q\) consists of monomials later than \(q\) in the
+      \((k, w)\) order.
+    </p>
+    <p>
+      Lift the distinguished factor by a finite combination of transported
+      forces from Step 2. For each summand, lift the other factors by
+      curvature measurements avoiding its varied link, matching their full
+      linear parts through engineering weight \(d\). The resulting expression
+      has the zero-moment property of Step 1 and at least \(k_{\text{tot}}\)
+      curvature factors. Indeed, every force is a difference of two
+      transported curvatures per transverse axis. The expression is a lift of
+      the prescribed product: the additional linear terms of the force have
+      greater engineering weight, and every nonlinear correction increases
+      factor count. The square-measurement lifts have their prescribed full
+      linear parts, so introduce only the latter kind of correction. Taylor
+      polynomials exist by the smooth dependence of the test holonomies on the
+      jet.
+    </p>
+    <p>
+      Average over constant gauge transformations. All factors transform by
+      adjoint matrices at the origin, so the orbit lies in the
+      finite-dimensional span of finitely many fixed-degree colour-coordinate
+      monomials on the same measurements; each orbit function keeps zero
+      moments, with colour vectors rotated by \(\text{Ad} (v^{- 1})\). The
+      Haar average is therefore a gauge-invariant finite combination of orbit
+      functions; it keeps zero moments, minimum factor count and the lift
+      property, and its Taylor map is invariant.
+    </p>
+    <p>
+      In each bidegree extend a basis of \(\mathcal{I}_d\) to a basis of the
+      invariant label space in that bidegree, lifting the complementary
+      vectors by Lemma <a href="#lem:A1">10.2</a>. Lift \(\boldsymbol{1}\) to \(1\),
+      since \(\mathcal{I}_d\) contains no nonzero constant. Summing gives a
+      linear lift \(p \mapsto \mathcal{Y}_p\). Replace this lift by the two
+      successive averages
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  \mathcal{Y}'_p (U) & = \frac{1}{|H_4
+      |}  \sum_{h \in H_4} \mathcal{Y}_{h^{-
+  1} p}  (h^{\ast} U),\\
+ 
+      \mathcal{Y}^{\text{sym}}_p & = \frac{1}{2}  (\mathcal{Y}'_p +
+ 
+      \overline{\mathcal{Y}'_{\bar{p}}}) \hspace{0.17em} .
+\end{array}\)
+    </center>
+    <p>
+      The Taylor map commutes with both operations. The real Maxwell equations
+      and the chain rule make \(\mathcal{J}_j^{\text{Max}}\), and hence
+      \(\mathcal{I}_d\), stable under signed permutations, adjoint
+      transformations and conjugation. The zero-moment property survives the
+      signed average by <class style="font-style: normal">(<a href="#eq:A-Wilson-invariance">10.7</a>)</class>, changing
+      the spectator by the inverse isometry; the exterior set is preserved.
+      Conjugation uses \(\overline{F_{\text{ext}}}\). A reversed varied link
+      uses a right derivative of the Wilson energy, whose Haar identity is
+      identical. Thus the averaged equation representatives remain finite sums
+      of one-link action derivatives with link-independent multipliers and
+      avoiding transport paths.
+    </p>
+    <p>
+      Let \(\textsf{R}_d p = \text{Tay}_d \hspace{0.17em}
+      \mathcal{Y}^{\text{sym}}_p\). Then \(\textsf{R}_d - I\) strictly raises
+      \((k, w)\). There are finitely many bidegrees of weight at most \(d\),
+      so \((\textsf{R}_d - I)^{n_0} = 0\) for some integer \(n_0\), and
+    </p>
+    <center>
+      \(\displaystyle \textsf{R}_d^{- 1} = \sum_{l = 0}^{n_0 - 1} (- 1)^l 
+      (\textsf{R}_d - I)^l,
+\qquad V_d^{\text{aux}}
+      [\mathbf{c}]
+=\mathcal{Y}^{\text{sym}}_{\textsf{R}_d^{- 1} \mathbf{c}}
+      \hspace{0.17em} .\)
+    </center>
+    <p style="margin-bottom: 1em">
+      This gives invertibility and Taylor normalization; the averages give the
+      symmetry and unit identities. The inverse preserves minimum factor
+      count, so Lemma <a href="#lem:A-bounds">10.3</a> applies to these sections with their
+      own constants. A signed-invariant box enclosing all paths and plaquettes
+      gives a common stencil. Take \(r_d, M_d\) as maxima for an ideal basis;
+      linearity gives <class style="font-style: normal">(<a href="#eq:A-aux-zero">10.8</a>)</class>.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <h3 id="auto-61"><a id="sec:A-example"></a>10.5<span style="margin-left: 1em"></span>Example: the curvature
+    square<span style="margin-left: 1em"></span></h3>
+    <p>
+      We follow one familiar observable through the construction. Sections <a
+      href="14-trajectories-marked-fields-and-ultraviolet.html#sec:partII-E">14</a> and <a href="15-infinite-volume-and-field-calculus.html#sec:partII-F">15</a> construct the terminal map and the
+      quotient used at its end.
+    </p>
+    <p>
+      <h5>The label.<span style="margin-left: 1em"></span></h5>
+      <div style="display: inline">
+        With \(F_{ab}\) as in Section <a href="#sec:A-equations">10.4</a>, radial gauge gives
+        \(\mathcal{A}_{0, a} (x) = \frac{1}{2}  \sum_b x^b F_{ba}\); since
+        \(\mathcal{A} (0) = 0\), \(F_{ab}\) is the curvature of the jet at the
+        origin. The curvature square is the label
+      </div>
+    </p>
+    <center>
+      \(\displaystyle c_{F^2} (\textsf{j}) = \frac{1}{4}  \sum_{a, b} \langle
+      F_{ab}, F_{ab}
+\rangle_{\mathfrak{g}} = \frac{1}{4}  \sum_{a, b, \alpha}
+      (F_{ab}^{\alpha})^2
+\hspace{0.17em},\)
+    </center>
+    <p>
+      with coordinates \(F^{\alpha}_{ab}\) in an orthonormal basis of
+      \(\mathfrak{g}\): the Yang&ndash;Mills density at the origin. It is
+      invariant, real and \(H_4\) invariant, of bidegree \((4, 2)\), and lies
+      in \(V_d\) for every \(d \geqslant 4\).
+    </p>
+    <p>
+      <h5>Two lattice readings.<span style="margin-left: 1em"></span></h5>
+      <div style="display: inline">
+        For \(a < b\) and \(s, s' = \pm 1\), let \(\square_{ab}^{ss'}\) be
+        the plaquette with corner \(0\) spanned by \(se_a\) and \(s' e_b\).
+        The clover
+      </div>
+    </p>
+    <center>
+      \(\displaystyle P^{\text{cl}} (U) = \frac{1}{4}  \sum_{a < b} \sum_{s,
+      s' = \pm 1} \text{pr}
+(U_{\square_{ab}^{ss'}})\)
+    </center>
+    <p>
+      satisfies \(\text{Tay}_4 \hspace{0.17em} P^{\text{cl}} = c_{F^2}\).
+      Indeed, on test holonomies each of these plaquettes has \(U_{\square} =
+      e^X\) with \(X = \pm h_{\text{lat}}^2 F_{ab} + O (h_{\text{lat}}^3) \in
+      \mathfrak{g}\), and \(\text{pr} (e^X) = \frac{1}{2}  \langle X, X
+      \rangle_{\mathfrak{g}} + O (|X|^3)\) because \(\text{Re} \hspace{0.17em}
+      \text{tr} \hspace{0.17em} X = 0\); hence \(P^{\text{cl}}  (U
+      (h_{\text{lat}}, \textsf{j})) = h_{\text{lat}}^4 c_{F^2}
+(\textsf{j}) +
+      O (h_{\text{lat}}^5)\). This familiar leading-order reading is gauge
+      invariant, real and \(H_4\) invariant, and at most \(3 t^2\) when its
+      plaquettes have chord at most \(t\): the size \(t^{k_i}\), \(k_i = 2\),
+      of Lemma <a href="#lem:A-bounds">10.3</a>. The column \(P_4^{\text{loc}} [c_{F^2}]\) of
+      Lemma <a href="#lem:A1">10.2</a> is built differently, as the \(H_4\) average of
+      \(c_{F^2}  (T_4 f (\sigma_1, \ldots, \sigma_{M_{\text{meas}}}))\): it
+      recovers the truncated jet from curvature measurements and evaluates the
+      label on it. The two differ by an observable with vanishing Taylor map;
+      the terminal map below refers to the section of Lemma <a href="#lem:A1">10.2</a>.
+    </p>
+    <p>
+      <h5>The insertion.<span style="margin-left: 1em"></span></h5>
+      <div style="display: inline">
+        Take \(d = 4\). A nonconstant monomial of weight at most four is a
+        coordinate of \(\mathcal{A}_0\), \(\mathcal{A}_1\) or
+        \(\mathcal{A}_2\), or a product of two coordinates of
+        \(\mathcal{A}_0\), and invariant linear terms vanish because
+        \(\mathfrak{g}\) is simple. As the adjoint representation is
+        absolutely irreducible, every label in \(V_4\) is \(m_0
+        \boldsymbol{1}+ \sum_{P, Q} m_{PQ}  \langle F_P,
+        F_Q
+\rangle_{\mathfrak{g}}\), summed over coordinate planes, with
+        \(m\) symmetric. A reflection of one axis changes the sign of \(F_P\)
+        exactly for the planes containing that axis. Hence \(H_4\) invariance
+        forces \(m\) to be diagonal and, by permutations, constant: the real
+        \(H_4\) invariant labels in \(V_4\) are the real combinations of
+        \(\boldsymbol{1}\) and \(c_{F^2}\). For \(N \geqslant m_{\text{ref}}
+        (4)\), Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.1a">14.8</a> makes \(\textsf{Z}_{N, p, 4}\) commute
+        with conjugation and \(H_4\), and gives \(\textsf{Z}_{N, p, 4}
+        \boldsymbol{1}= (a_{m_{\text{ref}} (4)} / a_N)^4
+\boldsymbol{1}\). The
+        fine-cutoff coefficient vector and, by Definition <a href="2-definitions.html#def:D08">2.8</a>,
+        the insertion are therefore
+      </div>
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  \textsf{Z}_{N, p, 4}^{- 1} c_{F^2} &
+      = \lambda_{N, p} c_{F^2} +
+  \delta^{F^2}_{N, p} \boldsymbol{1}
+      \hspace{0.17em},\\
+  O^{(4)}_{N, p} (c_{F^2}, y ; U) & = a_N^{- 4} 
+      (\lambda_{N, p} t_N^{- 2}
+  P_4^{\text{loc}} [c_{F^2}] (y ; U) +
+      \delta^{F^2}_{N, p}) \hspace{0.17em},
+\end{array}\)
+    </center>
+    <p>
+      with real \(\delta^{F^2}_{N, p}\) and real \(\lambda_{N, p} \ne 0\),
+      since \(\textsf{Z}_{N, p, 4}\) preserves \(\mathbb{C}\boldsymbol{1}\).
+      The renormalization of the curvature square is a multiplicative constant
+      together with an additive one.
+    </p>
+    <p>
+      Mixing enters through the transfer: the representation <class style="font-style: normal">(<a
+      href="5-the-renormalization-group.html#eq:I12-marked-representation">5.18</a>)</class> of the blocked marked density keeps a unit
+      coordinate \(x_{m, 0}\), through which integration can turn part of a
+      curvature insertion into a constant. The inverse terminal map makes the
+      transported coefficient at the reference level exactly \(c_{F^2}\), with
+      unit coordinate zero, which specifies the label at the physical scale
+      \(a_{m_{\text{ref}} (4)}\). A single factor (\(\delta^{F^2}_{N, p} =
+      0\)) would require the transfer to preserve the line through
+      \(c_{F^2}\), and nothing in the construction forces this. In degree six,
+      \(\textsf{Z}_{N, p, 6}^{- 1} c_{F^2}\) may involve every real \(H_4\)
+      invariant label of weight at most six, including any that are not
+      rotation invariant.
+    </p>
+    <p>
+      The degree tag acts separately from weight and factor count: it fixes
+      \(\ell_m^d\), \(a_N^{- d}\) and the terminal map. Thus \((4, c_{F^2})\)
+      and \((6, c_{F^2})\) are different insertion labels; the inclusion
+      \(\jmath_{4, 6}\) of Proposition <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:FC">6.4</a> maps the class of the
+      first to the class in \(F_6\) with the same correlations, which need not
+      be the class of the second.
+    </p>
+    <p>
+      <h5>The field.<span style="margin-left: 1em"></span></h5>
+      <div style="display: inline">
+        Degree four has no invisible labels. Labels in \(V_4\) depend only on
+        \(\mathcal{A}_0\), and \(\mathcal{J}_0^{\text{Max}} =\mathcal{J}_0\)
+        because the curvature of \(\mathcal{A}_0\) is constant; so
+        \(\mathcal{I}_4 = 0\), and <class style="font-style: normal">(<a href="14-trajectories-marked-fields-and-ultraviolet.html#eq:E-equation-count">14.36</a>)</class>
+        with Proposition <a href="6-the-continuum-limit-stress-phases-trace-and.html#prop:FC">6.4</a> gives \(\dim F_4 = \dim V_4\). Thus
+        \(\mathcal{N}_4 (S) = 0\), the quotient map \(V_4 \to F_4\) is
+        bijective, and \([c_{F^2}] \ne 0\). In each phase \(\xi\), Theorem <a
+        href="6-the-continuum-limit-stress-phases-trace-and.html#prop:RC">6.16</a> gives the smeared field \(\Phi_{\xi}  (\iota_4
+        [c_{F^2}], f)\). Its free counterpart is the Maxwell curvature square
+        \(\mathcal{O}_{F^2}\) of Section <a href="6-the-continuum-limit-stress-phases-trace-and.html#sec:trace-products">6.4</a>, whose two-point
+        function at separation \(r\) is \(3 d_{\mathfrak{g}} \pi^{- 4} r^{-
+        8}\); Section <a href="18-the-trace-law-and-non-free-comparisons.html#sec:partII-I">18</a> compares the stress trace with it.
+      </div>
+    </p>
+    
+    <div class="ym-chapter-nav"><span class="ym-chapter-prev"><a href="index-of-notation.html">&larr; Index of notation</a></span><span class="ym-chapter-up"><a href="../main.html">Contents</a></span><span class="ym-chapter-next"><a href="11-gauges-and-block-integration.html">11 Gauges and block integration &rarr;</a></span></div>
+</body>
+</html>

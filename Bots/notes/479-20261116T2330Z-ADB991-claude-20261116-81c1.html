@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Checking a bulk renaming diff for mathematical preservation &ndash;
+    Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../manuscript/index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../manuscript/existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Checking a bulk renaming diff for mathematical preservation</h1><a
+      id="checking-a-bulk-renaming-diff-for-mathematical-preservation"></a>
+    </p>
+    <ul>
+      <li>
+        <p>
+          Issue: #479 (review of PR #477, <tt class="verbatim">9ded0b7a..962ac43b</tt>)
+        </p>
+      </li>
+      <li>
+        <p>
+          Session: ADB991-claude-20261116-81c1
+        </p>
+      </li>
+      <li>
+        <p>
+          Report: <tt class="verbatim">blueprint/units/YM-000026/reviews/terminology-477-review-ADB991-claude-20261116-81c1.md</tt>
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-1"><a id="reusable-method"></a>Reusable method<span style="margin-left: 1em"></span></h2>
+    <p>
+      This method suits any future terminology or notation pass over the
+      monograph.
+    </p>
+    <ol>
+      <li>
+        <p>
+          Export both trees with <tt class="verbatim">git archive &lt;rev&gt; manuscript
+          | tar -x -C &lt;dir&gt;</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Tokenise each changed file. Align the old and new token sequences
+          and count the substitutions:
+        </p>
+      </li>
+    </ol>
+    <div class="compact-block" style="margin-top: 1em; margin-left: 38.660688007188px; text-indent: 0em">
+      <p>
+        <tt class="verbatim">import re, difflib</tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-left: 38.660688007188px; text-indent: 0em">
+      <p>
+        <tt class="verbatim">TOK =
+        re.compile(r'\\[A-Za-z]+|[A-Za-z]+|\d+(?:\.\d+)?|\s+|.')</tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-left: 38.660688007188px; text-indent: 0em">
+      <p>
+        <tt class="verbatim">ta, tb = TOK.findall(old_text), TOK.findall(new_text)</tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-left: 38.660688007188px; text-indent: 0em">
+      <p>
+        <tt class="verbatim">for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, ta,
+        tb, autojunk=False).get_opcodes():</tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-left: 38.660688007188px; text-indent: 0em">
+      <p>
+        <tt class="verbatim">    if op != 'equal':</tt>
+      </p>
+    </div>
+    <div class="compact-block" style="margin-bottom: 1em; margin-left: 38.660688007188px; text-indent: 0em">
+      <p>
+        <tt class="verbatim">        record(''.join(ta[i1:i2]).strip(),
+        ''.join(tb[j1:j2]).strip())</tt>
+      </p>
+    </div>
+    <p>
+      Each run of the tokeniser over the 180 files takes about a minute. 3.
+      Keep the hunks that touch digits, <tt class="verbatim">^ _ &lt; &gt; = + / |</tt>,
+      a binary minus or <tt class="verbatim">\le \ge \frac \sum \exp \log &hellip;</tt>,
+      and read each one. For #477 this gave 108 hunks. 4. For each new symbol,
+      compare per-file counts before and after the diff. When the new count is
+      higher and the old count was nonzero, a pre-existing symbol may now have
+      two meanings in one file. Check it. 5. Count whole-word occurrences of
+      the old identifiers in the new tree, and read every file that now has
+      both the old and the new name. 6. Compare the multisets of <tt class="verbatim">\label</tt>,
+      <tt class="verbatim">\ref</tt>, <tt class="verbatim">\eqref</tt> and <tt class="verbatim">\cite</tt>
+      keys. 7. Search both trees for a word repeated across whitespace,
+      including line breaks. Keep the cases that are new in the diff.
+    </p>
+    <h2 id="auto-2"><a id="facts-checked-against-lean-while-doing-this"></a>Facts checked against Lean while doing this<span style="margin-left: 1em"></span></h2>
+    <p>
+      These may be reused.
+    </p>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">YM.Bid.Loan.puffs L = L^(1/8)</tt> (<tt class="verbatim">Lean/YM/Bid/Loan.lean:34</tt>).
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">momentPrice s &eta; = exp &eta; &middot; s!/&eta;^s</tt>
+          (<tt class="verbatim">Lean/YM/Extra/ITERATION_NO_LOSS/Sums.lean:106</tt>).
+          Note that a different, four-argument <tt class="verbatim">momentPrice</tt>
+          exists in <tt class="verbatim">Lean/YM/PhysicalNext/&hellip;</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM.Trace.Zn.puff x = 4*(rim x+2)</tt> and <tt class="verbatim">rim
+          x = 1000*radiusB x</tt> (<tt class="verbatim">Lean/YM/TraceExtension/Zn/Setup.lean:13</tt>,
+          <tt class="verbatim">Have.lean:59</tt>).
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">YM.Trace.Zn.calorie x = x^{-30}</tt>.
+        </p>
+      </li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,1717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>6 The continuum limit, stress, phases, trace and products &ndash; HumanizeYM_v2: The construction of four-dimensional quantum
+    Yang&ndash;Mills theory &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1], hyperref: [bs +
+    'href{###1}{#2}', 2, '']}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="toggle" style="display: none">
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+    </div>
+<div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+
+    <div class="ym-chapter-nav"><span class="ym-chapter-prev"><a href="5-the-renormalization-group.html">&larr; 5 The renormalization group</a></span><span class="ym-chapter-up"><a href="../main.html">Contents</a></span><span class="ym-chapter-next"><a href="7-deduction-of-the-main-theorem.html">7 Deduction of the main theorem &rarr;</a></span></div>
+<div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 2em; margin-bottom: 1em">
+        <b><font style="font-size: 119.0%">I<span style="margin-left: 1em"></span>The theorem and the architecture
+        of its proof</font></b> <span style="margin-left: 5mm"></span> <a href="../main.html#auto-1">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>1<span style="margin-left: 1em"></span>The result</b> <span style="margin-left: 5mm"></span> <a href="1-the-result.html#auto-2">4</a>
+      </p>
+      <p>
+        1.1<span style="margin-left: 1em"></span>Proof status <span style="margin-left: 5mm"></span> <a href="1-the-result.html#auto-3">6</a>
+      </p>
+      <p>
+        1.2<span style="margin-left: 1em"></span>Earlier work and the method <span style="margin-left: 5mm"></span>
+        <a href="1-the-result.html#auto-4">6</a>
+      </p>
+      <p>
+        1.3<span style="margin-left: 1em"></span>Reading guide <span style="margin-left: 5mm"></span> <a href="1-the-result.html#auto-6">8</a>
+      </p>
+      <p>
+        1.4<span style="margin-left: 1em"></span>Notation and conventions <span style="margin-left: 5mm"></span>
+        <a href="1-the-result.html#auto-8">8</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2<span style="margin-left: 1em"></span>Definitions</b> <span style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-9">9</a>
+      </p>
+      <p>
+        2.1<span style="margin-left: 1em"></span>The gauge group and the Wilson measure <span
+        style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-10">9</a>
+      </p>
+      <p>
+        2.2<span style="margin-left: 1em"></span>Wilson families and their correlations <span
+        style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-11">10</a>
+      </p>
+      <p>
+        2.3<span style="margin-left: 1em"></span>Local fields <span style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-13">12</a>
+      </p>
+      <p>
+        2.4<span style="margin-left: 1em"></span>Euclidean properties <span style="margin-left: 5mm"></span> <a
+        href="2-definitions.html#auto-14">14</a>
+      </p>
+      <p>
+        2.5<span style="margin-left: 1em"></span>Field spaces and phases <span style="margin-left: 5mm"></span> <a
+        href="2-definitions.html#auto-15">15</a>
+      </p>
+      <p>
+        2.6<span style="margin-left: 1em"></span>Wightman theories <span style="margin-left: 5mm"></span> <a href="2-definitions.html#auto-16">15</a>
+      </p>
+      <p>
+        2.7<span style="margin-left: 1em"></span>The trace and product statements <span style="margin-left: 5mm"></span>
+        <a href="2-definitions.html#auto-17">16</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>3<span style="margin-left: 1em"></span>The main theorem</b> <span style="margin-left: 5mm"></span> <a
+        href="3-the-main-theorem.html#auto-18">17</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>4<span style="margin-left: 1em"></span>Strategy of the proof</b> <span style="margin-left: 5mm"></span>
+        <a href="4-strategy-of-the-proof.html#auto-19">19</a>
+      </p>
+      <p>
+        4.1<span style="margin-left: 1em"></span>Why the ultraviolet induction closes <span
+        style="margin-left: 5mm"></span> <a href="4-strategy-of-the-proof.html#auto-21">19</a>
+      </p>
+      <p>
+        4.2<span style="margin-left: 1em"></span>Tuning, uniqueness and convergence <span style="margin-left: 5mm"></span>
+        <a href="4-strategy-of-the-proof.html#auto-25">23</a>
+      </p>
+      <p>
+        4.3<span style="margin-left: 1em"></span>Rotations <span style="margin-left: 5mm"></span> <a href="4-strategy-of-the-proof.html#auto-27">24</a>
+      </p>
+      <p>
+        4.4<span style="margin-left: 1em"></span>Phases and reconstruction <span style="margin-left: 5mm"></span>
+        <a href="4-strategy-of-the-proof.html#auto-28">25</a>
+      </p>
+      <p>
+        4.5<span style="margin-left: 1em"></span>The trace <span style="margin-left: 5mm"></span> <a href="4-strategy-of-the-proof.html#auto-29">25</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>5<span style="margin-left: 1em"></span>The renormalization group</b> <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-30">26</a>
+      </p>
+      <p>
+        5.1<span style="margin-left: 1em"></span>Scales and the block map <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-31">26</a>
+      </p>
+      <p>
+        5.2<span style="margin-left: 1em"></span>The density and its norms <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-32">28</a>
+      </p>
+      <p>
+        5.3<span style="margin-left: 1em"></span>The inductive step <span style="margin-left: 5mm"></span> <a
+        href="5-the-renormalization-group.html#auto-35">31</a>
+      </p>
+      <p>
+        5.4<span style="margin-left: 1em"></span>Multiscale trajectories <span style="margin-left: 5mm"></span> <a
+        href="5-the-renormalization-group.html#auto-36">32</a>
+      </p>
+      <p>
+        5.5<span style="margin-left: 1em"></span>Local fields under blocking <span style="margin-left: 5mm"></span>
+        <a href="5-the-renormalization-group.html#auto-38">34</a>
+      </p>
+      <p>
+        5.6<span style="margin-left: 1em"></span>Uniform bounds and the fixed-volume limit <span
+        style="margin-left: 5mm"></span> <a href="5-the-renormalization-group.html#auto-39">35</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>6<span style="margin-left: 1em"></span>The continuum limit, stress, phases, trace and
+        products</b> <span style="margin-left: 5mm"></span> <a href="#auto-40">36</a>
+      </p>
+      <p>
+        6.1<span style="margin-left: 1em"></span>The volume limit and the field calculus <span
+        style="margin-left: 5mm"></span> <a href="#auto-41">36</a>
+      </p>
+      <p>
+        6.2<span style="margin-left: 1em"></span>Stress and rotations <span style="margin-left: 5mm"></span> <a
+        href="#auto-42">38</a>
+      </p>
+      <p>
+        6.3<span style="margin-left: 1em"></span>Phases and reconstruction <span style="margin-left: 5mm"></span>
+        <a href="#auto-43">41</a>
+      </p>
+      <p>
+        6.4<span style="margin-left: 1em"></span>Trace and products <span style="margin-left: 5mm"></span> <a
+        href="#auto-44">43</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>7<span style="margin-left: 1em"></span>Deduction of the main theorem</b> <span style="margin-left: 5mm"></span>
+        <a href="7-deduction-of-the-main-theorem.html#auto-45">46</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>8<span style="margin-left: 1em"></span>A weaker existence statement</b> <span style="margin-left: 5mm"></span>
+        <a href="8-a-weaker-existence-statement.html#auto-46">47</a>
+      </p>
+      <p>
+        8.1<span style="margin-left: 1em"></span>Hierarchy data and the conditions Q0&ndash;Q6
+        <span style="margin-left: 5mm"></span> <a href="8-a-weaker-existence-statement.html#auto-47">48</a>
+      </p>
+      <p>
+        8.2<span style="margin-left: 1em"></span>A generalized free-field example <span style="margin-left: 5mm"></span>
+        <a href="8-a-weaker-existence-statement.html#auto-48">49</a>
+      </p>
+      <p>
+        8.3<span style="margin-left: 1em"></span>Conventions for hierarchy data <span style="margin-left: 5mm"></span>
+        <a href="8-a-weaker-existence-statement.html#auto-49">51</a>
+      </p>
+      <p>
+        8.4<span style="margin-left: 1em"></span>An averaged countertest <span style="margin-left: 5mm"></span> <a
+        href="8-a-weaker-existence-statement.html#auto-50">52</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>9<span style="margin-left: 1em"></span>Constants and order of choice</b> <span style="margin-left: 5mm"></span>
+        <a href="9-constants-and-order-of-choice.html#auto-51">52</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Index of notation</b> <span style="margin-left: 5mm"></span> <a href="index-of-notation.html#auto-53">54</a>
+      </p>
+      <p style="margin-top: 2em; margin-bottom: 1em">
+        <b><font style="font-size: 119.0%">II<span style="margin-left: 1em"></span>Proofs</font></b> <span style="margin-left: 5mm"></span>
+        <a href="index-of-notation.html#auto-54">57</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>10<span style="margin-left: 1em"></span>Local polynomial fields</b> <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-55">57</a>
+      </p>
+      <p>
+        10.1<span style="margin-left: 1em"></span>Labels, test holonomies and the Taylor map
+        <span style="margin-left: 5mm"></span> <a href="10-local-polynomial-fields.html#auto-56">58</a>
+      </p>
+      <p>
+        10.2<span style="margin-left: 1em"></span>Taylor-normalized sections <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-58">59</a>
+      </p>
+      <p>
+        10.3<span style="margin-left: 1em"></span>Small-field bounds <span style="margin-left: 5mm"></span> <a
+        href="10-local-polynomial-fields.html#auto-59">61</a>
+      </p>
+      <p>
+        10.4<span style="margin-left: 1em"></span>Auxiliary equation sections <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-60">62</a>
+      </p>
+      <p>
+        10.5<span style="margin-left: 1em"></span>Example: the curvature square <span style="margin-left: 5mm"></span>
+        <a href="10-local-polynomial-fields.html#auto-61">66</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>11<span style="margin-left: 1em"></span>Gauges and block integration</b> <span style="margin-left: 5mm"></span>
+        <a href="11-gauges-and-block-integration.html#auto-62">67</a>
+      </p>
+      <p>
+        11.1<span style="margin-left: 1em"></span>The block kernel <span style="margin-left: 5mm"></span> <a href="11-gauges-and-block-integration.html#auto-63">68</a>
+      </p>
+      <p>
+        11.2<span style="margin-left: 1em"></span>Free quadratic forms <span style="margin-left: 5mm"></span> <a
+        href="11-gauges-and-block-integration.html#auto-66">72</a>
+      </p>
+      <p>
+        11.3<span style="margin-left: 1em"></span>The stationary background and Gaussian
+        coordinates <span style="margin-left: 5mm"></span> <a href="11-gauges-and-block-integration.html#auto-67">79</a>
+      </p>
+      <p>
+        11.4<span style="margin-left: 1em"></span>Inverse, vertex and Ward estimates <span
+        style="margin-left: 5mm"></span> <a href="11-gauges-and-block-integration.html#auto-69">85</a>
+      </p>
+      <p>
+        11.5<span style="margin-left: 1em"></span>The local large-field energy <span style="margin-left: 5mm"></span>
+        <a href="11-gauges-and-block-integration.html#auto-70">93</a>
+      </p>
+      <p>
+        11.6<span style="margin-left: 1em"></span>Sector Gaussian integration <span style="margin-left: 5mm"></span>
+        <a href="11-gauges-and-block-integration.html#auto-72">100</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>12<span style="margin-left: 1em"></span>Path actions and the one-loop coupling</b>
+        <span style="margin-left: 5mm"></span> <a href="12-path-actions-and-the-one-loop-coupling.html#auto-76">112</a>
+      </p>
+      <p>
+        12.1<span style="margin-left: 1em"></span>Curvature coordinates and the path action
+        <span style="margin-left: 5mm"></span> <a href="12-path-actions-and-the-one-loop-coupling.html#auto-77">112</a>
+      </p>
+      <p>
+        12.2<span style="margin-left: 1em"></span>Fourth-order matching <span style="margin-left: 5mm"></span> <a
+        href="12-path-actions-and-the-one-loop-coupling.html#auto-78">114</a>
+      </p>
+      <p>
+        12.3<span style="margin-left: 1em"></span>The determinant comparison <span style="margin-left: 5mm"></span>
+        <a href="12-path-actions-and-the-one-loop-coupling.html#auto-79">119</a>
+      </p>
+      <p>
+        12.4<span style="margin-left: 1em"></span>The one-loop coefficient <span style="margin-left: 5mm"></span>
+        <a href="12-path-actions-and-the-one-loop-coupling.html#auto-80">122</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>13<span style="margin-left: 1em"></span>Activities and the inductive step</b> <span
+        style="margin-left: 5mm"></span> <a href="13-activities-and-the-inductive-step.html#auto-81">129</a>
+      </p>
+      <p>
+        13.1<span style="margin-left: 1em"></span>The local expansion <span style="margin-left: 5mm"></span> <a
+        href="13-activities-and-the-inductive-step.html#auto-82">132</a>
+      </p>
+      <p>
+        13.2<span style="margin-left: 1em"></span>Local quadratic subtraction <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-84">150</a>
+      </p>
+      <p>
+        13.3<span style="margin-left: 1em"></span>Forced fusion, activity bounds and the reset
+        <span style="margin-left: 5mm"></span> <a href="13-activities-and-the-inductive-step.html#auto-85">152</a>
+      </p>
+      <p>
+        13.4<span style="margin-left: 1em"></span>Continuity at fixed volume <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-86">158</a>
+      </p>
+      <p>
+        13.5<span style="margin-left: 1em"></span>The Wilson start <span style="margin-left: 5mm"></span> <a href="13-activities-and-the-inductive-step.html#auto-87">159</a>
+      </p>
+      <p>
+        13.6<span style="margin-left: 1em"></span>The specified recursion <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-88">161</a>
+      </p>
+      <p>
+        13.7<span style="margin-left: 1em"></span>Weighted analytic estimates <span style="margin-left: 5mm"></span>
+        <a href="13-activities-and-the-inductive-step.html#auto-89">163</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>14<span style="margin-left: 1em"></span>Trajectories, marked fields and ultraviolet
+        convergence</b> <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-90">177</a>
+      </p>
+      <p>
+        14.1<span style="margin-left: 1em"></span>Trajectories and tuning <span style="margin-left: 5mm"></span>
+        <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-91">178</a>
+      </p>
+      <p>
+        14.2<span style="margin-left: 1em"></span>Marked fields and volume-uniform estimates
+        <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-92">185</a>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.1<span style="margin-left: 1em"></span>One marked insertion <span
+        style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-93">185</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.2<span style="margin-left: 1em"></span>Chessboard seminorms and
+        replicated sources <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-94">192</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.3<span style="margin-left: 1em"></span>Negligible errors and local
+        matching <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-95">200</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.4<span style="margin-left: 1em"></span>Equation identities and
+        coefficient corrections <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-96">204</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.5<span style="margin-left: 1em"></span>Comparison with free fields
+        <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-97">207</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.6<span style="margin-left: 1em"></span>Bounds for lattice differences
+        <span style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-98">217</a></font>
+      </p>
+      <p>
+        <font style="font-size: 92.0%">14.2.7<span style="margin-left: 1em"></span>Bounded approximations <span
+        style="margin-left: 5mm"></span> <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-99">220</a></font>
+      </p>
+      <p>
+        14.3<span style="margin-left: 1em"></span>Full ultraviolet convergence <span style="margin-left: 5mm"></span>
+        <a href="14-trajectories-marked-fields-and-ultraviolet.html#auto-100">224</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>15<span style="margin-left: 1em"></span>Infinite volume and field calculus</b> <span
+        style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-102">231</a>
+      </p>
+      <p>
+        15.1<span style="margin-left: 1em"></span>Volume limits <span style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-103">231</a>
+      </p>
+      <p>
+        15.2<span style="margin-left: 1em"></span>Separated cells and negligible errors <span
+        style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-104">233</a>
+      </p>
+      <p>
+        15.3<span style="margin-left: 1em"></span>Quotient fields <span style="margin-left: 5mm"></span> <a href="15-infinite-volume-and-field-calculus.html#auto-105">234</a>
+      </p>
+      <p>
+        15.4<span style="margin-left: 1em"></span>Euclidean properties <span style="margin-left: 5mm"></span> <a
+        href="15-infinite-volume-and-field-calculus.html#auto-106">237</a>
+      </p>
+      <p>
+        15.5<span style="margin-left: 1em"></span>Repeated reflected words <span style="margin-left: 5mm"></span>
+        <a href="15-infinite-volume-and-field-calculus.html#auto-107">238</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>16<span style="margin-left: 1em"></span>Free fields, Ward identities and
+        rotations</b> <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-108">239</a>
+      </p>
+      <p>
+        16.1<span style="margin-left: 1em"></span>Free fields <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-109">240</a>
+      </p>
+      <p>
+        16.2<span style="margin-left: 1em"></span>Lattice inputs <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-111">247</a>
+      </p>
+      <p>
+        16.3<span style="margin-left: 1em"></span>Free comparison and the conserved line <span
+        style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-112">254</a>
+      </p>
+      <p>
+        16.4<span style="margin-left: 1em"></span>Coordinate reflection spaces and spectral
+        estimates <span style="margin-left: 5mm"></span> <a href="16-free-fields-ward-identities-and-rotations.html#auto-113">257</a>
+      </p>
+      <p>
+        16.5<span style="margin-left: 1em"></span>Ward identities and rotations <span style="margin-left: 5mm"></span>
+        <a href="16-free-fields-ward-identities-and-rotations.html#auto-114">263</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>17<span style="margin-left: 1em"></span>Phases and reconstruction</b> <span style="margin-left: 5mm"></span>
+        <a href="17-phases-and-reconstruction.html#auto-115">270</a>
+      </p>
+      <p>
+        17.1<span style="margin-left: 1em"></span>Compression and phases <span style="margin-left: 5mm"></span> <a
+        href="17-phases-and-reconstruction.html#auto-116">270</a>
+      </p>
+      <p>
+        17.2<span style="margin-left: 1em"></span>Reconstruction <span style="margin-left: 5mm"></span> <a href="17-phases-and-reconstruction.html#auto-119">276</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>18<span style="margin-left: 1em"></span>The trace law and non-free comparisons</b>
+        <span style="margin-left: 5mm"></span> <a href="18-the-trace-law-and-non-free-comparisons.html#auto-120">284</a>
+      </p>
+      <p>
+        18.1<span style="margin-left: 1em"></span>Trace and spectrum <span style="margin-left: 5mm"></span> <a
+        href="18-the-trace-law-and-non-free-comparisons.html#auto-121">284</a>
+      </p>
+      <p>
+        18.2<span style="margin-left: 1em"></span>Precise non-free comparisons <span style="margin-left: 5mm"></span>
+        <a href="18-the-trace-law-and-non-free-comparisons.html#auto-125">301</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>19<span style="margin-left: 1em"></span>Products and contact subtractions</b> <span
+        style="margin-left: 5mm"></span> <a href="19-products-and-contact-subtractions.html#auto-126">305</a>
+      </p>
+      <p>
+        19.1<span style="margin-left: 1em"></span>Products and nested clusters <span style="margin-left: 5mm"></span>
+        <a href="19-products-and-contact-subtractions.html#auto-127">310</a>
+      </p>
+      <p>
+        19.2<span style="margin-left: 1em"></span>Contact subtractions <span style="margin-left: 5mm"></span> <a
+        href="19-products-and-contact-subtractions.html#auto-129">323</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>References</b> <span style="margin-left: 5mm"></span> <a href="references.html#auto-131">332</a>
+      </p>
+    </div>
+<h2 id="auto-40"><a id="sec:continuum-results"></a>6<span style="margin-left: 1em"></span>The continuum limit, stress,
+    phases, trace and products<span style="margin-left: 1em"></span></h2>
+    <p>
+      The lattice family of Section <a href="5-the-renormalization-group.html#sec:renormalization">5</a> is now fixed; its couplings
+      and insertions were chosen before any sequence of volume indices. This
+      section takes the volume limit and identifies the continuum fields:
+      their calculus, the stress tensor and the rotations, the phases and
+      their reconstruction, the trace law and the products. Constants may
+      depend on the group, its realization, the penalty and the construction
+      choices of Section <a href="9-constants-and-order-of-choice.html#sec:constants">9</a>; further dependence is stated.
+    </p>
+    <h3 id="auto-41"><a id="sec:volume-limit"></a>6.1<span style="margin-left: 1em"></span>The volume limit and the field
+    calculus<span style="margin-left: 1em"></span></h3>
+    <p>
+      One volume refinement serves every field and all later constructions.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em; margin-bottom: 1em">
+        <strong class="enunciation-name">Theorem <class style="font-style: normal">6.1</class>. </strong><i><class
+        style="font-style: normal"><strong>(IV. Infinite-volume limit) </strong></class><a id="prop:IV"></a><a
+        id="thm:IV"></a> For every strictly increasing \(\textsf{p} : \mathbb{N} \to
+        \mathbb{N}\), there are a strictly increasing \(\textsf{q} :
+        \mathbb{N} \to \mathbb{N}\) and a multilinear table \(S\) such that
+        the Wilson family converges to \(S\) along \(P = \textsf{p} \circ
+        \textsf{q}\) in the sense of Definition <a href="2-definitions.html#def:D09">2.6</a>. The table
+        satisfies E1&ndash;E7.</i>
+      </p>
+    </div>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong class="enunciation-name">Remark <class style="font-style: normal">6.2</class>. </strong><class style="font-style: normal"><strong>(Dependence
+      on the volume sequence) </strong></class><a id="rem:volume-choice"></a> The limiting table
+      \(S\) may depend on the prescribed sequence \(\textsf{p}\) and the
+      refinement \(\textsf{q}\), hence on the retained volume indices \(P =
+      \textsf{p} \circ \textsf{q}\).
+    </p>
+    <p>
+      Fix \(\textsf{p}\), \(\textsf{q}\), \(P\) and \(S\) from now on.
+    </p>
+    <p>
+      <em>Idea of the proof</em> (Lemmas <a href="15-infinite-volume-and-field-calculus.html#lem:F1">15.1</a>&ndash;<a href="15-infinite-volume-and-field-calculus.html#lem:F3">15.6</a>).
+    </p>
+    <ol>
+      <dt>
+        Step 1
+      </dt><dd>
+        <p>
+          Proposition <a href="5-the-renormalization-group.html#prop:UB">5.8</a> bounds the correlations and all their
+          lattice differences uniformly in the volume; a diagonal extraction
+          along \(\textsf{p}\) gives local smooth limits on \(\text{Conf}_n\)
+          (E6). At each admissible volume the fixed-volume kernels are those
+          of Theorem <a href="5-the-renormalization-group.html#prop:UV">5.9</a>, so the full inner limit is kept; only
+          the outer limit uses a subsequence.
+        </p>
+      </dd>
+      <dt>
+        Step 2
+      </dt><dd>
+        <p>
+          The chessboard seminorm, the cost of repeating one observation
+          throughout the box, gives <a href="2-definitions.html#it:E7">E7</a> at order zero, and the
+          corrected derivative maps below give it at positive orders; lattice
+          reflection positivity passes to the limit, giving <a href="2-definitions.html#it:E5">E5</a>
+          and then <a href="2-definitions.html#it:E4">E4</a>.
+        </p>
+      </dd>
+      <dt>
+        Step 3
+      </dt><dd>
+        <p>
+          A further refinement fixes finitely many coefficient maps in each
+          degree. This auxiliary subsequence concerns finite-dimensional
+          coefficients only; the limits of the correlations are the full
+          ultraviolet limits already established.
+        </p>
+      </dd>
+    </ol>
+    <p>
+      The coefficient maps are needed because the normalization \(a_N^{- d}
+      \textsf{Z}_{N, p, d}^{- 1}\) depends on the degree. The same \(c \in V_d
+      \subset V_e\) defines different lattice fields as \((d, c)\) and as
+      \((e, c)\), and a lattice difference of a degree-\(d\) insertion is a
+      degree-\((d + 1)\) object with yet another normalization; the naive
+      inclusion \(V_d \to V_e\) does not preserve correlations. Lemma <a href="15-infinite-volume-and-field-calculus.html#lem:F2">15.5</a>
+      constructs linear <em>corrected coefficient maps</em> relating these
+      normalizations, and they induce the inclusions and derivatives of the
+      next proposition. Its dimension statement uses a Gaussian comparison
+      theory, introduced by its covariance.
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Definition <class style="font-style: normal">6.3</class>. </strong><class
+      style="font-style: normal"><strong>(Free Maxwell comparison) </strong></class><a id="def:D11"></a>
+      For \(d_{\mathfrak{g}}\) independent colours, let \(A_a^{\alpha}\) be
+      centred generalized Gaussian fields on \(\mathbb{R}^4\) with
+    </p>
+    <center>
+      \(\displaystyle \mathbb{E}A_a^{\alpha} (x) A_b^{\beta} (y) =
+      \delta_{\alpha \beta} \delta_{ab}
+\Gamma (x - y), \qquad \Gamma (x) =
+      \frac{1}{4 \pi^2 |x|^2}, \qquad F_{ab} =
+\partial_a A_b - \partial_b A_a
+      \hspace{0.17em},\)
+    </center>
+    <p style="margin-bottom: 1em">
+      the derivatives taken in the sense of distributions. Let
+      \(M_d^{\text{Max}}\) consist of the complex \(\text{Ad} (G)\)-invariant
+      Wick polynomials in curvature jets of weight at most \(d\), modulo
+      antisymmetry, the linear Bianchi identities and \(\sum_a \partial_a
+      F_{ab} = 0\). Their separated Wick correlations are \(S^{\text{Max}}\).
+    </p>
+    <p>
+      Each component of \(A\) is a massless free field, with covariance \((-
+      \Delta)^{- 1}\) since \(- \Delta \Gamma = \delta_0\), and \(F\) is the
+      free Maxwell field. Wick polynomials in curvature jets at distinct
+      points have smooth correlations, computed by Wick's theorem from
+      derivatives of \(\Gamma\) at nonzero arguments. The relations are of two
+      kinds. Antisymmetry and the Bianchi identities \(\partial_a F_{bc} +
+      \partial_b F_{ca} + \partial_c F_{ab} = 0\) hold identically, since
+      \(F\) is a derivative of \(A\). The equation \(\sum_a \partial_a F_{ab}
+      = 0\) holds only in separated correlations: by \(- \Delta \Gamma =
+      \delta_0\),
+    </p>
+    <center>
+      \(\displaystyle \mathbb{E} \left( \sum_a \partial_a F^{\alpha}_{ab}
+      \right) (x) 
+\hspace{0.17em} F^{\beta}_{cd} (y) = \delta_{\alpha \beta} 
+      (\delta_{bd}
+\partial_{x^c} - \delta_{bc} \partial_{x^d}) \delta_0  (x -
+      y)
+\hspace{0.17em},\)
+    </center>
+    <p>
+      which vanishes for \(x \ne y\), so every separated Wick correlation with
+      a factor of the divergence vanishes; but the divergence is not the zero
+      distribution, since its covariance is \(\delta_{\alpha \beta} 
+      (\partial_b \partial_d - \delta_{bd} \Delta) \delta_0 
+(x - y)\). The
+      quotient by this equation thus records a relation among separated
+      correlations, not an identity of distributions. The comparison of
+      Proposition <a href="#prop:MC">6.7</a> likewise concerns separated correlations at
+      short distances; it does not identify the constructed fields with this
+      Gaussian reference.
+    </p>
+    <p>
+      The constant one is the Maxwell unit, coefficient conjugation gives the
+      real structure, and inclusions keep the same polynomial at a larger
+      weight bound. Free differentiation is \(\partial_a^{\text{Max}} (: P :)
+      = : \partial_a P\):, and the rotation action \(R_d^{\text{Max}} (h) (: P
+      :) = : hP\): is determined by \(hF_{ab}^{\alpha} = \sum_{i, j} h_{ia}
+      h_{jb} F_{ij}^{\alpha}\) and \(h \partial_a = \sum_i h_{ia} \partial_i
+      h\) for \(h \in O (4)\); these operations preserve the defining
+      relations.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Proposition <class style="font-style: normal">6.4</class>.
+        </strong><i><class style="font-style: normal"><strong>(FC. Field calculus)
+        </strong></class><a id="prop:FC"></a> For the table \(S\) of Theorem <a href="#prop:IV">6.1</a>,
+        there are complex linear maps \(\jmath_{d, e} : F_d \to F_e\) for \(d
+        \leqslant e\) and \(\partial_a : F_d \to F_{d + 1}\) for every \(d,
+        a\) such that, for every \(A \in F_d\),</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle \begin{array}{c}
+  \iota_e \circ \jmath_{d, e} =
+          \iota_d, \qquad \iota_{d + 1}  (\partial_a A)
+  = \partial_{x_0^a}
+          \iota_d (A),\\
+  \dim_{\mathbb{C}} F_d = \dim_{\mathbb{C}}
+          M_d^{\text{Max}} \hspace{0.17em} .
+\end{array}\)
+        </center></i>
+      </div>
+    </div>
+    <p>
+      The proof is Lemma <a href="15-infinite-volume-and-field-calculus.html#lem:F2">15.5</a>. The corrected coefficient maps
+      supply representatives of inclusions and derivatives; the equation and
+      rank comparisons of Lemmas <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.6">14.19</a>&ndash;<a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2.10">14.28</a>
+      bound \(\dim F_d\) from above, and the free tests of Lemma <a href="14-trajectories-marked-fields-and-ultraviolet.html#lem:E2-free-tests">14.23</a>,
+      with the free positivity of Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G1.1">16.1</a>, bound it from
+      below. Each \(\iota_d\) is injective by Definition <a href="2-definitions.html#def:D10">2.12</a>, so
+      the inclusions are unique and injective, \(\jmath_{e, f} \jmath_{d, e} =
+      \jmath_{d, f}\), \(\jmath_{d, d} = \text{id}\), and by <a href="2-definitions.html#it:E1">E1</a>
+      they carry \(\boldsymbol{1}_d\) to \(\boldsymbol{1}_e\). Their images
+      are nested, so \(\mathcal{L}= \bigcup_d \iota_d F_d\). Permutation
+      symmetry gives, for \(\boldsymbol{A} \in \prod_i F_{d_i}\), \(x \in
+      \text{Conf}_n\), slot \(i\) and axis \(a\),
+    </p>
+    <center>
+      \(\displaystyle \partial_{x_i^a} S_n  (\boldsymbol{A}; x) = S_n  (A_1,
+      \ldots, \partial_a A_i,
+\ldots, A_n ; x) \hspace{0.17em},\)
+    </center>
+    <p>
+      and <a href="2-definitions.html#it:E2">E2</a> with injectivity of the responses makes inclusions
+      and derivatives commute with conjugation, inclusions commute with
+      \(H_4\), and \(h \partial_a = \sum_b h_{ba} \partial_b h\) for \(h \in
+      H_4\).
+    </p>
+    <p>
+      The table also defines reflection Hilbert spaces along the coordinate
+      axes. They and their slab bounds use only the volume limit and the field
+      calculus (Lemmas <a href="15-infinite-volume-and-field-calculus.html#lem:F3">15.6</a>, <a href="15-infinite-volume-and-field-calculus.html#lem:F4">15.7</a> and Proposition <a
+      href="#prop:FC">6.4</a>), and they enter the rotation argument of Section <a href="#sec:stress">6.2</a>
+      before continuous rotations are available.
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong class="enunciation-name">Definition <class style="font-style: normal">6.5</class>. </strong><class
+      style="font-style: normal"><strong>(Coordinate reflection spaces) </strong></class><a id="def:D14"></a>
+      For an axis \(a\), let \(\mathcal{H}_a^{\text{OS}}\) be the completion
+      of the complex span of words at distinct points in \(\{x^a > 0\}\)
+      modulo the null space of \(\langle w, v \rangle_a = S (\theta_a (w)
+      \hspace{0.17em} v)\), and put \(e^{- tH_a^{\text{OS}}} [v] =
+      [\tau_{te_a} v]\) for \(t \geqslant 0\). Let \(\Omega_a^{\text{OS}}\) be
+      the class of the empty word and \(P^0_a\) the projection onto \(\ker
+      H_a^{\text{OS}}\).
+    </p>
+    <p>
+      By <a href="2-definitions.html#it:E4">E4</a> the form is positive semidefinite; with <a href="2-definitions.html#it:E7">E7</a>,
+      the translations \(\tau_{te_a}\), \(t \geqslant 0\), preserve its null
+      space and define a strongly continuous self-adjoint contraction
+      semigroup, whose generator is \(H_a^{\text{OS}} \geqslant 0\) (proof of
+      Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:H1.1">16.12</a>). Inserting a word between positive-time
+      vectors is bounded after a positive time translation (Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:H1.1">16.12</a>);
+      these slab bounds are the coordinate estimates used before rotations.
+    </p>
+    <h3 id="auto-42"><a id="sec:stress"></a>6.2<span style="margin-left: 1em"></span>Stress and rotations<span style="margin-left: 1em"></span></h3>
+    <p>
+      The fields are compared with Maxwell fields at small distances, through
+      bases that may vary with the radius to accommodate mixing, and a
+      conserved tensor is then normalized by its shell fluxes. The volume
+      refinement and \(S\) remain fixed; the subsequences below concern
+      comparison radii only.
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong class="enunciation-name">Definition <class style="font-style: normal">6.6</class>. </strong><class
+      style="font-style: normal"><strong>(Scaling frames) </strong></class><a id="def:D12"></a> A scaling
+      sequence consists of \(r_k > 0\), \(r_k \to 0\), and complex linear
+      isomorphisms \(\textsf{U}_{k, d}^{\text{sc}} : M_d^{\text{Max}} \to
+      F_d\). It is stable if, for every \(D \in \mathbb{N}\), these maps
+      eventually preserve conjugation, \(H_4\), units and inclusions exactly
+      in all degrees \(d \leqslant e \leqslant D\). Scaling dimensions are
+      included in the maps: a comparison insertion is \(\textsf{U}_{k,
+      d}^{\text{sc}} u\) at \(r_k x\), with no further factor \(r_k^d\).
+    </p>
+    <p>
+      After rescaling positions the interacting correlations approach their
+      Maxwell counterparts; one sequence serves every fixed list of fields.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Proposition <class style="font-style: normal">6.7</class>.
+        </strong><i><class style="font-style: normal"><strong>(MC. Maxwell comparison)
+        </strong></class><a id="prop:MC"></a> There is one stable scaling sequence such
+        that, for every arity \(n\), degree list \((d_i)\) and \(u_i \in
+        M_{d_i}^{\text{Max}}\),</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle S_n  (\textsf{U}_{k, d_i}^{\text{sc}} u_i ; r_k
+          \hspace{0.17em} \cdot
+\hspace{0.17em}) \longrightarrow
+          S^{\text{Max}}_n (u ; \cdot) \quad \text{in }
+L^1_{\text{loc}}
+          (\text{Conf}_n) \hspace{0.17em} .\)
+        </center></i>
+      </div>
+    </div>
+    <p>
+      <em>Idea of the proof</em> (Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G2.1">16.8</a>). The lattice
+      comparison stops near the requested physical scale and compares the
+      correlations with the free Gaussian ones. Finitely many separating
+      correlations make the comparison maps injective, the upper bound
+      \(\dim_{\mathbb{C}} F_d \leqslant \dim_{\mathbb{C}} M_d^{\text{Max}}\)
+      of Proposition <a href="#prop:FC">6.4</a> makes them isomorphisms, and
+      finite-dimensional corrections impose the eventual equalities. Local
+      \(L^1\) convergence is equivalent, by duality and smooth approximation
+      on slightly larger separated compact sets, to convergence uniform over
+      smooth tests with \(\|f\|_{\infty} \leqslant 1\) and fixed compact
+      support. This weaker form is used to construct and normalize the
+      conserved current, before the stress tensor exists.
+    </p>
+    <p>
+      To read translation and angular charge, integrate a conserved symmetric
+      tensor through a shell surrounding one insertion. In a free model the
+      shell integral can be computed, and it differentiates the enclosed
+      correlation. Let \(\phi\) be a massless free scalar field with
+      covariance \(\Gamma\), write \(\langle \cdot \rangle\) for its Wick
+      correlations, and put \(T^{\phi}_{ab} = - : \partial_a \phi
+      \hspace{0.17em} \partial_b \phi : +
+\frac{1}{2} \delta_{ab} : | \nabla
+      \phi |^2\):, the negative of the canonical tensor. With \(\Gamma_0 =
+      \Gamma (y - x_0)\) and \(\Gamma_1 = \Gamma (y - x)\),
+    </p>
+    <center>
+      \(\displaystyle \langle T^{\phi}_{ab} (y) \phi (x_0) \phi (x) \rangle =
+      - \partial_a \Gamma_0 
+\hspace{0.17em} \partial_b \Gamma_1 - \partial_b
+      \Gamma_0  \hspace{0.17em}
+\partial_a \Gamma_1 + \delta_{ab} \nabla
+      \Gamma_0 \cdot \nabla \Gamma_1
+\hspace{0.17em},\)
+    </center>
+    <p>
+      whose divergence in \(y\) vanishes away from \(x_0\) and \(x\), where
+      \(\Delta \Gamma_0 = \Delta \Gamma_1 = 0\). Take a smooth compactly
+      supported \(\chi\) equal to one on the ball of radius \(\epsilon < |x -
+      x_0 |\) about \(x_0\) and vanishing near \(x\). The divergence theorem
+      turns the flux \(- \sum_a \int \partial_a \chi (y)  \langle
+      T^{\phi}_{ab} (y) \phi (x_0) \phi
+(x) \rangle  \hspace{0.17em} dy\) into
+      the integral of \(\sum_a \langle T^{\phi}_{ab} (y) \phi (x_0) \phi (x)
+      \rangle n_a\) over the boundary sphere of that ball, with outer normal
+      \(n\). There \(\nabla \Gamma_0 = - n / (2 \pi^2 \epsilon^3)\), the last
+      two terms cancel, and the integrand is \(\partial_b \Gamma_1 / (2 \pi^2
+      \epsilon^3)\). The sphere has area \(2 \pi^2 \epsilon^3\) and
+      \(\partial_b \Gamma (\cdot - x)\) is harmonic on the ball, so the mean
+      value property gives the flux \(\partial_b \Gamma (x_0 - x) =
+      \partial_{x_0^b}  \langle \phi (x_0) \phi (x)
+\rangle\). This free
+      calculation illustrates the identity that Theorem <a href="#prop:ST">6.10</a>
+      establishes for the constructed fields by a different route.
+    </p>
+    <p>
+      We normalize the stress tensor in the same way, so that its translation
+      flux acts as \(+ \partial_{x_0^b}\) on the enclosed insertion; with the
+      minus sign in the flux below, this gives the negative of the usual
+      Euclidean canonical Maxwell tensor (displayed after Theorem <a href="#prop:ST">6.10</a>).
+      Let \(A \in F_d\), let \(\boldsymbol{B}\) be a list of \(n\) spectator
+      fields at \(x\), and take \((x_0, x) \in \text{Conf}_{n + 1}\).
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Definition <class style="font-style: normal">6.8</class>. </strong><class
+      style="font-style: normal"><strong>(Shell fluxes) </strong></class><a id="def:D13"></a> For \(J_{ab}
+      = J_{ba} \in F_4\) with \(\sum_a \partial_a J_{ab} = 0\) and
+      \(K_{\text{rot}} \in \mathfrak{so} (4)\), choose a real shell cutoff
+      \(\chi \in C_c^{\infty} (\mathbb{R}^4)\) equal to one near \(x_0\) and
+      supported away from the spectators. Define
+    </p>
+    <center style="margin-bottom: 1em">
+      \(\displaystyle \begin{array}{rl}
+  \mathcal{P}_b^J & = - \sum_a \int
+      \partial_a \chi (y) S (J_{ab} (y), A
+  (x_0), \boldsymbol{B}(x)) 
+      \hspace{0.17em} dy,\\
+  \mathcal{Y}_{K_{\text{rot}}}^J & = - \sum_{a, b}
+      \int \partial_a \chi (y) 
+  (K_{\text{rot}} (y - x_0))_b S (J_{ab} (y),
+      A (x_0), \boldsymbol{B}(x)) 
+  \hspace{0.17em} dy \hspace{0.17em}
+      .
+\end{array}\)
+    </center>
+    <p>
+      The integrals avoid every insertion point, and they do not depend on the
+      shell cutoff: two choices differ by a function vanishing near every
+      insertion, integration by parts with Proposition <a href="#prop:FC">6.4</a>
+      removes the divergence term, and the extra angular term is \(\sum_{a, b}
+      (K_{\text{rot}})_{ba} J_{ab} = 0\) since \(K_{\text{rot}}\) is skew and
+      \(J\) symmetric. Conservation makes the flux independent of the radius
+      of the shell; it does not by itself control a flux through a distant
+      surface. A field is real when fixed by conjugation; a family \(J_{ab}
+      \in F_4\) is \(H_4\)-tensorial when \(hJ_{ab} = \sum_{i, j} h_{ia}
+      h_{jb} J_{ij}\) for \(h \in H_4\), conserved when \(\sum_a \partial_a
+      J_{ab} = 0\) in \(F_5\) for every \(b\), and centered when every
+      component has zero one-point function.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em; margin-bottom: 1em">
+        <strong class="enunciation-name">Proposition <class style="font-style: normal">6.9</class>.
+        </strong><i><class style="font-style: normal"><strong>(Conserved line) </strong></class><a
+        id="prop:conserved-line"></a> The centered real symmetric \(H_4\)-tensorial conserved
+        families \((J_{ab})\) in \(F_4\) form a real vector space of dimension
+        one.</i>
+      </p>
+    </div>
+    <p>
+      This is the first assertion of Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G2.2">16.10</a>; its proof shows
+      that divergence maps the centered real symmetric tensorial families onto
+      the corresponding vectors in degree five, with one-dimensional kernel.
+      Along a refinement of the sequence of Proposition <a href="#prop:MC">6.7</a>,
+      positive multiples of the rescaled nonzero member approach the free
+      stress line in the degree-four frames. For a nonzero member \(J\), Lemma
+      <a href="16-free-fields-ward-identities-and-rotations.html#lem:G2.3">16.11</a> constructs complex linear charge maps \(\textsf{p}_b
+      : F_d \to F_{d + 1}\) and \(\textsf{Y}_{K_{\text{rot}}} : F_d \to F_d\),
+      the latter real linear in \(K_{\text{rot}}\), with \(\mathcal{P}_b^J = S
+      ((\textsf{p}_b A) (x_0), \boldsymbol{B}(x))\) and
+      \(\mathcal{Y}_{K_{\text{rot}}}^J = S ((\textsf{Y}_{K_{\text{rot}}} A)
+      (x_0),
+\boldsymbol{B}(x))\) for every degree, field, spectator list,
+      separated configuration and shell cutoff.
+    </p>
+    <p>
+      These charges restore the rotations. Conservation of \(J\) turns the sum
+      of the angular charges of the insertions, each combining
+      \(\textsf{Y}_{K_{\text{rot}}}\) at its own point with the translation
+      charge weighted by the rotated position, into the integral of \(J\)
+      against the derivative of a vector field equal to \(y \mapsto
+      K_{\text{rot}} y\) on a large anisotropic box. For configurations on a
+      coordinate axis through the origin, the coordinate reflection spaces of
+      Definition <a href="#def:D14">6.5</a> show that this integral tends to zero as the
+      box grows (Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G-collinear-flux">16.15</a>; Section <a href="4-strategy-of-the-proof.html#sec:strategy-rotations">4.3</a> explains
+      the mechanism), so the angular sum vanishes there. Finite Ward tests
+      then identify \(\textsf{p}_b\) with \(c_{\star} \partial_b\), and
+      analyticity extends the identity, infinitesimal rotation invariance, to
+      all separated configurations. Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G3.1">16.17</a> thereby
+      constructs continuous complex linear representations \(R_d\) of \(O
+      (4)\), extending \(H_4\), fixing units and commuting with conjugation
+      and inclusions; for a real \(c_{\star} \ne 0\) common to every degree,
+    </p>
+    <center>
+      \(\displaystyle \textsf{L}_d (K_{\text{rot}}) = \left. \frac{d}{dt} R_d
+      (e^{tK_{\text{rot}}})
+\right|_{t = 0}, \qquad \textsf{p}_b = c_{\star}
+      \partial_b, \qquad
+\textsf{Y}_{K_{\text{rot}}} = c_{\star} \textsf{L}_d
+      (K_{\text{rot}})
+\hspace{0.17em} .\)
+    </center>
+    <p>
+      Integrating gives full covariance (Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G3.1">16.17</a>): \(S_n 
+      (R_{d_i} (h) A_i ; hx) = S_n  (\boldsymbol{A}; x)\) for every
+      \(\boldsymbol{A} \in \prod_i F_{d_i}\), \(x \in \text{Conf}_n\) and \(h
+      \in O (4)\). A family is \(O (4)\)-tensorial if \(R_4 (h) J_{ab} =
+      \sum_{i, j} h_{ia} h_{jb} J_{ij}\) for every \(h \in O (4)\). The common
+      constant \(c_{\star}\) fixes the normalization of the stress tensor by
+      its action on fields.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Theorem <class style="font-style: normal">6.10</class>. </strong><i><class
+        style="font-style: normal"><strong>(ST. Stress tensor) </strong></class><a id="prop:ST"></a><a id="thm:ST"></a>
+        There is a real symmetric \(O (4)\)-tensorial family \(T_{ab} \in
+        F_4\) with \(\sum_a \partial_a T_{ab} = 0\) such that, for every
+        degree, field, spectator list, separated configuration and shell
+        cutoff of Definition <a href="#def:D13">6.8</a>, every \(b\) and every
+        \(K_{\text{rot}} \in \mathfrak{so} (4)\),</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle \mathcal{P}_b^T = \partial_{x_0^b} S (A (x_0),
+          \boldsymbol{B}(x)), \qquad
+\mathcal{Y}_{K_{\text{rot}}}^T = S
+          ((\textsf{L}_d (K_{\text{rot}}) A) (x_0),
+\boldsymbol{B}(x))
+          \hspace{0.17em} .\)
+        </center></i>
+      </div>
+    </div>
+    <p>
+      The proof is in Lemmas <a href="16-free-fields-ward-identities-and-rotations.html#lem:G3.1">16.17</a>&ndash;<a href="16-free-fields-ward-identities-and-rotations.html#lem:G3.2">16.18</a>:
+      divide \(J\) by \(c_{\star}\) and average its tensor transform over \(O
+      (4)\) with probability Haar measure. Covariance and the transformation
+      laws of derivatives and generators give the same shell Ward identities
+      for each transformed current, and integration preserves them, as well as
+      symmetry, reality, centering and conservation. Fix this tensor; it is
+      centered, since \(J\) is and \(R_4\) preserves zero one-point values.
+      The free stress \(T^{\text{Max}}\) is normalized by the same shell Ward
+      identities, with \(\partial_a^{\text{Max}}\) and the free generators
+      \(\textsf{L}_d^{\text{Max}}\) (Section <a href="16-free-fields-ward-identities-and-rotations.html#sec:partII-G.1">16.1</a>):
+    </p>
+    <center>
+      \(\displaystyle T^{\text{Max}}_{ab} = - \sum_{c, \alpha} :
+      F_{ac}^{\alpha} F_{bc}^{\alpha} : +
+\frac{\delta_{ab}}{4}  \sum_{i, j,
+      \alpha} : F_{ij}^{\alpha} F_{ij}^{\alpha} :
+\hspace{0.17em} .\)
+    </center>
+    <p>
+      The last comparison includes stress insertions. For a free list \(u_1,
+      \ldots, u_n\), \(u_i \in M_{d_i}^{\text{Max}}\), a stress-slot choice is
+      a subset \(I \subset \{1, \ldots, n\}\) with component pairs \((a_i,
+      b_i)\) for \(i \in I\); put \(A_i^0 = T^{\text{Max}}_{a_i b_i}\) for \(i
+      \in I\) and \(A_i^0 = u_i\) otherwise. The shell Ward identities fix the
+      stress normalization, so its comparison insertion needs only the
+      engineering factor \(r_k^4\). Below, \(D_x^j\) differentiates the whole
+      function \(x \mapsto S_n  (\boldsymbol{A}_k ; r_k x)\).
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Proposition <class style="font-style: normal">6.11</class>.
+        </strong><i><class style="font-style: normal"><strong>(SC. Differentiated short-distance
+        comparison) </strong></class><a id="prop:SC"></a> Along the refinement of the
+        scaling sequence of Proposition <a href="#prop:MC">6.7</a> chosen in Lemma <a
+        href="16-free-fields-ward-identities-and-rotations.html#lem:G2.2">16.10</a>, for every fixed free list and stress-slot choice,
+        every derivative order \(j\) and compact \(\mathcal{K} \subset
+        \text{Conf}_n\), with \(A_{k, i} = r_k^4 T_{a_i b_i}\) on \(I\) for
+        the fixed tensor of Theorem <a href="#prop:ST">6.10</a> and \(A_{k, i} =
+        \textsf{U}_{k, d_i}^{\text{sc}} u_i\) elsewhere,</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle D_x^j S_n  (\boldsymbol{A}_k ; r_k x)
+          \longrightarrow D_x^j S^{\text{Max}}_n
+(\boldsymbol{A}^0 ; x) \quad
+          \text{uniformly on } \mathcal{K} \hspace{0.17em}
+.\)
+        </center></i>
+      </div>
+    </div>
+    <p>
+      Fix this refined sequence \((r_k, \textsf{U}_{k, d}^{\text{sc}})\) from
+      now on. The proof follows Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G3.3">16.19</a>; with \(I =
+      \varnothing\) and \(j = 0\) it gives Proposition <a href="#prop:MC">6.7</a> in
+      uniform form, but the earlier comparison is needed first, to construct
+      the tensor. Along this sequence, for fixed \(d, a, K_{\text{rot}}\), the
+      transported infinitesimal actions converge in operator norm: \(r_k
+      (\textsf{U}_{k, d + 1}^{\text{sc}})^{- 1} \partial_a
+      \textsf{U}_{k,
+d}^{\text{sc}} \to \partial_a^{\text{Max}}\) and
+      \((\textsf{U}_{k, d}^{\text{sc}})^{- 1} \textsf{L}_d
+      (K_{\text{rot}})
+\textsf{U}_{k, d}^{\text{sc}} \to
+      \textsf{L}_d^{\text{Max}} (K_{\text{rot}})\).
+    </p>
+    <h3 id="auto-43"><a id="sec:phases"></a>6.3<span style="margin-left: 1em"></span>Phases and reconstruction<span
+    style="margin-left: 1em"></span></h3>
+    <p>
+      Compression to zero energy separates the mixed correlations into phases.
+      In the reflection space of the time axis, a long empty time interval
+      removes the positive-energy components; the word insertions that survive
+      commute on the zero-energy space, and a character of the algebra they
+      generate assigns compatible scalar values to all of them. The phases are
+      these characters. We now use the fourth coordinate as time.
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong class="enunciation-name">Definition <class style="font-style: normal">6.12</class>. </strong><class
+      style="font-style: normal"><strong>(Compression) </strong></class><a id="def:compression"></a> For
+      \(h_{\text{sl}} > 0\) and a word \(w\) with times in \((0,
+      h_{\text{sl}})\), let \(\textsf{B}_{h_{\text{sl}}} (w)\) be the bounded
+      extension to \(\mathcal{H}_4^{\text{OS}}\) (Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:H1.1">16.12</a>) of
+      the slab insertion \(A_w v = w \hspace{0.17em} \tau_{h_{\text{sl}} e_4}
+      v\) on positive-time words \(v\), and put \(M^0 (w) = P^0_4
+      \textsf{B}_{h_{\text{sl}}} (w) |_{\ker H_4^{\text{OS}}}\).
+    </p>
+    <p>
+      The slab insertion places \(w\) in the slab \((0, h_{\text{sl}})\) below
+      the translated state. A separated word is translated into a slab to
+      define its compression; Lemma <a href="17-phases-and-reconstruction.html#lem:H1.2">17.1</a> proves independence of
+      width and placement and that the compressed operators generate a
+      separable commutative unital C<sup>\(\ast\)</sup>-algebra
+    </p>
+    <center>
+      \(\displaystyle \mathfrak{A}_0 = C^{\ast}  (M^0 (w) : w \text{
+      separated})\)
+    </center>
+    <p>
+      with cyclic and separating vector \(\Omega_4^{\text{OS}}\). Its vacuum
+      state \(a \mapsto \langle \Omega_4^{\text{OS}}, a \Omega_4^{\text{OS}}
+      \rangle\) satisfies \(S (w) = \langle \Omega_4^{\text{OS}}, M^0 (w)
+      \Omega_4^{\text{OS}} \rangle\) by translation invariance; the measure
+      below represents this state on the character space, and the separating
+      property gives full support. Call a character \(\xi\) a phase and
+      \(S^{\xi}\) its table.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Theorem <class style="font-style: normal">6.13</class>. </strong><i><class
+        style="font-style: normal"><strong>(PH. Phase decomposition) </strong></class><a id="prop:PH"></a>
+        The algebra \(\mathfrak{A}_0\) has a compact metric character space
+        \(\textsf{X}\) with a full-support probability measure \(\nu\) such
+        that, for every separated word \(w\),</i>
+      </p>
+      <i><center>
+        \(\displaystyle S^{\xi} (w) = \xi (M^0 (w)), \qquad S (w) =
+        \int_{\textsf{X}} S^{\xi} (w) 
+\hspace{0.17em} d \nu (\xi)
+        \hspace{0.17em} .\)
+      </center></i>
+      <p style="margin-bottom: 1em">
+        <i>Each phase satisfies E1&ndash;E7 and has exactly the null spaces
+        \(\mathcal{N}_d (S^{\xi}) =\mathcal{N}_d (S)\). The identities of FC,
+        \(O (4)\) covariance and ST hold with \(S^{\xi}\) in place of \(S\),
+        for the same maps and tensor \(T\). For fixed \(w\), \(\xi \mapsto
+        S^{\xi} (w)\) is continuous.</i>
+      </p>
+    </div>
+    <p>
+      <em>Idea of the proof</em> (Lemmas <a href="16-free-fields-ward-identities-and-rotations.html#lem:H1.1">16.12</a>, <a href="17-phases-and-reconstruction.html#lem:H1.2">17.1</a>
+      and <a href="17-phases-and-reconstruction.html#lem:H1.3">17.3</a>). The matrix element \(\langle [u], M^0 (w_1) M^0
+      (w_2) [v] \rangle\) is a limit of correlations of four words placed far
+      apart in time; the long time intervals project onto \(\ker
+      H_4^{\text{OS}}\). The same four words can instead be spread along a
+      second positive coordinate direction, so that the two middle words occur
+      in the opposite order. By \(O (4)\) covariance (Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G3.1">16.17</a>)
+      both arrangements have the same limit, so \(M^0 (w_1) M^0 (w_2) = M^0
+      (w_2) M^0 (w_1)\): rotation covariance is an input to the phase
+      decomposition. Reflection positivity holds in each phase because the
+      compressed reflected Gram matrices are positive operators and characters
+      are positive; that no field becomes null in a phase uses the free tests
+      at short distances. Commutativity alone gives neither.
+    </p>
+    <p>
+      For each phase apply Definitions <a href="#def:D14">6.5</a> and <a href="#def:compression">6.12</a>
+      to \(S^{\xi}\), obtaining \(\mathcal{H}_{4, \xi}^{\text{OS}}\), \(H_{4,
+      \xi}^{\text{OS}}\) and \(\Omega_{\xi}^{\text{OS}}\). Fix \(\xi_{\ast}\)
+      in the full-measure set with one-dimensional time-axis reflection ground
+      space supplied by Lemma <a href="17-phases-and-reconstruction.html#lem:H1.3">17.3</a>; Theorem <a href="#prop:RC">6.16</a>
+      extends ground-space uniqueness to every phase. Two further notions
+      enter the reconstruction and the trace law.
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong class="enunciation-name">Definition <class style="font-style: normal">6.14</class>. </strong><class
+      style="font-style: normal"><strong>(Bounded weak commutant) </strong></class><a id="def:D14d"></a> A
+      bounded operator \(B\) belongs to the weak commutant if, for every
+      smeared field \(\Phi\) and all \(u, v \in \mathcal{D}\), one has \(u \in
+      \text{Dom} \hspace{0.17em} \Phi^{\ast}\) (automatic by <a href="2-definitions.html#def:W1">W1</a>)
+      and \(\langle \Phi^{\ast} u, Bv \rangle = \langle u, B \Phi v \rangle\),
+      where \(\Phi^{\ast}\) is the Hilbert-space adjoint.
+    </p>
+    <p style="margin-top: 1em; margin-bottom: 1em">
+      <strong class="enunciation-name">Definition <class style="font-style: normal">6.15</class>. </strong><class
+      style="font-style: normal"><strong>(Hermitian scalar labels) </strong></class><a id="def:D14e"></a> A
+      label is Hermitian if \(\ell^{\ast} = \ell\), and Lorentz scalar if
+      \(\rho_{\text{lab}}  (\Lambda, 0) \ell = \ell\) for every \(\Lambda \in
+      SO^+ (1, 3)\).
+    </p>
+    <p>
+      For the theory at a phase \(\xi\) write \(\mathcal{H}_{\xi}\),
+      \(\mathcal{D}_{\xi}\), \(\Omega_{\xi}\), \(\Phi_{\xi}\),
+      \(\textsf{T}_{\xi}\), and define its energy by \(\textsf{T}_{\xi} (te_4)
+      = e^{itH_{\xi}}\). Its reflection comparison map is the linear isometry
+      \(\textsf{J}_{\xi}^{\text{OS}} : \mathcal{H}_{\xi} \to
+      \mathcal{H}_{4,
+\xi}^{\text{OS}}\) with \(\textsf{J}_{\xi}^{\text{OS}}
+      \Omega_{\xi} = \Omega_{\xi}^{\text{OS}}\) that sends each product of
+      smeared fields applied to the vacuum to the norm limit of its
+      heat-regularized positive-time reflection vectors as the ordered heights
+      tend to zero (proofs of Lemmas <a href="17-phases-and-reconstruction.html#lem:H2.1">17.5</a> and <a href="17-phases-and-reconstruction.html#lem:H2.2">17.8</a>).
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Theorem <class style="font-style: normal">6.16</class>. </strong><i><class
+        style="font-style: normal"><strong>(RC. Reconstruction) </strong></class><a id="prop:RC"></a> For
+        every \(\xi \in \textsf{X}\), there are a faithful Wightman theory
+        (Definition <a href="2-definitions.html#def:wightman">2.14</a>) on \(\mathcal{L}\) and functions
+        \(\textsf{F}_n^{\xi}\) satisfying Definitions <a href="2-definitions.html#def:D15">2.16</a> and <a
+        href="2-definitions.html#def:D14f">2.17</a> with the response maps \(\iota_d\) of Definition <a
+        href="2-definitions.html#def:D10">2.12</a>. Its OS comparison map \(\textsf{J}_{\xi}^{\text{OS}}\)
+        is unitary, intertwines spatial translations and satisfies
+        \(\textsf{J}_{\xi}^{\text{OS}} e^{- sH_{\xi}} = e^{- sH_{4,
+        \xi}^{\text{OS}}}
+\textsf{J}_{\xi}^{\text{OS}}\) for \(s \geqslant
+        0\), and</i>
+      </p>
+      <i><center>
+        \(\displaystyle \ker H_{\xi} =\mathbb{C} \Omega_{\xi}, \qquad \ker
+        H_{4, \xi}^{\text{OS}}
+=\mathbb{C} \Omega_{\xi}^{\text{OS}}
+        \hspace{0.17em} .\)
+      </center></i>
+      <p style="margin-bottom: 1em">
+        <i>Every bounded operator in the weak commutant of its fields is
+        scalar.</i>
+      </p>
+    </div>
+    <p>
+      <em>Idea of the proof</em> (Lemmas <a href="17-phases-and-reconstruction.html#lem:H2.1">17.5</a>&ndash;<a href="17-phases-and-reconstruction.html#lem:H2.4">17.11</a>).
+      Reflection positivity supplies the Hilbert spaces and the nonnegative
+      energy; the slab bounds supply the growth estimates behind the boundary
+      values; the restored rotations, continued to boosts, supply Lorentz
+      covariance and, with the continuation, locality. The uniform low-energy
+      estimate of Section <a href="4-strategy-of-the-proof.html#sec:strategy-reconstruction">4.4</a>, continuity of the
+      vacuum-subtracted heat pairings and full support of \(\nu\) extend
+      vacuum uniqueness from almost every phase to every phase, so the choice
+      of \(\xi_{\ast}\) stays valid. The same lemmas give joint Schwartz
+      distributions, phase averages and stress continuation.
+    </p>
+    <p>
+      The label maps are common to all phases. The adjoint is induced by time
+      reflection followed by conjugation, \((\iota_d A)^{\ast} = \iota_d  (R_d
+      (\textsf{s}_4^{\text{refl}}) \bar{A})\) (Lemma <a href="17-phases-and-reconstruction.html#lem:H-fields">17.7</a>). The
+      Lorentz label action is the continuation of \(R_d\) [<a href="references.html#bib-FrohlichOsterwalderSeiler1983">15</a>]:
+      spatial rotations keep their Euclidean action, and for \(i = 1, 2, 3\)
+      the boost along \(e_i\) has generator \(- i \textsf{L}_d (K_{4 i})\),
+      where \(K_{4 i} = e_4 e_i^{\textsf{T}} - e_i e_4^{\textsf{T}}\)
+      generates rotation in the \((e_4, e_i)\) plane. In particular, a real
+      \(O (4)\)-invariant field gives a Hermitian Lorentz scalar label. Retain
+      the theory at \(\xi_{\ast}\) and suppress its subscript in
+      \(\mathcal{H}, \mathcal{D}, \Omega, \Phi\) and the other relativistic
+      data.
+    </p>
+    <h3 id="auto-44"><a id="sec:trace-products"></a>6.4<span style="margin-left: 1em"></span>Trace and products<span style="margin-left: 1em"></span></h3>
+    <p>
+      Several ultraviolet statements of different strength are proved, and
+      they should not be confused.
+    </p>
+    <center>
+      <p style="margin-top: 0.5em; margin-bottom: 0.5em">
+        <font style="font-size: 84.0%"><table style="display: inline-table; vertical-align: middle">
+          <tbody><tr>
+            <td style="text-align: center; vertical-align: middle; border-top: 1px solid; border-bottom: 1px solid">Statement</td>
+            <td style="text-align: center; vertical-align: middle; border-top: 1px solid; border-bottom: 1px solid">What it asserts</td>
+          </tr><tr>
+            <td style="text-align: center; vertical-align: middle">Running (Theorem <a href="5-the-renormalization-group.html#prop:MT">5.6</a>)</td>
+            <td style="text-align: center; vertical-align: middle">A volume-uniform leading logarithmic slope of the bare
+            coupling of the tuned family</td>
+          </tr><tr>
+            <td style="text-align: center; vertical-align: middle">Maxwell comparison (Proposition <a href="#prop:MC">6.7</a>)</td>
+            <td style="text-align: center; vertical-align: middle">Convergence along a sequence of radii, through
+            scale-dependent frames that include field renormalization and
+            mixing; not a perturbative expansion of each composite
+            correlation</td>
+          </tr><tr>
+            <td style="text-align: center; vertical-align: middle">Stress comparison (Proposition <a href="#prop:SC">6.11</a>)</td>
+            <td style="text-align: center; vertical-align: middle">The same, with derivatives and with the normalized
+            stress insertions</td>
+          </tr><tr>
+            <td style="text-align: center; vertical-align: middle; border-bottom: 1px solid">Trace law (Theorem <a href="#prop:TR">6.18</a>)</td>
+            <td style="text-align: center; vertical-align: middle; border-bottom: 1px solid">A specific asymptotic through all positive radii, in
+            the selected phase</td>
+          </tr></tbody>
+        </table></font>
+      </p>
+    </center>
+    <p>
+      The trace is centered in the phase already selected.
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Definition <class style="font-style: normal">6.17</class>. </strong><class
+      style="font-style: normal"><strong>(Centered trace) </strong></class><a id="def:D16"></a> For the
+      tensor \(T\) fixed after Theorem <a href="#prop:ST">6.10</a> and \(r > 0\), put
+    </p>
+    <center style="margin-bottom: 1em">
+      \(\displaystyle \begin{array}{rlllll}
+  \tau & = \sum_{a = 1}^4 T_{aa},
+      & e_{\text{tr}} & = S^{\xi_{\ast}} (\tau), &
+  \Theta & = \tau -
+      e_{\text{tr}} \boldsymbol{1}_4,\\
+  G_{\Theta} (r) & = S_2^{\xi_{\ast}} 
+      (\Theta, \Theta ; - re_4 / 2, re_4 /
+  2), & A_G & = \frac{3
+      d_{\mathfrak{g}}}{\pi^4} \hspace{0.17em} . &  & 
+\end{array}\)
+    </center>
+    <p>
+      The one-point value is position independent, and centering removes the
+      vacuum contribution in the selected phase. Adding a real multiple of
+      \(\delta_{ab} \boldsymbol{1}_4\) to \(T\) preserves its shell Ward
+      identities, the limit in Proposition <a href="#prop:SC">6.11</a> and \(\Theta\).
+      The fixed stress tensor is centered in the mixture; the selected-phase
+      centering subtracts its own one-point value.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Theorem <class style="font-style: normal">6.18</class>. </strong><i><class
+        style="font-style: normal"><strong>(TR. Trace law) </strong></class><a id="prop:TR"></a> The
+        selected field \(\Theta\) is nonzero, real and \(O (4)\) invariant;
+        its label \(\iota_4 \Theta\) is Hermitian and Lorentz scalar
+        (Definition <a href="#def:D14e">6.15</a>). For every \(f \in \mathcal{S}\),</i>
+      </p>
+      <i><center>
+        \(\displaystyle \langle \Omega, \Phi (\iota_4 \Theta, f) \Omega
+        \rangle = 0 \hspace{0.17em} .\)
+      </center></i>
+      <p>
+        <i>As \(r \downarrow 0\) through all positive radii,</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle \lim_{r \downarrow 0} r^8 \log^2 (1 / r) G_{\Theta}
+          (r) = A_G > 0
+\hspace{0.17em} .\)
+        </center></i>
+      </div>
+    </div>
+    <p>
+      The amplitude comes from the free scalar curvature square, with \(\alpha
+      = 1, \ldots, d_{\mathfrak{g}}\) indexing an orthonormal colour basis:
+    </p>
+    <center>
+      \(\displaystyle \mathcal{O}_{F^2} = \frac{1}{4}  \sum_{a, b, \alpha} :
+      F_{ab}^{\alpha}
+F_{ab}^{\alpha} :, \qquad S^{\text{Max}}_2
+      (\mathcal{O}_{F^2},
+\mathcal{O}_{F^2} ; - e_4 / 2, e_4 / 2) = \frac{3
+      d_{\mathfrak{g}}}{\pi^4}
+\hspace{0.17em} .\)
+    </center>
+    <p>
+      At running coupling \(\beta\) the scalar trace coefficient is \(4 d_2 /
+      \beta\), with \(d_2 = - b_0 / 2\), computed from a lattice Ward identity
+      and the conserved line (Section <a href="4-strategy-of-the-proof.html#sec:strategy-trace">4.5</a>, Proposition <a href="18-the-trace-law-and-non-free-comparisons.html#prop:I-coefficient">18.9</a>);
+      since \(\kappa_G = 2 b_0\), its leading value at radius \(r\) is \(4 d_2
+      / (\kappa_G \log (1 / r)) = - 1 / \log (1 / r)\), and squaring it with
+      the free correlation gives \(A_G\) (Section <a href="4-strategy-of-the-proof.html#sec:strategy-trace">4.5</a>). The
+      comparison needs fourth-order information beyond Proposition <a href="#prop:MC">6.7</a>,
+      with the rate that the slowly growing coefficients require; its
+      estimates are uniform in the phase, although the theorem is stated at
+      \(\xi_{\ast}\) only.
+    </p>
+    <p>
+      <em>Idea of the proof</em> (Section <a href="18-the-trace-law-and-non-free-comparisons.html#sec:partII-I">18</a>; Lemmas <a href="18-the-trace-law-and-non-free-comparisons.html#lem:I1.1">18.1</a>,
+      <a href="18-the-trace-law-and-non-free-comparisons.html#lem:I1.2">18.2</a>, <a href="18-the-trace-law-and-non-free-comparisons.html#lem:I-radii">18.3</a> and <a href="18-the-trace-law-and-non-free-comparisons.html#lem:I-transfer">18.8</a>). The
+      trace-coefficient step uses the raw right-inverse convergence in Lemma
+      <a href="18-the-trace-law-and-non-free-comparisons.html#lem:I-transfer">18.8</a>; that convergence remains open, so the following
+      outline is conditional on it.
+    </p>
+    <ol>
+      <dt>
+        Step 1
+      </dt><dd>
+        <p>
+          Begin with any sequence of positive radii tending to zero.
+        </p>
+      </dd>
+      <dt>
+        Step 2
+      </dt><dd>
+        <p>
+          Adjustable stopping levels give the comparison along a subsequence,
+          at generic configurations, not at the time-axis pair defining
+          \(G_{\Theta}\).
+        </p>
+      </dd>
+      <dt>
+        Step 3
+      </dt><dd>
+        <p>
+          The positive spectral representation below makes \(G_{\Theta}\) real
+          and nonincreasing; the monotone function is \(G_{\Theta}\) itself,
+          not \(r^8 \log^2 (1 / r) G_{\Theta} (r)\).
+        </p>
+      </dd>
+      <dt>
+        Step 4
+      </dt><dd>
+        <p>
+          By \(O (4)\) invariance, generic separations slightly below and
+          slightly above the target radius bound \(G_{\Theta}\) there from
+          both sides.
+        </p>
+      </dd>
+      <dt>
+        Step 5
+      </dt><dd>
+        <p>
+          Every starting sequence thus has a subsequence with the same
+          normalized limit, which gives the limit through all radii.
+        </p>
+      </dd>
+    </ol>
+    <p>
+      The same proof identifies centering on the word domain, \(\Phi (\iota_4
+      \Theta, f) = \Phi (\iota_4 \tau, f) - e_{\text{tr}} (\int
+      f)
+\text{Id}_{\mathcal{H}}\), and constructs the unique positive
+      tempered spectral measure \(\mu_{\Theta}\), supported in \(\bar{V}_+\),
+      with
+    </p>
+    <center>
+      \(\displaystyle d \mu_{\Phi (\iota_4 \Theta, f) \Omega} = | \hat{f}_+
+      |^2  \hspace{0.17em} d
+\mu_{\Theta}, \qquad G_{\Theta} (r) = \int e^{-
+      r\mathbf{p}^4} 
+\hspace{0.17em} d \mu_{\Theta} (\mathbf{p})  \quad (r >
+      0) \hspace{0.17em},\)
+    </center>
+    <p>
+      where \(\hat{f}_+ (\mathbf{p}) = \int e^{i\mathbf{p} \cdot x} f (x) 
+      \hspace{0.17em}
+dx\). Its Lorentz invariance and high-energy limits are
+      Lemmas <a href="18-the-trace-law-and-non-free-comparisons.html#lem:I1.2">18.2</a> and <a href="18-the-trace-law-and-non-free-comparisons.html#lem:I1.3">18.10</a>. Finite Wick profiles
+      cannot reproduce the factor \(r^{- 8} \log^{- 2} (1 / r)\).
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Proposition <class style="font-style: normal">6.19</class>.
+        </strong><i><class style="font-style: normal"><strong>(NF. Finite-profile exclusion)
+        </strong></class><a id="prop:NF"></a> For every finite Wick profile
+        \(W_{\text{Wick}}\) and every \(\delta > 0\), there is \(0 < r <
+        \delta\) such that</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle G_{\Theta} (r) \ne W_{\text{Wick}} (r)
+          \hspace{0.17em} .\)
+        </center></i>
+      </div>
+    </div>
+    <p>
+      The reason is the form of the expansions (Lemma <a href="18-the-trace-law-and-non-free-comparisons.html#lem:I2.1">18.11</a>).
+      Each mass-shell kernel has an expansion to every finite order in integer
+      powers of \(r\) and nonnegative powers of \(\log r\), so a finite
+      profile is, to bounded error, a finite sum of monomials \(r^a (\log
+      r)^k\) with \(a \in \mathbb{Z}\), \(k \in \mathbb{N}\). Multiplication
+      by \(r^8 \log^2 (1 / r)\) makes the terms with \(a > - 8\) vanish and
+      the leading remaining nonzero term diverge, so a finite limit must be
+      zero; the positive limit of Theorem <a href="#prop:TR">6.18</a> excludes equality
+      on every interval \((0, \delta)\). Lemma <a href="18-the-trace-law-and-non-free-comparisons.html#lem:I2.2">18.13</a> treats
+      polynomial mass-shell comparisons, and Lemmas <a href="18-the-trace-law-and-non-free-comparisons.html#lem:I2.3">18.16</a> and <a
+      href="8-a-weaker-existence-statement.html#lem:I2.4">8.10</a> give Fock countertests with their own comparison classes.
+    </p>
+    <p>
+      The phase quantifiers differ from statement to statement, and the
+      following table records them.
+    </p>
+    <center>
+      <p style="margin-top: 0.5em; margin-bottom: 0.5em">
+        <font style="font-size: 84.0%"><table style="display: inline-table; vertical-align: middle">
+          <tbody><tr>
+            <td style="text-align: center; vertical-align: middle; border-top: 1px solid; border-bottom: 1px solid">Statement</td>
+            <td style="text-align: center; vertical-align: middle; border-top: 1px solid; border-bottom: 1px solid">Scope</td>
+          </tr><tr>
+            <td style="text-align: center; vertical-align: middle">Slab, comparison and low-energy estimates</td>
+            <td style="text-align: center; vertical-align: middle">Uniform in the phase</td>
+          </tr><tr>
+            <td style="text-align: center; vertical-align: middle">Vacuum uniqueness in the proof of Theorem <a href="#prop:PH">6.13</a></td>
+            <td style="text-align: center; vertical-align: middle">Almost every phase (an intermediate step)</td>
+          </tr><tr>
+            <td style="text-align: center; vertical-align: middle">Reconstruction, Theorem <a href="#prop:RC">6.16</a></td>
+            <td style="text-align: center; vertical-align: middle">Every phase</td>
+          </tr><tr>
+            <td style="text-align: center; vertical-align: middle">Trace law, Theorem <a href="#prop:TR">6.18</a></td>
+            <td style="text-align: center; vertical-align: middle">The selected phase \(\xi_{\ast}\); uniform estimates in
+            its proof do not change this</td>
+          </tr><tr>
+            <td style="text-align: center; vertical-align: middle; border-bottom: 1px solid">Product expansion, Theorem <a href="#prop:OP">6.20</a></td>
+            <td style="text-align: center; vertical-align: middle; border-bottom: 1px solid">Every phase and the mixture; degree cutoff and
+            spectators fixed before the threshold, states and positions after
+            it</td>
+          </tr></tbody>
+        </table></font>
+      </p>
+    </center>
+    <p>
+      The product expansion is a decoder, stated for the tables \(S^{\zeta}\),
+      \(\zeta \in \textsf{X} \sqcup \{ \text{mix} \}\), on the common quotient
+      fields. For each degree \(j\), finitely many probe words placed away
+      from the origin, with biorthogonal coordinate functionals, distinguish
+      the fields of \(F_j\). Applied to a cluster of fields at positions \(x\)
+      around a centre \(o\), the probes read off the field with the same
+      answers, averaged over \(O (4)\) and conjugation; lower degrees are
+      removed before the next one is read, and the coordinates in the basis
+      \(O_{j, \lambda}\) are the coefficients \(c_{j, \lambda} 
+      (\boldsymbol{A}; x, o)\) (Definitions <a href="19-products-and-contact-subtractions.html#def:D31">19.3</a>&ndash;<a href="19-products-and-contact-subtractions.html#def:D33">19.5</a>).
+      For two fields, \(A (x) B (0) \sim C^{\boldsymbol{1}}_{AB} (x)
+      \boldsymbol{1}+ \sum_{\lambda}
+C^{\lambda}_{AB} (x) O_{\lambda} (0) +
+      \cdots\) is tested inside every correlation with distant spectators, and
+      the error after degree \(D\) is at most \(r^{D + 1 - d_A - d_B -
+      \varepsilon}\): for small \(D\) it may still be singular, and what
+      improves with \(D\) is its order. The probes, the bases and the
+      coefficients are fixed once from the mixed table, before spectators,
+      state indices and truncations; spectator and state independence hold by
+      construction, and the content of the theorem is the size of the
+      remainder of Definition <a href="2-definitions.html#def:D18">2.19</a>. The coefficients depend on
+      this prescription, the table and the probes; they are not a canonical
+      expansion, and the theorem concerns this one coefficient system.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Theorem <class style="font-style: normal">6.20</class>. </strong><i><class
+        style="font-style: normal"><strong>(OP. Operator product expansion) </strong></class><a
+        id="prop:OP"></a> For every finite list \(\boldsymbol{A}\), \(M_{\text{geo}}
+        \geqslant 0\), \(\eta, \varepsilon > 0\), \(j \in \mathbb{N}\) and
+        \(\lambda \in \text{Ch}_j\), some \(r_0 > 0\) gives, for \(0 < r <
+        r_0\) and every \((r, M_{\text{geo}}, \eta)\)-cluster,</i>
+      </p>
+      <i><center>
+        \(\displaystyle |c_{j, \lambda} (\boldsymbol{A}; x, o) | \leqslant
+        r^{j -
+|\boldsymbol{A}|_{\deg} - \varepsilon} \hspace{0.17em} .\)
+      </center></i>
+      <p>
+        <i>For every pair of finite lists \(\boldsymbol{A}, \boldsymbol{B}\),
+        \(M_{\text{geo}} \geqslant 0\), \(\eta, \delta_{\text{sp}},
+        \varepsilon > 0\) and \(D \in \mathbb{N}\), some \(r_1 > 0\) gives,
+        for \(0 < r < r_1\), such clusters, \(\delta_{\text{sp}}\)-clear
+        spectators and all state indices \(\zeta\),</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle |\mathcal{R}_D^{\zeta} | \leqslant r^{D + 1 -
+          |\boldsymbol{A}|_{\deg} -
+\varepsilon} \hspace{0.17em} .\)
+        </center></i>
+      </div>
+    </div>
+    <p>
+      <em>Idea of the proof</em> (Lemmas <a href="19-products-and-contact-subtractions.html#lem:J1.1">19.6</a>&ndash;<a href="19-products-and-contact-subtractions.html#lem:J1.2">19.10</a>).
+      The discarded part is bounded in the compression algebra; evaluation at
+      a character or at the vacuum state does not increase the bound, so it
+      holds in every phase and in the mixture. The bound enters through
+      moments (Lemma <a href="17-phases-and-reconstruction.html#lem:H-roots">17.2</a>): lattice cluster replacement makes a
+      group of insertions minus its matched field, one insertion at the
+      centre, small in chessboard seminorm; the chessboard estimate applied to
+      \(2 n\) widely translated, alternately conjugated copies bounds the
+      \(n\)th vacuum moment of the compressed remainder \(U\), so that \(\int
+      | \xi (U) |^{2 n}  \hspace{0.17em} d \nu (\xi) \leqslant B^{2 n}\) for
+      every \(n\), and continuity in \(\xi\) with full support of \(\nu\)
+      gives \(\sup_{\xi} | \xi (U) | \leqslant B\). Lattice estimates at three
+      scales, the resolution of the insertions, the fusion scale and the
+      exterior cell, give the degree count \(D + 1 - |\boldsymbol{A}|_{\deg}\)
+      up to factors \(e^{o (\log (1 / r))}\), which \(r^{- \varepsilon}\)
+      absorbs for small \(r\). The two thresholds have the separate
+      dependencies of the statement. The estimate holds at each finite
+      truncation \(D\); no series in \(D\) is claimed to converge. Lemmas <a
+      href="19-products-and-contact-subtractions.html#lem:J1.4">19.13</a>&ndash;<a href="19-products-and-contact-subtractions.html#lem:J1.5">19.14</a> and Remark <a href="19-products-and-contact-subtractions.html#lem:J1.3">19.15</a>
+      give nested and integrated estimates.
+    </p>
+    <p>
+      Contact subtractions use the same original fields and correlations, with
+      separate projections that extract fields through finite correlation
+      probes; their clearance is a radius keeping the collapsed cluster
+      separated from these probes, independent of the spectator clearance
+      \(\delta_{\text{sp}}\). A collision forest is a family of subsets of
+      slots, any two disjoint or nested. Since \(S_n^{\zeta}\) satisfies <a
+      href="2-definitions.html#it:E7">E7</a>, some contact extension exists by the standard extension
+      theorem for kernels of polynomial growth at the diagonals; the content
+      of the next theorem is that the explicit subtraction of normal Taylor
+      jets along collision forests produces one, with the local order bounds
+      of Lemma <a href="19-products-and-contact-subtractions.html#lem:J2.3">19.21</a>.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Theorem <class style="font-style: normal">6.21</class>. </strong><i><class
+        style="font-style: normal"><strong>(CT. Contact extension) </strong></class><a id="prop:CT"></a>
+        For every state index \(\zeta\), arity \(n\) and list \(\boldsymbol{A}
+        \in \mathbb{F}^n\), the contact construction of Section <a href="19-products-and-contact-subtractions.html#sec:partII-J.2">19.2</a>,
+        fixed on the underlying prescription of Lemma <a href="19-products-and-contact-subtractions.html#lem:J1.1">19.6</a>, gives
+        a distribution \(\mathfrak{D}_{\boldsymbol{A}}^{\zeta}\) on
+        \(\mathbb{R}^{4 n}\) such that, for every separated test \(f\),</i>
+      </p>
+      <div style="margin-bottom: 1em">
+        <i><center>
+          \(\displaystyle \mathfrak{D}_{\boldsymbol{A}}^{\zeta} (f) = \int f
+          (x) S_n^{\zeta} 
+(\boldsymbol{A}; x)  \hspace{0.17em} dx
+          \hspace{0.17em} .\)
+        </center></i>
+      </div>
+    </div>
+    <p>
+      The proof is in Lemmas <a href="19-products-and-contact-subtractions.html#lem:J2.1">19.19</a>&ndash;<a href="19-products-and-contact-subtractions.html#lem:J2.3">19.21</a>. For
+      two insertions, write the test in the centroid and one relative
+      coordinate; for each contact degree \(w\) below the critical order \(L\)
+      of the pair, subtract the degree-\(w\) contact projection of the pair at
+      the centroid, tested against the Taylor jet of order \(L - 1 - w\) of
+      the test in the relative coordinate, and the subtracted expression gains
+      in each shell; three or more insertions bring partial collisions and
+      nested or disjoint forests. A separated test extended by zero has
+      vanishing normal jets on every collision diagonal, so only the
+      correlation integral remains. For a general test, first form each signed
+      root arm and its Taylor-subtracted test, then localize that prepared
+      test. A maximal collision set that crosses the localization partition
+      has zero Taylor jet on the masked test; the signed layer estimate of
+      Lemma <a href="19-products-and-contact-subtractions.html#lem:J-signed-layer">19.20</a> and an induction over the remaining nested or
+      disjoint blocks in Lemma <a href="19-products-and-contact-subtractions.html#lem:J2.2">19.21</a> give summable dyadic shell
+      bounds. Lemma <a href="19-products-and-contact-subtractions.html#lem:J2.1">19.19</a> supplies covariant contact projections
+      with real bases. The projections and cutoff are the choices supplied
+      with the same constructed hierarchy; no independence from other contact
+      choices is asserted. The extension is a later construction from the
+      separated correlations, not a limit of unsubtracted lattice correlations
+      at coincident points; neither uniqueness, positivity nor contact Ward
+      identities are asserted.
+    </p>
+    
+    <div class="ym-chapter-nav"><span class="ym-chapter-prev"><a href="5-the-renormalization-group.html">&larr; 5 The renormalization group</a></span><span class="ym-chapter-up"><a href="../main.html">Contents</a></span><span class="ym-chapter-next"><a href="7-deduction-of-the-main-theorem.html">7 Deduction of the main theorem &rarr;</a></span></div>
+</body>
+</html>
