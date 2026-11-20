@@ -31,7 +31,7 @@
   </table-of-contents>
 
   Updated 19 November 2026. The requested blueprint and a full first draft of
-  the monograph are complete in this folder. The draft is <strong|270 pages>,
+  the monograph are complete in this folder. The draft is <strong|271 pages>,
   with all nineteen chapters, a notation index and 40 cited references. It is
   a working mathematical exposition of the supplied construction and still
   merits expert review; the writing and focused dependency audits are not

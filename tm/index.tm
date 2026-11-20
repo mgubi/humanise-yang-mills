@@ -62,11 +62,15 @@
   additional steps or variants; standard machinery implemented in Lean need
   not be reproved in the monograph.
 
-  <strong|Current stage: source imported; preliminary dependency mapping
-  under way.> The source is pinned to revision
-  <verbatim|3456e5e75cf8d4cd558955a5c7638fba2d68f464>. The 17 audited release
-  roots and a first-pass mathematical decomposition are recorded in the
-  <hlink|source audit|source/audit.tm>, <hlink|proof
+  The current authoritative manuscript is
+  <hlink|HumanizeYM_v3|manuscript/HumanizeYM_v3/index.tm>. The
+  <hlink|monograph PDF|https://github.com/hairer/humanise-yang-mills/blob/main/manuscript/HumanizeYM_v3/monograph.pdf>
+  opens with the main theorem and a guide to its proof.
+
+  <strong|Lean source and dependency mapping.> The source is pinned to
+  revision <verbatim|3456e5e75cf8d4cd558955a5c7638fba2d68f464>. The 17
+  audited release roots and a first-pass mathematical decomposition are
+  recorded in the <hlink|source audit|source/audit.tm>, <hlink|proof
   outline|blueprint/outline.tm>, and <hlink|provisional unit
   plan|blueprint/unit-plan.tm>. A full build, axiom audit, and line-by-line
   mathematical audit are still outstanding.
@@ -138,11 +142,11 @@
   revision>>|<row|<cell|<verbatim|source/>>|<cell|Source provenance, build
   instructions, and audit evidence>>|<row|<cell|<verbatim|blueprint/>>|<cell|Interfaces,
   literature notes, source correspondence, and review
-  records>>|<row|<cell|<verbatim|manuscript/>>|<cell|Authoritative LaTeX
-  exposition, including drafts and chapter
-  assembly>>|<row|<cell|<verbatim|Bots/>>|<cell|Durable discoveries and
-  handoffs for future sessions>>|<row|<cell|<verbatim|templates/>>|<cell|Proof
-  unit and review templates>>|<row|<cell|<verbatim|docs/>>|<cell|Contributor,
+  records>>|<row|<cell|<verbatim|manuscript/HumanizeYM_v3/>>|<cell|Current
+  authoritative manuscript, LaTeX sources and compiled
+  PDF>>|<row|<cell|<verbatim|Bots/>>|<cell|Durable discoveries and handoffs
+  for future sessions>>|<row|<cell|<verbatim|templates/>>|<cell|Proof unit
+  and review templates>>|<row|<cell|<verbatim|docs/>>|<cell|Contributor,
   coordinator, and mathematical review guidance>>|<row|<cell|<verbatim|scripts/>>|<cell|Small
   structural checks, with no third-party Python dependencies>>>>>
 

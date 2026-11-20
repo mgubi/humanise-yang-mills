@@ -199,15 +199,16 @@
 
   <block|<tformat|<twith|table-width|1par>|<twith|table-hmode|exact>|<cwith|1|-1|1|-1|cell-hyphen|t>|<cwith|1|1|1|-1|cell-bborder|1ln>|<cwith|1|1|1|-1|cell-valign|bottom>|<table|<row|<cell|<strong|Symbol>>|<cell|<strong|Definition/type>>|<cell|<strong|First
   definition; source>>>|<row|<cell|J, J_{\<leqslant\>d}>|<cell|Formal radial
-  jets, finite truncation through weight d>|<cell|Ch. 2;
+  jets, finite truncation through scaling dimension d>|<cell|Ch. 2;
   def:D07>>|<row|<cell|A_{k,\<mu\>}>|<cell|Homogeneous radial potential of
-  polynomial degree k+1>|<cell|Ch. 2; coordinates have weight
+  polynomial degree k+1>|<cell|Ch. 2; coordinates have scaling dimension
   k+2>>|<row|<cell|V_d>|<cell|Ad(G)-invariant jet polynomials of scaling
   dimension \<leqslant\>d>|<cell|Ch. 2; def:D07>>|<row|<cell|b_{d,i},
-  (w_i,f_i)>|<cell|Nested real bihomogeneous basis, weight and factor
-  count>|<cell|Ch. 2; Outline II.1.1>>|<row|<cell|N_fac,
-  t^{N_fac}>|<cell|Count operator; b_{d,i}\<mapsto\>t^{f_i}b_{d,i}>|<cell|Ch.
-  2; sec:local-fields>>|<row|<cell|sc_h J>|<cell|Jet scaling with h^{k+2} on
+  (w_i,f_i)>|<cell|Nested real bihomogeneous basis, scaling dimension (also
+  called weight) and factor count>|<cell|Ch. 2; Outline
+  II.1.1>>|<row|<cell|N_fac, t^{N_fac}>|<cell|Count operator;
+  b_{d,i}\<mapsto\>t^{f_i}b_{d,i}>|<cell|Ch. 2;
+  sec:local-fields>>|<row|<cell|sc_h J>|<cell|Jet scaling with h^{k+2} on
   A_k>|<cell|Ch. 2; eq:I12-test-holonomy>>|<row|<cell|U(h,J)>|<cell|Exact
   link holonomies of truncated smooth test connection>|<cell|Ch. 2;
   eq:I12-test-holonomy>>|<row|<cell|Tay_d>|<cell|Taylor expansion in jet

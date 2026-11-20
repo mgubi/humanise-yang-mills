@@ -1883,27 +1883,30 @@
   </definition>
 
   Only finitely many jet coordinates enter any polynomial below. A coordinate
-  of <math|A<rsub|k>> is assigned scaling dimension <math|k+2> and polynomial
-  degree one. The ordinary polynomial degree counts factors of jet
-  coordinates; to distinguish it from scaling dimension we call it the
-  <em|factor count>. Constant gauge transformations act on every coefficient
-  by <math|<Ad><around|(|G|)>>. Orthogonal changes of Euclidean coordinates
-  act by the corresponding one-form transformation. Both actions preserve
-  weight and factor count.
+  of <math|A<rsub|k>> has classical scaling dimension <math|k+2> and
+  polynomial degree one. The scaling dimension of a monomial is the sum of
+  those of its factors. For a homogeneous polynomial in jet coordinates, we
+  also call its scaling dimension its <em|weight>. The ordinary polynomial
+  degree counts factors of jet coordinates; to distinguish it from scaling
+  dimension we call it the <em|factor count>. Constant gauge transformations
+  act on every coefficient by <math|<Ad><around|(|G|)>>. Orthogonal changes
+  of Euclidean coordinates act by the corresponding one-form transformation.
+  Both actions preserve scaling dimension and factor count.
 
   <\definition>
     <dueto|Polynomial labels><label|ch02:labels>For <math|d\<in\><NN>>, let
 
     <\equation>
-      V<rsub|d>=<CC><around|[|\<cal-J\>|]><rsup|<Ad><around|(|G|)>><rsub|<text|weight>\<leqslant\>d><label|ch02:label-space>
+      V<rsub|d>=<CC><around|[|\<cal-J\>|]><rsup|<Ad><around|(|G|)>><rsub|<text|scaling
+      dimension>\<leqslant\>d><label|ch02:label-space>
     </equation>
 
     be the space of gauge-invariant complex polynomials of scaling dimension
     at most <math|d>. Choose nested real bases
-    <math|<around|(|b<rsub|d,i>|)>> homogeneous in weight <math|w<rsub|i>>
-    and factor count <math|f<rsub|i>>, with the constant polynomial as one
-    basis vector. Conjugation means conjugating coefficients in these real
-    bases. Define the factor-count operator by
+    <math|<around|(|b<rsub|d,i>|)>> whose elements have definite scaling
+    dimension <math|w<rsub|i>> and factor count <math|f<rsub|i>>, with the
+    constant polynomial as one basis vector. Conjugation means conjugating
+    coefficients in these real bases. Define the factor-count operator by
 
     <\equation>
       N<rsub|<math-up|fac>>*b<rsub|d,i>=f<rsub|i>*b<rsub|d,i>,<space|2em>t<rsup|N<rsub|<math-up|fac>>>*b<rsub|d,i>=t<rsup|f<rsub|i>>*b<rsub|d,i>*<space|1em><around|(|t\<gtr\>0|)>.<label|ch02:factor-scaling>
@@ -1912,14 +1915,15 @@
 
   The spaces are finite-dimensional: only <math|A<rsub|k>> with
   <math|k+2\<leqslant\>d> can occur, and every nonconstant coordinate has
-  weight at least two. The invariant subspace decomposes into its finitely
-  many weight and factor-count components, so the stated bases can be chosen
+  scaling dimension at least two. The invariant subspace decomposes according
+  to scaling dimension and factor count, so the stated bases can be chosen
   once and for all. The constant has bidegree <math|<around|(|0,0|)>>; the
   zero-factor subspace is precisely <math|<CC>\<b-1\>>.
 
   The curvature at the origin is <math|F<rsub|\<mu\>*\<nu\>>=\<partial\><rsub|\<mu\>>*A<rsub|0,\<nu\>>-\<partial\><rsub|\<nu\>>*A<rsub|0,\<mu\>>>:
   the commutator term vanishes there in radial gauge. Its coordinates have
-  weight two and factor count one. An important invariant polynomial is
+  scaling dimension two and factor count one. An important invariant
+  polynomial is
 
   <\equation>
     c<rsub|F<rsup|2>>=<frac|1|4>*<big|sum><rsub|\<mu\>,\<nu\>><around|\<langle\>|F<rsub|\<mu\>*\<nu\>>,F<rsub|\<mu\>*\<nu\>>|\<rangle\>><rsub|<gLie>>,<label|ch02:curvature-square>
@@ -1929,14 +1933,15 @@
   complex bilinearly when used in a complex polynomial, not sesquilinearly.
 
   There are three distinct integers in this notation. A basis element has
-  weight <math|w<rsub|i>> and factor count <math|f<rsub|i>>; it also belongs
-  to a chosen space <math|V<rsub|d>> with <math|w<rsub|i>\<leqslant\>d>. We
-  shall retain that last choice as part of the observable label, writing
-  <math|v=<around|(|d,c|)>> with <math|c\<in\>V<rsub|d>>. The same polynomial
-  <math|c> can occur at different tags <math|d>. Its eventual normalization
-  depends on the tag, so the resulting insertions must not be identified
-  without a comparison theorem. None of these integers is being asserted to
-  be the exact scaling dimension of the interacting quantum field.
+  scaling dimension <math|w<rsub|i>> and factor count <math|f<rsub|i>>; it
+  also belongs to a chosen space <math|V<rsub|d>> with
+  <math|w<rsub|i>\<leqslant\>d>. We shall retain that last choice as part of
+  the observable label, writing <math|v=<around|(|d,c|)>> with
+  <math|c\<in\>V<rsub|d>>. The same polynomial <math|c> can occur at
+  different tags <math|d>. Its eventual normalization depends on the tag, so
+  the resulting insertions must not be identified without a comparison
+  theorem. None of these integers is being asserted to be the exact scaling
+  dimension of the interacting quantum field.
 
   <section|Test holonomies and Taylor normalization><label|ch02:taylor-section>
 
@@ -1967,7 +1972,7 @@
 
   Homogeneity in <eqref|ch02:test-holonomy> gives
   <math|U*<around|(|h,J|)>=U*<around|(|1,<math-up|sc><rsub|h><space|0.17em>J|)>>.
-  In particular, a homogeneous label of weight <math|w> satisfies
+  In particular, a homogeneous label of scaling dimension <math|w> satisfies
   <math|c<around|(|<math-up|sc><rsub|h><space|0.17em>J|)>=h<rsup|w>*c<around|(|J|)>>.
 
   <\definition>
@@ -1999,9 +2004,9 @@
     <around*|\<nobracket\>|<frac|d<rsup|q>|d*h<rsup|q>>*P<rsub|d><rsup|<math-up|loc>><around|[|c|]>*<around|(|U*<around|(|h,J|)>|)>|\|><rsub|h=0>=<around*|\<nobracket\>|<frac|d<rsup|q>|d*h<rsup|q>>*c<around|(|<math-up|sc><rsub|h><space|0.17em>J|)>|\|><rsub|h=0>.<label|ch02:taylor-identity>
   </equation>
 
-  It prescribes all weights up to <math|d>, not just the leading term of one
-  chosen label. It also does not prescribe the value of the lattice
-  observable on a typical rough configuration.
+  It fixes every homogeneous component of scaling dimension at most <math|d>.
+  It also does not prescribe the value of the lattice observable on a typical
+  rough configuration.
 
   <section|Finite-stencil representatives><label|ch02:sections>
 
@@ -2122,10 +2127,10 @@
 
     is a gauge-invariant polynomial cylinder function. Since
     <math|T<rsub|d>*f<around|(|<with|math-font|cal*|S><around|(|J|)>|)>=J+O<around|(|<around|\||J|\|><rsup|d+1>|)>>,
-    its Taylor map is <math|c>. In passing from ordinary to weighted Taylor
-    order, we use that each jet coordinate has weight at least two; an
-    omitted ordinary degree cannot produce a retained weight. No truncation
-    of <math|Q<rsub|i>> after substitution is needed.
+    its Taylor map is <math|c>. Each jet coordinate has scaling dimension at
+    least two, so every monomial of polynomial degree greater than <math|d>
+    also has scaling dimension greater than <math|d>. No truncation of
+    <math|Q<rsub|i>> after substitution is needed.
 
     Finally average over the finite lattice symmetry group:
 
@@ -2283,9 +2288,10 @@
   <math|\<cal-I\><rsub|d>\<subset\>V<rsub|d>> be the polynomials vanishing on
   all such solution jets through degree <math|d>. This is the degree-<math|d>
   part of the equation ideal; multiplication is understood only when the
-  resulting weight remains at most <math|d>. The condition preserves both
-  scaling dimension and factor count. It is the kernel of restriction to
-  solution jets, rather than a statement about the interacting measure.
+  resulting scaling dimension remains at most <math|d>. The condition
+  preserves both scaling dimension and factor count. It is the kernel of
+  restriction to solution jets, rather than a statement about the interacting
+  measure.
 
   <\theorem>
     <dueto|An equation-adapted local section><label|ch02:equation-adapted>There
@@ -2302,9 +2308,9 @@
 
       <item>If <math|p> has factor count <math|s> and scaling dimension
       <math|w>, then <math|R<rsub|d>*p-p> is a sum of terms whose pair
-      <math|(<text|factor count>,<text|weight>)> is strictly larger than
-      <math|<around|(|s,w|)>> in lexicographic order. Every term of
-      <math|\<cal-V\><rsub|d>*p> is a product of at least <math|s>
+      <math|(<text|factor count>,<text|scaling dimension>)> is strictly
+      larger than <math|<around|(|s,w|)>> in lexicographic order. Every term
+      of <math|\<cal-V\><rsub|d>*p> is a product of at least <math|s>
       transported curvature coordinates.
 
       <item>For every <math|p\<in\>\<cal-I\><rsub|d>>, every torus of side at
@@ -2450,8 +2456,9 @@
   There are two distinct errors. The nonlinear part of a curvature or force
   coordinate increases factor count. The linear force representation was
   fixed only through the layer of <math|\<lambda\>>; its remaining linear
-  terms increase weight at unchanged factor count. This is why the order in
-  <eqref|ch02:equation-triangle> puts factor count first.
+  terms increase the scaling dimension while preserving the factor count.
+  This is why the order in <eqref|ch02:equation-triangle> puts factor count
+  first.
 
   <subsection|Exact integration by parts and assembly>
 
@@ -2751,12 +2758,13 @@
 
   The phrase <em|on shell> will mean restriction to these solution jets. It
   does not refer to restricting a point of Euclidean spacetime. A linear
-  coordinate on <math|\<cal-S\><rsub|j>> is given weight <math|j+2>.
-  Consequently polynomials of weight at most <math|d> use only the spaces
-  <math|\<cal-S\><rsub|j>> with <math|j\<leqslant\>d-2>. Constants are
-  retained at every degree. The colour action is the adjoint action of
-  <math|G>; invariant polynomials are the gauge-invariant local observables
-  of the free reference theory.
+  coordinate on <math|\<cal-S\><rsub|j>> has scaling dimension <math|j+2>. As
+  in Definition<nbsp><reference|ch02:labels>, we also call `weight' the
+  scaling dimension of a homogeneous jet polynomial. Consequently polynomials
+  of weight at most <math|d> use only the spaces <math|\<cal-S\><rsub|j>>
+  with <math|j\<leqslant\>d-2>. Constants are retained at every degree. The
+  colour action is the adjoint action of <math|G>; invariant polynomials are
+  the gauge-invariant local observables of the free reference theory.
 
   To compare this definition with the radial-potential labels
   <math|V<rsub|d>>, associate to a closed homogeneous curvature
@@ -22237,7 +22245,7 @@
     <associate|auto-133|<tuple|11|165>>
     <associate|auto-134|<tuple|11.1|165>>
     <associate|auto-135|<tuple|11.1.1|166>>
-    <associate|auto-136|<tuple|11.2|167>>
+    <associate|auto-136|<tuple|11.2|166>>
     <associate|auto-137|<tuple|11.3|167>>
     <associate|auto-138|<tuple|11.4|168>>
     <associate|auto-139|<tuple|11.4.1|170>>
@@ -22249,18 +22257,18 @@
     <associate|auto-144|<tuple|11.6|176>>
     <associate|auto-145|<tuple|11.6.1|176>>
     <associate|auto-146|<tuple|11.7|182>>
-    <associate|auto-147|<tuple|11.7.1|183>>
-    <associate|auto-148|<tuple|11.8|184>>
-    <associate|auto-149|<tuple|11.9|185>>
+    <associate|auto-147|<tuple|11.7.1|182>>
+    <associate|auto-148|<tuple|11.8|183>>
+    <associate|auto-149|<tuple|11.9|184>>
     <associate|auto-15|<tuple|2.3|27>>
-    <associate|auto-150|<tuple|11.10|186>>
-    <associate|auto-151|<tuple|11.11|187>>
+    <associate|auto-150|<tuple|11.10|185>>
+    <associate|auto-151|<tuple|11.11|186>>
     <associate|auto-152|<tuple|11.12|189>>
-    <associate|auto-153|<tuple|11.12.1|190>>
-    <associate|auto-154|<tuple|11.12.2|193>>
-    <associate|auto-155|<tuple|11.12.3|198>>
-    <associate|auto-156|<tuple|11.12.4|200>>
-    <associate|auto-157|<tuple|11.12.5|202>>
+    <associate|auto-153|<tuple|11.12.1|189>>
+    <associate|auto-154|<tuple|11.12.2|192>>
+    <associate|auto-155|<tuple|11.12.3|197>>
+    <associate|auto-156|<tuple|11.12.4|199>>
+    <associate|auto-157|<tuple|11.12.5|201>>
     <associate|auto-158|<tuple|12|207>>
     <associate|auto-159|<tuple|12.1|207>>
     <associate|auto-16|<tuple|2.4|29>>
@@ -22277,96 +22285,96 @@
     <associate|auto-17|<tuple|2.5|31>>
     <associate|auto-170|<tuple|13.4|218>>
     <associate|auto-171|<tuple|13.5|219>>
-    <associate|auto-172|<tuple|13.6|219>>
-    <associate|auto-173|<tuple|13.7|220>>
+    <associate|auto-172|<tuple|13.6|220>>
+    <associate|auto-173|<tuple|13.7|221>>
     <associate|auto-174|<tuple|13.7.1|221>>
     <associate|auto-175|<tuple|13.7.2|222>>
-    <associate|auto-176|<tuple|13.7.3|222>>
+    <associate|auto-176|<tuple|13.7.3|223>>
     <associate|auto-177|<tuple|13.8|223>>
     <associate|auto-178|<tuple|13.9|228>>
     <associate|auto-179|<tuple|13.10|230>>
     <associate|auto-18|<tuple|2.5.1|32>>
-    <associate|auto-180|<tuple|13.10.1|230>>
+    <associate|auto-180|<tuple|13.10.1|231>>
     <associate|auto-181|<tuple|13.10.2|231>>
     <associate|auto-182|<tuple|13.10.3|232>>
-    <associate|auto-183|<tuple|13.10.4|233>>
-    <associate|auto-184|<tuple|14|235>>
-    <associate|auto-185|<tuple|14.1|235>>
-    <associate|auto-186|<tuple|14.2|236>>
-    <associate|auto-187|<tuple|14.3|237>>
-    <associate|auto-188|<tuple|14.3.1|238>>
-    <associate|auto-189|<tuple|14.4|240>>
+    <associate|auto-183|<tuple|13.10.4|234>>
+    <associate|auto-184|<tuple|14|237>>
+    <associate|auto-185|<tuple|14.1|237>>
+    <associate|auto-186|<tuple|14.2|238>>
+    <associate|auto-187|<tuple|14.3|239>>
+    <associate|auto-188|<tuple|14.3.1|239>>
+    <associate|auto-189|<tuple|14.4|242>>
     <associate|auto-19|<tuple|2.5.2|32>>
-    <associate|auto-190|<tuple|14.5|241>>
-    <associate|auto-191|<tuple|14.6|242>>
-    <associate|auto-192|<tuple|14.6.1|243>>
-    <associate|auto-193|<tuple|14.6.2|245>>
-    <associate|auto-194|<tuple|14.6.3|246>>
-    <associate|auto-195|<tuple|14.7|248>>
-    <associate|auto-196|<tuple|14.7.1|248>>
-    <associate|auto-197|<tuple|14.7.2|249>>
-    <associate|auto-198|<tuple|14.8|250>>
-    <associate|auto-199|<tuple|15|253>>
+    <associate|auto-190|<tuple|14.5|242>>
+    <associate|auto-191|<tuple|14.6|244>>
+    <associate|auto-192|<tuple|14.6.1|244>>
+    <associate|auto-193|<tuple|14.6.2|246>>
+    <associate|auto-194|<tuple|14.6.3|248>>
+    <associate|auto-195|<tuple|14.7|249>>
+    <associate|auto-196|<tuple|14.7.1|250>>
+    <associate|auto-197|<tuple|14.7.2|251>>
+    <associate|auto-198|<tuple|14.8|251>>
+    <associate|auto-199|<tuple|15|255>>
     <associate|auto-2|<tuple|(iii)|5>>
     <associate|auto-20|<tuple|2.5.3|33>>
-    <associate|auto-200|<tuple|15.1|253>>
-    <associate|auto-201|<tuple|15.2|253>>
-    <associate|auto-202|<tuple|15.3|255>>
-    <associate|auto-203|<tuple|15.4|255>>
-    <associate|auto-204|<tuple|15.5|256>>
-    <associate|auto-205|<tuple|15.6|257>>
-    <associate|auto-206|<tuple|15.7|258>>
-    <associate|auto-207|<tuple|16|259>>
-    <associate|auto-208|<tuple|16.1|259>>
-    <associate|auto-209|<tuple|16.2|261>>
+    <associate|auto-200|<tuple|15.1|255>>
+    <associate|auto-201|<tuple|15.2|255>>
+    <associate|auto-202|<tuple|15.3|257>>
+    <associate|auto-203|<tuple|15.4|257>>
+    <associate|auto-204|<tuple|15.5|258>>
+    <associate|auto-205|<tuple|15.6|259>>
+    <associate|auto-206|<tuple|15.7|260>>
+    <associate|auto-207|<tuple|16|261>>
+    <associate|auto-208|<tuple|16.1|261>>
+    <associate|auto-209|<tuple|16.2|263>>
     <associate|auto-21|<tuple|2.6|34>>
-    <associate|auto-210|<tuple|16.3|262>>
-    <associate|auto-211|<tuple|16.4|263>>
-    <associate|auto-212|<tuple|16.5|264>>
-    <associate|auto-213|<tuple|16.6|266>>
-    <associate|auto-214|<tuple|17|269>>
-    <associate|auto-215|<tuple|17.1|269>>
-    <associate|auto-216|<tuple|17.2|270>>
-    <associate|auto-217|<tuple|17.2.1|271>>
-    <associate|auto-218|<tuple|17.3|273>>
-    <associate|auto-219|<tuple|17.4|274>>
+    <associate|auto-210|<tuple|16.3|264>>
+    <associate|auto-211|<tuple|16.4|265>>
+    <associate|auto-212|<tuple|16.5|266>>
+    <associate|auto-213|<tuple|16.6|268>>
+    <associate|auto-214|<tuple|17|271>>
+    <associate|auto-215|<tuple|17.1|271>>
+    <associate|auto-216|<tuple|17.2|272>>
+    <associate|auto-217|<tuple|17.2.1|273>>
+    <associate|auto-218|<tuple|17.3|275>>
+    <associate|auto-219|<tuple|17.4|276>>
     <associate|auto-22|<tuple|3|37>>
-    <associate|auto-220|<tuple|17.4.1|274>>
-    <associate|auto-221|<tuple|17.4.2|275>>
-    <associate|auto-222|<tuple|17.4.3|276>>
-    <associate|auto-223|<tuple|17.4.4|277>>
-    <associate|auto-224|<tuple|17.4.5|278>>
-    <associate|auto-225|<tuple|17.4.6|279>>
-    <associate|auto-226|<tuple|17.4.7|280>>
-    <associate|auto-227|<tuple|17.5|281>>
-    <associate|auto-228|<tuple|17.5.1|282>>
-    <associate|auto-229|<tuple|17.5.2|283>>
+    <associate|auto-220|<tuple|17.4.1|276>>
+    <associate|auto-221|<tuple|17.4.2|277>>
+    <associate|auto-222|<tuple|17.4.3|278>>
+    <associate|auto-223|<tuple|17.4.4|279>>
+    <associate|auto-224|<tuple|17.4.5|280>>
+    <associate|auto-225|<tuple|17.4.6|281>>
+    <associate|auto-226|<tuple|17.4.7|282>>
+    <associate|auto-227|<tuple|17.5|283>>
+    <associate|auto-228|<tuple|17.5.1|284>>
+    <associate|auto-229|<tuple|17.5.2|285>>
     <associate|auto-23|<tuple|3.1|37>>
-    <associate|auto-230|<tuple|17.5.3|283>>
-    <associate|auto-231|<tuple|17.5.4|285>>
-    <associate|auto-232|<tuple|17.5.5|286>>
-    <associate|auto-233|<tuple|17.6|287>>
-    <associate|auto-234|<tuple|17.7|288>>
-    <associate|auto-235|<tuple|17.7.1|288>>
-    <associate|auto-236|<tuple|17.7.2|290>>
-    <associate|auto-237|<tuple|17.7.3|294>>
-    <associate|auto-238|<tuple|17.8|295>>
-    <associate|auto-239|<tuple|17.9|296>>
+    <associate|auto-230|<tuple|17.5.3|285>>
+    <associate|auto-231|<tuple|17.5.4|287>>
+    <associate|auto-232|<tuple|17.5.5|288>>
+    <associate|auto-233|<tuple|17.6|289>>
+    <associate|auto-234|<tuple|17.7|290>>
+    <associate|auto-235|<tuple|17.7.1|290>>
+    <associate|auto-236|<tuple|17.7.2|292>>
+    <associate|auto-237|<tuple|17.7.3|296>>
+    <associate|auto-238|<tuple|17.8|297>>
+    <associate|auto-239|<tuple|17.9|298>>
     <associate|auto-24|<tuple|3.2|38>>
-    <associate|auto-240|<tuple|18|299>>
-    <associate|auto-241|<tuple|18.1|299>>
-    <associate|auto-242|<tuple|18.2|301>>
-    <associate|auto-243|<tuple|18.3|303>>
-    <associate|auto-244|<tuple|18.4|304>>
-    <associate|auto-245|<tuple|18.5|306>>
-    <associate|auto-246|<tuple|19|307>>
-    <associate|auto-247|<tuple|19.1|307>>
-    <associate|auto-248|<tuple|19.2|307>>
-    <associate|auto-249|<tuple|19.3|309>>
+    <associate|auto-240|<tuple|18|301>>
+    <associate|auto-241|<tuple|18.1|301>>
+    <associate|auto-242|<tuple|18.2|303>>
+    <associate|auto-243|<tuple|18.3|305>>
+    <associate|auto-244|<tuple|18.4|306>>
+    <associate|auto-245|<tuple|18.5|308>>
+    <associate|auto-246|<tuple|19|309>>
+    <associate|auto-247|<tuple|19.1|309>>
+    <associate|auto-248|<tuple|19.2|309>>
+    <associate|auto-249|<tuple|19.3|311>>
     <associate|auto-25|<tuple|3.3|39>>
-    <associate|auto-250|<tuple|19.3|311>>
-    <associate|auto-251|<tuple|1|312>>
-    <associate|auto-252|<tuple|1|313>>
+    <associate|auto-250|<tuple|19.3|313>>
+    <associate|auto-251|<tuple|1|314>>
+    <associate|auto-252|<tuple|1|315>>
     <associate|auto-26|<tuple|3.4|40>>
     <associate|auto-27|<tuple|3.5|41>>
     <associate|auto-28|<tuple|3.6|43>>
@@ -22408,7 +22416,7 @@
     <associate|auto-60|<tuple|6.1.1|84>>
     <associate|auto-61|<tuple|6.1.2|86>>
     <associate|auto-62|<tuple|6.2|89>>
-    <associate|auto-63|<tuple|6.2.1|90>>
+    <associate|auto-63|<tuple|6.2.1|89>>
     <associate|auto-64|<tuple|6.2.2|90>>
     <associate|auto-65|<tuple|6.2.3|91>>
     <associate|auto-66|<tuple|6.2.4|92>>
@@ -22448,46 +22456,46 @@
     <associate|auto-97|<tuple|8.2|128>>
     <associate|auto-98|<tuple|8.3|129>>
     <associate|auto-99|<tuple|8.4|130>>
-    <associate|bib-Abbott1982|<tuple|Abb82|313>>
-    <associate|bib-Balaban1984Propagators|<tuple|Baª84|313>>
-    <associate|bib-Balaban1985Variational|<tuple|Baª85|313>>
-    <associate|bib-Balaban1987RG|<tuple|Baª87|313>>
-    <associate|bib-Balaban1988Expansions|<tuple|Baª88|313>>
-    <associate|bib-BalabanFeldmanKnoerrerTrubowitz2016|<tuple|BFKT16b|313>>
-    <associate|bib-BalabanFeldmanKnoerrerTrubowitzBloch2016|<tuple|BFKT16a|313>>
-    <associate|bib-Banach1922|<tuple|Ban22|313>>
-    <associate|bib-BarnichBrandtHenneaux2000|<tuple|BBH00|313>>
-    <associate|bib-BauerschmidtBrydgesSlade2015|<tuple|BBS15|313>>
-    <associate|bib-BrunettiFredenhagen2000|<tuple|BF00|313>>
-    <associate|bib-CollinsDuncanJoglekar1977|<tuple|CDJ77|313>>
-    <associate|bib-Foote1984|<tuple|Foo84|313>>
-    <associate|bib-FrobHolland2016|<tuple|FH16|313>>
-    <associate|bib-FrohlichIsraelLiebSimon1978|<tuple|FILS78|313>>
-    <associate|bib-GelfandNaimark1943|<tuple|GN43|313>>
-    <associate|bib-GrossWilczek1973|<tuple|GW73|313>>
-    <associate|bib-Hilbert1890|<tuple|Hil90|313>>
-    <associate|bib-Hobson1892|<tuple|Hob92|313>>
-    <associate|bib-Isserlis1918|<tuple|Iss18|313>>
-    <associate|bib-KoteckyPreiss1986|<tuple|KP86|313>>
-    <associate|bib-Landsman1998|<tuple|Lan98|313>>
-    <associate|bib-LeblSCV|<tuple|Leb|313>>
-    <associate|bib-LeonovShiryaev1959|<tuple|LS59|313>>
-    <associate|bib-LuscherWeisz1995|<tuple|LW95|314>>
-    <associate|bib-OsterwalderSchrader1973|<tuple|OS73|314>>
-    <associate|bib-OsterwalderSchrader1975|<tuple|OS75|314>>
-    <associate|bib-OsterwalderSeiler1978|<tuple|OS78|314>>
-    <associate|bib-Politzer1973|<tuple|Pol73|314>>
-    <associate|bib-Rudin1976|<tuple|Rud76|314>>
-    <associate|bib-Seiler1982|<tuple|Sei82|314>>
-    <associate|bib-StacksKoszul|<tuple|The|314>>
-    <associate|bib-Teschl2012|<tuple|Tes12|314>>
-    <associate|bib-TroppMatrixAnalysis2022|<tuple|Tro22|314>>
-    <associate|bib-Ueltschi2004|<tuple|Uel04|314>>
-    <associate|bib-Wick1950|<tuple|Wic50|314>>
-    <associate|bib-Wightman1956|<tuple|Wig56|314>>
-    <associate|bib-Wilson1969|<tuple|Wil69|314>>
-    <associate|bib-Wilson1974|<tuple|Wil74|314>>
-    <associate|bib-Wong2001|<tuple|Won01|314>>
+    <associate|bib-Abbott1982|<tuple|Abb82|315>>
+    <associate|bib-Balaban1984Propagators|<tuple|Baª84|315>>
+    <associate|bib-Balaban1985Variational|<tuple|Baª85|315>>
+    <associate|bib-Balaban1987RG|<tuple|Baª87|315>>
+    <associate|bib-Balaban1988Expansions|<tuple|Baª88|315>>
+    <associate|bib-BalabanFeldmanKnoerrerTrubowitz2016|<tuple|BFKT16b|315>>
+    <associate|bib-BalabanFeldmanKnoerrerTrubowitzBloch2016|<tuple|BFKT16a|315>>
+    <associate|bib-Banach1922|<tuple|Ban22|315>>
+    <associate|bib-BarnichBrandtHenneaux2000|<tuple|BBH00|315>>
+    <associate|bib-BauerschmidtBrydgesSlade2015|<tuple|BBS15|315>>
+    <associate|bib-BrunettiFredenhagen2000|<tuple|BF00|315>>
+    <associate|bib-CollinsDuncanJoglekar1977|<tuple|CDJ77|315>>
+    <associate|bib-Foote1984|<tuple|Foo84|315>>
+    <associate|bib-FrobHolland2016|<tuple|FH16|315>>
+    <associate|bib-FrohlichIsraelLiebSimon1978|<tuple|FILS78|315>>
+    <associate|bib-GelfandNaimark1943|<tuple|GN43|315>>
+    <associate|bib-GrossWilczek1973|<tuple|GW73|315>>
+    <associate|bib-Hilbert1890|<tuple|Hil90|315>>
+    <associate|bib-Hobson1892|<tuple|Hob92|315>>
+    <associate|bib-Isserlis1918|<tuple|Iss18|315>>
+    <associate|bib-KoteckyPreiss1986|<tuple|KP86|315>>
+    <associate|bib-Landsman1998|<tuple|Lan98|315>>
+    <associate|bib-LeblSCV|<tuple|Leb|315>>
+    <associate|bib-LeonovShiryaev1959|<tuple|LS59|315>>
+    <associate|bib-LuscherWeisz1995|<tuple|LW95|316>>
+    <associate|bib-OsterwalderSchrader1973|<tuple|OS73|316>>
+    <associate|bib-OsterwalderSchrader1975|<tuple|OS75|316>>
+    <associate|bib-OsterwalderSeiler1978|<tuple|OS78|316>>
+    <associate|bib-Politzer1973|<tuple|Pol73|316>>
+    <associate|bib-Rudin1976|<tuple|Rud76|316>>
+    <associate|bib-Seiler1982|<tuple|Sei82|316>>
+    <associate|bib-StacksKoszul|<tuple|The|316>>
+    <associate|bib-Teschl2012|<tuple|Tes12|316>>
+    <associate|bib-TroppMatrixAnalysis2022|<tuple|Tro22|316>>
+    <associate|bib-Ueltschi2004|<tuple|Uel04|316>>
+    <associate|bib-Wick1950|<tuple|Wic50|316>>
+    <associate|bib-Wightman1956|<tuple|Wig56|316>>
+    <associate|bib-Wilson1969|<tuple|Wil69|316>>
+    <associate|bib-Wilson1974|<tuple|Wil74|316>>
+    <associate|bib-Wong2001|<tuple|Won01|316>>
     <associate|ch01:casimir|<tuple|1.2|17>>
     <associate|ch01:chessboard|<tuple|1.16|21>>
     <associate|ch01:chessboard-root|<tuple|1.15|21>>
@@ -22564,7 +22572,7 @@
     <associate|ch03:free-ward|<tuple|3.4|46>>
     <associate|ch03:green|<tuple|3.1|37>>
     <associate|ch03:hessian|<tuple|3.4|37>>
-    <associate|ch03:hobson|<tuple|3.12|41>>
+    <associate|ch03:hobson|<tuple|3.12|42>>
     <associate|ch03:homogeneity|<tuple|3.7|39>>
     <associate|ch03:internal-tests|<tuple|3.7|50>>
     <associate|ch03:jet-covariance|<tuple|3.6|38>>
@@ -22687,16 +22695,16 @@
     <associate|ch06:base-scores|<tuple|6.21|95>>
     <associate|ch06:bounded-jet-route|<tuple|6.4.2|98>>
     <associate|ch06:clipped-source|<tuple|6.16|91>>
-    <associate|ch06:coarse-bound|<tuple|6.8|87>>
+    <associate|ch06:coarse-bound|<tuple|6.8|86>>
     <associate|ch06:common-majorant|<tuple|6.6|100>>
     <associate|ch06:component-extracted-energy|<tuple|6.30|104>>
     <associate|ch06:counts|<tuple|6.2|84>>
     <associate|ch06:density-ratio|<tuple|6.20|94>>
-    <associate|ch06:energy|<tuple|6.2|89>>
+    <associate|ch06:energy|<tuple|6.2|88>>
     <associate|ch06:fine-bound|<tuple|6.6|86>>
-    <associate|ch06:flat-identities|<tuple|6.3|85>>
+    <associate|ch06:flat-identities|<tuple|6.3|84>>
     <associate|ch06:gaussian-identity|<tuple|6.18|92>>
-    <associate|ch06:global-energy|<tuple|6.5|86>>
+    <associate|ch06:global-energy|<tuple|6.5|85>>
     <associate|ch06:joint-tails|<tuple|6.4|95>>
     <associate|ch06:large-fields|<tuple|6|83>>
     <associate|ch06:linear-comparison|<tuple|6.5.4|105>>
@@ -22715,11 +22723,11 @@
     <associate|ch06:signed-input|<tuple|6.1|87>>
     <associate|ch06:six-terms|<tuple|6.4|85>>
     <associate|ch06:tail-event|<tuple|6.22|95>>
-    <associate|ch06:tree-control|<tuple|6.13|90>>
+    <associate|ch06:tree-control|<tuple|6.13|89>>
     <associate|ch06:unaffected|<tuple|6.10|87>>
     <associate|ch06:window-error|<tuple|6.15|91>>
     <associate|ch06:windows|<tuple|6.3|91>>
-    <associate|ch06:windows-def|<tuple|6.14|91>>
+    <associate|ch06:windows-def|<tuple|6.14|90>>
     <associate|ch07:alpha|<tuple|7.5|109>>
     <associate|ch07:classical|<tuple|7.7|119>>
     <associate|ch07:classical-budget|<tuple|7.15|122>>
@@ -22850,68 +22858,68 @@
     <associate|ch10:step-drift|<tuple|10.1|151>>
     <associate|ch10:trajectory|<tuple|10|151>>
     <associate|ch11:absorption|<tuple|11.5|185>>
-    <associate|ch11:actual-equation-subspace|<tuple|11.24|189>>
+    <associate|ch11:actual-equation-subspace|<tuple|11.24|188>>
     <associate|ch11:actual-reader|<tuple|11.5.2|175>>
-    <associate|ch11:all-period-differences|<tuple|11.13|206>>
-    <associate|ch11:calibration-floor|<tuple|11.21|187>>
-    <associate|ch11:common-extraction|<tuple|11.12.1|190>>
-    <associate|ch11:conditional-curvature|<tuple|11.12|175>>
-    <associate|ch11:corrected-pair-comparison|<tuple|11.12.4|200>>
+    <associate|ch11:all-period-differences|<tuple|11.13|205>>
+    <associate|ch11:calibration-floor|<tuple|11.21|186>>
+    <associate|ch11:common-extraction|<tuple|11.12.1|189>>
+    <associate|ch11:conditional-curvature|<tuple|11.12|174>>
+    <associate|ch11:corrected-pair-comparison|<tuple|11.12.4|199>>
     <associate|ch11:cover-transfer|<tuple|11.5|168>>
-    <associate|ch11:cumulants|<tuple|11.1|166>>
+    <associate|ch11:cumulants|<tuple|11.1|165>>
     <associate|ch11:descent-error|<tuple|11.18|184>>
-    <associate|ch11:detector-bound|<tuple|11.20|185>>
-    <associate|ch11:detectors|<tuple|11.9|185>>
-    <associate|ch11:dispersal|<tuple|11.27|194>>
-    <associate|ch11:equation-calibration|<tuple|11.11|187>>
-    <associate|ch11:equation-comparison|<tuple|11.6|188>>
-    <associate|ch11:equation-root-error|<tuple|11.23|188>>
-    <associate|ch11:finite-arity-comparison|<tuple|11.12.5|202>>
-    <associate|ch11:finite-covariance|<tuple|11.30|198>>
-    <associate|ch11:finite-detector-input|<tuple|11.11|204>>
-    <associate|ch11:graph-difference|<tuple|11.9|172>>
-    <associate|ch11:graph-estimates|<tuple|11.8|171>>
-    <associate|ch11:higher-induction|<tuple|11.11|173>>
+    <associate|ch11:detector-bound|<tuple|11.20|184>>
+    <associate|ch11:detectors|<tuple|11.9|184>>
+    <associate|ch11:dispersal|<tuple|11.27|193>>
+    <associate|ch11:equation-calibration|<tuple|11.11|186>>
+    <associate|ch11:equation-comparison|<tuple|11.6|187>>
+    <associate|ch11:equation-root-error|<tuple|11.23|187>>
+    <associate|ch11:finite-arity-comparison|<tuple|11.12.5|201>>
+    <associate|ch11:finite-covariance|<tuple|11.30|197>>
+    <associate|ch11:finite-detector-input|<tuple|11.11|203>>
+    <associate|ch11:graph-difference|<tuple|11.9|171>>
+    <associate|ch11:graph-estimates|<tuple|11.8|170>>
+    <associate|ch11:higher-induction|<tuple|11.11|172>>
     <associate|ch11:higher-modes|<tuple|11.4.2|172>>
     <associate|ch11:insertions|<tuple|11|165>>
     <associate|ch11:integrated-component|<tuple|11.6|169>>
     <associate|ch11:joint-gaussian|<tuple|11.2|173>>
-    <associate|ch11:local-source|<tuple|11.3|167>>
-    <associate|ch11:lower-weighted-step|<tuple|11.28|196>>
-    <associate|ch11:marked-incidence|<tuple|11.7|170>>
+    <associate|ch11:local-source|<tuple|11.3|166>>
+    <associate|ch11:lower-weighted-step|<tuple|11.28|195>>
+    <associate|ch11:marked-incidence|<tuple|11.7|169>>
     <associate|ch11:marked-step|<tuple|11.4|168>>
     <associate|ch11:mass|<tuple|11.1|166>>
-    <associate|ch11:n-mark-comparison|<tuple|11.10|202>>
-    <associate|ch11:n-mark-root|<tuple|11.32|203>>
+    <associate|ch11:n-mark-comparison|<tuple|11.10|201>>
+    <associate|ch11:n-mark-root|<tuple|11.32|202>>
     <associate|ch11:one-graph|<tuple|11.4.1|170>>
-    <associate|ch11:opening-higher-weight|<tuple|11.31|201>>
-    <associate|ch11:positional|<tuple|11.7.1|183>>
-    <associate|ch11:raw-polynomial-error|<tuple|11.25|191>>
+    <associate|ch11:opening-higher-weight|<tuple|11.31|200>>
+    <associate|ch11:positional|<tuple|11.7.1|182>>
+    <associate|ch11:raw-polynomial-error|<tuple|11.25|190>>
     <associate|ch11:replicated|<tuple|11.7|182>>
-    <associate|ch11:replicated-bound|<tuple|11.16|183>>
+    <associate|ch11:replicated-bound|<tuple|11.16|182>>
     <associate|ch11:restart-construction|<tuple|11.6.1|176>>
-    <associate|ch11:restart-density|<tuple|11.15|180>>
+    <associate|ch11:restart-density|<tuple|11.15|179>>
     <associate|ch11:restart-endpoint|<tuple|11.3|177>>
     <associate|ch11:restart-endpoint-error|<tuple|11.13|178>>
-    <associate|ch11:restart-endpoint-identity|<tuple|11.14|179>>
-    <associate|ch11:restart-family|<tuple|11.4|180>>
-    <associate|ch11:restore-forced|<tuple|11.9|195>>
-    <associate|ch11:restore-regular|<tuple|11.8|194>>
-    <associate|ch11:root-bound|<tuple|11.17|183>>
+    <associate|ch11:restart-endpoint-identity|<tuple|11.14|178>>
+    <associate|ch11:restart-family|<tuple|11.4|179>>
+    <associate|ch11:restore-forced|<tuple|11.9|194>>
+    <associate|ch11:restore-regular|<tuple|11.8|193>>
+    <associate|ch11:root-bound|<tuple|11.17|182>>
     <associate|ch11:scaled-equation-labels|<tuple|11.22|187>>
     <associate|ch11:separated-cover|<tuple|11.10|172>>
-    <associate|ch11:simultaneous-detector-lifts|<tuple|11.26|193>>
+    <associate|ch11:simultaneous-detector-lifts|<tuple|11.26|192>>
     <associate|ch11:source-density|<tuple|11.2|166>>
     <associate|ch11:spare-support|<tuple|11.4|168>>
     <associate|ch11:tree-covariance|<tuple|11.5.1|174>>
-    <associate|ch11:trial-descent|<tuple|11.8|184>>
-    <associate|ch11:trial-error|<tuple|11.19|185>>
-    <associate|ch11:uniform-detector|<tuple|11.12|205>>
+    <associate|ch11:trial-descent|<tuple|11.8|183>>
+    <associate|ch11:trial-error|<tuple|11.19|184>>
+    <associate|ch11:uniform-detector|<tuple|11.12|204>>
     <associate|ch11:uniform-differences|<tuple|11.12|189>>
-    <associate|ch11:uniform-sweep|<tuple|11.7|190>>
-    <associate|ch11:weight-restoration|<tuple|11.12.2|193>>
-    <associate|ch11:weighted-output-envelope|<tuple|11.29|196>>
-    <associate|ch11:window-covariance|<tuple|11.12.3|198>>
+    <associate|ch11:uniform-sweep|<tuple|11.7|189>>
+    <associate|ch11:weight-restoration|<tuple|11.12.2|192>>
+    <associate|ch11:weighted-output-envelope|<tuple|11.29|195>>
+    <associate|ch11:window-covariance|<tuple|11.12.3|197>>
     <associate|ch12:conclusion|<tuple|12.6|212>>
     <associate|ch12:contraction|<tuple|12.1|208>>
     <associate|ch12:dense-cauchy|<tuple|12.4|211>>
@@ -22929,216 +22937,216 @@
     <associate|ch12:uv-theorem|<tuple|12.5|212>>
     <associate|ch13:bounded-approximations|<tuple|13.8|223>>
     <associate|ch13:bounded-singleton|<tuple|13.5|226>>
-    <associate|ch13:bounded-word|<tuple|13.6|227>>
+    <associate|ch13:bounded-word|<tuple|13.6|228>>
     <associate|ch13:calculus|<tuple|13.4|218>>
     <associate|ch13:cells|<tuple|13.2|216>>
     <associate|ch13:chess|<tuple|13.3|216>>
     <associate|ch13:coarse-matrix|<tuple|13.16|223>>
     <associate|ch13:coarse-residual|<tuple|13.17|223>>
     <associate|ch13:coarse-residual-supplier|<tuple|13.4|224>>
-    <associate|ch13:cone-factorization|<tuple|13.20|226>>
+    <associate|ch13:cone-factorization|<tuple|13.20|227>>
     <associate|ch13:continuum|<tuple|13|215>>
     <associate|ch13:derivative-response|<tuple|13.8|218>>
     <associate|ch13:extraction|<tuple|13.1|215>>
-    <associate|ch13:first-below|<tuple|13.14|222>>
+    <associate|ch13:first-below|<tuple|13.14|223>>
     <associate|ch13:inclusion-response|<tuple|13.7|218>>
-    <associate|ch13:normalized-null|<tuple|13.6|217>>
+    <associate|ch13:normalized-null|<tuple|13.6|218>>
     <associate|ch13:null|<tuple|13.5|216>>
     <associate|ch13:ordered-limit|<tuple|13.2|215>>
     <associate|ch13:positivity|<tuple|13.5|219>>
     <associate|ch13:power|<tuple|13.10|219>>
     <associate|ch13:quotient|<tuple|13.3|216>>
     <associate|ch13:rank|<tuple|13.1|217>>
-    <associate|ch13:repeated|<tuple|13.6|219>>
+    <associate|ch13:repeated|<tuple|13.6|220>>
     <associate|ch13:residual-height|<tuple|13.18|224>>
-    <associate|ch13:residual-height-bound|<tuple|13.19|224>>
+    <associate|ch13:residual-height-bound|<tuple|13.19|225>>
     <associate|ch13:scale-thickness|<tuple|13.9|219>>
     <associate|ch13:sharp-centered|<tuple|13.3|222>>
-    <associate|ch13:sharp-phase|<tuple|15.11|258>>
-    <associate|ch13:sharp-root|<tuple|13.12|221>>
+    <associate|ch13:sharp-phase|<tuple|15.11|260>>
+    <associate|ch13:sharp-root|<tuple|13.12|222>>
     <associate|ch13:sharp-schedule|<tuple|13.11|221>>
-    <associate|ch13:sharp-section|<tuple|13.7|220>>
+    <associate|ch13:sharp-section|<tuple|13.7|221>>
     <associate|ch13:sharp-separated|<tuple|13.15|223>>
     <associate|ch13:vanishing-error|<tuple|13.4|216>>
     <associate|ch13:volume-limit|<tuple|13.1|215>>
     <associate|ch13:weight-size|<tuple|13.13|222>>
     <associate|ch13:word-bound|<tuple|13.2|220>>
-    <associate|ch14:annular-input|<tuple|14.14|241>>
-    <associate|ch14:averaged-stress|<tuple|14.27|251>>
-    <associate|ch14:balanced-stress|<tuple|14.12|241>>
-    <associate|ch14:charge-commute|<tuple|14.15|242>>
-    <associate|ch14:charge-limits|<tuple|14.24|248>>
-    <associate|ch14:charges|<tuple|14.4|242>>
-    <associate|ch14:collinear|<tuple|14.6.3|246>>
-    <associate|ch14:comparison|<tuple|14.3|237>>
-    <associate|ch14:comparison-exponents|<tuple|14.8|238>>
-    <associate|ch14:conserved-line|<tuple|14.11|240>>
-    <associate|ch14:coordinate-spectrum|<tuple|14.3|236>>
-    <associate|ch14:derivative-commutator|<tuple|14.25|248>>
-    <associate|ch14:diagonal-mass|<tuple|14.22|246>>
-    <associate|ch14:flux|<tuple|14.13|241>>
-    <associate|ch14:formal-adjoint|<tuple|14.4|236>>
-    <associate|ch14:global-ward|<tuple|14.26|249>>
-    <associate|ch14:grid-cost|<tuple|14.7|237>>
-    <associate|ch14:grid-input|<tuple|14.6|237>>
-    <associate|ch14:heat|<tuple|14.2|235>>
-    <associate|ch14:heat-pairing|<tuple|14.1|235>>
-    <associate|ch14:lattice-comparison|<tuple|14.3.1|238>>
-    <associate|ch14:line-ward|<tuple|14.23|248>>
-    <associate|ch14:mixed-sign|<tuple|14.20|244>>
-    <associate|ch14:normalized-stress|<tuple|14.6|251>>
-    <associate|ch14:polynomial-moments|<tuple|14.17|242>>
-    <associate|ch14:positive-residual|<tuple|14.18|243>>
-    <associate|ch14:propagation|<tuple|14.7|248>>
-    <associate|ch14:reflection|<tuple|14.1|235>>
-    <associate|ch14:rotations|<tuple|14.5|250>>
-    <associate|ch14:rotations-section|<tuple|14.8|250>>
-    <associate|ch14:shells|<tuple|14.5|241>>
-    <associate|ch14:sign-induction|<tuple|14.21|244>>
-    <associate|ch14:sign-transfer|<tuple|14.19|244>>
-    <associate|ch14:slab-bound|<tuple|14.1|236>>
-    <associate|ch14:slab-laws|<tuple|14.5|237>>
-    <associate|ch14:slab-smooth|<tuple|14.2|237>>
-    <associate|ch14:slabs|<tuple|14.2|236>>
-    <associate|ch14:smooth-comparison|<tuple|14.3|240>>
-    <associate|ch14:spectral|<tuple|14.6|242>>
-    <associate|ch14:spectral-CS|<tuple|14.16|242>>
-    <associate|ch14:stress-line|<tuple|14.4|240>>
-    <associate|ch14:subset-root|<tuple|14.9|238>>
-    <associate|ch14:uniform-tests|<tuple|14.10|239>>
-    <associate|ch14:ward|<tuple|14|235>>
-    <associate|ch15:ae-ground|<tuple|15.10|257>>
-    <associate|ch15:algebra|<tuple|15.1|254>>
-    <associate|ch15:characters|<tuple|15.3|255>>
-    <associate|ch15:cluster|<tuple|15.3|254>>
-    <associate|ch15:compression|<tuple|15.2|253>>
-    <associate|ch15:compression-defect|<tuple|15.4|254>>
-    <associate|ch15:detector-moments|<tuple|15.8|256>>
-    <associate|ch15:fields|<tuple|15.5|256>>
-    <associate|ch15:ground|<tuple|15.1|253>>
-    <associate|ch15:mixture|<tuple|15.5|255>>
-    <associate|ch15:moment-norm|<tuple|15.6|255>>
-    <associate|ch15:phase-invariant|<tuple|15.7|256>>
-    <associate|ch15:phase-symmetry|<tuple|15.4|255>>
-    <associate|ch15:phases|<tuple|15|253>>
-    <associate|ch15:same-fields|<tuple|15.9|257>>
-    <associate|ch15:selection|<tuple|15.6|257>>
-    <associate|ch15:sharp-phase-section|<tuple|15.7|258>>
-    <associate|ch15:spatial-ground|<tuple|15.1|253>>
-    <associate|ch15:whole-gram|<tuple|15.2|254>>
-    <associate|ch16:boundary|<tuple|16.1|260>>
-    <associate|ch16:boundary-section|<tuple|16.1|259>>
-    <associate|ch16:charge-law|<tuple|16.13|267>>
-    <associate|ch16:charges-section|<tuple|16.6|266>>
-    <associate|ch16:cone-support|<tuple|16.6|261>>
-    <associate|ch16:covariance-section|<tuple|16.2|261>>
-    <associate|ch16:fields|<tuple|16.3|264>>
-    <associate|ch16:fields-section|<tuple|16.4|263>>
-    <associate|ch16:full-tube|<tuple|16.7|262>>
-    <associate|ch16:gap-bound|<tuple|16.3|260>>
-    <associate|ch16:heat-decay|<tuple|16.11|265>>
-    <associate|ch16:heat-function|<tuple|16.2|260>>
-    <associate|ch16:irreducible|<tuple|16.5|266>>
-    <associate|ch16:laplace|<tuple|16.5|261>>
-    <associate|ch16:local-commutator|<tuple|16.9|265>>
-    <associate|ch16:locality|<tuple|16.2|262>>
-    <associate|ch16:locality-section|<tuple|16.3|262>>
-    <associate|ch16:low-energy|<tuple|16.10|265>>
-    <associate|ch16:partial-boundary|<tuple|16.8|262>>
-    <associate|ch16:reconstruction|<tuple|16|259>>
-    <associate|ch16:slabs|<tuple|16.1|259>>
-    <associate|ch16:taylor-boundary|<tuple|16.4|260>>
-    <associate|ch16:vacuum|<tuple|16.4|265>>
-    <associate|ch16:vacuum-section|<tuple|16.5|264>>
-    <associate|ch16:weak-commutant|<tuple|16.12|266>>
-    <associate|ch17:actual-current-map|<tuple|17.19|285>>
-    <associate|ch17:all-radii|<tuple|17.5|296>>
-    <associate|ch17:block-algebra|<tuple|17.7|275>>
-    <associate|ch17:block-identities|<tuple|17.1|275>>
-    <associate|ch17:coefficient|<tuple|17.4|295>>
-    <associate|ch17:contact|<tuple|17.11|278>>
-    <associate|ch17:contact-Z|<tuple|17.10|277>>
-    <associate|ch17:contact-identity|<tuple|17.2|278>>
-    <associate|ch17:contact-section|<tuple|17.4.4|277>>
-    <associate|ch17:corrected-regulated-ward|<tuple|17.13|281>>
-    <associate|ch17:current|<tuple|17.3|273>>
-    <associate|ch17:current-alias|<tuple|17.15|282>>
-    <associate|ch17:current-suppliers|<tuple|17.4|274>>
-    <associate|ch17:defect-four|<tuple|17.14|282>>
-    <associate|ch17:exclusion|<tuple|17.9|296>>
-    <associate|ch17:finite-haar|<tuple|17.9|276>>
-    <associate|ch17:finite-sigma|<tuple|17.25|290>>
-    <associate|ch17:flat-current-map|<tuple|17.20|285>>
-    <associate|ch17:gradient-cancellation|<tuple|17.12|279>>
-    <associate|ch17:kernel-divergence|<tuple|17.24|289>>
-    <associate|ch17:kernel-score|<tuple|17.23|288>>
-    <associate|ch17:laplace|<tuple|17.2|269>>
-    <associate|ch17:limit|<tuple|17.8|295>>
-    <associate|ch17:marked-rates|<tuple|17.7|288>>
-    <associate|ch17:polynomial-response|<tuple|17.26|292>>
-    <associate|ch17:quadratic-current|<tuple|17.5|281>>
-    <associate|ch17:quadratic-current-contraction|<tuple|17.16|283>>
-    <associate|ch17:radii|<tuple|17.2|270>>
-    <associate|ch17:regulator-completion|<tuple|17.4.7|280>>
-    <associate|ch17:regulator-input|<tuple|17.6|274>>
-    <associate|ch17:rho|<tuple|17.5|273>>
-    <associate|ch17:running-radius|<tuple|17.3|270>>
-    <associate|ch17:scalar-log-supplier|<tuple|17.8|276>>
-    <associate|ch17:sigma-bound|<tuple|17.28|294>>
-    <associate|ch17:sigma-error|<tuple|17.27|293>>
-    <associate|ch17:spatial-moments|<tuple|17.3|291>>
-    <associate|ch17:spectral-pairing|<tuple|17.1|269>>
-    <associate|ch17:spectrum|<tuple|17.1|269>>
-    <associate|ch17:stability|<tuple|17.6|287>>
-    <associate|ch17:stable-functional|<tuple|17.21|287>>
-    <associate|ch17:stationary-higher-jets|<tuple|17.17|284>>
-    <associate|ch17:trace|<tuple|17|269>>
-    <associate|ch17:trace-law|<tuple|17.29|296>>
-    <associate|ch17:transfer|<tuple|17.22|288>>
-    <associate|ch17:unnormalized-defect|<tuple|17.18|284>>
-    <associate|ch17:variable-windows|<tuple|17.2.1|271>>
-    <associate|ch17:window-product|<tuple|17.4|271>>
-    <associate|ch18:coefficients|<tuple|18.3|300>>
-    <associate|ch18:dual|<tuple|18.1|299>>
-    <associate|ch18:extension|<tuple|18.4|304>>
-    <associate|ch18:extension-formula|<tuple|18.10|305>>
-    <associate|ch18:extension-theorem|<tuple|18.3|305>>
-    <associate|ch18:graded|<tuple|18.2|300>>
-    <associate|ch18:graded-distance|<tuple|13.22|228>>
-    <associate|ch18:graded-estimate|<tuple|13.7|228>>
+    <associate|ch14:annular-input|<tuple|14.14|243>>
+    <associate|ch14:averaged-stress|<tuple|14.27|252>>
+    <associate|ch14:balanced-stress|<tuple|14.12|242>>
+    <associate|ch14:charge-commute|<tuple|14.15|243>>
+    <associate|ch14:charge-limits|<tuple|14.24|250>>
+    <associate|ch14:charges|<tuple|14.4|243>>
+    <associate|ch14:collinear|<tuple|14.6.3|248>>
+    <associate|ch14:comparison|<tuple|14.3|239>>
+    <associate|ch14:comparison-exponents|<tuple|14.8|239>>
+    <associate|ch14:conserved-line|<tuple|14.11|242>>
+    <associate|ch14:coordinate-spectrum|<tuple|14.3|238>>
+    <associate|ch14:derivative-commutator|<tuple|14.25|250>>
+    <associate|ch14:diagonal-mass|<tuple|14.22|248>>
+    <associate|ch14:flux|<tuple|14.13|242>>
+    <associate|ch14:formal-adjoint|<tuple|14.4|238>>
+    <associate|ch14:global-ward|<tuple|14.26|251>>
+    <associate|ch14:grid-cost|<tuple|14.7|239>>
+    <associate|ch14:grid-input|<tuple|14.6|239>>
+    <associate|ch14:heat|<tuple|14.2|237>>
+    <associate|ch14:heat-pairing|<tuple|14.1|237>>
+    <associate|ch14:lattice-comparison|<tuple|14.3.1|239>>
+    <associate|ch14:line-ward|<tuple|14.23|249>>
+    <associate|ch14:mixed-sign|<tuple|14.20|245>>
+    <associate|ch14:normalized-stress|<tuple|14.6|252>>
+    <associate|ch14:polynomial-moments|<tuple|14.17|244>>
+    <associate|ch14:positive-residual|<tuple|14.18|245>>
+    <associate|ch14:propagation|<tuple|14.7|249>>
+    <associate|ch14:reflection|<tuple|14.1|237>>
+    <associate|ch14:rotations|<tuple|14.5|252>>
+    <associate|ch14:rotations-section|<tuple|14.8|251>>
+    <associate|ch14:shells|<tuple|14.5|242>>
+    <associate|ch14:sign-induction|<tuple|14.21|246>>
+    <associate|ch14:sign-transfer|<tuple|14.19|245>>
+    <associate|ch14:slab-bound|<tuple|14.1|238>>
+    <associate|ch14:slab-laws|<tuple|14.5|238>>
+    <associate|ch14:slab-smooth|<tuple|14.2|239>>
+    <associate|ch14:slabs|<tuple|14.2|238>>
+    <associate|ch14:smooth-comparison|<tuple|14.3|241>>
+    <associate|ch14:spectral|<tuple|14.6|244>>
+    <associate|ch14:spectral-CS|<tuple|14.16|244>>
+    <associate|ch14:stress-line|<tuple|14.4|242>>
+    <associate|ch14:subset-root|<tuple|14.9|240>>
+    <associate|ch14:uniform-tests|<tuple|14.10|241>>
+    <associate|ch14:ward|<tuple|14|237>>
+    <associate|ch15:ae-ground|<tuple|15.10|259>>
+    <associate|ch15:algebra|<tuple|15.1|256>>
+    <associate|ch15:characters|<tuple|15.3|257>>
+    <associate|ch15:cluster|<tuple|15.3|256>>
+    <associate|ch15:compression|<tuple|15.2|255>>
+    <associate|ch15:compression-defect|<tuple|15.4|256>>
+    <associate|ch15:detector-moments|<tuple|15.8|258>>
+    <associate|ch15:fields|<tuple|15.5|258>>
+    <associate|ch15:ground|<tuple|15.1|255>>
+    <associate|ch15:mixture|<tuple|15.5|257>>
+    <associate|ch15:moment-norm|<tuple|15.6|257>>
+    <associate|ch15:phase-invariant|<tuple|15.7|258>>
+    <associate|ch15:phase-symmetry|<tuple|15.4|257>>
+    <associate|ch15:phases|<tuple|15|255>>
+    <associate|ch15:same-fields|<tuple|15.9|259>>
+    <associate|ch15:selection|<tuple|15.6|259>>
+    <associate|ch15:sharp-phase-section|<tuple|15.7|260>>
+    <associate|ch15:spatial-ground|<tuple|15.1|255>>
+    <associate|ch15:whole-gram|<tuple|15.2|256>>
+    <associate|ch16:boundary|<tuple|16.1|262>>
+    <associate|ch16:boundary-section|<tuple|16.1|261>>
+    <associate|ch16:charge-law|<tuple|16.13|269>>
+    <associate|ch16:charges-section|<tuple|16.6|268>>
+    <associate|ch16:cone-support|<tuple|16.6|263>>
+    <associate|ch16:covariance-section|<tuple|16.2|263>>
+    <associate|ch16:fields|<tuple|16.3|266>>
+    <associate|ch16:fields-section|<tuple|16.4|265>>
+    <associate|ch16:full-tube|<tuple|16.7|264>>
+    <associate|ch16:gap-bound|<tuple|16.3|262>>
+    <associate|ch16:heat-decay|<tuple|16.11|267>>
+    <associate|ch16:heat-function|<tuple|16.2|262>>
+    <associate|ch16:irreducible|<tuple|16.5|268>>
+    <associate|ch16:laplace|<tuple|16.5|263>>
+    <associate|ch16:local-commutator|<tuple|16.9|267>>
+    <associate|ch16:locality|<tuple|16.2|264>>
+    <associate|ch16:locality-section|<tuple|16.3|264>>
+    <associate|ch16:low-energy|<tuple|16.10|267>>
+    <associate|ch16:partial-boundary|<tuple|16.8|264>>
+    <associate|ch16:reconstruction|<tuple|16|261>>
+    <associate|ch16:slabs|<tuple|16.1|261>>
+    <associate|ch16:taylor-boundary|<tuple|16.4|262>>
+    <associate|ch16:vacuum|<tuple|16.4|267>>
+    <associate|ch16:vacuum-section|<tuple|16.5|266>>
+    <associate|ch16:weak-commutant|<tuple|16.12|268>>
+    <associate|ch17:actual-current-map|<tuple|17.19|287>>
+    <associate|ch17:all-radii|<tuple|17.5|298>>
+    <associate|ch17:block-algebra|<tuple|17.7|277>>
+    <associate|ch17:block-identities|<tuple|17.1|277>>
+    <associate|ch17:coefficient|<tuple|17.4|297>>
+    <associate|ch17:contact|<tuple|17.11|280>>
+    <associate|ch17:contact-Z|<tuple|17.10|279>>
+    <associate|ch17:contact-identity|<tuple|17.2|280>>
+    <associate|ch17:contact-section|<tuple|17.4.4|279>>
+    <associate|ch17:corrected-regulated-ward|<tuple|17.13|283>>
+    <associate|ch17:current|<tuple|17.3|275>>
+    <associate|ch17:current-alias|<tuple|17.15|284>>
+    <associate|ch17:current-suppliers|<tuple|17.4|276>>
+    <associate|ch17:defect-four|<tuple|17.14|284>>
+    <associate|ch17:exclusion|<tuple|17.9|298>>
+    <associate|ch17:finite-haar|<tuple|17.9|278>>
+    <associate|ch17:finite-sigma|<tuple|17.25|292>>
+    <associate|ch17:flat-current-map|<tuple|17.20|287>>
+    <associate|ch17:gradient-cancellation|<tuple|17.12|281>>
+    <associate|ch17:kernel-divergence|<tuple|17.24|291>>
+    <associate|ch17:kernel-score|<tuple|17.23|290>>
+    <associate|ch17:laplace|<tuple|17.2|271>>
+    <associate|ch17:limit|<tuple|17.8|297>>
+    <associate|ch17:marked-rates|<tuple|17.7|290>>
+    <associate|ch17:polynomial-response|<tuple|17.26|294>>
+    <associate|ch17:quadratic-current|<tuple|17.5|283>>
+    <associate|ch17:quadratic-current-contraction|<tuple|17.16|285>>
+    <associate|ch17:radii|<tuple|17.2|272>>
+    <associate|ch17:regulator-completion|<tuple|17.4.7|282>>
+    <associate|ch17:regulator-input|<tuple|17.6|276>>
+    <associate|ch17:rho|<tuple|17.5|275>>
+    <associate|ch17:running-radius|<tuple|17.3|272>>
+    <associate|ch17:scalar-log-supplier|<tuple|17.8|278>>
+    <associate|ch17:sigma-bound|<tuple|17.28|296>>
+    <associate|ch17:sigma-error|<tuple|17.27|295>>
+    <associate|ch17:spatial-moments|<tuple|17.3|293>>
+    <associate|ch17:spectral-pairing|<tuple|17.1|271>>
+    <associate|ch17:spectrum|<tuple|17.1|271>>
+    <associate|ch17:stability|<tuple|17.6|289>>
+    <associate|ch17:stable-functional|<tuple|17.21|289>>
+    <associate|ch17:stationary-higher-jets|<tuple|17.17|286>>
+    <associate|ch17:trace|<tuple|17|271>>
+    <associate|ch17:trace-law|<tuple|17.29|298>>
+    <associate|ch17:transfer|<tuple|17.22|290>>
+    <associate|ch17:unnormalized-defect|<tuple|17.18|286>>
+    <associate|ch17:variable-windows|<tuple|17.2.1|273>>
+    <associate|ch17:window-product|<tuple|17.4|273>>
+    <associate|ch18:coefficients|<tuple|18.3|302>>
+    <associate|ch18:dual|<tuple|18.1|301>>
+    <associate|ch18:extension|<tuple|18.4|306>>
+    <associate|ch18:extension-formula|<tuple|18.10|307>>
+    <associate|ch18:extension-theorem|<tuple|18.3|307>>
+    <associate|ch18:graded|<tuple|18.2|302>>
+    <associate|ch18:graded-distance|<tuple|13.22|229>>
+    <associate|ch18:graded-estimate|<tuple|13.7|229>>
     <associate|ch18:graded-quotient-section|<tuple|13.9|228>>
-    <associate|ch18:graded-room|<tuple|13.21|228>>
-    <associate|ch18:group-weight|<tuple|13.26|231>>
+    <associate|ch18:graded-room|<tuple|13.21|229>>
+    <associate|ch18:group-weight|<tuple|13.26|232>>
     <associate|ch18:high-step|<tuple|13.24|229>>
-    <associate|ch18:input|<tuple|18.2|301>>
+    <associate|ch18:input|<tuple|18.2|303>>
     <associate|ch18:lattice-estimate|<tuple|13.28|233>>
     <associate|ch18:lattice-products|<tuple|13.10|230>>
     <associate|ch18:lattice-replacement|<tuple|13.8|233>>
     <associate|ch18:low-cone|<tuple|13.23|229>>
     <associate|ch18:mixed-bound|<tuple|13.9|234>>
     <associate|ch18:mixed-product-rate|<tuple|13.29|234>>
-    <associate|ch18:mixed-replacement|<tuple|13.10.4|233>>
-    <associate|ch18:normal-Taylor|<tuple|18.8|305>>
-    <associate|ch18:ope|<tuple|18.3|303>>
-    <associate|ch18:ope-bound|<tuple|18.5|303>>
-    <associate|ch18:ope-theorem|<tuple|18.2|303>>
-    <associate|ch18:pair-weights|<tuple|18.7|304>>
-    <associate|ch18:polynomial|<tuple|18.6|304>>
-    <associate|ch18:prescription|<tuple|18.1|299>>
-    <associate|ch18:products|<tuple|18|299>>
-    <associate|ch18:raw-replacement|<tuple|18.4|302>>
-    <associate|ch18:replacement-input|<tuple|18.1|301>>
-    <associate|ch18:replacement-moments|<tuple|18.4|301>>
-    <associate|ch18:residual-weights|<tuple|13.27|232>>
-    <associate|ch18:scope|<tuple|18.5|306>>
-    <associate|ch18:signed-transport|<tuple|13.25|230>>
-    <associate|ch18:subtraction|<tuple|18.9|305>>
-    <associate|ch19:assembly|<tuple|19|307>>
-    <associate|ch19:conditional|<tuple|19.1|308>>
-    <associate|ch19:conditional-trace|<tuple|19.2|308>>
-    <associate|ch19:family|<tuple|19.1|307>>
-    <associate|ch19:scope|<tuple|19.3|309>>
-    <associate|ch19:theorem-section|<tuple|19.2|307>>
+    <associate|ch18:mixed-replacement|<tuple|13.10.4|234>>
+    <associate|ch18:normal-Taylor|<tuple|18.8|307>>
+    <associate|ch18:ope|<tuple|18.3|305>>
+    <associate|ch18:ope-bound|<tuple|18.5|305>>
+    <associate|ch18:ope-theorem|<tuple|18.2|305>>
+    <associate|ch18:pair-weights|<tuple|18.7|306>>
+    <associate|ch18:polynomial|<tuple|18.6|306>>
+    <associate|ch18:prescription|<tuple|18.1|301>>
+    <associate|ch18:products|<tuple|18|301>>
+    <associate|ch18:raw-replacement|<tuple|18.4|304>>
+    <associate|ch18:replacement-input|<tuple|18.1|303>>
+    <associate|ch18:replacement-moments|<tuple|18.4|303>>
+    <associate|ch18:residual-weights|<tuple|13.27|233>>
+    <associate|ch18:scope|<tuple|18.5|308>>
+    <associate|ch18:signed-transport|<tuple|13.25|231>>
+    <associate|ch18:subtraction|<tuple|18.9|307>>
+    <associate|ch19:assembly|<tuple|19|309>>
+    <associate|ch19:conditional|<tuple|19.1|310>>
+    <associate|ch19:conditional-trace|<tuple|19.2|310>>
+    <associate|ch19:family|<tuple|19.1|309>>
+    <associate|ch19:scope|<tuple|19.3|311>>
+    <associate|ch19:theorem-section|<tuple|19.2|309>>
   </collection>
 </references>
 

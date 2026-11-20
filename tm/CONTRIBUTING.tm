@@ -44,6 +44,12 @@
   locating an applicable published theorem, checking its hypotheses, or
   identifying a gap in an interpretation.
 
+  The authoritative manuscript is <hlink|HumanizeYM_v3|manuscript/HumanizeYM_v3/index.tm>.
+  Make manuscript edits in that directory. Its <hlink|LaTeX
+  master|manuscript/HumanizeYM_v3/monograph.tm> gives the chapter order, and
+  its <hlink|notation guide|manuscript/HumanizeYM_v3/blueprint/notation.tm>
+  records the conventions used throughout the book.
+
   <section|Before starting><label|before-starting>
 
   For a public repository, use your own GitHub account and fork; ordinary
@@ -108,13 +114,13 @@
   The canonical extraction issue supplies the stable unit ID: issue 123
   becomes <verbatim|YM-000123>. Later revision and review issues refer to
   that existing unit. Use <verbatim|templates/proof-unit/>: place the
-  mathematical section in <verbatim|manuscript/>, and put
+  mathematical section in <verbatim|manuscript/HumanizeYM_v3/>, and put
   <verbatim|unit.json> and <verbatim|correspondence.md> in
   <verbatim|blueprint/units/YM-000123/>. The metadata's <verbatim|manuscript>
   list names the section and all local mathematical support files (macros,
   references, included text). Replace every placeholder. Write the proof
   once, in LaTeX, and keep source/audit details in the correspondence record.
-  Follow <hlink|the manuscript build instructions|manuscript/index.tm>.
+  Follow <hlink|the manuscript build instructions|manuscript/HumanizeYM_v3/index.tm>.
 
   Start a section once its own interface is precise. Earlier inputs may still
   be drafts or outstanding obligations: state their exact content and status.
