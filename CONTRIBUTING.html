@@ -85,6 +85,12 @@
       include locating an applicable published theorem, checking its
       hypotheses, or identifying a gap in an interpretation.
     </p>
+    <p>
+      The authoritative manuscript is <a href="manuscript/HumanizeYM_v3/index.html">HumanizeYM_v3</a>. Make
+      manuscript edits in that directory. Its <a href="manuscript/HumanizeYM_v3/monograph.html">LaTeX master</a> gives
+      the chapter order, and its <a href="manuscript/HumanizeYM_v3/blueprint/notation.html">notation guide</a> records the
+      conventions used throughout the book.
+    </p>
     <h2 id="auto-1"><a id="before-starting"></a>Before starting<span style="margin-left: 1em"></span></h2>
     <p>
       For a public repository, use your own GitHub account and fork; ordinary
@@ -149,13 +155,13 @@ git worktree add -b codex/issue-123-session-01 ../ym-123-session-01 upstream/mai
       The canonical extraction issue supplies the stable unit ID: issue 123
       becomes <tt class="verbatim">YM-000123</tt>. Later revision and review issues
       refer to that existing unit. Use <tt class="verbatim">templates/proof-unit/</tt>:
-      place the mathematical section in <tt class="verbatim">manuscript/</tt>, and put
-      <tt class="verbatim">unit.json</tt> and <tt class="verbatim">correspondence.md</tt> in <tt
-      class="verbatim">blueprint/units/YM-000123/</tt>. The metadata's <tt class="verbatim">manuscript</tt>
+      place the mathematical section in <tt class="verbatim">manuscript/HumanizeYM_v3/</tt>,
+      and put <tt class="verbatim">unit.json</tt> and <tt class="verbatim">correspondence.md</tt>
+      in <tt class="verbatim">blueprint/units/YM-000123/</tt>. The metadata's <tt class="verbatim">manuscript</tt>
       list names the section and all local mathematical support files (macros,
       references, included text). Replace every placeholder. Write the proof
       once, in LaTeX, and keep source/audit details in the correspondence
-      record. Follow <a href="manuscript/index.html">the manuscript build instructions</a>.
+      record. Follow <a href="manuscript/HumanizeYM_v3/index.html">the manuscript build instructions</a>.
     </p>
     <p>
       Start a section once its own interface is precise. Earlier inputs may
