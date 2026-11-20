@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Chapter 8 audit &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Chapter 8 audit</h1><a id="chapter-8-audit"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Scope</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Sources inspected</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Checked application</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Additional checks</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Still to integrate</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">2</a>
+      </p>
+    </div>
+    <h2 id="auto-1"><a id="scope"></a>Scope<span style="margin-left: 1em"></span></h2>
+    <p>
+      Draft of abstract polymer tools, not a proof of the actual gauge-theory
+      step. Does not assume or assert the selected Wilson family has the
+      required activity estimates. The completed chapter may need a concise
+      norm-translation subsection once Chapter 4 is written.
+    </p>
+    <h2 id="auto-2"><a id="sources-inspected"></a>Sources inspected<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Scott Outline III.5, especially III.5.1&ndash;6: finite logarithm,
+          rooted estimates, deletion, forced attachments.
+        </p>
+      </li>
+      <li>
+        <p>
+          Martin <tt class="verbatim">existence/cluster-expansion.tex</tt>, <tt class="verbatim">eq:cluster-vertex-input</tt>,
+          <tt class="verbatim">eq:cluster-local-tail</tt>, <tt class="verbatim">eq:cluster-marked-size</tt>:
+          exact support hypotheses and factorial conventions.
+        </p>
+      </li>
+      <li>
+        <p>
+          UV specification U6: connected activities and forced coverage.
+        </p>
+      </li>
+      <li>
+        <p>
+          Ueltschi, arXiv math-ph/0304003v3, full HTML &sect;2 Theorem 1,
+          equations (3)&ndash;(4), inspected. This is the theorem used instead
+          of reproving rooted tree combinatorics. Koteck&yacute;&ndash;Preiss
+          original bibliographic metadata checked; original theorem pages not
+          inspected in this pass.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-3"><a id="checked-application"></a>Checked application<span style="margin-left: 1em"></span></h2>
+    <p>
+      Write w=|z|, inflate each activity to w exp(alpha c)/q, and use KP
+      exponent delta c. The incompatibility sum is at most q^(-1)|X| gamma
+      &lt;= delta c(X), using h gamma &lt;= q delta. Finite volume plus
+      nonempty supports ensures total weighted activity summability. The
+      rooted bound then controls the sum of all clusters hitting x with
+      weights q^(-n) by gamma/q: choose an occurrence containing x, replace
+      1/n! by 1/(n-1)!, and sum the root. For n&gt;=k restore q^n&lt;=q^k to
+      get gamma q^(k-1). Union support weights are bounded by product support
+      weights because a nonzero connected coefficient has an overlap spanning
+      tree. This proves the stronger tail displayed in the draft as an
+      immediate application of the existing theorem; no new cluster theorem is
+      claimed.
+    </p>
+    <p>
+      Martin uses q0=4h gamma/delta and obtains gamma q^m/(1-q). That
+      sufficient condition implies the draft's criterion, so the cited
+      abstract theorem can replace this repetitive combinatorial proof. This
+      observation does not remove any source-specific activity hypothesis.
+      Rooted tuples permit repeated labels; gas families do not.
+    </p>
+    <h2 id="auto-4"><a id="additional-checks"></a>Additional checks<span style="margin-left: 1em"></span></h2>
+    <p>
+      Independent review by the continuum writer confirmed the
+      inflated-activity criterion, all factorials, union-weight inequality and
+      the stronger tail on 19 November 2026.
+    </p>
+    <p>
+      The deletion identity follows by subtracting absolutely convergent
+      series. Real positivity is a conclusion, not a premise. Cauchy
+      differentiation requires uniform bounds on complex parameter
+      neighbourhoods; the text says so. The large-field reassembly formula is
+      stated for overlap incompatibility and fixed large-field configuration;
+      it does not assert product factorization of clusters meeting multiple
+      supports or convergence of an uncontrolled forced sum. The final support
+      discussion was corrected after inspecting Scott D25: exact covering
+      supports can be smaller than full link-dependence supports because
+      boundary flags inspect adjacent plaquettes. The abstract overlap
+      criterion does not assert independence of activity random variables.
+    </p>
+    <h2 id="auto-5"><a id="still-to-integrate"></a>Still to integrate<span style="margin-left: 1em"></span></h2>
+    <p>
+      Map Chapter 4's precise anchored and unanchored norms to the site norm,
+      including any support enlargement for eligibility tests. Specify exactly
+      which scalar and forced activity bounds Chapter 9 supplies. Confirm the
+      final book's symbol registry reserves alpha, delta and gamma_0 only
+      locally here. No source-specific missing estimate is declared solved by
+      this chapter.
+    </p>
+  </body>
+</html>

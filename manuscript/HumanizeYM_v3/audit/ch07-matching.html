@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Chapter 7 current verification status &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Chapter 7 current verification status</h1><a id="chapter-7-current-verification-status"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Logical-order edit</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>New derivations and exact source trace</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-2">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Cross-chapter identification checked with author</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-3">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Review priorities for independent reader</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-4">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Closure of the classical input (third pass)</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-5">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Fixed classical output budget</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Additional original literature</b> <span style="margin-left: 5mm"></span> <a href="#auto-7">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>First-pass record (superseded where it lists broad remaining
+        assumptions)</b> <span style="margin-left: 5mm"></span> <a href="#auto-8">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Source map and verification</b> <span style="margin-left: 5mm"></span> <a href="#auto-9">5</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Exact remaining analytic obligations</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-10">6</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Agent coordination</b> <span style="margin-left: 5mm"></span> <a href="#auto-11">7</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Original literature checked before drafting proofs</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-12">7</a>
+      </p>
+    </div>
+    <p>
+      Second substantive pass, 2026-11-19. The former broad integrand and
+      inherited-loop assumptions are now proved from the explicitly identified
+      incoming path/metric/actual stationary inputs. The common-comparison
+      bound is stated as a proposition after its actual weighted proof in
+      section <tt class="verbatim">ch07:weighted</tt>. Final application still requires
+      the selected history to satisfy those incoming path budgets and Chapter5
+      stationary identifications; no nonlinear large-field integral or
+      infinite schedule is certified here.
+    </p>
+    <h2 id="auto-1"><a id="logical-order-edit"></a>Logical-order edit<span style="margin-left: 1em"></span></h2>
+    <p>
+      Reordered the chapter so the auxiliary fine-action denominator/vertex
+      estimates precede the actual centered matrix estimates; Haar and contact
+      identities remain before their uses. The common comparison statement is
+      now a proved proposition, followed by determinant comparison and the
+      drift. Classical stationary jet suppliers now precede the matching
+      construction, with the coefficient-budget contraction after that
+      construction. Removed the duplicated generic stationary formula and its
+      obsolete suggestion that Chapter5 alone supplies pre-L locality.
+      Inherited-loop proof now precedes output amplitude bookkeeping. Stable
+      labels preserved. Foundations separately reviewed and accepted the
+      fixed-classical-budget gain: Wilson baseline is evaluated on the same
+      actual tangent/inverse, so no inverse-difference estimate is missing.
+    </p>
+    <h2 id="auto-2"><a id="new-derivations-and-exact-source-trace"></a>New derivations and exact source trace<span style="margin-left: 1em"></span></h2>
+    <ol>
+      <li>
+        <p>
+          <tt class="verbatim">ch07:contact</tt>: Martin <tt class="verbatim">thermal-contact-cancellation.tex:88&ndash;277</tt>.
+          Full stationary scalar determinants have zero first derivative by
+          colour invariance, so nonlinear-branch second derivatives drop from
+          the scalar chain rule. This does not assert DK=0 for the matrix
+          itself. The exact penalty contact expansion retains inverse
+          derivatives; Dr_pen=&minus;Kc, Y(0)=0, and DY d_c=0 give momentum
+          orders3/4 and zero alpha. The pure-gauge Ward curve uses actual
+          stationary uniqueness. Fixed-L analyticity suffices for this exact
+          vanishing; its constants do not enter the uniform comparison.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">ch07:integrand-input</tt> is now a proposition. Martin
+          <tt class="verbatim">annulus-fleet-face-estimates.tex:361&ndash;815</tt>, <tt
+          class="verbatim">annulus-two-wave-estimates.tex</tt>, <tt class="verbatim">annulus-same-data-binding.tex</tt>.
+          The actual path's low-weight density equals Wilson because c_dir
+          I+rho(0)*rho(0)=I; transported curvatures begin at weight2 and the
+          extra cubic/quartic terms at6/8. Split-field left derivatives retain
+          the response contact orders3,2,1. The proof explicitly defines the
+          same operator denominator/first/second insertions and their shifted
+          momenta. Denominator floor plus inverse/marked-regulator product
+          rules gives the two radial bounds, including seagulls. Free-pole
+          extraction is not being substituted for that proof.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">ch07:weighted</tt>: Martin <tt class="verbatim">weighted-frame-penalty.tex</tt>,
+          <tt class="verbatim">weighted-stationary-inverses.tex</tt>, <tt class="verbatim">selected-kinetic-response.tex</tt>,
+          <tt class="verbatim">stationary-determinant-prices.tex</tt>. Internal
+          directions have normalized residue L2 size mu and differentiated
+          size mu&sup2;; external smooth legs have those sizes in supremum
+          norm. Kinetic response counting n+2+number_of_differences=4 cancels
+          residue L4. The actual minimizing frame is estimated through its
+          centered nearest-group equation, using Linfinity/L2/L1 products and
+          smoothing-measure domination; not an assumed rooted Hessian bound
+          uniform in L. This supplies actual predictor/penalty mixed
+          derivatives and frame derivative O(L&sup2;). The exact gauge
+          identity uses one consistent centered frame, and mu&sup2; regulator
+          cancels L&sup2;.
+        </p>
+      </li>
+      <li>
+        <p>
+          Same weighted section establishes the real quotient floor by
+          removing nonprincipal longitudinal aliases and eliminating the
+          scalar coordinate through the principal scalar mean. Rooted
+          predictor Q=M+d_c R is converted to straight centered M by
+          r=r_root&minus;Ru. The frame scalar mean is root evaluation&minus;R
+          d_f. Uniform complex inversion freezes nonholomorphic weights at
+          real anchors before applying Cauchy. Finite-rank and trace-class
+          regulator terms then control the relative Hessian without L4.
+          Absolute determinant bounds may still cost L4.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">ch07:inherited-proof</tt>: Martin <tt class="verbatim">inherited-loop-transport.tex</tt>
+          entire proof. An order4 link symbol is factored into4 coordinate
+          differences;2 are put on each field leg. Common smooth transport
+          costs L^-3 per leg and residue sum L4 gives L^-2. Coarse shifts paid
+          at fine width by sigma/L&lt;w. Nonprincipal transverse aliases are
+          order2 from Kf N=A_l Kc and an invertible transverse fine form at
+          fixed nonzero alias; no uniform-in-L inverse is needed for this
+          qualitative order. Their longitudinal parts need not vanish. The
+          nonlinear pullback Hessian equals the linear one because DV(0)=0.
+        </p>
+      </li>
+    </ol>
+    <h2 id="auto-3"><a id="cross-chapter-identification-checked-with-author"></a>Cross-chapter identification checked with author<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      Foundations supplied <tt class="verbatim">ch05:actual-Q</tt>, <tt class="verbatim">ch05:corrected-transport</tt>,
+      <tt class="verbatim">ch05:actual-bridge</tt>, <tt class="verbatim">ch05:stationary-tangent</tt>.
+      ActualQ=M+d_cR; a smooth cardinal extension gives W_a=W_s&minus;d_f E R
+      W_s, with the same physical curl and common fine differences L^-1-r. R
+      has finite coarse range and row O_j(L); hence R W_s=O_j(1). The forest
+      stationary representative is a further rootzero gradient adjustment, and
+      no smoothness is claimed for that representative. A centered scalar
+      tangent need not be zero: it is a bounded coarse-local averaged-path
+      derivative applied to W_a. Chapter7 now allows this component. The
+      inherited loop annihilates gauge corrections on both legs, so W_s can be
+      used there directly. The auxiliary determinant is gauge invariant; its
+      nonprincipal folding argument uses transverse alias amplitudes, not
+      falsely vanishing full amplitudes.
+    </p>
+    <h2 id="auto-4"><a id="review-priorities-for-independent-reader"></a>Review priorities for independent reader<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Check the selected centered frame equation and r=r_root&minus;Ru
+          against Chapter4's conventions. This is the specific same-predictor
+          join on which weighted quotient positivity rests.
+        </p>
+      </li>
+      <li>
+        <p>
+          Check the low-weight path expansion in <tt class="verbatim">ch07:integrand-input</tt>;
+          the claim concerns the beta-free kinetic action only, not inherited
+          quadratic loops. Exponential path bounds pay its finite Taylor
+          expansions and response differences.
+        </p>
+      </li>
+      <li>
+        <p>
+          Finite-period recording error has constants depending on fixed
+          mu=L^-1. Radial and relative-comparison constants are chosen before
+          L. The proof keeps these two uniformities distinct.
+        </p>
+      </li>
+      <li>
+        <p>
+          The formerly remaining classical input is now discharged by <tt
+          class="verbatim">ch07:classical-uniform</tt>, as detailed below. Chapter5
+          alone supplies only fixed-L stationary derivatives, not pre-L
+          bounds.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-5"><a id="closure-of-the-classical-input-third-pass"></a>Closure of the classical input (third pass)<span style="margin-left: 1em"></span></h2>
+    <p>
+      The conditional algebraic matching proposition remains useful early in
+      the chapter, but its common cubic/quartic symbol assumptions are now
+      established for the actual stationary action in <tt class="verbatim">ch07:classical-uniform</tt>.
+      This uses the already derived ratio-uniform weighted completed inverse,
+      not the fixed-L tree-chart gap.
+    </p>
+    <ul>
+      <li>
+        <p>
+          Full tangent T includes coarse external field, smooth fine W_a, and
+          bounded centered scalar r_a. Differentiated stationarity gives
+          D&sup2;S[Tu,(0,z)]=0 for all internal z.
+        </p>
+      </li>
+      <li>
+        <p>
+          Cubic fine-action vertices have at least one finite difference and
+          quartic vertices need none. Exponential path division provides
+          common coefficient sums. Three undifferentiated legs plus one
+          difference or four undifferentiated legs cost mu4; residue L4
+          cancels it. For B(u,v)=D&sup3;S[Tu,Tv,internal], the internal factor
+          is in normalized L2, so it is a dual weighted bound, not an
+          entrywise bound. Penalty mixed derivatives are supplied by the
+          actual centered-frame induction.
+        </p>
+      </li>
+      <li>
+        <p>
+          Differentiate internal gauge identity D_zS[R a]=0 twice along
+          stationary tangents. DS(0)=0 and tangent orthogonality kill the
+          derivatives of R, proving B R=0.
+        </p>
+      </li>
+      <li>
+        <p>
+          If C=H+F*F and w=C^-1 B, pairing with R a gives &#x27E8;FR
+          a,Fw&#x27E9;=0. Invertibility of FR yields Fw=0 and Hw=B. Hence the
+          completed inverse represents the correct quotient inverse; a gauge
+          change does not change the exchange pairing.
+        </p>
+      </li>
+      <li>
+        <p>
+          Exact stationary formulas E3=S3[T&sup3;] and
+          E4=S4[T4]&minus;sum_three_pairings B C^-1 B produce pre-L uniform
+          bounds. Intermediate momentum is a sum of two external momenta, so a
+          fixed strip reduction suffices. The finite-volume coefficient
+          identity is exact, with one volume factor. This supplies the
+          same-action cubic/quartic output construction without using the
+          all-scale schedule or nonlinear integral theorem.
+        </p>
+      </li>
+    </ul>
+    <p>
+      The trace-ideal paragraph has also been corrected to distinguish two
+      separate mu&sup2; payments: m_mu X pays the frame derivative L&sup2;,
+      whereas Pf* M_mu Pf pays two mu^-1 weighted conversions. No term charges
+      both costs simultaneously to one regulator factor.
+    </p>
+    <h2 id="auto-6"><a id="fixed-classical-output-budget"></a>Fixed classical output budget<span style="margin-left: 1em"></span></h2>
+    <p>
+      Added <tt class="verbatim">ch07:classical-budget</tt>: after fixing the Gaussian
+      metric family independently of the higher classical amplitude, the
+      outgoing cubic/quartic amplitude is bounded by a_stage +
+      P_stage(A_in)/L. This is stronger than an arbitrary uniform C(A_in),
+      which need not close a repeated-stage budget. Compare Wilson vertices on
+      the SAME actual tangent and SAME completed inverse. Normalization
+      removes weight-four differences; cubic remainder has two differences and
+      quartic remainder one. With a single internal leg, discrete integration
+      by parts moves its differences to the external legs, requiring at most
+      the already proved two smooth derivatives and no second internal
+      weighted derivative. Exchange cross terms inherit L^-1; its squared
+      remainder costs L^-2. The penalty is part of the fixed baseline. Coarse
+      row subtraction and sequential cubic/quartic curvature division preserve
+      the bound. Output width is chosen from the fixed coarse Gaussian strip,
+      with the incoming fine-width guard c sigma/L &lt; w, preventing repeated
+      width erosion. Foundations independently checked the preceding
+      gauge-annihilation and quotient inverse argument.
+    </p>
+    <h2 id="auto-7"><a id="additional-original-literature"></a>Additional original literature<span style="margin-left: 1em"></span></h2>
+    <p>
+      Luscher&ndash;Weisz1995 primary arXiv record <a href="https://arxiv.org/abs/hep-lat/9505011">https://arxiv.org/abs/hep-lat/9505011</a>
+      and publisher record <a href="https://www.sciencedirect.com/science/article/pii/055032139500338S">https://www.sciencedirect.com/science/article/pii/055032139500338S</a>
+      verified before adding the citation. Used for existing perturbative
+      Wilson-lattice coupling matching, not as proof of the present
+      path/predictor estimates. Bib entry added to <tt class="verbatim">blueprint/ch07-bibliography.bib</tt>.
+    </p>
+    <h2 id="auto-8"><a id="first-pass-record-superseded-where-it-lists-broad-remaining-assumptions"></a>First-pass record (superseded where it lists broad
+    remaining assumptions)<span style="margin-left: 1em"></span></h2>
+    <p>
+      <h1>Chapter 7 mathematical audit</h1><a id="chapter-7-mathematical-audit"></a>
+    </p>
+    <p>
+      Draft: <tt class="verbatim">chapters/07-matching.tex</tt>. This is a substantive
+      conditional chapter, not certification of the full one-step theorem. It
+      supplies actual proofs of curvature division, matching, coefficient
+      extraction, finite-dimensional determinant cancellation, and
+      implications from named uniform estimates. It deliberately retains three
+      analytic boundaries instead of silently replacing selected data by flat
+      data.
+    </p>
+    <h2 id="auto-9"><a id="source-map-and-verification"></a>Source map and verification<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Scott <tt class="verbatim">part2/C-section.tex:1&ndash;86</tt>: fixed-stage
+          dependence, rows/path action, kinetic normalization, zero loop
+          moments. Chapter states local analytic action rather than
+          reproducing discontinuous clipped global action already assigned to
+          the preceding chapters. All derivatives are inside a fixed
+          small-field region.
+        </p>
+      </li>
+      <li>
+        <p>
+          Scott C <tt class="verbatim">lem:C3:87&ndash;144</tt>; Martin <tt class="verbatim">existence/multileg-curvature-lift.tex</tt>,
+          especially <tt class="verbatim">lem:multileg-single</tt>, <tt class="verbatim">lem:multileg-shift</tt>,
+          <tt class="verbatim">eq:multileg-all-curls</tt>, <tt class="verbatim">eq:multileg-moments</tt>:
+          checked exterior division and dependent-momentum induction. Chapter
+          proves periodic strip adaptation explicitly. Scalar division
+          requires zero value; positive exterior degree requires cycle
+          condition. Dependent degree increases by two while independent
+          momentum count decreases by one. Two-leg case uses additional Taylor
+          order. No independent division of dependent momenta is assumed.
+        </p>
+      </li>
+      <li>
+        <p>
+          Martin <tt class="verbatim">stationary-output-construction.tex:10&ndash;189</tt>,
+          <tt class="verbatim">eq:output-leading-removal</tt>, <tt class="verbatim">eq:output-classical-five</tt>:
+          common normalized Taylor symbols C_n=D^n/n!; first construct cubic
+          action, subtract its quartic contribution, then construct quartic
+          action. Infinite Fourier arrays periodized once for all tori.
+          Matching Hessian belongs to the exact coarse/fine pair. Chapter
+          proves conditional matching without claiming the required common
+          strip inputs have already been supplied by Chapter5.
+        </p>
+      </li>
+      <li>
+        <p>
+          Same file190&ndash;276 and <tt class="verbatim">quadratic-lattice-symmetry.tex</tt>:
+          quadratic invariant coefficient determined by transverse test
+          alpha=2 Re[t&sup2;]f_22^uu(te1). Simplicity, signed reflections,
+          Ward transversality isolate the kinetic tensor; subtracting actual
+          full kinetic symbol before using inversion removes edge-phase
+          ambiguity. Two curls reduce order4 link remainder to order2
+          curvature remainder, giving zero total and first moments.
+        </p>
+      </li>
+      <li>
+        <p>
+          Scott C <tt class="verbatim">lem:C5:185&ndash;209</tt>; Martin <tt class="verbatim">thermal-contact-cancellation.tex:1&ndash;84</tt>:
+          exact stationary gauge/Haar determinant identity checked via block
+          triangular factorization. Explicit hypotheses J R=0, volume-one
+          joint coordinates, Q=Ds<em>I</em>J I Ds, Haar=|det Ds| are kept
+          visible. Ghost m_mu uses ninth-power regulator. No omission of Haar
+          Jacobian.
+        </p>
+      </li>
+      <li>
+        <p>
+          Scott C <tt class="verbatim">lem:C6:211&ndash;261</tt>; Martin <tt class="verbatim">stationary-determinant-prices.tex:1&ndash;310</tt>:
+          relative difference has fixed coarse-rank terms and trace-class
+          regulator terms, whereas absolute term can cost L^4. Chapter proves
+          consequence from common operator/inverse/insertion/trace-norm
+          bounds. Ninth power explanation checked: P&sup3; value trace-class;
+          distributing &lt;=2 derivatives over (P&sup3;)^3 leaves one
+          undifferentiated trace-class factor. Weighted conversions and
+          background response remain necessary inputs.
+        </p>
+      </li>
+      <li>
+        <p>
+          Martin <tt class="verbatim">thermal-contact-cancellation.tex:126&ndash;277</tt>:
+          exact contact Hessian has xM plus reverse and xBx; x=O(p&sup2;),
+          mixed Ward kernel M=O(p), so alpha zero. Chapter states the exact
+          contact factorization among input conditions and proves its order
+          consequence. It does not claim derivation of the full actual
+          stationary-branch contact identity from merely a tangent branch.
+        </p>
+      </li>
+      <li>
+        <p>
+          Scott C <tt class="verbatim">lem:C7:266&ndash;337</tt>: coefficient integrand
+          h(k)=4C_G(k2&sup2;/r6&minus;4k1&sup2;k2&sup2;/r8&minus;1/r4).
+          Sign/factor independently checked: angular
+          mean1/4&minus;1/6&minus;1=&minus;11/12; S&sup3; area2pi&sup2; yields
+          &minus;11C_G/(24pi&sup2;). Remainders r^-3 and mu&sup2;r^-6
+          integrate uniformly in4D. Low ball volume mu4 cancels mu^-4 bound.
+          These implications are proved, but the actual lattice-vertex
+          remainder inequalities are an explicit assumption.
+        </p>
+      </li>
+      <li>
+        <p>
+          Scott joint proof after C7; Martin <tt class="verbatim">inherited-loop-transport.tex</tt>:
+          degree4 gives formal L^-2 scaling but does not imply full
+          exponential norm contraction. Chapter retains weighted inherited
+          bound as separate condition and proves amplitude bookkeeping when
+          supplied.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-10"><a id="exact-remaining-analytic-obligations"></a>Exact remaining analytic obligations<span style="margin-left: 1em"></span></h2>
+    <ol>
+      <li>
+        <p>
+          Common stationary action/determinant kernels, with consistent root
+          rows and normalized plane-wave coefficients, must be produced from
+          the selected history and actual stationary chart. Candidate Martin
+          suppliers: <tt class="verbatim">classical-stationary-vertices.tex</tt>, <tt
+          class="verbatim">selected-stationary-linear-data.tex</tt>, <tt class="verbatim">selected-kinetic-response.tex</tt>,
+          <tt class="verbatim">stationary-determinant-prices.tex</tt>. Chapter5 exports
+          a uniform implicit-function theorem conditional on complex Hessian
+          inputs; Chapter6 actual local covariance/mask conditions are also
+          conditional. Neither automatically proves the full common Fourier
+          comparison here.
+        </p>
+      </li>
+      <li>
+        <p>
+          Assumption <tt class="verbatim">ch07:comparison-input</tt>: uniform positive
+          complex strip for shifted external/internal momenta; weighted
+          inverse and two insertion bounds; trace-norm cancellation; common
+          finite-volume exponential error; exact actual contact identity;
+          alias zeros. The source gives a detailed proposed chain, but
+          matching every supplier to the same selected density has not been
+          completed in this drafting pass.
+        </p>
+      </li>
+      <li>
+        <p>
+          Assumption <tt class="verbatim">ch07:integrand-input</tt>: actual fine-action
+          vertex remainder orders, seagull contributions, regulator
+          derivatives, global Brillouin-zone bounds. A citation to the
+          universal one-loop coefficient does not establish these. Scott C
+          gives a concise power count using B5/B7; full derivation against
+          selected-history suppliers remains to be audited.
+        </p>
+      </li>
+      <li>
+        <p>
+          Weighted inherited estimate <tt class="verbatim">ch07:inherited</tt>,
+          including all aliases and actual analytic interpolation. Momentum
+          order alone does not prove the exponential norm estimate.
+        </p>
+      </li>
+      <li>
+        <p>
+          Parameter derivatives: construction preserves assumed fixed-order
+          bounds after a width loss, but no unproved smooth dependence on the
+          coupling or selected path is claimed. Arrays are independent of beta
+          only when the input arrays are so.
+        </p>
+      </li>
+    </ol>
+    <h2 id="auto-11"><a id="agent-coordination"></a>Agent coordination<span style="margin-left: 1em"></span></h2>
+    <p>
+      Chapter5 agent reports: uniform stationary graph <tt class="verbatim">ch05:stationary-prop</tt>
+      conditional on complex inverse/Lipschitz inputs; exact physical block
+      maps and free-history bounds proved. No determinant loop remainder
+      exported yet. Chapter6 agent reports: actual selected-row gap,
+      forcing/mean and mask vanishing remain explicit same-data conditions.
+      Hence Chapter7 does not use those unfinished inputs as theorems.
+    </p>
+    <h2 id="auto-12"><a id="original-literature-checked-before-drafting-proofs"></a>Original literature checked before drafting proofs<span
+    style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Gross&ndash;Wilczek1973 original APS record <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.30.1343">https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.30.1343</a>
+          and Politzer1973 <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.30.1346">https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.30.1346</a>
+          located; both existing bibliography entries. Used for established
+          one-loop asymptotic-freedom calculation, not constructive lattice
+          uniformity.
+        </p>
+      </li>
+      <li>
+        <p>
+          Abbott1982 author-hosted original PDF <a href="https://www.columbia.edu/cu/neurotheory/Larry/AbbottActPhysPol82.pdf">https://www.columbia.edu/cu/neurotheory/Larry/AbbottActPhysPol82.pdf</a>
+          opened (18pages); tool had no readable OCR lines. CERN metadata <a
+          href="https://cds.cern.ch/record/130265">https://cds.cern.ch/record/130265</a> confirms Acta
+          Phys.Polon.B13,33&ndash;50. Chapter references standard
+          background-field method and displays source-checked normalization
+          data, without claiming all article equations were independently
+          inspected.
+        </p>
+      </li>
+      <li>
+        <p>
+          Barnich&ndash;Brandt&ndash;Henneaux2000 original arXiv full text <a
+          href="https://arxiv.org/pdf/hep-th/0002245">https://arxiv.org/pdf/hep-th/0002245</a> opened: Section4
+          algebraic Poincare lemma and theorem4.2 located. Its continuum
+          local-form setting does not supply the periodic quantitative strip
+          bound. Included concise proof of adaptation. Bib entry sidecar <tt
+          class="verbatim">blueprint/ch07-bibliography.bib</tt>.
+        </p>
+      </li>
+    </ul>
+    <p>
+      No new general standard proof is duplicated merely for length. The
+      quantitative dependent-momentum division and lattice determinant
+      comparison implications are included because their hypotheses and norms
+      are specific to this construction. No claim of novelty is made.
+    </p>
+  </body>
+</html>

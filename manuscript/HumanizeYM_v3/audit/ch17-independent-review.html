@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Independent mathematical review of Chapter 17 &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Independent mathematical review of Chapter 17</h1><a id="independent-mathematical-review-of-chapter-17"></a>
+    </p>
+    <p>
+      Reviewed <tt class="verbatim">chapters/17-trace-law.tex</tt> (draft
+      seen2026-11-19). No edits to author file.
+    </p>
+    <h2 id="auto-1"><a id="correction-applied"></a>Correction applied<span style="margin-left: 1em"></span></h2>
+    <p>
+      Root replaced the arity occurrences by fixed \(N_{\ast}\) in both
+      hypotheses and error displays.
+    </p>
+    <p>
+      In prescribed-radius comparison, n denotes the lattice level tending to
+      infinity, but the powers <tt class="verbatim">(alpha0-alpha1) D n+c</tt> and <tt
+      class="verbatim">(alpha0-alpha2) D n-alpha0-c</tt> must use FIXED arity, not that
+      level. Fixed exponents cannot satisfy the first negative inequality for
+      n&rarr;&infin;. Rename this occurrence to a fixed arity bound N_* (in
+      hypotheses AND strip/grid error displays). Parent notified.
+    </p>
+    <h2 id="auto-2"><a id="checked-implications"></a>Checked implications<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Stability lemma is sound under its stated hypotheses. Although
+          convergence s_i&rarr;s is not initially assumed, the bases (t_i,k_i)
+          converge to (t,v), with k_i=v_i&minus;t_is_iv_i&rarr;v, and
+          s_it_i=I,s_ik_i=0. This proves convergence/boundedness of s_i and
+          the claimed uniformly bounded coordinate functional c_i. The error
+          e_i rho(k_i) tends to zero from both assumed rates and bounded rho
+          t_i.
+        </p>
+      </li>
+      <li>
+        <p>
+          Trace cancellation uses the SAME lambda_i for all three tensors. f_i
+          inverse remains bounded by independence of free divergences.
+          Coefficients c_i can grow q_i, but error products vanish because
+          q_i/e_i&rarr;0. Formula4c_D=lambda(beta
+          KB_L)+c_Xlambda(KB_X)+c_D(lambda(KB_D)+4) has the correct signs. It
+          gives c_D&rarr;&minus;kappa/4.
+        </p>
+      </li>
+      <li>
+        <p>
+          Amplification is handled correctly: with A_i=beta_i r_i^4 U_i^-1,
+          beta_i r_i^4 U_i^-1 Z_i=beta_i A_iB_L+c_X A_iB_X+c_D A_iB_D.
+          Faster-than-power trace cancellation on L/X suppresses the first two
+          terms; D contributes&minus;kappa O. Qualitative convergence alone
+          would not suffice; the draft explicitly requests stronger rates.
+        </p>
+      </li>
+      <li>
+        <p>
+          Conserved-line comparison/flux fixes nu_i&rarr;1. This uses centered
+          conserved tensors, exact inclusion/symmetry transport, and
+          same-family shell comparison; all should remain in the stated
+          interface. The flux argument cannot be replaced by a bare
+          subsequential free stress limit from an unrelated comparison map.
+        </p>
+      </li>
+      <li>
+        <p>
+          Subtracting selected phase expectation costs beta_i r_i^4&rarr;0.
+          Units must be preserved by U_i, as required.
+        </p>
+      </li>
+      <li>
+        <p>
+          All-radius subsequence logic is valid: from EVERY prescribed null
+          sequence a comparison subsequence is required. If the full limit
+          failed, the violating null sequence would have no subsequence with
+          the target limit. Monotonicity only of G(r), not of r8log&sup2;G, is
+          used correctly; fixed t&lt;1 and t&gt;1 sandwich normalized target,
+          then t&rarr;1.
+        </p>
+      </li>
+      <li>
+        <p>
+          Free ordered-pair normalization yields2*24/16=3 per colour,
+          consistent with O=1/4&Sigma;ordered F&sup2;.
+        </p>
+      </li>
+      <li>
+        <p>
+          Regulator argument correctly avoids differentiating O(1). MVT for
+          logmu over a FIXED interval requires uniform bounded remainder for
+          that current/period family, and the Haar coefficient is independent
+          of selected mu. With the stated uniform current-period limit on each
+          compact regulator interval, then u&rarr;&minus;&infin; and interval
+          length A&rarr;&infin;, the claim follows. Keep this order explicit.
+        </p>
+      </li>
+      <li>
+        <p>
+          Finite mass-shell profiles have only nonnegative integer log powers
+          at any finite asymptotic order; sufficient expansion before
+          multiplication supplies the bounded remainder. The exclusion is
+          appropriately restricted and does not assert absence of generalized
+          free representations or a mass gap.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-3"><a id="boundaries-not-discharged-by-this-review"></a>Boundaries not discharged by this review<span style="margin-left: 1em"></span></h2>
+    <p>
+      This is a review of finite-dimensional, spectral and limiting
+      deductions, not verification of actual regulator/current transfer
+      estimates. In particular same-family rho(Sigma_k), equation direction
+      errors after backward matching/replication, exact forward-difference
+      preservation, uniform all-radius marked windows and moving-label
+      comparison are explicit additional inputs. Their qualitative
+      counterparts do not imply the required rates. No new hidden algebraic
+      gap identified beyond the arity/level notation collision above.
+    </p>
+  </body>
+</html>

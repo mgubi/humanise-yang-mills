@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Chapter 16: relativistic reconstruction &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Chapter 16: relativistic reconstruction</h1><a id="chapter-16-relativistic-reconstruction"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Exact hypotheses retained</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Checked proof units and sources</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Stable exports</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Original literature</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Limits</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">3</a>
+      </p>
+    </div>
+    <p>
+      File: <tt class="verbatim">chapters/16-reconstruction.tex</tt>. Standalone
+      compile: 8 pages, no overfull/underfull boxes, 2026-11-19. Global
+      bibliography/build/render left to parent.
+    </p>
+    <h2 id="auto-1"><a id="exact-hypotheses-retained"></a>Exact hypotheses retained<span style="margin-left: 1em"></span></h2>
+    <p>
+      The chapter assumes the actual separated phase correlations, uniform
+      phase slab bounds, common label/null-space identification, full-support
+      phase measure, orthogonal covariance, and normalized stress/annular
+      identities from Chapters14&ndash;15. These conclusions retain their
+      Chapter11 marked lattice/calibration and Chapter14 common-grid/annular
+      analytic prerequisites. Chapter16 proves the reconstruction from that
+      interface, and does NOT claim to close those upstream microscopic
+      suppliers.
+    </p>
+    <p>
+      No collision extension of the Euclidean hierarchy is postulated. No
+      analyticity is inferred from mere continuity: heat spectral calculus and
+      polynomial slab bounds supply it. No uniform bound in arity is asserted
+      or required. No mass gap follows from the low-energy estimate.
+    </p>
+    <h2 id="auto-2"><a id="checked-proof-units-and-sources"></a>Checked proof units and sources<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Centered slabs, width independence, polynomial time-gap bound: Scott
+          <tt class="verbatim">part2/H-section.tex</tt>187&ndash;217; Martin <tt class="verbatim">existence/complex-heat.tex</tt>
+          and <tt class="verbatim">analytic-boundary.tex</tt>1&ndash;120. Only spatial
+          strong continuity needed.
+        </p>
+      </li>
+      <li>
+        <p>
+          Joint boundary, arbitrary independent height ratios, common Schwartz
+          seminorm and phase continuity/barycenter: Martin <tt class="verbatim">analytic-boundary.tex</tt>121&ndash;231;
+          ScottH218&ndash;238. Exact backwards Taylor formula has integrand
+          bounded by cancellation of s^m against gap s^-m; all weakly ordered
+          heights allowed.
+        </p>
+      </li>
+      <li>
+        <p>
+          Lorentz covariance, exponential compact-frequency test identity,
+          suffix spectral cones: Martin <tt class="verbatim">fourier-support.tex</tt>1&ndash;142;
+          ScottH224&ndash;242. Coordinate Fourier pairing is Euclidean;
+          momentum transforms by inverse transpose, still preserves forward
+          cone.
+        </p>
+      </li>
+      <li>
+        <p>
+          Full spacetime tube and closed-cone partial boundaries: Martin <tt
+          class="verbatim">full-tube.tex</tt>1&ndash;274. Smooth cutoff equals one near
+          support; distance-three neighborhood gives bounded exponential
+          multiplier on closed imaginary cone. Bare exponential off support is
+          not used as a Schwartz multiplier.
+        </p>
+      </li>
+      <li>
+        <p>
+          Adjacent locality: Martin <tt class="verbatim">locality.tex</tt>1&ndash;239;
+          ScottH243&ndash;274. Small imaginary boosts produce both germs,
+          Euclidean smoothness at the spatially separated tie identifies all
+          jets on a totally real slice, finite chain of germs reaches
+          arbitrary real times. Tied-height partial boundaries are taken only
+          after germ identity.
+        </p>
+      </li>
+      <li>
+        <p>
+          Word fields: Martin <tt class="verbatim">reconstruction.tex</tt>1&ndash;224;
+          ScottH275&ndash;291. Standard Wightman quotient is cited, only
+          domain/null invariance check retained. Independent Gram limits yield
+          positive form and actual vectors, not just scalar limits.
+        </p>
+      </li>
+      <li>
+        <p>
+          Onto OS comparison: ScottH282&ndash;291. Compact-frequency damping
+          identifies positive-height vectors with images; closed-range density
+          supplies surjectivity before vacuum transfer.
+        </p>
+      </li>
+      <li>
+        <p>
+          Low energy and every-character vacuum: Martin <tt class="verbatim">phase-selection.tex</tt>
+          low-energy/vacuum portions; ScottH293&ndash;337. Full zero-energy
+          projection Q is retained until uniform heat decay+phase
+          continuity+full support prove Q=vacuum projection everywhere. Odd
+          time average gives SUM of two positive measures. Momentum bump
+          volume u^3 divided by energy u gives u&sup2;. Compact word density
+          checked.
+        </p>
+      </li>
+      <li>
+        <p>
+          Weak commutant: ScottH339&ndash;350. Pasting upper/lower half-plane
+          heat functions uses bounded B without assuming domain invariance.
+        </p>
+      </li>
+      <li>
+        <p>
+          Stress continuation and local charges: ScottH352&ndash;365.
+          Derivative conversion and zeta factors recorded; spacelike support
+          of cutoff derivative is essential to bounded holomorphic jump
+          continuation. This assertion retains the upstream normalized shell
+          identity, not just conservation.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-3"><a id="stable-exports"></a>Stable exports<span style="margin-left: 1em"></span></h2>
+    <p>
+      <tt class="verbatim">ch16:boundary</tt>, <tt class="verbatim">ch16:cone-support</tt>, <tt
+      class="verbatim">ch16:locality</tt>, <tt class="verbatim">ch16:fields</tt> (faithful fields,
+      joint spectrum, onto heat-intertwining OS comparison), <tt class="verbatim">ch16:vacuum</tt>
+      with <tt class="verbatim">ch16:low-energy</tt> and <tt class="verbatim">ch16:heat-decay</tt>,
+      <tt class="verbatim">ch16:irreducible</tt>, <tt class="verbatim">ch16:charge-law</tt>.
+    </p>
+    <h2 id="auto-4"><a id="original-literature"></a>Original literature<span style="margin-left: 1em"></span></h2>
+    <p>
+      Wightman, Physical Review101(1956),860&ndash;866,
+      DOI10.1103/PhysRev.101.860, original APS publisher record
+      checked2026-11-19. New sidecar <tt class="verbatim">blueprint/ch16-bibliography.bib</tt>,
+      keyWightman1956. The standard word construction is attributed rather
+      than presented as a new source result. Existing OS1973/OS1975 entries
+      retained; original OS1975 ProjectEuclid paper checked again. Their
+      abstract reconstruction theorem is not invoked without its hypotheses:
+      actual slab-based boundary construction is given here. The
+      source-specific uniform every-phase conclusion and local stress jump
+      argument remain explicitly proved adaptations of the supplied
+      manuscripts.
+    </p>
+    <h2 id="auto-5"><a id="limits"></a>Limits<span style="margin-left: 1em"></span></h2>
+    <p>
+      No separate global PDF build, bibliography mutation, or rendered-page
+      review was performed by this agent. Parent handles integration. No
+      additional missing mathematical input identified within the Chapter16
+      reconstruction once its stated14/15 inputs hold. The substantive
+      upstream unclosed conditions remain visible rather than being hidden
+      inside an OS citation.
+    </p>
+  </body>
+</html>

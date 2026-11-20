@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Chapter 14 audit &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Chapter 14 audit</h1><a id="chapter-14-audit"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Source trace</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Exports and limits</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Review priorities</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Original literature</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Validation</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Expansion after root review</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Integrated lattice suppliers</b> <span style="margin-left: 5mm"></span> <a href="#auto-7">4</a>
+      </p>
+    </div>
+    <p>
+      Draft <tt class="verbatim">chapters/14-reflection-ward.tex</tt>, 12 standalone
+      pages. This chapter constructs coordinate OS spaces/slab operators, then
+      the stress/Ward/rotation mechanism. Its final rotation and
+      normalized-stress theorems explicitly retain the actual marked
+      comparison and annular estimates; it does not silently certify
+      unfinished Chapter11 marked suppliers. No phase decomposition, Lorentz
+      Hilbert-space action, vacuum uniqueness, mass gap or positive contact
+      extension is claimed.
+    </p>
+    <h2 id="auto-1"><a id="source-trace"></a>Source trace<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Martin <tt class="verbatim">reflection.tex</tt> entire, Scott G <tt class="verbatim">lem:H1.1</tt>:
+          OS quotient, orbit-bound contraction, transverse translations,
+          strong continuity, positive heat generator. Standard quotient
+          attributed to Osterwalder&ndash;Schrader1973; only the needed
+          contraction estimate is adapted. Coordinate spectra are
+          [0,infinity)&times;R3, not a forward cone.
+        </p>
+      </li>
+      <li>
+        <p>
+          Martin <tt class="verbatim">phases.tex:33&ndash;109</tt>, <tt class="verbatim">slab-regularity.tex</tt>:
+          formal insertion adjoint, repeated-word power bound, null descent,
+          exact concatenation/width laws, norm smoothness by operator
+          mean-value remainder. Actual all-repetition input is
+          Ch13:word-bound, including its chosen width s&lt;=h, then heat
+          extension to h. Arity-fixed bounds are not substituted.
+        </p>
+      </li>
+      <li>
+        <p>
+          Scott G223&ndash;310 <tt class="verbatim">lem:G-lattice</tt>, G390ff smooth
+          comparison; Martin <tt class="verbatim">actual-stress-normalization.tex:1&ndash;145</tt>:
+          size/variation/grid estimates on SAME lifts, coordinate-strip volume
+          and grid error costs, exact inclusion correction, finite detectors,
+          derivative-transport lower singular-value bound, Fourier L1-to-Cj
+          upgrade. Draft spells out quantitative interface rather than
+          asserting grid comparison from field-space dimension alone.
+        </p>
+      </li>
+      <li>
+        <p>
+          Scott G78&ndash;96, G <tt class="verbatim">lem:G2.2</tt>; Martin <tt class="verbatim">actual-stress-normalization.tex:145&ndash;230</tt>:
+          divergence rank and centered physical line, sign and scale sequence.
+          Ch3 gives rank2 matrix and 3D tensor basis; Ch14 additionally
+          identifies the full degree5 hypercubic vector target as the two
+          F&part;F contractions via Maxwell/Bianchi, needed for onto
+          divergence. Centering maps require preserved unit and do not presume
+          matching one-point functions.
+        </p>
+      </li>
+      <li>
+        <p>
+          Scott G310&ndash;389 <tt class="verbatim">lem:G-annular</tt>; Martin <tt
+          class="verbatim">actual-stress-annulus.tex</tt>, <tt class="verbatim">actual-stress-shell-nodes.tex</tt>:
+          same-spectator two-mark correction, physical collar rho=128
+          B&sup2;a, t=1+1/[64(d+12)], cost1/32+1/64&minus;1/8=&minus;5/64,
+          residual root e^-tau/32. Draft gives implication from actual marked
+          inputs and finite-stencil interpolation across coordinate ties; no
+          common tail over an entire growing collar is assumed. Need Ch11
+          exact two-mark backward inverse gain, coefficient correction and
+          derivative growth C independent of q to discharge it.
+        </p>
+      </li>
+      <li>
+        <p>
+          Scott G <tt class="verbatim">lem:G2.3</tt>; Martin <tt class="verbatim">actual-stress-annulus.tex</tt>
+          conclusion and <tt class="verbatim">physical-ward-propagation.tex:492&ndash;590</tt>:
+          annihilator finite-dimensional duality gives local charge fields;
+          derivatives of moving shells give p/Y commutators. Conservation and
+          tensor symmetry justify shell independence before normalization.
+        </p>
+      </li>
+      <li>
+        <p>
+          Scott G coordinate section <tt class="verbatim">lem:H-coordinate-signs</tt>,
+          <tt class="verbatim">lem:H-G3</tt>; Martin <tt class="verbatim">physical-ward-packet-prices.tex</tt>,
+          <tt class="verbatim">physical-ward-stress-cone.tex:1&ndash;280</tt>:
+          coordinate positive measures, undamping, finite damped moments,
+          Lagrange annular corrections and positive residual rational kernel,
+          mixed-sign transfer walk, separate diagonal estimate. Draft retains
+          minimum symmetric product-test extension and normalization of
+          contact divergence to degree&gt;=3, then Q0/Q1/Q2 conservation chain
+          and signs +,-,+. It does not call this extension positive.
+        </p>
+      </li>
+      <li>
+        <p>
+          Scott G <tt class="verbatim">lem:G-collinear-flux</tt>, Martin <tt class="verbatim">physical-ward-propagation.tex:145&ndash;445</tt>:
+          anisotropic lengths powers100/150/300, exact two-column
+          cancellation, low energy split at lambda^-3000, W=lambda^-99 and
+          explicit worst exponent table. E=0 kept in shallow region; diagonal
+          positive weight itself vanishes at0. No rotational spectrum
+          assumption.
+        </p>
+      </li>
+      <li>
+        <p>
+          Martin <tt class="verbatim">physical-ward-analytic-continuation.tex</tt>
+          entire, <tt class="verbatim">physical-ward-propagation.tex:1&ndash;143</tt>;
+          Scott G <tt class="verbatim">lem:G-analytic</tt>: radial heat analyticity,
+          finite-dimensional analytic comparator, transverse jet induction,
+          stationary positive Gram factorial bound, extreme-point segment
+          continuation. Equality of smooth jets alone is never used as an
+          identity theorem.
+        </p>
+      </li>
+      <li>
+        <p>
+          Scott G735&ndash;834, Martin <tt class="verbatim">physical-ward-propagation.tex</tt>
+          finite tests/brackets and <tt class="verbatim">physical-angular-actions.tex</tt>:
+          translation charge p=c<em>&part; using actual Ch3 vector tests,
+          c_k&rarr;c</em>&gt;0 via shell readouts, internal bracket defect
+          removal using Ch3 finite tests, exact finite-dimensional
+          relative-Casimir intertwiner, genuine O4 action instead of only its
+          cover, Haar-averaged normalized stress. Draft uses ordinary
+          finite-dimensional spectral projection instead of source polynomial
+          projection iteration; these are equivalent standard
+          spectral-calculus operations near an isolated eigenvalue.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-2"><a id="exports-and-limits"></a>Exports and limits<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">ch14:heat</tt>, <tt class="verbatim">ch14:coordinate-spectrum</tt>:
+          coordinate semigroup and joint measure, no cone.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">ch14:slab-bound</tt>, <tt class="verbatim">ch14:slab-laws</tt>, <tt
+          class="verbatim">ch14:slab-smooth</tt>: bounded norm-smooth slabs, usable by
+          phase chapter.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">ch14:smooth-comparison</tt>, <tt class="verbatim">ch14:conserved-line</tt>,
+          <tt class="verbatim">ch14:balanced-stress</tt>: from marked grid comparison
+          and Ch13 quotient calculus.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">ch14:charges</tt>: from actual annular remainder
+          estimates.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">ch14:rotations</tt>: O4 action/correlation covariance,
+          inclusion and vector laws, from actual comparison+annular estimates.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">ch14:normalized-stress</tt>: exact shell normalization
+          and scaled stress comparison.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-3"><a id="review-priorities"></a>Review priorities<span style="margin-left: 1em"></span></h2>
+    <ol>
+      <li>
+        <p>
+          Mixed-sign annular transfer and diagonal conservation estimates are
+          compressed from the detailed source proof. Check correction
+          normalization, spectral Fourier signs, and the order of choosing
+          width exponents/moment orders. Diagonal Q0,Q1,Q2 normalization was
+          expanded to explicit c_r(t),d_r relations to expose
+          4d0=5d1&minus;d2.
+        </p>
+      </li>
+      <li>
+        <p>
+          Actual marked grid estimate and annular two-mark supplier are still
+          quantitative interfaces to Chapter11. This is a source-specific
+          dependency, not an appeal to OS reconstruction or to the existence
+          of free Wick correlations.
+        </p>
+      </li>
+      <li>
+        <p>
+          Finite vector and internal-defect tests use Ch3 theorems at all
+          finite required degrees and Ch13 faithful quotient/inclusions. Same
+          comparison maps must preserve inclusions exactly; draft constructs
+          this before transporting finite test matrices.
+        </p>
+      </li>
+      <li>
+        <p>
+          Normalized undamped point-field measures can have infinite total
+          mass. Only finite energy windows and adequately damped moments are
+          used. Finite translated words need damping beyond their offsets.
+        </p>
+      </li>
+      <li>
+        <p>
+          No local Taylor/contact extension from this chapter may be cited as
+          an OS-positive distribution hierarchy.
+        </p>
+      </li>
+    </ol>
+    <h2 id="auto-4"><a id="original-literature"></a>Original literature<span style="margin-left: 1em"></span></h2>
+    <p>
+      OS1973 original Project Euclid PDF checked: <a href="https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-31/issue-2/Axioms-for-Euclidean-Greens-functions/cmp/1103858969.pdf">https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-31/issue-2/Axioms-for-Euclidean-Greens-functions/cmp/1103858969.pdf</a>
+      . OS1975 corrected theorem original PDF checked: <a href="https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-42/issue-3/Axioms-for-Euclidean-Greens-functions-II-with-an-Appendix-by/cmp/1103899050.pdf">https://projecteuclid.org/journals/communications-in-mathematical-physics/volume-42/issue-3/Axioms-for-Euclidean-Greens-functions-II-with-an-Appendix-by/cmp/1103899050.pdf</a>
+      . Existing bibliography entries used; no new sidecar needed. Neither
+      reconstruction theorem is invoked without its growth hypotheses.
+    </p>
+    <p>
+      Fr&ouml;hlich&ndash;Osterwalder&ndash;Seiler1983 primary publisher page
+      checked: <a href="https://annals.math.princeton.edu/1983/118-3/p04">https://annals.math.princeton.edu/1983/118-3/p04</a> .
+      Its virtual-representation continuation is related, but does not
+      directly supply this chapter's pre-rotation stress spectral estimate or
+      its fixed-configuration Gram argument. It is therefore not cited as
+      proving those source-specific assertions.
+    </p>
+    <h2 id="auto-5"><a id="validation"></a>Validation<span style="margin-left: 1em"></span></h2>
+    <p>
+      Standalone pdflatex twice succeeds,12pages; last log contains no
+      overfull/underfull boxes. No global build performed. Root handles global
+      references and rendering.
+    </p>
+    <h2 id="auto-6"><a id="expansion-after-root-review"></a>Expansion after root review<span style="margin-left: 1em"></span></h2>
+    <p>
+      The opposite-sign proof now defines every response, scaled profile and
+      omitted-axis limit. Equation ch14:sign-transfer follows by expanding the
+      exact equality for TWO residual profiles; discarded term has nonnegative
+      spectral response. Equation ch14:sign-induction gives its precise
+      exponent ranges and visited-axis bookkeeping. Choices
+      alpha(nextstep),r,D,a_s,m are ordered; the error exponent is
+      p_*-2ralpha+max(K,a_sD). Added explicit tensor subtraction
+      q_ab,cd=&Sigma;_iR_ib,cd(&part;_i(x_a&chi;0)) and parity-pattern
+      justification of its pair symmetries. Standalone now13pages with no
+      overfull/underfull boxes. Root handles global rendering.
+    </p>
+    <h2 id="auto-7"><a id="integrated-lattice-suppliers"></a>Integrated lattice suppliers<span style="margin-left: 1em"></span></h2>
+    <p>
+      The earlier comparison/annular caveat is superseded in the working
+      chapter by two explicit forward dependencies. <tt class="verbatim">14-lattice-comparison.tex</tt>
+      uses Chapter11's finite-arity complete source estimate and exact common
+      extraction at a finite menu of scales; its independent review is <tt
+      class="verbatim">chapter-14-lattice-comparison-review.md</tt>. The shrinking-shell
+      estimate now follows from the mixed local replacement proved at the end
+      of Chapter13: for W=d+4 and D=d+1&minus;kappa, multiplying its residual
+      by r^(3+kappa) yields r^(1&minus;epsilon). The replacement field is
+      fixed before spectators, so the finite annihilator sum cancels it. This
+      avoids a phase/OPE dependency and removes the former separate two-mark
+      annular hypothesis. The coordinate spectral argument is undergoing an
+      additional independent review.
+    </p>
+  </body>
+</html>

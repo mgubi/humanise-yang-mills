@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Sharp centered and fixed-arity bounds &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Sharp centered and fixed-arity bounds</h1><a id="sharp-centered-and-fixed-arity-bounds"></a>
+    </p>
+    <p>
+      Fragment <tt class="verbatim">chapters/13-sharp-bounds.tex</tt>, for root
+      integration. The phase paragraph naturally belongs after Chapter15's
+      compression algebra if forward references are to be avoided. No master
+      edits.
+    </p>
+    <p>
+      Exports ch13:sharp-schedule, sharp-root, sharp-centered, first-below,
+      sharp-separated, sharp-phase. Exact primary root source: Scott
+      E-several-mark78&ndash;120, E-section354&ndash;377. Uses current11
+      replicated-bound/root-bound with weighted singleton x=3,y=1 and complete
+      higher-mode arrays. UV confirms decreasing all weights preserves
+      termwise ordinary/forced incidence; this argument does NOT use its
+      large-weight detector Gaussian comparison.
+    </p>
+    <p>
+      Weights omega_k=a_k^d beta_k^-w_d/E_k where E_k is inverse-column
+      product including terminal column. Existing local section/threshold and
+      source attachment estimates require finitely many inversebeta powers at
+      fixeddegree; choosew_d once to absorb them. logE=o(tau) by ratio/column
+      conditions, logbeta=o(tau), so&minus;logomega=d tau+o(tau). All
+      eligibility events and incoming higher modes retained.
+    </p>
+    <p>
+      Coarse Haar-ball normalization q_site=O_j(1+logbeta) suffices. It uses
+      admissible global scalar-free exponent upper bound C_jV and
+      small-link-event lower bound&minus;C_jV; leading action on
+      linksrho=beta^-1/2 costs C_j beta rho&sup2;V. This is the explicit
+      action-class bound behind ScottE normalization-cost, not refined3V+1
+      versus3V&minus;3 Gaussian cancellation. If those global action-class
+      costs were weakened to O(beta), this argument would not give
+      sharpdegree; do not replace them by a full absolute bound on the
+      positive leading action.
+    </p>
+    <p>
+      Additional selected schedule floors must be retained:
+      B_i+1&sup2;&lt;=2B_i&sup2;, (L_i B_i&sup2;)^4q_site_i+1=o(tau_i+1),
+      column log ratioso1, transitions lognewcolumn=o(tau). Fixedstage B<span
+      class="strike-through">log&sup2;tau,q</span>logtau makes them feasible by delayedentry
+      after ratiosfixed. Firstsparse stopping k(m) gives Wq=o(tau_k)
+      andtau_k/tau_m&rarr;1. Finite initiallevels absorbed into oneconstant
+      fixed BEFOREm. Cutoffthreshold maydependm, uniformlyp.
+    </p>
+    <p>
+      SlowratioslogL=o(tau) imply firstscale belowcr has tau/log1/r&rarr;1;
+      apply twice for coarsecell then interiorcenteredcell. Fixedarity loss is
+      r^&minus;sumdegrees&minus;epsilon, rather than priorr^&minus;4(d+1)n.
+      Derivative labels require the existing quotientcalculus; no new
+      derivative theorem inferred.
+    </p>
+    <p>
+      Phaseuniformity: whole-word compressedoperator moments use arbitrarily
+      many copies placed at cell-aligned far translations, so fixed one-word
+      scales/bounds suffice. Faithful ground-state momentnorm andcharacters
+      give samebound EVERYphase. Never estimate phasevalue by mixedvalue
+      ofsameword directly.
+    </p>
+    <p>
+      No new literature proof: elementary scalealgebra and existing abstract
+      chessboard theorem already checked/cited in Chapters1/13;
+      source-specific weight optimization is proved in fragment.
+      Standalone3pages, no overfull/underfull boxes; root handlesglobalrender.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Chapter 13: continuum correlations and local fields &ndash;
+    Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Chapter 13: continuum correlations and local fields</h1><a id="chapter-13-continuum-correlations-and-local-fields"></a>
+    </p>
+    <p>
+      Read Scott/part2/F-infinite-volume.tex in full. Compared
+      Martin/existence/limits.tex initial extraction assumptions and
+      phase-fields.tex133&ndash;240 for inclusion quantifiers. Scott's later
+      full-UV formulation is used instead of Martin limits.tex's initial
+      mesh-subsequence formulation: no new mesh extraction for observable
+      kernels.
+    </p>
+    <h2 id="auto-1"><a id="sources-and-scope"></a>Sources and scope<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Volume extraction: Scott lem:F1, standard Arzela&ndash;Ascoli cited
+          to Rudin1976 Theorem7.25. Compact exhaustions/basis
+          labels/derivative orders form a countable family; all tests follow
+          by integration.
+        </p>
+      </li>
+      <li>
+        <p>
+          Distinct-cell placement and vanishing errors: Scott lem:F-cells/F1b;
+          the geometric strip count is retained, with the exact cell-margin
+          hypothesis explicit. Uses the original FILS1978 chessboard theorem
+          previously inspected by root, not a new independent reflection
+          proof.
+        </p>
+      </li>
+      <li>
+        <p>
+          Null fields and rank: Scott lem:F2. Three precise inputs isolate
+          bounded transported null directions, upper projector rank, and
+          actual interacting/free detector matrices. Both rank inequalities
+          included; free positivity alone not promoted to interacting rank.
+        </p>
+      </li>
+      <li>
+        <p>
+          Simultaneous representative: Scott lem:F-represent. Normalization
+          b=(1+||Pi x||)^-1 and compact pair (b,bPi x) handles unbounded
+          approximate labels. Its normalized null hypothesis is explicitly
+          stronger than the bounded-family null condition. Ordered-filter
+          compactness does not alter the full UV kernel limit.
+        </p>
+      </li>
+      <li>
+        <p>
+          Inclusions/derivatives: Scott F2 and Martin phase-fields133ff.
+          Representatives chosen before all spectators/tests, then basiswise
+          linear maps. Torus summation-by-parts sign checked. Quotient
+          coherence/commutation follows from all-spectator nullity.
+        </p>
+      </li>
+      <li>
+        <p>
+          Reflection and polynomial bounds: Scott F3. Moving bond plane tends
+          to zero, tests stay separated. Full O(4) and collision extension
+          deferred. Scale thickness a_next&gt;=c a&sup2; gives two-stage r^4
+          cell lower bound.
+        </p>
+      </li>
+      <li>
+        <p>
+          Repeated words: Scott F4. At most2n residues regardless of
+          repetitions, main scale chosen before exterior, aligned finer
+          exterior tiling, constant B_v independentj, cutoff thresholds
+          alloweddependj. No bounded Hilbert operator presupposed.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-2"><a id="retained-analytic-inputs"></a>Retained analytic inputs<span style="margin-left: 1em"></span></h2>
+    <p>
+      Chapter12 full-UV and volume-uniform difference hypotheses remain the
+      inherited scope until Chapter11 suppliers close. Corrected
+      equation-null, inclusion/derivative estimates for subpower-growing
+      coefficients, actual finite-detector rank comparison, centered seminorm
+      bounds and interior-cell comparisons are explicitly inputs. Their
+      detailed realization belongs Chapter11; Chapter13 proves their continuum
+      consequences without claiming they follow from compactness.
+    </p>
+    <p>
+      Independent review requested. Global root build and rendered review
+      pending final integration.
+    </p>
+  </body>
+</html>

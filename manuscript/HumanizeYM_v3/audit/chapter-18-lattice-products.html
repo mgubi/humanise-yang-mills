@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Grouped lattice products and raw replacement &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Grouped lattice products and raw replacement</h1><a id="grouped-lattice-products-and-raw-replacement"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Placement and dependency</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Independent graded review</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Source packet and literature check</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-3">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Quantitative checks</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Remaining review focus</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Parent review</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">3</a>
+      </p>
+    </div>
+    <p>
+      Files: <tt class="verbatim">chapters/18-lattice-products.tex</tt> and <tt class="verbatim">chapters/18-raw-replacement.tex</tt>.
+      Parent owns their placement and changes to the main chapter.
+    </p>
+    <h2 id="auto-1"><a id="placement-and-dependency"></a>Placement and dependency<span style="margin-left: 1em"></span></h2>
+    <p>
+      The first fragment has no phase, stress or Ward premise. Place it after
+      the graded quotient and sharp bounds at the end of Chapter 13. It proves
+      lattice signed replacement and mixed finite-spectator replacement. Thus
+      Chapter 14 may use its annular consequence without referring forward to
+      the operator-product chapter. Its finite correlation readouts use only
+      the already defined physical quotient and all-spectator separation. The
+      second fragment belongs in Chapter 18 after its raw readout and precise
+      replacement statement; it uses the established phase/compression moment
+      identity to prove that statement, with constants chosen before moment
+      number.
+    </p>
+    <h2 id="auto-2"><a id="independent-graded-review"></a>Independent graded review<span style="margin-left: 1em"></span></h2>
+    <p>
+      The current <tt class="verbatim">18-graded-quotient.tex</tt> matches Scott's cone
+      proof. Checked triangular low/high scaling, invariance of the high
+      plane, repeated subtraction, subpower column products, and the
+      all-spectator lower-field identification using normalized-null
+      representatives. No correction found. This step is needed in Chapter 13
+      before the mixed local replacement, if the dependency is to run forward.
+    </p>
+    <h2 id="auto-3"><a id="source-packet-and-literature-check"></a>Source packet and literature check<span style="margin-left: 1em"></span></h2>
+    <p>
+      Scott <tt class="verbatim">part2/J-section.tex</tt>: signed local transport
+      roughly 30&ndash;103; graded quotient 104&ndash;150; marked algebra and
+      weights 211&ndash;272; extraction 273&ndash;304; grouping/replacement
+      334&ndash;414; continuum/probe/derivative passage 415&ndash;455. These
+      source-specific estimates were checked against the actual Chapter 11
+      signed cone, termwise marked integration, cover transfer, higher modes
+      and normalized replicated integral; Chapter 13 supplies sparse stopping
+      and sharp source weights.
+    </p>
+    <p>
+      External check: the original arXiv record for
+      Bauerschmidt&ndash;Brydges&ndash;Slade, <em>Critical two-point function
+      of the 4-dimensional weakly self-avoiding walk</em>, arXiv:1403.7268,
+      confirms incorporation of observable fields in the RG. The source
+      bibliography entry <tt class="verbatim">BauerschmidtBrydgesSlade2015</tt> has
+      CMP338 (2015),169&ndash;193, DOI10.1007/s00220-015-2353-5. Cite it only
+      for that general method, not as a replacement proof of the present
+      gauge-theory grouped bounds. Its existing entry is in
+      Scott/references.bib for the bibliography collector. No new claim that
+      an original literature theorem directly proves this manuscript-specific
+      supplier is made.
+    </p>
+    <h2 id="auto-4"><a id="quantitative-checks"></a>Quantitative checks<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Signed residual has physical degree-t factor and cone gain
+          (a_m/a_l)^(1/8); exact column recentering retains the original
+          inventory and zero readout.
+        </p>
+      </li>
+      <li>
+        <p>
+          Marker grouping retains all original square-zero variables/partial
+          modes until full coefficient extraction; no invalid algebra
+          homomorphism or probabilistic independence of separated supports is
+          asserted.
+        </p>
+      </li>
+      <li>
+        <p>
+          Support enlargement pays both exp(sigma h) and rooted incidence
+          reassignment. At most n&minus;1 fusions occur per local cluster.
+          Between fusions the <em>unsubtracted</em> incoming regular term uses
+          its cover-conversion cost T_l&lt;=L_l; it is not assigned a zero-jet
+          contraction. The resulting 6L_l&lt;=L_l^4 cost gives Z=W
+          theta_plus+4n(theta_plus&minus;theta).
+        </p>
+      </li>
+      <li>
+        <p>
+          The two exact residual weight inequalities are stated. The chosen
+          weight has strict exponent margins
+          &minus;15(theta&minus;theta_minus)/16 in the extraction condition
+          and &minus;(theta&minus;theta_minus)/16 in the transport condition.
+          The intermediate-level ratio is (a_l/a_kstar)^(7/8), so the endpoint
+          check suffices.
+        </p>
+      </li>
+      <li>
+        <p>
+          Sparse kstar normalization uses the actual q_site and the sharp
+          schedule. Both log N_k and all extraction/support costs are
+          subpower; no volume-dependent scalar survives.
+        </p>
+      </li>
+      <li>
+        <p>
+          Coefficient extraction for one residual per reflected cell costs
+          varpi^-1 per cell, with all higher modes retained. Incidence
+          estimates depend on fixed marks per cell, not total cells. This is
+          the all-copy input needed later.
+        </p>
+      </li>
+      <li>
+        <p>
+          Graded quotient recovers degree-i coordinate exponent Z&minus;i
+          theta. Auxiliary t is chosen strictly larger when necessary. Mixed
+          derivative descent acts on fixed correlation readouts, never on a
+          potentially nonsmooth selection of auxiliary output labels.
+        </p>
+      </li>
+      <li>
+        <p>
+          The finite readout construction explicitly preserves old correlation
+          functionals across higher degrees and kills them on newly lifted
+          bases. Hence the raw low-degree readout is the intended truncation
+          of the auxiliary field; arbitrary unrelated projections would not
+          suffice.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-5"><a id="remaining-review-focus"></a>Remaining review focus<span style="margin-left: 1em"></span></h2>
+    <p>
+      The supplied proof makes explicit the source-specific
+      grouped-coefficient extraction and the transfer of all modes. It uses
+      the existing termwise Chapter 11 compiler at arbitrary fixed arity per
+      cell, not only its two-mark detector specialization. During independent
+      integration review check precisely that the old large-field normalized
+      source and the full-group density coefficient are in that format; no
+      division by a gas/activity is allowed. No unproved estimate is
+      intentionally introduced as a new scheduling request. The only new
+      requests are finite degree/stage support constants, Taylor orders and
+      numerical weight margins.
+    </p>
+    <p>
+      Static environment counts balance and all internal references currently
+      resolve. No global compilation performed.
+    </p>
+    <h2 id="auto-6"><a id="parent-review"></a>Parent review<span style="margin-left: 1em"></span></h2>
+    <p>
+      Parent independently checked the residual-weight arithmetic, order of
+      quantifiers and fixed-probe derivative descent. Added explicit
+      degree-independent exponents: crude c0=1, grid
+      c1=4n(theta_plus&minus;theta)&minus;(D+1)theta for residuals, or with
+      &minus;i theta for a fixed coordinate. Clarified that the auxiliary
+      horizon pays only raw coordinates through D, not every coordinate
+      through t (which would fail when theta_minus&gt;0). The earlier
+      independent review of the graded quotient passed, with no mathematical
+      correction requested.
+    </p>
+  </body>
+</html>

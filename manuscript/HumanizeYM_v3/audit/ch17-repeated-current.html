@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Repeated-current contraction: independent derivation &ndash;
+    Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Repeated-current contraction: independent derivation</h1><a id="repeated-current-contraction-independent-derivation"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Exact quadratic channel</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Full triangular defect vector</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Accompanying currentbounds</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Review status and precise consequence</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-4">2</a>
+      </p>
+    </div>
+    <p>
+      Fragment <tt class="verbatim">chapters/17-current-contraction.tex</tt>,5pages
+      standalone clean. Parent integrates; UV independently reviewed the
+      complete triangular/current bounds and found no further mathematical
+      correction after the output-link convolution and root-sign fixes. This
+      supersedes the prior audit statement that pre-L bounds on nonlinear
+      second/third stationary jets are necessary.
+    </p>
+    <h2 id="auto-1"><a id="exact-quadratic-channel"></a>Exact quadratic channel<span style="margin-left: 1em"></span></h2>
+    <p>
+      Initial E2 symbol vanishes through total spatial momentumdegree3 by
+      linear Maxwell stress divergence identity and normalized
+      pathactionweight4. It satisfies Ward identity oneach independent
+      inputmomentum. Under actualstationary pullback,
+      nonprincipaltransversealias amplitude isO(p&sup2;) by KfN=A_lKc
+      andfixednonzeroaliasinverse. K0=M&sup2;G hasdoublezero
+      atnonprincipalanchoralias. Thus principal/principal, single
+      nonprincipal, and double nonprincipalterms eachretainorder4. This
+      holdsatfinitehistory, withactualtangent modulofinegauge.
+    </p>
+    <p>
+      Two-independent-leg analyticcurl division preservesTaylororder,
+      leavingtwoextradifferences afteronecurloneachleg. Allocation(1,3)/(2,2)
+      costsL^-6 throughactualsmoothWa; K0hasboundedl1sum, notL4volume;
+      currentengineeringL5 giveshomogeneousC_j/L. NoadditiveC/log&sup2;source.
+      UVcheckedquadraticchannel.
+    </p>
+    <h2 id="auto-2"><a id="full-triangular-defect-vector"></a>Full triangular defect vector<span style="margin-left: 1em"></span></h2>
+    <p>
+      Radialgauge substitutes the COMPLETE gauge-invariant defect first.
+      RawD3/D4E needNOT satisfylinearWard separately. Itslinear
+      stationarytangents in anchoredradialgauge costL^-2 timesfineanchor
+      polynomial; diagonalr3/4 gainL^-1/L^-3.
+      Nonlineargaugeandstationaryderivatives multiplylowerfieldderivatives
+      only.
+    </p>
+    <p>
+      Explicit differentiatedstationarity equations givez2,z3.
+      Forestsliceinverse isPi_F C^-1 Pi_F*, withcommon-widthcompletedinverse
+      from7 andblocklocalforestprojection+dual. ProjectionnormsmaydependL
+      butcoarsewidthdoesnotcollapse. Path/predictorvertices
+      similarlyhavefixedcoarsewidth,C_j,Lnorm.
+      Restrictstripsbyfixedfactorforintermediatemomentumsums.
+      Hencebelowdiagonal constantsC_j,L finiteperioduniform;
+      afterdivisionby(logbeta)^r
+      multiply(logbetafine)^s/(logbetacoarse)^r&rarr;0 fors&lt;r.
+      Allowedchoiceorder isratiofirst,thenentry. This is sufficient, no
+      uniformpreL nonlinearnormclaimed.
+    </p>
+    <p>
+      Exactenvelope+penaltysimultaneousleftinvariance givesDSstat[Y']=L5 I K0
+      DS[Y]. Rootcoarsegaugecorrection haszeroactionvariation.
+      Newpathactionagreeswithstationaryactionthrough4;Y'(0)=0
+      impliesitsvariationagreesalso through4. ThusE'=L5I
+      K0Eexactatorders2&ndash;4 andrecursionhomogeneous.
+      BoundedinitialWilsondefect contracts2^-depthatfixedoutput.
+    </p>
+    <h2 id="auto-3"><a id="accompanying-currentbounds"></a>Accompanying currentbounds<span style="margin-left: 1em"></span></h2>
+    <p>
+      J2leadingweight4 fixedexactlybyprincipalN0=L^-1I,K_a mass1;
+      allnonprincipalcontributionshigherdegree.
+    </p>
+    <p>
+      IMPORTANTsign: ch5Q=M+d0,cR; sourceI R0 atzero=R=&tau;0&minus;avg&tau;;
+      source d_V&phi;=&phi;tail&minus;AdV&phi;head hasd_V|0=&minus;d0,c.
+      ThusSOURCEPLUS R_f+d_VR0 atzero=M EXACTLY.
+      FragmentnowdefinesR_f,R0,dVandY' withfineanchor sum explicitly. This
+      killsroughroot-rowcontributions toequal-orderTaylorterms.
+    </p>
+    <p>
+      M columnsum L^-3 followsboxaliaspartition+rowmassL andL4residues.
+      LeadingfinecurvatureL^-2 andcurrentL5 preserveleadingYcurvature.
+      Gaugecovariancefixesitsweight2quadraticcommutator. Ylinearremainder
+      hasonecurldifference plusoneextra; ifextraonfield,Wa
+      givesL^-1;ifonoutputlink,movedontoM rowdifference givesl1boundC
+      ratherthanCL. This outputmomentcase wasaddedexplicitly. K0linftyL^-4
+      &times;Mrowl1CL givesL^-3 localoutputnorm byconvolution over
+      translatedcurrentsupport.
+      Finepatchescoverboundednumbercoarseoutputedges;tailsweighted.
+    </p>
+    <p>
+      Jremainderdiagonalr2gainsL^-1,r3/4L^-2/L^-4.
+      YremainderlinearL^-1,r&gt;=2L^(2&minus;2r).
+      Allnonlinearcoefficientmapsmultiplylowercurrentjets,
+      absorbedbylognormalization. FixedreferenceforcingC_j,L
+      isdividedbypositive logpowersandmade&lt;=1/4atentry.
+    </p>
+    <p>
+      q/t primitiveoldtermsL3 gainL^(3&minus;2r)&lt;=L^-1 since
+      startfieldorder2. NewL4KtrJ termsareone-wayboundedforcingfromJ;
+      rescaleprimitivecomponentnormsbystagefixedweights
+      tocontrolsame-orderforcing, thenratio, thenentry.
+      Normalizedcurrentvector X_m&lt;=Xfine/2+1/4
+      givesperiod/historyuniformfiniteoutputbounds.
+    </p>
+    <h2 id="auto-4"><a id="review-status-and-precise-consequence"></a>Review status and precise consequence<span style="margin-left: 1em"></span></h2>
+    <p>
+      Independent review confirmed the displayed maps/norms; actual
+      transferred currents meettheweightedbound/freejet/vanishingdefect
+      hypotheses of17regulatorcompletion. This removes the current-regulator
+      suppliergap. It does NOT automatically prove the separate marked
+      finitecoefficient/traceprimitive endpoint rates or prescribed-radius
+      comparison acrossstageboundaries; those require their own matching
+      to11/13. No target&minus;12&kappa;isusedasinput.
+    </p>
+    <p>
+      No newbibliography: gauge-local Taylor characterization already
+      attributed in7; exactfinitealgebra andhomogeneousestimates derivedhere.
+      No globalbuild.
+    </p>
+    <p>
+      The stress low-jet preservation now explicitly separates one
+      nonprincipal alias (order two plus at least one principal Ward momentum,
+      hence order three) from two nonprincipal aliases (order four). Only the
+      principal pair affects the weight-four stress coefficient.
+    </p>
+  </body>
+</html>

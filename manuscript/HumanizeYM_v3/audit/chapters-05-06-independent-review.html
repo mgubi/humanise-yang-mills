@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Independent review of Chapters 5&ndash;6 &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Independent review of Chapters 5&ndash;6</h1><a id="independent-review-of-chapters-56"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Actionable correction</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Chapter5 checks</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">1</a>
+      </p>
+      <p>
+        Finite histories and common analytic curvature metric <span style="margin-left: 5mm"></span>
+        <a href="#auto-3">1</a>
+      </p>
+      <p>
+        Transports and L factors <span style="margin-left: 5mm"></span> <a href="#auto-4">2</a>
+      </p>
+      <p>
+        Two-sided Koszul lift <span style="margin-left: 5mm"></span> <a href="#auto-5">2</a>
+      </p>
+      <p>
+        Positive defect and residue count <span style="margin-left: 5mm"></span> <a href="#auto-6">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Chapter6 checks</b> <span style="margin-left: 5mm"></span> <a href="#auto-7">3</a>
+      </p>
+      <p>
+        Scalar energy implication <span style="margin-left: 5mm"></span> <a href="#auto-8">3</a>
+      </p>
+      <p>
+        Actual Gaussian and windows <span style="margin-left: 5mm"></span> <a href="#auto-9">4</a>
+      </p>
+      <p>
+        Correlated tails and common majorant <span style="margin-left: 5mm"></span> <a href="#auto-10">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Overall conclusion</b> <span style="margin-left: 5mm"></span> <a href="#auto-11">5</a>
+      </p>
+    </div>
+    <p>
+      Integration follow-up: the false continuity wording for the clip was
+      corrected, and the explicit two-sided lift chain was added to Chapter 5
+      before the integrated build of 19 November 2026. Chapter 6 was
+      subsequently strengthened by the actual predictor comparison; see <tt
+      class="verbatim">chapter-06.md</tt> for that later verification.
+    </p>
+    <p>
+      Reviewed snapshot: <tt class="verbatim">chapters/05-gaussian.tex</tt> and <tt
+      class="verbatim">chapters/06-large-fields.tex</tt>, 2026-11-19. Scope: new
+      finite-history, transport, curvature-defect, scalar energy, window,
+      common-majorant and correlated-tail arguments. No author chapter was
+      edited. This is an independent algebra/scaling review, not a
+      verification of every upstream selected-data supplier.
+    </p>
+    <h2 id="auto-1"><a id="actionable-correction"></a>Actionable correction<span style="margin-left: 1em"></span></h2>
+    <p>
+      <strong>Chapter6, line101:</strong> &ldquo;The clip is the continuous
+      quadratic/linear function&rdquo; is false for <tt class="verbatim">ch04:clip</tt>.
+      The two branches are c_dir r&sup2;/2 for r&lt;=t and c_lin tr for
+      r&gt;t, with16c_lin&lt;c_dir; the downward jump is explicitly documented
+      in Chapter4. Delete &ldquo;continuous&rdquo; (or replace it by
+      &ldquo;piecewise quadratic/linear&rdquo;). The energy inequalities
+      actually use the displayed discontinuous clip, so this correction does
+      not require changing those inequalities. Keeping
+      &ldquo;continuous&rdquo; would suggest a different action with different
+      intermediate-range bounds.
+    </p>
+    <p>
+      No other definite mathematical error was found in the reviewed
+      arguments.
+    </p>
+    <h2 id="auto-2"><a id="chapter5-checks"></a>Chapter5 checks<span style="margin-left: 1em"></span></h2>
+    <h3 id="auto-3"><a id="finite-histories-and-common-analytic-curvature-metric"></a>Finite histories and common analytic curvature
+    metric<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          Alias normalization L^-2 is consistent with counting scalar
+          products: the averaging symbol contributes L, Fourier subsampling
+          L^-4, and covariance volume ratio L^4.
+        </p>
+      </li>
+      <li>
+        <p>
+          Accumulated filter formula <tt class="verbatim">ch05:history-filter</tt> has
+          the correct prefix M_h at each smoothing-order drop. For two steps
+          it reduces to w_(L1L2)^j2 times w_L1^(j0-j1) w_(L1L2)^(j1-j2), as
+          required by direct composition.
+        </p>
+      </li>
+      <li>
+        <p>
+          Noise introduced at h is propagated only through suffix
+          h+1,&hellip;,n, with covariance prefactor D^-2. Sum over suffixes is
+          geometric because ratios&gt;=3. The principal h=n term equals1.
+        </p>
+      </li>
+      <li>
+        <p>
+          Uniformity in final smoothing order rather than initial smoothing
+          order is legitimate: extra box factors occur at geometrically
+          increasing prefix sizes, and their principal logarithmic deviations
+          sum like sum M_h/M_n, rather than multiplying a fixed lower bound an
+          unbounded number of times.
+        </p>
+      </li>
+      <li>
+        <p>
+          The reciprocal-bound argument avoids circularity. First bound G and
+          the positive real F,A_mu,B_mu; obtain reciprocals by complex
+          perturbation; then deduce the real lower bound for h from
+          sum|q_mu|&sup2;/B_mu divided by lambda_M, and finally its complex
+          reciprocal. The pole cancellation is exact. Uniformity here is
+          boundedness, not convergence of histories, which the chapter states
+          correctly.
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-4"><a id="transports-and-l-factors"></a>Transports and L factors<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          Quotient identities R=D^-1&minus;rho^-1D^-1xx<em>D^-1 and
+          DR=I&minus;x pi imply the four identities <tt class="verbatim">ch05:transport-identities</tt>
+          when combined with F_(r+1,l)delta_r=d_r F_(r,l). In particular
+          d1</em>(I&minus;C)=0 and (I&minus;C)H d1=0, so the complementary
+          term is compatible with both intertwining equations.
+        </p>
+      </li>
+      <li>
+        <p>
+          Restoring counting adjoints: a coarse-to-fine field reconstructed
+          with L^-1 sum_l A_l has full fine Fourier coefficient L&sup3; A_l
+          times the coarse coefficient. The corresponding two-form map has
+          coefficient L&sup2; T_l. Its adjoint therefore has coarse Fourier
+          factor L^-2 sum_l T_l*, and d_f=delta/L gives L^-3 d_c sum_l F1,l,
+          exactly d_c Q. The physical identities have no missing L power.
+        </p>
+      </li>
+      <li>
+        <p>
+          A fine difference multiplies an alias by q(theta_l)=O(L^-1(1+|l|));
+          with Gamma(l)^-j, summation remains uniform for derivative order
+          r&lt;=j&minus;2. Taking Fourier coefficients after the alias sum is
+          important because individual columns need not be periodic. The text
+          keeps the block-boundary phases.
+        </p>
+      </li>
+      <li>
+        <p>
+          The principal cancellation formulas use s=lambda_(M_c), for which
+          D0=L^-2 c_f(p/L) has the same denominator as D. This accounts for
+          the otherwise easy-to-miss L&sup2; factor.
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-5"><a id="two-sided-koszul-lift"></a>Two-sided Koszul lift<span style="margin-left: 1em"></span></h3>
+    <p>
+      The asserted two-sided factorization is valid, but its brief paragraph
+      would benefit from the following four-line proof in the monograph
+      (editorial recommendation, not a counterexample). I checked the
+      construction against Martin <tt class="verbatim">existence/curvature-horizon-producer.tex:81&ndash;101</tt>:
+    </p>
+    <ol>
+      <li>
+        <p>
+          Left lift d2<em>W=E. Then V=W d1 satisfies d2</em>V=0, so lift
+          d3*T=V.
+        </p>
+      </li>
+      <li>
+        <p>
+          Since d3<em>T d0=V d0=0 and the top Koszul differential d3</em> on
+          four-forms has trivial analytic kernel, T d0=0. Equivalently its
+          next left lift would take values in zero five-form space.
+        </p>
+      </li>
+      <li>
+        <p>
+          Right lift X d1=T and set W'=W&minus;d3<em>X. Then W'd1=0 and
+          d2</em>W'=E.
+        </p>
+      </li>
+      <li>
+        <p>
+          Right lift C d2=W', then symmetrize C. This gives E=d2*C d2 with the
+          same reduced-strip bounds.
+        </p>
+      </li>
+    </ol>
+    <p>
+      All adjoints mean coefficient transposition with momentum reversal; it
+      preserves exponential norms. The proof acts on infinite-lattice
+      coefficients and only then periodizes, avoiding finite-torus zero-mode
+      obstructions.
+    </p>
+    <h3 id="auto-6"><a id="positive-defect-and-residue-count"></a>Positive defect and residue count<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          From TH_c d1,c=H_f d1,f W and T<em>d1,f=d1,c Q, the identity Z0 H_c
+          d1,c=0 follows exactly using QW=I&minus;b^-1 d1,c</em>H_c d1,c.
+        </p>
+      </li>
+      <li>
+        <p>
+          The one-sided lift is applied separately to each fine residue. It
+          does not sum over output residues. Thus fixed-residue T and B_fT
+          bounds O(L^-2) give O(1) for their coarse Gram sum; one fine
+          difference yields O(L^-3), and the Gram sum of lifted S is L^4
+          L^-6=O(L^-2).
+        </p>
+      </li>
+      <li>
+        <p>
+          Modified inverses are Btilde=B+zeta B d2<em>d2 B. The identity d2 B
+          Btilde^-1=(I+zeta d2 B d2</em>)^-1d2 gives precisely the D_c factors
+          in <tt class="verbatim">ch05:positive-defect</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          C0+zeta_c I&minus;zeta_f S*S&gt;=I under zeta_c&gt;=C0'+2 and
+          L&sup2;&gt;=zeta_f C1. Uniform boundedness of D_c^-1 transfers this
+          to strict positivity on all three-forms. No projection onto a
+          momentum-dependent subspace is used.
+        </p>
+      </li>
+      <li>
+        <p>
+          Source-specific transport-column bounds are compressed in the
+          exposition. Their explicit principal cancellation plus the earlier
+          alias estimates make a credible route, but this review did not
+          independently rederive every entry of the nonprincipal transport
+          bound from original manuscript component formulas.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-7"><a id="chapter6-checks"></a>Chapter6 checks<span style="margin-left: 1em"></span></h2>
+    <h3 id="auto-8"><a id="scalar-energy-implication"></a>Scalar energy implication<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          Summing the six defined terms cancels every cross term and every
+          transported square exactly. Localizing before cancellation correctly
+          leaves E_L,E_D as signed terms.
+        </p>
+      </li>
+      <li>
+        <p>
+          The coarse path term cancels in E_c because the relaxed test is an
+          indicator: chi_rel&sup2;=chi_rel. This would fail if it were
+          silently replaced by a smooth function between0 and1; the current
+          Chapter4 definition is an indicator.
+        </p>
+      </li>
+      <li>
+        <p>
+          The intermediate coarse range contributes c_dir,c t_c r/4. Since
+          t_f&lt;=2t_c and a&lt;=c_dir,c/64, this is at least4a t_f&sup2; per
+          plaquette, enough for at most four assigned coarse sites.
+        </p>
+      </li>
+      <li>
+        <p>
+          Fine and mismatch energy reserves can support one a t_f&sup2; charge
+          per test, the additional a t_f t_hi charge for D, and the signed
+          linear excess after choosing L and then W large. The displayed
+          bounds leave this slack.
+        </p>
+      </li>
+      <li>
+        <p>
+          Remaining D-losses have ratio O(B^4 t_f/t_hi) to the reserved
+          energy, tending to0. Small coarse losses have ratio O(B^4
+          t_c^4/t_f&sup2;), also tending to0. The final a/2 constant follows.
+        </p>
+      </li>
+      <li>
+        <p>
+          These conclusions remain conditional on the explicit local signed
+          comparison. The chapter does not incorrectly derive the actual
+          nonabelian path comparison from the flat Fourier algebra.
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-9"><a id="actual-gaussian-and-windows"></a>Actual Gaussian and windows<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          A principal compression preserves the gap and weighted Schur bound,
+          so the inverse column comparison is uniform. Its residual is zero
+          inside the column window and exponentially small outside because the
+          window contains a fixed multiple of B around the root. Row/column
+          summation after reducing the exponent preserves the small factor.
+        </p>
+      </li>
+      <li>
+        <p>
+          Symmetrizing P makes Gamma positive for large B by closeness to
+          A^-1, not by symmetry alone.
+        </p>
+      </li>
+      <li>
+        <p>
+          m=&minus;P<em>f has residual A m+f=A(A^-1&minus;P</em>)f, so the
+          stated mean/forcing estimates have the correct orientation.
+        </p>
+      </li>
+      <li>
+        <p>
+          In the exact change u=m+g z, the scalar is (2pi g&sup2;)^(n/2)(det
+          Gamma)^(1/2)exp(&minus;beta Q(m)); the linear residual is
+          &minus;g^-1(A m+f); the quadratic residual is (Gamma^-1&minus;A)/2.
+          Signs and powers agree.
+        </p>
+      </li>
+      <li>
+        <p>
+          The Gaussian used is conditional on frozen Haar variables. The
+          derivative density uses the inverse of the marginal covariance
+          block, not a block of the full precision. Those distinctions are
+          correct.
+        </p>
+      </li>
+    </ul>
+    <h3 id="auto-10"><a id="correlated-tails-and-common-majorant"></a>Correlated tails and common majorant<span style="margin-left: 1em"></span></h3>
+    <ul>
+      <li>
+        <p>
+          For a distinct witness set J, summing sign choices and using
+          exponential Markov at parameter1 gives2^|J| exp((M/2&minus;T)|J|).
+          Since r/Q&lt;=|J|&lt;=r, T&gt;=M/2+HQ gives2^r exp(&minus;Hr). The
+          N^r witness assignments produce(2N exp(&minus;H))^r. No independence
+          is used or needed.
+        </p>
+      </li>
+      <li>
+        <p>
+          T proportional to exp((log log beta)^2) dominates Q H when Q is
+          polynomial in B and H=O(log beta)+O(log N), at fixed L. Thus
+          beta^(-2tau r) is available for distinct addresses. Repetitions are
+          rightly counted once.
+        </p>
+      </li>
+      <li>
+        <p>
+          For the doubled majorant, the covariance tilt is2K. The
+          bound||Gamma^(1/2)K Gamma^(1/2)||&lt;=1/8 leaves norm&lt;=1/4 and
+          bounds the inverse tilt. The determinant logarithm and linear shift
+          cost O(tr Ktilde+|Gamma^(1/2)eta|&sup2;), hence exp(C sum lambda_i).
+        </p>
+      </li>
+      <li>
+        <p>
+          Cauchy&ndash;Schwarz then takes the square root of beta^(-2tau r),
+          yielding exactly beta^(-tau r). Polynomial moments under the tilted
+          laws are explicit assumptions; they are not inferred from separate
+          factor estimates. The common quadratic bound applies to the sum of
+          all corrections, which is essential.
+        </p>
+      </li>
+      <li>
+        <p>
+          Per-selected-test energy beta t_f&sup2; is comparable to
+          (M_f^cut)&sup2;. Both stated loss classes are little-o of it:
+          logarithmic polynomials are dominated by exp(2(log log beta)^2),
+          while the cubic-action loss ratio is B^d t_f&rarr;0. No unexplained
+          global volume normalization is absorbed.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-11"><a id="overall-conclusion"></a>Overall conclusion<span style="margin-left: 1em"></span></h2>
+    <p>
+      The reviewed algebraic implications and scale factors are consistent.
+      Correct the false continuity statement. For self-contained exposition,
+      expand the two-sided lift by the short chain above. The source-specific
+      sector gap, common coordinate change, mask-vanishing, and aggregate
+      quadratic bound remain explicit hypotheses, as they should; this review
+      does not close those model-specific interfaces.
+    </p>
+  </body>
+</html>

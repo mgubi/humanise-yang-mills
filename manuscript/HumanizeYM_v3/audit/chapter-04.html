@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Chapter 4 audit: exact blocking and effective densities &ndash;
+    Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Chapter 4 audit: exact blocking and effective densities</h1><a id="chapter-4-audit-exact-blocking-and-effective-densities"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Sources and local proof status</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Literature</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Essential support distinction</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Effective action and norm conditions</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-4">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Remaining work</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">3</a>
+      </p>
+    </div>
+    <p>
+      Draft <tt class="verbatim">chapters/04-blocking.tex</tt>; reviewed source passages
+      Scott B 19&ndash;190, Part I 05 6&ndash;190, D 21&ndash;67; Martin <tt
+      class="verbatim">predictor-branch.tex</tt> 9&ndash;200. No one-step stability or
+      global trajectory is asserted. The output is an exact normalized kernel
+      and a conditional density coordinate system.
+    </p>
+    <h2 id="auto-1"><a id="sources-and-local-proof-status"></a>Sources and local proof status<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Frames: Scott <tt class="verbatim">def:D20a</tt>, <tt class="verbatim">def:D20b</tt>,
+          <tt class="verbatim">lem:B1</tt>; Martin <tt class="verbatim">predictor-branch.tex</tt>,
+          uniform uniqueness subsection. Detailed averaging contraction
+          checked: gauge loop test makes all route matrices &epsilon;-close to
+          identity; global minimizers satisfy the average squared-distance
+          estimate; center by nearest centroid; inclusive diagonal self term
+          preserves nearest-point optimality; centroid normality kills
+          projection of their difference; derivative bound produces
+          contraction &epsilon;+1/4 uniformly over number of sites. The group
+          acts by a common left multiplier, so h_0=1 is a legitimate global
+          gauge normalization and does not remove coordinatewise optimality.
+          Constants depend only on the specified matrix group, not patch
+          radius.
+        </p>
+      </li>
+      <li>
+        <p>
+          Axial eligibility: Scott <tt class="verbatim">lem:B1</tt>, axial branch proof;
+          each fixed coordinate order gets a root by successive
+          low-average-layer selection. Internal link differences telescope
+          through internal plaquettes; the induction factor at r varying axes
+          can be 4r(2R+1), giving16 in dimension4. This is a finite-root
+          variant of the standard axial gauge estimate. The short argument is
+          retained because it supplies this exact eligible-root rule; no
+          original exact published theorem was located in the targeted search.
+          No novel-method claim.
+        </p>
+      </li>
+      <li>
+        <p>
+          Nearest predictor: Scott <tt class="verbatim">def:D21</tt>, <tt class="verbatim">lem:B1</tt>;
+          completion of squares gives nearest projection of weighted ambient
+          matrix mean. Uniform tubular radius supplies threshold independent
+          of weight count. Predictor tag is uniform over B_R on minimizing
+          branch; otherwise weights w_z^av. Frame tags sampled first;
+          predictor probabilities conditional on frame tags. Boundary equality
+          goes to fallback branch.
+        </p>
+      </li>
+      <li>
+        <p>
+          Exact kernel: Scott <tt class="verbatim">def:D04</tt> and B covariance
+          paragraph. All finite alternative branches retained, all q factors
+          Haar normalized. Haar/Fubini normalization given as immediate
+          application, not a separate long proof. Gauge transformations at
+          coarse endpoints are g(Ly); lattice translations are matched fine
+          Ly/coarse y. Kernel Borel, positive and bounded at fixed &beta;, not
+          asserted globally continuous through branch changes. Analytic frame
+          dependence and its derivative are intentionally deferred to
+          Chapter5.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-2"><a id="literature"></a>Literature<span style="margin-left: 1em"></span></h2>
+    <p>
+      Foote1984: parent downloaded original /tmp/ym-foote.pdf and inspected
+      p153 lemma: compact C^k submanifold, k&#x2A7E;2, has unique nearest
+      point in a neighborhood and projection C^{k&minus;1}. Since compact
+      matrix group is smooth, this supplies smooth projection. Derivative at
+      identity is the tangent projection by the standard normal chart. Draft
+      uses no unproved analytic enhancement. Citation key already in Scott
+      bibliography.
+    </p>
+    <p>
+      Searches before proof: &ldquo;Balaban averaging operations lattice gauge
+      fields minimizing gauge group average 1985&rdquo; and
+      &ldquo;synchronization compact Lie group all pair transports unique
+      minimizer near identity gauge fixing&rdquo;. Original Ba&#x0142;aban
+      averaging paper identified through Rutgers metadata
+      (CMP98(1985)17&ndash;51, DOI10.1007/BF01211042), but exact finite-rule
+      matching not verified. Draft cites existing Balaban1987RG only for
+      historical methodology, not as proof of this kernel or its uniform
+      branches.
+    </p>
+    <h2 id="auto-3"><a id="essential-support-distinction"></a>Essential support distinction<span style="margin-left: 1em"></span></h2>
+    <p>
+      Source D25 makes K_i a function of internal links of Y_i AND flags in
+      Y_i. Actual flag decisions read plaquettes meeting those sites,
+      extending distance1 beyond Y_i. Draft calls Y_i exclusion support,
+      I_i^bad prescribed large-field set, and separately defines full
+      dependence region. Covers and K_m weights use Y_i. Connected factor
+      overlap must use full dependence. No independence or disjoint read
+      support is inferred from disjoint Y_i. This correction is also recorded
+      in notation registry and UV audit.
+    </p>
+    <h2 id="auto-4"><a id="effective-action-and-norm-conditions"></a>Effective action and norm conditions<span style="margin-left: 1em"></span></h2>
+    <p>
+      The path action is defined with its coefficient data treated as given
+      and absolutely summable at the fixed volume. Invariant transported
+      curvature rows and masked quadratic/cubic/quartic expressions retain
+      both &beta;-dependent and &beta;-independent parts. Their later matching
+      and uniform kernel bounds are not claimed here. <tt class="verbatim">clip</tt> is
+      discontinuous at threshold, with c_dir/2&gt;c_lin; thresholds are based
+      on reference beta, fixed when actual beta changes. Relaxed tests written
+      over all sites are finite-range in effect because chord&#x2A7D;2; actual
+      local dependence includes every nonautomatic queried plaquette.
+    </p>
+    <p>
+      Regular norm: ordered left derivatives through fixed q, fields small on
+      X_i (all plaquettes meeting X_i), directions
+      t_m(1+dist(e&minus;,o_i))^varpi. Majorants anchored at o_i. Large-field
+      norm: supremum value, containing-site sum over exclusion support. Both
+      weighted with connected ball-cover number. Draft explicitly requires a
+      conversion estimate for anchors or dependence-support enlargement; no
+      hidden equality of these norms. Countable sums converge at fixed volume
+      by elementary product estimate, without volume-uniform full
+      partition-function claim.
+    </p>
+    <p>
+      Regular normalization: zero at flat field; first derivative vanishes by
+      Ad(G)-invariance and absence of invariant linear functionals on simple
+      g; affine Hessian vanishes on nonwrapping supports. Wrapping support
+      treatment intentionally follows source condition rather than guessing a
+      coordinate lift. Parameter curves keep addresses/tests/masks fixed,
+      all-address weighted difference sums vanish at fixed volume. Reference
+      coupling differs from actual coupling. The complete reachable
+      admissibility class is deferred until the nonlinear step is proved.
+    </p>
+    <h2 id="auto-5"><a id="remaining-work"></a>Remaining work<span style="margin-left: 1em"></span></h2>
+    <ol>
+      <li>
+        <p>
+          Later chapter must supply path coefficient data and prove both
+          summability and the stated normalization, not merely cite this
+          definition.
+        </p>
+      </li>
+      <li>
+        <p>
+          Later overlap estimates must retain both exclusion and dependence
+          supports under each conversion.
+        </p>
+      </li>
+      <li>
+        <p>
+          Later trajectory construction must check t_m&#x2A7D;1, period/patch
+          geometry and stage-dependent q,varpi,&sigma;. Those are finite-step
+          inputs here.
+        </p>
+      </li>
+      <li>
+        <p>
+          Original exact axial finite-root variant has not been found; a
+          verified applicable published formulation would permit compressing
+          its local proof further.
+        </p>
+      </li>
+      <li>
+        <p>
+          Parent handles full build, visual layout and page-distance reminder
+          check. Chapter4 uses only existing macros plus Foote1984 and
+          Balaban1987RG citation keys.
+        </p>
+      </li>
+    </ol>
+  </body>
+</html>

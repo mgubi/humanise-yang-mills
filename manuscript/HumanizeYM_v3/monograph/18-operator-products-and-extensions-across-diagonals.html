@@ -1,0 +1,1793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Chapter 18 Operator products and extensions across diagonals &ndash; Four-dimensional Yang&ndash;Mills theory: A constructive approach
+    &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1], hyperref: [bs +
+    'href{###1}{#2}', 2, '']}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="toggle" style="display: none">
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+    </div>
+<div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+
+    <div class="ym-chapter-nav"><span class="ym-chapter-prev"><a href="17-the-trace-law-and-its-consequences.html">&larr; Chapter 17 The trace law and its consequences</a></span><span class="ym-chapter-up"><a href="../monograph.html">Contents</a></span><span class="ym-chapter-next"><a href="19-assembly-and-the-scope-of-the-construction.html">Chapter 19 Assembly and the scope of the construction &rarr;</a></span></div>
+<div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Main theorem</b> <span style="margin-left: 5mm"></span> <a href="../monograph.html#auto-1">5</a>
+      </p>
+      <p>
+        Where the theorem is proved <span style="margin-left: 5mm"></span> <a href="../monograph.html#auto-2">5</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>About this draft</b> <span style="margin-left: 5mm"></span> <a href="../monograph.html#auto-3">7</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Reading guide</b> <span style="margin-left: 5mm"></span> <a href="../monograph.html#auto-4">9</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>1<span style="margin-left: 1em"></span>Lattice gauge theory and the continuum
+        problem</b> <span style="margin-left: 5mm"></span> <a href="1-lattice-gauge-theory-and-the-continuum-problem.html#auto-5">17</a>
+      </p>
+      <p>
+        1.1<span style="margin-left: 1em"></span>The gauge group and its normalization <span
+        style="margin-left: 5mm"></span> <a href="1-lattice-gauge-theory-and-the-continuum-problem.html#auto-6">17</a>
+      </p>
+      <p>
+        1.2<span style="margin-left: 1em"></span>Links, holonomies and the Wilson measure <span
+        style="margin-left: 5mm"></span> <a href="1-lattice-gauge-theory-and-the-continuum-problem.html#auto-7">18</a>
+      </p>
+      <p>
+        1.3<span style="margin-left: 1em"></span>Physical scales and lattice symmetries <span
+        style="margin-left: 5mm"></span> <a href="1-lattice-gauge-theory-and-the-continuum-problem.html#auto-8">19</a>
+      </p>
+      <p>
+        1.4<span style="margin-left: 1em"></span>Reflection positivity <span style="margin-left: 5mm"></span> <a
+        href="1-lattice-gauge-theory-and-the-continuum-problem.html#auto-9">20</a>
+      </p>
+      <p>
+        1.5<span style="margin-left: 1em"></span>Correlations and the order of the limits <span
+        style="margin-left: 5mm"></span> <a href="1-lattice-gauge-theory-and-the-continuum-problem.html#auto-10">22</a>
+      </p>
+      <p>
+        1.6<span style="margin-left: 1em"></span>How the construction is organized <span style="margin-left: 5mm"></span>
+        <a href="1-lattice-gauge-theory-and-the-continuum-problem.html#auto-11">23</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2<span style="margin-left: 1em"></span>Local gauge-invariant observables</b> <span
+        style="margin-left: 5mm"></span> <a href="2-local-gauge-invariant-observables.html#auto-12">25</a>
+      </p>
+      <p>
+        2.1<span style="margin-left: 1em"></span>Radial jets and polynomial labels <span style="margin-left: 5mm"></span>
+        <a href="2-local-gauge-invariant-observables.html#auto-13">25</a>
+      </p>
+      <p>
+        2.2<span style="margin-left: 1em"></span>Test holonomies and Taylor normalization <span
+        style="margin-left: 5mm"></span> <a href="2-local-gauge-invariant-observables.html#auto-14">26</a>
+      </p>
+      <p>
+        2.3<span style="margin-left: 1em"></span>Finite-stencil representatives <span style="margin-left: 5mm"></span>
+        <a href="2-local-gauge-invariant-observables.html#auto-15">27</a>
+      </p>
+      <p>
+        2.4<span style="margin-left: 1em"></span>Small-field bounds for the representatives
+        <span style="margin-left: 5mm"></span> <a href="2-local-gauge-invariant-observables.html#auto-16">29</a>
+      </p>
+      <p>
+        2.5<span style="margin-left: 1em"></span>Local representatives of the equations of
+        motion <span style="margin-left: 5mm"></span> <a href="2-local-gauge-invariant-observables.html#auto-17">31</a>
+      </p>
+      <p>
+        2.5.1<span style="margin-left: 1em"></span>Curvature tests avoiding a prescribed link
+        <span style="margin-left: 5mm"></span> <a href="2-local-gauge-invariant-observables.html#auto-18">32</a>
+      </p>
+      <p>
+        2.5.2<span style="margin-left: 1em"></span>Wilson forces and the linear equation ideal
+        <span style="margin-left: 5mm"></span> <a href="2-local-gauge-invariant-observables.html#auto-19">32</a>
+      </p>
+      <p>
+        2.5.3<span style="margin-left: 1em"></span>Exact integration by parts and assembly <span
+        style="margin-left: 5mm"></span> <a href="2-local-gauge-invariant-observables.html#auto-20">33</a>
+      </p>
+      <p>
+        2.6<span style="margin-left: 1em"></span>Examples and the remaining normalization
+        problem <span style="margin-left: 5mm"></span> <a href="2-local-gauge-invariant-observables.html#auto-21">34</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>3<span style="margin-left: 1em"></span>The free Maxwell comparison theory</b> <span
+        style="margin-left: 5mm"></span> <a href="3-the-free-maxwell-comparison-theory.html#auto-22">37</a>
+      </p>
+      <p>
+        3.1<span style="margin-left: 1em"></span>Curvature covariance <span style="margin-left: 5mm"></span> <a
+        href="3-the-free-maxwell-comparison-theory.html#auto-23">37</a>
+      </p>
+      <p>
+        3.2<span style="margin-left: 1em"></span>Local polynomials and Wick correlations <span
+        style="margin-left: 5mm"></span> <a href="3-the-free-maxwell-comparison-theory.html#auto-24">38</a>
+      </p>
+      <p>
+        3.3<span style="margin-left: 1em"></span>The on-shell polynomial space <span style="margin-left: 5mm"></span>
+        <a href="3-the-free-maxwell-comparison-theory.html#auto-25">39</a>
+      </p>
+      <p>
+        3.4<span style="margin-left: 1em"></span>Reflection and the meaning of nondegeneracy
+        <span style="margin-left: 5mm"></span> <a href="3-the-free-maxwell-comparison-theory.html#auto-26">40</a>
+      </p>
+      <p>
+        3.5<span style="margin-left: 1em"></span>Strict positivity of finite jet families <span
+        style="margin-left: 5mm"></span> <a href="3-the-free-maxwell-comparison-theory.html#auto-27">41</a>
+      </p>
+      <p>
+        3.6<span style="margin-left: 1em"></span>Quadratic fields and normalization checks <span
+        style="margin-left: 5mm"></span> <a href="3-the-free-maxwell-comparison-theory.html#auto-28">43</a>
+      </p>
+      <p>
+        3.7<span style="margin-left: 1em"></span>The degree-four conserved tensor <span style="margin-left: 5mm"></span>
+        <a href="3-the-free-maxwell-comparison-theory.html#auto-29">44</a>
+      </p>
+      <p>
+        3.8<span style="margin-left: 1em"></span>Local stress fluxes <span style="margin-left: 5mm"></span> <a
+        href="3-the-free-maxwell-comparison-theory.html#auto-30">45</a>
+      </p>
+      <p>
+        3.9<span style="margin-left: 1em"></span>Separating fields by insertions of bounded
+        scaling dimension <span style="margin-left: 5mm"></span> <a href="3-the-free-maxwell-comparison-theory.html#auto-31">47</a>
+      </p>
+      <p>
+        3.10<span style="margin-left: 1em"></span>Finite correlation criteria for infinitesimal
+        symmetries <span style="margin-left: 5mm"></span> <a href="3-the-free-maxwell-comparison-theory.html#auto-32">49</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>4<span style="margin-left: 1em"></span>Exact blocking and effective densities</b>
+        <span style="margin-left: 5mm"></span> <a href="4-exact-blocking-and-effective-densities.html#auto-33">53</a>
+      </p>
+      <p>
+        4.1<span style="margin-left: 1em"></span>Local gauges and a symmetric frame choice <span
+        style="margin-left: 5mm"></span> <a href="4-exact-blocking-and-effective-densities.html#auto-34">53</a>
+      </p>
+      <p>
+        4.2<span style="margin-left: 1em"></span>Gauge-covariant block averaging and the exact
+        kernel <span style="margin-left: 5mm"></span> <a href="4-exact-blocking-and-effective-densities.html#auto-35">55</a>
+      </p>
+      <p>
+        4.3<span style="margin-left: 1em"></span>A first-power bound for the actual block
+        average <span style="margin-left: 5mm"></span> <a href="4-exact-blocking-and-effective-densities.html#auto-36">57</a>
+      </p>
+      <p>
+        4.4<span style="margin-left: 1em"></span>Small fields and density coordinates <span
+        style="margin-left: 5mm"></span> <a href="4-exact-blocking-and-effective-densities.html#auto-37">59</a>
+      </p>
+      <p>
+        4.5<span style="margin-left: 1em"></span>The prescribed leading action <span style="margin-left: 5mm"></span>
+        <a href="4-exact-blocking-and-effective-densities.html#auto-38">59</a>
+      </p>
+      <p>
+        4.6<span style="margin-left: 1em"></span>The exact-cover representation and its norms
+        <span style="margin-left: 5mm"></span> <a href="4-exact-blocking-and-effective-densities.html#auto-39">60</a>
+      </p>
+      <p>
+        4.7<span style="margin-left: 1em"></span>Conditions for a one-step induction <span
+        style="margin-left: 5mm"></span> <a href="4-exact-blocking-and-effective-densities.html#auto-40">62</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>5<span style="margin-left: 1em"></span>Gaussian kernels and stationary
+        backgrounds</b> <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-41">63</a>
+      </p>
+      <p>
+        5.1<span style="margin-left: 1em"></span>Lattice differential forms and zero modes <span
+        style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-42">63</a>
+      </p>
+      <p>
+        5.2<span style="margin-left: 1em"></span>The exact Gaussian block transformation <span
+        style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-43">64</a>
+      </p>
+      <p>
+        5.3<span style="margin-left: 1em"></span>Averaging and the Fourier alias formula <span
+        style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-44">65</a>
+      </p>
+      <p>
+        5.4<span style="margin-left: 1em"></span>Gauge reduction and a regular curvature symbol
+        <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-45">66</a>
+      </p>
+      <p>
+        5.5<span style="margin-left: 1em"></span>Uniform estimates over finite blocking
+        histories <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-46">67</a>
+      </p>
+      <p>
+        5.6<span style="margin-left: 1em"></span>Exact transports and the curvature defect <span
+        style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-47">69</a>
+      </p>
+      <p>
+        5.6.1<span style="margin-left: 1em"></span>A positive factorization of the defect <span
+        style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-48">71</a>
+      </p>
+      <p>
+        5.7<span style="margin-left: 1em"></span>Convergence at a fixed scale <span style="margin-left: 5mm"></span>
+        <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-49">72</a>
+      </p>
+      <p>
+        5.8<span style="margin-left: 1em"></span>Uniform inverse bounds: the hypotheses that
+        matter <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-50">75</a>
+      </p>
+      <p>
+        5.9<span style="margin-left: 1em"></span>The actual block average and the forest
+        coordinates <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-51">75</a>
+      </p>
+      <p>
+        5.9.1<span style="margin-left: 1em"></span>A common analytic branch for all local labels
+        <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-52">76</a>
+      </p>
+      <p>
+        5.9.2<span style="margin-left: 1em"></span>The tree comparison and the actual Hessian
+        <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-53">77</a>
+      </p>
+      <p>
+        5.9.3<span style="margin-left: 1em"></span>A smooth representative of the stationary
+        tangent <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-54">78</a>
+      </p>
+      <p>
+        5.10<span style="margin-left: 1em"></span>A stationary background on a uniform
+        neighborhood <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-55">79</a>
+      </p>
+      <p>
+        5.10.1<span style="margin-left: 1em"></span>Supplying the local derivative estimates
+        <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-56">80</a>
+      </p>
+      <p>
+        5.11<span style="margin-left: 1em"></span>Scope of the completed Gaussian construction
+        <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-57">82</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>6<span style="margin-left: 1em"></span>Large fields and local Gaussian
+        integration</b> <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-58">83</a>
+      </p>
+      <p>
+        6.1<span style="margin-left: 1em"></span>Selected tests and the local energy <span
+        style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-59">83</a>
+      </p>
+      <p>
+        6.1.1<span style="margin-left: 1em"></span>An exact completion of squares <span style="margin-left: 5mm"></span>
+        <a href="6-large-fields-and-local-gaussian-integration.html#auto-60">84</a>
+      </p>
+      <p>
+        6.1.2<span style="margin-left: 1em"></span>Direct bounds and the signed comparison <span
+        style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-61">86</a>
+      </p>
+      <p>
+        6.2<span style="margin-left: 1em"></span>The actual sector Gaussian <span style="margin-left: 5mm"></span>
+        <a href="6-large-fields-and-local-gaussian-integration.html#auto-62">89</a>
+      </p>
+      <p>
+        6.2.1<span style="margin-left: 1em"></span>Transferring a local tree estimate to the
+        actual rows <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-63">90</a>
+      </p>
+      <p>
+        6.2.2<span style="margin-left: 1em"></span>Local inverse columns <span style="margin-left: 5mm"></span> <a
+        href="6-large-fields-and-local-gaussian-integration.html#auto-64">90</a>
+      </p>
+      <p>
+        6.2.3<span style="margin-left: 1em"></span>The source and derivatives on a fixed sector
+        <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-65">91</a>
+      </p>
+      <p>
+        6.2.4<span style="margin-left: 1em"></span>The exact integral and its normalization
+        <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-66">92</a>
+      </p>
+      <p>
+        6.3<span style="margin-left: 1em"></span>Differentiation on a common dependence region
+        <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-67">93</a>
+      </p>
+      <p>
+        6.3.1<span style="margin-left: 1em"></span>Differentiation under the common Gaussian law
+        <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-68">94</a>
+      </p>
+      <p>
+        6.4<span style="margin-left: 1em"></span>Simultaneous tail estimates <span style="margin-left: 5mm"></span>
+        <a href="6-large-fields-and-local-gaussian-integration.html#auto-69">95</a>
+      </p>
+      <p>
+        6.4.1<span style="margin-left: 1em"></span>The deterministic estimate behind a cutoff
+        remainder <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-70">96</a>
+      </p>
+      <p>
+        6.4.2<span style="margin-left: 1em"></span>The bounded-jet route for local activities
+        <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-71">98</a>
+      </p>
+      <p>
+        6.4.3<span style="margin-left: 1em"></span>One majorant for the product <span style="margin-left: 5mm"></span>
+        <a href="6-large-fields-and-local-gaussian-integration.html#auto-72">99</a>
+      </p>
+      <p>
+        6.5<span style="margin-left: 1em"></span>Weighted bounds for the primitive local factors
+        <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-73">100</a>
+      </p>
+      <p>
+        6.5.1<span style="margin-left: 1em"></span>Gaussian correction series <span style="margin-left: 5mm"></span>
+        <a href="6-large-fields-and-local-gaussian-integration.html#auto-74">100</a>
+      </p>
+      <p>
+        6.5.2<span style="margin-left: 1em"></span>Short local and inherited terms <span style="margin-left: 5mm"></span>
+        <a href="6-large-fields-and-local-gaussian-integration.html#auto-75">101</a>
+      </p>
+      <p>
+        6.5.3<span style="margin-left: 1em"></span>Components and assembly under one law <span
+        style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-76">102</a>
+      </p>
+      <p>
+        6.5.4<span style="margin-left: 1em"></span>Comparison with the linear local integral
+        <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-77">105</a>
+      </p>
+      <p>
+        6.6<span style="margin-left: 1em"></span>What must be checked for a concrete step <span
+        style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-78">106</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>7<span style="margin-left: 1em"></span>Local matching and the one-loop
+        coefficient</b> <span style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-79">107</a>
+      </p>
+      <p>
+        7.1<span style="margin-left: 1em"></span>Common Taylor kernels and Ward identities <span
+        style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-80">107</a>
+      </p>
+      <p>
+        7.2<span style="margin-left: 1em"></span>Division by the lattice curl <span style="margin-left: 5mm"></span>
+        <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-81">108</a>
+      </p>
+      <p>
+        7.3<span style="margin-left: 1em"></span>The marginal quadratic coefficient <span style="margin-left: 5mm"></span>
+        <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-82">109</a>
+      </p>
+      <p>
+        7.4<span style="margin-left: 1em"></span>Haar measure and gauge completion <span style="margin-left: 5mm"></span>
+        <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-83">110</a>
+      </p>
+      <p>
+        7.5<span style="margin-left: 1em"></span>The auxiliary lattice determinant <span style="margin-left: 5mm"></span>
+        <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-84">111</a>
+      </p>
+      <p>
+        7.6<span style="margin-left: 1em"></span>Uniform comparison of determinants <span style="margin-left: 5mm"></span>
+        <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-85">113</a>
+      </p>
+      <p>
+        7.6.1<span style="margin-left: 1em"></span>The stationary branch and the block average
+        contact term <span style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-86">114</a>
+      </p>
+      <p>
+        7.6.2<span style="margin-left: 1em"></span>Bounds for the actual centered matrices <span
+        style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-87">115</a>
+      </p>
+      <p>
+        7.6.3<span style="margin-left: 1em"></span>The one-loop drift <span style="margin-left: 5mm"></span> <a
+        href="7-local-matching-and-the-one-loop-coefficient.html#auto-88">119</a>
+      </p>
+      <p>
+        7.7<span style="margin-left: 1em"></span>Classical matching through fourth order <span
+        style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-89">119</a>
+      </p>
+      <p>
+        7.7.1<span style="margin-left: 1em"></span>Uniform classical stationary coefficients
+        <span style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-90">119</a>
+      </p>
+      <p>
+        7.7.2<span style="margin-left: 1em"></span>Construction of the matching curvature terms
+        <span style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-91">121</a>
+      </p>
+      <p>
+        7.7.3<span style="margin-left: 1em"></span>Preserving the classical coefficient bound
+        <span style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-92">122</a>
+      </p>
+      <p>
+        7.8<span style="margin-left: 1em"></span>Inherited loops: four differences and alias
+        suppression <span style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-93">123</a>
+      </p>
+      <p>
+        7.9<span style="margin-left: 1em"></span>Output coefficients and the remaining analytic
+        width <span style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-94">124</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>8<span style="margin-left: 1em"></span>Polymer expansions and connected
+        correlations</b> <span style="margin-left: 5mm"></span> <a href="8-polymer-expansions-and-connected-correlations.html#auto-95">127</a>
+      </p>
+      <p>
+        8.1<span style="margin-left: 1em"></span>Activities, supports and incompatibility <span
+        style="margin-left: 5mm"></span> <a href="8-polymer-expansions-and-connected-correlations.html#auto-96">127</a>
+      </p>
+      <p>
+        8.2<span style="margin-left: 1em"></span>The logarithm and its convergence criterion
+        <span style="margin-left: 5mm"></span> <a href="8-polymer-expansions-and-connected-correlations.html#auto-97">128</a>
+      </p>
+      <p>
+        8.3<span style="margin-left: 1em"></span>A spatially local bound with a geometric tail
+        <span style="margin-left: 5mm"></span> <a href="8-polymer-expansions-and-connected-correlations.html#auto-98">129</a>
+      </p>
+      <p>
+        8.4<span style="margin-left: 1em"></span>Deleting polymers and controlling local changes
+        <span style="margin-left: 5mm"></span> <a href="8-polymer-expansions-and-connected-correlations.html#auto-99">130</a>
+      </p>
+      <p>
+        8.5<span style="margin-left: 1em"></span>Parameters, derivatives and connected
+        insertions <span style="margin-left: 5mm"></span> <a href="8-polymer-expansions-and-connected-correlations.html#auto-100">130</a>
+      </p>
+      <p>
+        8.6<span style="margin-left: 1em"></span>Large-field constraints and exact reassembly
+        <span style="margin-left: 5mm"></span> <a href="8-polymer-expansions-and-connected-correlations.html#auto-101">131</a>
+      </p>
+      <p>
+        8.7<span style="margin-left: 1em"></span>What an application must supply <span style="margin-left: 5mm"></span>
+        <a href="8-polymer-expansions-and-connected-correlations.html#auto-102">132</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>9<span style="margin-left: 1em"></span>The nonlinear renormalization step</b> <span
+        style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-103">133</a>
+      </p>
+      <p>
+        9.1<span style="margin-left: 1em"></span>The exact local integral and its first
+        expansion <span style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-104">133</a>
+      </p>
+      <p>
+        9.2<span style="margin-left: 1em"></span>Improving the regular remainder <span style="margin-left: 5mm"></span>
+        <a href="9-the-nonlinear-renormalization-step.html#auto-105">135</a>
+      </p>
+      <p>
+        9.2.1<span style="margin-left: 1em"></span>Terms containing several elementary factors
+        <span style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-106">135</a>
+      </p>
+      <p>
+        9.2.2<span style="margin-left: 1em"></span>The linear inherited regular term <span
+        style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-107">135</a>
+      </p>
+      <p>
+        9.2.3<span style="margin-left: 1em"></span>Low-order terms and localization <span style="margin-left: 5mm"></span>
+        <a href="9-the-nonlinear-renormalization-step.html#auto-108">137</a>
+      </p>
+      <p>
+        9.2.4<span style="margin-left: 1em"></span>The stationary integral with its cutoff
+        retained <span style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-109">137</a>
+      </p>
+      <p>
+        9.2.5<span style="margin-left: 1em"></span>Identifying the retained region in the actual
+        integral <span style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-110">138</a>
+      </p>
+      <p>
+        9.2.6<span style="margin-left: 1em"></span>Centering the full logarithm <span style="margin-left: 5mm"></span>
+        <a href="9-the-nonlinear-renormalization-step.html#auto-111">140</a>
+      </p>
+      <p>
+        9.2.7<span style="margin-left: 1em"></span>Recovering a local density <span style="margin-left: 5mm"></span>
+        <a href="9-the-nonlinear-renormalization-step.html#auto-112">141</a>
+      </p>
+      <p>
+        9.3<span style="margin-left: 1em"></span>A precise preparatory output <span style="margin-left: 5mm"></span>
+        <a href="9-the-nonlinear-renormalization-step.html#auto-113">142</a>
+      </p>
+      <p>
+        9.4<span style="margin-left: 1em"></span>Local quadratic subtraction <span style="margin-left: 5mm"></span>
+        <a href="9-the-nonlinear-renormalization-step.html#auto-114">143</a>
+      </p>
+      <p>
+        9.5<span style="margin-left: 1em"></span>Replacing the local quadratic term by the path
+        action <span style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-115">144</a>
+      </p>
+      <p>
+        9.6<span style="margin-left: 1em"></span>Absorbing logarithmic corrections into
+        large-field activities <span style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-116">145</a>
+      </p>
+      <p>
+        9.7<span style="margin-left: 1em"></span>The normalization of the field-independent term
+        and continuity <span style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-117">146</a>
+      </p>
+      <p>
+        9.8<span style="margin-left: 1em"></span>Wilson initialization <span style="margin-left: 5mm"></span> <a
+        href="9-the-nonlinear-renormalization-step.html#auto-118">148</a>
+      </p>
+      <p>
+        9.9<span style="margin-left: 1em"></span>The one-step conclusion and its input data
+        <span style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-119">149</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>10<span style="margin-left: 1em"></span>A common trajectory and fixed-scale
+        stability</b> <span style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-120">151</a>
+      </p>
+      <p>
+        10.1<span style="margin-left: 1em"></span>What is fixed before choosing the scales <span
+        style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-121">151</a>
+      </p>
+      <p>
+        10.2<span style="margin-left: 1em"></span>A slowly increasing stage schedule <span
+        style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-122">152</a>
+      </p>
+      <p>
+        10.3<span style="margin-left: 1em"></span>Tuning a finite history to the coarse endpoint
+        <span style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-123">154</a>
+      </p>
+      <p>
+        10.4<span style="margin-left: 1em"></span>Uniform logarithmic running <span style="margin-left: 5mm"></span>
+        <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-124">154</a>
+      </p>
+      <p>
+        10.5<span style="margin-left: 1em"></span>The coefficient comparison before the activity
+        comparison <span style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-125">155</a>
+      </p>
+      <p>
+        10.6<span style="margin-left: 1em"></span>The stronger local comparison required for
+        cutoff limits <span style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-126">156</a>
+      </p>
+      <p>
+        10.6.1<span style="margin-left: 1em"></span>How finite evaluations of the real
+        parameters yield the contraction <span style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-127">157</a>
+      </p>
+      <p>
+        10.6.2<span style="margin-left: 1em"></span>Producing the finite parameter evaluations
+        from the protected expansion <span style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-128">158</a>
+      </p>
+      <p>
+        10.6.3<span style="margin-left: 1em"></span>Numerical cumulative control <span style="margin-left: 5mm"></span>
+        <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-129">161</a>
+      </p>
+      <p>
+        10.6.4<span style="margin-left: 1em"></span>Common-input continuity and the zero-array
+        histories <span style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-130">161</a>
+      </p>
+      <p>
+        10.7<span style="margin-left: 1em"></span>Convergence of the coupled histories <span
+        style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-131">162</a>
+      </p>
+      <p>
+        10.8<span style="margin-left: 1em"></span>Identifying the analytic comparison on the
+        selected family <span style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-132">164</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>11<span style="margin-left: 1em"></span>Marked insertions and finite-scale
+        comparison</b> <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-133">165</a>
+      </p>
+      <p>
+        11.1<span style="margin-left: 1em"></span>An algebra for finitely many insertions <span
+        style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-134">165</a>
+      </p>
+      <p>
+        11.1.1<span style="margin-left: 1em"></span>The exact density and its integral <span
+        style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-135">166</a>
+      </p>
+      <p>
+        11.2<span style="margin-left: 1em"></span>Joint local terms and large-field components
+        <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-136">167</a>
+      </p>
+      <p>
+        11.3<span style="margin-left: 1em"></span>Support bounds for several marked components
+        <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-137">167</a>
+      </p>
+      <p>
+        11.4<span style="margin-left: 1em"></span>One marked step with the actual local factors
+        <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-138">168</a>
+      </p>
+      <p>
+        11.4.1<span style="margin-left: 1em"></span>The one-insertion graph estimates <span
+        style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-139">170</a>
+      </p>
+      <p>
+        11.4.2<span style="margin-left: 1em"></span>Propagating the already formed terms
+        involving at least two insertions <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-140">172</a>
+      </p>
+      <p>
+        11.5<span style="margin-left: 1em"></span>A common Gaussian comparison <span style="margin-left: 5mm"></span>
+        <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-141">173</a>
+      </p>
+      <p>
+        11.5.1<span style="margin-left: 1em"></span>The exact cross-covariance on the selected
+        forest <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-142">174</a>
+      </p>
+      <p>
+        11.5.2<span style="margin-left: 1em"></span>Actual local coordinate and cutoff estimates
+        <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-143">175</a>
+      </p>
+      <p>
+        11.6<span style="margin-left: 1em"></span>Restarting below a comparison level <span
+        style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-144">176</a>
+      </p>
+      <p>
+        11.6.1<span style="margin-left: 1em"></span>Constructing the restarted representations
+        <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-145">176</a>
+      </p>
+      <p>
+        11.7<span style="margin-left: 1em"></span>The normalized integral with several
+        insertions <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-146">182</a>
+      </p>
+      <p>
+        11.7.1<span style="margin-left: 1em"></span>An independent positional modulus <span
+        style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-147">183</a>
+      </p>
+      <p>
+        11.8<span style="margin-left: 1em"></span>Backward comparison of a local trial <span
+        style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-148">184</a>
+      </p>
+      <p>
+        11.9<span style="margin-left: 1em"></span>Finite-dimensional detection before taking
+        limits <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-149">185</a>
+      </p>
+      <p>
+        11.10<span style="margin-left: 1em"></span>Collected estimates and local calibration
+        <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-150">186</a>
+      </p>
+      <p>
+        11.11<span style="margin-left: 1em"></span>Calibrating the microscopic equations on the
+        same history <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-151">187</a>
+      </p>
+      <p>
+        11.12<span style="margin-left: 1em"></span>The moving equation space and uniform finite
+        differences <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-152">189</a>
+      </p>
+      <p>
+        11.12.1<span style="margin-left: 1em"></span>A common localization map for the
+        separating family <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-153">190</a>
+      </p>
+      <p>
+        11.12.2<span style="margin-left: 1em"></span>Absorbing the larger source weight <span
+        style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-154">193</a>
+      </p>
+      <p>
+        11.12.3<span style="margin-left: 1em"></span>The actual covariance on a comparison
+        window <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-155">198</a>
+      </p>
+      <p>
+        11.12.4<span style="margin-left: 1em"></span>From the common polynomial localization to
+        the corrected pair bound <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-156">200</a>
+      </p>
+      <p>
+        11.12.5<span style="margin-left: 1em"></span>Finite-arity comparison on a common finite
+        set of scales <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-157">202</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>12<span style="margin-left: 1em"></span>The ultraviolet limit at fixed volume</b>
+        <span style="margin-left: 5mm"></span> <a href="12-the-ultraviolet-limit-at-fixed-volume.html#auto-158">207</a>
+      </p>
+      <p>
+        12.1<span style="margin-left: 1em"></span>Fixed-level convergence data <span style="margin-left: 5mm"></span>
+        <a href="12-the-ultraviolet-limit-at-fixed-volume.html#auto-159">207</a>
+      </p>
+      <p>
+        12.2<span style="margin-left: 1em"></span>Contraction of the complete marked remainder
+        <span style="margin-left: 5mm"></span> <a href="12-the-ultraviolet-limit-at-fixed-volume.html#auto-160">208</a>
+      </p>
+      <p>
+        12.3<span style="margin-left: 1em"></span>The scalar normalization cancels <span style="margin-left: 5mm"></span>
+        <a href="12-the-ultraviolet-limit-at-fixed-volume.html#auto-161">209</a>
+      </p>
+      <p>
+        12.4<span style="margin-left: 1em"></span>A stopping estimate uniform in the stopping
+        level <span style="margin-left: 5mm"></span> <a href="12-the-ultraviolet-limit-at-fixed-volume.html#auto-162">210</a>
+      </p>
+      <p>
+        12.5<span style="margin-left: 1em"></span>Smoothness and all lattice differences <span
+        style="margin-left: 5mm"></span> <a href="12-the-ultraviolet-limit-at-fixed-volume.html#auto-163">211</a>
+      </p>
+      <p>
+        12.6<span style="margin-left: 1em"></span>The fixed-volume conclusion <span style="margin-left: 5mm"></span>
+        <a href="12-the-ultraviolet-limit-at-fixed-volume.html#auto-164">212</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>13<span style="margin-left: 1em"></span>Continuum correlations and local fields</b>
+        <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-165">215</a>
+      </p>
+      <p>
+        13.1<span style="margin-left: 1em"></span>One subsequence of volumes <span style="margin-left: 5mm"></span>
+        <a href="13-continuum-correlations-and-local-fields.html#auto-166">215</a>
+      </p>
+      <p>
+        13.2<span style="margin-left: 1em"></span>Separated cells and errors in local
+        observables <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-167">216</a>
+      </p>
+      <p>
+        13.3<span style="margin-left: 1em"></span>Fields as equivalence classes of labels <span
+        style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-168">216</a>
+      </p>
+      <p>
+        13.3.1<span style="margin-left: 1em"></span>Representatives chosen before the spectators
+        <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-169">217</a>
+      </p>
+      <p>
+        13.4<span style="margin-left: 1em"></span>Inclusions and derivatives <span style="margin-left: 5mm"></span>
+        <a href="13-continuum-correlations-and-local-fields.html#auto-170">218</a>
+      </p>
+      <p>
+        13.5<span style="margin-left: 1em"></span>Reflection positivity and separated power
+        bounds <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-171">219</a>
+      </p>
+      <p>
+        13.6<span style="margin-left: 1em"></span>Repeated reflected words <span style="margin-left: 5mm"></span>
+        <a href="13-continuum-correlations-and-local-fields.html#auto-172">219</a>
+      </p>
+      <p>
+        13.7<span style="margin-left: 1em"></span>Sharp fixed-arity short-distance bounds <span
+        style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-173">220</a>
+      </p>
+      <p>
+        13.7.1<span style="margin-left: 1em"></span>A normalized local insertion <span style="margin-left: 5mm"></span>
+        <a href="13-continuum-correlations-and-local-fields.html#auto-174">221</a>
+      </p>
+      <p>
+        13.7.2<span style="margin-left: 1em"></span>The stopping scale and centered estimate
+        <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-175">222</a>
+      </p>
+      <p>
+        13.7.3<span style="margin-left: 1em"></span>Arbitrary separated points <span style="margin-left: 5mm"></span>
+        <a href="13-continuum-correlations-and-local-fields.html#auto-176">222</a>
+      </p>
+      <p>
+        13.8<span style="margin-left: 1em"></span>Bounded real approximations for separated
+        words <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-177">223</a>
+      </p>
+      <p>
+        13.9<span style="margin-left: 1em"></span>Scaling dimension and the physical quotient
+        <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-178">228</a>
+      </p>
+      <p>
+        13.10<span style="margin-left: 1em"></span>Local replacement of a cluster on the lattice
+        <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-179">230</a>
+      </p>
+      <p>
+        13.10.1<span style="margin-left: 1em"></span>Signed local transport <span style="margin-left: 5mm"></span>
+        <a href="13-continuum-correlations-and-local-fields.html#auto-180">230</a>
+      </p>
+      <p>
+        13.10.2<span style="margin-left: 1em"></span>Grouping marks and retaining their supports
+        <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-181">231</a>
+      </p>
+      <p>
+        13.10.3<span style="margin-left: 1em"></span>Extraction with a freely chosen residual
+        weight <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-182">232</a>
+      </p>
+      <p>
+        13.10.4<span style="margin-left: 1em"></span>A mixed-correlation consequence without
+        phases <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-183">233</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>14<span style="margin-left: 1em"></span>Reflection spaces, Ward identities and
+        Euclidean symmetry</b> <span style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-184">235</a>
+      </p>
+      <p>
+        14.1<span style="margin-left: 1em"></span>Reflection spaces for the coordinate axes
+        <span style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-185">235</a>
+      </p>
+      <p>
+        14.2<span style="margin-left: 1em"></span>Bounded insertions in a slab <span style="margin-left: 5mm"></span>
+        <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-186">236</a>
+      </p>
+      <p>
+        14.3<span style="margin-left: 1em"></span>Comparing the mixed fields with free fields
+        <span style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-187">237</a>
+      </p>
+      <p>
+        14.3.1<span style="margin-left: 1em"></span>Obtaining the three comparison bounds from
+        one lattice family <span style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-188">238</a>
+      </p>
+      <p>
+        14.4<span style="margin-left: 1em"></span>The conserved stress line <span style="margin-left: 5mm"></span>
+        <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-189">240</a>
+      </p>
+      <p>
+        14.5<span style="margin-left: 1em"></span>Shrinking shells and local charge fields <span
+        style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-190">241</a>
+      </p>
+      <p>
+        14.6<span style="margin-left: 1em"></span>Coordinate spectral measures and the angular
+        boundary <span style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-191">242</a>
+      </p>
+      <p>
+        14.6.1<span style="margin-left: 1em"></span>What opposite reflection signs control <span
+        style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-192">243</a>
+      </p>
+      <p>
+        14.6.2<span style="margin-left: 1em"></span>The separate diagonal-stress estimate <span
+        style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-193">245</a>
+      </p>
+      <p>
+        14.6.3<span style="margin-left: 1em"></span>Vanishing angular flux at infinity <span
+        style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-194">246</a>
+      </p>
+      <p>
+        14.7<span style="margin-left: 1em"></span>Normalization and propagation of the Ward
+        identities <span style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-195">248</a>
+      </p>
+      <p>
+        14.7.1<span style="margin-left: 1em"></span>Analyticity supplied by a positive Gram
+        kernel <span style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-196">248</a>
+      </p>
+      <p>
+        14.7.2<span style="margin-left: 1em"></span>A finite path through separated
+        configurations <span style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-197">249</a>
+      </p>
+      <p>
+        14.8<span style="margin-left: 1em"></span>The rotation action and the normalized tensor
+        <span style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-198">250</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>15<span style="margin-left: 1em"></span>Decomposition into phases</b> <span style="margin-left: 5mm"></span>
+        <a href="15-decomposition-into-phases.html#auto-199">253</a>
+      </p>
+      <p>
+        15.1<span style="margin-left: 1em"></span>The zero-energy subspace <span style="margin-left: 5mm"></span>
+        <a href="15-decomposition-into-phases.html#auto-200">253</a>
+      </p>
+      <p>
+        15.2<span style="margin-left: 1em"></span>Compression and separation of clusters <span
+        style="margin-left: 5mm"></span> <a href="15-decomposition-into-phases.html#auto-201">253</a>
+      </p>
+      <p>
+        15.3<span style="margin-left: 1em"></span>Characters and the representing measure <span
+        style="margin-left: 5mm"></span> <a href="15-decomposition-into-phases.html#auto-202">255</a>
+      </p>
+      <p>
+        15.4<span style="margin-left: 1em"></span>Symmetries in each phase <span style="margin-left: 5mm"></span>
+        <a href="15-decomposition-into-phases.html#auto-203">255</a>
+      </p>
+      <p>
+        15.5<span style="margin-left: 1em"></span>Positivity, field identities and null spaces
+        <span style="margin-left: 5mm"></span> <a href="15-decomposition-into-phases.html#auto-204">256</a>
+      </p>
+      <p>
+        15.6<span style="margin-left: 1em"></span>Selecting a phase with a unique ground vector
+        <span style="margin-left: 5mm"></span> <a href="15-decomposition-into-phases.html#auto-205">257</a>
+      </p>
+      <p>
+        15.7<span style="margin-left: 1em"></span>Sharp separated bounds in every phase <span
+        style="margin-left: 5mm"></span> <a href="15-decomposition-into-phases.html#auto-206">258</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>16<span style="margin-left: 1em"></span>Relativistic reconstruction in every
+        phase</b> <span style="margin-left: 5mm"></span> <a href="16-relativistic-reconstruction-in-every-phase.html#auto-207">259</a>
+      </p>
+      <p>
+        16.1<span style="margin-left: 1em"></span>Complex time and a uniform boundary
+        distribution <span style="margin-left: 5mm"></span> <a href="16-relativistic-reconstruction-in-every-phase.html#auto-208">259</a>
+      </p>
+      <p>
+        16.2<span style="margin-left: 1em"></span>Lorentz covariance and the spectral cone <span
+        style="margin-left: 5mm"></span> <a href="16-relativistic-reconstruction-in-every-phase.html#auto-209">261</a>
+      </p>
+      <p>
+        16.3<span style="margin-left: 1em"></span>The spacetime tube and locality <span style="margin-left: 5mm"></span>
+        <a href="16-relativistic-reconstruction-in-every-phase.html#auto-210">262</a>
+      </p>
+      <p>
+        16.4<span style="margin-left: 1em"></span>Field words and the reflection space <span
+        style="margin-left: 5mm"></span> <a href="16-relativistic-reconstruction-in-every-phase.html#auto-211">263</a>
+      </p>
+      <p>
+        16.5<span style="margin-left: 1em"></span>The low-energy estimate and uniqueness of the
+        vacuum in each phase <span style="margin-left: 5mm"></span> <a href="16-relativistic-reconstruction-in-every-phase.html#auto-212">264</a>
+      </p>
+      <p>
+        16.6<span style="margin-left: 1em"></span>The weak commutant and local stress charges
+        <span style="margin-left: 5mm"></span> <a href="16-relativistic-reconstruction-in-every-phase.html#auto-213">266</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>17<span style="margin-left: 1em"></span>The trace law and its consequences</b> <span
+        style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-214">269</a>
+      </p>
+      <p>
+        17.1<span style="margin-left: 1em"></span>Centering and the positive spectral measure
+        <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-215">269</a>
+      </p>
+      <p>
+        17.2<span style="margin-left: 1em"></span>Comparison at prescribed radii <span style="margin-left: 5mm"></span>
+        <a href="17-the-trace-law-and-its-consequences.html#auto-216">270</a>
+      </p>
+      <p>
+        17.2.1<span style="margin-left: 1em"></span>Comparison windows crossing changes of stage
+        <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-217">271</a>
+      </p>
+      <p>
+        17.3<span style="margin-left: 1em"></span>Tensor coordinates and the regulated current
+        <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-218">273</a>
+      </p>
+      <p>
+        17.4<span style="margin-left: 1em"></span>Exact current transport and the scalar
+        regulator <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-219">274</a>
+      </p>
+      <p>
+        17.4.1<span style="margin-left: 1em"></span>Difference-preserving block averages <span
+        style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-220">274</a>
+      </p>
+      <p>
+        17.4.2<span style="margin-left: 1em"></span>What scalar mass regularization changes
+        <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-221">275</a>
+      </p>
+      <p>
+        17.4.3<span style="margin-left: 1em"></span>Exact integration by parts and the remaining
+        current estimate <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-222">276</a>
+      </p>
+      <p>
+        17.4.4<span style="margin-left: 1em"></span>The group-coordinate contact identity <span
+        style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-223">277</a>
+      </p>
+      <p>
+        17.4.5<span style="margin-left: 1em"></span>Cancellation of the action-gradient terms
+        <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-224">278</a>
+      </p>
+      <p>
+        17.4.6<span style="margin-left: 1em"></span>Power counting the regulator remainder <span
+        style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-225">279</a>
+      </p>
+      <p>
+        17.4.7<span style="margin-left: 1em"></span>The corrected coefficient and order of
+        limits <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-226">280</a>
+      </p>
+      <p>
+        17.5<span style="margin-left: 1em"></span>Current conservation and uniform transfer
+        bounds <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-227">281</a>
+      </p>
+      <p>
+        17.5.1<span style="margin-left: 1em"></span>Preservation of the low moments <span style="margin-left: 5mm"></span>
+        <a href="17-the-trace-law-and-its-consequences.html#auto-228">282</a>
+      </p>
+      <p>
+        17.5.2<span style="margin-left: 1em"></span>A homogeneous bound for the quadratic
+        channel <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-229">283</a>
+      </p>
+      <p>
+        17.5.3<span style="margin-left: 1em"></span>The nonlinear terms need fixed-ratio bounds
+        <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-230">283</a>
+      </p>
+      <p>
+        17.5.4<span style="margin-left: 1em"></span>Why action matching introduces no source
+        <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-231">285</a>
+      </p>
+      <p>
+        17.5.5<span style="margin-left: 1em"></span>Uniform current and difference-primitive
+        bounds <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-232">286</a>
+      </p>
+      <p>
+        17.6<span style="margin-left: 1em"></span>Quantitative stability of the trace functional
+        <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-233">287</a>
+      </p>
+      <p>
+        17.7<span style="margin-left: 1em"></span>From the current identity to marked
+        coefficient estimates <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-234">288</a>
+      </p>
+      <p>
+        17.7.1<span style="margin-left: 1em"></span>A differentiated block kernel <span style="margin-left: 5mm"></span>
+        <a href="17-the-trace-law-and-its-consequences.html#auto-235">288</a>
+      </p>
+      <p>
+        17.7.2<span style="margin-left: 1em"></span>The finite degree-five coefficient <span
+        style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-236">290</a>
+      </p>
+      <p>
+        17.7.3<span style="margin-left: 1em"></span>The equation direction and the necessary
+        rates <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-237">294</a>
+      </p>
+      <p>
+        17.8<span style="margin-left: 1em"></span>The coefficient and the all-radius limit <span
+        style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-238">295</a>
+      </p>
+      <p>
+        17.9<span style="margin-left: 1em"></span>What the trace law excludes <span style="margin-left: 5mm"></span>
+        <a href="17-the-trace-law-and-its-consequences.html#auto-239">296</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>18<span style="margin-left: 1em"></span>Operator products and extensions across
+        diagonals</b> <span style="margin-left: 5mm"></span> <a href="#auto-240">299</a>
+      </p>
+      <p>
+        18.1<span style="margin-left: 1em"></span>A fixed prescription for all finite degrees
+        <span style="margin-left: 5mm"></span> <a href="#auto-241">299</a>
+      </p>
+      <p>
+        18.2<span style="margin-left: 1em"></span>The marked replacement estimate <span style="margin-left: 5mm"></span>
+        <a href="#auto-242">301</a>
+      </p>
+      <p>
+        18.3<span style="margin-left: 1em"></span>Finite-order operator product expansion <span
+        style="margin-left: 5mm"></span> <a href="#auto-243">303</a>
+      </p>
+      <p>
+        18.4<span style="margin-left: 1em"></span>An explicit finite-order extension across
+        every diagonal <span style="margin-left: 5mm"></span> <a href="#auto-244">304</a>
+      </p>
+      <p>
+        18.5<span style="margin-left: 1em"></span>Sharper subtraction and dependence on the
+        prescription <span style="margin-left: 5mm"></span> <a href="#auto-245">306</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>19<span style="margin-left: 1em"></span>Assembly and the scope of the
+        construction</b> <span style="margin-left: 5mm"></span> <a href="19-assembly-and-the-scope-of-the-construction.html#auto-246">307</a>
+      </p>
+      <p>
+        19.1<span style="margin-left: 1em"></span>One family and the order of its limits <span
+        style="margin-left: 5mm"></span> <a href="19-assembly-and-the-scope-of-the-construction.html#auto-247">307</a>
+      </p>
+      <p>
+        19.2<span style="margin-left: 1em"></span>Assembly of the construction <span style="margin-left: 5mm"></span>
+        <a href="19-assembly-and-the-scope-of-the-construction.html#auto-248">307</a>
+      </p>
+      <p>
+        19.3<span style="margin-left: 1em"></span>Conclusions that are not supplied <span style="margin-left: 5mm"></span>
+        <a href="19-assembly-and-the-scope-of-the-construction.html#auto-249">309</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Notation in the current draft</b> <span style="margin-left: 5mm"></span> <a href="notation-in-the-current-draft.html#auto-250">311</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>References</b> <span style="margin-left: 5mm"></span> <a href="references.html#auto-252">313</a>
+      </p>
+    </div>
+<h1 id="auto-240"><a id="ch18:products"></a>Chapter 18<br />Operator products and extensions across
+    diagonals</h1>
+    <p>
+      There are two distinct questions about colliding insertions. An operator
+      product expansion replaces a small cluster by finitely many local fields
+      when tested against separated spectators. A distributional extension
+      assigns values to test functions whose supports meet collision
+      diagonals. The first requires quantitative information about the marked
+      renormalization group. The second already follows, with a conservative
+      finite order, from the polynomial separated bounds. Neither construction
+      defines a product of point fields by simply setting their positions
+      equal.
+    </p>
+    <p>
+      We use the common filtration \(F_d\), its inclusions \(\iota_{d, e}\),
+      and the mixed correlations \(S\) from Chapter <a href="13-continuum-correlations-and-local-fields.html#ch13:continuum">13</a>. The
+      orthogonal actions on these spaces and the phase correlations
+      \(S^{\xi}\) are those of Chapters <a href="14-reflection-spaces-ward-identities-and-euclidean.html#ch14:ward">14</a> and <a href="15-decomposition-into-phases.html#ch15:phases">15</a>.
+      Write \(\mathfrak{A}\) for the commutative compression algebra of
+      Chapter <a href="15-decomposition-into-phases.html#ch15:phases">15</a> and \(M (w)\) for the compression of a whole
+      separated word \(w\). We first convert the lattice replacement estimate
+      into the norm bound needed for the operator product expansion. The
+      contact extension constructed later does not use it.
+    </p>
+    <p>
+      The OPE originates with Wilson [<a href="references.html#bib-Wilson1969">Wil69</a>]. Fr&ouml;b and
+      Holland establish the Yang&ndash;Mills OPE to every fixed order of
+      perturbation theory [<a href="references.html#bib-FrobHolland2016">FH16</a>]. That result explains the
+      relevant structure, but does not supply the nonperturbative estimate
+      required below. The standard distribution-extension argument is the
+      normal Taylor subtraction of Brunetti and Fredenhagen [<a href="references.html#bib-BrunettiFredenhagen2000">BF00</a>,
+      Section 5.2, Theorems 5.2&ndash;5.3]. We use that procedure with an
+      explicit choice adapted to the union of all pair diagonals; no
+      reconstruction theorem requires this particular extension.
+    </p>
+    <h2 id="auto-241"><a id="ch18:prescription"></a>18.1<span style="margin-left: 1em"></span>A fixed prescription for all
+    finite degrees<span style="margin-left: 1em"></span></h2>
+    <p>
+      A probe is a fixed word \(v\) at distinct nonzero positions. It defines
+      \(\lambda (A) = S (A (0) v)\) on each field space on which \(A\) is
+      defined. These functionals separate \(F_d\), by the definition of
+      correlation-null fields. Since \(F_d\) is finite dimensional, finitely
+      many probes span its dual. A probe chosen at one degree continues to act
+      at every higher degree by the same correlation, using the physical
+      inclusions.
+    </p>
+    <p>
+      One can choose fields \(u_{\alpha}\) and finite linear combinations
+      \(b_{\alpha}\) of probes, with a degree \(| \alpha |\) attached to each,
+      such that
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch18:dual"></a>\(\displaystyle b_{\alpha} (u_{\beta}) =
+        \delta_{\alpha \beta}, \qquad A = \sum_{| \alpha |
+\leqslant d}
+        b_{\alpha} (A) u_{\alpha}  \quad (A \in F_d), \)</td>
+        <td align="right">(18.1)</td>
+      </tr>
+    </table>
+    <p>
+      where fields in lower degrees are included in \(F_d\) when necessary.
+      All these identities hold simultaneously at every finite degree. Here is
+      the useful linear-algebra construction. Suppose the choices through
+      \(d\) have been made and let \(R : F_d \to F_{d + 1}\) be inclusion. The
+      old probes give a map \(B : F_{d + 1} \to F_d\) with \(BR = 1\). For any
+      section \(S_0\) of the quotient map \(q : F_{d + 1} \to F_{d + 1} /
+      RF_d\), replace it by \(S_0 - RBS_0\). The corrected section is killed
+      by every old probe. Lift a quotient basis through it, and represent its
+      dual quotient coordinates by finite probe combinations. This extends
+      <class style="font-style: normal">(<a href="#ch18:dual">18.1</a>)</class> without changing an earlier
+      field or probe. In particular \(b_{\alpha}\) vanishes on all degrees
+      below \(| \alpha |\). This is only finite-dimensional linear algebra; no
+      infinite expansion of a field is being asserted.
+    </p>
+    <p>
+      For a cluster word \(w\), define the unsymmetrized field reconstruction
+    </p>
+    <center>
+      \(\displaystyle H_d (w) = \sum_{| \alpha | \leqslant d} b_{\alpha} (w)
+      u_{\alpha},\)
+    </center>
+    <p>
+      where \(b_{\alpha} (w)\) means replacing the distinguished field in its
+      probe correlations by the entire cluster. The mixed table is always used
+      for this measurement. Thus the coefficients have no dependence on a
+      phase or on spectators later placed outside the cluster. At a center
+      \(o\), apply this definition to \(\tau_{- o} w\). For each finite
+      collection of probes there is a positive clearance: a cluster
+      sufficiently close to \(o\) cannot meet a probe point, even after
+      rotating the cluster. All subsequent formulas are used on this clear
+      region.
+    </p>
+    <p>
+      Write \(R_d (K)\) for the orthogonal action on \(F_d\), with normalized
+      Haar measure on \(O (4)\). Symmetrize the reconstruction by
+    </p>
+    <center>
+      \(\displaystyle A_d w = \int_{O (4)} R_d (K) H_d  (K^{- 1} w) 
+      \hspace{0.17em} dK, \qquad B_d
+w = \tfrac{1}{2} \{A_d w + \overline{A_d 
+      \bar{w}} \} .\)
+    </center>
+    <p>
+      Both maps fix every single field of degree at most \(d\) inserted at
+      zero. They are smooth on the clear configuration region, since finitely
+      many smooth correlation functions are integrated over a compact group.
+      They preserve reality and intertwine rotations. Translation covariance
+      is implemented by translating the center as above.
+    </p>
+    <p>
+      Averaging must be followed by a compatible removal of lower degrees. Let
+      \(I_q A = A (0)\), put \(L_{i, q} = B_i I_q\), and define
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch18:graded"></a>\(\displaystyle Q_0 = 1, \qquad Q_j = 1 -
+        \sum_{i < j} \iota_{i, j} Q_i L_{i, j}, \qquad E_j =
+\bigcap_{i < j}
+        \ker (Q_i L_{i, j}) . \)</td>
+        <td align="right">(18.2)</td>
+      </tr>
+    </table>
+    <p>
+      The inclusion identities give, by induction,
+    </p>
+    <center>
+      \(\displaystyle Q_j L_{j, q} = 0 \quad (q < j), \qquad \sum_{i \leqslant
+      j} \iota_{i, j} Q_i
+L_{i, q} = \iota_{q, j}  \quad (q \leqslant j) .\)
+    </center>
+    <p>
+      Consequently \(Q_j\) is the projection onto \(E_j\) along \(\iota_{j -
+      1, j} F_{j - 1}\). These spaces are invariant under rotations and
+      conjugation. Fix real bases \((O_{j, a})_a\) of \(E_j\), taking the unit
+      itself in degree zero, and denote their coordinate functionals by
+      \(\omega_{j, a}\). The coefficients used in this chapter are
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch18:coefficients"></a>\(\displaystyle c_{j, a}  (w ; o) =
+        \omega_{j, a} Q_j B_j  (\tau_{- o} w) . \)</td>
+        <td align="right">(18.3)</td>
+      </tr>
+    </table>
+    <p>
+      The fields, probes and projections are fixed once, before any
+      truncation, phase, spectator list or small-distance limit.
+    </p>
+    <h2 id="auto-242"><a id="ch18:input"></a>18.2<span style="margin-left: 1em"></span>The marked replacement
+    estimate<span style="margin-left: 1em"></span></h2>
+    <p>
+      The expansion of Chapter <a href="11-marked-insertions-and-finite-scale-comparison.html#ch11:insertions">11</a> keeps every joint nilpotent
+      marker coefficient. To replace a cluster by a single field, one needs
+      more than the one-insertion graph contraction. Markers may merge as
+      their separation becomes smaller than a block. Their source weights
+      multiply; an incoming term involving at least two insertions is kept as
+      one factor, with its support, prescribed set of large-field sites and
+      eligibility condition. Its stronger support norm absorbs the loss when
+      several marks are assigned to the same coarse region. After local Taylor
+      subtraction, the signed residual must be transported on the same history
+      and compared in the physical quotient. Taking absolute values before
+      that subtraction loses the cancellation.
+    </p>
+    <p>
+      Here is the quantitative replacement estimate. It is formulated so that
+      its two uses, determination of local polynomial coefficients and
+      phase-uniform error control, are visible. Put \(w_0 = \sum_i d_i\) for a
+      fixed cluster degree list, and let
+    </p>
+    <center>
+      \(\displaystyle x_i = o + rz_i, \qquad |z_i | \leqslant M, \qquad |z_i -
+      z_j | \geqslant \eta
+> 0.\)
+    </center>
+    <p>
+      Cluster labels range over fixed bounded subsets of their
+      finite-dimensional spaces. Spectator labels have bounded degrees and
+      coefficients; their positions stay at distance at least \(c > 0\) from
+      \(o\) and from one another. The constants below may depend on these
+      finite lists, \(M, \eta, c\) and a requested error exponent, but not on
+      positions, phases or \(r\).
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Proposition <class style="font-style: normal">18.1</class>.
+        </strong><i><class style="font-style: normal"><strong>(Same-history marked replacement)
+        </strong></class><a id="ch18:replacement-input"></a>For every finite degree \(D\) and every
+        \(\epsilon > 0\), on the geometry just specified and for all
+        sufficiently small \(r\), the unsymmetrized reconstruction
+        coefficients obey</i>
+      </p>
+      <i><center>
+        \(\displaystyle |b_{\alpha} (w ; o) | \leqslant Cr^{| \alpha | - w_0 -
+        \epsilon} .\)
+      </center></i>
+      <p>
+        <i>For each spectator word \(v\), set</i>
+      </p>
+      <i><center>
+        \(\displaystyle Z_D = M (wv) - M ((H_D (\tau_{- o} w)) (o)
+        \hspace{0.17em} v) .\)
+      </center></i>
+      <p>
+        <i>The actual lattice marked replacement, with its signed residual and
+        all original terms involving at least two insertions retained, gives
+        the bound uniform in the number of reflected copies</i>
+      </p>
+      <i><table width="100%">
+        <tr>
+          <td align="center" width="100%"><a id="ch18:replacement-moments"></a>\(\displaystyle \langle \Omega,
+          (Z_D^{\ast} Z_D)^k \Omega \rangle \leqslant (Cr^{D + 1 - w_0
+          -
+\epsilon})^{2 k}, \qquad k \geqslant 1. \)</td>
+          <td align="right">(18.4)</td>
+        </tr>
+      </table></i>
+      <p style="margin-bottom: 1em">
+        <i>The constant and the small-\(r\) threshold precede \(k\); cutoff
+        thresholds may depend on each fixed \(k\). The same estimates hold for
+        every fixed finite list of differentiated insertions, with the
+        corresponding scaling dimensions, and for the finitely many probe
+        families above, uniformly under their rotations and conjugations.</i>
+      </p>
+    </div>
+    <p>
+      This is an analytic estimate on the selected family, not an assertion
+      that any bounded marked expansion has an OPE. Its construction requires
+      the signed local transport, the stronger anchored marked support bound,
+      and the graded quotient comparison. In particular, if a moving field has
+      coefficient size \(\varepsilon_m\) at scale \(m\), the needed quotient
+      estimate is of the form
+    </p>
+    <center>
+      \(\displaystyle \text{dist}_{F_t} (A, \iota_{i - 1, t} F_{i - 1})
+      \leqslant a_m^{- (t - i)}
+e^{o (\log (1 / a_m))} \varepsilon_m .\)
+    </center>
+    <p>
+      The lower field must be identified by all spectator responses, using the
+      normalized-null lemma of Chapter <a href="13-continuum-correlations-and-local-fields.html#ch13:continuum">13</a>. A bound on a chosen
+      coordinate representative alone does not supply this statement. The
+      estimate uniform in the number of reflected copies also cannot be
+      replaced by a bound on the mixed mean of \(Z_D\). These are supplied by
+      the lattice estimate of Section <a href="13-continuum-correlations-and-local-fields.html#ch18:lattice-products">13.10</a> and its passage to
+      the compression algebra below.
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof of Proposition <a href="#ch18:replacement-input">18.1</a>. </strong><a id="ch18:raw-replacement"></a>The
+      lattice estimate in Proposition <a href="13-continuum-correlations-and-local-fields.html#ch18:lattice-replacement">13.8</a> was proved before
+      phase decomposition. We use its uniformity in replica number to obtain
+      the algebra-valued statement for the reconstructions \(H_D\) fixed
+      above.
+    </p>
+    <p>
+      Let \(F\) be an interior lattice difference with chessboard seminorm at
+      most \(B\), and let its exterior factors have interior seminorms at most
+      \(B_1, \ldots, B_q\). Put copies of the complete difference and exterior
+      factors in separated cells before taking limits. The repeated-word
+      identity and chessboard inequality give, for its compressed limit \(Z\)
+      and each integer \(n \geqslant 1\),
+    </p>
+    <center>
+      \(\displaystyle \int_{\Xi} | \xi (Z) |^{2 n}  \hspace{0.17em} d \nu
+      (\xi) \leqslant (B
+\prod_{l = 1}^q B_l)^{2 n} .\)
+    </center>
+    <p>
+      The constants on the right precede \(n\); only the cutoff and large
+      translation thresholds depend on each fixed number of copies. This uses
+      the complete signed density, with every term involving at least two
+      insertions, from the proof of <class style="font-style: normal">(<a href="13-continuum-correlations-and-local-fields.html#ch18:lattice-estimate">13.28</a>)</class>.
+      Equation <class style="font-style: normal">(<a href="15-decomposition-into-phases.html#ch15:moment-norm">15.6</a>)</class> then gives \(\|Z\|
+      \leqslant B \prod_l B_l\). Positivity here belongs to the limiting
+      commutative algebra and the original Wilson law, not to an individual
+      signed effective activity.
+    </p>
+    <p>
+      Apply this observation to the auxiliary field \(A_t\) in the proof of
+      Proposition <a href="13-continuum-correlations-and-local-fields.html#ch18:mixed-bound">13.9</a>. On grid configurations its replacement
+      error has norm with exponent \(Z_0 - (t + 1 / 16)  (\theta -
+      \theta_-)\), where \(Z_0 = W \theta_+ + 4 n_{\text{cl}}  (\theta_+ -
+      \theta)\). Fixed exterior factors cost a bounded factor. The graded
+      quotient bound gives exponent \(Z_0 - i \theta\) for a degree-\(i\)
+      component of \(A_t\); all the finitely many fields used in its
+      reconstruction have uniformly bounded compressed exterior words. Testing
+      the same error against the fixed probes gives the probe coordinate
+      errors. With \(t\) chosen as in that proof, the omitted degrees and the
+      low-coordinate errors therefore give
+    </p>
+    <center>
+      \(\displaystyle \|M (wv) - M ((H_D (\tau_{- o} w)) (o) v)\| \preccurlyeq
+      e^{[Z_0 - (D + 1)
+\theta] T} .\)
+    </center>
+    <p>
+      There is no spectator-dependent choice of \(H_D\): the only
+      geometry-dependent auxiliary field has disappeared from this inequality.
+    </p>
+    <p>
+      The derivative descent of Proposition <a href="13-continuum-correlations-and-local-fields.html#ch18:mixed-bound">13.9</a> works in this
+      norm. Equivalently, apply it to every character, using the same sharp
+      chessboard seminorm bounds, and take their supremum. The crude and grid
+      constants are uniform in the character. A positional derivative changes
+      its input degree by one; a finite descending induction removes the grid
+      restriction, also for any fixed list of differentiated fields. Letting
+      the two resolution heights tend to one yields
+    </p>
+    <center>
+      \(\displaystyle \|M (wv) - M ((H_D (\tau_{- o} w)) (o) v)\| \leqslant
+      Cr^{D + 1 - W -
+\varepsilon} .\)
+    </center>
+    <p>
+      The coefficient assertion is exactly the corresponding fixed-probe
+      estimate in Proposition <a href="13-continuum-correlations-and-local-fields.html#ch18:mixed-bound">13.9</a>. Compact label sets,
+      conjugation, and the finite probe families do not change its constants.
+      For their rotation orbits the same uniform estimates apply on the
+      compact set of rotated labels and positions; choose \(r\) so all these
+      probes remain separated from the cluster.
+    </p>
+    <p style="margin-bottom: 1em">
+      Finally apply the vacuum state to \((Z_D^{\ast} Z_D)^n\). Its norm is at
+      most \(\|Z_D \|^{2 n}\), giving <class style="font-style: normal">(<a href="#ch18:replacement-moments">18.4</a>)</class>
+      with the same \(C\) and the same small-\(r\) threshold for every \(n\).
+      Thus the order of quantifiers is obtained from the norm estimate, rather
+      than from an uncontrolled sequence of separate moment constants.<span
+      style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <h2 id="auto-243"><a id="ch18:ope"></a>18.3<span style="margin-left: 1em"></span>Finite-order operator product
+    expansion<span style="margin-left: 1em"></span></h2>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Theorem <class style="font-style: normal">18.2</class>. </strong><i><class
+        style="font-style: normal"><strong>(Phase-uniform finite-order expansion)
+        </strong></class><a id="ch18:ope-theorem"></a>The fixed coefficients <class style="font-style: normal">(<a
+        href="#ch18:coefficients">18.3</a>)</class> satisfy, for every finite \(D\) and \(\epsilon
+        > 0\),</i>
+      </p>
+      <i><center>
+        <a id="ch18:ope-bound"></a>\(\displaystyle \begin{array}{rl}
+  |c_{j, a} (w ; o) | &
+        \leqslant Cr^{j - w_0 - \epsilon}, \qquad j \leqslant
+  D,\\
+  \left|
+        M (wv) - \sum_{j \leqslant D, a} c_{j, a} (w ; o) M (O_{j, a} (o) v)
+ 
+        \right| & \leqslant Cr^{D + 1 - w_0 - \epsilon} . \hspace{3cm}  
+ 
+        \text{(18.5)} 
+\end{array}\)
+      </center></i>
+      <p style="margin-bottom: 1em">
+        <i>The constants and threshold are uniform on the bounded label sets
+        and separated geometries of Section <a href="#ch18:input">18.2</a>. Evaluating a
+        character, or the mixed vacuum functional, gives the same bound for
+        its correlations.</i>
+      </p>
+    </div>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>Full support of the phase measure
+      converts <class style="font-style: normal">(<a href="#ch18:replacement-moments">18.4</a>)</class> into the
+      operator-norm estimate by <class style="font-style: normal">(<a href="15-decomposition-into-phases.html#ch15:moment-norm">15.6</a>)</class>. To
+      compare the unsymmetrized and symmetric reconstructions, write \(h = H_H
+      (\tau_{- o} w)\) at an auxiliary finite degree \(H\). Every component
+      of \(B_j w - L_{j, H} h\) is an average of finitely many replacement
+      errors tested against rotated probe words. Their clearance is uniform by
+      compactness of \(O (4)\). Hence
+    </p>
+    <center>
+      \(\displaystyle |B_j (\tau_{- o} w) - L_{j, H} h| \leqslant Cr^{H + 1 -
+      w_0 - \epsilon} .\)
+    </center>
+    <p>
+      This identity uses covariance of the mixed correlations to rotate the
+      probes, as well as the cluster; rotating labels alone would not suffice.
+    </p>
+    <p style="margin-bottom: 1em">
+      Apply \(Q_j\). In the expansion of \(h\), every field of degree below
+      \(j\) is killed. The remaining finitely many terms have powers at least
+      \(r^{j - w_0 - \epsilon}\), by the raw coefficient estimate. Taking \(H
+      \geqslant j\) proves the first bound. For the second, take \(H = D\) and
+      sum the reconstruction comparison through \(j = D\). The reconstruction
+      identity following <class style="font-style: normal">(<a href="#ch18:graded">18.2</a>)</class> returns
+      \(h\) exactly. Multiplying the coefficient errors by \(M (O_{j, a} (o)
+      v)\) costs a uniform constant on the separated spectator geometry. Add
+      the raw operator error. Finitely many sums and averages are controlled
+      by first using a smaller error exponent.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      For two fields of degrees \(d_A, d_B\), the degree-\(j\) coefficient
+      thus has size at most \(Cr^{j - d_A - d_B - \epsilon}\). The remainder
+      may still grow when \(D + 1 < d_A + d_B\); its order nevertheless
+      improves with \(D\). No assertion concerns the convergence of the
+      infinite sum in \(D\).
+    </p>
+    <p>
+      The derivative version uses the differentiated marked replacement
+      estimate. One first fixes the finite derivative order and the degree
+      margin, then carries out the same finite probe functionals. The
+      derivative identities of the field filtration identify the resulting
+      derivatives. Uniform differentiated bounds permit passage from a dense
+      grid to all separated positions by the mean-value theorem. Mere
+      pointwise grid estimates without those bounds would not justify that
+      passage.
+    </p>
+    <p>
+      For two nested clusters at radii \(\rho < R\), replacements can be
+      composed by telescoping the signed difference. The first error is tested
+      against the unchanged second cluster; the next is multiplied by the
+      already produced coefficients. Accordingly a uniform nested estimate
+      requires the replacement bound when exterior separation also tends to
+      zero, with its dependence on \(R\) retained. Fixed-positive-clearance
+      Proposition <a href="#ch18:replacement-input">18.1</a> by itself does not give that stronger
+      result. For any prescribed finite tree, the required additional
+      statement is a signed bound at every vertex, with degree-\(q\)
+      coefficient cost \(\rho^{q - d}\) and residual gain \((\rho / R)^{D +
+      1}\), up to arbitrary small power losses, including the coefficients and
+      the operators that its descendants apply to the test function. With
+      those bounds, finite telescoping proves the corresponding finite-tree
+      expansion. This stronger multi-scale assertion is not needed for the
+      distributional extension below.
+    </p>
+    <h2 id="auto-244"><a id="ch18:extension"></a>18.4<span style="margin-left: 1em"></span>An explicit finite-order
+    extension across every diagonal<span style="margin-left: 1em"></span></h2>
+    <p>
+      We now use only a uniform polynomial separated bound. Fix an arity \(n
+      \geqslant 2\) and a field list \(\boldsymbol{A}\). Write
+    </p>
+    <center>
+      \(\displaystyle \Delta = \bigcup_{i < j} \{x_i = x_j \}, \qquad \delta
+      (x) = \min_{i < j} |x_i
+- x_j | .\)
+    </center>
+    <p>
+      Suppose, as supplied by the separated bounds and the uniform phase slab
+      bounds, that for some finite \(P \geqslant 0\),
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch18:polynomial"></a>\(\displaystyle |S_n^{\xi}
+        (\boldsymbol{A}; x) | \leqslant C_K \min (1, \delta (x))^{- P} 
+\quad
+        (x \in K \setminus \Delta), \)</td>
+        <td align="right">(18.6)</td>
+      </tr>
+    </table>
+    <p>
+      uniformly in \(\xi\) on every compact \(K\). The mixed family has the
+      same bound. No optimal value of \(P\) is required. Choose once an
+      integer \(k \geqslant 0\) with \(k + 1 > P\), and a length \(s > 0\).
+    </p>
+    <p>
+      We specify which normal jet is subtracted near simultaneous collisions.
+      Let \(m = n (n - 1) / 2\) be the number of pairs and put, on
+      \(\text{Conf}_n\),
+    </p>
+    <center>
+      \(\displaystyle \rho (x) = \left( \sum_{i < j} |x_i - x_j |^{- 2}
+      \right)^{- 1 / 2} .\)
+    </center>
+    <p>
+      Then \(\delta / \sqrt{m} \leqslant \rho \leqslant \delta\). Choose a
+      fixed nonnegative smooth function \(\varphi\) on \([0, \infty)\), equal
+      to one on \([0, 2 \sqrt{m}]\) and zero on \([4 \sqrt{m}, \infty)\). For
+      a pair \(h = \{i, j\}\) define
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch18:pair-weights"></a>\(\displaystyle a_h (x) = \frac{\varphi
+        (|x_i - x_j | / \rho (x))}{\sum_{u < v} \varphi (|x_u
+- x_v | / \rho
+        (x))} . \)</td>
+        <td align="right">(18.7)</td>
+      </tr>
+    </table>
+    <p>
+      The denominator is at least one, because a closest pair has ratio at
+      most \(\sqrt{m}\). Thus \(a_h \geqslant 0\) and \(\sum_h a_h = 1\). Only
+      pairs whose separation is at most \(4 \sqrt{m} \rho\) are selected.
+      These weights are smooth off \(\Delta\), invariant under simultaneous
+      translations and rotations, and permuted with the slots.
+    </p>
+    <p>
+      Let \(\pi_h x\) replace \(x_i, x_j\) by their centroid, leaving the
+      other positions unchanged, and put \(z_h = x - \pi_h x\). This is the
+      orthogonal normal displacement from the pair diagonal; its norm is
+      \(|x_i - x_j | / \sqrt{2}\). Define the normal Taylor polynomial of a
+      test function by
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch18:normal-Taylor"></a>\(\displaystyle T_{h, k} f (x) =
+        \sum_{\ell = 0}^k \frac{1}{\ell !} D^{\ell} f (\pi_h x) [z_h,
+\ldots,
+        z_h] . \)</td>
+        <td align="right">(18.8)</td>
+      </tr>
+    </table>
+    <p>
+      Only normal directions occur; the centroid and all external positions
+      remain parameters. Finally fix \(\chi \in C^{\infty} ([0, \infty))\)
+      with \(0 \leqslant \chi \leqslant 1\), \(\chi = 1\) on \([0, 1]\) and
+      \(\chi = 0\) on \([2, \infty)\), and set
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch18:subtraction"></a>\(\displaystyle (\mathcal{W}f) (x) = f
+        (x) - \chi (\rho (x) / s)  \sum_h a_h (x) T_{h, k} f
+(x) . \)</td>
+        <td align="right">(18.9)</td>
+      </tr>
+    </table>
+    <p>
+      This formula, including \(k, s, \varphi, \chi\), is the subtraction
+      convention. It is the same in every phase and is fixed before the test
+      function. It deliberately subtracts more jets than an optimal
+      scaling-degree prescription may require.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Theorem <class style="font-style: normal">18.3</class>. </strong><i><class
+        style="font-style: normal"><strong>(A common contact extension) </strong></class><a id="ch18:extension-theorem"></a>Under
+        <class style="font-style: normal">(<a href="#ch18:polynomial">18.6</a>)</class>, the formula</i>
+      </p>
+      <i><table width="100%">
+        <tr>
+          <td align="center" width="100%"><a id="ch18:extension-formula"></a>\(\displaystyle
+          \mathfrak{D}_{\boldsymbol{A}}^{\xi} (f) = \int_{\text{Conf}_n}
+          S_n^{\xi} 
+(\boldsymbol{A}; x)  (\mathcal{W}f) (x)  \hspace{0.17em}
+          dx \)</td>
+          <td align="right">(18.10)</td>
+        </tr>
+      </table></i>
+      <p style="margin-bottom: 1em">
+        <i>defines a distribution of local order at most \(k + 1\). It extends
+        the separated correlation, is uniform in the phase on compact supports
+        of test functions, and is continuous in \(\xi\) on each test function.
+        Averaging over phases gives the same formula for the mixed
+        correlations. Translations, orthogonal covariance and simultaneous
+        permutation symmetry are preserved by this prescription.</i>
+      </p>
+    </div>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>This is the normal Taylor extension
+      argument of [<a href="references.html#bib-BrunettiFredenhagen2000">BF00</a>, Theorem 5.3]; the following verification
+      explains why one subtraction treats every partial diagonal here. When
+      \(\rho \leqslant s\), the weights sum to one, so
+    </p>
+    <center>
+      \(\displaystyle \mathcal{W}f = \sum_h a_h  (f - T_{h, k} f) .\)
+    </center>
+    <p>
+      For each selected pair, \(|z_h | \leqslant 2 \sqrt{2 m} \rho\). Taylor's
+      integral remainder therefore bounds this expression by \(C \rho^{k + 1}
+      \|f\|_{C^{k + 1}}\). Since \(\delta \geqslant \rho\), <class style="font-style: normal">(<a
+      href="#ch18:polynomial">18.6</a>)</class> bounds its product with the kernel by \(C
+      \rho^{k + 1 - P} \|f\|_{C^{k + 1}}\), which is bounded and hence locally
+      integrable. This remains true when arbitrarily many other separations
+      vanish at independent rates: the selected pair always has displacement
+      comparable to the smallest separation. No fixed collision pattern or
+      single radial approach is assumed.
+    </p>
+    <p>
+      On the transition region \(s \leqslant \rho \leqslant 2 s\), all
+      separations are bounded below by \(s\), and the finite Taylor
+      polynomials are bounded by the same seminorm of the test function.
+      Outside this region the integrand uses \(f\) itself. If \(f\) is
+      supported in a compact \(K\), a nonzero subtracted jet requires \(\pi_h
+      x \in K\) and \(|z_h | \leqslant C_n s\). Thus the integrand is
+      supported in one fixed compact enlargement \(K'\) of \(K\). We obtain
+    </p>
+    <center>
+      \(\displaystyle |\mathfrak{D}_{\boldsymbol{A}}^{\xi} (f) | \leqslant
+      C_{K'} \max_{| \alpha |
+\leqslant k + 1} \| \partial^{\alpha}
+      f\|_{\infty} .\)
+    </center>
+    <p style="margin-bottom: 1em">
+      This proves continuity and the local order assertion. If \(f\) is
+      supported away from \(\Delta\), all its jets at every \(\pi_h x \in
+      \Delta\) vanish, so <class style="font-style: normal">(<a href="#ch18:extension-formula">18.10</a>)</class> is the
+      original separated integral. Continuity in the phase and the mixture
+      formula follow by dominated convergence with the same bound. The normal
+      projections, pair weights and radial cutoff commute with the stated
+      geometric symmetries.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      For \(n = 1\) use the original smooth one-point function, and for \(n =
+      0\) use the normalized unit. A consistent multilinear family on the
+      whole filtration is obtained using the fixed invariant summands \(E_j\)
+      in <class style="font-style: normal">(<a href="#ch18:graded">18.2</a>)</class>. For each finite tuple
+      \((j_1, \ldots, j_n)\) choose \(P\) uniformly on the finite basis lists
+      of \(E_{j_1} \times \cdots \times E_{j_n}\), and choose the same \(P,
+      k\) for every permutation of that tuple. Use this one subtraction on the
+      tuple and extend multilinearly there. Every field has a unique finite
+      sum of components in the \(E_j\), so extension by finite multilinearity
+      gives a prescription on all of \(F\). It is compatible with the
+      inclusions and preserves rotations because each \(E_j\) is invariant.
+      Choosing an order independently for each vector, or redefining it on
+      each larger degree space, would not have these properties.
+    </p>
+    <h2 id="auto-245"><a id="ch18:scope"></a>18.5<span style="margin-left: 1em"></span>Sharper subtraction and
+    dependence on the prescription<span style="margin-left: 1em"></span></h2>
+    <p>
+      The explicit extension above is conservative. A degree-sensitive
+      alternative assigns to every collision subset \(h\) the normal dimension
+      \(q_h = 4 (|h| - 1)\), the total input degree \(d_h = \sum_{i \in h}
+      d_i\), and
+    </p>
+    <center>
+      \(\displaystyle L_h = \max (0, d_h + 1 - q_h) .\)
+    </center>
+    <p>
+      If a contact projection extracts a degree-\(q\) field from that cluster,
+      one subtracts the normal Taylor jet of the test function through order
+      \(L_h - 1 - q\) when \(q < L_h\). A single shell then has the combined
+      power
+    </p>
+    <center>
+      \(\displaystyle \rho^{q - d_h}  \hspace{0.17em} \rho^{L_h - q} 
+      \hspace{0.17em} \rho^{q_h} =
+\rho^{q_h + L_h - d_h},\)
+    </center>
+    <p>
+      with exponent at least one. This explains the source prescription and
+      its proposed sharper local-order bound. For several collisions the shell
+      estimate must be established for the complete signed expression,
+      including nested subtractions and all child operators acting on test
+      functions. The parent Taylor operator acts first on the test function;
+      the child operators act after it. They cannot be commuted for nested
+      subsets. A partition of unity cannot be moved through these normal
+      Taylor operators without its resulting diagonal jets. A one-shell
+      estimate alone does not verify that stronger forest prescription. We
+      have therefore used the fully specified pair-weighted subtraction <class
+      style="font-style: normal">(<a href="#ch18:subtraction">18.9</a>)</class>, for which absolute convergence at
+      all collision patterns was proved directly.
+    </p>
+    <p>
+      Two extensions agreeing on \(\text{Conf}_n\) differ by a distribution
+      supported on \(\Delta\). Along a smooth stratum, a finite-order
+      difference is a sum of normal derivatives of delta distributions with
+      distributional coefficients. This is the usual local renormalization
+      freedom [<a href="references.html#bib-BrunettiFredenhagen2000">BF00</a>, Section 5.2]. Changing the cutoff or
+      subtraction order can change contact terms while preserving separated
+      correlations and the OPE estimates. Contact reflection positivity,
+      contact Ward identities, uniqueness, unit removal and identification
+      with unsubtracted coincident-point lattice limits require additional
+      normalization arguments.
+    </p>
+    <p>
+      
+    </p>
+    
+    <div class="ym-chapter-nav"><span class="ym-chapter-prev"><a href="17-the-trace-law-and-its-consequences.html">&larr; Chapter 17 The trace law and its consequences</a></span><span class="ym-chapter-up"><a href="../monograph.html">Contents</a></span><span class="ym-chapter-next"><a href="19-assembly-and-the-scope-of-the-construction.html">Chapter 19 Assembly and the scope of the construction &rarr;</a></span></div>
+</body>
+</html>

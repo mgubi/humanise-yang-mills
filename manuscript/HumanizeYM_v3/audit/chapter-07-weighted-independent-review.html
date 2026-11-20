@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Independent review: Chapter7 weighted and vertex bounds &ndash;
+    Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Independent review: Chapter7 weighted and vertex bounds</h1><a id="independent-review-chapter7-weighted-and-vertex-bounds"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Checks that passed</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Clarification sent to author</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Precise remaining classical stationary-jet issue</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Follow-up: the classical-jet gap was closed in the revised
+        chapter</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">3</a>
+      </p>
+    </div>
+    <p>
+      Reviewed current <tt class="verbatim">07-matching.tex</tt>, especially <tt class="verbatim">ch07:integrand-input</tt>,
+      <tt class="verbatim">ch07:weighted</tt>, centered quotient, and inherited loop
+      argument. No Chapter7 edits by this reviewer.
+    </p>
+    <h2 id="auto-1"><a id="checks-that-passed"></a>Checks that passed<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Actual centered change <tt class="verbatim">r=r_root-Ru</tt> matches
+          Chapter5's exact <tt class="verbatim">Q=M+d_cR</tt>. The centered scalar gauge
+          insertion is the smoothed mean, with unitary Bloch coefficient
+          mu&sup2; m_l. The principal m_l is bounded below at fixed smoothing
+          order on the real coarse cube. The triangular internal linear change
+          has determinant one.
+        </p>
+      </li>
+      <li>
+        <p>
+          A weighted unit internal fine direction has normalized residue
+          L&sup2; norm O(mu) and normalized first-difference norm O(mu&sup2;):
+          Euclidean norms are respectively &#x2A7D;mu^-1 and O(1), and
+          normalized counting contributes L^-2=mu&sup2;. External smooth legs
+          have the corresponding supremum powers by <tt class="verbatim">ch05:actual-bridge</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The local weight-four argument supplies the necessary leading Wilson
+          response for the specified action class (direct curvature energy,
+          path-row squares, and curvature-degree&#x2A7E;3 atoms). Kinetic
+          normalization H(0)=I fixes the weight-four coefficient. Each extra
+          transported-field factor/derivative increases weight. Thus after two
+          internal and n background derivatives the difference from Wilson has
+          combined momentum order&#x2A7E;3&minus;n, n&#x2A7D;2. Exponential
+          true-path-length bounds control the differentiated remainder
+          uniformly; no period factor is needed.
+        </p>
+      </li>
+      <li>
+        <p>
+          First kinetic insertion has at least one coordinate difference,
+          obtained from the zero constant coefficient by coordinate division;
+          second insertion needs none. The count <tt class="verbatim">(n+2)+number of
+          differences=4</tt> gives normalized factor mu&#x2074; with two
+          internal L&sup2; legs and external supremum legs, canceled by the
+          L&#x2074; anchor sum. This checks the stated power, provided
+          division is applied to the actual left-coordinate response, as the
+          chapter specifies.
+        </p>
+      </li>
+      <li>
+        <p>
+          Radial integrand bounds are dimensionally consistent. Denominator
+          error is O(T&sup3;)+O(mu&sup2;), first insertion error is
+          O(T&sup2;)+O(mu&sup2;/T), inverse factors are O(T^-2). Two external
+          momentum derivatives of the telescoped bubble therefore give
+          O(T^-3+mu&sup2; T^-6). Local seagull contributes O(T^-2); regulator
+          seagull contributes O(mu&sup2; T^-6). Both fit the asserted annular
+          remainder, without invoking a seagull cancellation. The ball
+          T&asymp;mu costs O(mu^-4), compensated by its four-dimensional
+          volume.
+        </p>
+      </li>
+      <li>
+        <p>
+          Regulator denominator floor <tt class="verbatim">x+mu&sup2;(mu&sup2;/(x+mu&sup2;))^9
+          &gt;= 2^-10(x+mu&sup2;)</tt> is valid by splitting x&#x2A7D;mu&sup2;
+          and x&#x2A7E;mu&sup2;. First/second background regulator responses
+          have sizes mu&sup2;/T and mu&sup2;/T&sup2;. Differentiating in
+          external momentum in the scaled norm retains these powers.
+        </p>
+      </li>
+      <li>
+        <p>
+          The centered frame equation is algebraically correct: writing F=Pi
+          J0+S and imposing the weighted centering gives <tt class="verbatim">F=Pi1&minus;sum
+          omega Pi S+S</tt>. At flat background E&minus;1=0 and
+          D(P&minus;Pi)(1)=0, so the next derivative depends on lower frame
+          derivatives. With at most two internal slots, products require only
+          L&infin;,L&sup2;,L&sup1;; averaged coordinate reads have bounded
+          multiplicity on endpoint-pair space. The domination omega&#x2A7D;C_j
+          nu follows from w&#x2A7D;L^-4 and O_j(L&#x2074;) patch size.
+        </p>
+      </li>
+      <li>
+        <p>
+          Quotient coercivity is correct at the linear algebra level: gauge
+          away nonprincipal longitudinal aliases, remove the centered scalar
+          by the principal scalar alias, control nonprincipal transverse modes
+          by curvature, then control the remaining principal vector with the
+          least singular value c_j mu of M's principal coefficient. The same
+          argument includes zero coarse momentum. Uniform bounds for the
+          smoothed scalar mean require its alias row norm, supplied by the
+          centered-box decay, not just an individual alias estimate.
+        </p>
+      </li>
+      <li>
+        <p>
+          Freezing the weights at a real coarse momentum while retaining the
+          analytic block transform is a valid way to use holomorphic
+          perturbation. A coarse displacement of fixed size changes q((p+2pi
+          l)/L) by O(mu), and h_l&#x2A7E;mu. This avoids differentiating
+          nonholomorphic weights.
+        </p>
+      </li>
+      <li>
+        <p>
+          Inherited-loop gain is checked: four vanishing link-momentum orders
+          can be divided into two differences per leg on a smaller strip; each
+          leg is O(L^-3), and the fine anchor sum L&#x2074; leaves L^-2. The
+          actual transport's gradient correction is annihilated by the
+          insertion's Ward identities. Nonprincipal alias contributions retain
+          order four because their transverse transport is O(p&sup2;); no
+          ratio-uniform inverse of an individual alias is needed for this
+          order statement.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-2"><a id="clarification-sent-to-author"></a>Clarification sent to author<span style="margin-left: 1em"></span></h2>
+    <p>
+      The trace paragraph says the regulator mu&sup2; factor pays &ldquo;both
+      the L&sup2; frame derivative and the two weighted-to-Euclidean
+      conversions.&rdquo; These are <strong>different terms</strong>, not
+      three simultaneous losses:
+    </p>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">m_mu X</tt>: the Euclidean output norm of X is O(mu^-2),
+          absorbed by the trace norm O(mu&sup2;) of m_mu.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">P_f* M_mu P_f</tt>: the two conversions cost mu^-1 each,
+          absorbed by that same power mu&sup2; in this separate term.
+        </p>
+      </li>
+    </ul>
+    <p>
+      An interpretation that multiplies all three losses would leave mu^-2 and
+      would be false. The author was asked to make the termwise allocation
+      explicit. The available estimates support the separate allocations.
+    </p>
+    <h2 id="auto-3"><a id="precise-remaining-classical-stationary-jet-issue"></a>Precise remaining classical stationary-jet issue<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      Chapter5's actual stationary graph plus the path budget gives
+      period-uniform fixed-L local jets, actual tangent identification, and a
+      smooth representative with pre-L difference bounds. It does <strong>not
+      by itself</strong> give ratio-uniform stationary Taylor coefficients of
+      orders3/4: its tree gap and supremum inverse may deteriorate with L.
+    </p>
+    <p>
+      To derive those stronger coefficients, use the stationary chain
+      identities
+    </p>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">E'''(0)=f'''(0)[W,W,W]</tt>;
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">E''''(0)=f''''(0)[W,W,W,W] &minus; sum_(3 pairings) B_ij
+          H_vert^-1 B_kl</tt>, where <tt class="verbatim">B_ij=f'''(0)[W_i,W_j,&middot;]</tt>
+          on the vertical space.
+        </p>
+      </li>
+    </ul>
+    <p>
+      The exchange terms require (a) ratio-uniform compatible dual weighted
+      bounds for B, (b) a ratio-uniform inverse on those gauge-annihilating
+      functionals, and (c) translation/exponential kernel estimates for the
+      complete contractions. The new completed quotient/inverse and vertex
+      estimates in Chapter7 are plausible suppliers for (a)/(b), but they must
+      actually be applied to these contractions; they cannot be replaced by
+      citing the fixed-L Chapter5 implicit-function theorem. Common
+      infinite-lattice coefficients are also required to turn finite-volume
+      local jets into the exact periodized strip kernels used by classical
+      matching. Parent and Chapter7 author were notified.
+    </p>
+    <p>
+      No incorrect radial exponent or centering sign was found. This review
+      checks the displayed power/norm mechanisms; it does not certify the full
+      infinite RG trajectory or eliminate the incoming path-budget/coefficient
+      compatibility conditions.
+    </p>
+    <h2 id="auto-4"><a id="follow-up-the-classical-jet-gap-was-closed-in-the-revised-chapter"></a>Follow-up: the classical-jet gap was closed in the
+    revised chapter<span style="margin-left: 1em"></span></h2>
+    <p>
+      The author added <tt class="verbatim">ch07:classical-uniform</tt> and <tt class="verbatim">ch07:uniform-stationary-jets</tt>
+      with the missing stationary contractions. The gauge-annihilation
+      argument checks: differentiate <tt class="verbatim">D_z S[R(v,z)a]=0</tt> twice
+      along full stationary tangents. The terms involving derivatives of R
+      vanish by tangent orthogonality <tt class="verbatim">D&sup2;S[T,(0,z)]=0</tt>, and
+      DS(0)=0 removes the last term. Thus B annihilates gauge directions. For
+      C=H+F*F and Cw=B, pairing with R a gives <tt class="verbatim">&lt;FR
+      a,Fw&gt;=0</tt>; surjectivity of FR implies Fw=0 and hence Hw=B. The
+      completed inverse therefore gives the same exchange pairing as the
+      forest inverse. The weighted vertex and inverse bounds now give the
+      pre-L cubic/quartic contractions; the common complex strip and exact
+      periodized Fourier matrices give the required common kernels. This
+      addresses the earlier issue, rather than merely citing Chapter5.
+    </p>
+    <p>
+      The added classical-budget gain also checks. It compares actual fine
+      vertices with Wilson vertices on the <strong>same</strong> actual
+      tangents and inverse, so no estimate for an inverse difference is
+      required. Higher incoming coefficients do not alter that inverse once
+      the quadratic metric/predictor data are fixed. Weight&#x2A7E;5 of the
+      fine-action difference gives two differences in its cubic vertex and one
+      in its quartic vertex. For the dual cubic remainder, differences on the
+      one internal leg can be transferred to the two external legs by exact
+      momentum conservation; at most two differences are required on an
+      external leg. Their actual smooth bounds give P(A)/L. Expanding the
+      exchange pairing into its baseline and delta-B terms yields the stated
+      fixed-stage constant plus P_stage(A)/L, with the squared remainder
+      absorbed into the polynomial. The baseline includes the block penalty
+      and depends only on fixed Gaussian/predictor data. This conclusion
+      requires A to denote the remaining nonlinear incoming budget, excluding
+      changes to those fixed quadratic data, as the revised text states.
+    </p>
+  </body>
+</html>

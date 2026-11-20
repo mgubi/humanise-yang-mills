@@ -1,0 +1,2470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Chapter 3 The free Maxwell comparison theory &ndash; Four-dimensional Yang&ndash;Mills theory: A constructive approach
+    &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1], hyperref: [bs +
+    'href{###1}{#2}', 2, '']}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="toggle" style="display: none">
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+    </div>
+<div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+
+    <div class="ym-chapter-nav"><span class="ym-chapter-prev"><a href="2-local-gauge-invariant-observables.html">&larr; Chapter 2 Local gauge-invariant observables</a></span><span class="ym-chapter-up"><a href="../monograph.html">Contents</a></span><span class="ym-chapter-next"><a href="4-exact-blocking-and-effective-densities.html">Chapter 4 Exact blocking and effective densities &rarr;</a></span></div>
+<div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Main theorem</b> <span style="margin-left: 5mm"></span> <a href="../monograph.html#auto-1">5</a>
+      </p>
+      <p>
+        Where the theorem is proved <span style="margin-left: 5mm"></span> <a href="../monograph.html#auto-2">5</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>About this draft</b> <span style="margin-left: 5mm"></span> <a href="../monograph.html#auto-3">7</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Reading guide</b> <span style="margin-left: 5mm"></span> <a href="../monograph.html#auto-4">9</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>1<span style="margin-left: 1em"></span>Lattice gauge theory and the continuum
+        problem</b> <span style="margin-left: 5mm"></span> <a href="1-lattice-gauge-theory-and-the-continuum-problem.html#auto-5">17</a>
+      </p>
+      <p>
+        1.1<span style="margin-left: 1em"></span>The gauge group and its normalization <span
+        style="margin-left: 5mm"></span> <a href="1-lattice-gauge-theory-and-the-continuum-problem.html#auto-6">17</a>
+      </p>
+      <p>
+        1.2<span style="margin-left: 1em"></span>Links, holonomies and the Wilson measure <span
+        style="margin-left: 5mm"></span> <a href="1-lattice-gauge-theory-and-the-continuum-problem.html#auto-7">18</a>
+      </p>
+      <p>
+        1.3<span style="margin-left: 1em"></span>Physical scales and lattice symmetries <span
+        style="margin-left: 5mm"></span> <a href="1-lattice-gauge-theory-and-the-continuum-problem.html#auto-8">19</a>
+      </p>
+      <p>
+        1.4<span style="margin-left: 1em"></span>Reflection positivity <span style="margin-left: 5mm"></span> <a
+        href="1-lattice-gauge-theory-and-the-continuum-problem.html#auto-9">20</a>
+      </p>
+      <p>
+        1.5<span style="margin-left: 1em"></span>Correlations and the order of the limits <span
+        style="margin-left: 5mm"></span> <a href="1-lattice-gauge-theory-and-the-continuum-problem.html#auto-10">22</a>
+      </p>
+      <p>
+        1.6<span style="margin-left: 1em"></span>How the construction is organized <span style="margin-left: 5mm"></span>
+        <a href="1-lattice-gauge-theory-and-the-continuum-problem.html#auto-11">23</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2<span style="margin-left: 1em"></span>Local gauge-invariant observables</b> <span
+        style="margin-left: 5mm"></span> <a href="2-local-gauge-invariant-observables.html#auto-12">25</a>
+      </p>
+      <p>
+        2.1<span style="margin-left: 1em"></span>Radial jets and polynomial labels <span style="margin-left: 5mm"></span>
+        <a href="2-local-gauge-invariant-observables.html#auto-13">25</a>
+      </p>
+      <p>
+        2.2<span style="margin-left: 1em"></span>Test holonomies and Taylor normalization <span
+        style="margin-left: 5mm"></span> <a href="2-local-gauge-invariant-observables.html#auto-14">26</a>
+      </p>
+      <p>
+        2.3<span style="margin-left: 1em"></span>Finite-stencil representatives <span style="margin-left: 5mm"></span>
+        <a href="2-local-gauge-invariant-observables.html#auto-15">27</a>
+      </p>
+      <p>
+        2.4<span style="margin-left: 1em"></span>Small-field bounds for the representatives
+        <span style="margin-left: 5mm"></span> <a href="2-local-gauge-invariant-observables.html#auto-16">29</a>
+      </p>
+      <p>
+        2.5<span style="margin-left: 1em"></span>Local representatives of the equations of
+        motion <span style="margin-left: 5mm"></span> <a href="2-local-gauge-invariant-observables.html#auto-17">31</a>
+      </p>
+      <p>
+        2.5.1<span style="margin-left: 1em"></span>Curvature tests avoiding a prescribed link
+        <span style="margin-left: 5mm"></span> <a href="2-local-gauge-invariant-observables.html#auto-18">32</a>
+      </p>
+      <p>
+        2.5.2<span style="margin-left: 1em"></span>Wilson forces and the linear equation ideal
+        <span style="margin-left: 5mm"></span> <a href="2-local-gauge-invariant-observables.html#auto-19">32</a>
+      </p>
+      <p>
+        2.5.3<span style="margin-left: 1em"></span>Exact integration by parts and assembly <span
+        style="margin-left: 5mm"></span> <a href="2-local-gauge-invariant-observables.html#auto-20">33</a>
+      </p>
+      <p>
+        2.6<span style="margin-left: 1em"></span>Examples and the remaining normalization
+        problem <span style="margin-left: 5mm"></span> <a href="2-local-gauge-invariant-observables.html#auto-21">34</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>3<span style="margin-left: 1em"></span>The free Maxwell comparison theory</b> <span
+        style="margin-left: 5mm"></span> <a href="#auto-22">37</a>
+      </p>
+      <p>
+        3.1<span style="margin-left: 1em"></span>Curvature covariance <span style="margin-left: 5mm"></span> <a
+        href="#auto-23">37</a>
+      </p>
+      <p>
+        3.2<span style="margin-left: 1em"></span>Local polynomials and Wick correlations <span
+        style="margin-left: 5mm"></span> <a href="#auto-24">38</a>
+      </p>
+      <p>
+        3.3<span style="margin-left: 1em"></span>The on-shell polynomial space <span style="margin-left: 5mm"></span>
+        <a href="#auto-25">39</a>
+      </p>
+      <p>
+        3.4<span style="margin-left: 1em"></span>Reflection and the meaning of nondegeneracy
+        <span style="margin-left: 5mm"></span> <a href="#auto-26">40</a>
+      </p>
+      <p>
+        3.5<span style="margin-left: 1em"></span>Strict positivity of finite jet families <span
+        style="margin-left: 5mm"></span> <a href="#auto-27">41</a>
+      </p>
+      <p>
+        3.6<span style="margin-left: 1em"></span>Quadratic fields and normalization checks <span
+        style="margin-left: 5mm"></span> <a href="#auto-28">43</a>
+      </p>
+      <p>
+        3.7<span style="margin-left: 1em"></span>The degree-four conserved tensor <span style="margin-left: 5mm"></span>
+        <a href="#auto-29">44</a>
+      </p>
+      <p>
+        3.8<span style="margin-left: 1em"></span>Local stress fluxes <span style="margin-left: 5mm"></span> <a
+        href="#auto-30">45</a>
+      </p>
+      <p>
+        3.9<span style="margin-left: 1em"></span>Separating fields by insertions of bounded
+        scaling dimension <span style="margin-left: 5mm"></span> <a href="#auto-31">47</a>
+      </p>
+      <p>
+        3.10<span style="margin-left: 1em"></span>Finite correlation criteria for infinitesimal
+        symmetries <span style="margin-left: 5mm"></span> <a href="#auto-32">49</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>4<span style="margin-left: 1em"></span>Exact blocking and effective densities</b>
+        <span style="margin-left: 5mm"></span> <a href="4-exact-blocking-and-effective-densities.html#auto-33">53</a>
+      </p>
+      <p>
+        4.1<span style="margin-left: 1em"></span>Local gauges and a symmetric frame choice <span
+        style="margin-left: 5mm"></span> <a href="4-exact-blocking-and-effective-densities.html#auto-34">53</a>
+      </p>
+      <p>
+        4.2<span style="margin-left: 1em"></span>Gauge-covariant block averaging and the exact
+        kernel <span style="margin-left: 5mm"></span> <a href="4-exact-blocking-and-effective-densities.html#auto-35">55</a>
+      </p>
+      <p>
+        4.3<span style="margin-left: 1em"></span>A first-power bound for the actual block
+        average <span style="margin-left: 5mm"></span> <a href="4-exact-blocking-and-effective-densities.html#auto-36">57</a>
+      </p>
+      <p>
+        4.4<span style="margin-left: 1em"></span>Small fields and density coordinates <span
+        style="margin-left: 5mm"></span> <a href="4-exact-blocking-and-effective-densities.html#auto-37">59</a>
+      </p>
+      <p>
+        4.5<span style="margin-left: 1em"></span>The prescribed leading action <span style="margin-left: 5mm"></span>
+        <a href="4-exact-blocking-and-effective-densities.html#auto-38">59</a>
+      </p>
+      <p>
+        4.6<span style="margin-left: 1em"></span>The exact-cover representation and its norms
+        <span style="margin-left: 5mm"></span> <a href="4-exact-blocking-and-effective-densities.html#auto-39">60</a>
+      </p>
+      <p>
+        4.7<span style="margin-left: 1em"></span>Conditions for a one-step induction <span
+        style="margin-left: 5mm"></span> <a href="4-exact-blocking-and-effective-densities.html#auto-40">62</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>5<span style="margin-left: 1em"></span>Gaussian kernels and stationary
+        backgrounds</b> <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-41">63</a>
+      </p>
+      <p>
+        5.1<span style="margin-left: 1em"></span>Lattice differential forms and zero modes <span
+        style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-42">63</a>
+      </p>
+      <p>
+        5.2<span style="margin-left: 1em"></span>The exact Gaussian block transformation <span
+        style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-43">64</a>
+      </p>
+      <p>
+        5.3<span style="margin-left: 1em"></span>Averaging and the Fourier alias formula <span
+        style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-44">65</a>
+      </p>
+      <p>
+        5.4<span style="margin-left: 1em"></span>Gauge reduction and a regular curvature symbol
+        <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-45">66</a>
+      </p>
+      <p>
+        5.5<span style="margin-left: 1em"></span>Uniform estimates over finite blocking
+        histories <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-46">67</a>
+      </p>
+      <p>
+        5.6<span style="margin-left: 1em"></span>Exact transports and the curvature defect <span
+        style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-47">69</a>
+      </p>
+      <p>
+        5.6.1<span style="margin-left: 1em"></span>A positive factorization of the defect <span
+        style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-48">71</a>
+      </p>
+      <p>
+        5.7<span style="margin-left: 1em"></span>Convergence at a fixed scale <span style="margin-left: 5mm"></span>
+        <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-49">72</a>
+      </p>
+      <p>
+        5.8<span style="margin-left: 1em"></span>Uniform inverse bounds: the hypotheses that
+        matter <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-50">75</a>
+      </p>
+      <p>
+        5.9<span style="margin-left: 1em"></span>The actual block average and the forest
+        coordinates <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-51">75</a>
+      </p>
+      <p>
+        5.9.1<span style="margin-left: 1em"></span>A common analytic branch for all local labels
+        <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-52">76</a>
+      </p>
+      <p>
+        5.9.2<span style="margin-left: 1em"></span>The tree comparison and the actual Hessian
+        <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-53">77</a>
+      </p>
+      <p>
+        5.9.3<span style="margin-left: 1em"></span>A smooth representative of the stationary
+        tangent <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-54">78</a>
+      </p>
+      <p>
+        5.10<span style="margin-left: 1em"></span>A stationary background on a uniform
+        neighborhood <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-55">79</a>
+      </p>
+      <p>
+        5.10.1<span style="margin-left: 1em"></span>Supplying the local derivative estimates
+        <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-56">80</a>
+      </p>
+      <p>
+        5.11<span style="margin-left: 1em"></span>Scope of the completed Gaussian construction
+        <span style="margin-left: 5mm"></span> <a href="5-gaussian-kernels-and-stationary-backgrounds.html#auto-57">82</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>6<span style="margin-left: 1em"></span>Large fields and local Gaussian
+        integration</b> <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-58">83</a>
+      </p>
+      <p>
+        6.1<span style="margin-left: 1em"></span>Selected tests and the local energy <span
+        style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-59">83</a>
+      </p>
+      <p>
+        6.1.1<span style="margin-left: 1em"></span>An exact completion of squares <span style="margin-left: 5mm"></span>
+        <a href="6-large-fields-and-local-gaussian-integration.html#auto-60">84</a>
+      </p>
+      <p>
+        6.1.2<span style="margin-left: 1em"></span>Direct bounds and the signed comparison <span
+        style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-61">86</a>
+      </p>
+      <p>
+        6.2<span style="margin-left: 1em"></span>The actual sector Gaussian <span style="margin-left: 5mm"></span>
+        <a href="6-large-fields-and-local-gaussian-integration.html#auto-62">89</a>
+      </p>
+      <p>
+        6.2.1<span style="margin-left: 1em"></span>Transferring a local tree estimate to the
+        actual rows <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-63">90</a>
+      </p>
+      <p>
+        6.2.2<span style="margin-left: 1em"></span>Local inverse columns <span style="margin-left: 5mm"></span> <a
+        href="6-large-fields-and-local-gaussian-integration.html#auto-64">90</a>
+      </p>
+      <p>
+        6.2.3<span style="margin-left: 1em"></span>The source and derivatives on a fixed sector
+        <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-65">91</a>
+      </p>
+      <p>
+        6.2.4<span style="margin-left: 1em"></span>The exact integral and its normalization
+        <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-66">92</a>
+      </p>
+      <p>
+        6.3<span style="margin-left: 1em"></span>Differentiation on a common dependence region
+        <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-67">93</a>
+      </p>
+      <p>
+        6.3.1<span style="margin-left: 1em"></span>Differentiation under the common Gaussian law
+        <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-68">94</a>
+      </p>
+      <p>
+        6.4<span style="margin-left: 1em"></span>Simultaneous tail estimates <span style="margin-left: 5mm"></span>
+        <a href="6-large-fields-and-local-gaussian-integration.html#auto-69">95</a>
+      </p>
+      <p>
+        6.4.1<span style="margin-left: 1em"></span>The deterministic estimate behind a cutoff
+        remainder <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-70">96</a>
+      </p>
+      <p>
+        6.4.2<span style="margin-left: 1em"></span>The bounded-jet route for local activities
+        <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-71">98</a>
+      </p>
+      <p>
+        6.4.3<span style="margin-left: 1em"></span>One majorant for the product <span style="margin-left: 5mm"></span>
+        <a href="6-large-fields-and-local-gaussian-integration.html#auto-72">99</a>
+      </p>
+      <p>
+        6.5<span style="margin-left: 1em"></span>Weighted bounds for the primitive local factors
+        <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-73">100</a>
+      </p>
+      <p>
+        6.5.1<span style="margin-left: 1em"></span>Gaussian correction series <span style="margin-left: 5mm"></span>
+        <a href="6-large-fields-and-local-gaussian-integration.html#auto-74">100</a>
+      </p>
+      <p>
+        6.5.2<span style="margin-left: 1em"></span>Short local and inherited terms <span style="margin-left: 5mm"></span>
+        <a href="6-large-fields-and-local-gaussian-integration.html#auto-75">101</a>
+      </p>
+      <p>
+        6.5.3<span style="margin-left: 1em"></span>Components and assembly under one law <span
+        style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-76">102</a>
+      </p>
+      <p>
+        6.5.4<span style="margin-left: 1em"></span>Comparison with the linear local integral
+        <span style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-77">105</a>
+      </p>
+      <p>
+        6.6<span style="margin-left: 1em"></span>What must be checked for a concrete step <span
+        style="margin-left: 5mm"></span> <a href="6-large-fields-and-local-gaussian-integration.html#auto-78">106</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>7<span style="margin-left: 1em"></span>Local matching and the one-loop
+        coefficient</b> <span style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-79">107</a>
+      </p>
+      <p>
+        7.1<span style="margin-left: 1em"></span>Common Taylor kernels and Ward identities <span
+        style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-80">107</a>
+      </p>
+      <p>
+        7.2<span style="margin-left: 1em"></span>Division by the lattice curl <span style="margin-left: 5mm"></span>
+        <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-81">108</a>
+      </p>
+      <p>
+        7.3<span style="margin-left: 1em"></span>The marginal quadratic coefficient <span style="margin-left: 5mm"></span>
+        <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-82">109</a>
+      </p>
+      <p>
+        7.4<span style="margin-left: 1em"></span>Haar measure and gauge completion <span style="margin-left: 5mm"></span>
+        <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-83">110</a>
+      </p>
+      <p>
+        7.5<span style="margin-left: 1em"></span>The auxiliary lattice determinant <span style="margin-left: 5mm"></span>
+        <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-84">111</a>
+      </p>
+      <p>
+        7.6<span style="margin-left: 1em"></span>Uniform comparison of determinants <span style="margin-left: 5mm"></span>
+        <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-85">113</a>
+      </p>
+      <p>
+        7.6.1<span style="margin-left: 1em"></span>The stationary branch and the block average
+        contact term <span style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-86">114</a>
+      </p>
+      <p>
+        7.6.2<span style="margin-left: 1em"></span>Bounds for the actual centered matrices <span
+        style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-87">115</a>
+      </p>
+      <p>
+        7.6.3<span style="margin-left: 1em"></span>The one-loop drift <span style="margin-left: 5mm"></span> <a
+        href="7-local-matching-and-the-one-loop-coefficient.html#auto-88">119</a>
+      </p>
+      <p>
+        7.7<span style="margin-left: 1em"></span>Classical matching through fourth order <span
+        style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-89">119</a>
+      </p>
+      <p>
+        7.7.1<span style="margin-left: 1em"></span>Uniform classical stationary coefficients
+        <span style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-90">119</a>
+      </p>
+      <p>
+        7.7.2<span style="margin-left: 1em"></span>Construction of the matching curvature terms
+        <span style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-91">121</a>
+      </p>
+      <p>
+        7.7.3<span style="margin-left: 1em"></span>Preserving the classical coefficient bound
+        <span style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-92">122</a>
+      </p>
+      <p>
+        7.8<span style="margin-left: 1em"></span>Inherited loops: four differences and alias
+        suppression <span style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-93">123</a>
+      </p>
+      <p>
+        7.9<span style="margin-left: 1em"></span>Output coefficients and the remaining analytic
+        width <span style="margin-left: 5mm"></span> <a href="7-local-matching-and-the-one-loop-coefficient.html#auto-94">124</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>8<span style="margin-left: 1em"></span>Polymer expansions and connected
+        correlations</b> <span style="margin-left: 5mm"></span> <a href="8-polymer-expansions-and-connected-correlations.html#auto-95">127</a>
+      </p>
+      <p>
+        8.1<span style="margin-left: 1em"></span>Activities, supports and incompatibility <span
+        style="margin-left: 5mm"></span> <a href="8-polymer-expansions-and-connected-correlations.html#auto-96">127</a>
+      </p>
+      <p>
+        8.2<span style="margin-left: 1em"></span>The logarithm and its convergence criterion
+        <span style="margin-left: 5mm"></span> <a href="8-polymer-expansions-and-connected-correlations.html#auto-97">128</a>
+      </p>
+      <p>
+        8.3<span style="margin-left: 1em"></span>A spatially local bound with a geometric tail
+        <span style="margin-left: 5mm"></span> <a href="8-polymer-expansions-and-connected-correlations.html#auto-98">129</a>
+      </p>
+      <p>
+        8.4<span style="margin-left: 1em"></span>Deleting polymers and controlling local changes
+        <span style="margin-left: 5mm"></span> <a href="8-polymer-expansions-and-connected-correlations.html#auto-99">130</a>
+      </p>
+      <p>
+        8.5<span style="margin-left: 1em"></span>Parameters, derivatives and connected
+        insertions <span style="margin-left: 5mm"></span> <a href="8-polymer-expansions-and-connected-correlations.html#auto-100">130</a>
+      </p>
+      <p>
+        8.6<span style="margin-left: 1em"></span>Large-field constraints and exact reassembly
+        <span style="margin-left: 5mm"></span> <a href="8-polymer-expansions-and-connected-correlations.html#auto-101">131</a>
+      </p>
+      <p>
+        8.7<span style="margin-left: 1em"></span>What an application must supply <span style="margin-left: 5mm"></span>
+        <a href="8-polymer-expansions-and-connected-correlations.html#auto-102">132</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>9<span style="margin-left: 1em"></span>The nonlinear renormalization step</b> <span
+        style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-103">133</a>
+      </p>
+      <p>
+        9.1<span style="margin-left: 1em"></span>The exact local integral and its first
+        expansion <span style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-104">133</a>
+      </p>
+      <p>
+        9.2<span style="margin-left: 1em"></span>Improving the regular remainder <span style="margin-left: 5mm"></span>
+        <a href="9-the-nonlinear-renormalization-step.html#auto-105">135</a>
+      </p>
+      <p>
+        9.2.1<span style="margin-left: 1em"></span>Terms containing several elementary factors
+        <span style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-106">135</a>
+      </p>
+      <p>
+        9.2.2<span style="margin-left: 1em"></span>The linear inherited regular term <span
+        style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-107">135</a>
+      </p>
+      <p>
+        9.2.3<span style="margin-left: 1em"></span>Low-order terms and localization <span style="margin-left: 5mm"></span>
+        <a href="9-the-nonlinear-renormalization-step.html#auto-108">137</a>
+      </p>
+      <p>
+        9.2.4<span style="margin-left: 1em"></span>The stationary integral with its cutoff
+        retained <span style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-109">137</a>
+      </p>
+      <p>
+        9.2.5<span style="margin-left: 1em"></span>Identifying the retained region in the actual
+        integral <span style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-110">138</a>
+      </p>
+      <p>
+        9.2.6<span style="margin-left: 1em"></span>Centering the full logarithm <span style="margin-left: 5mm"></span>
+        <a href="9-the-nonlinear-renormalization-step.html#auto-111">140</a>
+      </p>
+      <p>
+        9.2.7<span style="margin-left: 1em"></span>Recovering a local density <span style="margin-left: 5mm"></span>
+        <a href="9-the-nonlinear-renormalization-step.html#auto-112">141</a>
+      </p>
+      <p>
+        9.3<span style="margin-left: 1em"></span>A precise preparatory output <span style="margin-left: 5mm"></span>
+        <a href="9-the-nonlinear-renormalization-step.html#auto-113">142</a>
+      </p>
+      <p>
+        9.4<span style="margin-left: 1em"></span>Local quadratic subtraction <span style="margin-left: 5mm"></span>
+        <a href="9-the-nonlinear-renormalization-step.html#auto-114">143</a>
+      </p>
+      <p>
+        9.5<span style="margin-left: 1em"></span>Replacing the local quadratic term by the path
+        action <span style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-115">144</a>
+      </p>
+      <p>
+        9.6<span style="margin-left: 1em"></span>Absorbing logarithmic corrections into
+        large-field activities <span style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-116">145</a>
+      </p>
+      <p>
+        9.7<span style="margin-left: 1em"></span>The normalization of the field-independent term
+        and continuity <span style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-117">146</a>
+      </p>
+      <p>
+        9.8<span style="margin-left: 1em"></span>Wilson initialization <span style="margin-left: 5mm"></span> <a
+        href="9-the-nonlinear-renormalization-step.html#auto-118">148</a>
+      </p>
+      <p>
+        9.9<span style="margin-left: 1em"></span>The one-step conclusion and its input data
+        <span style="margin-left: 5mm"></span> <a href="9-the-nonlinear-renormalization-step.html#auto-119">149</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>10<span style="margin-left: 1em"></span>A common trajectory and fixed-scale
+        stability</b> <span style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-120">151</a>
+      </p>
+      <p>
+        10.1<span style="margin-left: 1em"></span>What is fixed before choosing the scales <span
+        style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-121">151</a>
+      </p>
+      <p>
+        10.2<span style="margin-left: 1em"></span>A slowly increasing stage schedule <span
+        style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-122">152</a>
+      </p>
+      <p>
+        10.3<span style="margin-left: 1em"></span>Tuning a finite history to the coarse endpoint
+        <span style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-123">154</a>
+      </p>
+      <p>
+        10.4<span style="margin-left: 1em"></span>Uniform logarithmic running <span style="margin-left: 5mm"></span>
+        <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-124">154</a>
+      </p>
+      <p>
+        10.5<span style="margin-left: 1em"></span>The coefficient comparison before the activity
+        comparison <span style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-125">155</a>
+      </p>
+      <p>
+        10.6<span style="margin-left: 1em"></span>The stronger local comparison required for
+        cutoff limits <span style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-126">156</a>
+      </p>
+      <p>
+        10.6.1<span style="margin-left: 1em"></span>How finite evaluations of the real
+        parameters yield the contraction <span style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-127">157</a>
+      </p>
+      <p>
+        10.6.2<span style="margin-left: 1em"></span>Producing the finite parameter evaluations
+        from the protected expansion <span style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-128">158</a>
+      </p>
+      <p>
+        10.6.3<span style="margin-left: 1em"></span>Numerical cumulative control <span style="margin-left: 5mm"></span>
+        <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-129">161</a>
+      </p>
+      <p>
+        10.6.4<span style="margin-left: 1em"></span>Common-input continuity and the zero-array
+        histories <span style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-130">161</a>
+      </p>
+      <p>
+        10.7<span style="margin-left: 1em"></span>Convergence of the coupled histories <span
+        style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-131">162</a>
+      </p>
+      <p>
+        10.8<span style="margin-left: 1em"></span>Identifying the analytic comparison on the
+        selected family <span style="margin-left: 5mm"></span> <a href="10-a-common-trajectory-and-fixed-scale-stability.html#auto-132">164</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>11<span style="margin-left: 1em"></span>Marked insertions and finite-scale
+        comparison</b> <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-133">165</a>
+      </p>
+      <p>
+        11.1<span style="margin-left: 1em"></span>An algebra for finitely many insertions <span
+        style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-134">165</a>
+      </p>
+      <p>
+        11.1.1<span style="margin-left: 1em"></span>The exact density and its integral <span
+        style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-135">166</a>
+      </p>
+      <p>
+        11.2<span style="margin-left: 1em"></span>Joint local terms and large-field components
+        <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-136">167</a>
+      </p>
+      <p>
+        11.3<span style="margin-left: 1em"></span>Support bounds for several marked components
+        <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-137">167</a>
+      </p>
+      <p>
+        11.4<span style="margin-left: 1em"></span>One marked step with the actual local factors
+        <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-138">168</a>
+      </p>
+      <p>
+        11.4.1<span style="margin-left: 1em"></span>The one-insertion graph estimates <span
+        style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-139">170</a>
+      </p>
+      <p>
+        11.4.2<span style="margin-left: 1em"></span>Propagating the already formed terms
+        involving at least two insertions <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-140">172</a>
+      </p>
+      <p>
+        11.5<span style="margin-left: 1em"></span>A common Gaussian comparison <span style="margin-left: 5mm"></span>
+        <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-141">173</a>
+      </p>
+      <p>
+        11.5.1<span style="margin-left: 1em"></span>The exact cross-covariance on the selected
+        forest <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-142">174</a>
+      </p>
+      <p>
+        11.5.2<span style="margin-left: 1em"></span>Actual local coordinate and cutoff estimates
+        <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-143">175</a>
+      </p>
+      <p>
+        11.6<span style="margin-left: 1em"></span>Restarting below a comparison level <span
+        style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-144">176</a>
+      </p>
+      <p>
+        11.6.1<span style="margin-left: 1em"></span>Constructing the restarted representations
+        <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-145">176</a>
+      </p>
+      <p>
+        11.7<span style="margin-left: 1em"></span>The normalized integral with several
+        insertions <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-146">182</a>
+      </p>
+      <p>
+        11.7.1<span style="margin-left: 1em"></span>An independent positional modulus <span
+        style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-147">183</a>
+      </p>
+      <p>
+        11.8<span style="margin-left: 1em"></span>Backward comparison of a local trial <span
+        style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-148">184</a>
+      </p>
+      <p>
+        11.9<span style="margin-left: 1em"></span>Finite-dimensional detection before taking
+        limits <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-149">185</a>
+      </p>
+      <p>
+        11.10<span style="margin-left: 1em"></span>Collected estimates and local calibration
+        <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-150">186</a>
+      </p>
+      <p>
+        11.11<span style="margin-left: 1em"></span>Calibrating the microscopic equations on the
+        same history <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-151">187</a>
+      </p>
+      <p>
+        11.12<span style="margin-left: 1em"></span>The moving equation space and uniform finite
+        differences <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-152">189</a>
+      </p>
+      <p>
+        11.12.1<span style="margin-left: 1em"></span>A common localization map for the
+        separating family <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-153">190</a>
+      </p>
+      <p>
+        11.12.2<span style="margin-left: 1em"></span>Absorbing the larger source weight <span
+        style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-154">193</a>
+      </p>
+      <p>
+        11.12.3<span style="margin-left: 1em"></span>The actual covariance on a comparison
+        window <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-155">198</a>
+      </p>
+      <p>
+        11.12.4<span style="margin-left: 1em"></span>From the common polynomial localization to
+        the corrected pair bound <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-156">200</a>
+      </p>
+      <p>
+        11.12.5<span style="margin-left: 1em"></span>Finite-arity comparison on a common finite
+        set of scales <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-157">202</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>12<span style="margin-left: 1em"></span>The ultraviolet limit at fixed volume</b>
+        <span style="margin-left: 5mm"></span> <a href="12-the-ultraviolet-limit-at-fixed-volume.html#auto-158">207</a>
+      </p>
+      <p>
+        12.1<span style="margin-left: 1em"></span>Fixed-level convergence data <span style="margin-left: 5mm"></span>
+        <a href="12-the-ultraviolet-limit-at-fixed-volume.html#auto-159">207</a>
+      </p>
+      <p>
+        12.2<span style="margin-left: 1em"></span>Contraction of the complete marked remainder
+        <span style="margin-left: 5mm"></span> <a href="12-the-ultraviolet-limit-at-fixed-volume.html#auto-160">208</a>
+      </p>
+      <p>
+        12.3<span style="margin-left: 1em"></span>The scalar normalization cancels <span style="margin-left: 5mm"></span>
+        <a href="12-the-ultraviolet-limit-at-fixed-volume.html#auto-161">209</a>
+      </p>
+      <p>
+        12.4<span style="margin-left: 1em"></span>A stopping estimate uniform in the stopping
+        level <span style="margin-left: 5mm"></span> <a href="12-the-ultraviolet-limit-at-fixed-volume.html#auto-162">210</a>
+      </p>
+      <p>
+        12.5<span style="margin-left: 1em"></span>Smoothness and all lattice differences <span
+        style="margin-left: 5mm"></span> <a href="12-the-ultraviolet-limit-at-fixed-volume.html#auto-163">211</a>
+      </p>
+      <p>
+        12.6<span style="margin-left: 1em"></span>The fixed-volume conclusion <span style="margin-left: 5mm"></span>
+        <a href="12-the-ultraviolet-limit-at-fixed-volume.html#auto-164">212</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>13<span style="margin-left: 1em"></span>Continuum correlations and local fields</b>
+        <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-165">215</a>
+      </p>
+      <p>
+        13.1<span style="margin-left: 1em"></span>One subsequence of volumes <span style="margin-left: 5mm"></span>
+        <a href="13-continuum-correlations-and-local-fields.html#auto-166">215</a>
+      </p>
+      <p>
+        13.2<span style="margin-left: 1em"></span>Separated cells and errors in local
+        observables <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-167">216</a>
+      </p>
+      <p>
+        13.3<span style="margin-left: 1em"></span>Fields as equivalence classes of labels <span
+        style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-168">216</a>
+      </p>
+      <p>
+        13.3.1<span style="margin-left: 1em"></span>Representatives chosen before the spectators
+        <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-169">217</a>
+      </p>
+      <p>
+        13.4<span style="margin-left: 1em"></span>Inclusions and derivatives <span style="margin-left: 5mm"></span>
+        <a href="13-continuum-correlations-and-local-fields.html#auto-170">218</a>
+      </p>
+      <p>
+        13.5<span style="margin-left: 1em"></span>Reflection positivity and separated power
+        bounds <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-171">219</a>
+      </p>
+      <p>
+        13.6<span style="margin-left: 1em"></span>Repeated reflected words <span style="margin-left: 5mm"></span>
+        <a href="13-continuum-correlations-and-local-fields.html#auto-172">219</a>
+      </p>
+      <p>
+        13.7<span style="margin-left: 1em"></span>Sharp fixed-arity short-distance bounds <span
+        style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-173">220</a>
+      </p>
+      <p>
+        13.7.1<span style="margin-left: 1em"></span>A normalized local insertion <span style="margin-left: 5mm"></span>
+        <a href="13-continuum-correlations-and-local-fields.html#auto-174">221</a>
+      </p>
+      <p>
+        13.7.2<span style="margin-left: 1em"></span>The stopping scale and centered estimate
+        <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-175">222</a>
+      </p>
+      <p>
+        13.7.3<span style="margin-left: 1em"></span>Arbitrary separated points <span style="margin-left: 5mm"></span>
+        <a href="13-continuum-correlations-and-local-fields.html#auto-176">222</a>
+      </p>
+      <p>
+        13.8<span style="margin-left: 1em"></span>Bounded real approximations for separated
+        words <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-177">223</a>
+      </p>
+      <p>
+        13.9<span style="margin-left: 1em"></span>Scaling dimension and the physical quotient
+        <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-178">228</a>
+      </p>
+      <p>
+        13.10<span style="margin-left: 1em"></span>Local replacement of a cluster on the lattice
+        <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-179">230</a>
+      </p>
+      <p>
+        13.10.1<span style="margin-left: 1em"></span>Signed local transport <span style="margin-left: 5mm"></span>
+        <a href="13-continuum-correlations-and-local-fields.html#auto-180">230</a>
+      </p>
+      <p>
+        13.10.2<span style="margin-left: 1em"></span>Grouping marks and retaining their supports
+        <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-181">231</a>
+      </p>
+      <p>
+        13.10.3<span style="margin-left: 1em"></span>Extraction with a freely chosen residual
+        weight <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-182">232</a>
+      </p>
+      <p>
+        13.10.4<span style="margin-left: 1em"></span>A mixed-correlation consequence without
+        phases <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-183">233</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>14<span style="margin-left: 1em"></span>Reflection spaces, Ward identities and
+        Euclidean symmetry</b> <span style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-184">235</a>
+      </p>
+      <p>
+        14.1<span style="margin-left: 1em"></span>Reflection spaces for the coordinate axes
+        <span style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-185">235</a>
+      </p>
+      <p>
+        14.2<span style="margin-left: 1em"></span>Bounded insertions in a slab <span style="margin-left: 5mm"></span>
+        <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-186">236</a>
+      </p>
+      <p>
+        14.3<span style="margin-left: 1em"></span>Comparing the mixed fields with free fields
+        <span style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-187">237</a>
+      </p>
+      <p>
+        14.3.1<span style="margin-left: 1em"></span>Obtaining the three comparison bounds from
+        one lattice family <span style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-188">238</a>
+      </p>
+      <p>
+        14.4<span style="margin-left: 1em"></span>The conserved stress line <span style="margin-left: 5mm"></span>
+        <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-189">240</a>
+      </p>
+      <p>
+        14.5<span style="margin-left: 1em"></span>Shrinking shells and local charge fields <span
+        style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-190">241</a>
+      </p>
+      <p>
+        14.6<span style="margin-left: 1em"></span>Coordinate spectral measures and the angular
+        boundary <span style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-191">242</a>
+      </p>
+      <p>
+        14.6.1<span style="margin-left: 1em"></span>What opposite reflection signs control <span
+        style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-192">243</a>
+      </p>
+      <p>
+        14.6.2<span style="margin-left: 1em"></span>The separate diagonal-stress estimate <span
+        style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-193">245</a>
+      </p>
+      <p>
+        14.6.3<span style="margin-left: 1em"></span>Vanishing angular flux at infinity <span
+        style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-194">246</a>
+      </p>
+      <p>
+        14.7<span style="margin-left: 1em"></span>Normalization and propagation of the Ward
+        identities <span style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-195">248</a>
+      </p>
+      <p>
+        14.7.1<span style="margin-left: 1em"></span>Analyticity supplied by a positive Gram
+        kernel <span style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-196">248</a>
+      </p>
+      <p>
+        14.7.2<span style="margin-left: 1em"></span>A finite path through separated
+        configurations <span style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-197">249</a>
+      </p>
+      <p>
+        14.8<span style="margin-left: 1em"></span>The rotation action and the normalized tensor
+        <span style="margin-left: 5mm"></span> <a href="14-reflection-spaces-ward-identities-and-euclidean.html#auto-198">250</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>15<span style="margin-left: 1em"></span>Decomposition into phases</b> <span style="margin-left: 5mm"></span>
+        <a href="15-decomposition-into-phases.html#auto-199">253</a>
+      </p>
+      <p>
+        15.1<span style="margin-left: 1em"></span>The zero-energy subspace <span style="margin-left: 5mm"></span>
+        <a href="15-decomposition-into-phases.html#auto-200">253</a>
+      </p>
+      <p>
+        15.2<span style="margin-left: 1em"></span>Compression and separation of clusters <span
+        style="margin-left: 5mm"></span> <a href="15-decomposition-into-phases.html#auto-201">253</a>
+      </p>
+      <p>
+        15.3<span style="margin-left: 1em"></span>Characters and the representing measure <span
+        style="margin-left: 5mm"></span> <a href="15-decomposition-into-phases.html#auto-202">255</a>
+      </p>
+      <p>
+        15.4<span style="margin-left: 1em"></span>Symmetries in each phase <span style="margin-left: 5mm"></span>
+        <a href="15-decomposition-into-phases.html#auto-203">255</a>
+      </p>
+      <p>
+        15.5<span style="margin-left: 1em"></span>Positivity, field identities and null spaces
+        <span style="margin-left: 5mm"></span> <a href="15-decomposition-into-phases.html#auto-204">256</a>
+      </p>
+      <p>
+        15.6<span style="margin-left: 1em"></span>Selecting a phase with a unique ground vector
+        <span style="margin-left: 5mm"></span> <a href="15-decomposition-into-phases.html#auto-205">257</a>
+      </p>
+      <p>
+        15.7<span style="margin-left: 1em"></span>Sharp separated bounds in every phase <span
+        style="margin-left: 5mm"></span> <a href="15-decomposition-into-phases.html#auto-206">258</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>16<span style="margin-left: 1em"></span>Relativistic reconstruction in every
+        phase</b> <span style="margin-left: 5mm"></span> <a href="16-relativistic-reconstruction-in-every-phase.html#auto-207">259</a>
+      </p>
+      <p>
+        16.1<span style="margin-left: 1em"></span>Complex time and a uniform boundary
+        distribution <span style="margin-left: 5mm"></span> <a href="16-relativistic-reconstruction-in-every-phase.html#auto-208">259</a>
+      </p>
+      <p>
+        16.2<span style="margin-left: 1em"></span>Lorentz covariance and the spectral cone <span
+        style="margin-left: 5mm"></span> <a href="16-relativistic-reconstruction-in-every-phase.html#auto-209">261</a>
+      </p>
+      <p>
+        16.3<span style="margin-left: 1em"></span>The spacetime tube and locality <span style="margin-left: 5mm"></span>
+        <a href="16-relativistic-reconstruction-in-every-phase.html#auto-210">262</a>
+      </p>
+      <p>
+        16.4<span style="margin-left: 1em"></span>Field words and the reflection space <span
+        style="margin-left: 5mm"></span> <a href="16-relativistic-reconstruction-in-every-phase.html#auto-211">263</a>
+      </p>
+      <p>
+        16.5<span style="margin-left: 1em"></span>The low-energy estimate and uniqueness of the
+        vacuum in each phase <span style="margin-left: 5mm"></span> <a href="16-relativistic-reconstruction-in-every-phase.html#auto-212">264</a>
+      </p>
+      <p>
+        16.6<span style="margin-left: 1em"></span>The weak commutant and local stress charges
+        <span style="margin-left: 5mm"></span> <a href="16-relativistic-reconstruction-in-every-phase.html#auto-213">266</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>17<span style="margin-left: 1em"></span>The trace law and its consequences</b> <span
+        style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-214">269</a>
+      </p>
+      <p>
+        17.1<span style="margin-left: 1em"></span>Centering and the positive spectral measure
+        <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-215">269</a>
+      </p>
+      <p>
+        17.2<span style="margin-left: 1em"></span>Comparison at prescribed radii <span style="margin-left: 5mm"></span>
+        <a href="17-the-trace-law-and-its-consequences.html#auto-216">270</a>
+      </p>
+      <p>
+        17.2.1<span style="margin-left: 1em"></span>Comparison windows crossing changes of stage
+        <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-217">271</a>
+      </p>
+      <p>
+        17.3<span style="margin-left: 1em"></span>Tensor coordinates and the regulated current
+        <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-218">273</a>
+      </p>
+      <p>
+        17.4<span style="margin-left: 1em"></span>Exact current transport and the scalar
+        regulator <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-219">274</a>
+      </p>
+      <p>
+        17.4.1<span style="margin-left: 1em"></span>Difference-preserving block averages <span
+        style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-220">274</a>
+      </p>
+      <p>
+        17.4.2<span style="margin-left: 1em"></span>What scalar mass regularization changes
+        <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-221">275</a>
+      </p>
+      <p>
+        17.4.3<span style="margin-left: 1em"></span>Exact integration by parts and the remaining
+        current estimate <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-222">276</a>
+      </p>
+      <p>
+        17.4.4<span style="margin-left: 1em"></span>The group-coordinate contact identity <span
+        style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-223">277</a>
+      </p>
+      <p>
+        17.4.5<span style="margin-left: 1em"></span>Cancellation of the action-gradient terms
+        <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-224">278</a>
+      </p>
+      <p>
+        17.4.6<span style="margin-left: 1em"></span>Power counting the regulator remainder <span
+        style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-225">279</a>
+      </p>
+      <p>
+        17.4.7<span style="margin-left: 1em"></span>The corrected coefficient and order of
+        limits <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-226">280</a>
+      </p>
+      <p>
+        17.5<span style="margin-left: 1em"></span>Current conservation and uniform transfer
+        bounds <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-227">281</a>
+      </p>
+      <p>
+        17.5.1<span style="margin-left: 1em"></span>Preservation of the low moments <span style="margin-left: 5mm"></span>
+        <a href="17-the-trace-law-and-its-consequences.html#auto-228">282</a>
+      </p>
+      <p>
+        17.5.2<span style="margin-left: 1em"></span>A homogeneous bound for the quadratic
+        channel <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-229">283</a>
+      </p>
+      <p>
+        17.5.3<span style="margin-left: 1em"></span>The nonlinear terms need fixed-ratio bounds
+        <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-230">283</a>
+      </p>
+      <p>
+        17.5.4<span style="margin-left: 1em"></span>Why action matching introduces no source
+        <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-231">285</a>
+      </p>
+      <p>
+        17.5.5<span style="margin-left: 1em"></span>Uniform current and difference-primitive
+        bounds <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-232">286</a>
+      </p>
+      <p>
+        17.6<span style="margin-left: 1em"></span>Quantitative stability of the trace functional
+        <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-233">287</a>
+      </p>
+      <p>
+        17.7<span style="margin-left: 1em"></span>From the current identity to marked
+        coefficient estimates <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-234">288</a>
+      </p>
+      <p>
+        17.7.1<span style="margin-left: 1em"></span>A differentiated block kernel <span style="margin-left: 5mm"></span>
+        <a href="17-the-trace-law-and-its-consequences.html#auto-235">288</a>
+      </p>
+      <p>
+        17.7.2<span style="margin-left: 1em"></span>The finite degree-five coefficient <span
+        style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-236">290</a>
+      </p>
+      <p>
+        17.7.3<span style="margin-left: 1em"></span>The equation direction and the necessary
+        rates <span style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-237">294</a>
+      </p>
+      <p>
+        17.8<span style="margin-left: 1em"></span>The coefficient and the all-radius limit <span
+        style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-238">295</a>
+      </p>
+      <p>
+        17.9<span style="margin-left: 1em"></span>What the trace law excludes <span style="margin-left: 5mm"></span>
+        <a href="17-the-trace-law-and-its-consequences.html#auto-239">296</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>18<span style="margin-left: 1em"></span>Operator products and extensions across
+        diagonals</b> <span style="margin-left: 5mm"></span> <a href="18-operator-products-and-extensions-across-diagonals.html#auto-240">299</a>
+      </p>
+      <p>
+        18.1<span style="margin-left: 1em"></span>A fixed prescription for all finite degrees
+        <span style="margin-left: 5mm"></span> <a href="18-operator-products-and-extensions-across-diagonals.html#auto-241">299</a>
+      </p>
+      <p>
+        18.2<span style="margin-left: 1em"></span>The marked replacement estimate <span style="margin-left: 5mm"></span>
+        <a href="18-operator-products-and-extensions-across-diagonals.html#auto-242">301</a>
+      </p>
+      <p>
+        18.3<span style="margin-left: 1em"></span>Finite-order operator product expansion <span
+        style="margin-left: 5mm"></span> <a href="18-operator-products-and-extensions-across-diagonals.html#auto-243">303</a>
+      </p>
+      <p>
+        18.4<span style="margin-left: 1em"></span>An explicit finite-order extension across
+        every diagonal <span style="margin-left: 5mm"></span> <a href="18-operator-products-and-extensions-across-diagonals.html#auto-244">304</a>
+      </p>
+      <p>
+        18.5<span style="margin-left: 1em"></span>Sharper subtraction and dependence on the
+        prescription <span style="margin-left: 5mm"></span> <a href="18-operator-products-and-extensions-across-diagonals.html#auto-245">306</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>19<span style="margin-left: 1em"></span>Assembly and the scope of the
+        construction</b> <span style="margin-left: 5mm"></span> <a href="19-assembly-and-the-scope-of-the-construction.html#auto-246">307</a>
+      </p>
+      <p>
+        19.1<span style="margin-left: 1em"></span>One family and the order of its limits <span
+        style="margin-left: 5mm"></span> <a href="19-assembly-and-the-scope-of-the-construction.html#auto-247">307</a>
+      </p>
+      <p>
+        19.2<span style="margin-left: 1em"></span>Assembly of the construction <span style="margin-left: 5mm"></span>
+        <a href="19-assembly-and-the-scope-of-the-construction.html#auto-248">307</a>
+      </p>
+      <p>
+        19.3<span style="margin-left: 1em"></span>Conclusions that are not supplied <span style="margin-left: 5mm"></span>
+        <a href="19-assembly-and-the-scope-of-the-construction.html#auto-249">309</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Notation in the current draft</b> <span style="margin-left: 5mm"></span> <a href="notation-in-the-current-draft.html#auto-250">311</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>References</b> <span style="margin-left: 5mm"></span> <a href="references.html#auto-252">313</a>
+      </p>
+    </div>
+<h1 id="auto-22"><a id="ch03:maxwell"></a>Chapter 3<br />The free Maxwell comparison theory</h1>
+    <p>
+      The reference theory for short distances consists of independent Maxwell
+      fields, one for each direction in the Lie algebra. Its role is more
+      precise than a formal approximation to the action. It supplies
+      finite-dimensional spaces of local fields, correlation functionals that
+      distinguish those fields, and a normalization for the stress tensor. The
+      interacting construction must eventually reproduce these data in an
+      appropriate short-distance comparison. No interacting limit is assumed
+      in this chapter.
+    </p>
+    <p>
+      We fix the positive inner product on the real Lie algebra
+      \(\mathfrak{g}\) and write \(d_{\mathfrak{g}} = \dim_{\mathbb{R}}
+      \mathfrak{g}\). Choose an orthonormal basis \((e_{\alpha})_{\alpha =
+      1}^{d_{\mathfrak{g}}}\). Greek letters \(\mu, \nu, \rho, \sigma\) from
+      the middle of the alphabet denote coordinate indices in \(\{1, 2, 3,
+      4\}\); \(\alpha, \beta\) denote colour indices. Time is the fourth
+      coordinate. The superscript \(\text{Max}\) always denotes the free
+      reference theory. We first define its correlations at distinct points;
+      this requires no multiplication of distributions at the same point.
+    </p>
+    <h2 id="auto-23"><a id="ch03:covariance"></a>3.1<span style="margin-left: 1em"></span>Curvature covariance<span style="margin-left: 1em"></span></h2>
+    <p>
+      Let
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:green"></a>\(\displaystyle \Gamma (x) = \frac{1}{4
+        \pi^2 |x|^2}, \qquad x \ne 0.\)</td>
+        <td align="right">(3.1)</td>
+      </tr>
+    </table>
+    <p>
+      Its locally integrable extension is the fundamental solution of \(-
+      \Delta\) in four dimensions. A convenient way to specify the curvature
+      covariance is to start from independent Gaussian vector-potential
+      components with covariance \(\delta_{\alpha \beta} \delta_{\mu \nu}
+      \Gamma (x - y)\), and take a curl in each argument. The vector potential
+      in this description is a device for computing the covariance; it is not
+      one of the gauge-invariant local observables used in the construction.
+    </p>
+    <p>
+      Write \(F^{\alpha}_{\mu \nu} = - F^{\alpha}_{\nu \mu}\) for the
+      curvature components. Their two-point function is
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:curvature"></a>\(\displaystyle S^{\text{Max}}_2 
+        (F^{\alpha}_{\mu \nu}, F^{\beta}_{\rho \sigma} ; x, y)
+        =
+\delta_{\alpha \beta} C_{\mu \nu, \rho \sigma}  (x - y),\)</td>
+        <td align="right">(3.2)</td>
+      </tr>
+    </table>
+    <p>
+      where, with \(h_{\mu \nu} = \partial_{\mu} \partial_{\nu} \Gamma\),
+    </p>
+    <center>
+      <a id="ch03:kernel"></a><a id="ch03:hessian"></a>\(\displaystyle \begin{array}{rl}
+  C_{\mu \nu,
+      \rho \sigma} & = - \delta_{\nu \sigma} h_{\mu \rho} +
+  \delta_{\nu
+      \rho} h_{\mu \sigma} + \delta_{\mu \sigma} h_{\nu \rho} -
+  \delta_{\mu
+      \rho} h_{\nu \sigma}, \hspace{3cm}   \text{(3.3)} \\
+  h_{\mu \nu} (z) &
+      = \frac{8 z_{\mu} z_{\nu} - 2 \delta_{\mu \nu} |z|^2}{4
+  \pi^2 |z|^6} .
+      \hspace{3cm}   \text{(3.4)} 
+\end{array}\)
+    </center>
+    <p>
+      The minus signs in the first and last terms arise because a derivative
+      in \(y\) is minus a derivative in \(z = x - y\). This convention matters
+      both for reflection positivity and for the stress normalization.
+    </p>
+    <p>
+      The covariance is translation invariant and transforms as a two-form in
+      each pair of indices under \(O (4)\). At nonzero separation it satisfies
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:maxwell-equations"></a>\(\displaystyle \partial_{\lambda} C_{\mu
+        \nu, \rho \sigma} + \partial_{\mu} C_{\nu \lambda,
+\rho \sigma} +
+        \partial_{\nu} C_{\lambda \mu, \rho \sigma} = 0, \qquad
+\sum_{\mu}
+        \partial_{\mu} C_{\mu \nu, \rho \sigma} = 0.\)</td>
+        <td align="right">(3.5)</td>
+      </tr>
+    </table>
+    <p>
+      The first identity is the Bianchi identity; the second is the
+      source-free Maxwell equation. They hold off the origin. A distributional
+      derivative can have a contact term at the origin, so these identities
+      must not be used to infer a choice of contact extension.
+    </p>
+    <p>
+      For a multi-index \(a = (a_1, \ldots, a_4)\), put \(|a| = a_1 + \cdots +
+      a_4\) and \(\partial^a = \partial_1^{a_1} \cdots \partial_4^{a_4}\).
+      Derivatives of the fields have covariance
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:jet-covariance"></a>\(\displaystyle S^{\text{Max}}_2 
+        (\partial^a F^{\alpha}_{\mu \nu}, \partial^c
+F^{\beta}_{\rho \sigma} ;
+        x, y) = \delta_{\alpha \beta}  (- 1)^{|c|}
+\partial^{a + c} C_{\mu
+        \nu, \rho \sigma}  (x - y) .\)</td>
+        <td align="right">(3.6)</td>
+      </tr>
+    </table>
+    <p>
+      In particular, for each fixed derivative order, this kernel is smooth
+      away from zero and homogeneous of degree \(- 4 - |a| - |c|\). Thus its
+      size on \(|x - y| \geqslant r\), \(0 < r \leqslant 1\), has a polynomial
+      bound in \(r^{- 1}\). This elementary estimate is the free counterpart
+      of the much harder uniform bounds required from the lattice
+      construction.
+    </p>
+    <h2 id="auto-24"><a id="ch03:wick"></a>3.2<span style="margin-left: 1em"></span>Local polynomials and Wick
+    correlations<span style="margin-left: 1em"></span></h2>
+    <p>
+      A local polynomial is a polynomial in finitely many curvature
+      derivatives at one point. Its scaling dimension is computed by assigning
+      degree \(2\) to \(F\) and degree \(1\) to each derivative. For example,
+      \(F^{\alpha}_{\mu \nu} F^{\beta}_{\rho \sigma}\) has degree \(4\),
+      whereas \(\partial_{\lambda} F^{\alpha}_{\mu \nu}\) has degree \(3\).
+      Scaling dimension is an algebraic grading of the reference model; it is
+      not an assertion about anomalous dimensions of the interacting fields.
+    </p>
+    <p>
+      The polynomial attached to one insertion is Wick ordered. We use the
+      usual Gaussian pairing rule, whose operator formulation is due to Wick
+      [<a href="references.html#bib-Wick1950">Wic50</a>]. Here it can be taken as the definition of the
+      separated correlation functions. Expand each polynomial into monomials,
+      regard each factor as a distinguishable occurrence, and sum over
+      pairings of all occurrences subject to the condition that paired
+      occurrences belong to different insertions. For each pair use <class
+      style="font-style: normal">(<a href="#ch03:jet-covariance">3.6</a>)</class>. The empty pairing has value one. The
+      resulting finite sum is denoted by
+    </p>
+    <center>
+      \(\displaystyle S_n^{\text{Max}}  (P_1, \ldots, P_n ; x_1, \ldots, x_n),
+      \qquad x_i \ne x_j 
+\quad (i \ne j) .\)
+    </center>
+    <p>
+      There is no covariance at zero separation in this definition.
+    </p>
+    <p>
+      For instance, if \(X_1, X_2, Y_1, Y_2\) are linear curvature
+      derivatives,
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  S_2^{\text{Max}} (: X_1 X_2 :, : Y_1
+      Y_2 : ; x, y) & = C (X_1, Y_1 ; x - y)
+  C (X_2, Y_2 ; x - y)\\
+  &
+      \quad + C (X_1, Y_2 ; x - y) C (X_2, Y_1 ; x - y) .
+\end{array}\)
+    </center>
+    <p>
+      Here \(C (X, Y ; z)\) denotes the bilinear covariance obtained from
+      <class style="font-style: normal">(<a href="#ch03:jet-covariance">3.6</a>)</class>. By contrast, in a word
+      containing several insertions in the same time half-space, contractions
+      between those <em>different</em> insertions are included. Wick ordering
+      removes self-contractions at each insertion, not all contractions inside
+      a word.
+    </p>
+    <p>
+      The pairing rule gives complex multilinearity, symmetry under
+      simultaneous permutation of labels and positions, reality, and the unit
+      identity
+    </p>
+    <center>
+      \(\displaystyle S_{n + 1}^{\text{Max}}  (1, P_1, \ldots, P_n ; x_0, x_1,
+      \ldots, x_n) =
+S_n^{\text{Max}}  (P_1, \ldots, P_n ; x_1, \ldots, x_n)
+      .\)
+    </center>
+    <p>
+      Differentiating an insertion differentiates its incident covariances.
+      The product rule therefore agrees with ordinary differentiation of the
+      correlation function in that insertion position.
+    </p>
+    <p>
+      If the labels are homogeneous of degrees \(d_1, \ldots, d_n\), then
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:homogeneity"></a>\(\displaystyle S_n^{\text{Max}}  (P_1,
+        \ldots, P_n ; \lambda x_1, \ldots, \lambda x_n) =
+\lambda^{- \sum_i
+        d_i} S_n^{\text{Max}}  (P_1, \ldots, P_n ; x_1, \ldots, x_n)
+\quad
+        (\lambda > 0) .\)</td>
+        <td align="right">(3.7)</td>
+      </tr>
+    </table>
+    <p>
+      For general labels of bounded degree, decompose into finitely many
+      homogeneous pieces. Equations <class style="font-style: normal">(<a href="#ch03:jet-covariance">3.6</a>)</class>
+      and <class style="font-style: normal">(<a href="#ch03:homogeneity">3.7</a>)</class> give bounds on all
+      derivatives on separated configuration spaces. In particular, smearing
+      against a smooth compactly supported function whose support avoids
+      collisions is well defined. This statement is weaker than specifying the
+      correlations on test functions whose supports meet collision diagonals.
+    </p>
+    <h2 id="auto-25"><a id="ch03:shell"></a>3.3<span style="margin-left: 1em"></span>The on-shell polynomial
+    space<span style="margin-left: 1em"></span></h2>
+    <p>
+      The Maxwell identities impose linear relations on the jet variables.
+      They should be imposed before discussing strict positivity or the number
+      of independent fields. At each integer \(j \geqslant 0\), let
+      \(\mathcal{S}_j\) be the real vector space of homogeneous degree-\(j\)
+      polynomial two-forms on \(\mathbb{R}^4\), with values in
+      \(\mathfrak{g}\), satisfying
+    </p>
+    <center>
+      \(\displaystyle dF = 0, \qquad \delta F = 0.\)
+    </center>
+    <p>
+      Here \(\delta F = 0\) means \(\sum_{\mu} \partial_{\mu} F_{\mu \nu} =
+      0\) for every \(\nu\); the harmless choice of sign for the
+      codifferential does not affect its kernel. These are finite-dimensional
+      spaces. They encode the possible homogeneous Taylor coefficients of a
+      source-free Maxwell curvature. A Taylor coefficient of order \(j\) is
+      normalized as \(D^j F (0) / j\)!.
+    </p>
+    <p>
+      The phrase <em>on shell</em> will mean restriction to these solution
+      jets. It does not refer to restricting a point of Euclidean spacetime. A
+      linear coordinate on \(\mathcal{S}_j\) is given weight \(j + 2\).
+      Consequently polynomials of weight at most \(d\) use only the spaces
+      \(\mathcal{S}_j\) with \(j \leqslant d - 2\). Constants are retained at
+      every degree. The colour action is the adjoint action of \(G\);
+      invariant polynomials are the gauge-invariant local observables of the
+      free reference theory.
+    </p>
+    <p>
+      To compare this definition with the radial-potential labels \(V_d\),
+      associate to a closed homogeneous curvature \(F^{(j)}\) the radial
+      potential
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:radial"></a>\(\displaystyle A^{(j + 1)}_{\mu} (x) =
+        \int_0^1 tx^{\nu} F^{(j)}_{\nu \mu}  (tx) 
+\hspace{0.17em} dt =
+        \frac{1}{j + 2}  \sum_{\nu} x^{\nu} F^{(j)}_{\nu \mu} (x)
+.\)</td>
+        <td align="right">(3.8)</td>
+      </tr>
+    </table>
+    <p>
+      There is a sum over \(\nu\) in the integral as well. This is the usual
+      radial homotopy formula: \(x^{\mu} A_{\mu} = 0\) and \(dA = F\) when
+      \(dF = 0\). The connection here is the <em>linear</em> Maxwell
+      potential; no nonabelian commutator is inserted into this formula.
+      Restricting a label in \(V_d\) to these radial potentials gives a map
+    </p>
+    <center>
+      \(\displaystyle \omega_d : V_d \longrightarrow \{ \text{complex
+      polynomials on Maxwell
+solution jets of weight at most } d\} .\)
+    </center>
+    <p>
+      It preserves the unit, conjugation and the geometric actions. Define
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:free-space"></a>\(\displaystyle
+        \mathcal{M}_d^{\text{Max}} = \text{im} \hspace{0.17em} \omega_d
+        .\)</td>
+        <td align="right">(3.9)</td>
+      </tr>
+    </table>
+    <p>
+      Equivalently, this is \(V_d / \ker \omega_d\) as a vector space. The
+      image formulation is useful: it does not assume a separate surjectivity
+      theorem onto a larger invariant-polynomial space.
+    </p>
+    <p>
+      The covariance identities <class style="font-style: normal">(<a href="#ch03:maxwell-equations">3.5</a>)</class> make
+      the Wick correlations well defined on these on-shell polynomial images.
+      Products of a Maxwell equation with another jet polynomial vanish in
+      every separated Wick correlation. Conversely, proving that <em>all</em>
+      correlation-null polynomials vanish on shell requires a nondegeneracy
+      argument; it does not follow from writing down the equations.
+    </p>
+    <p>
+      The free spaces form a filtration. The inclusion
+      \(\mathcal{M}_d^{\text{Max}} \to \mathcal{M}_e^{\text{Max}}\) for \(d
+      \leqslant e\) retains the same polynomial, while differentiation raises
+      weight by one. For a simple nonabelian Lie algebra there is no nonzero
+      invariant linear form on \(\mathfrak{g}\). Therefore every
+      gauge-invariant field of degree less than four in this polynomial image
+      is a constant. This low-degree statement follows from the weights: a
+      nonconstant monomial below degree four would have just one curvature
+      factor or one of its first derivatives.
+    </p>
+    <h2 id="auto-26"><a id="ch03:reflection"></a>3.4<span style="margin-left: 1em"></span>Reflection and the meaning of
+    nondegeneracy<span style="margin-left: 1em"></span></h2>
+    <p>
+      Let \(\vartheta (\boldsymbol{x}, t) = (\boldsymbol{x}, - t)\).
+      Reflection acts on a two-form by pullback, so a component with one time
+      index changes sign and a purely spatial component does not. On a local
+      polynomial, \(\theta\) combines this action with complex conjugation. On
+      a word it also reverses the order and reflects every insertion point.
+      This is the antilinear reflection used in the Osterwalder&ndash;Schrader
+      form, not merely conjugation of scalar coefficients.
+    </p>
+    <p>
+      For words \(w_i\) supported at distinct points in the positive
+      half-space, the free field has reflection positivity:
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:rp"></a>\(\displaystyle \sum_{i, j}
+        \overline{c_i} c_j S^{\text{Max}}  (\theta w_i  \hspace{0.17em}
+w_j)
+        \geqslant 0.\)</td>
+        <td align="right">(3.10)</td>
+      </tr>
+    </table>
+    <p>
+      The same inequality holds for smooth joint test functions supported on
+      separated positive-time configurations. This is the standard Gaussian
+      reflection-positive construction underlying Osterwalder&ndash;Schrader
+      reconstruction [<a href="references.html#bib-OsterwalderSchrader1973">OS73</a>, <a href="references.html#bib-OsterwalderSchrader1975">OS75</a>], applied to the
+      curvature covariance rather than to an unconstrained vector-potential
+      observable. Its hypotheses can be checked at the one-particle level:
+      spatial Fourier transformation of <class style="font-style: normal">(<a href="#ch03:green">3.1</a>)</class>
+      gives
+    </p>
+    <center>
+      \(\displaystyle \frac{e^{- |\boldsymbol{p}|  (t + s)}}{2
+      |\boldsymbol{p}|}  \qquad (t, s > 0),\)
+    </center>
+    <p>
+      and taking the two curls with the reflected two-form indices gives the
+      positive transverse-polarization Gram form. Derivative jets act on the
+      same factors. The Gaussian Fock construction then gives <class style="font-style: normal">(<a
+      href="#ch03:rp">3.10</a>)</class>; contractions within each positive-time word are
+      included in its Fock vector. On compact separated supports the kernels
+      are smooth, so the corresponding form on joint test functions follows by
+      integration. We use this standard argument by citation rather than
+      repeating the Fock-space construction.
+    </p>
+    <p>
+      A simple sign check is informative. At separation \(z = re_4\), the six
+      unordered curvature components have diagonal covariance. Three purely
+      spatial components have value \(1 / (\pi^2 r^4)\); the three components
+      \(F_{i 4}\) have value \(- 1 / (\pi^2 r^4)\). Reflection changes the
+      sign of \(F_{i 4}\) in the first slot. The reflected one-jet form is
+      therefore positive in all six directions. Without the tensorial
+      reflection, the same displayed covariance would give the wrong
+      positivity statement.
+    </p>
+    <p>
+      Positive semidefiniteness of <class style="font-style: normal">(<a href="#ch03:rp">3.10</a>)</class>
+      alone does not identify its null space. For later rank arguments one
+      needs the stronger statement that a nonzero on-shell polynomial has a
+      strictly positive reflected two-point pairing at two suitable points.
+      Derivatives of different orders may mix in that pairing. Checking one
+      homogeneous order at a time does not establish the statement for their
+      sum.
+    </p>
+    <h2 id="auto-27"><a id="ch03:strict"></a>3.5<span style="margin-left: 1em"></span>Strict positivity of finite jet
+    families<span style="margin-left: 1em"></span></h2>
+    <p>
+      We now identify the null relations in the free polynomial theory. Recall
+      from Section <a href="#ch03:shell">3.3</a> that \(\mathcal{S}_j\) is the space of
+      homogeneous degree-\(j\) Maxwell curvature solutions. Write a member as
+    </p>
+    <center>
+      \(\displaystyle P_{ab} (v) = \sum_{i_1, \ldots, i_j} P_{ab ; i_1 \cdots
+      i_j} v_{i_1} \cdots
+v_{i_j} .\)
+    </center>
+    <p>
+      The derivative-index coefficients are symmetric. On this coefficient
+      space use the Frobenius inner product, summing both orders of the
+      antisymmetric field indices, all ordered derivative indices and colours.
+      In particular, no factor \(1 / 2\) is inserted for the field indices.
+      The linear jet probe represented by \(P\) is
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:probe"></a>\(\displaystyle \ell_P (F) = \frac{1}{j!}
+        \sum_{a, b, i_1, \ldots, i_j, \alpha}
+P^{\alpha}_{ab ; i_1 \cdots
+        i_j} \partial_{i_1} \cdots \partial_{i_j}
+F^{\alpha}_{ab} .\)</td>
+        <td align="right">(3.11)</td>
+      </tr>
+    </table>
+    <p>
+      The factor \(1 / j\)! matches our Taylor convention. Every linear
+      functional on the order-\(j\) solution jets has this form.
+    </p>
+    <p>
+      Put \(I (z) = z / |z|^2\) and \(R_z = 1 - 2 zz^{\textsf{T}} / |z|^2\).
+      For a two-form, \(R_z^{(2)}\) means applying \(R_z\) to both form
+      indices. The full reflection on a polynomial solution is \((R_z \cdot P)
+      (v) = R_z^{(2)} P (R_z v)\): the derivative indices are reflected as
+      well. For real probes define
+    </p>
+    <center>
+      \(\displaystyle B_z  (P, Q) = S_2^{\text{Max}}  (\ell_P, \ell_{R_z \cdot
+      Q} ; z, 0) .\)
+    </center>
+    <p>
+      Extend this bilinearly across different derivative orders. Covariance
+      and exchange of the two insertions show that \(B_z\) is symmetric.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em; margin-bottom: 1em">
+        <strong class="enunciation-name">Proposition <class style="font-style: normal">3.1</class>.
+        </strong><i><class style="font-style: normal"><strong>(Finite-jet nondegeneracy)
+        </strong></class><a id="ch03:jet-positive"></a> For every \(z \ne 0\) and integer \(m
+        \geqslant 1\), the form \(B_z\) is positive definite on \(\bigoplus_{j
+        < m} \mathcal{S}_j\).</i>
+      </p>
+    </div>
+    <p>
+      The scalar differentiation identity needed in the proof is the harmonic
+      case of Hobson's differentiation formula [<a href="references.html#bib-Hobson1892">Hob92</a>]. In our
+      normalization, if \(P \in \mathcal{S}_j\), it says, componentwise,
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:hobson"></a>\(\displaystyle \frac{1}{j!} P (\partial)
+        \Gamma (y) = \frac{(- 2)^j}{4 \pi^2} |y|^{- 2 j -
+2} P (y), \qquad y
+        \ne 0.\)</td>
+        <td align="right">(3.12)</td>
+      </tr>
+    </table>
+    <p>
+      Here \(P (\partial)\) means the ordered coefficient contraction without
+      the factor \(1 / j\)!. Maxwell solutions are harmonic, as follows by
+      applying a divergence to the Bianchi identity. Thus the harmonic
+      hypothesis of the scalar formula holds in each component. We use that
+      classical differentiation result; the following finite-dimensional
+      argument explains its application to the mixed jet orders needed here.
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>Let \(\mathcal{R} (P) (y)\) be the
+      curvature response obtained by contracting \(\partial_y^j C (y) / j\)!
+      with the coefficients of \(P\). Taking the two curls in <class style="font-style: normal">(<a
+      href="#ch03:hobson">3.12</a>)</class> gives
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:kelvin"></a>\(\displaystyle \mathcal{R} (P) (y) = c_j
+        |y|^{- 4} R_y^{(2)} P (I (y)), \qquad c_j =
+\frac{(j + 1)  (j + 2)  (-
+        2)^j}{\pi^2} .\)</td>
+        <td align="right">(3.13)</td>
+      </tr>
+    </table>
+    <p>
+      For clarity, the identities determining the coefficient are as follows.
+      Set \(V_i (y) = \sum_a y_a P_{ai} (y)\) and \(b_j = (- 2)^j / (4
+      \pi^2)\). The divergence of the differentiated Green potential is \(D_i
+      = - 2 (j + 1) b_j |y|^{- 2 j - 4} V_i\). The Maxwell equations and
+      homogeneity give \(\partial_i V_m - \partial_m V_i = (j + 2) P_{im}\).
+      The response is \(2 (\partial_m D_i - \partial_i D_m)\), so its
+      coefficient is \(4 (j + 1)  (j + 2) b_j = c_j\) and its two-form factor
+      is
+    </p>
+    <center>
+      \(\displaystyle P_{im} (y) - 2 |y|^{- 2}  (y_i V_m (y) - y_m V_i (y)) =
+      (R_y^{(2)} P (y))_{im}
+.\)
+    </center>
+    <p>
+      This verifies <class style="font-style: normal">(<a href="#ch03:kelvin">3.13</a>)</class>, including its
+      sign, off the origin.
+    </p>
+    <p>
+      Fix the separation \(z\). For \(P \in \mathcal{S}_j\) define a finite
+      tower \(\Sigma_z P\) by
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:triangular"></a>\(\displaystyle (\Sigma_z P)_k =
+        \frac{c_j}{c_k} \text{Taylor}_k [P (\hspace{0.17em} \cdot -
+I (z))],
+        \qquad 0 \leqslant k \leqslant j.\)</td>
+        <td align="right">(3.14)</td>
+      </tr>
+    </table>
+    <p>
+      The operator \(\text{Taylor}_k\) extracts the homogeneous term of degree
+      \(k\) at zero. Translation preserves the Maxwell equations, and each
+      homogeneous term separately satisfies them. Thus all components in
+      <class style="font-style: normal">(<a href="#ch03:triangular">3.14</a>)</class> lie in their declared solution
+      spaces. The degree-\(j\) component is \(P\) itself.
+    </p>
+    <p>
+      By the finite Taylor formula, the response of this tower is
+    </p>
+    <center>
+      \(\displaystyle \mathcal{R} (\Sigma_z P) (y) = c_j |y|^{- 4} R_y^{(2)} P
+      (I (y) - I (z)) .\)
+    </center>
+    <p>
+      Since \(DI (z) = |z|^{- 2} R_z\), its Taylor coefficients at \(y = z\)
+      vanish through order \(j - 1\), while its order-\(j\) coefficient is
+      \(c_j |z|^{- 2 j - 4}  (R_z \cdot P)\). For \(Q \in \mathcal{S}_k\),
+      differentiation in the second insertion gives
+    </p>
+    <center>
+      \(\displaystyle B_z  (\Sigma_z P, Q) = (- 1)^k \langle R_z \cdot Q,
+      \text{Taylor}_k
+[\mathcal{R}(\Sigma_z P)] (z) \rangle_F .\)
+    </center>
+    <p>
+      It follows that this expression vanishes if \(k < j\), and at \(k = j\)
+      equals \((- 1)^j c_j |z|^{- 2 j - 4} \langle P, Q \rangle_F\).
+      Transforming the second argument introduces only lower orders in
+      addition to its unchanged top order. Symmetry therefore gives, on the
+      full tower,
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:diagonal-gram"></a>\(\displaystyle B_z  (\Sigma_z P,
+        \Sigma_z Q) = \sum_{j < m} \frac{(j + 1)  (j + 2)
+2^j}{\pi^2 |z|^{2 j
+        + 4}}  \langle P_j, Q_j \rangle_F .\)</td>
+        <td align="right">(3.15)</td>
+      </tr>
+    </table>
+    <p style="margin-bottom: 1em">
+      Every coefficient is positive. Finally \(\Sigma_z\) is invertible: it is
+      the identity plus a strictly degree-lowering map, hence its inverse is a
+      finite geometric sum. This proves positivity on the whole tower,
+      including mixtures of derivative orders.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Corollary <class style="font-style: normal">3.2</class>. </strong><i><class
+        style="font-style: normal"><strong>(Polynomial positivity and finite separating families)
+        </strong></class><a id="ch03:detectors"></a>Every nonzero element of
+        \(\mathcal{M}_d^{\text{Max}}\) has strictly positive reflected
+        two-point pairing at a fixed separated pair. For any basis \((P_1,
+        \ldots, P_s)\) of this space and fixed distinct points \(x, y\), the
+        linear map</i>
+      </p>
+      <i><center>
+        \(\displaystyle P \longmapsto (S_2^{\text{Max}} (P, P_j ; x, y))_{j =
+        1}^s\)
+      </center></i>
+      <p style="margin-bottom: 1em">
+        <i>is injective. Consequently a label in \(V_d\) vanishes in every
+        separated correlation if and only if its on-shell polynomial
+        \(\omega_d\) vanishes.</i>
+      </p>
+    </div>
+    <p>
+      This is the standard symmetric-Fock-space consequence of the
+      one-particle Gram form and Wick's rule [<a href="references.html#bib-Wick1950">Wic50</a>]. Explicitly,
+      choose coordinates \(X_1, \ldots, X_M\) diagonalizing the positive form
+      on a tower containing all variables of the polynomial, with positive
+      squared lengths \(b_i\). The reflected pairing of Wick monomials is
+    </p>
+    <center>
+      \(\displaystyle \langle X^a, X^c \rangle_{\text{ref}} =\boldsymbol{1}_{a
+      = c}  \hspace{0.17em}
+a! \prod_i b_i^{a_i} .\)
+    </center>
+    <p>
+      Thus the squared norm of a polynomial is the sum of the squared absolute
+      values of its coefficients with these positive weights; the constant
+      coefficient has weight one. Restricting to the gauge-invariant image
+      preserves positivity. If all basis-column pairings vanish, the pairing
+      with the reflected conjugate of the polynomial vanishes too, forcing
+      that polynomial to be zero. This also identifies the correlation-null
+      labels. On any fixed finite-dimensional degree space, the map of
+      correlation pairings has a positive minimum norm on the unit sphere.
+      Small perturbations of its matrix remain injective; applying this fact
+      to interacting correlations still requires a quantitative comparison
+      estimate.
+    </p>
+    <h2 id="auto-28"><a id="ch03:quadratic"></a>3.6<span style="margin-left: 1em"></span>Quadratic fields and
+    normalization checks<span style="margin-left: 1em"></span></h2>
+    <p>
+      We return to the free curvature covariance <class style="font-style: normal">(<a href="#ch03:curvature">3.2</a>)</class>;
+      each of the \(d_{\mathfrak{g}}\) colours has that same covariance and
+      different colours have zero cross-covariance. Define
+    </p>
+    <center>
+      <a id="ch03:quadratics"></a><a id="ch03:stress"></a>\(\displaystyle \begin{array}{rlll}
+  Q_{\mu \nu}
+      & = \sum_{\alpha = 1}^{d_{\mathfrak{g}}} \sum_{\rho = 1}^4 :
+ 
+      F^{\alpha}_{\mu \rho} F^{\alpha}_{\nu \rho} :, & Q_{\text{tot}} & =
+ 
+      \sum_{\mu} Q_{\mu \mu}, \hspace{3cm}   \text{(3.16)} \\
+ 
+      \mathcal{E}^{\text{Max}} & = \tfrac{1}{4} Q_{\text{tot}}, &
+ 
+      T^{\text{Max}}_{\mu \nu} & = - Q_{\mu \nu} + \tfrac{1}{4} \delta_{\mu
+      \nu}
+  Q_{\text{tot}} . \hspace{3cm}   \text{(3.17)} 
+\end{array}\)
+    </center>
+    <p>
+      The sign of \(T^{\text{Max}}\) is chosen to match the shell-flux
+      convention in the supplied construction. A complete stress-normalization
+      argument must check that convention against the translation Ward
+      identity; conservation alone does not determine the sign.
+    </p>
+    <p>
+      The tensor in <class style="font-style: normal">(<a href="#ch03:stress">3.17</a>)</class> is symmetric and
+      traceless. Its divergence vanishes as an on-shell Wick polynomial. These
+      are the ordinary algebraic Maxwell stress identities, obtained from the
+      Bianchi and source-free equations; the same identities hold in separated
+      correlations. The scalar \(\mathcal{E}^{\text{Max}}\) is nevertheless
+      nonzero. It is the curvature-square operator, not the trace of the free
+      stress tensor.
+    </p>
+    <p>
+      With the present normalization, Wick's rule gives
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:scalar-pair"></a>\(\displaystyle S_2^{\text{Max}} 
+        (\mathcal{E}^{\text{Max}}, \mathcal{E}^{\text{Max}} ; x, y)
+= \frac{3
+        d_{\mathfrak{g}}}{\pi^4  |x - y|^8}, \qquad x \ne y.\)</td>
+        <td align="right">(3.18)</td>
+      </tr>
+    </table>
+    <p>
+      For checking constants, at separation \(re_4\) one has
+      \(\mathcal{E}^{\text{Max}} = \tfrac{1}{2} \sum_{\alpha, \mu < \nu}
+      :
+(F^{\alpha}_{\mu \nu})^2\):. The two cross-pairings of each square,
+      the six unordered components, and the prefactor \(1 / 4\) give
+      \(\tfrac{1}{4} \cdot 2 \cdot 6 d_{\mathfrak{g}} = 3 d_{\mathfrak{g}}\).
+      Orthogonal covariance makes the answer independent of the direction of
+      \(x - y\). The calculation uses only separated Wick contractions.
+    </p>
+    <p>
+      This normalization will be needed when comparing a renormalized scalar
+      field with the free curvature square. It does not itself identify the
+      interacting trace, its coefficient, or its logarithmic asymptotic. Those
+      conclusions require the interacting stress Ward identity and
+      quantitative estimates on moving comparison fields.
+    </p>
+    <h2 id="auto-29"><a id="ch03:classification"></a>3.7<span style="margin-left: 1em"></span>The degree-four conserved
+    tensor<span style="margin-left: 1em"></span></h2>
+    <p>
+      The finite-dimensional classification needed for the stress tensor is
+      small enough to state explicitly. In this section <em>centered</em>
+      means that the constant Wick coefficient is zero. By the Wick
+      prescription it is also the one-point expectation. We consider real
+      symmetric tensor fields \(J_{ab}\) of degree at most four, invariant
+      under the colour action and transforming as a rank-two tensor under the
+      signed coordinate permutations \(H_4\). Conservation is an identity in
+      the on-shell polynomial space, or equivalently in every separated free
+      correlation by Corollary <a href="#ch03:detectors">3.2</a>.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em; margin-bottom: 1em">
+        <strong class="enunciation-name">Proposition <class style="font-style: normal">3.3</class>.
+        </strong><i><class style="font-style: normal"><strong>(Conserved tensor line)
+        </strong></class><a id="ch03:stress-line"></a> The space of such centered tensors has
+        dimension three. Its conserved subspace is the line
+        \(\mathbb{R}T^{\text{Max}}\), with \(T^{\text{Max}}\) as in <class
+        style="font-style: normal">(<a href="#ch03:stress">3.17</a>)</class>.</i>
+      </p>
+    </div>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>Simplicity of \(\mathfrak{g}\) excludes
+      invariant linear colour forms and makes an invariant symmetric bilinear
+      colour form a multiple of the fixed metric. Through degree four a
+      centered invariant polynomial therefore contains two undifferentiated
+      curvature factors. Indeed, a derivative on one of two factors would
+      raise the degree to at least five, while a single differentiated factor
+      still has no invariant colour contraction.
+    </p>
+    <p>
+      Recall the quadratic fields \(Q_{ab}\) and \(Q_{\text{tot}}\) from
+      <class style="font-style: normal">(<a href="#ch03:quadratics">3.16</a>)</class>. A basis of the tensor
+      candidates is
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  Z^{(1)}_{ab} & = \delta_{ab}
+      Q_{aa},\\
+  Z^{(2)}_{ab} & = \delta_{ab}  (Q_{\text{tot}} - 2
+      Q_{aa}),\\
+  Z^{(3)}_{ab} & = (1 - \delta_{ab}) Q_{ab} .
+\end{array}\)
+    </center>
+    <p>
+      There is no sum over \(a\) on the right sides of the first two formulas.
+      To see that these span, consider sign reversal of each coordinate. A
+      diagonal component can contain only squares of curvature components.
+      Permutations fixing its distinguished axis divide them into two classes:
+      those containing that axis, and those containing neither instance of it.
+      An off-diagonal component with indices \(a, b\) must be odd in axes \(a,
+      b\) and even in the others. Its possible contractions are
+      \(\sum_{\alpha} : F^{\alpha}_{ac} F^{\alpha}_{bc}\): with \(c \not\in
+      \{a, b\}\); permutations identify their coefficients. This gives exactly
+      the three candidates displayed above.
+    </p>
+    <p>
+      For an explicit rank check, let \(Q_{ij, ij} = \sum_{\alpha} :
+      (F^{\alpha}_{ij})^2\):. Evaluate the first component of the divergence
+      of each \(Z^{(l)}\) at \(e_1\), against \(Q_{12, 12} (0)\) and \(Q_{23,
+      23} (0)\). The two rows of these evaluations, after division by
+      \(d_{\mathfrak{g}} / (4 \pi^2)^2\), are
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:divergence-matrix"></a>\(\displaystyle \left(
+        \begin{array}{ccc}
+  - 256 & 0 & 128\\
+  0 & - 512 & - 128
+\end{array}
+        \right) .\)</td>
+        <td align="right">(3.19)</td>
+      </tr>
+    </table>
+    <p>
+      These numbers come directly from the curvature covariance <class style="font-style: normal">(<a
+      href="#ch03:kernel">3.3</a>)</class> and the two cross-pairings in a quadratic Wick
+      correlation. For example, \(S_2^{\text{Max}}  (Q_{11}, Q_{12, 12} ;
+      te_1, 0) = 2 d_{\mathfrak{g}} / (\pi^4
+t^8)\); its derivative at \(t =
+      1\) gives the first entry after the stated division. The first two
+      columns are independent. Also \(Z^{(1)}_{12} = Z^{(2)}_{12} = 0\),
+      whereas the correlation of \(Z^{(3)}_{12} (e_1)\) with \(\sum_{\alpha} :
+      F^{\alpha}_{13} F^{\alpha}_{23} : (0)\) equals \(- 16 d_{\mathfrak{g}} /
+      (4 \pi^2)^2\). Thus the candidate tensors are themselves independent,
+      and the kernel of divergence has dimension at most one.
+    </p>
+    <p>
+      The Maxwell stress is conserved and
+    </p>
+    <center>
+      \(\displaystyle - T^{\text{Max}} = \tfrac{1}{2} Z^{(1)} - \tfrac{1}{4}
+      Z^{(2)} + Z^{(3)} .\)
+    </center>
+    <p style="margin-bottom: 1em">
+      It is nonzero by the preceding off-diagonal correlation. Hence it spans
+      that kernel.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      This result fixes only a line of conserved tensors. Multiplying the
+      stress by a scalar preserves all the properties used in the proposition.
+      We next fix its normalization by a local Ward flux and then classify
+      linear responses on fields of arbitrary bounded degree.
+    </p>
+    <h2 id="auto-30"><a id="ch03:ward"></a>3.8<span style="margin-left: 1em"></span>Local stress fluxes<span style="margin-left: 1em"></span></h2>
+    <p>
+      The sign in <class style="font-style: normal">(<a href="#ch03:stress">3.17</a>)</class> is fixed by a
+      local identity, not by conservation. Let \(x_0, \ldots, x_n\) be
+      distinct points and choose a real \(\chi \in C_c^{\infty}
+      (\mathbb{R}^4)\) equal to one near \(x_0\), with support avoiding \(x_1,
+      \ldots, x_n\). For a vector field \(v\) define the flux
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:flux"></a>\(\displaystyle \mathcal{F}_{\chi, v} 
+        (P_0 ; P_1, \ldots, P_n) = - \sum_{a, b} \int
+\partial_a \chi (y) v_b
+        (y) S_{n + 2}^{\text{Max}}  (T^{\text{Max}}_{ab}, P_0,
+\ldots, P_n ;
+        y, x_0, \ldots, x_n)  \hspace{0.17em} dy.\)</td>
+        <td align="right">(3.20)</td>
+      </tr>
+    </table>
+    <p>
+      The integrand is supported on \(\text{supp} \hspace{0.17em} \nabla
+      \chi\), a compact set separated from all the insertions. It is therefore
+      an ordinary integral of a smooth function; no extension of a product
+      through \(x_0\) is involved.
+    </p>
+    <p>
+      For a constant translation \(v = e_b\), let \(\delta_v = \partial_b\)
+      act on local polynomial labels. For \(v (y) = K (y - x_0)\),
+      \(K^{\textsf{T}} = - K\), let \(\delta_v =\mathcal{L}_K\) be the
+      infinitesimal action induced on jets by the pullback of two-forms under
+      \(y \mapsto x_0 + e^{tK}  (y - x_0)\). Equivalently, on a smooth closed
+      two-form \(f\) its variation is
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:lie"></a>\(\displaystyle (\mathcal{L}_v f)_{ij} =
+        v_b \partial_b f_{ij} + (\partial_i v_b) f_{bj} +
+(\partial_j v_b)
+        f_{ib} = (d \iota_v f)_{ij},\)</td>
+        <td align="right">(3.21)</td>
+      </tr>
+    </table>
+    <p>
+      with sums over \(b\). On polynomial labels the action is the induced
+      Leibniz derivation, including the derivative indices of each jet. For
+      the dilation \(v (y) = y - x_0\), this action at the center is the
+      weight operator
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:weight"></a>\(\displaystyle \mathscr{E} = \sum_{j,
+        \lambda} (j + 2) X_{j, \lambda} 
+\frac{\partial}{\partial X_{j,
+        \lambda}},\)</td>
+        <td align="right">(3.22)</td>
+      </tr>
+    </table>
+    <p>
+      where \(X_{j, \lambda}\) are any linear coordinates on order-\(j\)
+      solution jets, including colour. The sum is finite on each polynomial.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Proposition <class style="font-style: normal">3.4</class>.
+        </strong><i><class style="font-style: normal"><strong>(Normalized free Ward identities)
+        </strong></class><a id="ch03:free-ward"></a> For translations, centered rotations and
+        centered dilation,</i>
+      </p>
+      <i><table width="100%">
+        <tr>
+          <td align="center" width="100%"><a id="ch03:ward-identity"></a>\(\displaystyle \mathcal{F}_{\chi, v} 
+          (P_0 ; P_1, \ldots, P_n) = S_{n + 1}^{\text{Max}} 
+(\delta_v P_0,
+          P_1, \ldots, P_n ; x_0, \ldots, x_n) .\)</td>
+          <td align="right">(3.23)</td>
+        </tr>
+      </table></i>
+      <p style="margin-bottom: 1em">
+        <i>This holds for arbitrary finite Wick polynomials and arbitrary
+        finite spectator lists. The common coefficient is \(+ 1\) for the
+        stress <class style="font-style: normal">(<a href="#ch03:stress">3.17</a>)</class> and the outward-flux
+        convention <class style="font-style: normal">(<a href="#ch03:flux">3.20</a>)</class>.</i>
+      </p>
+    </div>
+    <p>
+      The Ward mechanism is the standard free-field action of the stress
+      current. We include the normalization and the treatment of two
+      contractions at the enclosed insertion, since neither is supplied by a
+      formal integration by parts through a singularity. Wick's theorem is
+      used throughout in its usual form [<a href="references.html#bib-Wick1950">Wic50</a>].
+    </p>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>Polarize our stress between closed
+      two-forms \(f, g\):
+    </p>
+    <center>
+      \(\displaystyle t_{ab}  (f, g) = - \sum_c (f_{ac} g_{bc} + g_{ac}
+      f_{bc}) + \tfrac{1}{2}
+\delta_{ab}  \sum_{c, d} f_{cd} g_{cd},\)
+    </center>
+    <p>
+      with colour pairings understood. The Bianchi identity gives
+    </p>
+    <center>
+      \(\displaystyle \sum_a \partial_a t_{ab} = - \sum_c \left( (\text{div}
+      \hspace{0.17em} f)_c
+g_{bc} + f_{bc} (\text{div} \hspace{0.17em} g)_c
+      \right) .\)
+    </center>
+    <p>
+      The tensor is symmetric and traceless. Thus contracting with a constant,
+      skew-linear or scalar-linear \(v\) produces no additional divergence
+      term from \(Dv\).
+    </p>
+    <p>
+      Suppose \(f\) is a smooth Maxwell wave near \(\text{supp}
+      \hspace{0.17em} \chi\), and \(g\) is the covariance pulse from \(F_{ij}
+      (x_0)\). Regularize its Green function by convolution with a smooth
+      compactly supported unit-mass approximate identity \(\rho_{\epsilon}\),
+      so \(- \Delta \Gamma_{\epsilon} = \rho_{\epsilon}\). The resulting
+      closed pulse has divergence
+    </p>
+    <center>
+      \(\displaystyle (\text{div} \hspace{0.17em} g_{\epsilon})_c =
+      \delta_{cj} \partial_i
+\rho_{\epsilon}  (\hspace{0.17em} \cdot - x_0) -
+      \delta_{ci} \partial_j
+\rho_{\epsilon}  (\hspace{0.17em} \cdot - x_0)
+      .\)
+    </center>
+    <p>
+      Integrate the displayed divergence identity against \(\chi v\). An
+      integration by parts against \(\rho_{\epsilon}\) shows that the flux
+      converges to \(\partial_i  (v_b f_{bj}) (x_0) - \partial_j  (v_b f_{bi})
+      (x_0) =
+(\mathcal{L}_v f)_{ij} (x_0)\). Here \(\chi = 1\) near the
+      center. On \(\text{supp} \hspace{0.17em} \nabla \chi\), the regularized
+      covariance \(g_{\epsilon}\) and its derivatives of each fixed order
+      converge uniformly to \(g\) and the corresponding derivatives as
+      \(\epsilon \to 0\). Differentiating in the pulse center, while holding
+      \(v, \chi\) fixed, gives the same identity for every jet probe. For
+      dilation, <class style="font-style: normal">(<a href="#ch03:lie">3.21</a>)</class> becomes \((y - x_0)
+      \cdot \nabla f + 2 f\); its order-\(j\) jet at \(x_0\) is \((j + 2)\)
+      times the original jet. This gives <class style="font-style: normal">(<a href="#ch03:weight">3.22</a>)</class>.
+    </p>
+    <p>
+      In a Wick correlation, extract the two factors at the stress insertion.
+      The remaining sum has three types. If both partners are outside \(x_0\),
+      the two waves are smooth throughout the cutoff support and conservation
+      gives zero flux. If exactly one partner is at \(x_0\), the preceding
+      calculation differentiates that occurrence. Summing its possible
+      partners reconstructs Wick's rule, and summing occurrences gives the
+      Leibniz derivation \(\delta_v\).
+    </p>
+    <p style="margin-bottom: 1em">
+      If both partners are at \(x_0\), their jet orders \(j, l\) give pulse
+      homogeneities \(- 4 - j\) and \(- 4 - l\). Conservation away from
+      \(x_0\) makes the flux independent of the choice of \(\chi\). Rescaling
+      a cutoff by \(t\) about \(x_0\) multiplies this same flux by \(t^{e - 5
+      - j - l}\), where \(e = 0\) for translation and \(e = 1\) for rotation
+      or dilation. Taking \(t = 2\) forces the flux to vanish. The flux
+      integral involves the two pulses only away from their common singularity
+      at \(x_0\). The polarization counts each ordered pair twice, canceling
+      its factor \(1 / 2\). Combining the three types proves <class style="font-style: normal">(<a
+      href="#ch03:ward-identity">3.23</a>)</class>.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <h2 id="auto-31"><a id="ch03:bounded-detector"></a>3.9<span style="margin-left: 1em"></span>Separating fields by insertions
+    of bounded scaling dimension<span style="margin-left: 1em"></span></h2>
+    <p>
+      The polynomial labels and their scaling dimensions are those of Section
+      <a href="2-local-gauge-invariant-observables.html#ch02:jets-section">2.1</a>; throughout this section they are evaluated in the free
+      curvature field defined in Section <a href="#ch03:covariance">3.1</a>.
+    </p>
+    <p>
+      Corollary <a href="#ch03:detectors">3.2</a> detects a field of degree \(d\) by another
+      field of degree \(d\). A different statement is needed when a charge can
+      raise degree: its response must be tested by spectators whose degree
+      remains fixed. Their <em>number</em> may be arbitrary.
+    </p>
+    <p>
+      We first make explicit the polynomial space used here. The free image
+      \(\mathcal{M}_d^{\text{Max}}\) in <class style="font-style: normal">(<a href="#ch03:free-space">3.9</a>)</class>
+      is the full space of invariant polynomials of weight at most \(d\) on
+      the solution jets. Indeed, the radial map identifies each order of
+      solution jets with a linear subspace of the corresponding
+      radial-potential space. Choose an invariant inner product and its
+      orthogonal projection onto this subspace, separately in each weight.
+      Composing a polynomial with these projections extends it to the radial
+      jets without changing its weight or invariance. This is the usual
+      compact-group averaging argument; no equality with a larger space of
+      unrestricted formal jets is being assumed.
+    </p>
+    <p>
+      Let \(\mathfrak{P}\) be the polynomial algebra on all solution jets and
+      \(\mathfrak{P}^G\) its invariant subalgebra. For \(D \geqslant 0\),
+      define
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:ND"></a>\(\displaystyle \mathcal{N}_D = \{P \in
+        \mathfrak{P}: S^{\text{Max}} (P (x_0), P_1 (x_1),
+\ldots, P_n (x_n)) =
+        0\},\)</td>
+        <td align="right">(3.24)</td>
+      </tr>
+    </table>
+    <p>
+      where the equality is required for every separated word with \(P_i \in
+      \mathcal{M}_D^{\text{Max}}\). There is no restriction on the degree of
+      \(P\) or the length \(n\).
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em; margin-bottom: 1em">
+        <strong class="enunciation-name">Proposition <class style="font-style: normal">3.5</class>.
+        </strong><i><class style="font-style: normal"><strong>(A separating family of insertions
+        of bounded scaling dimension) </strong></class><a id="ch03:uniform-detector"></a>There is a
+        finite \(D_{\ast}\) such that \(\mathcal{N}_{D_{\ast}} \cap
+        \mathfrak{P}^G = \{0\}\).</i>
+      </p>
+    </div>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>First restrict all jet orders to at most
+      \(j\). Hilbert's finite-generation argument [<a href="references.html#bib-Hilbert1890">Hil90</a>], using
+      compact-group averaging, gives finitely many invariant generators
+      homogeneous in ordinary polynomial degree. Let \(b_j\) bound their
+      weights. To apply that standard theorem, the jet space is
+      finite-dimensional, the polynomial ring is Noetherian, and averaging
+      preserves its invariant ideal and homogeneous pieces. Thus an invariant
+      polynomial of ordinary degree \(k\) is a sum of products of generators
+      of total ordinary degree \(k\), each of weight at most \(b_j\).
+    </p>
+    <p>
+      If a polynomial in \(\mathcal{N}_{b_j}\) is nonzero, take its lowest
+      nonzero ordinary-degree part \(P_k\). Express its reflected conjugate as
+      such a sum of products, and put the factors at distinct spectator points
+      approaching a common point different from \(x_0\). There are precisely
+      \(k\) spectator legs. Higher-degree parts of \(P\) cannot pair with
+      them, and for \(P_k\) every spectator leg pairs with a leg at \(x_0\).
+      No singular spectator&ndash;spectator contraction survives. The limit is
+      the strictly positive two-point pairing of \(P_k\) with its reflected
+      conjugate, contradicting <class style="font-style: normal">(<a href="#ch03:ND">3.24</a>)</class>. This
+      proves detection at bounded jet order.
+    </p>
+    <p>
+      To obtain a uniform bound, we use a collision that lowers the highest
+      jet order. Write \(X_{j, \alpha} (p)\) for the colour-\(\alpha\)
+      order-\(j\) coordinate associated with an uncoloured probe \(p\). Fix a
+      polynomial \(P\) with highest jet order \(j\) and a quadratic spectator
+      \(\sum_{\alpha} : X_{k, \alpha} (p) X_{l, \alpha} (q)\):, where \(l <
+      k\). Contracting just its order-\(k\) leg with the top-order variables
+      of \(P\) leaves the polynomial
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:replacement"></a>\(\displaystyle \mathcal{R}_{p, q, j} (z)
+        P = \sum_{\alpha, \lambda} X_{l, \alpha} (q) C_{k,
+j}  (p, e_{\lambda}
+        ; z) \frac{\partial P}{\partial X_{j, \alpha}
+(e_{\lambda})} .\)</td>
+        <td align="right">(3.25)</td>
+      </tr>
+    </table>
+    <p>
+      The covariance \(C_{k, j}\) is in one colour. We claim that
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:replacement-null"></a>\(\displaystyle P \in \mathcal{N}_D,
+        \quad k + l + 4 \leqslant D \quad \Longrightarrow
+        \quad
+\mathcal{R}_{p, q, j} (z) P \in \mathcal{N}_D  \quad (z \ne 0)
+        .\)</td>
+        <td align="right">(3.26)</td>
+      </tr>
+    </table>
+    <p>
+      Here is the necessary separation of singularities. A differentiated
+      curvature covariance of orders \(k, j\) is harmonic, homogeneous of
+      degree \(- r\), \(r = 4 + k + j\), and becomes smooth after
+      multiplication by \(|z|^{2 (r - 1)}\). A nonzero such harmonic function
+      cannot become smooth after multiplication by \(|z|^{2 (r - 2)}\).
+      Indeed, for a harmonic homogeneous \(H\) of degree \(- r\),
+    </p>
+    <center>
+      \(\displaystyle \Delta (|z|^{2 s} H) = 4 s (s + 1 - r) |z|^{2 s - 2}
+      H.\)
+    </center>
+    <p>
+      Starting with a smooth extension at \(s = r - 2\) and iterating would
+      extend \(H\) smoothly to zero, contradicting its negative homogeneity
+      unless it vanishes. A product of two harmonic poles of orders \(r_1,
+      r_2\), on the other hand, is cleared by \(|z|^{2 (r_1 + r_2 - 2)}\).
+    </p>
+    <p>
+      Insert the quadratic spectator at \(x_0 + tz\) and keep all other
+      spectators fixed. Its two contractions with \(P\) give finitely many
+      homogeneous product poles. Subtract them before multiplying by \(t^r\).
+      The limit of the remaining expression is the correlation with <class
+      style="font-style: normal">(<a href="#ch03:replacement">3.25</a>)</class>: the lower single-contraction orders
+      vanish, and contractions with remote spectators are smooth. The original
+      full correlation is zero by <class style="font-style: normal">(<a href="#ch03:ND">3.24</a>)</class>.
+      Successively removing the highest powers of \(t^{- 1}\) shows that the
+      surviving harmonic pole is minus a product-pole coefficient of the same
+      degree, or is zero. The extra radial cancellation just proved forces it
+      to be zero in either case. This proves <class style="font-style: normal">(<a href="#ch03:replacement-null">3.26</a>)</class>;
+      in particular we have not assumed existence of the unmodified rescaled
+      collision limit.
+    </p>
+    <p>
+      Put \(g = d_{\mathfrak{g}}\) and choose \(D_{\ast} \geqslant \max (b_g,
+      2 g + 5)\). Use \(k = g + 1\) and \(l = 0, \ldots, g - 1\). For each
+      \(l\) choose a nonzero probe \(q_l\) and a solution jet on which it has
+      value one. Such jets exist in every order: for example, the curl of
+      \(e_3 \text{Re} (x_1 + ix_2)^{l + 1}\) is a nonzero homogeneous Maxwell
+      solution of degree \(l\). If the highest order \(j\) of \(P\) exceeds
+      \(g\), each polynomial <class style="font-style: normal">(<a href="#ch03:replacement">3.25</a>)</class> has
+      smaller weight than \(P\). Strong induction on weight and <class style="font-style: normal">(<a
+      href="#ch03:replacement-null">3.26</a>)</class> therefore make it zero.
+    </p>
+    <p style="margin-bottom: 1em">
+      The matrix of polynomial entries \((X_{l, \alpha} (q_l))_{l, \alpha}\)
+      has nonzero determinant: assigning the chosen order-\(l\) jet to colour
+      \(l + 1\) and zero to the other colours makes it the identity.
+      Multiplication by its adjugate, in the polynomial integral domain, shows
+      that every colour-resolved top-order contraction derivative in <class
+      style="font-style: normal">(<a href="#ch03:replacement">3.25</a>)</class> vanishes. As \(p, z\) vary, the
+      functionals \(C_{k, j}  (p, \cdot ; z)\) span the dual of the
+      order-\(j\) solution space. To verify this last assertion, a vector
+      annihilated by all of them has a response wave whose order-\(k\) jets
+      vanish everywhere off zero. It is then a polynomial of degree below
+      \(k\) there; its negative homogeneity makes it zero. Formula <class
+      style="font-style: normal">(<a href="#ch03:kelvin">3.13</a>)</class> makes the original vector zero. Hence
+      all top-order partial derivatives of \(P\) vanish. Descending removes
+      every jet order above \(g\), and the fixed-order argument with \(b_g\)
+      concludes the induction.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <h2 id="auto-32"><a id="ch03:finite-ward"></a>3.10<span style="margin-left: 1em"></span>Finite correlation criteria for
+    infinitesimal symmetries<span style="margin-left: 1em"></span></h2>
+    <p>
+      We now give the two finite-dimensional consequences used later to
+      normalize translations and remove an internal rotation defect.
+      Throughout this section the Lie algebra is simple and nonabelian. Recall
+      that \(\mathcal{M}_d^{\text{Max}}\) consists of invariant polynomials of
+      weight at most \(d\) on the solution jets \(\mathcal{S}_j\); its
+      elements are local Wick fields, not distributions defined on collision
+      sets. For maps \(A\) on this space, a <em>Ward sum</em> means
+    </p>
+    <center>
+      \(\displaystyle W_A  (P_1, \ldots, P_n ; x) = \sum_{i = 1}^n
+      S_n^{\text{Max}}  (P_1, \ldots,
+AP_i, \ldots, P_n ; x) .\)
+    </center>
+    <p>
+      All points in this definition are distinct. The word length is
+      arbitrary.
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em; margin-bottom: 1em">
+        <strong class="enunciation-name">Theorem <class style="font-style: normal">3.6</class>. </strong><i><class
+        style="font-style: normal"><strong>(Characterization of infinitesimal translations)
+        </strong></class><a id="ch03:vector-tests"></a> Let \(d \geqslant \max (4, D_{\ast})\).
+        Consider real-preserving complex-linear maps \(A_b :
+        \mathcal{M}_d^{\text{Max}} \to \mathcal{M}_{d + 1}^{\text{Max}}\)
+        which kill the unit, send \(\mathcal{M}_e^{\text{Max}}\) into
+        \(\mathcal{M}_{e + 1}^{\text{Max}}\) for \(e \leqslant d\), and
+        transform as a vector under signed coordinate permutations. Their Ward
+        sums vanish identically if and only if \(A_b = c \partial_b\) for a
+        common real scalar \(c\). There are finitely many evaluations of
+        configuration derivatives of these Ward sums, at collinear
+        configurations with line axis different from \(b\), whose common
+        kernel is precisely this translation line.</i>
+      </p>
+    </div>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>Translation invariance proves one
+      direction. We prove the converse, starting at weight four. Let
+      \(\mathcal{S}_j^{\text{sc}}\) be the scalar-valued solution jets, so
+      \(\mathcal{S}_j =\mathfrak{g} \otimes \mathcal{S}_j^{\text{sc}}\), and
+      write \(U_j = (\mathcal{S}_j^{\text{sc}})^{\ast}\) for the uncoloured
+      order-\(j\) probes and \(Q (p, q) = \sum_{\alpha} X_{j, \alpha} (p)
+      X_{k, \alpha} (q)\) for their colour-contracted quadratic. The invariant
+      metric on a simple Lie algebra is unique up to scalar. Hence
+      \(\mathcal{M}_4^{\text{Max}}\) is spanned by the unit and \(Q (p, q)\)
+      with \(p, q \in U_0\); weight five adds exactly the mixed quadratics
+      with \(p \in U_0, q \in U_1\). Inversion of all coordinates acts by \((-
+      1)^e\) at weight \(e\). The filtration and vector parity therefore imply
+      that \(A_b Q (p, p)\) is a mixed quadratic. It has a unique
+      representation by a linear map \(D_p : \mathcal{S}_0^{\text{sc}} \to
+      U_1\):
+    </p>
+    <center>
+      \(\displaystyle A_b Q (p, p) = \sum_{\lambda} Q (e^{\lambda}, D_p
+      (e_{\lambda})) .\)
+    </center>
+    <p>
+      Uniqueness follows by assigning independent zero- and first-order
+      solution jets in one colour. Here and until the coefficient comparison,
+      \(b\) is fixed.
+    </p>
+    <p>
+      Denote the one-colour covariance of probes by \(C (p, q ; z)\). The
+      three-quadratic Wick rule is
+    </p>
+    <center>
+      \(\displaystyle \begin{array}{rl}
+  & S_3^{\text{Max}}  (Q (a, v), Q (p,
+      p), Q (q, q) ; x, y, z)\\
+  & \quad = 4 d_{\mathfrak{g}}  [C (a, p ; x -
+      y) C (v, q ; x - z) + C (v, p
+  ; x - y) C (a, q ; x - z)] C (p, q ; y -
+      z) .
+\end{array}\)
+    </center>
+    <p>
+      In the Ward sum for three quadratics at \(tu, 0, z\), multiply by
+      \(t^5\) and let \(t \downarrow 0\). The third response has no
+      fifth-order pole. The one-jet covariance is odd, so the other two terms
+      have opposite signs. The zero-order covariance is invertible, allowing
+      the probe at \(z\) to be chosen so its contraction against any \(q\) is
+      \(q (X)\), for any prescribed \(X \in \mathcal{S}_0^{\text{sc}}\).
+      Consequently
+    </p>
+    <table width="100%">
+      <tr>
+        <td align="center" width="100%"><a id="ch03:panel"></a>\(\displaystyle C (D_p (X), q ; u) q (X)
+        = C (D_q (X), p ; u) p (X) .\)</td>
+        <td align="right">(3.27)</td>
+      </tr>
+    </table>
+    <p>
+      If \(p (X) = 0\), varying \(q\) with \(q (X) \ne 0\) shows that \(D_p
+      (X) = 0\). The separation used here follows from <class style="font-style: normal">(<a href="#ch03:kelvin">3.13</a>)</class>:
+      a probe pairing to zero with all zero-order probes at every displacement
+      has zero response wave, hence is zero. Thus \(D_p (X) = p (X) f_b (p)\)
+      for some \(f_b (p) \in U_1\). Cancellation in <class style="font-style: normal">(<a href="#ch03:panel">3.27</a>)</class>
+      gives
+    </p>
+    <center>
+      \(\displaystyle C (f_b (p), q ; u) = C (f_b (q), p ; u) .\)
+    </center>
+    <p>
+      This identity and separation prove additivity and real homogeneity of
+      \(f_b\); the original signed-coordinate covariance passes to \(f_b\).
+    </p>
+    <p>
+      For completeness the remaining coefficient determination is very small.
+      Write \(c_{ij}\) for the probe \(F_{ij}\) and \(\partial_a c_{ij}\) for
+      its first derivative. Parity allows only \(\partial_1 c_{12}, \partial_3
+      c_{23}, \partial_4 c_{24}\) in \(f_1 (c_{12})\). The swap of axes \(3,
+      4\) and the divergence equation reduce their span to \(\partial_1
+      c_{12}\). Similarly the candidates for \(f_1 (c_{23})\) are \(\partial_1
+      c_{23}, \partial_2 c_{13}, \partial_3 c_{12}\); the swap of axes \(2,
+      3\) and the Bianchi equation reduce them to \(\partial_1 c_{23}\). The
+      two coefficients agree by reciprocity: differentiation of the covariance
+      gives \(C (\partial_1 c_{12}, c_{23} ; e_1 + e_3) = - 1 / (2 \pi^2) \ne
+      0\). Signed permutations then give \(f_b = c_0 \partial_b\) on every
+      probe. Since \(\partial_b Q (p, p) = 2 Q (p, \partial_b p)\), we have
+      \(A_b = c \partial_b\) on weight four, with \(c = c_0 / 2\).
+    </p>
+    <p>
+      Set \(B_b = A_b - c \partial_b\). It kills the stress and still has zero
+      Ward sums. Write its Ward sum for a word with an additional stress
+      insertion. Apply the flux formula <class style="font-style: normal">(<a href="#ch03:flux">3.20</a>)</class>
+      to this insertion with the dilation vector field \(v (y) = y - x_0\).
+      The term acting on the stress is zero. The free Ward identity then gives
+      the Ward sum with \(\mathscr{E} B_b P\) in the distinguished slot and
+      \(\mathscr{E} P\) in the other terms. Subtract the ordinary Ward sum for
+      the word starting with \(\mathscr{E} P\). It follows that
+      \([\mathscr{E}, B_b] P \in \mathcal{N}_d\). Proposition <a href="#ch03:uniform-detector">3.5</a>
+      makes this commutator zero, even though its weight can be \(d + 1\).
+      Thus \(B_b\) preserves each weight eigenspace. But vector covariance
+      makes it anticommute with coordinate inversion, which is the scalar \((-
+      1)^e\) on that eigenspace. Therefore \(B_b = 0\).
+    </p>
+    <p style="margin-bottom: 1em">
+      Finally, if every configuration derivative of a Ward sum vanishes at all
+      strict collinear configurations along one axis other than \(b\), real
+      analyticity implies that it vanishes everywhere. One can connect any
+      separated configuration to such a collinear configuration without
+      collisions: order its projections on that axis, break ties by tiny
+      ordered perturbations, and interpolate to the resulting line points. The
+      projected differences keep a strict sign until the separated endpoint.
+      Analytic continuation along the segment proves the assertion. The space
+      of permitted maps is finite-dimensional over \(\mathbb{R}\). An
+      intersection of kernels of linear functionals on it is already the
+      intersection of a finite subfamily (take a basis of their span in the
+      dual). Real and imaginary parts of the evaluations give the required
+      finite family.<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <div class="theorem">
+      <p style="margin-top: 1em">
+        <strong class="enunciation-name">Theorem <class style="font-style: normal">3.7</class>. </strong><i><class
+        style="font-style: normal"><strong>(A vanishing criterion for an internal rotation defect)
+        </strong></class><a id="ch03:internal-tests"></a> For \(d \geqslant 4\), let \(\Delta :
+        \mathfrak{so} (4) \times \mathfrak{so} (4) \to
+\text{End}_{\mathbb{C}}
+        (\mathcal{M}_d^{\text{Max}})\) be real-bilinear and alternating.
+        Assume its values preserve reality and the weight filtration and kill
+        the unit, and that</i>
+      </p>
+      <i><center>
+        \(\displaystyle \Delta (sKs^{- 1}, sLs^{- 1}) = \rho (s) \Delta (K, L)
+        \rho (s)^{- 1}\)
+      </center></i>
+      <p style="margin-bottom: 1em">
+        <i>for orientation-preserving signed coordinate permutations \(s\). If
+        every value of \(\Delta\) has zero Ward sums, then \(\Delta = 0\). It
+        suffices to check that finitely many of these Ward sums vanish.</i>
+      </p>
+    </div>
+    <p style="margin-top: 1em">
+      <strong class="enunciation-name">Proof. </strong>Fix \(K, L\) and put \(U = \Delta (K,
+      L)\). At weight four write \(B_x  (P, Q) = S_2^{\text{Max}}  (P, Q ; x,
+      0)\). Recall \(R_x = I - 2 xx^{\textsf{T}} / |x|^2\), the reflection
+      normal to \(x\). The zero-order covariance is \(\pi^{- 2} |x|^{- 4}
+      \bigwedge^2 R_x\) in each colour. Wick's rule consequently gives, for
+      \(|x| = |y|\),
+    </p>
+    <center>
+      \(\displaystyle B_x  (P, Q) = B_y  (\rho (R_y R_x) P, Q) \qquad (P, Q
+      \in
+\mathcal{M}_4^{\text{Max}}) .\)
+    </center>
+    <p>
+      The two-point Ward sum says that \(U\) is skew for every \(B_x\). These
+      forms are nondegenerate by strict reflected positivity. Comparing
+      skewness for \(x\) and \(y\) therefore shows that \(U\) commutes with
+      \(\rho (R_x R_y)\) on this space. In particular it commutes with each
+      coordinate quarter-turn \(q_{ab}\), by choosing \(x\) parallel to
+      \(e_a\) and \(y\) parallel to \(e_a + e_b\).
+    </p>
+    <p>
+      An alternating bilinear map on \(\mathfrak{so} (4)\) invariant under
+      simultaneous conjugation by these quarter-turns is zero, even when its
+      values lie in an arbitrary real vector space. To see this on the basis
+      \(E_{ab} = e_a e_b^{\textsf{T}} - e_b e_a^{\textsf{T}}\), a half-turn in
+      the plane spanned by the third and fourth axes fixes one member of a
+      pair sharing an axis and negates the other. For a disjoint pair, the
+      even permutation exchanging their two ordered axis pairs exchanges the
+      arguments, so alternation gives zero. Equal pairs vanish by alternation.
+      Bilinearity proves the claim. Covariance and the commutation just proved
+      apply this observation to \(\Delta (K, L) P\) for every weight-four
+      \(P\). In particular \(U\) kills the stress.
+    </p>
+    <p style="margin-bottom: 1em">
+      For each \(H \in \mathfrak{so} (4)\), repeat the preceding commutator
+      argument using the rotation vector field \(v (y) = H (y - x_0)\) in the
+      flux formula <class style="font-style: normal">(<a href="#ch03:flux">3.20</a>)</class>. This gives
+      \([\mathcal{L}_H, U] P \in \mathcal{N}_d\). This time the commutator
+      itself lies in \(\mathcal{M}_d^{\text{Max}}\), so a single reflected
+      two-point pairing shows that it vanishes. The uniform bound \(D_{\ast}\)
+      is unnecessary. Exponentiation in the finite-dimensional space shows
+      that \(U\) commutes with every quarter-turn on the whole space.
+      Covariance and the same alternating-map argument give \(\Delta (K, L) P
+      = 0\) for every \(P\). The finiteness assertion again follows by taking
+      a basis of the span of the Ward functionals in the dual of the
+      finite-dimensional space of allowed \(\Delta\).<span style="margin-left: 1em"></span>\(\Box\)
+    </p>
+    <p>
+      Each criterion involves finitely many evaluations on a specified space
+      of possible responses. Their application to the interacting construction
+      requires proving that its responses obey the stated filtration,
+      covariance, and comparison hypotheses. No such interacting input is part
+      of the free-field results proved here.
+    </p>
+    <p>
+      
+    </p>
+    
+    <div class="ym-chapter-nav"><span class="ym-chapter-prev"><a href="2-local-gauge-invariant-observables.html">&larr; Chapter 2 Local gauge-invariant observables</a></span><span class="ym-chapter-up"><a href="../monograph.html">Contents</a></span><span class="ym-chapter-next"><a href="4-exact-blocking-and-effective-densities.html">Chapter 4 Exact blocking and effective densities &rarr;</a></span></div>
+</body>
+</html>

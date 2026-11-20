@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Independent review of Chapter13 &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Independent review of Chapter13</h1><a id="independent-review-of-chapter13"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Required clarification: coefficient filter</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Repeated-word geometry: checked</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Normalized null lemma and rank comparison: checked</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Other checks</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Resolution</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">2</a>
+      </p>
+    </div>
+    <p>
+      Compared <tt class="verbatim">13-continuum-fields.tex</tt> with Scott <tt class="verbatim">part2/F-infinite-volume.tex</tt>,
+      especially its coefficient extraction, representation-of-limits lemma,
+      and repeated reflected words proof.
+    </p>
+    <h2 id="auto-1"><a id="required-clarification-coefficient-filter"></a>Required clarification: coefficient filter<span style="margin-left: 1em"></span></h2>
+    <p>
+      The chapter assumes that the bounded projections have a common ordered
+      accumulation point, but later describes the application filter as the
+      original tails <tt class="verbatim">k &gt;= k0, N &gt;= N0(k)</tt>. An
+      accumulation point alone does not imply convergence along that filter,
+      as required by the finite-dimensional representation lemma.
+    </p>
+    <p>
+      Choose one common refinement explicitly: first a diagonal cutoff
+      subsequence <tt class="verbatim">N=n(j)</tt> for all countably many bounded
+      coefficient families at each volume, then a volume refinement. Use
+      ordered tails <tt class="verbatim">k &gt;= k0, j &gt;= j0(k)</tt> on those
+      coefficient indices. Alternatively choose a single ultrafilter extending
+      the original ordered tails and realizing all coefficient accumulation
+      points, and apply the lemma along that ultrafilter. The already existing
+      full cutoff correlation limits are unchanged in either approach. The
+      same choice must apply to all degrees, projections and comparison-label
+      families; it must precede spectators and tests.
+    </p>
+    <h2 id="auto-2"><a id="repeated-word-geometry-checked"></a>Repeated-word geometry: checked<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Choosing the first permitted cell scale below r/32 gives a_m &gt;= c
+          r^2, with the constant depending only on the fixed initial reference
+          level. The rounded slab width s=a_m floor(h/a_m) is positive since
+          h&gt;=2r and leaves buffer at least r/2.
+        </p>
+      </li>
+      <li>
+        <p>
+          The first centered scale below alpha(r/n)^2 has lower bound
+          c(r/n)^4. The requirement 20n a_k&lt;a_m exactly pays the strips for
+          at most 2n main residue patterns with margin 5a_k.
+        </p>
+      </li>
+      <li>
+        <p>
+          Expanding the OS form gives 4jn main points. Adjacent reflected
+          slabs are separated by the buffer. The two exterior copies lie
+          beyond the two ends, at times +/- (2js+t), and stay at distance at
+          least r/2 from all main points. Main cells therefore contain no
+          exterior points.
+        </p>
+      </li>
+      <li>
+        <p>
+          Because s is a multiple of a_m, the main residue list does not grow
+          with j. Choose the exterior cell side no larger than a_k and below
+          its internal separations and twice its minimum positive time; choose
+          its centered scale to satisfy 12|v| times that scale &lt; the
+          exterior cell side. Its residue patterns are also independent of j
+          because the grids are aligned. A translation smaller than the
+          exterior cell side preserves the main margins.
+        </p>
+      </li>
+      <li>
+        <p>
+          Coarse reflection preserves the aligned fine tiling. Fine-cell
+          chessboard applied to the reflected exterior product gives the
+          coarse seminorm bound X^(number of exterior factors), rather than a
+          factor growing with j. This proves the stated 4j power and
+          j-independent B_v without assuming operator boundedness.
+        </p>
+      </li>
+    </ul>
+    <p>
+      Two small clarity edits requested: name R as the coefficient bound in
+      the proposition, and explicitly require exterior cell side &lt;= a_k
+      (rather than only saying finer aligned scales).
+    </p>
+    <h2 id="auto-3"><a id="normalized-null-lemma-and-rank-comparison-checked"></a>Normalized null lemma and rank comparison: checked<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      The normalized pair <tt class="verbatim">(b_u,z_u)</tt> lies in a fixed compact
+      set with <tt class="verbatim">b_u+||z_u||=1</tt>. Functional convergence and the
+      normalized-null hypothesis imply every cluster point satisfies <tt
+      class="verbatim">L_i(z)=b t_i</tt>, simultaneously for all response functionals.
+      If b=0, z lies in both the projection range and the full null space,
+      contradicting its norm. No boundedness of the unnormalized
+      representatives is assumed. One vector therefore represents all
+      spectator/test responses. The normalized-null estimate is correctly
+      distinguished from the bounded-family null estimate.
+    </p>
+    <p>
+      The first rank bound follows from the kernel inclusion and stability of
+      finite-dimensional idempotent ranks. The second requires actual
+      interacting response matrices approaching an invertible free detector
+      matrix; this is explicitly retained as a separate hypothesis.
+      Free-theory nondegeneracy alone is not substituted for it.
+    </p>
+    <h2 id="auto-4"><a id="other-checks"></a>Other checks<span style="margin-left: 1em"></span></h2>
+    <p>
+      Countable diagonal compactness for smooth separated kernels, then
+      multilinearity, suffices for one volume subsequence. Derivative
+      identification and torus summation by parts have the correct sign and
+      physical normalization. Quotient inclusions are injective by their
+      response identities, and derivatives commute modulo the full null space.
+      Reflection positivity passes for separated positive-time forms without
+      asserting a coincident-point extension. The fixed-arity separated power
+      estimate and the repeated-word estimate use different controls on their
+      arity-dependent constants, as required.
+    </p>
+    <p>
+      The outstanding inputs remain the corrected null/inclusion/derivative
+      estimates, interacting detector comparison, and centered/interior
+      chessboard bounds for the selected family. This audit validates the
+      downstream arguments under those stated inputs, not their independent
+      construction.
+    </p>
+    <h2 id="auto-5"><a id="resolution"></a>Resolution<span style="margin-left: 1em"></span></h2>
+    <p>
+      All three requested clarifications are present in the current chapter:
+      common coefficient subsequences and their refined ordered filter are
+      explicit, R is named as the coefficient bound, and the exterior cell
+      side is at most the main centered scale. These review items are
+      resolved.
+    </p>
+  </body>
+</html>

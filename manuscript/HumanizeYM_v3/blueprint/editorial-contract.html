@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Editorial and mathematical contract &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Editorial and mathematical contract</h1><a id="editorial-and-mathematical-contract"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Audience and length</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Status of assertions</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Terminology</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Definitions and reminders</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Dependency discipline</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Proof and literature policy</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Scope of the final theorem</b> <span style="margin-left: 5mm"></span> <a href="#auto-7">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Chapter delivery</b> <span style="margin-left: 5mm"></span> <a href="#auto-8">3</a>
+      </p>
+    </div>
+    <p>
+      This file applies to every chapter. Read it together with the chapter
+      specification and <tt class="verbatim">notation.md</tt>; no other chapter need be
+      read in full. Source paths are relative to the workspace root, not to
+      this directory.
+    </p>
+    <h2 id="auto-1"><a id="audience-and-length"></a>Audience and length<span style="margin-left: 1em"></span></h2>
+    <p>
+      Write for a mathematical researcher familiar with probability, analysis,
+      and the aims of constructive QFT. Explain the mathematical role of each
+      construction before its technical definition. Cite standard arguments
+      rather than reproducing textbook proofs. Target approximately 440 pages
+      including references and notation, with a hard editorial ceiling of 500.
+      A chapter's allocation is a ceiling for its completed exposition, not a
+      request to pad a draft.
+    </p>
+    <h2 id="auto-2"><a id="status-of-assertions"></a>Status of assertions<span style="margin-left: 1em"></span></h2>
+    <p>
+      Distinguish (1) definitions, (2) standard results imported with an
+      accurate citation and checked hypotheses, (3) source-specific results
+      whose argument has been checked, and (4) conditional statements whose
+      source-specific input still requires verification. An outline saying
+      &ldquo;theorem&rdquo; is not itself a proof. Conversely, a local lemma
+      being conditional does not show that its hypotheses are unavailable
+      elsewhere. Trace suppliers through the final assembly and record the
+      exact matching problem.
+    </p>
+    <p>
+      Do not call an argument verified merely because its formal counterpart
+      is reported to compile. This project has the supplied informal
+      manuscripts and outline; it has not independently checked the Lean
+      development. Keep provenance claims attributed. Do not silently import a
+      result from the alternative coordinated Wilson family into the selected
+      family.
+    </p>
+    <p>
+      For each source-specific theorem, record in a chapter audit: source
+      labels; hypotheses and quantifiers; constants and their dependence; the
+      common lattice family and refinement used; proof status; literature
+      search; and any remaining obligation. A failure to find an older proof
+      is not a priority claim.
+    </p>
+    <h2 id="auto-3"><a id="terminology"></a>Terminology<span style="margin-left: 1em"></span></h2>
+    <p>
+      Use familiar mathematical language: local observable, polynomial jet,
+      polymer activity, connected correlation, weighted norm, large-field
+      region, small-field domain, stationary background, coupling adjustment,
+      renormalization trajectory, reference scale, coefficient transfer,
+      phase, spectral measure, Ward identity. Avoid the sources' financial and
+      organizational metaphors. A translation is valid only after stating the
+      exact mathematical object; &ldquo;uniform estimate&rdquo; cannot replace
+      an unspecified inequality.
+    </p>
+    <p>
+      Do not use code names in the running exposition. Keep Lean names,
+      source-specific jargon and supplier chains in the blueprint/audit only.
+      Nonstandard but essential mathematical constructions require an explicit
+      definition and a plain-language explanation.
+    </p>
+    <h2 id="auto-4"><a id="definitions-and-reminders"></a>Definitions and reminders<span style="margin-left: 1em"></span></h2>
+    <p>
+      Introduce every nonstandard symbol before first use, including symbols
+      in theorem statements. Avoid a global catalogue of technical definitions
+      before motivation. Reserve global names according to <tt class="verbatim">notation.md</tt>;
+      use chapter-local symbols for disposable auxiliary objects.
+    </p>
+    <p>
+      After a symbol has been unused for more than three or four typeset
+      pages, add a short reminder or definition reference at its next use.
+      Check this against the compiled PDF, not source-line distance. Repeat
+      the meaning of the scale indices at the start of every multiscale
+      chapter. Remind readers which state (mixed or a phase) a correlation
+      belongs to.
+    </p>
+    <h2 id="auto-5"><a id="dependency-discipline"></a>Dependency discipline<span style="margin-left: 1em"></span></h2>
+    <p>
+      Prove local analytic statements under explicit finite-scale assumptions
+      before choosing a global trajectory. Put the simultaneous choice of
+      constants and scales after the inequalities it must satisfy. Distinguish
+      a definition of a global construction from its existence.
+    </p>
+    <p>
+      The ultraviolet limit is the full spacing limit at fixed volume; volume
+      extraction comes afterwards. Compactness supplies subsequences and does
+      not prove convergence along all ultraviolet cutoffs. Every final
+      conclusion must concern the same selected Wilson family. Refining a
+      sequence preserves proved limits, but changing a family, normalization,
+      or trajectory requires a separate comparison theorem.
+    </p>
+    <p>
+      Place the free Maxwell calculations before their use in rank and
+      stress-tensor arguments. Coordinate reflection spaces may precede
+      continuous rotations. Full rotational covariance, phase disintegration,
+      and relativistic reconstruction must follow the actual hypothesis
+      dependencies, not the source's part numbering.
+    </p>
+    <h2 id="auto-6"><a id="proof-and-literature-policy"></a>Proof and literature policy<span style="margin-left: 1em"></span></h2>
+    <p>
+      Before adding a proof, search original literature for the statement and
+      its needed variant. Record an exact theorem/section where possible. If
+      the argument is standard or an immediate adaptation, give the statement,
+      cite it, and explain how the hypotheses match; do not reprove it. A
+      related historical paper is not a substitute for the needed estimate. In
+      particular, a perturbative beta-function calculation does not establish
+      a uniform nonperturbative block-step error bound, and reflection
+      positivity alone does not give the complete reconstruction theorem.
+    </p>
+    <p>
+      Use original publications for attribution, with an accessible
+      author/institutional copy when available. Preserve a distinction between
+      bibliographic metadata checked online, full statement inspected, and
+      applicability established. Do not copy the full source bibliography into
+      the book indiscriminately.
+    </p>
+    <h2 id="auto-7"><a id="scope-of-the-final-theorem"></a>Scope of the final theorem<span style="margin-left: 1em"></span></h2>
+    <p>
+      Keep explicit: no mass gap is established; no uniqueness of the
+      infinite-volume limit or independence of block penalty is asserted; the
+      lattice limit is the mixed state; reconstruction concerns phases; the
+      trace asymptotic is in a selected phase. The operator product expansion
+      is a remainder estimate at each finite degree, not convergence of an
+      infinite series. Contact extensions are constructed after separated
+      limits, and do not automatically inherit positivity or contact Ward
+      identities. Excluding finite Wick profiles does not exclude all
+      generalized free fields.
+    </p>
+    <h2 id="auto-8"><a id="chapter-delivery"></a>Chapter delivery<span style="margin-left: 1em"></span></h2>
+    <p>
+      Deliver a LaTeX chapter, an audit note, and any new bibliography
+      entries. Use ordinary <tt class="verbatim">definition</tt>, <tt class="verbatim">lemma</tt>,
+      <tt class="verbatim">proposition</tt>, <tt class="verbatim">theorem</tt>, and <tt class="verbatim">remark</tt>
+      environments; prefix labels by chapter number. Do not edit another
+      writer's chapter or global macros without coordination. Give the editor
+      concrete unresolved questions with source references rather than a
+      generic request for verification.
+    </p>
+    <p>
+      Before accepting a chapter: verify definitions, common conventions,
+      citation applicability, cross-references, quantifier order, page budget,
+      and the long-gap notation reminders. A clean LaTeX build checks
+      typesetting, not mathematics.
+    </p>
+  </body>
+</html>

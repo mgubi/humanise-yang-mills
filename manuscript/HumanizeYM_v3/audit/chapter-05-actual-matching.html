@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Actual predictor, forest chart, and stationary matching (Chapter 5)
+    &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Actual predictor, forest chart, and stationary matching (Chapter
+      5)</h1><a id="actual-predictor-forest-chart-and-stationary-matching-chapter-5"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Changes and established statements</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Sources checked and exact matching</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-2">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Remaining exact conditions, not silently discharged</b> <span
+        style="margin-left: 5mm"></span> <a href="#auto-3">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Literature use</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Fixed-scale convergence of the actual selected free rows</b> <span
+        style="margin-left: 5mm"></span> <a href="#auto-5">4</a>
+      </p>
+    </div>
+    <p>
+      Completed bounded same-data check after Chapter6's first-power proof.
+      Own edits are to Chapters4/5; Chapter6 owner is replacing the moved
+      proof by references. No global build run.
+    </p>
+    <h2 id="auto-1"><a id="changes-and-established-statements"></a>Changes and established statements<span style="margin-left: 1em"></span></h2>
+    <ol>
+      <li>
+        <p>
+          Moved the first-power predictor proof to Chapter4, <tt class="verbatim">ch04:predictor-geometry</tt>,
+          <tt class="verbatim">ch04:predictor-comparison</tt>, <tt class="verbatim">ch04:macro-comparison</tt>.
+          It uses precisely the normalized minimizing-frame /
+          eligible-axial-frame branches and nearest-centroid /
+          connector-predictor branches already defined there. No forward
+          Chapter6 reference remains in Chapters4/5.
+        </p>
+      </li>
+      <li>
+        <p>
+          Defined the actual forest chart <tt class="verbatim">U(v,psi)_e=exp(iota_F
+          psi)_e (rep exp v)_e</tt> (<tt class="verbatim">ch05:forest-chart</tt>). Its
+          vertical derivative at zero is exactly the zero extension <tt class="verbatim">iota_F</tt>,
+          and this is an isometry in real physical counting coordinates (<tt
+          class="verbatim">ch05:forest-derivative</tt>). Trees contain internal block
+          edges only, so replica is one on tree edges. This is the coordinate
+          identification missing from a bare abstract gap assertion.
+        </p>
+      </li>
+      <li>
+        <p>
+          Verified fixed-patch analytic minimizing branches for the selected
+          kernel. The normalized frame Hessian at flat field is positive;
+          predictor Hessian is identity. At fixed j,L, one finite reference
+          patch supplies a common analytic ball, derivative bounds and strict
+          minimizing tests, independent of the period. On this whole ball all
+          redundant tags select the same action functions; equality is before
+          stationarity, not merely on a graph. This concerns the uncut action,
+          not globally analytically continued cutoff indicators or shrinking
+          cutoff plateaux.
+        </p>
+      </li>
+      <li>
+        <p>
+          Computed the actual normalized frame derivative and predictor: <tt
+          class="verbatim">tau_y(r)=-av_(r',o) I_a(Ly+r&rarr;Ly+r';o)</tt>, <tt class="verbatim">H_y,r=tau_y(r)-tau_y(0)</tt>,
+          <tt class="verbatim">R a(y)=-sum_r w_r H_y,r</tt>; <tt class="verbatim">Qactual=M+d_c0
+          R</tt>, <tt class="verbatim">Qactual d_f0 phi=d_c0(phi at block roots)</tt>
+          (<tt class="verbatim">ch05:actual-Q</tt>). The averaging M is the same j-fold
+          centered box average used in the alias recurrence. R has finite
+          coarse range and absolute row bound C_j L. The signs agree with d0
+          phi(x,mu)=phi(x+mu)-phi(x).
+        </p>
+      </li>
+      <li>
+        <p>
+          Derived the nonlinear actual-tree comparison from the Chapter4
+          macro/frame estimates (<tt class="verbatim">ch05:nonlinear-tree</tt>), then
+          differentiated at zero and summed squared local bounds to prove <tt
+          class="verbatim">ch05:tree-comparison</tt>. Constants depend on fixed j,L, not
+          period/tree. Arbitrary block trees have path length at most
+          L&#x2074;&minus;1; the sharper source4L bound is unnecessary for
+          this fixed-L use. It is not used for the pre-L macro curvature
+          estimate.
+        </p>
+      </li>
+      <li>
+        <p>
+          Defined the actual normalized classical action with exact b times
+          Wilson predictor penalty, excluding common inverse coupling and
+          inherited quadratic loop terms (<tt class="verbatim">ch05:actual-action</tt>).
+          Its Hessian is <tt class="verbatim">&#x27E8;d_f a,H_f d_f
+          a'&#x27E9;+b&#x27E8;h-Qactual a,h'-Qactual a'&#x27E9;</tt>, with <tt
+          class="verbatim">a=rep h+iota_F z</tt> (<tt class="verbatim">ch05:actual-hessian</tt>).
+          Vanishing first derivatives eliminate second derivatives of the
+          forest lift; vanishing residual eliminates higher predictor
+          derivatives. This gives the actual vertical gap (<tt class="verbatim">ch05:actual-gap</tt>)
+          from the same path action's positive quadratic metric.
+        </p>
+      </li>
+      <li>
+        <p>
+          Identified a smooth actual-predictor transport. Let Ws be the
+          previously proved straight-average transport. A smooth compactly
+          supported cardinal partition of unity gives a coarse-to-fine site
+          extension E with E h(Ly)=h(y), fine difference bounds C_r L^-r and
+          bounded coarse range. Then <tt class="verbatim">Wa=Ws-d_f0 E R Ws</tt> (<tt
+          class="verbatim">ch05:corrected-transport</tt>) satisfies <tt class="verbatim">Qactual
+          Wa=I-b^-1 Kc</tt>, <tt class="verbatim">Kf Wa=Qactual* Kc</tt>, <tt class="verbatim">d_f1
+          Wa=d_f1 Ws</tt> (<tt class="verbatim">ch05:actual-transport-identities</tt>).
+          Since R has size O_j(L) and Ws has size O_j(L^-1), RWs has O_j(1)
+          exponentially decaying coarse kernel. Differencing E proves <tt
+          class="verbatim">|&nabla;_f^r Wa(Ly+x,y')|&lt;=C_j,r L^-1-r exp(-c_j
+          dist(y,y'))</tt> at all orders previously proved for Ws (<tt class="verbatim">ch05:actual-bridge</tt>).
+          This supplies the actual smooth representative; it does NOT transfer
+          these bounds to discontinuous tree coordinates. No inverse of a
+          zero-mode Laplacian is used; the extension preserves constants.
+        </p>
+      </li>
+      <li>
+        <p>
+          Set tree edges to zero by a unique root-zero site gradient. This
+          leaves actual Q and curl unchanged and defines WF. Exact gap gives
+          uniqueness on the slice; implicit differentiation gives <tt class="verbatim">rep
+          v+iota_F D rho(0)v=WFv</tt> (<tt class="verbatim">ch05:stationary-tangent</tt>).
+          Wa and WF are explicitly distinguished.
+        </p>
+      </li>
+      <li>
+        <p>
+          Added <tt class="verbatim">ch05:actual-stationary</tt>: under the incoming
+          path coefficient budget and actual positive quadratic coefficient,
+          the selected kernel and forest chart now supply the previously
+          conditional branch/tree inputs. Common real chart, uniform Hessian
+          gap and supremum inverse, volume-independent branch Lipschitz bound,
+          all-tag equality, and polynomial-in-coordinate-number higher
+          derivative/determinant bounds are stated. Requested derivative order
+          is fixed before the common path/coordinate budget; for k+4
+          determinant derivatives choose action order at least k+6. No
+          dimension-dependent norm conversion is used to select the radius.
+        </p>
+      </li>
+    </ol>
+    <h2 id="auto-2"><a id="sources-checked-and-exact-matching"></a>Sources checked and exact matching<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Scott B370&ndash;390 defines the replica, zero-extension forest
+          chart and normalized action exactly as used above. B425&ndash;462
+          gives frame derivative, tree comparison and stationary tangent. The
+          source's finite-volume IFT paragraph alone does not prove a uniform
+          radius; the chapter uses the quantitative rooted derivative sums
+          instead.
+        </p>
+      </li>
+      <li>
+        <p>
+          Martin <tt class="verbatim">path-attachment-producer.tex</tt>130&ndash;235:
+          nonlinear planted comparison, squared macro count and full tested
+          Hessian identity. Their forest-lift derivative is explicitly
+          realized here, avoiding an uninterpreted abstract chart
+          compatibility premise.
+        </p>
+      </li>
+      <li>
+        <p>
+          Same file235&ndash;300 distinguishes period-uniform gap from
+          possibly volume-dependent IFT neighborhoods, and assumes equality of
+          tested actions in the full variables. Our finite-patch
+          minimizing-branch argument verifies this for the actual Chapter4 tag
+          choices.
+        </p>
+      </li>
+      <li>
+        <p>
+          Martin <tt class="verbatim">seed-geometry.tex</tt>: first-power
+          synchronization/endpoint comparison, both predictor branches, and
+          actual macro multiplicities; proof moved earlier.
+        </p>
+      </li>
+      <li>
+        <p>
+          Martin <tt class="verbatim">seed-tree-patch.tex</tt> and <tt class="verbatim">sector-gram.tex</tt>66ff:
+          actual-tree comparison and linearization. No transported-flat matrix
+          is substituted for actual derivatives.
+        </p>
+      </li>
+      <li>
+        <p>
+          Martin <tt class="verbatim">uniform-stationary-chart.tex</tt>8&ndash;159:
+          rooted derivative estimate, gap, weighted inverses, uniform
+          contraction;160ff higher derivatives and log determinant polynomial
+          bounds. It explicitly requires local-action derivative data; the
+          chapter obtains these from its exponential connected path budget.
+        </p>
+      </li>
+      <li>
+        <p>
+          The smooth cardinal extension is a standard partition-of-unity
+          interpolation, used here to choose a representative with exact root
+          values. Its explicit formula verifies the needed fixed-range and
+          difference estimates directly. It avoids assuming the block-constant
+          representative has smooth fine differences.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-3"><a id="remaining-exact-conditions-not-silently-discharged"></a>Remaining exact conditions, not silently
+    discharged<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          The selected incoming <strong>uncut</strong> classical path action
+          must satisfy <tt class="verbatim">ch05:path-budget</tt>: fixed finite path
+          arity, connected rooted supports, and absolute coefficient sum
+          bounded after weighting by exp(sigma times total true path length).
+          Products of path rows require the corresponding product budget. This
+          is a condition on the actual selected coefficient family, not merely
+          a bound on a flat kernel.
+        </p>
+      </li>
+      <li>
+        <p>
+          Its quadratic coefficient must equal the Kf used in the chosen
+          Gaussian construction. In direct/path-square coordinates this means
+          the actual linearized row factorization, including orientation
+          normalization, gives the selected Hf (or agrees on all curls).
+          Higher curvature-degree atoms have no quadratic coefficient; this
+          fact does not establish the row-factorization identity for arbitrary
+          supplied coefficients. A positive actual metric alone suffices for
+          the stationary chart; identifying its reduced Hessian with the
+          particular historical Kc additionally requires this coefficient
+          match.
+        </p>
+      </li>
+      <li>
+        <p>
+          Common minimizing-branch equality is proved for the actual
+          frame/predictor tags. It does not identify an arbitrarily modified
+          local test action, a different Borel mask, or a different incoming
+          coefficient family with this one. Cutoff recognition on shrinking
+          plateaux and Gaussian exterior estimates remain Chapter6/9 issues.
+        </p>
+      </li>
+      <li>
+        <p>
+          Fixed-L supremum stationary estimates do not by themselves imply
+          every ratio-uniform weighted inverse estimate required for one-loop
+          nonlinear response. The actual smooth transport bridge is now
+          supplied, but weighted Hessian/vertex estimates for the
+          differentiated one-loop determinant remain separate inputs if their
+          norm is stronger than the chapter's fixed-L counting/supremum norms.
+        </p>
+      </li>
+      <li>
+        <p>
+          Gauge changes of the determinant must retain Haar and gauge
+          normalization contributions. The tangent identification is not a
+          license to replace a full nonlinear background by its linear tangent
+          in a second derivative of the one-loop action.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-4"><a id="literature-use"></a>Literature use<span style="margin-left: 1em"></span></h2>
+    <p>
+      The finite-dimensional analytic implicit-function theorem is cited to
+      the already verified LeblSCV key; no new analytic theorem is claimed.
+      The weighted inverse estimate and Gaussian/logdet differentiation reuse
+      the existing Chapter5 references and arguments. New work in this pass is
+      the exact same-predictor/coordinate identification and representative
+      correction. No new bibliography key or global macro is required.
+    </p>
+    <h2 id="auto-5"><a id="fixed-scale-convergence-of-the-actual-selected-free-rows"></a>Fixed-scale convergence of the actual selected free
+    rows<span style="margin-left: 1em"></span></h2>
+    <p>
+      Added <tt class="verbatim">ch05:horizon-convergence</tt> and Proposition <tt
+      class="verbatim">ch05:horizon-limit</tt>. Source packet: Martin <tt class="verbatim">existence/free-horizon-convergence.tex</tt>
+      (all subsections), with the exact covariance recurrence and uniform
+      alias/strip estimates already developed in Chapter5. This closes the
+      previous qualitative quadratic cutoff-convergence interface for the
+      fixed nested schedule.
+    </p>
+    <p>
+      The actual schedule is held fixed at every scale while its fine endpoint
+      is extended. Its directional driving-filter squares decrease on real
+      momenta; extending the history leaves old noise contributions unchanged
+      and appends a nonnegative contribution. Uniform noise bounds and a
+      summable high-alias majorant give convergence of each nonzero-momentum
+      directional covariance. All rational metric and transport denominators
+      have positive limits off zero. The common analytic strip then identifies
+      unique infinite-cover coefficient limits, and convergence holds in every
+      smaller exponential coefficient norm. Zero modes are treated by
+      continuity of the regular cluster symbols, without assigning a finite
+      massless covariance at zero.
+    </p>
+    <p>
+      The specified exterior lifts are the fixed coordinate divided-difference
+      lifts, so they inherit convergence; arbitrary fresh solutions of an
+      exterior identity would not. Metric amendments are fixed before cutoff
+      selection. Positive square roots are the canonical positive roots and
+      converge by positive-semidefinite uniqueness on all tori plus recovery
+      of cover coefficients from unbounded periods. A direct-factor root of
+      Htilde-cI requires the stated fixed strict gap margin. Finite
+      products/inverses of these rows, including the usual retained factor
+      blocks, inherit convergence. The actual predictor correction R and its
+      cardinal extension are fixed finite-range rows at fixed scale, so the
+      corrected tangent inherits the same conclusion.
+    </p>
+    <p>
+      Martin <tt class="verbatim">flat-step.tex</tt> and <tt class="verbatim">flat-estimate.tex</tt>
+      concern a different quantitative cutoff-rate mechanism. The latter
+      explicitly does not prove the former RG majorant hypothesis. Neither is
+      needed for the qualitative free-row limit proved here, and no rate is
+      claimed. Nonlinear activity convergence and marked fixed-input
+      continuity are still separate obligations; this proof does not identify
+      those with Gaussian convergence.
+    </p>
+    <p>
+      Validation: checked same scale schedule, alias scaling L^-2, principal
+      positivity, zero-mode handling, root signs, strict exponential-width
+      loss, and preservation of cover rather than merely one-torus
+      coefficients. No global build run (parent owns build).
+    </p>
+  </body>
+</html>

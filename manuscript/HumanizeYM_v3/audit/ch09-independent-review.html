@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Independent review of Chapter 9 &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Independent review of Chapter 9</h1><a id="independent-review-of-chapter-9"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Actionable findings</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p>
+        1. State spatial-weight and derivative-order hypotheses <span style="margin-left: 5mm"></span>
+        <a href="#auto-2">1</a>
+      </p>
+      <p>
+        2. Reflected localization needs the shifted evaluations <span style="margin-left: 5mm"></span>
+        <a href="#auto-3">1</a>
+      </p>
+      <p>
+        3. Specify the finest direct coefficient <span style="margin-left: 5mm"></span> <a href="#auto-4">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Exact algebra checked</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Fusion checks</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Scalar reset and continuity checks</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-7">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Wilson initialization checks</b> <span style="margin-left: 5mm"></span> <a href="#auto-8">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Hidden forward assumptions</b> <span style="margin-left: 5mm"></span> <a href="#auto-9">4</a>
+      </p>
+    </div>
+    <p>
+      Snapshot reviewed: <tt class="verbatim">chapters/09-renormalization.tex</tt>,
+      2026-11-19, while author was doing terminology integration. No chapter
+      edits were made. Scope: exact subtraction/replacement/fusion, scalar
+      normalization, continuity, Wilson initialization, and hidden interface
+      assumptions.
+    </p>
+    <h2 id="auto-1"><a id="actionable-findings"></a>Actionable findings<span style="margin-left: 1em"></span></h2>
+    <h3 id="auto-2"><a id="1-state-spatial-weight-and-derivative-order-hypotheses"></a>1. State spatial-weight and derivative-order
+    hypotheses<span style="margin-left: 1em"></span></h3>
+    <p>
+      At the local subtraction estimate (around line429), the assertion <tt
+      class="verbatim">t&sup2;|q_f(q,r)|&lt;=3a_f</tt> uses the affine directions
+      A_b(y)=xi_o(y)^a T. Chapter4's seminorm allows directions only of size
+      t(1+dist)^varpi, and its stated range is arbitrary varpi&gt;=0. A
+      support-independent affine test bound requires at least varpi&gt;=1.
+      With varpi&lt;1 it incurs a support-diameter factor; it cannot be
+      bounded by the displayed fixed constant.
+    </p>
+    <p>
+      Moreover the inherited L^-5 argument uses more than q&gt;=2. Scott <tt
+      class="verbatim">part2/D-section.tex</tt>, inherited discussion around
+      lines260&ndash;279, explicitly requires incoming varpi&gt;=outgoing
+      varpi&gt;=2 and q&gt;=6. Add these chosen-stage conditions at Chapter9's
+      start and one-step statement (or explicitly retain the appropriate
+      support and derivative hypotheses). Since Chapter4 deliberately permits
+      a general class, these requirements should not be left implicit in
+      &ldquo;choose the stage constants.&rdquo;
+    </p>
+    <h3 id="auto-3"><a id="2-reflected-localization-needs-the-shifted-evaluations"></a>2. Reflected localization needs the shifted
+    evaluations<span style="margin-left: 1em"></span></h3>
+    <p>
+      Around lines277&ndash;305, the claim that reflected local summands have
+      the same value within an interior class is not true for a generic
+      nonconstant configuration reflected once about x. The source uses two
+      different evaluation arrangements:
+    </p>
+    <ul>
+      <li>
+        <p>
+          the bounded auxiliary sum defining G_x evaluates on V_(i,x);
+        </p>
+      </li>
+      <li>
+        <p>
+          the pointwise discrepancy L_x evaluates its y summand on
+          V_(i,x&minus;ytilde), so auxiliary site y corresponds to the same
+          physical site x.
+        </p>
+      </li>
+    </ul>
+    <p>
+      Only the second arrangement has the class-constant property needed for
+      the fourth finite difference. Summing over x and translation reindexing
+      relates it to the first. See Scott <tt class="verbatim">eq:D-five-weights</tt>,
+      <tt class="verbatim">eq:D-mask-localization</tt> and proof of <tt class="verbatim">lem:D-localization</tt>
+      (around lines350&ndash;395).
+    </p>
+    <p>
+      Add those definitions and the reindexing step. Alternatively identify
+      the localization result as another explicit input. Merely saying
+      &ldquo;extend by reflection&rdquo; does not prove the claimed local
+      reconstruction. The binomial weights themselves are correct: sum(-1)^i
+      binom(4,i)i^4=4!, with leading multiplicity2^4.
+    </p>
+    <h3 id="auto-4"><a id="3-specify-the-finest-direct-coefficient"></a>3. Specify the finest direct coefficient<span style="margin-left: 1em"></span></h3>
+    <p>
+      Wilson initialization chooses sqrt(1&minus;c_dir), so requires
+      0&lt;c_dir&lt;=1 (usually strictly below1). Chapter4 only
+      states16c_lin&lt;c_dir. The matched metric identity elsewhere forces
+      this bound for a selected metric, but initialization should explicitly
+      choose it rather than use an undefined real square root for the general
+      Chapter4 parameter range.
+    </p>
+    <p>
+      A useful accompanying sentence: F(e^X) is odd under X&rarr;&minus;X, its
+      local inverse is odd, and W(u^-1)=W(u). Hence W(e^{psi(Y)}) is even, so
+      its missing cubic Taylor term really is zero. This is a short
+      justification, not an additional substantive assumption.
+    </p>
+    <h2 id="auto-5"><a id="exact-algebra-checked"></a>Exact algebra checked<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          <tt class="verbatim">ch09:subtract-identity</tt> is correct on both h_Z=1 and
+          h_Z=0. Enlargement includes X and the clover neighborhood; on h_Z=1
+          the smaller masks are1. The regular remainder has the intended flat
+          value/affine-Hessian normalization on nonwrapping supports.
+        </p>
+      </li>
+      <li>
+        <p>
+          <tt class="verbatim">ch09:channel</tt> is correct separately on the two health
+          domains. On h_Y=1 it reduces to alpha aP+Delta aQ; on h_Y=0 its
+          correction J supplies the difference exactly.
+        </p>
+      </li>
+      <li>
+        <p>
+          The signs in <tt class="verbatim">ch09:path-identity</tt> and <tt class="verbatim">ch09:before-fusion</tt>
+          are consistent: replacing alpha Q+Delta C by
+          (alpha+Delta)K+F&minus;J produces the positive exponent of J and
+          zeta, and E=masked R+F. The cubic/quartic regular terms must have
+          sign &minus;(alpha+Delta), as written.
+        </p>
+      </li>
+      <li>
+        <p>
+          No division by a possibly signed or zero exact-cover gas occurs.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-6"><a id="fusion-checks"></a>Fusion checks<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          In a nonzero logarithmic selection each log support contains a bad
+          site. Exact coverage places that site in a preliminary inventory
+          whose exclusion support intersects the log support. Thus every
+          connected component has a large-field vertex.
+        </p>
+      </li>
+      <li>
+        <p>
+          Taking connected components and flattening are inverse operations
+          when preliminary supports are disjoint, new supports are their
+          unions with log supports, inventories are unions, and all inherited
+          tests are retained. Extra flag-read overlap does not affect this
+          combinatorial bijection.
+        </p>
+      </li>
+      <li>
+        <p>
+          The sum bound is compatible with the stated spare exponent. A
+          support has at most h c(Z) sites with h=(2B+1)^4. The positive
+          rooted-tree recursion uses attachment sum&lt;=h gamma c(Z); if h
+          gamma&lt;=1, the input weight exp((sigma+1)c) absorbs it. Rooting
+          through a fixed site gives a bound&lt;=gamma,
+          hence&lt;=exp(gamma)&minus;1. Retaining exp(&minus;kappa) from one
+          large-field label per component is valid.
+        </p>
+      </li>
+      <li>
+        <p>
+          The proposition's opening exact identity for countably many labels
+          also uses absolute summability of the preliminary gas. This is
+          supplied by the preceding early bounds; it would be helpful to
+          include that hypothesis if the proposition is meant to stand alone.
+          It is not a missing assumption in its present application.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-7"><a id="scalar-reset-and-continuity-checks"></a>Scalar reset and continuity checks<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          The reset beta=beta'+alpha+Delta and scalar tau&minus;|Lambda|^-1
+          sum f_i(1) follow directly. At the flat field all path terms,
+          regular remainders and logarithmic discrepancies vanish, and the
+          only cover is empty. Thus the intrinsic flat logarithm agrees.
+        </p>
+      </li>
+      <li>
+        <p>
+          Delta bound is H_pre/t&sup2; = O(beta_ref^-1/10 (M_cut)^-2); its
+          exponent is correct.
+        </p>
+      </li>
+      <li>
+        <p>
+          The intrinsic test has f(d)=(d&minus;Delta)K(U_<em>), with the
+          displayed sign of log(H(1)/H(U_</em>)). It is valid because the full
+          identity has already been proved and U_* is small-field. It cannot
+          serve as a substitute for that identity; the text explicitly says
+          so.
+        </p>
+      </li>
+      <li>
+        <p>
+          Gaussian Radon&ndash;Nikodym ratio and score signs are correct.
+          Holding physical coordinates fixed avoids differentiating merely
+          measurable link activities. Domination must include the actual
+          means/matrices, which is acknowledged as common-law input.
+        </p>
+      </li>
+      <li>
+        <p>
+          Fixed-curve compactness gives uniform weighted truncation; it does
+          not give a common truncation over arbitrary same-label families. The
+          draft correctly restricts this statement.
+        </p>
+      </li>
+      <li>
+        <p>
+          The summable-subsequence argument for weighted output continuity is
+          sound: continuity in weighted input norms gives a subsequence with
+          summable discrepancies, the strict margin admits the envelope, and
+          domination yields a convergent further subsequence of every
+          allegedly bad sequence.
+        </p>
+      </li>
+      <li>
+        <p>
+          At fixed volume, the exact-cover telescoping bound follows by
+          dropping eligibility restrictions and summing the positive product
+          envelope. It does not require positivity of individual activities.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-8"><a id="wilson-initialization-checks"></a>Wilson initialization checks<span style="margin-left: 1em"></span></h2>
+    <p>
+      Conditional on 0&lt;c_dir&lt;=1, the residual-energy formula is
+      algebraically correct in all cases:
+    </p>
+    <ul>
+      <li>
+        <p>
+          chord&gt;t: health and relaxed masks vanish and W&minus;c_lin t
+          chord is the residual;
+        </p>
+      </li>
+      <li>
+        <p>
+          chord&lt;=t with h_p=0: L plus residual equals W because the row
+          term cancels;
+        </p>
+      </li>
+      <li>
+        <p>
+          chord&lt;=t with h_p=1: T4+R=W&minus;|F|&sup2;/2, so again the
+          displayed equality holds, even if the relaxed test fails due to a
+          nearby bad plaquette.
+        </p>
+      </li>
+    </ul>
+    <p>
+      The residual is nonnegative using |F|&lt;=chord and W=chord&sup2;/2. For
+      chord&gt;t, c_lin&lt;=1/16 gives at least t&sup2;/4. The bound d_I&gt;=c
+      t&sup2;|I| follows from a bad plaquette per bad site and at most four
+      vertices per plaquette. Components formed by overlapping radius2B
+      neighborhoods give unique compatible exact cover; every positive
+      row-test failure has a witness in that component. The
+      connected-inventory count can be paid by beta t&sup2;~(M_cut)&sup2;. The
+      regular exponent beta t5 / epsilon_reg=beta_ref^-2/5(M_cut)^5 is
+      correct.
+    </p>
+    <h2 id="auto-9"><a id="hidden-forward-assumptions"></a>Hidden forward assumptions<span style="margin-left: 1em"></span></h2>
+    <p>
+      The chapter properly leaves these model-specific estimates conditional:
+      common sector product bounds, inherited interpolation comparison,
+      low-order same-integral remainder, selected determinant comparison, and
+      the output coupling-band margin. None follows merely from the standard
+      one-loop coefficient or from selecting a scale schedule. The
+      preparation-to-localization step needs the correction in finding2 before
+      it can be counted as proved rather than an extra input.
+    </p>
+    <p>
+      <h1>Integration follow-up</h1><a id="integration-follow-up"></a>
+    </p>
+    <p>
+      The chapter author incorporated the three review corrections before the
+      integrated build of 19 November 2026: monotone derivative/spatial-weight
+      requirements, the recentered reflected-evaluation formulas and
+      translation reindexing, and the top-scale bound <tt class="verbatim">0&lt;c_dir&lt;=1</tt>.
+      The review below records the earlier snapshot and should not be read as
+      a list of still-open editorial fixes. The analytic assumptions recorded
+      in the chapter remain open where explicitly stated.
+    </p>
+  </body>
+</html>

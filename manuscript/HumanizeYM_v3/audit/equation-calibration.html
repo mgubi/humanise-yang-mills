@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Same-history equation calibration &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Same-history equation calibration</h1><a id="same-history-equation-calibration"></a>
+    </p>
+    <p>
+      Fragments written:
+    </p>
+    <ul>
+      <li>
+        <p>
+          chapters/02-equation-section.tex (raw local proof, independent of
+          RG)
+        </p>
+      </li>
+      <li>
+        <p>
+          chapters/11-equation-calibration.tex (insert after trial-descent and
+          before detector discussion, or after current output definitions;
+          parent must resolve definition ordering).
+        </p>
+      </li>
+    </ul>
+    <p>
+      Sources checked: Martin/existence/marked-portfolio-calibration.tex
+      160&ndash;297 (finite derivative credits, explicit floor, entry delays),
+      310&ndash;510 (symmetrization and solaris);
+      actual-marked-portfolio-calibration.tex 113&ndash;245 (last-step cone
+      and same-history backward comparison);
+      original-history-portfolio-attachment.tex 205&ndash;243 (pre-length
+      numerical floors), 275&ndash;289 (actual reserves);
+      public-run-binding.tex 55&ndash;75 (same run entry delays). The source
+      itself says the fixed-section floor comparison is an explicit caller
+      condition. Fragment constructs that floor before L is chosen, rather
+      than calling an unproved global certificate.
+    </p>
+    <p>
+      IMPORTANT normalization issue found during exposition: Raw construction
+      gives V_d(R_d I_d) microscopic null. Existing Chapter11 physical
+      convention is a_N^{-d} V_d(S_{1/t_N} v). Hence its equation labels are
+      S_{t_N} R_d I_d, equivalently (S_t R S_t^{-1})I_d, NOT R_d I_d unless R
+      commutes with factor scaling. Raw R may raise factor count, so it need
+      not commute. Fragment preserves this conjugation explicitly.
+    </p>
+    <p>
+      Follow-up source match: actual-equation-kernel-relay.tex 350&ndash;410
+      explicitly uses E=X S_theta coords R and B=X P X^{-1}E=X P S_theta R.
+      Thus the new fragment agrees with the source, and no missing engineering
+      dilation in the physical insertion has been established.
+      Scott/part1/02-definitions.tex 125&ndash;170 explicitly separates
+      engineering weight, factor scaling, and common degree tag a_N^{-d}; the
+      terminal map Z carries the engineering evolution.
+    </p>
+    <p>
+      R can raise engineering weight without raising factor count, so the raw
+      conjugation need not tend to identity. This is not itself an
+      obstruction: the source uses the actual moving equation plane, uniformly
+      bounded projections, and a separate finite-rank detector argument; it
+      does NOT require convergence to the unmodified Maxwell plane. The exact
+      remaining all-period join is uniform injectivity of the finite
+      correlation detector on the complement of this very moving plane
+      (ch11:detector-bound). Raw triangularity alone does not prove that join.
+      Source candidate finite-rank-kernel-transport.tex derives limiting rank
+      on an ordered extraction; fullmesh-fixedbounds-producer.tex is needed
+      for the stronger all-period quantitative statement.
+    </p>
+    <p>
+      No global compile. Nearidentity/root-error argument retains all terminal
+      attachment charges, and requires the existing Chapter11 actual
+      attachment hypotheses. The new local equation construction itself has no
+      such hypotheses.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Independent review of Chapter10 &ndash; Humanise
+    Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Independent review of Chapter10</h1><a id="independent-review-of-chapter10"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>One editorial correction</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Real-parameter supplier checks</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Coefficient paths and the free Gaussian limit</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Common input, higher derivatives and zero arrays</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-4">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Coupled uniqueness checks</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Resolution</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">3</a>
+      </p>
+    </div>
+    <p>
+      Reviewed the actual real-parameter supplier, fixed-readout coefficient
+      comparison, common-input cutoff continuity, zero-terminal-array
+      histories and coupled convergence. Source packets: Martin <tt class="verbatim">sector-analytic-prices.tex</tt>,
+      <tt class="verbatim">projected-parameter-prices.tex</tt>, <tt class="verbatim">parameter-comparison-suppliers.tex</tt>,
+      <tt class="verbatim">compensated-variation.tex</tt>, <tt class="verbatim">selected-history-limits.tex</tt>,
+      with the actual free-row convergence proved in Chapter5.
+    </p>
+    <h2 id="auto-1"><a id="one-editorial-correction"></a>One editorial correction<span style="margin-left: 1em"></span></h2>
+    <p>
+      The later section <tt class="verbatim">ch10:identification</tt> still says that
+      moving cutoffs must have negligible boundary layers. The preceding
+      actual comparison instead holds the physical fine fields and
+      reference-threshold masks fixed. No moving-threshold boundary-layer
+      assertion is needed for that route. Replace this stale sentence by the
+      fixed physical-mask statement (and its common protected-coordinate
+      Jacobian). It should not remain as a new unproved requirement after the
+      completed theorem.
+    </p>
+    <h2 id="auto-2"><a id="real-parameter-supplier-checks"></a>Real-parameter supplier checks<span style="margin-left: 1em"></span></h2>
+    <p>
+      The finite-test argument uses one common dictionary and one fixed
+      low-order coefficient projection. Local algebraic extensions to larger
+      affine activity lines need not represent positive densities; their small
+      logarithmic and forced factors are still controlled by polynomial
+      interpolation and the convergent local expansion. Positivity is
+      separately retained for the actual histories.
+    </p>
+    <p>
+      The coupling-band arithmetic is consistent: radius R=y^(1/256) produces
+      relative coupling variation O(y^(-7/256)), smaller than
+      delta=y^(-1/128). A lower reference coupling supplies
+      1&lt;=a-6R|c|&lt;=a+6R|c|&lt;=1+delta. For either sign of the real
+      energy q, choosing the node sign as stated makes the signed exponential
+      dominate its coefficient norm; this does not replace the energy by its
+      absolute value. The prefactor and projected Gaussian coordinate costs
+      are local coordinate counts, paid by support reserve, not by the total
+      volume.
+    </p>
+    <p>
+      The primitive exponent after the R^2 cost is -55/128, leaving the
+      claimed -2/5 reserve. The later -3/8 and -1/4 bounds leave room for
+      fixed derivative and projection factors. The uniform bounded cover
+      number of the local projection support is explicitly retained;
+      subpolynomial growth of that cover number alone would not suffice in an
+      exponential weight. The 300-degree interpolation remainder has exponent
+      -365/256, as stated. The order of choosing the small response allowance
+      before the threshold is correct. The forced fusion estimate keeps one
+      compulsory hard factor and its comparison with the output forced
+      allowance is arithmetically consistent.
+    </p>
+    <p>
+      The bounded map from the moment vectors in c0 yields the actual
+      power-series bound, rather than inferring analyticity from continuity.
+      Its short-line and large-distance cases give the quoted Lipschitz
+      constants with slack. The scalar correction is distinguished from the
+      vacuum scalar throughout.
+    </p>
+    <h2 id="auto-3"><a id="coefficient-paths-and-the-free-gaussian-limit"></a>Coefficient paths and the free Gaussian limit<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      The coefficient readouts are fixed linear operations on common
+      dictionaries. Cubic dependence is affine with quadratic data fixed;
+      quartic dependence is affine after the cubic data are fixed; loop
+      dependence is affine with the preceding data fixed. The extrapolation
+      has norm at most33 inside the purchased radius64 domain and gives
+      contraction1/16. Linear symmetry and moment constraints are preserved by
+      that extrapolation.
+    </p>
+    <p>
+      Proposition <tt class="verbatim">ch05:horizon-limit</tt> supplies the actual
+      nested quadratic rows and transports, including canonical positive roots
+      with a strict direct-factor gap. It is stronger than a uniform
+      finite-history bound and identifies cover coefficients at a strictly
+      larger width. Thus the errors from preceding coefficient families tend
+      to zero at every fixed level. Finite-depth truncation followed by
+      increasing the truncation depth proves the sequential cubic/quartic/loop
+      Cauchy statement. No quantitative rate or arbitrary new torus
+      representative is substituted for this limit.
+    </p>
+    <h2 id="auto-4"><a id="common-input-higher-derivatives-and-zero-arrays"></a>Common input, higher derivatives and zero arrays<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      Martin's compensated map is globally bijective near the base coarse
+      field and holds the physical fine field fixed on the protected support,
+      including fine masks and activity values. Consequently one more
+      derivative of the smooth density, chart and Jacobian can supply
+      equicontinuity of output derivatives without differentiating an incoming
+      C^q activity q+1 times. This must be applied on the same protected read
+      set and chart; the chapter states those restrictions and chooses the
+      kernel/score order before stage constants. Outside the protected support
+      the product vanishes on the required neighborhood. Direct path and
+      finite projection terms are smooth independently.
+    </p>
+    <p>
+      At fixed scale and torus, the resulting finite-dimensional coarse domain
+      admits a finite net in common protected charts. Uniform positive
+      precision, converging stationary jets and polynomial Gaussian score
+      domination justify convergence of the finite integrals and their
+      derivative suprema. The fixed physical masks do not require
+      differentiation or a measure-zero level-set claim. Infinite dictionaries
+      are handled by reserved path/support tails, and by Cauchy value tails
+      for input multiplicities; there is no assertion that finite arrays are
+      dense in every derivative norm.
+    </p>
+    <p>
+      An auxiliary zero-terminal-array history begins with a positive bare
+      path exponential. Each genuine step preserves positivity. Replacing its
+      returned coupling by the next prescribed band coupling multiplies the
+      represented density by a positive path exponential while leaving its
+      activity gas unchanged. The same path, predictor, reference masks,
+      stationary branch and local budgets remain available. This establishes
+      the relevant positive scripts; it does not assert positivity for every
+      element of the completed norm ball. Common-input continuity applies to
+      these scripts with exactly the same returned arrays and scalar
+      projection.
+    </p>
+    <h2 id="auto-5"><a id="coupled-uniqueness-checks"></a>Coupled uniqueness checks<span style="margin-left: 1em"></span></h2>
+    <p>
+      At fixed truncation depth, common-input cutoff continuity gives a Cauchy
+      truncated history for prescribed convergent couplings. The activity
+      contraction makes its difference from the full history exponentially
+      small in depth. Diagonal compactness is needed only for scalar coupling
+      coordinates, not for the activity norm balls. The prefix scalar identity
+      is finite; the converging path corrections cancel. The cumulative
+      allowance bound first makes the supremum discrepancy finite and then
+      gives the strict inequalities D/32 and D/16, forcing D=0. The argument
+      compares auxiliary scripts at the same finite cutoff before passing to
+      limits, so it does not assume an undefined extension of the map to the
+      completed space.
+    </p>
+    <p>
+      No additional concrete scalar, support exponent, positivity or
+      derivative-order error was found in this pass. The checks rely on the
+      protected same-data and common-readout constructions explicitly retained
+      in the chapter, not merely on continuity of evaluated densities.
+    </p>
+    <h2 id="auto-6"><a id="resolution"></a>Resolution<span style="margin-left: 1em"></span></h2>
+    <p>
+      The stale moving-cutoff sentence in <tt class="verbatim">ch10:identification</tt>
+      has been replaced by the fixed physical-mask and common-Jacobian
+      statement used in the actual proof. This review item is resolved.
+    </p>
+  </body>
+</html>

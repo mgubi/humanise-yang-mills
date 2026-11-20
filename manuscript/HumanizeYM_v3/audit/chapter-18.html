@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Chapter18: operator products and contact extensions &ndash;
+    Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Chapter18: operator products and contact extensions</h1><a id="chapter18-operator-products-and-contact-extensions"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Draft and mathematical scope</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Source map</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Explicit remaining OPE obligation</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Conservative contact prescription: fully checked</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-4">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Literature checked before drafting</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-5">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Validation</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>Local replacement integrated before Ward identities</b> <span
+        style="margin-left: 5mm"></span> <a href="#auto-7">3</a>
+      </p>
+    </div>
+    <h2 id="auto-1"><a id="draft-and-mathematical-scope"></a>Draft and mathematical scope<span style="margin-left: 1em"></span></h2>
+    <p>
+      <tt class="verbatim">chapters/18-operator-products.tex</tt> supplies a compatible
+      finite-degree probe prescription, symmetric graded coefficients, the
+      exact same-history marked replacement obligation, and its conditional
+      phase-uniform finite-order OPE consequence. It separately proves a
+      concrete finite-order distribution extension for every collision pattern
+      directly from the already established phase-uniform polynomial separated
+      bounds. It does not assert infinite truncation convergence,
+      coincident-point lattice limits, contact positivity, or contact Ward
+      identities.
+    </p>
+    <h2 id="auto-2"><a id="source-map"></a>Source map<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Compatible probes and finite-dimensional splittings: Martin <tt
+          class="verbatim">ope-prescription.tex</tt>, <tt class="verbatim">ope-homogeneous.tex</tt>;
+          Scott J definitions D31&ndash;D33 and lemma J1.1. The old probes
+          remain the same finite correlation combinations when new quotient
+          degrees are added. Rotation/reality averaging is followed by the
+          graded recursion built from those averaged readouts.
+        </p>
+      </li>
+      <li>
+        <p>
+          Marked input: Scott J <tt class="verbatim">lem:J-signed-local</tt>, <tt class="verbatim">lem:J-graded-quotient</tt>,
+          <tt class="verbatim">lem:J-marked-costs</tt>, <tt class="verbatim">lem:J-lattice</tt>,
+          <tt class="verbatim">lem:J-power-separated</tt>; Martin <tt class="verbatim">ope-filtration.tex</tt>,
+          <tt class="verbatim">ope-grouping.tex</tt>, <tt class="verbatim">ope-cutoff.tex</tt>,
+          <tt class="verbatim">ope-estimates.tex</tt> input <tt class="verbatim">ope-raw-estimates</tt>,
+          and <tt class="verbatim">ope-phase-prices.tex</tt>.
+        </p>
+      </li>
+      <li>
+        <p>
+          OPE consequence: Martin <tt class="verbatim">ope-estimates.tex</tt>
+          averaged-readout comparison and finite-truncation theorem. The error
+          measured by a probe is obtained by rotating the whole correlation,
+          not only the cluster's labels. Compactness of O(4) gives a common
+          clearance and uniform bounds for the finite probe list.
+        </p>
+      </li>
+      <li>
+        <p>
+          Contact comparison: Scott J D36&ndash;D38 and contact recursion. The
+          source uses degree-dependent normal orders L_h-1-q, with
+          L_h=max(0,d_h+1-4(|h|-1)), and nested parent Taylor operators act
+          before child operators. Its sharper order (W+2)n depends on a
+          complete signed multiscale estimate, not just the single-shell power
+          count.
+        </p>
+      </li>
+    </ul>
+    <h2 id="auto-3"><a id="explicit-remaining-ope-obligation"></a>Explicit remaining OPE obligation<span style="margin-left: 1em"></span></h2>
+    <p>
+      Assumption <tt class="verbatim">ch18:replacement-input</tt> retains both raw
+      coefficient bounds and all-copy signed replacement moments on the same
+      selected history. The power constants and radius threshold must precede
+      the copy count; cutoff thresholds can depend on a fixed count. The full
+      higher marked family, original inventories/masks, physical inclusion
+      maps and common coefficient readout must be retained. A mean error or
+      ordinary one-insertion contraction alone does not imply this assumption.
+      The graded quotient estimate is stated with the correct a_m^(-(t-i)) and
+      subpower factor. UV author has been asked for exact suppliers; none is
+      silently imported as proved.
+    </p>
+    <h2 id="auto-4"><a id="conservative-contact-prescription-fully-checked"></a>Conservative contact prescription: fully checked<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      Instead of claiming the source's sharper forest order without its signed
+      multiscale supplier, the chapter fixes an elementary conservative normal
+      Taylor prescription.
+    </p>
+    <p>
+      For n&gt;=2, m=n(n-1)/2 and delta=min pair distance, define rho=(sum
+      pair-distance^-2)^-1/2, so delta/sqrt(m)&lt;=rho&lt;=delta. Smooth
+      nonnegative pair weights sum to one and select only pairs with
+      distance&lt;=4sqrt(m)rho. For each selected pair use its orthogonal
+      centroid projection pi_h and normal displacement z_h. Subtract the
+      weighted normal Taylor jets through order k with one cutoff chi(rho/s),
+      where k+1&gt;P and P is the common separated growth exponent. Near the
+      collision set, the remainder is bounded by C rho^(k+1)||f||_(C^(k+1));
+      multiplying by the kernel bound gives rho^(k+1-P), bounded and locally
+      integrable. This handles arbitrary simultaneous collision rates because
+      selected pairs are always comparable to the minimum separation.
+    </p>
+    <p>
+      A subtracted term can be nonzero only when pi_hx lies in the test
+      support and |z_h|&lt;=C_n s; hence every integral lies in a fixed
+      compact enlargement. The formula is linear, has distribution order at
+      most k+1, and agrees with separated tests because every jet on a pair
+      diagonal then vanishes. The same dominated bound proves phase continuity
+      and barycenter compatibility. Its choices are
+      translation/rotation/permutation invariant. A single common k is fixed
+      on each bounded degree menu before extending multilinearly in labels. No
+      compatibility across independently changed degree-menu subtraction
+      orders is claimed.
+    </p>
+    <p>
+      This changes the contact prescription and gives a weaker order than the
+      sharp source formula. It is an explicitly documented alternative, not an
+      assertion that the two distributions agree. Their difference is
+      supported on the union of diagonals. This conservative contact theorem
+      requires no OPE input and closes finite-order extension existence even
+      while the marked replacement estimate remains open.
+    </p>
+    <h2 id="auto-5"><a id="literature-checked-before-drafting"></a>Literature checked before drafting<span style="margin-left: 1em"></span></h2>
+    <ul>
+      <li>
+        <p>
+          Wilson, <em>Non-Lagrangian Models of Current Algebra</em>, Physical
+          Review179 (1969),1499&ndash;1512, DOI10.1103/PhysRev.179.1499:
+          publisher record verified. Used only for the original OPE context.
+        </p>
+      </li>
+      <li>
+        <p>
+          Fr&ouml;b&ndash;Holland, arXiv1603.08012, submitted2016,
+          revised2021: author arXiv abstract checked. Its all-order existence
+          statement is perturbative and is described as such, never used as a
+          substitute for the nonperturbative input.
+        </p>
+      </li>
+      <li>
+        <p>
+          Brunetti&ndash;Fredenhagen, CMP208 (2000),623&ndash;661,
+          DOI10.1007/s002200050004, arXiv math-ph/9903028: original full PDF
+          examined at Section5.2, Theorems5.2 and5.3, printed pp23&ndash;25
+          (PDF indices22&ndash;24), especially formula38 and the Taylor-jet
+          subtraction. The draft cites the standard extension mechanism and
+          proves only the elementary multiple-diagonal choice above. It does
+          not attribute the particular pair-weighted formula or an optimal
+          scaling-degree statement to that paper.
+        </p>
+      </li>
+    </ul>
+    <p>
+      Bibliography entries are in <tt class="verbatim">audit/ope-bibliography.bib</tt>,
+      using the existing Scott keys Wilson1969, FrobHolland2016 and
+      BrunettiFredenhagen2000. No global bibliography edited.
+    </p>
+    <h2 id="auto-6"><a id="validation"></a>Validation<span style="margin-left: 1em"></span></h2>
+    <p>
+      Checked label uniqueness and theorem/proof/equation environment balance.
+      No global build run; parent owns compilation and integration. Suggested
+      independent check: the contact extension is deliberately an integral of
+      the complete Taylor remainder, never separately integrals of its
+      divergent summands.
+    </p>
+    <h2 id="auto-7"><a id="local-replacement-integrated-before-ward-identities"></a>Local replacement integrated before Ward
+    identities<span style="margin-left: 1em"></span></h2>
+    <p>
+      The graded quotient and exact grouped lattice estimate now appear at the
+      end of Chapter13, including their mixed spectator consequence. The
+      source filenames retain prefix18 for continuity. Chapter18's former
+      replacement assumption is now a proposition, with proof in <tt class="verbatim">18-raw-replacement.tex</tt>:
+      arbitrary replicated chessboard bounds pass to compression-algebra norm
+      using the moment formula, before phase characters are evaluated. Its OPE
+      remains dependent on the earlier phase construction, but no longer
+      introduces an independent cluster-replacement assumption. See <tt class="verbatim">chapter-18-lattice-products.md</tt>
+      for the numerical weight inequalities and checks. The conservative
+      contact extension and its limitations are unchanged.
+    </p>
+  </body>
+</html>

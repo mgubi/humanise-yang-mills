@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Independent review: comparison across stage boundaries &ndash;
+    Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Independent review: comparison across stage boundaries</h1><a id="independent-review-comparison-across-stage-boundaries"></a>
+    </p>
+    <p>
+      Reviewed <tt class="verbatim">17-variable-windows.tex</tt> against Chapter11's
+      finite-arity and restart comparison interfaces.
+    </p>
+    <ul>
+      <li>
+        <p>
+          The accumulated pre-ratio linear cost is bounded by
+          sup_j(log(2+C_j)/log L_j) times total logarithmic block length. This
+          gives H^{o(1)} on the O(log H) window without restricting it to one
+          or two stages.
+        </p>
+      </li>
+      <li>
+        <p>
+          Both stopping overshoots are o(log H) under L_i&lt;=log &beta;_i.
+          The number of steps is O(log H), within the restarted-history
+          allowed window.
+        </p>
+      </li>
+      <li>
+        <p>
+          Unequal actual response products telescope their conditional
+          covariances; replacing them by a common stage covariance is neither
+          required nor done.
+        </p>
+      </li>
+      <li>
+        <p>
+          Requested and author added a quantitative actual coupling ratio
+          bound H^{o(1)}(1+log H)/&beta;, which is smaller than every fixed
+          inverse H power. Mere qualitative o(1) would have been insufficient.
+        </p>
+      </li>
+      <li>
+        <p>
+          Requested and author added the distinction that nonlinear
+          propagation is the pre-ratio linear map plus an entry-controlled
+          error. Fixed-L constants enter the latter additively and are not
+          multiplied along the window.
+        </p>
+      </li>
+      <li>
+        <p>
+          The full squarefree source, common corrected subset polynomial,
+          marker-weight restoration, and bottom partition bound are preserved.
+          Longest-window restart and top extraction give the same T for the
+          finite/compact dilation requests; the parameter enters only bounded
+          stopping ranges and explicit engineering dilations.
+        </p>
+      </li>
+    </ul>
+    <p>
+      The revised statement is consistent with these supplied interfaces.
+      Cross-reference check passes; no global compile performed by this agent.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:x="https://www.texmacs.org/2002/extensions">
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Check of the restarted comparison and the uniform difference
+    supplier &ndash; Humanise Yang&ndash;Mills</title>
+    <meta content="TeXmacs 2.1.5" name="generator"></meta>
+    <style type="text/css">
+      body { text-align: justify } h5 { display: inline; padding-right: 1em }
+      h6 { display: inline; padding-right: 1em } table { border-collapse:
+      collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
+      left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
+      font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
+      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
+      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
+      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
+      text-align: center } .wide { position: relative; margin-left: -0.4em }
+      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
+      .title-block { width: 100%; text-align: center } .title-block p {
+      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
+      .left-tab { text-align: left } .center-tab { text-align: center }
+      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
+      cursor: help; position: relative; } .balloon-anchor [hidden] {
+      margin-left: -999em; position: absolute; display: none; }
+      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
+      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
+      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
+      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
+      { float: right; position: relative; top: -1em; } .no-breaks {
+      white-space: nowrap; } .underline { text-decoration: underline; }
+      .overline { text-decoration: overline; } .strike-through {
+      text-decoration: line-through; } del { text-decoration: line-through
+      wavy red; } .fill-out { text-decoration: underline dotted; } 
+    </style>
+    <link href="max-html.css" rel="stylesheet" type="text/css"></link>
+    <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
+    <script defer language="javascript" src="max-html.js"></script>
+    <script defer language="javascript">var bs = String.fromCharCode(92); window.MathJax =
+    {tex: {environments: {equationsbase: [bs + 'begin{aligned}', bs +
+    'end{aligned}']}, macros: {ring: [bs + 'mathring{#1}', 1]}}};</script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="ym-nav">
+      <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
+      theorem</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/outline.html">Proof outline</a><font
+      class="ym-sep">&middot;</font><a href="../../../blueprint/unit-plan.html">Unit plan</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/index.html">Blueprint</a><font class="ym-sep">&middot;</font><a href="../../index.html">Manuscript</a><font
+      class="ym-sep">&middot;</font><a href="../../existence.html">Monograph</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/glossary.html">Glossary</a><font class="ym-sep">&middot;</font><a href="../../../docs/notation.html">Notation</a><font
+      class="ym-sep">&middot;</font><a href="../../../source/audit.html">Source audit</a><font class="ym-sep">&middot;</font><a
+      href="../../../blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="../../../docs/proof-standard.html">Proof
+      standard</a><font class="ym-sep">&middot;</font><a href="../../../CONTRIBUTING.html">Contributing</a>
+    </div>
+    <p>
+      <h1>Check of the restarted comparison and the uniform difference
+      supplier</h1><a id="check-of-the-restarted-comparison-and-the-uniform-difference-supplier"></a>
+    </p>
+    <div class="max-toc">
+      <div class="max-toc-title">
+        Contents
+      </div>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>1. Objects that must remain identical</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-1">1</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>2. Endpoint re-expression: stronger suppression</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-2">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>3. Closure on the actual restarted history</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-3">2</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>4. Support reserve at construction time</b> <span style="margin-left: 5mm"></span> <a
+        href="#auto-4">3</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>5. Joint Gaussian comparison: the later guarded route</b> <span
+        style="margin-left: 5mm"></span> <a href="#auto-5">4</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>6. Higher modes and the original denominator</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-6">5</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>7. Root normalization and finite detectors</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-7">5</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>8. Final absorption and its independent inputs</b> <span style="margin-left: 5mm"></span>
+        <a href="#auto-8">6</a>
+      </p>
+      <p style="margin-top: 1em; margin-bottom: 0.5em">
+        <b>9. Concrete writing consequences</b> <span style="margin-left: 5mm"></span> <a href="#auto-9">7</a>
+      </p>
+    </div>
+    <p>
+      Checked against the supplied Martin sources, 2026-11-18. This note
+      follows a particular implication chain. It independently checks the
+      displayed algebra, quantifier changes and object identifications
+      described below; it does <strong>not</strong> certify the primitive
+      covariance, stationary-background or nonlinear RG estimates.
+    </p>
+    <p>
+      <strong>Conclusion.</strong> Martin contains a detailed route addressing
+      Trish's conditional Gaussian-comparison caveat, including later
+      replacement arguments that are easy to miss: a joint guarded Gaussian
+      lemma, a stronger support-exponent construction, the complete opening
+      polynomial, and an application to the selected chart. The final
+      detector/absorption argument uses finite-cutoff ranks and estimates, so
+      it does not require continuum rank to prove uniform difference bounds.
+      The remaining verification boundary is the actual local
+      Gaussian/energy/room hypotheses and their simultaneous supply by the
+      selected schedule. No contradiction or definitive global gap has been
+      established by this check.
+    </p>
+    <p>
+      All filenames abbreviate Martin/existence/. Labels are stable locators;
+      line numbers refer to the supplied snapshot.
+    </p>
+    <h2 id="auto-1"><a id="1-objects-that-must-remain-identical"></a>1. Objects that must remain identical<span style="margin-left: 1em"></span></h2>
+    <p>
+      Fix the selected history, cutoff \(N\), volume \(p\), and comparison
+      level \(k\). The original insertion family is fixed before comparison.
+      Its complete unnormalized marked density at cutoff \(N\) is \(q_N\); its
+      actual push to level \(k\) is \(q_k\). In general \(q_k\) contains
+      higher connected modes and is not the unmarked density multiplied by
+      singleton insertions.
+    </p>
+    <p>
+      The comparison restarts <strong>below \(k\)</strong> with constant
+      actual coupling \(\beta_{N, p, k}\). The clock parameters \(x_i =
+      \hat{\beta}_i\) still vary with \(i\). The paths, clips, adjacent
+      quadratic data and installed block geometry are retained. The restarted
+      activities are newly constructed and need not equal the original
+      lower-level activities.
+    </p>
+    <p>
+      At each step, the exact identity pushes the genuine incoming density.
+      The neutral representation deletes only its additive remainder and is
+      used in estimates. That deletion leaves unchanged the Gaussian precision
+      and affine mean built from path, clip, coupling, field, forest, tag and
+      store. It does change the interacting density. This distinction is
+      explicit in actual-local-compiler-handoff.tex, proof of
+      lem:actual-neutral-warning (257&ndash;321).
+    </p>
+    <p>
+      The invariant across normalized block-kernel sequences is every
+      coefficient integral, including the empty coefficient, not equality of
+      lower-level densities. The common denominator remains the original
+      Wilson partition function.
+    </p>
+    <h2 id="auto-2"><a id="2-endpoint-re-expression-stronger-suppression"></a>2. Endpoint re-expression: stronger suppression<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      Source: restarted-rank-history.tex, endpoint construction (211),
+      prop:restart-endpoint (243).
+    </p>
+    <p>
+      There are <strong>two different slow functions</strong>:
+    </p>
+    <center>
+      \(\displaystyle H_s = e^{(\log \log s)^2}, \qquad h_s = e^{(\log \log
+      s)^{3 / 2}} .\)
+    </center>
+    <p>
+      The original threshold/radius are \(t = s^{- 1 / 2} H_s\), \(M = \lceil
+      (\log s)^2 \rceil\); the restarted ones are \(\tau = s^{- 1 / 2} h_s\),
+      \(B = M^2\). Thus \(2 \tau \leqslant t\) eventually. This is not a
+      notational variant of one threshold.
+    </p>
+    <p>
+      For the piecewise clipped term \(d_t\), the source uses
+    </p>
+    <center>
+      \(\displaystyle \Delta (r) = d_t (r) - d_{\tau} (r) \geqslant 0, \qquad
+      \Delta (r) \geqslant
+c_{\text{lin}} \tau^2  \quad (r > \tau) .\)
+    </center>
+    <p>
+      The ranges check directly. For \(\tau < r \leqslant t\), \(\Delta (r) =
+      c_{\text{dir}} r^2 / 2 - c_{\text{lin}} \tau r \geqslant
+(c_{\text{dir}}
+      / 2 - c_{\text{lin}}) r^2 \geqslant c_{\text{lin}} \tau^2\), under
+      \(c_{\text{lin}} < c_{\text{dir}} / 16\). For \(r > t\), \(\Delta (r) =
+      c_{\text{lin}}  (t - \tau) r \geqslant c_{\text{lin}} \tau^2\).
+      Allocating among at most five touched sites gives a positive charge per
+      newly flagged site.
+    </p>
+    <p>
+      The theorem assumes original path coefficient bounds, \(s / 2 \leqslant
+      \beta \leqslant 2 s\), loop bound \(2 H_s\), additive allowance \(s^{-
+      11 / 10}\), and original large-field allowance \(e^{- H_s^{1 / 5}}\). It
+      preserves the coupling/scalar/path data and obtains allowance \(G (s) =
+      e^{- a_0 h_s^2}\), with \(0 < a_0 \leqslant c_{\text{lin}} / 20\). The
+      changed masks and exact new inventories must be kept; this is not
+      monotonicity of the old polymer norm.
+    </p>
+    <p>
+      <strong>Checked:</strong> clipping arithmetic and threshold hierarchy.
+      <strong>Not independently checked:</strong> all path-tail and
+      connected-component estimates in the endpoint proof; the explicit
+      construction is present.
+    </p>
+    <h2 id="auto-3"><a id="3-closure-on-the-actual-restarted-history"></a>3. Closure on the actual restarted history<span style="margin-left: 1em"></span></h2>
+    <p>
+      Source: restarted-rank-history.tex, prop:restart-actual-closure (564),
+      proof 581&ndash;742; actual-local-compiler-handoff.tex (399&ndash;404).
+    </p>
+    <p>
+      The coupling match is quantitative. The clock gives \(3 s / 4 \leqslant
+      x_i \leqslant s\), while \(| \beta_{N, p, k} - s| \leqslant s / 8\).
+      Consequently
+    </p>
+    <center>
+      \(\displaystyle x_i / 2 \leqslant \beta_{N, p, k} \leqslant 2 x_i .\)
+    </center>
+    <p>
+      Indeed \(x_i / 2 \leqslant s / 2 < 7 s / 8\), and \(2 x_i \geqslant 3 s
+      / 2 > 9 s / 8\). A constant actual coupling meets the adjacent-coupling
+      drift condition with difference zero.
+    </p>
+    <p>
+      The original paths/clips/tubes and their diagonal identities, metric
+      floors and row bounds do not involve the additive/forced coefficients.
+      Neutralization therefore preserves them. The genuine additive cost is
+      only a <strong>value</strong> cost; it need not meet the smaller
+      derivative allowance of the original calendar.
+    </p>
+    <p>
+      For \(y = \log \log s\), put
+    </p>
+    <center>
+      \(\displaystyle A_s = e^{y^3}, \quad q_n = s^{- 1 / 200} A_s^{4 n},
+      \quad \omega_n = q_n A_s,
+\quad \delta_n = q_n A_s^3 .\)
+    </center>
+    <p>
+      The window length satisfies \(n \leqslant h \leqslant y^4\) eventually.
+      For fixed \(r\),
+    </p>
+    <center>
+      \(\displaystyle \log (q_n A_s^r) \leqslant - \tfrac{1}{200} \log s + (4
+      y^4 + r) y^3 \leqslant
+- \tfrac{1}{400} \log s\)
+    </center>
+    <p>
+      eventually, since \(\log s = e^y\). Also
+    </p>
+    <center>
+      \(\displaystyle s^{- 1 / 200} + 16 \delta_n \leqslant 17 \delta_n
+      \leqslant A_s \delta_n =
+q_{n + 1}\)
+    </center>
+    <p>
+      when \(A_s \geqslant 17\). These inequalities close the displayed
+      short-interval value recurrence.
+    </p>
+    <p>
+      The loop/cubic/quartic path correction has weighted value bound
+    </p>
+    <center>
+      \(\displaystyle \beta e^{7 a} C_c \tau_x^3 + \beta e^{9 a} C_c \tau_x^4
+      + e^{5 a} \Gamma_c
+\tau_x^2 .\)
+    </center>
+    <p>
+      With \(\beta \leqslant 4 x\), \(\tau_x = x^{- 1 / 2} e^{(\log \log x)^{3
+      / 2}}\), and \(\Gamma_c \leqslant 2 e^{(\log \log x)^2}\), this is
+      \(x^{- 1 / 2 + o (1)}\), hence eventually at most \(s^{- 1 / 200}\)
+      uniformly for \(x \in [s / 2, s]\). The additional requirement \(a / B_c
+      \leqslant \sigma_c\) is eventual for a fixed positive path rate.
+    </p>
+    <p>
+      The large-field inflation is paid by actual energy. The proof takes the
+      larger forced multiplier \(\max (G (x_i)^{- 2}, G (x_{i + 1})^{- 1})\).
+      Its bound \(\log m \leqslant 4 a_{\text{coast}} \text{hot} (x_{i +
+      1})^2\), together with \(2 a_{\text{coast}} \leqslant K / 4\), leaves at
+      least half the energy exponent \(K \text{hot}^2\). The analytic inputs
+      remain the actual energy bound and a <strong>single joint Gaussian tail
+      event</strong>, not multiplied marginal probabilities.
+    </p>
+    <p>
+      <strong>Checked:</strong> bands, value recurrence, path-correction
+      scaling and inflation arithmetic. <strong>Retained hypotheses:</strong>
+      positive compatible tubes, full support inventories, actual energy/tail
+      estimates, exact all-hole identities and fixed raw-exponent purchases.
+    </p>
+    <h2 id="auto-4"><a id="4-support-reserve-at-construction-time"></a>4. Support reserve at construction time<span style="margin-left: 1em"></span></h2>
+    <p>
+      Source: allarity-marked-propagation.tex, prop:allarity-compiler-reserve
+      (2062).
+    </p>
+    <p>
+      The upper comparison needs \(e_{\ast} = e + 1 + \sigma\), \(0 < \sigma
+      \leqslant 1\), before returning to exponent \(e\). The source fixes
+    </p>
+    <center>
+      \(\displaystyle E = e + 2, \qquad \hat{E} = E + 8, \qquad \alpha
+      \geqslant 8 T_E .\)
+    </center>
+    <p>
+      The raw connected expansion uses \(E\); local support estimates use
+      \(\hat{E}\). The mixed expansion requires cover charge \(E + 7\),
+      leaving one reserve. The fine-to-coarse inequality
+    </p>
+    <center>
+      \(\displaystyle 10 \cdot 15^4  (E + 7) \leqslant L \sigma_f\)
+    </center>
+    <p>
+      must be imposed <strong>before \(L\) is fixed</strong>. Increasing the
+      coupling cannot fix an insufficient block ratio.
+    </p>
+    <p>
+      After construction, \(e_{\ast} \leqslant E\) makes every nonnegative
+      weighted majorant at \(e_{\ast}\) bounded by its value at \(E\).
+      Likewise \(\max (1, H^{q - 3})\) bounds every needed multiplier \(l
+      (z)\), \(z \in [H^{- q}, H^{- 4}]\). Thus one alphabet and its original
+      identities serve both uses. Constructing separate alphabets would not
+      establish the claimed compatibility.
+    </p>
+    <p>
+      <strong>Checked:</strong> exponent and multiplier matching. The
+      proposition retains the local handoff's analytic hypotheses; restarted
+      closure supplies history-specific inherited-law and small-remainder
+      conditions. These can be read as a conditional local theorem followed by
+      its application, rather than an automatic circularity. The upstream
+      local estimates remain separate.
+    </p>
+    <h2 id="auto-5"><a id="5-joint-gaussian-comparison-the-later-guarded-route"></a>5. Joint Gaussian comparison: the later guarded
+    route<span style="margin-left: 1em"></span></h2>
+    <p>
+      An earlier sufficient criterion (M), around line 1030 of
+      allarity-marked-propagation.tex, demands a common cutoff-weighted chart
+      measure and jet identities. Ordinary Gaussian marginal equality is
+      insufficient. But (M) is <strong>not an undischarged necessity for the
+      entire argument</strong>: a later route expressly bypasses it.
+    </p>
+    <p>
+      The replacement is lem:allarity-guarded-gaussian (1266), applied through
+      lem:allarity-pair-reader (1415) and the following attachment. For each
+      sector/tag \(t\), all polynomial factors use one probability space, one
+      centered joint Gaussian array \(\eta_t\), and the same mean \(a\).
+      Individual guards obey
+    </p>
+    <center>
+      \(\displaystyle |C_t - C_{\ast} | \leqslant \epsilon, \quad \int (1 -
+      \Gamma_{t, I}) 
+\hspace{0.17em} d \mu_t \leqslant \epsilon^2, \quad |
+      \xi_{t, I} - a - \eta_t
+| \leqslant \epsilon \text{on } \Gamma_{t, I} >
+      0.\)
+    </center>
+    <p>
+      Every polynomial is invariant under the allowed patch gauge. The same
+      mixture weights, nonnegative and summing to one, apply to every
+      partition and the empty product. The empty expectation is one.
+    </p>
+    <p>
+      The proof checks without independence of guards. For a partition with
+      \(\ell\) factors,
+    </p>
+    <center>
+      \(\displaystyle 1 - \prod_I \Gamma_{t, I} \leqslant \sum_I (1 -
+      \Gamma_{t, I}), \qquad
+\mathbb{E} (1 - \prod_I \Gamma_{t, I}) \leqslant
+      \ell \epsilon^2 .\)
+    </center>
+    <p>
+      Telescoping monomials bounds the physical-coordinate replacement by
+      \(\epsilon\) times a Gaussian moment polynomial. Cauchy&ndash;Schwarz
+      removes the product guard at cost \(\sqrt{\ell}  \hspace{0.17em}
+      \epsilon\). Wick pairing compares covariance entries. At fixed
+      polynomial degree and coefficient \(\ell^1\) norm, constants do not grow
+      with unused coordinates. The finite marker logarithm is a polynomial in
+      these moments with unit constant coefficient. This proves the
+      finite-arity discrepancy conditional on the joint-law input.
+    </p>
+    <p>
+      The proposed actual supplier in actual-reader-dawn-selection.tex uses
+      actual-to-flat covariance error \(x^{- 1 / 8}\), short-row tail \(p_x =
+      x^{- 1 / 8}\), physical error \(x^{- 1 / 32}\), and guard loss \(x^{-
+      1}\). For fixed \(f\), these are bounded by \(H^{- f}\) or \(H^{- 2 f}\)
+      as required, uniformly for \(x \in [s / 2, s]\), since \((\log \log s)^2
+      = o (\log s)\). At a stage boundary, the pair-reader lemma uses the
+      minimum strip width, maximum bounds and <strong>fine metric
+      floor</strong>, while retaining distinct metrics in
+    </p>
+    <center>
+      \(\displaystyle (DI_F) A_F^{- 1}  (DI_F)^{\textsf{T}} = P_f - JP_c
+      J^{\textsf{T}} .\)
+    </center>
+    <p>
+      The same reference-forest/tag scalar is extracted before choosing marks:
+      actual-corrected-body-compiler.tex, eq:actual-body-loading (278). Its
+      eq:actual-body-density (327) identifies the genuine integrand. A wholly
+      leading component contains no body letter and no compatible background
+      packet; it is a product of guarded principal values on the common
+      Gaussian/Haar probability space. This identifies the component, not the
+      entire interacting density as a Gaussian.
+    </p>
+    <p>
+      <strong>Checked:</strong> the guarded comparison proof, the scale
+      conversion, and the explicit distinction between scalar loading and
+      probability law. <strong>Remaining:</strong> the actual
+      mean/covariance/guard estimates, their room assumptions, and all
+      cross-entry identities have not been independently rederived.
+    </p>
+    <h2 id="auto-6"><a id="6-higher-modes-and-the-original-denominator"></a>6. Higher modes and the original denominator<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      Source: allarity-marked-propagation.tex, lem:allarity-selected-opening
+      (2615), prop:allarity-selected-application (2704).
+    </p>
+    <p>
+      The opening lemma starts from the complete \(q_k\). It invokes the
+      earlier mixed-grade finite-menu expansion, then a stronger support norm
+      to suppress higher modes at small marker weight. The joint endpoint
+      expansion retains original eligibility tests, old/new inventories and
+      full modes. Every forced component contains a newly flagged-site factor
+      \(X_z\); after reserving one factor \(G (s)\), the stated remainder sum
+      satisfies \(G (s)  (e^{r_s} - 1) \leqslant G (s)\) when \(r_s \leqslant
+      H^{- 1}\), \(Z (B) r_s \leqslant 1\), and \(H\) is large. A small
+      singleton error alone would not prove this.
+    </p>
+    <p>
+      The last paragraph of the selected application contains an important
+      exact identity. For prescribed reference cumulants \(D_c^{\text{ref}}\),
+      set
+    </p>
+    <center>
+      \(\displaystyle J = \exp_{\ast} (- \sum_c D_c^{\text{ref}}) .\)
+    </center>
+    <p>
+      The corrected density is \(Jq_N\), whose push to \(k\) is \(Jq_k\):
+      \(J\) is field independent and each block map is linear on the finite
+      coefficient algebra. Multiplying by the <em>whole invoice</em> would
+      double-count the insertions. Since \(J\)'s empty coefficient is one, the
+      unmarked density and original partition denominator remain unchanged.
+    </p>
+    <p>
+      <strong>Checked:</strong> coefficientwise push identity and the
+      distinction between \(q_k\) and a singleton product. <strong>Not
+      rederived:</strong> the upstream weighted mixed-grade bounds making
+      \(r_s\) small. Their source is the proof preceding
+      eq:trace-original-marked-payment and eq:trace-endpoint-marked-budget in
+      trace-firesky-gallery.tex, not the final marked-output estimate itself.
+    </p>
+    <h2 id="auto-7"><a id="7-root-normalization-and-finite-detectors"></a>7. Root normalization and finite detectors<span style="margin-left: 1em"></span></h2>
+    <p>
+      rank-root-normalization.tex retains the finite-volume correction. Tree
+      gauge leaves \(3 V + 1\) links; plaquette elimination integrates \(3 V -
+      3\) factors. Division leaves four powers of \(g^{- \dim G}\):
+    </p>
+    <center>
+      \(\displaystyle \frac{z | \int f|}{Z_R} \leqslant e^{VP_R (X) - 4 (\dim
+      G) \log g} .\)
+    </center>
+    <p>
+      With \(q\) replica cells and coefficient weight \(a^{q |I|}\), the root
+      is at most
+    </p>
+    <center>
+      \(\displaystyle a^{- |I|} \exp \{P_R (X) - 4 (\dim G) \log g / q\} .\)
+    </center>
+    <p>
+      For \(a = e^{2 I_k}\), this is \(\leqslant e^{- I_k}\) if the entire
+      exponent is at most \(I_k\). The harmonic correction is not discarded.
+    </p>
+    <p>
+      prop:rank-root-output-ticket (308) buys this at the
+      <strong>output</strong> stage, possibly different from the reading
+      stage. The request \(1 + \sqrt{16 M \max (T_M (\pi_i), 0)} \leqslant 1 +
+      \log \log \hat{\beta}_k\) gives \(T_M (\pi_{J (w (k))}) \leqslant I_k\)
+      after squaring. Output lawfulness is separate:
+      actual-rank-purchases.tex, prop:rank-trace-output-lawful (1323) and
+      cor:rank-trace-all-levels (1440).
+    </p>
+    <p>
+      The lift calculation is finite dimensional. Common maps satisfy
+    </p>
+    <center>
+      \(\displaystyle |Av - Tv| \leqslant \tfrac{1}{2} |Av|, \qquad |v|
+      \leqslant D_k  |Av| .\)
+    </center>
+    <p>
+      Hence \(T\) is invertible and \(|T^{- 1} | \leqslant 2 D_k\). The
+      <strong>same</strong> \(T\) solves all columns' equations \(S_t Tu_i =
+      W_{\rho} v_i\). The resulting bound \(B_k\) depends on \(k\) but not
+      \(N, p\), as needed.
+    </p>
+    <p>
+      fullmesh-fixedbounds-producer.tex, lem:fullmesh-uniform-detector (367),
+      uses a finite-cutoff estimate. Although
+      eq:rank-purchased-point-comparison is displayed after extraction in
+      actual-rank-purchases.tex, its preceding paragraphs expressly give the
+      root bound for all sufficiently large \(N\) and every \(p\), before
+      extraction. The detector therefore does not strengthen a merely
+      ordered-limit claim.
+    </p>
+    <p>
+      Bounded projections with the finite equation kernel already exist before
+      extraction: finite-rank-kernel-transport.tex (9&ndash;45) constructs a
+      projection using a fixed Euclidean inner product and averages over
+      finite symmetries. Each average still kills the same subspace and
+      differs from the identity by a map into it; these two properties imply
+      idempotence. Its norm is uniform in the varying subspace. The rank is
+      the finite free-quotient rank by an exact calibrated isomorphism, not a
+      continuum rank theorem.
+    </p>
+    <p>
+      For a fixed injective free matrix \(G\), if \(|c| \leqslant K |Gc|\) and
+      each entry of \(Q - G\) is less than \(1 / (2 Kr)\), then \(|c|
+      \leqslant 2 K |Qc|\). Bounded lifted columns/projections give \(| \Pi_i
+      v| \leqslant Z |L_i \Pi_i v|\). Constants are independent of \(N, p\)
+      once one comparison level is fixed.
+    </p>
+    <p>
+      Averaged differences satisfy the exact identity
+    </p>
+    <center>
+      \(\displaystyle \frac{1}{h}  \sum_{j = 0}^{h - 1} \frac{H (x + (j + 1)
+      e) - H (x + je)}{a_N} =
+\frac{H (x + he) - H (x)}{ha_N} .\)
+    </center>
+    <p>
+      With \(h = \lceil b / a_N \rceil\), each averaged derivative costs at
+      most \(2 / b\), using undifferentiated bounds. The positional modulus
+      used to average detector positions is attributed to the earlier
+      transfer/Schatten argument, not the derivative estimate being proved.
+    </p>
+    <p>
+      <strong>Checked:</strong> normalizer factors, inversion/detector
+      algebra, special projection averaging and telescoping.
+      <strong>Remaining:</strong> primitive centered-root and
+      positional-modulus estimates with their support assumptions.
+    </p>
+    <h2 id="auto-8"><a id="8-final-absorption-and-its-independent-inputs"></a>8. Final absorption and its independent inputs<span
+    style="margin-left: 1em"></span></h2>
+    <p>
+      Source: fullmesh-fixedbounds-producer.tex,
+      prop:fullmesh-selected-supplier (496).
+    </p>
+    <p>
+      Encoding gives \(x_i\) and vanishing root error \(E_i = O (x_i) - D_l
+      F_i\). The assay satisfies \(|L_i x_i | \leqslant c\). Set \(y_i = \Pi_i
+      x_i\) and
+    </p>
+    <center>
+      \(\displaystyle z_i = (1 + |y_i |)^{- 1}  (x_i - y_i) .\)
+    </center>
+    <p>
+      The source checks \(z_i\) is uniformly subpower in calibrated
+      coordinates: its first term is a bounded scalar times a subpower row;
+      the second is bounded by one. Its projected kernel is zero. Microscopic
+      equation comparison gives \(|L_i z_i | \to 0\) uniformly in \(p\).
+      Eventually it is at most \(1 / (2 Z)\), so
+    </p>
+    <center>
+      \(\displaystyle |y_i | \leqslant Zc + \tfrac{1}{2} (1 + |y_i |), \qquad
+      |y_i | \leqslant 2 Zc
++ 1.\)
+    </center>
+    <p>
+      Thus \(y_i\) has a primary root budget. The exact identity \(D_l F_i = O
+      (y_i) + O (x_i - y_i) - E_i\) gives the difference bound. Finitely many
+      orientations can be included before taking maxima. No limit of \(\Pi_i\)
+      is needed.
+    </p>
+    <p>
+      The microscopic equation insertion vanishes <strong>before
+      limits</strong> against the product of distant reflected copies. A fixed
+      physical cell and sufficiently small \(a_N\) give the required distance
+      outside a fixed finite microscopic stencil uniformly in \(p\), since the
+      smallest physical period is positive. An ordered spectator limit would
+      not justify this uniform sweep.
+    </p>
+    <p>
+      This checks the last implication conditional on the actual encoding,
+      equation-column discrepancy, primary root budget and positional-modulus
+      inputs. Their separate suppliers are actual-equation-kernel-relay.tex,
+      actual-insertion-derivative-relay.tex, cor:ex-c02-uniform-census, and
+      the directional part of ex-centered-producers. <strong>The restart
+      theorem alone does not supply all of these.</strong>
+    </p>
+    <h2 id="auto-9"><a id="9-concrete-writing-consequences"></a>9. Concrete writing consequences<span style="margin-left: 1em"></span></h2>
+    <ol>
+      <li>
+        <p>
+          Present three inputs before the finite detector: common restarted
+          Gaussian comparison; exact microscopic equation comparison; primary
+          centered bounds and positional modulus. Then give absorption.
+        </p>
+      </li>
+      <li>
+        <p>
+          Use the later guarded-value proof for finite rank. Do not impose the
+          earlier common-cutoff jet criterion (M) unless a later derivative
+          argument needs it.
+        </p>
+      </li>
+      <li>
+        <p>
+          Define the two thresholds, two radii and stronger support exponent
+          before use; these are real representation changes.
+        </p>
+      </li>
+      <li>
+        <p>
+          Keep the genuine density identity beside the neutral estimates,
+          explaining why neutralization leaves the Gaussian law unchanged.
+        </p>
+      </li>
+      <li>
+        <p>
+          Include \(Jq_N \mapsto Jq_k\) and the unit coefficient of \(J\).
+          This makes the denominator claim explicit.
+        </p>
+      </li>
+      <li>
+        <p>
+          Do not advertise the numerical and finite-dimensional checks here as
+          verification of the full construction. The local analytic supplier
+          audit remains unfinished.
+        </p>
+      </li>
+    </ol>
+  </body>
+</html>
