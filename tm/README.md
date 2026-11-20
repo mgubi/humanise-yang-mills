@@ -14,7 +14,8 @@ or untracked and not ignored) outside `tm/` that contains
 today `manuscript/existence.tex` (the monograph, about 250 chapters) →
 `manuscript/existence.tm` and `manuscript/HumanizeYM_v2/main.tex` (the
 revised informalization manuscript, with TikZ pictures) →
-`manuscript/HumanizeYM_v2/main.tm`; the evidence wrappers of proof units
+`manuscript/HumanizeYM_v2/main.tm`, and `manuscript/HumanizeYM_v3/monograph.tex` (a
+book) → `manuscript/HumanizeYM_v3/monograph.tm`; the evidence wrappers of proof units
 (`blueprint/units/<ID>/evidence/wrapper.tex` → `…/wrapper.tm`) too, when
 they compile. A document whose `\input` files do not exist (the wrappers of
 YM-000033 and YM-000034 still input `preamble`, which upstream removed on
@@ -190,6 +191,17 @@ README of a folder (`manuscript/README.md`) those of its folder.
   them, `multicols` and font sizes in groups dropped, `\addcontentsline`
   after a starred section dropped, `{\small \bibliography{..}}`,
   `\phantomsection` dropped.
+- Book (and report) class: `\chapter` is the top level (style `book`);
+  theorems may be numbered within chapters and equations are, as in the
+  class; `\setcounter{chapter}{N}` makes the next chapter N+1 (an
+  assignment of `chapter-nr`); `\frontmatter`, `\mainmatter`, `\backmatter`
+  are dropped and a `\chapter` before `\mainmatter` or after `\backmatter`
+  is unnumbered, as in LaTeX; `\chapter*{X}\addcontentsline{toc}{chapter}{X}`
+  as for sections; short titles (`\chapter[short]{long}`) dropped (the
+  table of contents shows the long ones); `\hypersetup` in the body
+  dropped. `\appendix` and `\paragraph{..}\label` in a book stop the build
+  (not implemented). `\IfFileExists{f}{yes}{no}` is resolved when the file
+  is read (any class).
 - TikZ pictures (`figures.py`): every `tikzpicture` becomes a standalone
   LaTeX document (with the macros of the preamble) compiled to SVG with
   `latex` + `dvisvgm`, shown as an image from `<page>-figures/fig-N.svg`
@@ -247,7 +259,9 @@ README of a folder (`manuscript/README.md`) those of its folder.
 ### Chapter pages
 
 A LaTeX document whose flattened source is over 500 kB (`SPLIT_BYTES` in
-`tex_prep.py`; today the monograph and HumanizeYM_v2) is published as a contents page
+`tex_prep.py`; today the monograph, HumanizeYM_v2 and HumanizeYM_v3; for a
+book the pages are its chapters, those of the front matter staying on the
+contents page) is published as a contents page
 and one page per top-level `\section`. It is still imported, typeset and
 exported whole, so every number (sections, theorems, equations, citations)
 is that of the whole document; `split.py` then cuts the exported page at its

@@ -21,6 +21,9 @@
 
       <item><hlink|HumanizeYM_v2: The construction of four-dimensional
       quantum Yang\UMills theory (manuscript/HumanizeYM_v2/main.tex)|manuscript/HumanizeYM_v2/main.tm>
+
+      <item><hlink|Four-dimensional Yang\UMills theory: A constructive
+      approach (manuscript/HumanizeYM_v3/monograph.tex)|manuscript/HumanizeYM_v3/monograph.tm>
     </itemize>
   </ym-manuscript-link>
 

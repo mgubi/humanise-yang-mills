@@ -8,8 +8,8 @@ META.json is written by tex_prep.py ("split", "chapters": the top-level
 sections and the bibliography, with their page names and labels). The
 document is imported, typeset and exported whole, so every number (sections,
 theorems, equations, citations) is the one of the whole document; the
-exported page is then cut at its top-level headings (<h2>, all at the top
-level of <body>):
+exported page is then cut at its top-level headings (<h2>, or <h1> for the chapters of a book;
+all at the top level of <body>):
 
   * PAGE.html becomes the contents page: everything before the first section
     (navigation bar, title, front matter), with the table of contents in the
@@ -48,7 +48,10 @@ e = s.rfind('</body>')
 if not b or e < 0:
     fail('no <body>')
 head, body, tail = s[:b.end()], s[b.end():e], s[e:]
-starts = [m.start() for m in re.finditer(r'<h2\b', body)]
+# the top-level headings: <h2> for sections, <h1> for the chapters of a
+# book; the first ones (front matter of a book) stay on the contents page
+tag = meta.get('split_heading', 'h2')
+starts = [m.start() for m in re.finditer(r'<' + tag + r'\b', body)][meta.get('front_headings', 0):]
 if len(starts) != len(chapters):
     fail(f'{len(starts)} top-level headings in the HTML, {len(chapters)} sections in the LaTeX source')
 front = body[:starts[0]]
@@ -65,8 +68,8 @@ def text(h):
 
 # the chapters against the LaTeX source
 for c, p in zip(chapters, pieces):
-    h2 = text(p[:p.find('</h2>')])
-    if c['number'] is not None and not re.match(rf'{c["number"]}\D', h2):
+    h2 = text(p[:p.find('</' + tag + '>')])
+    if c['number'] is not None and not re.match(rf'(?:Chapter )?{c["number"]}\D', h2):
         fail(f'heading "{h2[:60]}" is not section {c["number"]}')
     ids = set(ID.findall(p))
     lost = [l for l in c['labels'] if l not in ids]

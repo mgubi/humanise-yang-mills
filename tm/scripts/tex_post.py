@@ -106,9 +106,11 @@ RENDER = {'plain': 'render-theorem', 'definition': 'render-remark', 'remark': 'r
 def theorem_setup():
     """TeXmacs environments for the \\newtheorem declarations: one counter
     group per LaTeX counter, shared by the environments declared with
-    [counter]; numbers prefixed by the section and reset with it for
-    [section]; ym-section-resets is called by section-clean (ym-manuscript.ts)"""
-    out, resets = [], []
+    [counter]; numbers prefixed by the section (chapter) and reset with it
+    for [section] ([chapter], book class); ym-section-resets is called by
+    section-clean (ym-manuscript.ts), ym-chapter-resets by chapter-clean
+    (assigned here: as in LaTeX, an unnumbered chapter resets nothing)"""
+    out, resets = [], {'section': [], 'chapter': []}
     for t in meta.get('theorems', []):
         env, name, render = t['env'], post.cork(t['name']), RENDER[t['style']]
         if not t['numbered']:
@@ -120,20 +122,27 @@ def theorem_setup():
             if t.get('format'):
                 # \renewcommand{\theX}{\Alph{X}}
                 nr = ['number', nr, NUMBER_FORMATS[t['format']]]
-            if t['within'] == 'section':
-                nr = ['concat', ['the-section'], '.', nr]
+            if t['within'] in resets:
+                nr = ['concat', ['the-' + t['within']], '.', nr]
             out += [['new-counter-group', g], ['group-common-counter', g],
                     ['assign', 'display-' + g, ['macro', 'nr', nr]]]
-            if t['within'] == 'section':
-                resets.append(['reset-counter', g])
+            if t['within'] in resets:
+                resets[t['within']].append(['reset-counter', g])
         out.append(['new-env', env, name, g, render])
-    if meta.get('equations_within') == 'section':
-        # \\numberwithin{equation}{section}
-        out.append(['assign', 'display-equation', ['macro', 'nr', ['concat', ['the-section'], '.', ['arg', 'nr']]]])
-        resets.append(['reset-equation'])
-    if resets:
-        out.append(['assign', 'ym-section-resets',
-                    ['macro', resets[0] if len(resets) == 1 else ['concat'] + resets]])
+    within = meta.get('equations_within')
+    if within in resets:
+        # \numberwithin{equation}{section}, or a book
+        out.append(['assign', 'display-equation', ['macro', 'nr', ['concat', ['the-' + within], '.', ['arg', 'nr']]]])
+        resets[within].append(['reset-equation'])
+    if resets['section']:
+        r = resets['section']
+        out.append(['assign', 'ym-section-resets', ['macro', r[0] if len(r) == 1 else ['concat'] + r]])
+    if resets['chapter']:
+        r = resets['chapter']
+        out.append(['assign', 'ym-chapter-resets', ['macro', r[0] if len(r) == 1 else ['concat'] + r]])
+        out.append(['assign', 'chapter-clean',
+                    ['macro', ['if', ['value', 'chapter-numbered'],
+                               ['concat', ['reset-section'], ['reset-subsection'], ['ym-chapter-resets']]]]])
     return out
 
 
@@ -446,6 +455,9 @@ def rewrite(x):
     if x[0] == 'hyperref*' and len(x) == 3 and isinstance(x[1], str):
         # \\hyperref[label]{text}: a link to the label
         return ['hlink', rewrite(x[2]), '#' + x[1]]
+    if x[0] == 'tmsetcounter' and len(x) == 3 and x[1] == 'chapter' and isinstance(x[2], str) and x[2].isdigit():
+        # \\setcounter{chapter}{N} (book): the next chapter is N+1
+        return ['assign', 'chapter-nr', x[2]]
     if x[0] == 'tmsetcounter' and len(x) == 3 and all(isinstance(a, str) for a in x[1:]) and x[2].isdigit():
         # \setcounter{X}{N} of a theorem counter: the next number is N+1
         if not any(t['env'] == x[1] and t['counter'] == x[1] for t in meta.get('theorems', [])):
@@ -512,7 +524,8 @@ def main():
     doc[1:2] = [doc[1]] + top if is_node(doc[1], 'hide-preamble') else top + [doc[1]]
     title = meta.get('title') or os.path.basename(meta['source'])
     tree = ['document', ['TeXmacs', '2.1.5'],
-            ['style', ['tuple', 'article', 'british', 'ym-outline', 'ym-manuscript']],
+            ['style', ['tuple', 'book' if meta.get('class') in ('book', 'report') else 'article',
+                       'british', 'ym-outline', 'ym-manuscript']],
             ['body', doc],
             ['initial', ['collection',
                          ['associate', 'html-title',

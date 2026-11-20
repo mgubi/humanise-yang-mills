@@ -72,6 +72,8 @@ not count the links they give as conversion errors.
 import json, os, re, subprocess, sys
 
 REPO, SRC, OUT = sys.argv[1], sys.argv[2], sys.argv[3]
+# book or report class: \chapter is the top level (set by main())
+CHAPTERS = False
 # where \input and \bibliography files are looked for
 SEARCH = [os.path.dirname(SRC), 'manuscript']
 inputs = []
@@ -88,11 +90,34 @@ def find(rel, ext):
     raise SystemExit(f'tex_prep: {SRC}: {name} not found in ' + ', '.join(d or '.' for d in SEARCH))
 
 
+def if_file_exists(s):
+    r"""\IfFileExists{f}{yes}{no}: yes if f is found (in the folder of SRC, then
+    in manuscript/, as \input), else no"""
+    out, i = [], 0
+    pat = re.compile(r'\\IfFileExists\s*\{([^{}]*)\}\s*\{')
+    while True:
+        m = pat.search(s, i)
+        if not m:
+            out.append(s[i:])
+            return ''.join(out)
+        j = balanced(s, m.end() - 1)
+        k = re.match(r'\s*\{', s[j:])
+        if not k:
+            raise SystemExit(r'tex_prep: \IfFileExists without its third argument')
+        e = balanced(s, j + k.end() - 1)
+        exists = any(os.path.isfile(os.path.join(REPO, d, m.group(1))) for d in SEARCH)
+        out.append(s[i:m.start()])
+        out.append(s[m.end():j - 1] if exists else s[j + k.end():e - 1])
+        i = e
+
+
 def read(path):
     inputs.append(os.path.relpath(path, REPO))
     s = open(path, encoding='utf-8').read()
     # drop comments (but not \%)
     s = re.sub(r'(?<!\\)%.*', '', s)
+    if r'\IfFileExists' in s:
+        s = if_file_exists(s)
     return re.sub(r'\\input\{([^}]*)\}', lambda m: read(find(m.group(1), '.tex')), s)
 
 
@@ -119,6 +144,19 @@ def balanced(s, i):
             if depth == 0:
                 return j + 1
     raise SystemExit('tex_prep: unbalanced braces')
+
+
+def strip_braced(s, name):
+    """\\name{...} dropped (balanced braces)"""
+    out, i = [], 0
+    pat = re.compile(r'\\' + name + r'\s*\{')
+    while True:
+        m = pat.search(s, i)
+        if not m:
+            out.append(s[i:])
+            return ''.join(out)
+        out.append(s[i:m.start()])
+        i = balanced(s, m.end() - 1)
 
 
 def strip_command(s, name):
@@ -156,7 +194,7 @@ def numbering(s):
             errors.append(m.group(0))
         if shared and (shared not in known or known[shared]['numbered'] is False):
             errors.append(m.group(0) + '  (shares the counter of an unknown environment)')
-        if within and within != 'section':
+        if within and within not in ('section',) + (('chapter',) if CHAPTERS else ()):
             errors.append(m.group(0) + '  (numbered within ' + within + ')')
         root = known[shared]['counter'] if shared in known else env
         theorems.append({'env': env, 'name': latex_text(name), 'style': style,
@@ -166,6 +204,10 @@ def numbering(s):
         errors.append(r'\makeatletter block')
     allowed = [r'\\setcounter\{tocdepth\}\{\d\}', r'\\newtheorem', r'\\theoremstyle',
                r'\\numberwithin\{equation\}\{section\}']
+    if CHAPTERS:
+        # book, report: equations within chapters (the default of the
+        # class), the number of the next chapter (tex_post.py)
+        allowed += [r'\\numberwithin\{equation\}\{chapter\}', r'\\setcounter\{chapter\}\{\d+\}']
     # a theorem with a counter of its own, not reset by sections (Theorem A,
     # B of a main theorem): its number format, \renewcommand{\theX}{\Alph{X}}
     # in the preamble, and \setcounter{X}{N} anywhere (tex_post.py)
@@ -422,6 +464,9 @@ def contents_lines(s):
     \addcontentsline stops the build"""
     s = re.sub(r'(\\(?:sub)*section\*\{[^{}]*\}(?:\s*\\label\{[^{}]*\})?)\s*\\addcontentsline\{toc\}\{(?:sub)*section\}\{[^{}]*\}',
                r'\1', s)
+    # (book class: \chapter*{X}\addcontentsline{toc}{chapter}{X})
+    s = re.sub(r'(\\chapter\*\{[^{}]*\}(?:\s*\\label\{[^{}]*\})?)\s*\\addcontentsline\{toc\}\{chapter\}\{[^{}]*\}',
+               r'\1', s)
     m = re.search(r'\\addcontentsline\{[^\n]*', s)
     if m:
         raise SystemExit('tex_prep: \\addcontentsline not after a starred section: ' + m.group(0))
@@ -598,6 +643,31 @@ def makeat(s):
     return re.sub(r'\\makeatletter(.*?)\\makeatother', block, s, flags=re.S)
 
 
+def book_matter(s):
+    r"""book class: \frontmatter, \mainmatter, \backmatter dropped; a \chapter
+    before \mainmatter or after \backmatter is unnumbered (\chapter*), as
+    in LaTeX. Returns the text and the number of top-level headings
+    (\chapter, \chapter*) before \mainmatter: they stay on the contents
+    page of a document split into chapters."""
+    body_start = s.find(r'\begin{document}')
+    pre, body = s[:body_start], s[body_start:]
+    marks = [(m.start(), m.group(1)) for m in re.finditer(r'\\(frontmatter|mainmatter|backmatter)\b', body)]
+    if not marks:
+        return s, 0
+    out, last, mode, front = [], 0, 'main', 0
+    for pos, kind in marks + [(len(body), 'end')]:
+        part = body[last:pos]
+        if mode in ('front', 'back'):
+            part = re.sub(r'\\chapter(?![A-Za-z*])', r'\\chapter*', part)
+        if mode == 'front':
+            front += len(re.findall(r'\\chapter(?![A-Za-z])', part))
+        out.append(part)
+        if kind != 'end':
+            mode = {'frontmatter': 'front', 'mainmatter': 'main', 'backmatter': 'back'}[kind]
+            last = pos + len(kind) + 1
+    return pre + ''.join(out), front
+
+
 def tocdepth(s):
     r"""\setcounter{tocdepth}{n} -> \tmtocdepth{n} (tex_post.py: the entries
     of the table of contents below that level are left out)"""
@@ -659,6 +729,8 @@ def paragraph_labels(s):
     the document, subsections within sections, subsubsections within
     subsections; the starred forms count nothing. (Other numbering is
     refused by numbering().)"""
+    if CHAPTERS and re.search(r'\\(?:sub)?paragraph\*?\{(?:[^{}]|\{[^{}]*\})*\}\s*(?:\\phantomsection\s*)?\\label', s):
+        raise SystemExit(r'tex_prep: \paragraph\label in a book: numbers not implemented')
     sec = sub = subsub = 0
     out, k = [], 0
     for m in re.finditer(r'\\(section|subsection|subsubsection)(\*?)\{|'
@@ -770,7 +842,7 @@ def slug(t):
     return t or 'section'
 
 
-def chapters(s, bib):
+def chapters(s, bib, skip=0):
     r"""the top-level sections of the body (\section, \section*) and the
     bibliography, in order: number (None for \section*), title, the name of
     its page (<n>-<slug>, or <slug>; "references" for the bibliography) and
@@ -778,7 +850,16 @@ def chapters(s, bib):
     contents page.)"""
     body = s[s.find(r'\begin{document}'):]
     out, n = [], 0
-    for m in re.finditer(r'\\section(\*?)\s*\{', body):
+    top = 'chapter' if CHAPTERS else 'section'
+    heads = list(re.finditer(r'\\' + top + r'(\*?)\s*\{|\\tmsetcounter\{' + top + r'\}\{(\d+)\}', body))
+    seen = 0
+    for m in heads:
+        if m.group(2) is not None:         # \setcounter{chapter}{N}
+            n = int(m.group(2))
+            continue
+        seen += 1
+        if seen <= skip:                   # front matter: on the contents page
+            continue
         title = latex_text(body[m.end():balanced(body, m.end() - 1) - 1])
         if m.group(1):
             name = slug(title)
@@ -806,6 +887,17 @@ def main():
     pre = s.split(r'\begin{document}')[0]
     title = re.search(r'\\title\{((?:[^{}]|\{[^{}]*\})*)\}', pre)
     meta = {'source': SRC, 'title': latex_text(title.group(1)) if title else None, 'preamble': pre}
+    global CHAPTERS
+    cls = re.search(r'\\documentclass\s*(?:\[[^\]]*\])?\s*\{([^{}]*)\}', pre)
+    meta['class'] = cls.group(1) if cls else 'article'
+    CHAPTERS = meta['class'] in ('book', 'report')
+    if CHAPTERS:
+        s, meta['front_headings'] = book_matter(s)
+        # \hypersetup in the body (PDF page anchors) dropped; short titles of
+        # sectioning commands dropped (the importer keeps "[...]" as text)
+        b = s.find(r'\begin{document}')
+        s = s[:b] + strip_braced(s[b:], 'hypersetup')
+        s = re.sub(r'(\\(?:chapter|section|subsection|subsubsection)\*?)\[[^\[\]]*\]\s*\{', r'\1{', s)
     s, meta['figures'] = figures(s, pre)
     s = makeat(s)
     s = tocdepth(s)
@@ -821,6 +913,10 @@ def main():
     # \\numberwithin{equation}{section} (the only one numbering() lets
     # through): equations numbered section.n, reset with the section
     meta['equations_within'] = 'section' if re.search(r'\\numberwithin\{equation\}\{section\}', pre) else ''
+    if CHAPTERS and not meta['equations_within']:
+        meta['equations_within'] = 'chapter'     # the default of book and report
+        # \setcounter{chapter}{N}: the next chapter is N+1 (tex_post.py)
+        s = re.sub(r'\\setcounter\{chapter\}\{(\d+)\}', r'\\tmsetcounter{chapter}{\1}', s)
     if re.search(r'\\numberwithin', s.split(r'\begin{document}', 1)[1]):
         raise SystemExit(r'tex_prep: \numberwithin in the body of the document')
     s = equation_alias(s)
@@ -859,7 +955,8 @@ def main():
         print(f'tex_prep: warning: {SRC}: reference to a label the document does not define: {r}')
     bibliography(s)
     meta['bibliography'] = os.path.exists(os.path.join(OUT, 'references.bib'))
-    meta['chapters'] = chapters(s, meta['bibliography'])
+    meta['chapters'] = chapters(s, meta['bibliography'], meta.get('front_headings', 0))
+    meta['split_heading'] = 'h1' if CHAPTERS else 'h2'
     # a large document is published as one page per top-level section
     # (build.sh, split.py): its contents page and its chapters
     meta['split'] = len(s.encode()) > SPLIT_BYTES and len(meta['chapters']) >= 2
