@@ -360,944 +360,923 @@
     prescribed link <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-18>>
 
-    <with|par-left|1tab|2.5.2<space|2spc>Wilson forces and the linear
-    equation ideal <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|2.5.2<space|2spc>Construction of the equation-adapted
+    section <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-19>>
-
-    <with|par-left|1tab|2.5.3<space|2spc>Exact integration by parts and
-    assembly <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-20>>
 
     2.6<space|2spc>Examples and the remaining normalization problem
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-21>
+    <no-break><pageref|auto-20>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>The
     free Maxwell comparison theory> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-22><vspace|0.5fn>
+    <no-break><pageref|auto-21><vspace|0.5fn>
 
     3.1<space|2spc>Curvature covariance <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-23>
+    <no-break><pageref|auto-22>
 
     3.2<space|2spc>Local polynomials and Wick correlations
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-24>
+    <no-break><pageref|auto-23>
 
     3.3<space|2spc>The on-shell polynomial space
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-25>
+    <no-break><pageref|auto-24>
 
     3.4<space|2spc>Reflection and the meaning of nondegeneracy
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-26>
+    <no-break><pageref|auto-25>
 
     3.5<space|2spc>Strict positivity of finite jet families
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-27>
+    <no-break><pageref|auto-26>
 
     3.6<space|2spc>Quadratic fields and normalization checks
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-28>
+    <no-break><pageref|auto-27>
 
     3.7<space|2spc>The degree-four conserved tensor
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-29>
+    <no-break><pageref|auto-28>
 
     3.8<space|2spc>Local stress fluxes <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-30>
+    <no-break><pageref|auto-29>
 
     3.9<space|2spc>Separating fields by insertions of bounded scaling
     dimension <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-31>
+    <no-break><pageref|auto-30>
 
     3.10<space|2spc>Finite correlation criteria for infinitesimal symmetries
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-32>
+    <no-break><pageref|auto-31>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>Exact
     blocking and effective densities> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-33><vspace|0.5fn>
+    <no-break><pageref|auto-32><vspace|0.5fn>
 
     4.1<space|2spc>Local gauges and a symmetric frame choice
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-34>
+    <no-break><pageref|auto-33>
 
     4.2<space|2spc>Gauge-covariant block averaging and the exact kernel
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-35>
+    <no-break><pageref|auto-34>
 
     4.3<space|2spc>A first-power bound for the actual block average
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-36>
+    <no-break><pageref|auto-35>
 
     4.4<space|2spc>Small fields and density coordinates
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-37>
+    <no-break><pageref|auto-36>
 
     4.5<space|2spc>The prescribed leading action
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-38>
+    <no-break><pageref|auto-37>
 
     4.6<space|2spc>The exact-cover representation and its norms
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-39>
+    <no-break><pageref|auto-38>
 
     4.7<space|2spc>Conditions for a one-step induction
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-40>
+    <no-break><pageref|auto-39>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|5<space|2spc>Gaussian
     kernels and stationary backgrounds> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-41><vspace|0.5fn>
+    <no-break><pageref|auto-40><vspace|0.5fn>
 
     5.1<space|2spc>Lattice differential forms and zero modes
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-42>
+    <no-break><pageref|auto-41>
 
     5.2<space|2spc>The exact Gaussian block transformation
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-43>
+    <no-break><pageref|auto-42>
 
     5.3<space|2spc>Averaging and the Fourier alias formula
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-44>
+    <no-break><pageref|auto-43>
 
     5.4<space|2spc>Gauge reduction and a regular curvature symbol
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-45>
+    <no-break><pageref|auto-44>
 
     5.5<space|2spc>Uniform estimates over finite blocking histories
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-46>
+    <no-break><pageref|auto-45>
 
     5.6<space|2spc>Exact transports and the curvature defect
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-47>
+    <no-break><pageref|auto-46>
 
     <with|par-left|1tab|5.6.1<space|2spc>A positive factorization of the
     defect <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-48>>
+    <no-break><pageref|auto-47>>
 
     5.7<space|2spc>Convergence at a fixed scale
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-49>
+    <no-break><pageref|auto-48>
 
     5.8<space|2spc>Uniform inverse bounds: the hypotheses that matter
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-50>
+    <no-break><pageref|auto-49>
 
     5.9<space|2spc>The actual block average and the forest coordinates
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-51>
+    <no-break><pageref|auto-50>
 
     <with|par-left|1tab|5.9.1<space|2spc>A common analytic branch for all
     local labels <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-52>>
+    <no-break><pageref|auto-51>>
 
     <with|par-left|1tab|5.9.2<space|2spc>The tree comparison and the actual
     Hessian <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-53>>
+    <no-break><pageref|auto-52>>
 
     <with|par-left|1tab|5.9.3<space|2spc>A smooth representative of the
     stationary tangent <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-54>>
+    <no-break><pageref|auto-53>>
 
     5.10<space|2spc>A stationary background on a uniform neighborhood
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-55>
+    <no-break><pageref|auto-54>
 
     <with|par-left|1tab|5.10.1<space|2spc>Supplying the local derivative
     estimates <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-56>>
+    <no-break><pageref|auto-55>>
 
     5.11<space|2spc>Scope of the completed Gaussian construction
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-57>
+    <no-break><pageref|auto-56>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|6<space|2spc>Large
     fields and local Gaussian integration>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-58><vspace|0.5fn>
+    <no-break><pageref|auto-57><vspace|0.5fn>
 
     6.1<space|2spc>Selected tests and the local energy
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-59>
+    <no-break><pageref|auto-58>
 
     <with|par-left|1tab|6.1.1<space|2spc>An exact completion of squares
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-60>>
+    <no-break><pageref|auto-59>>
 
     <with|par-left|1tab|6.1.2<space|2spc>Direct bounds and the signed
     comparison <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-61>>
+    <no-break><pageref|auto-60>>
 
     6.2<space|2spc>The actual sector Gaussian
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-62>
+    <no-break><pageref|auto-61>
 
     <with|par-left|1tab|6.2.1<space|2spc>Transferring a local tree estimate
     to the actual rows <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-63>>
+    <no-break><pageref|auto-62>>
 
     <with|par-left|1tab|6.2.2<space|2spc>Local inverse columns
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-64>>
+    <no-break><pageref|auto-63>>
 
     <with|par-left|1tab|6.2.3<space|2spc>The source and derivatives on a
     fixed sector <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-65>>
+    <no-break><pageref|auto-64>>
 
     <with|par-left|1tab|6.2.4<space|2spc>The exact integral and its
     normalization <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-66>>
+    <no-break><pageref|auto-65>>
 
     6.3<space|2spc>Differentiation on a common dependence region
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-67>
+    <no-break><pageref|auto-66>
 
     <with|par-left|1tab|6.3.1<space|2spc>Differentiation under the common
     Gaussian law <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-68>>
+    <no-break><pageref|auto-67>>
 
     6.4<space|2spc>Simultaneous tail estimates
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-69>
+    <no-break><pageref|auto-68>
 
     <with|par-left|1tab|6.4.1<space|2spc>The deterministic estimate behind a
     cutoff remainder <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-70>>
+    <no-break><pageref|auto-69>>
 
     <with|par-left|1tab|6.4.2<space|2spc>The bounded-jet route for local
     activities <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-71>>
+    <no-break><pageref|auto-70>>
 
     <with|par-left|1tab|6.4.3<space|2spc>One majorant for the product
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-72>>
+    <no-break><pageref|auto-71>>
 
     6.5<space|2spc>Weighted bounds for the primitive local factors
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-73>
+    <no-break><pageref|auto-72>
 
     <with|par-left|1tab|6.5.1<space|2spc>Gaussian correction series
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-74>>
+    <no-break><pageref|auto-73>>
 
     <with|par-left|1tab|6.5.2<space|2spc>Short local and inherited terms
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-75>>
+    <no-break><pageref|auto-74>>
 
     <with|par-left|1tab|6.5.3<space|2spc>Components and assembly under one
     law <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-76>>
+    <no-break><pageref|auto-75>>
 
     <with|par-left|1tab|6.5.4<space|2spc>Comparison with the linear local
     integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-77>>
+    <no-break><pageref|auto-76>>
 
     6.6<space|2spc>What must be checked for a concrete step
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-78>
+    <no-break><pageref|auto-77>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|7<space|2spc>Local
     matching and the one-loop coefficient>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-79><vspace|0.5fn>
+    <no-break><pageref|auto-78><vspace|0.5fn>
 
     7.1<space|2spc>Common Taylor kernels and Ward identities
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-80>
+    <no-break><pageref|auto-79>
 
     7.2<space|2spc>Division by the lattice curl
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-81>
+    <no-break><pageref|auto-80>
 
     7.3<space|2spc>The marginal quadratic coefficient
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-82>
+    <no-break><pageref|auto-81>
 
     7.4<space|2spc>Haar measure and gauge completion
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-83>
+    <no-break><pageref|auto-82>
 
     7.5<space|2spc>The auxiliary lattice determinant
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-84>
+    <no-break><pageref|auto-83>
 
     7.6<space|2spc>Uniform comparison of determinants
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-85>
+    <no-break><pageref|auto-84>
 
     <with|par-left|1tab|7.6.1<space|2spc>The stationary branch and the block
     average contact term <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-86>>
+    <no-break><pageref|auto-85>>
 
     <with|par-left|1tab|7.6.2<space|2spc>Bounds for the actual centered
     matrices <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-87>>
+    <no-break><pageref|auto-86>>
 
     <with|par-left|1tab|7.6.3<space|2spc>The one-loop drift
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-88>>
+    <no-break><pageref|auto-87>>
 
     7.7<space|2spc>Classical matching through fourth order
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-89>
+    <no-break><pageref|auto-88>
 
     <with|par-left|1tab|7.7.1<space|2spc>Uniform classical stationary
     coefficients <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-90>>
+    <no-break><pageref|auto-89>>
 
     <with|par-left|1tab|7.7.2<space|2spc>Construction of the matching
     curvature terms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-91>>
+    <no-break><pageref|auto-90>>
 
     <with|par-left|1tab|7.7.3<space|2spc>Preserving the classical coefficient
     bound <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-92>>
+    <no-break><pageref|auto-91>>
 
     7.8<space|2spc>Inherited loops: four differences and alias suppression
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-93>
+    <no-break><pageref|auto-92>
 
     7.9<space|2spc>Output coefficients and the remaining analytic width
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-94>
+    <no-break><pageref|auto-93>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|8<space|2spc>Polymer
     expansions and connected correlations>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-95><vspace|0.5fn>
+    <no-break><pageref|auto-94><vspace|0.5fn>
 
     8.1<space|2spc>Activities, supports and incompatibility
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-96>
+    <no-break><pageref|auto-95>
 
     8.2<space|2spc>The logarithm and its convergence criterion
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-97>
+    <no-break><pageref|auto-96>
 
     8.3<space|2spc>A spatially local bound with a geometric tail
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-98>
+    <no-break><pageref|auto-97>
 
     8.4<space|2spc>Deleting polymers and controlling local changes
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-99>
+    <no-break><pageref|auto-98>
 
     8.5<space|2spc>Parameters, derivatives and connected insertions
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-100>
+    <no-break><pageref|auto-99>
 
     8.6<space|2spc>Large-field constraints and exact reassembly
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-101>
+    <no-break><pageref|auto-100>
 
     8.7<space|2spc>What an application must supply
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-102>
+    <no-break><pageref|auto-101>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|9<space|2spc>The
     nonlinear renormalization step> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-103><vspace|0.5fn>
+    <no-break><pageref|auto-102><vspace|0.5fn>
 
     9.1<space|2spc>The exact local integral and its first expansion
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-104>
+    <no-break><pageref|auto-103>
 
     9.2<space|2spc>Improving the regular remainder
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-105>
+    <no-break><pageref|auto-104>
 
     <with|par-left|1tab|9.2.1<space|2spc>Terms containing several elementary
     factors <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-106>>
+    <no-break><pageref|auto-105>>
 
     <with|par-left|1tab|9.2.2<space|2spc>The linear inherited regular term
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-107>>
+    <no-break><pageref|auto-106>>
 
     <with|par-left|1tab|9.2.3<space|2spc>Low-order terms and localization
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-108>>
+    <no-break><pageref|auto-107>>
 
     <with|par-left|1tab|9.2.4<space|2spc>The stationary integral with its
     cutoff retained <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-109>>
+    <no-break><pageref|auto-108>>
 
     <with|par-left|1tab|9.2.5<space|2spc>Identifying the retained region in
     the actual integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-110>>
+    <no-break><pageref|auto-109>>
 
     <with|par-left|1tab|9.2.6<space|2spc>Centering the full logarithm
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-111>>
+    <no-break><pageref|auto-110>>
 
     <with|par-left|1tab|9.2.7<space|2spc>Recovering a local density
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-112>>
+    <no-break><pageref|auto-111>>
 
     9.3<space|2spc>A precise preparatory output
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-113>
+    <no-break><pageref|auto-112>
 
     9.4<space|2spc>Local quadratic subtraction
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-114>
+    <no-break><pageref|auto-113>
 
     9.5<space|2spc>Replacing the local quadratic term by the path action
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-115>
+    <no-break><pageref|auto-114>
 
     9.6<space|2spc>Absorbing logarithmic corrections into large-field
     activities <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-116>
+    <no-break><pageref|auto-115>
 
     9.7<space|2spc>The normalization of the field-independent term and
     continuity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-117>
+    <no-break><pageref|auto-116>
 
     9.8<space|2spc>Wilson initialization <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-118>
+    <no-break><pageref|auto-117>
 
     9.9<space|2spc>The one-step conclusion and its input data
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-119>
+    <no-break><pageref|auto-118>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|10<space|2spc>A
     common trajectory and fixed-scale stability>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-120><vspace|0.5fn>
+    <no-break><pageref|auto-119><vspace|0.5fn>
 
     10.1<space|2spc>What is fixed before choosing the scales
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-121>
+    <no-break><pageref|auto-120>
 
     10.2<space|2spc>A slowly increasing stage schedule
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-122>
+    <no-break><pageref|auto-121>
 
     10.3<space|2spc>Tuning a finite history to the coarse endpoint
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-123>
+    <no-break><pageref|auto-122>
 
     10.4<space|2spc>Uniform logarithmic running
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-124>
+    <no-break><pageref|auto-123>
 
     10.5<space|2spc>The coefficient comparison before the activity comparison
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-125>
+    <no-break><pageref|auto-124>
 
     10.6<space|2spc>The stronger local comparison required for cutoff limits
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-126>
-
-    <with|par-left|1tab|10.6.1<space|2spc>How finite evaluations of the real
-    parameters yield the contraction <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-127>>
-
-    <with|par-left|1tab|10.6.2<space|2spc>Producing the finite parameter
-    evaluations from the protected expansion
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-128>>
-
-    <with|par-left|1tab|10.6.3<space|2spc>Numerical cumulative control
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-129>>
-
-    <with|par-left|1tab|10.6.4<space|2spc>Common-input continuity and the
-    zero-array histories <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-130>>
+    <no-break><pageref|auto-125>
 
     10.7<space|2spc>Convergence of the coupled histories
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-131>
+    <no-break><pageref|auto-126>
 
     10.8<space|2spc>Identifying the analytic comparison on the selected
     family <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-132>
+    <no-break><pageref|auto-127>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|11<space|2spc>Marked
     insertions and finite-scale comparison>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-133><vspace|0.5fn>
+    <no-break><pageref|auto-128><vspace|0.5fn>
 
     11.1<space|2spc>An algebra for finitely many insertions
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-134>
+    <no-break><pageref|auto-129>
 
     <with|par-left|1tab|11.1.1<space|2spc>The exact density and its integral
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-135>>
+    <no-break><pageref|auto-130>>
 
     11.2<space|2spc>Joint local terms and large-field components
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-136>
+    <no-break><pageref|auto-131>
 
     11.3<space|2spc>Support bounds for several marked components
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-137>
+    <no-break><pageref|auto-132>
 
     11.4<space|2spc>One marked step with the actual local factors
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-138>
+    <no-break><pageref|auto-133>
 
     <with|par-left|1tab|11.4.1<space|2spc>The one-insertion graph estimates
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-139>>
+    <no-break><pageref|auto-134>>
 
     <with|par-left|1tab|11.4.2<space|2spc>Propagating the already formed
     terms involving at least two insertions
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-140>>
+    <no-break><pageref|auto-135>>
 
     11.5<space|2spc>A common Gaussian comparison
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-141>
+    <no-break><pageref|auto-136>
 
     <with|par-left|1tab|11.5.1<space|2spc>The exact cross-covariance on the
     selected forest <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-142>>
+    <no-break><pageref|auto-137>>
 
     <with|par-left|1tab|11.5.2<space|2spc>Actual local coordinate and cutoff
     estimates <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-143>>
+    <no-break><pageref|auto-138>>
 
     11.6<space|2spc>Restarting below a comparison level
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-144>
+    <no-break><pageref|auto-139>
 
     <with|par-left|1tab|11.6.1<space|2spc>Constructing the restarted
     representations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-145>>
+    <no-break><pageref|auto-140>>
 
     11.7<space|2spc>The normalized integral with several insertions
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-146>
+    <no-break><pageref|auto-141>
 
     <with|par-left|1tab|11.7.1<space|2spc>An independent positional modulus
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-147>>
+    <no-break><pageref|auto-142>>
 
     11.8<space|2spc>Backward comparison of a local trial
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-148>
+    <no-break><pageref|auto-143>
 
     11.9<space|2spc>Finite-dimensional detection before taking limits
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-149>
+    <no-break><pageref|auto-144>
 
     11.10<space|2spc>Collected estimates and local calibration
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-150>
+    <no-break><pageref|auto-145>
 
     11.11<space|2spc>Calibrating the microscopic equations on the same
     history <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-151>
+    <no-break><pageref|auto-146>
 
     11.12<space|2spc>The moving equation space and uniform finite differences
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-152>
+    <no-break><pageref|auto-147>
 
     <with|par-left|1tab|11.12.1<space|2spc>A common localization map for the
     separating family <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-153>>
+    <no-break><pageref|auto-148>>
 
     <with|par-left|1tab|11.12.2<space|2spc>Absorbing the larger source weight
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-154>>
+    <no-break><pageref|auto-149>>
 
     <with|par-left|1tab|11.12.3<space|2spc>The actual covariance on a
     comparison window <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-155>>
+    <no-break><pageref|auto-150>>
 
     <with|par-left|1tab|11.12.4<space|2spc>From the common polynomial
     localization to the corrected pair bound
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-156>>
+    <no-break><pageref|auto-151>>
 
     <with|par-left|1tab|11.12.5<space|2spc>Finite-arity comparison on a
     common finite set of scales <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-157>>
+    <no-break><pageref|auto-152>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|12<space|2spc>The
     ultraviolet limit at fixed volume> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-158><vspace|0.5fn>
+    <no-break><pageref|auto-153><vspace|0.5fn>
 
     12.1<space|2spc>Fixed-level convergence data
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-159>
+    <no-break><pageref|auto-154>
 
     12.2<space|2spc>Contraction of the complete marked remainder
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-160>
+    <no-break><pageref|auto-155>
 
     12.3<space|2spc>The scalar normalization cancels
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-161>
+    <no-break><pageref|auto-156>
 
     12.4<space|2spc>A stopping estimate uniform in the stopping level
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-162>
+    <no-break><pageref|auto-157>
 
     12.5<space|2spc>Smoothness and all lattice differences
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-163>
+    <no-break><pageref|auto-158>
 
     12.6<space|2spc>The fixed-volume conclusion
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-164>
+    <no-break><pageref|auto-159>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|13<space|2spc>Continuum
     correlations and local fields> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-165><vspace|0.5fn>
+    <no-break><pageref|auto-160><vspace|0.5fn>
 
     13.1<space|2spc>One subsequence of volumes
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-166>
+    <no-break><pageref|auto-161>
 
     13.2<space|2spc>Separated cells and errors in local observables
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-167>
+    <no-break><pageref|auto-162>
 
     13.3<space|2spc>Fields as equivalence classes of labels
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-168>
+    <no-break><pageref|auto-163>
 
     <with|par-left|1tab|13.3.1<space|2spc>Representatives chosen before the
     spectators <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-169>>
+    <no-break><pageref|auto-164>>
 
     13.4<space|2spc>Inclusions and derivatives
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-170>
+    <no-break><pageref|auto-165>
 
     13.5<space|2spc>Reflection positivity and separated power bounds
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-171>
+    <no-break><pageref|auto-166>
 
     13.6<space|2spc>Repeated reflected words
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-172>
+    <no-break><pageref|auto-167>
 
     13.7<space|2spc>Sharp fixed-arity short-distance bounds
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-173>
+    <no-break><pageref|auto-168>
 
     <with|par-left|1tab|13.7.1<space|2spc>A normalized local insertion
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-174>>
+    <no-break><pageref|auto-169>>
 
     <with|par-left|1tab|13.7.2<space|2spc>The stopping scale and centered
     estimate <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-175>>
+    <no-break><pageref|auto-170>>
 
     <with|par-left|1tab|13.7.3<space|2spc>Arbitrary separated points
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-176>>
+    <no-break><pageref|auto-171>>
 
     13.8<space|2spc>Bounded real approximations for separated words
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-177>
+    <no-break><pageref|auto-172>
 
     13.9<space|2spc>Scaling dimension and the physical quotient
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-178>
+    <no-break><pageref|auto-173>
 
     13.10<space|2spc>Local replacement of a cluster on the lattice
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-179>
+    <no-break><pageref|auto-174>
 
     <with|par-left|1tab|13.10.1<space|2spc>Signed local transport
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-180>>
+    <no-break><pageref|auto-175>>
 
     <with|par-left|1tab|13.10.2<space|2spc>Grouping marks and retaining their
     supports <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-181>>
+    <no-break><pageref|auto-176>>
 
     <with|par-left|1tab|13.10.3<space|2spc>Extraction with a freely chosen
     residual weight <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-182>>
+    <no-break><pageref|auto-177>>
 
     <with|par-left|1tab|13.10.4<space|2spc>A mixed-correlation consequence
     without phases <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-183>>
+    <no-break><pageref|auto-178>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|14<space|2spc>Reflection
     spaces, Ward identities and Euclidean symmetry>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-184><vspace|0.5fn>
+    <no-break><pageref|auto-179><vspace|0.5fn>
 
     14.1<space|2spc>Reflection spaces for the coordinate axes
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-185>
+    <no-break><pageref|auto-180>
 
     14.2<space|2spc>Bounded insertions in a slab
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-186>
+    <no-break><pageref|auto-181>
 
     14.3<space|2spc>Comparing the mixed fields with free fields
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-187>
+    <no-break><pageref|auto-182>
 
     <with|par-left|1tab|14.3.1<space|2spc>Obtaining the three comparison
     bounds from one lattice family <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-188>>
+    <no-break><pageref|auto-183>>
 
     14.4<space|2spc>The conserved stress line
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-189>
+    <no-break><pageref|auto-184>
 
     14.5<space|2spc>Shrinking shells and local charge fields
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-190>
+    <no-break><pageref|auto-185>
 
     14.6<space|2spc>Coordinate spectral measures and the angular boundary
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-191>
+    <no-break><pageref|auto-186>
 
     <with|par-left|1tab|14.6.1<space|2spc>What opposite reflection signs
     control <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-192>>
+    <no-break><pageref|auto-187>>
 
     <with|par-left|1tab|14.6.2<space|2spc>The separate diagonal-stress
     estimate <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-193>>
+    <no-break><pageref|auto-188>>
 
     <with|par-left|1tab|14.6.3<space|2spc>Vanishing angular flux at infinity
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-194>>
+    <no-break><pageref|auto-189>>
 
     14.7<space|2spc>Normalization and propagation of the Ward identities
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-195>
+    <no-break><pageref|auto-190>
 
     <with|par-left|1tab|14.7.1<space|2spc>Analyticity supplied by a positive
     Gram kernel <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-196>>
+    <no-break><pageref|auto-191>>
 
     <with|par-left|1tab|14.7.2<space|2spc>A finite path through separated
     configurations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-197>>
+    <no-break><pageref|auto-192>>
 
     14.8<space|2spc>The rotation action and the normalized tensor
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-198>
+    <no-break><pageref|auto-193>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|15<space|2spc>Decomposition
     into phases> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-199><vspace|0.5fn>
+    <no-break><pageref|auto-194><vspace|0.5fn>
 
     15.1<space|2spc>The zero-energy subspace
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-200>
+    <no-break><pageref|auto-195>
 
     15.2<space|2spc>Compression and separation of clusters
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-201>
+    <no-break><pageref|auto-196>
 
     15.3<space|2spc>Characters and the representing measure
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-202>
+    <no-break><pageref|auto-197>
 
     15.4<space|2spc>Symmetries in each phase
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-203>
+    <no-break><pageref|auto-198>
 
     15.5<space|2spc>Positivity, field identities and null spaces
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-204>
+    <no-break><pageref|auto-199>
 
     15.6<space|2spc>Selecting a phase with a unique ground vector
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-205>
+    <no-break><pageref|auto-200>
 
     15.7<space|2spc>Sharp separated bounds in every phase
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-206>
+    <no-break><pageref|auto-201>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|16<space|2spc>Relativistic
     reconstruction in every phase> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-207><vspace|0.5fn>
+    <no-break><pageref|auto-202><vspace|0.5fn>
 
     16.1<space|2spc>Complex time and a uniform boundary distribution
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-208>
+    <no-break><pageref|auto-203>
 
     16.2<space|2spc>Lorentz covariance and the spectral cone
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-209>
+    <no-break><pageref|auto-204>
 
     16.3<space|2spc>The spacetime tube and locality
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-210>
+    <no-break><pageref|auto-205>
 
     16.4<space|2spc>Field words and the reflection space
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-211>
+    <no-break><pageref|auto-206>
 
     16.5<space|2spc>The low-energy estimate and uniqueness of the vacuum in
     each phase <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-212>
+    <no-break><pageref|auto-207>
 
     16.6<space|2spc>The weak commutant and local stress charges
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-213>
+    <no-break><pageref|auto-208>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|17<space|2spc>The
     trace law and its consequences> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-214><vspace|0.5fn>
+    <no-break><pageref|auto-209><vspace|0.5fn>
 
     17.1<space|2spc>Centering and the positive spectral measure
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-215>
+    <no-break><pageref|auto-210>
 
     17.2<space|2spc>Comparison at prescribed radii
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-216>
+    <no-break><pageref|auto-211>
 
     <with|par-left|1tab|17.2.1<space|2spc>Comparison windows crossing changes
     of stage <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-217>>
+    <no-break><pageref|auto-212>>
 
     17.3<space|2spc>Tensor coordinates and the regulated current
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-218>
+    <no-break><pageref|auto-213>
 
     17.4<space|2spc>Exact current transport and the scalar regulator
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-219>
+    <no-break><pageref|auto-214>
 
     <with|par-left|1tab|17.4.1<space|2spc>Difference-preserving block
     averages <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-220>>
+    <no-break><pageref|auto-215>>
 
     <with|par-left|1tab|17.4.2<space|2spc>What scalar mass regularization
     changes <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-221>>
+    <no-break><pageref|auto-216>>
 
     <with|par-left|1tab|17.4.3<space|2spc>Exact integration by parts and the
     remaining current estimate <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-222>>
+    <no-break><pageref|auto-217>>
 
     <with|par-left|1tab|17.4.4<space|2spc>The group-coordinate contact
     identity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-223>>
+    <no-break><pageref|auto-218>>
 
     <with|par-left|1tab|17.4.5<space|2spc>Cancellation of the action-gradient
     terms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-224>>
+    <no-break><pageref|auto-219>>
 
     <with|par-left|1tab|17.4.6<space|2spc>Power counting the regulator
     remainder <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-225>>
+    <no-break><pageref|auto-220>>
 
     <with|par-left|1tab|17.4.7<space|2spc>The corrected coefficient and order
     of limits <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-226>>
+    <no-break><pageref|auto-221>>
 
     17.5<space|2spc>Current conservation and uniform transfer bounds
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-227>
+    <no-break><pageref|auto-222>
 
     <with|par-left|1tab|17.5.1<space|2spc>Preservation of the low moments
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-228>>
+    <no-break><pageref|auto-223>>
 
     <with|par-left|1tab|17.5.2<space|2spc>A homogeneous bound for the
     quadratic channel <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-229>>
+    <no-break><pageref|auto-224>>
 
     <with|par-left|1tab|17.5.3<space|2spc>The nonlinear terms need
     fixed-ratio bounds <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-230>>
+    <no-break><pageref|auto-225>>
 
     <with|par-left|1tab|17.5.4<space|2spc>Why action matching introduces no
     source <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-231>>
+    <no-break><pageref|auto-226>>
 
     <with|par-left|1tab|17.5.5<space|2spc>Uniform current and
     difference-primitive bounds <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-232>>
+    <no-break><pageref|auto-227>>
 
     17.6<space|2spc>Quantitative stability of the trace functional
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-233>
+    <no-break><pageref|auto-228>
 
     17.7<space|2spc>From the current identity to marked coefficient estimates
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-234>
+    <no-break><pageref|auto-229>
 
     <with|par-left|1tab|17.7.1<space|2spc>A differentiated block kernel
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-235>>
+    <no-break><pageref|auto-230>>
 
     <with|par-left|1tab|17.7.2<space|2spc>The finite degree-five coefficient
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-236>>
+    <no-break><pageref|auto-231>>
 
     <with|par-left|1tab|17.7.3<space|2spc>The equation direction and the
     necessary rates <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-237>>
+    <no-break><pageref|auto-232>>
 
     17.8<space|2spc>The coefficient and the all-radius limit
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-238>
+    <no-break><pageref|auto-233>
 
     17.9<space|2spc>What the trace law excludes
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-239>
+    <no-break><pageref|auto-234>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|18<space|2spc>Operator
     products and extensions across diagonals>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-240><vspace|0.5fn>
+    <no-break><pageref|auto-235><vspace|0.5fn>
 
     18.1<space|2spc>A fixed prescription for all finite degrees
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-241>
+    <no-break><pageref|auto-236>
 
     18.2<space|2spc>The marked replacement estimate
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-242>
+    <no-break><pageref|auto-237>
 
     18.3<space|2spc>Finite-order operator product expansion
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-243>
+    <no-break><pageref|auto-238>
 
     18.4<space|2spc>An explicit finite-order extension across every diagonal
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-244>
+    <no-break><pageref|auto-239>
 
     18.5<space|2spc>Sharper subtraction and dependence on the prescription
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-245>
+    <no-break><pageref|auto-240>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|19<space|2spc>Assembly
     and the scope of the construction> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-246><vspace|0.5fn>
+    <no-break><pageref|auto-241><vspace|0.5fn>
 
     19.1<space|2spc>One family and the order of its limits
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-247>
+    <no-break><pageref|auto-242>
 
     19.2<space|2spc>Assembly of the construction
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-248>
+    <no-break><pageref|auto-243>
 
     19.3<space|2spc>Conclusions that are not supplied
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-249>
+    <no-break><pageref|auto-244>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|Notation in the
     current draft> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-250><vspace|0.5fn>
+    <no-break><pageref|auto-245><vspace|0.5fn>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|References>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-252><vspace|0.5fn>
+    <no-break><pageref|auto-247><vspace|0.5fn>
   </table-of-contents>
 
   <chapter|Lattice gauge theory and the continuum
@@ -1587,13 +1566,15 @@
     coordinate direction.
   </proposition>
 
-  This is the finite-torus form of lattice gauge reflection positivity
-  <cite|OsterwalderSeiler1978|Seiler1982>. Polarization gives a positive
-  semidefinite pairing between finite linear combinations of positive-side
-  observables. The support restriction is part of the statement: it is not an
-  assertion about arbitrary dependence on links crossing the reflection
-  planes. Positivity of the Boltzmann density, by itself, would not imply
-  <eqref|ch01:rp>.
+  <\proof>
+    This is the finite-torus form of lattice gauge reflection positivity
+    <cite|OsterwalderSeiler1978|Seiler1982>. Polarization gives a positive
+    semidefinite pairing between finite linear combinations of positive-side
+    observables. The support restriction is part of the statement: it is not
+    an assertion about arbitrary dependence on links crossing the reflection
+    planes. Positivity of the Boltzmann density, by itself, would not imply
+    <eqref|ch01:rp>.
+  </proof>
 
   For clarity, one version of the chessboard construction can be described
   without observables on seams. Write <math|s=2*q*\<ell\>> and cut each
@@ -2386,140 +2367,150 @@
   only lower polynomial degrees. This also explains why no assumption about
   an infinite-dimensional configuration space enters the lemma.
 
-  <subsection|Wilson forces and the linear equation ideal>
+  <subsection|Construction of the equation-adapted section>
 
-  Write <math|S<rsub|W>> for the Wilson action without its factor
-  <math|\<beta\>>. For a positive link <math|e> and an orthonormal colour
-  basis <math|<around|(|E<rsub|a>|)>>, define its force <math|F<rsub|e>> by
+  <\render-proof|Proof of Theorem<nbsp><reference|ch02:equation-adapted>>
+    We first represent the generators of the equation ideal by Wilson forces.
+    We then integrate by parts in a single link and assemble the local
+    section.
 
-  <\equation*>
-    \<partial\><rsub|e,a>*S<rsub|W>=<around|\<langle\>|E<rsub|a>,F<rsub|e>|\<rangle\>>,<space|2em>\<partial\><rsub|e,a>*f<around|(|U|)>=<around*|\<nobracket\>|<frac|d|d*t>*f*<around|(|U<rsub|e>\<leftarrow\>e<rsup|t*E<rsub|a>>*U<rsub|e>|)>|\|><rsub|t=0>.
-  </equation*>
+    <vspace*|0.5fn><no-indent><em|Step 1. Representation by Wilson forces.>
 
-  Differentiating the plaquettes incident on <math|e> expresses
-  <math|F<rsub|e>> as a signed sum of plaquette-curvature coordinates based
-  at the initial vertex of <math|e>. The precise signs follow the chosen
-  plaquette orientations. Transport the force to the anchor by a path
-  avoiding <math|e>, and take a colour component there. Its linearization is
-  the corresponding discrete divergence of sampled linear curls.
+    Write <math|S<rsub|W>> for the Wilson action without its factor
+    <math|\<beta\>>. For a positive link <math|e> and an orthonormal colour
+    basis <math|<around|(|E<rsub|a>|)>>, define its force <math|F<rsub|e>> by
 
-  Fix a layer <math|j>. These linear force functionals, restricted to jets
-  through layer <math|j>, span every functional which acts only on
-  <math|A<rsub|j>> and annihilates the Maxwell solution potentials in that
-  layer. Indeed, if all force functionals vanish, their values at integer
-  base points form identically zero polynomials. Their top-degree terms are
+    <\equation*>
+      \<partial\><rsub|e,a>*S<rsub|W>=<around|\<langle\>|E<rsub|a>,F<rsub|e>|\<rangle\>>,<space|2em>\<partial\><rsub|e,a>*f<around|(|U|)>=<around*|\<nobracket\>|<frac|d|d*t>*f*<around|(|U<rsub|e>\<leftarrow\>e<rsup|t*E<rsub|a>>*U<rsub|e>|)>|\|><rsub|t=0>.
+    </equation*>
 
-  <\equation*>
-    -<big|sum><rsub|\<mu\>>\<partial\><rsub|\<mu\>>*<around|(|d*A<rsub|j>|)><rsub|\<mu\>*\<nu\>>.
-  </equation*>
+    Differentiating the plaquettes incident on <math|e> expresses
+    <math|F<rsub|e>> as a signed sum of plaquette-curvature coordinates based
+    at the initial vertex of <math|e>. The precise signs follow the chosen
+    plaquette orientations. Transport the force to the anchor by a path
+    avoiding <math|e>, and take a colour component there. Its linearization
+    is the corresponding discrete divergence of sampled linear curls.
 
-  This follows by taking the first difference of the sampled curl in its
-  transverse coordinate. Thus the top layer is a Maxwell solution potential.
-  Every functional of the indicated type annihilates the common force kernel
-  and is therefore a finite linear combination of these forces. Notice that
-  this argument identifies the top layer only; it does not identify the
-  entire kernel of the discrete force system with the continuum solution jet
-  space.
+    Fix a layer <math|j>. These linear force functionals, restricted to jets
+    through layer <math|j>, span every functional which acts only on
+    <math|A<rsub|j>> and annihilates the Maxwell solution potentials in that
+    layer. Indeed, if all force functionals vanish, their values at integer
+    base points form identically zero polynomials. Their top-degree terms are
 
-  Here is the corresponding description of the polynomial ideal. Choose a
-  linear projection of each jet layer onto its solution subspace and let
-  <math|\<cal-E\>> be their direct sum. In the full, not necessarily
-  invariant, polynomial algebra the kernel of
-  <math|p\<mapsto\>p*<around|(|\<cal-E\>*J|)>> is generated by linear
-  functionals vanishing on those solution subspaces. To check this without an
-  ideal-generation theorem, use
+    <\equation*>
+      -<big|sum><rsub|\<mu\>>\<partial\><rsub|\<mu\>>*<around|(|d*A<rsub|j>|)><rsub|\<mu\>*\<nu\>>.
+    </equation*>
 
-  <\equation*>
-    <big|prod><rsub|\<nu\>=1><rsup|s>u<rsub|\<nu\>>-<big|prod><rsub|\<nu\>=1><rsup|s><around|(|\<cal-E\><rsup|\<ast\>>*u<rsub|\<nu\>>|)>=<big|sum><rsub|i=1><rsup|s><around|(|u<rsub|i>-\<cal-E\><rsup|\<ast\>>*u<rsub|i>|)>*<big|prod><rsub|\<nu\>\<less\>i>\<cal-E\><rsup|\<ast\>>*u<rsub|\<nu\>>*<big|prod><rsub|\<nu\>\<gtr\>i>u<rsub|\<nu\>>.
-  </equation*>
+    This follows by taking the first difference of the sampled curl in its
+    transverse coordinate. Thus the top layer is a Maxwell solution
+    potential. Every functional of the indicated type annihilates the common
+    force kernel and is therefore a finite linear combination of these
+    forces. Notice that this argument identifies the top layer only; it does
+    not identify the entire kernel of the discrete force system with the
+    continuum solution jet space.
 
-  Choose homogeneous linear coordinates, so both gradings are preserved.
-  Every homogeneous element of <math|\<cal-I\><rsub|d>> is therefore a sum of
-  products <math|\<lambda\>*z<rsub|1>*\<cdots\>*z<rsub|s-1>>, where
-  <math|\<lambda\>> is a one-layer equation functional. Individual summands
-  need not be gauge invariant.
+    Here is the corresponding description of the polynomial ideal. Choose a
+    linear projection of each jet layer onto its solution subspace and let
+    <math|\<cal-E\>> be their direct sum. In the full, not necessarily
+    invariant, polynomial algebra the kernel of
+    <math|p\<mapsto\>p*<around|(|\<cal-E\>*J|)>> is generated by linear
+    functionals vanishing on those solution subspaces. To check this without
+    an ideal-generation theorem, use
 
-  Represent <math|\<lambda\>> by the finite force combination just
-  constructed on its truncated jet space. For each force summand involving
-  <math|e>, represent each <math|z<rsub|i>> by a linear combination of
-  curvature coordinates avoiding <math|e>, using
-  Lemma<nbsp><reference|ch02:avoiding-tests> on the <em|full> jet space
-  through degree <math|d>. Multiply these representatives by that force
-  summand. The resulting function <math|f> has at least <math|s> curvature
-  factors. Its Taylor polynomial is
+    <\equation*>
+      <big|prod><rsub|\<nu\>=1><rsup|s>u<rsub|\<nu\>>-<big|prod><rsub|\<nu\>=1><rsup|s><around|(|\<cal-E\><rsup|\<ast\>>*u<rsub|\<nu\>>|)>=<big|sum><rsub|i=1><rsup|s><around|(|u<rsub|i>-\<cal-E\><rsup|\<ast\>>*u<rsub|i>|)>*<big|prod><rsub|\<nu\>\<less\>i>\<cal-E\><rsup|\<ast\>>*u<rsub|\<nu\>>*<big|prod><rsub|\<nu\>\<gtr\>i>u<rsub|\<nu\>>.
+    </equation*>
 
-  <\equation>
-    <math-up|Tay><rsub|d><space|0.17em>f=\<lambda\>*z<rsub|1>*\<cdots\>*z<rsub|s-1>+<around|{|<text|terms
-    strictly higher in ><around|(|s,w|)>|}>.<label|ch02:equation-triangle>
-  </equation>
+    Choose homogeneous linear coordinates, so both gradings are preserved.
+    Every homogeneous element of <math|\<cal-I\><rsub|d>> is therefore a sum
+    of products <math|\<lambda\>*z<rsub|1>*\<cdots\>*z<rsub|s-1>>, where
+    <math|\<lambda\>> is a one-layer equation functional. Individual summands
+    need not be gauge invariant.
 
-  There are two distinct errors. The nonlinear part of a curvature or force
-  coordinate increases factor count. The linear force representation was
-  fixed only through the layer of <math|\<lambda\>>; its remaining linear
-  terms increase the scaling dimension while preserving the factor count.
-  This is why the order in <eqref|ch02:equation-triangle> puts factor count
-  first.
+    Represent <math|\<lambda\>> by the finite force combination just
+    constructed on its truncated jet space. For each force summand involving
+    <math|e>, represent each <math|z<rsub|i>> by a linear combination of
+    curvature coordinates avoiding <math|e>, using
+    Lemma<nbsp><reference|ch02:avoiding-tests> on the <em|full> jet space
+    through degree <math|d>. Multiply these representatives by that force
+    summand. The resulting function <math|f> has at least <math|s> curvature
+    factors. Its Taylor polynomial is
 
-  <subsection|Exact integration by parts and assembly>
+    <\equation>
+      <math-up|Tay><rsub|d><space|0.17em>f=\<lambda\>*z<rsub|1>*\<cdots\>*z<rsub|s-1>+<around|{|<text|terms
+      strictly higher in ><around|(|s,w|)>|}>.<label|ch02:equation-triangle>
+    </equation>
 
-  Every force term above has the form <math|<around|\<langle\>|E<rsub|a>,F<rsub|e>|\<rangle\>>*H<rsub|a>>,
-  where <math|H<rsub|a>> includes the transporting matrix, the other
-  curvature factors, and an exterior spectator. All these factors avoid
-  <math|e>. Freeze the other links. Haar invariance on the compact group
-  gives
+    There are two distinct errors. The nonlinear part of a curvature or force
+    coordinate increases factor count. The linear force representation was
+    fixed only through the layer of <math|\<lambda\>>; its remaining linear
+    terms increase the scaling dimension while preserving the factor count.
+    This is why the order in <eqref|ch02:equation-triangle> puts factor count
+    first.
 
-  <\equation*>
-    0=<big|int><rsub|G>\<partial\><rsub|e,a><around|{|e<rsup|-\<beta\>*S<rsub|W>>|}>*<space|0.17em>d*U<rsub|e>=-\<beta\>*<big|int><rsub|G><around|\<langle\>|E<rsub|a>,F<rsub|e>|\<rangle\>>*e<rsup|-\<beta\>*S<rsub|W>>*<space|0.17em>d*U<rsub|e>.
-  </equation*>
+    <vspace*|0.5fn><no-indent><em|Step 2. Integration by parts and
+    construction of the section.>
 
-  Multiplication by <math|H<rsub|a>> is legitimate because it is constant in
-  <math|U<rsub|e>>. Fubini then proves the desired zero expectation, even for
-  a merely bounded measurable exterior spectator. This proof never
-  differentiates that spectator.
+    Every force term above has the form <math|<around|\<langle\>|E<rsub|a>,F<rsub|e>|\<rangle\>>*H<rsub|a>>,
+    where <math|H<rsub|a>> includes the transporting matrix, the other
+    curvature factors, and an exterior spectator. All these factors avoid
+    <math|e>. Freeze the other links. Haar invariance on the compact group
+    gives
 
-  All lists used in constructing a basis are finite. Enlarge one radius to
-  contain their plaquettes, paths, and differentiated links. Enlarge one
-  period threshold so that distinct relevant cover links cannot become
-  identified with a differentiated link after periodization. These two
-  choices work for every anchor by translation. They are independent of
-  <math|\<beta\>> and of the exterior spectator.
+    <\equation*>
+      0=<big|int><rsub|G>\<partial\><rsub|e,a><around|{|e<rsup|-\<beta\>*S<rsub|W>>|}>*<space|0.17em>d*U<rsub|e>=-\<beta\>*<big|int><rsub|G><around|\<langle\>|E<rsub|a>,F<rsub|e>|\<rangle\>>*e<rsup|-\<beta\>*S<rsub|W>>*<space|0.17em>d*U<rsub|e>.
+    </equation*>
 
-  Average the constructed functions over the gauge element at the anchor.
-  Every transported curvature transforms there by the adjoint action, so this
-  is a finite-dimensional average of colour tensors. It preserves the number
-  of curvature factors and <eqref|ch02:equation-triangle>. It also preserves
-  the exact zero identity: gauge invariance of the Wilson law transfers the
-  gauge transformation to the bounded exterior spectator without changing its
-  support. The result is fully gauge invariant.
+    Multiplication by <math|H<rsub|a>> is legitimate because it is constant
+    in <math|U<rsub|e>>. Fubini then proves the desired zero expectation,
+    even for a merely bounded measurable exterior spectator. This proof never
+    differentiates that spectator.
 
-  Choose a basis of each homogeneous part of <math|\<cal-I\><rsub|d>>,
-  perform this construction there, and extend to a basis of <math|V<rsub|d>>
-  by using <math|P<rsub|d><rsup|<math-up|loc>>> on a complement. The
-  resulting linear map <math|\<cal-F\><rsub|d>> preserves the unit. Its
-  Taylor map is
+    All lists used in constructing a basis are finite. Enlarge one radius to
+    contain their plaquettes, paths, and differentiated links. Enlarge one
+    period threshold so that distinct relevant cover links cannot become
+    identified with a differentiated link after periodization. These two
+    choices work for every anchor by translation. They are independent of
+    <math|\<beta\>> and of the exterior spectator.
 
-  <\equation*>
-    R<rsub|d>=<math-up|Tay><rsub|d><space|0.17em>\<cal-F\><rsub|d>=I+T<rsub|d>,
-  </equation*>
+    Average the constructed functions over the gauge element at the anchor.
+    Every transported curvature transforms there by the adjoint action, so
+    this is a finite-dimensional average of colour tensors. It preserves the
+    number of curvature factors and <eqref|ch02:equation-triangle>. It also
+    preserves the exact zero identity: gauge invariance of the Wilson law
+    transfers the gauge transformation to the bounded exterior spectator
+    without changing its support. The result is fully gauge invariant.
 
-  where <math|T<rsub|d>> strictly increases the finite lexicographic grading.
-  Thus <math|T<rsub|d>> is nilpotent and <math|R<rsub|d><rsup|-1>=I-T<rsub|d>+T<rsub|d><rsup|2>-\<cdots\>>
-  is a finite sum. Average <math|\<cal-F\><rsub|d>> simultaneously on domain
-  and range over signed coordinate permutations and over conjugation. These
-  operations preserve the ideal, both gradings, and the unit; hence the same
-  triangular conclusion remains valid. Finally put
+    Choose a basis of each homogeneous part of <math|\<cal-I\><rsub|d>>,
+    perform this construction there, and extend to a basis of
+    <math|V<rsub|d>> by using <math|P<rsub|d><rsup|<math-up|loc>>> on a
+    complement. The resulting linear map <math|\<cal-F\><rsub|d>> preserves
+    the unit. Its Taylor map is
 
-  <\equation*>
-    \<cal-V\><rsub|d>=\<cal-F\><rsub|d>*R<rsub|d><rsup|-1>.
-  </equation*>
+    <\equation*>
+      R<rsub|d>=<math-up|Tay><rsub|d><space|0.17em>\<cal-F\><rsub|d>=I+T<rsub|d>,
+    </equation*>
 
-  This gives the Taylor identity, all symmetries, and
-  <math|\<cal-V\><rsub|d>*R<rsub|d>*p=\<cal-F\><rsub|d>*p> for
-  <math|p\<in\>\<cal-I\><rsub|d>>. Both <math|R<rsub|d>> and its inverse
-  preserve the lower bound on factor count. The fixed finite products
-  therefore obey exactly the small-field derivative argument used for
-  <math|P<rsub|d><rsup|<math-up|loc>>>, with new constants for the new
-  stencil. This completes the proof of Theorem<nbsp><reference|ch02:equation-adapted>.
+    where <math|T<rsub|d>> strictly increases the finite lexicographic
+    grading. Thus <math|T<rsub|d>> is nilpotent and
+    <math|R<rsub|d><rsup|-1>=I-T<rsub|d>+T<rsub|d><rsup|2>-\<cdots\>> is a
+    finite sum. Average <math|\<cal-F\><rsub|d>> simultaneously on domain and
+    range over signed coordinate permutations and over conjugation. These
+    operations preserve the ideal, both gradings, and the unit; hence the
+    same triangular conclusion remains valid. Finally put
+
+    <\equation*>
+      \<cal-V\><rsub|d>=\<cal-F\><rsub|d>*R<rsub|d><rsup|-1>.
+    </equation*>
+
+    This gives the Taylor identity, all symmetries, and
+    <math|\<cal-V\><rsub|d>*R<rsub|d>*p=\<cal-F\><rsub|d>*p> for
+    <math|p\<in\>\<cal-I\><rsub|d>>. Both <math|R<rsub|d>> and its inverse
+    preserve the lower bound on factor count. The fixed finite products
+    therefore obey exactly the small-field derivative argument used for
+    <math|P<rsub|d><rsup|<math-up|loc>>>, with new constants for the new
+    stencil.
+  </render-proof>
 
   The identity <eqref|ch02:microscopic-null> is exact at each cutoff. It
   gives no bound on a renormalized coefficient change. To use it for
@@ -3016,27 +3007,30 @@
     <math|\<omega\><rsub|d>> vanishes.
   </corollary>
 
-  This is the standard symmetric-Fock-space consequence of the one-particle
-  Gram form and Wick's rule<nbsp><cite|Wick1950>. Explicitly, choose
-  coordinates <math|X<rsub|1>,\<ldots\>,X<rsub|M>> diagonalizing the positive
-  form on a tower containing all variables of the polynomial, with positive
-  squared lengths <math|b<rsub|i>>. The reflected pairing of Wick monomials
-  is
+  <\proof>
+    This is the standard symmetric-Fock-space consequence of the one-particle
+    Gram form and Wick's rule<nbsp><cite|Wick1950>. Explicitly, choose
+    coordinates <math|X<rsub|1>,\<ldots\>,X<rsub|M>> diagonalizing the
+    positive form on a tower containing all variables of the polynomial, with
+    positive squared lengths <math|b<rsub|i>>. The reflected pairing of Wick
+    monomials is
 
-  <\equation*>
-    <around|\<langle\>|X<rsup|a>,X<rsup|c>|\<rangle\>><rsub|<math-up|ref>>=\<b-1\><rsub|a=c>*<space|0.17em>a!<big|prod><rsub|i>b<rsub|i><rsup|a<rsub|i>>.
-  </equation*>
+    <\equation*>
+      <around|\<langle\>|X<rsup|a>,X<rsup|c>|\<rangle\>><rsub|<math-up|ref>>=\<b-1\><rsub|a=c>*<space|0.17em>a!<big|prod><rsub|i>b<rsub|i><rsup|a<rsub|i>>.
+    </equation*>
 
-  Thus the squared norm of a polynomial is the sum of the squared absolute
-  values of its coefficients with these positive weights; the constant
-  coefficient has weight one. Restricting to the gauge-invariant image
-  preserves positivity. If all basis-column pairings vanish, the pairing with
-  the reflected conjugate of the polynomial vanishes too, forcing that
-  polynomial to be zero. This also identifies the correlation-null labels. On
-  any fixed finite-dimensional degree space, the map of correlation pairings
-  has a positive minimum norm on the unit sphere. Small perturbations of its
-  matrix remain injective; applying this fact to interacting correlations
-  still requires a quantitative comparison estimate.
+    Thus the squared norm of a polynomial is the sum of the squared absolute
+    values of its coefficients with these positive weights; the constant
+    coefficient has weight one. Restricting to the gauge-invariant image
+    preserves positivity. If all basis-column pairings vanish, the pairing
+    with the reflected conjugate of the polynomial vanishes too, forcing that
+    polynomial to be zero. This also identifies the correlation-null labels.
+    On any fixed finite-dimensional degree space, the map of correlation
+    pairings has a positive minimum norm on the unit sphere. Small
+    perturbations of its matrix remain injective; applying this fact to
+    interacting correlations still requires a quantitative comparison
+    estimate.
+  </proof>
 
   <section|Quadratic fields and normalization checks><label|ch03:quadratic>
 
@@ -3949,17 +3943,19 @@
     </equation>
   </proposition>
 
-  For normalization, integrate each coarse-link factor using right invariance
-  of Haar measure, then sum <eqref|ch04:tag-law>. Fubini gives
-  <eqref|ch04:exact-integral>, with absolute integrability following from the
-  same computation applied to <math|<around|\||f|\|>>. These are elementary
-  applications of Haar invariance, rather than estimates on the
-  renormalization group. For covariance, gauge transformations conjugate
-  rooted loop tests and transform the endpoints of <eqref|ch04:connector>;
-  signed lattice isometries permute roots, orders and offsets and invert
-  reversed links. The objective functions and eligibility tests are
-  unchanged. Uniqueness on the minimizing branches, and reindexing of the
-  finite alternatives, then give the stated covariance of the kernel.
+  <\proof>
+    For normalization, integrate each coarse-link factor using right
+    invariance of Haar measure, then sum <eqref|ch04:tag-law>. Fubini gives
+    <eqref|ch04:exact-integral>, with absolute integrability following from
+    the same computation applied to <math|<around|\||f|\|>>. These are
+    elementary applications of Haar invariance, rather than estimates on the
+    renormalization group. For covariance, gauge transformations conjugate
+    rooted loop tests and transform the endpoints of <eqref|ch04:connector>;
+    signed lattice isometries permute roots, orders and offsets and invert
+    reversed links. The objective functions and eligibility tests are
+    unchanged. Uniqueness on the minimizing branches, and reindexing of the
+    finite alternatives, then give the stated covariance of the kernel.
+  </proof>
 
   Probabilistically, if <math|U> has density <math|f/<big|int>f> with
   <math|f\<geqslant\>0>, one first draws <math|\<alpha\>>, and then draws
@@ -5630,17 +5626,19 @@
     </equation*>
   </proposition>
 
-  This is the quantitative contraction form of the implicit-function theorem:
-  apply it to <math|y-H<rsub|\<ast\>><rsup|-1>*F*<around|(|x,y|)>> on the
-  closed <math|r<rsub|y>>-ball. The two displayed smallness conditions give
-  contraction constant <math|1/4> and displacement of the origin at most
-  <math|r<rsub|y>/4>. We use the standard theorem rather than repeat its
-  proof; holomorphic regularity is the analytic implicit-function theorem
-  <cite-detail|LeblSCV|Theorem 1.3.8>. The real smooth version is also a
-  direct application of the implicit-function theorem
-  <cite-detail|Rudin1976|Theorem 9.28>. For a merely <math|C<rsup|N>> real
-  action the conclusion is <math|C<rsup|N-1>> for <math|\<rho\>>, not
-  holomorphy.
+  <\proof>
+    This is the quantitative contraction form of the implicit-function
+    theorem: apply it to <math|y-H<rsub|\<ast\>><rsup|-1>*F*<around|(|x,y|)>>
+    on the closed <math|r<rsub|y>>-ball. The two displayed smallness
+    conditions give contraction constant <math|1/4> and displacement of the
+    origin at most <math|r<rsub|y>/4>. We use the standard theorem rather
+    than repeat its proof; holomorphic regularity is the analytic
+    implicit-function theorem <cite-detail|LeblSCV|Theorem 1.3.8>. The real
+    smooth version is also a direct application of the implicit-function
+    theorem <cite-detail|Rudin1976|Theorem 9.28>. For a merely
+    <math|C<rsup|N>> real action the conclusion is <math|C<rsup|N-1>> for
+    <math|\<rho\>>, not holomorphy.
+  </proof>
 
   In applications the operator bounds in this proposition should be deduced
   from local derivative estimates before any dimension dependent conversion
@@ -5791,25 +5789,28 @@
     and first-derivative bound do not acquire a factor depending on <math|n>.
   </proposition>
 
-  To check the last assertions, the third rooted derivative bound gives
-  <math|<around|\<\|\|\>|H<around|(|w|)>-H<around|(|0|)>|\<\|\|\>><rsub|2\<to\>2>\<leqslant\>C<around|\<\|\|\>|w|\<\|\|\>><rsub|\<infty\>>>
-  by row and column sums. Reduce the common ball until this is at most half
-  the gap in <eqref|ch05:actual-gap>. The weighted inverse argument then
-  applies uniformly throughout that real ball.
-  Proposition<nbsp><reference|ch05:stationary-prop> gives the graph and its
-  volume-independent Lipschitz constant. Repeated implicit differentiation
-  isolates <math|H*D<rsup|k>*\<rho\>> at order <math|k>; every other term
-  involves lower derivatives of <math|\<rho\>> and derivatives of <math|f> of
-  order at most <math|k+1>. Converting bounded coordinate entries to ordinary
-  multilinear norms costs only a fixed power of <math|n> at fixed order.
-  Induction therefore proves the asserted polynomial bounds. The identities
-  <math|D*H<rsup|-1>=-H<rsup|-1>*<around|(|D*H|)>*H<rsup|-1>> and <math|D*log
-  det H=<tr><around|(|H<rsup|-1>*D*H|)>> give the determinant assertion, with
-  one additional factor <math|n> for the trace. These are standard implicit
-  and Gaussian determinant differentiation rules; no polynomial-in-volume
-  bound is used to select the radii. For an application requiring <math|k+4>
-  derivatives, take the path/coordinate derivative order at least <math|k+6>
-  so that the stated determinant margin is retained.
+  <\proof>
+    To check the last assertions, the third rooted derivative bound gives
+    <math|<around|\<\|\|\>|H<around|(|w|)>-H<around|(|0|)>|\<\|\|\>><rsub|2\<to\>2>\<leqslant\>C<around|\<\|\|\>|w|\<\|\|\>><rsub|\<infty\>>>
+    by row and column sums. Reduce the common ball until this is at most half
+    the gap in <eqref|ch05:actual-gap>. The weighted inverse argument then
+    applies uniformly throughout that real ball.
+    Proposition<nbsp><reference|ch05:stationary-prop> gives the graph and its
+    volume-independent Lipschitz constant. Repeated implicit differentiation
+    isolates <math|H*D<rsup|k>*\<rho\>> at order <math|k>; every other term
+    involves lower derivatives of <math|\<rho\>> and derivatives of <math|f>
+    of order at most <math|k+1>. Converting bounded coordinate entries to
+    ordinary multilinear norms costs only a fixed power of <math|n> at fixed
+    order. Induction therefore proves the asserted polynomial bounds. The
+    identities <math|D*H<rsup|-1>=-H<rsup|-1>*<around|(|D*H|)>*H<rsup|-1>>
+    and <math|D*log det H=<tr><around|(|H<rsup|-1>*D*H|)>> give the
+    determinant assertion, with one additional factor <math|n> for the trace.
+    These are standard implicit and Gaussian determinant differentiation
+    rules; no polynomial-in-volume bound is used to select the radii. For an
+    application requiring <math|k+4> derivatives, take the path/coordinate
+    derivative order at least <math|k+6> so that the stated determinant
+    margin is retained.
+  </proof>
 
   <section|Scope of the completed Gaussian construction><label|ch05:pending>
 
@@ -6152,113 +6153,118 @@
     </equation*>
   </proposition>
 
-  We verify this proposition in the following paragraphs. In a lifted patch
-  of radius <math|<around|(|j+7|)>*L>, let
-  <math|\<cal-P\><rsub|y><around|(|U|)>=<big|sum><rsub|q>m<rsub|y><around|(|q|)>*r<rsub|q><rsup|f>>
-  be the sum of fine plaquette distances from the identity with the actual
-  route multiplicities. The required comparison is
+  <\proof>
+    In a lifted patch of radius <math|<around|(|j+7|)>*L>, let
+    <math|\<cal-P\><rsub|y><around|(|U|)>=<big|sum><rsub|q>m<rsub|y><around|(|q|)>*r<rsub|q><rsup|f>>
+    be the sum of fine plaquette distances from the identity with the actual
+    route multiplicities. The required comparison is
 
-  <\equation>
-    r<rsub|p><rsup|c>\<leqslant\><big|sum><rsub|e\<in\>\<partial\>*p>n<rsub|e>+C<rsub|j>*L<rsup|-2>*\<cal-P\><rsub|y><around|(|U|)>,<space|2em>sup<rsub|q>
-    <big|sum><rsub|y>m<rsub|y><around|(|q|)>\<leqslant\>K<rsub|j>.<label|ch06:macro-comparison>
-  </equation>
+    <\equation>
+      r<rsub|p><rsup|c>\<leqslant\><big|sum><rsub|e\<in\>\<partial\>*p>n<rsub|e>+C<rsub|j>*L<rsup|-2>*\<cal-P\><rsub|y><around|(|U|)>,<space|2em>sup<rsub|q>
+      <big|sum><rsub|y>m<rsub|y><around|(|q|)>\<leqslant\>K<rsub|j>.<label|ch06:macro-comparison>
+    </equation>
 
-  This estimate does hold for the precise branches of
-  Chapter<nbsp><reference|ch04:blocking>, as the following argument shows. It
-  is a first-power bound; comparison of squared frame energies alone would
-  give an inadequate square-root bound.
+    This estimate does hold for the precise branches of
+    Chapter<nbsp><reference|ch04:blocking>, as the following argument shows.
+    It is a first-power bound; comparison of squared frame energies alone
+    would give an inadequate square-root bound.
 
-  The first-power block average estimate is
-  Lemma<nbsp><reference|ch04:predictor-comparison>; its comparison uses the
-  same macro-frame and rooted paths as here.
+    The first-power block average estimate is
+    Lemma<nbsp><reference|ch04:predictor-comparison>; its comparison uses the
+    same macro-frame and rooted paths as here.
 
-  The same bound localizes coarse plaquettes with
-  <math|r<rsub|p><rsup|c>\<gtr\>\<delta\>>. If every fine or mismatch test in
-  their fixed macro-patch is at most <math|t<rsub|<math-up|hi>>>,
-  <eqref|ch06:macro-comparison> bounds <math|r<rsub|p><rsup|c>> by
-  <math|C<rsub|j,L>*t<rsub|<math-up|hi>>\<less\>\<delta\>> after increasing
-  the coupling threshold. Thus each such plaquette has a test in <math|D> in
-  that patch. The fixed patch fits inside the <math|B>-neighborhood used to
-  define <math|H>, and bounded macro-patch multiplicity gives the asserted
-  count <math|K<around|\||D|\|>>. Separating the small-distance contribution
-  from the selected excess gives <math|r<rsub|p><rsup|c>\<leqslant\>C<rsub|j,L,W>*t<rsub|f>+\<Delta\><rsub|p>>
-  with <math|<big|sum><rsub|p>\<Delta\><rsub|p>\<leqslant\>C*<around|(|L<rsup|-2>*R<rsub|f>+R<rsub|n>|)>>.
-  The constant multiplying the excess must remain independent of <math|L,W>.
-  Applying the transported row and column bounds then gives
-  <eqref|ch06:affected>; the positive displayed term is obtained by absorbing
-  its upper bound into the enlarged loss constants. It is not a new
-  positivity assertion for <math|E<rsub|L>>.
+    The same bound localizes coarse plaquettes with
+    <math|r<rsub|p><rsup|c>\<gtr\>\<delta\>>. If every fine or mismatch test
+    in their fixed macro-patch is at most <math|t<rsub|<math-up|hi>>>,
+    <eqref|ch06:macro-comparison> bounds <math|r<rsub|p><rsup|c>> by
+    <math|C<rsub|j,L>*t<rsub|<math-up|hi>>\<less\>\<delta\>> after increasing
+    the coupling threshold. Thus each such plaquette has a test in <math|D>
+    in that patch. The fixed patch fits inside the <math|B>-neighborhood used
+    to define <math|H>, and bounded macro-patch multiplicity gives the
+    asserted count <math|K<around|\||D|\|>>. Separating the small-distance
+    contribution from the selected excess gives
+    <math|r<rsub|p><rsup|c>\<leqslant\>C<rsub|j,L,W>*t<rsub|f>+\<Delta\><rsub|p>>
+    with <math|<big|sum><rsub|p>\<Delta\><rsub|p>\<leqslant\>C*<around|(|L<rsup|-2>*R<rsub|f>+R<rsub|n>|)>>.
+    The constant multiplying the excess must remain independent of
+    <math|L,W>. Applying the transported row and column bounds then gives
+    <eqref|ch06:affected>; the positive displayed term is obtained by
+    absorbing its upper bound into the enlarged loss constants. It is not a
+    new positivity assertion for <math|E<rsub|L>>.
 
-  Outside <math|H>, all fine plaquette distances from the identity and block
-  average mismatches in the surrounding fixed macro-patches are at most
-  <math|t<rsub|<math-up|hi>>>. The unselected tests obey this too, since
-  <math|2*W*t<rsub|f>\<leqslant\>t<rsub|<math-up|hi>>> eventually. The
-  verified macro-comparison bounds coarse plaquette distances from the
-  identity there by <math|C<rsub|j,L,W>*t<rsub|<math-up|hi>>>. Choose a
-  coarse axial gauge on a box of radius <math|B/2>. Its sum of bond distances
-  from the identity is bounded by <math|C<rsub|j,L,W>*B<rsup|5>*t<rsub|<math-up|hi>>>.
-  To compare a fine link with the replicated coarse link, join its two
-  endpoints to their block roots along the actual tree. All tree transports
-  are the identity. The resulting walk lies in two neighboring blocks. In a
-  macro axial gauge its distance from the identity is bounded by the route
-  length times the sum of bond distances from the identity in the macro-box.
-  Comparing a crossing walk with the block average adds the two endpoint
-  frame errors already bounded in Lemma<nbsp><reference|ch04:predictor-comparison>,
-  and then the mismatch <math|n<rsub|e>>. Consequently, with a constant
-  depending on the fixed tree family and <math|L>,
+    Outside <math|H>, all fine plaquette distances from the identity and
+    block average mismatches in the surrounding fixed macro-patches are at
+    most <math|t<rsub|<math-up|hi>>>. The unselected tests obey this too,
+    since <math|2*W*t<rsub|f>\<leqslant\>t<rsub|<math-up|hi>>> eventually.
+    The verified macro-comparison bounds coarse plaquette distances from the
+    identity there by <math|C<rsub|j,L,W>*t<rsub|<math-up|hi>>>. Choose a
+    coarse axial gauge on a box of radius <math|B/2>. Its sum of bond
+    distances from the identity is bounded by
+    <math|C<rsub|j,L,W>*B<rsup|5>*t<rsub|<math-up|hi>>>. To compare a fine
+    link with the replicated coarse link, join its two endpoints to their
+    block roots along the actual tree. All tree transports are the identity.
+    The resulting walk lies in two neighboring blocks. In a macro axial gauge
+    its distance from the identity is bounded by the route length times the
+    sum of bond distances from the identity in the macro-box. Comparing a
+    crossing walk with the block average adds the two endpoint frame errors
+    already bounded in Lemma<nbsp><reference|ch04:predictor-comparison>, and
+    then the mismatch <math|n<rsub|e>>. Consequently, with a constant
+    depending on the fixed tree family and <math|L>,
 
-  <\equation*>
-    \<chi\><around*|(|U<rsub|e><around|(|<math-up|rep><space|0.17em>V|)><rsub|e><rsup|-1>|)>\<leqslant\>C<rsub|j,L>*\<cal-P\><rsub|y><around|(|U|)>+n<rsub|e<rsub|c>>
-  </equation*>
+    <\equation*>
+      \<chi\><around*|(|U<rsub|e><around|(|<math-up|rep><space|0.17em>V|)><rsub|e><rsup|-1>|)>\<leqslant\>C<rsub|j,L>*\<cal-P\><rsub|y><around|(|U|)>+n<rsub|e<rsub|c>>
+    </equation*>
 
-  for crossing edges; omit the mismatch for internal edges. Any tree in a
-  fixed block has uniformly bounded path length (at most <math|L<rsup|4>-1>),
-  which suffices here because this constant is chosen after <math|L>. This is
-  not a pre-<math|L> excess estimate. The parent lift of the coarse gauge
-  preserves these distances between corresponding links. It therefore places
-  both fine and coarse logarithms in a common chart, throughout radius
-  <math|2*B/5>, with bound <math|\<delta\><rsub|<math-up|loc>>=C<rsub|j,L,W>*B<rsup|10>*t<rsub|<math-up|hi>>>.
+    for crossing edges; omit the mismatch for internal edges. Any tree in a
+    fixed block has uniformly bounded path length (at most
+    <math|L<rsup|4>-1>), which suffices here because this constant is chosen
+    after <math|L>. This is not a pre-<math|L> excess estimate. The parent
+    lift of the coarse gauge preserves these distances between corresponding
+    links. It therefore places both fine and coarse logarithms in a common
+    chart, throughout radius <math|2*B/5>, with bound
+    <math|\<delta\><rsub|<math-up|loc>>=C<rsub|j,L,W>*B<rsup|10>*t<rsub|<math-up|hi>>>.
 
-  The derivative of the actual rooted block average also matches the flat
-  identity. Near the identity all selected frame and block average branches
-  are minimizing; the redundant tags do not change their values. The
-  finite-patch minimizing frame is smooth there by the same nondegenerate
-  implicit equation used in Lemma<nbsp><reference|ch04:frame-lemma>. Write
-  <math|h<rsub|y,z><around|(|exp <around|(|\<epsilon\>*a|)>|)>=1+\<epsilon\>*H<rsub|y,z><around|(|a|)>+O<around|(|\<epsilon\><rsup|2>|)>>
-  and <math|<wide|H|\<bar\>><rsub|y>=<big|sum><rsub|z>w<rsub|z><rsup|<math-up|av>>*H<rsub|y,z>>.
-  Differentiating <eqref|ch04:connector>, and then its nearest-point block
-  average, gives
+    The derivative of the actual rooted block average also matches the flat
+    identity. Near the identity all selected frame and block average branches
+    are minimizing; the redundant tags do not change their values. The
+    finite-patch minimizing frame is smooth there by the same nondegenerate
+    implicit equation used in Lemma<nbsp><reference|ch04:frame-lemma>. Write
+    <math|h<rsub|y,z><around|(|exp <around|(|\<epsilon\>*a|)>|)>=1+\<epsilon\>*H<rsub|y,z><around|(|a|)>+O<around|(|\<epsilon\><rsup|2>|)>>
+    and <math|<wide|H|\<bar\>><rsub|y>=<big|sum><rsub|z>w<rsub|z><rsup|<math-up|av>>*H<rsub|y,z>>.
+    Differentiating <eqref|ch04:connector>, and then its nearest-point block
+    average, gives
 
-  <\equation*>
-    <around|(|\<cal-Q\>*a|)><rsub|y,\<mu\>>=<around|(|\<cal-A\>*a|)><rsub|y,\<mu\>>+<wide|H|\<bar\>><rsub|y><around|(|a|)>-<wide|H|\<bar\>><rsub|y+e<rsub|\<mu\>>><around|(|a|)>,
-  </equation*>
+    <\equation*>
+      <around|(|\<cal-Q\>*a|)><rsub|y,\<mu\>>=<around|(|\<cal-A\>*a|)><rsub|y,\<mu\>>+<wide|H|\<bar\>><rsub|y><around|(|a|)>-<wide|H|\<bar\>><rsub|y+e<rsub|\<mu\>>><around|(|a|)>,
+    </equation*>
 
-  where <math|\<cal-A\>> averages the straight length-<math|L> link sums with
-  the same weights. Thus <math|\<cal-Q\>-\<cal-A\>> is a coarse gradient. Its
-  curl vanishes exactly. This verifies the block average identification
-  needed in <eqref|ch06:flat-identities>. Their aligned row realization was
-  derived above from <eqref|ch05:physical-transports> and
-  <eqref|ch05:positive-defect>; the incoming path action must still satisfy
-  the exact quadratic coefficient condition in <eqref|ch05:actual-hessian>.
-  Second-order Taylor bounds are uniform in the period because each block
-  average reads a fixed finite patch at fixed <math|j,L>.
+    where <math|\<cal-A\>> averages the straight length-<math|L> link sums
+    with the same weights. Thus <math|\<cal-Q\>-\<cal-A\>> is a coarse
+    gradient. Its curl vanishes exactly. This verifies the block average
+    identification needed in <eqref|ch06:flat-identities>. Their aligned row
+    realization was derived above from <eqref|ch05:physical-transports> and
+    <eqref|ch05:positive-defect>; the incoming path action must still satisfy
+    the exact quadratic coefficient condition in <eqref|ch05:actual-hessian>.
+    Second-order Taylor bounds are uniform in the period because each block
+    average reads a fixed finite patch at fixed <math|j,L>.
 
-  Set <math|\<varepsilon\><rsub|<math-up|loc>>=<around|(|1+R<rsub|\<ast\>>|)>*\<delta\><rsub|<math-up|loc>>+e<rsup|-\<tau\>*R<rsub|\<ast\>>>>,
-  where <math|\<tau\>\<gtr\>0> is a common path decay rate. Subtracting the
-  flat identities <eqref|ch06:flat-identities> before estimating terms gives
-  the required bounds
+    Set <math|\<varepsilon\><rsub|<math-up|loc>>=<around|(|1+R<rsub|\<ast\>>|)>*\<delta\><rsub|<math-up|loc>>+e<rsup|-\<tau\>*R<rsub|\<ast\>>>>,
+    where <math|\<tau\>\<gtr\>0> is a common path decay rate. Subtracting the
+    flat identities <eqref|ch06:flat-identities> before estimating terms
+    gives the required bounds
 
-  <\align*>
-    <tformat|<table|<row|<cell|<around|\||\<Phi\><rsup|\<ast\>>*X<rsub|f>+\<Phi\><rsub|n><rsup|\<ast\>>*Z-X<rsub|c>|\|>>|<cell|\<leqslant\>C*\<delta\><rsub|<math-up|loc>>*\<varepsilon\><rsub|<math-up|loc>>,>>|<row|<cell|<around|\||<around|(|I-\<Phi\><rsup|\<ast\>>*\<Phi\>-\<Phi\><rsub|n><rsup|\<ast\>>*\<Phi\><rsub|n>-\<cal-N\><rsup|\<ast\>>*\<cal-N\>|)>*v<rsub|c>|\|>>|<cell|\<leqslant\>C*t<rsub|f>*\<varepsilon\><rsub|<math-up|loc>>.>>>>
-  </align*>
+    <\align*>
+      <tformat|<table|<row|<cell|<around|\||\<Phi\><rsup|\<ast\>>*X<rsub|f>+\<Phi\><rsub|n><rsup|\<ast\>>*Z-X<rsub|c>|\|>>|<cell|\<leqslant\>C*\<delta\><rsub|<math-up|loc>>*\<varepsilon\><rsub|<math-up|loc>>,>>|<row|<cell|<around|\||<around|(|I-\<Phi\><rsup|\<ast\>>*\<Phi\>-\<Phi\><rsub|n><rsup|\<ast\>>*\<Phi\><rsub|n>-\<cal-N\><rsup|\<ast\>>*\<cal-N\>|)>*v<rsub|c>|\|>>|<cell|\<leqslant\>C*t<rsub|f>*\<varepsilon\><rsub|<math-up|loc>>.>>>>
+    </align*>
 
-  Indeed a transport of length <math|s> differs from its flat value by at
-  most <math|C*s*\<delta\><rsub|<math-up|loc>>>; the omitted tails have size
-  <math|C*e<rsup|-\<tau\>*R<rsub|\<ast\>>>>. The count <eqref|ch06:counts>
-  and the limits <eqref|ch06:scales> yield <eqref|ch06:unaffected>. This
-  completes the verification of Proposition<nbsp><reference|ch06:signed-input>.
-  It uses the aligned flat identities for the chosen path family, not merely
-  a decay estimate for a flat Fourier kernel.
+    Indeed a transport of length <math|s> differs from its flat value by at
+    most <math|C*s*\<delta\><rsub|<math-up|loc>>>; the omitted tails have
+    size <math|C*e<rsup|-\<tau\>*R<rsub|\<ast\>>>>. The count
+    <eqref|ch06:counts> and the limits <eqref|ch06:scales> yield
+    <eqref|ch06:unaffected>. This completes the verification of
+    Proposition<nbsp><reference|ch06:signed-input>. It uses the aligned flat
+    identities for the chosen path family, not merely a decay estimate for a
+    flat Fourier kernel.
+  </proof>
 
   <\proposition>
     <dueto|Energy bound under the local comparisons><label|ch06:energy>Under
@@ -7059,21 +7065,6 @@
   <math|<around|\||<big|sum><rsub|i>\<eta\><rsub|i><around|(|a|)>|\|><rsup|2>\<leqslant\>C*<big|sum><rsub|i><around|\||\<eta\><rsub|i><around|(|a|)>|\|><rsup|2>/w<rsub|i*a>>.
   It controls the cross terms in the common square.
 
-  The standard Gaussian quadratic-exponential formula, with
-  <math|<wide|K|~>=\<Gamma\><rsup|1/2>*K*\<Gamma\><rsup|1/2>>, is
-
-  <\equation*>
-    \<bbb-E\><rsub|\<Gamma\>>*e<rsup|\<eta\>\<cdot\>z+z<rsup|\<ast\>>*K*z/2>=det
-    <around|(|I-<wide|K|~>|)><rsup|-1/2>*exp
-    <around*|{|<tfrac|1|2>\<eta\><rsup|\<ast\>>*\<Gamma\><rsup|1/2>*<around|(|I-<wide|K|~>|)><rsup|-1>*\<Gamma\><rsup|1/2>*\<eta\>|}>.
-  </equation*>
-
-  Use it also with doubled exponent to control the square of the majorant.
-  The strict norm inequality in <eqref|ch06:quadratic-control> bounds the
-  tilted covariance and mean; Gaussian polynomial moments remain controlled.
-  Cauchy\USchwarz and <eqref|ch06:power-tail> then give the following precise
-  consequence.
-
   <\proposition>
     <dueto|Common local integral bound><label|ch06:common-majorant>Assume
     <eqref|ch06:majorant-form>\U<eqref|ch06:quadratic-control>, with uniform
@@ -7091,6 +7082,23 @@
     all inputs are uniform in those variables. It requires no independence
     between the local factors or the tail events.
   </proposition>
+
+  <\proof>
+    The standard Gaussian quadratic-exponential formula, with
+    <math|<wide|K|~>=\<Gamma\><rsup|1/2>*K*\<Gamma\><rsup|1/2>>, is
+
+    <\equation*>
+      \<bbb-E\><rsub|\<Gamma\>>*e<rsup|\<eta\>\<cdot\>z+z<rsup|\<ast\>>*K*z/2>=det
+      <around|(|I-<wide|K|~>|)><rsup|-1/2>*exp
+      <around*|{|<tfrac|1|2>\<eta\><rsup|\<ast\>>*\<Gamma\><rsup|1/2>*<around|(|I-<wide|K|~>|)><rsup|-1>*\<Gamma\><rsup|1/2>*\<eta\>|}>.
+    </equation*>
+
+    Use it also with doubled exponent to control the square of the majorant.
+    The strict norm inequality in <eqref|ch06:quadratic-control> bounds the
+    tilted covariance and mean; Gaussian polynomial moments remain
+    controlled. Cauchy\USchwarz and <eqref|ch06:power-tail> give the asserted
+    bound.
+  </proof>
 
   Finally, Proposition<nbsp><reference|ch06:energy> contributes
   <math|e<rsup|-\<kappa\>*\<beta\>*t<rsub|f><rsup|2><around|\||A|\|>>>.
@@ -8434,8 +8442,10 @@
     obeys the exact coarse\Ufine matching identities.
   </proposition>
 
-  The preceding weighted inverse, insertion and trace estimates prove this
-  proposition for the actual normalized path and block average.
+  <\proof>
+    The preceding weighted inverse, insertion and trace estimates prove this
+    proposition for the actual normalized path and block average.
+  </proof>
 
   <\proposition>
     <dueto|Block comparison><label|ch07:comparison-prop> For the same
@@ -9043,13 +9053,16 @@
     </equation>
   </theorem>
 
-  This is the hard-core specialization of the cited convergence theorem: the
-  pair interaction is <math|-1> on incompatible pairs and zero otherwise.
-  There is no need to assume <math|Z<rsub|<math-up|pol>>\<gtr\>0> before
-  taking the logarithm. The series defines the branch continued from zero
-  activity. For real activities it is real, and the exponential identity then
-  gives <math|Z<rsub|<math-up|pol>>\<gtr\>0>. For complex activities the
-  conclusion is nonvanishing.
+  <\proof>
+    This is the hard-core specialization of the cited convergence theorem:
+    the pair interaction is <math|-1> on incompatible pairs and zero
+    otherwise. There is no need to assume
+    <math|Z<rsub|<math-up|pol>>\<gtr\>0> before taking the logarithm. The
+    series defines the branch continued from zero activity. For real
+    activities it is real, and the exponential identity then gives
+    <math|Z<rsub|<math-up|pol>>\<gtr\>0>. For complex activities the
+    conclusion is nonvanishing.
+  </proof>
 
   The connected graph sum must be taken before its absolute value. Bounding
   the sum of the absolute values of all connected graphs would discard the
@@ -10549,10 +10562,12 @@
     margin in the choice of scales.
   </theorem>
 
-  The proof consists of the convergent local expansion, the three remainder
-  estimates, the exact identities <eqref|ch09:subtract-identity> and
-  <eqref|ch09:path-identity>, and Proposition<nbsp><reference|ch09:fusion-prop>.
-  Positivity and normalization refer to the actual block integral.
+  <\proof>
+    The proof consists of the convergent local expansion, the three remainder
+    estimates, the exact identities <eqref|ch09:subtract-identity> and
+    <eqref|ch09:path-identity>, and Proposition<nbsp><reference|ch09:fusion-prop>.
+    Positivity and normalization refer to the actual block integral.
+  </proof>
 
   This is a theorem for one compatible adjacent pair. Its premises include
   the actual quadratic coefficient and fixed path coefficient bounds; they
@@ -11046,9 +11061,8 @@
   already used in the exact step.
 
   The following strengthens the continuous finite-step statement of
-  Theorem<nbsp><reference|ch09:step-theorem>. Its proof occupies the
-  following subsections and uses the additional numerical reserves already
-  allowed in the scale choices.
+  Theorem<nbsp><reference|ch09:step-theorem>. Its proof uses the additional
+  numerical reserves already allowed in the scale choices.
 
   <\proposition>
     <dueto|Quantitative comparison on the common
@@ -11082,377 +11096,399 @@
   has Lipschitz constant zero and no cutoff limit. Nor does smallness of the
   output imply the small Lipschitz constant in <eqref|ch10:lipschitz>.
 
-  <subsection|How finite evaluations of the real parameters yield the
-  contraction>
+  <\render-proof|Proof of Proposition<nbsp><reference|ch10:stability-assumption>>
+    We derive the contraction from finite parameter evaluations, bound those
+    evaluations using the local expansion, sum the errors over scales, and
+    finally prove continuity as the cutoff is removed.
 
-  One sufficient quantitative estimate uses only real parameter lines. For a
-  line <math|z+t*v> of admissible inputs,
-  <math|<around|\||t|\|>\<leqslant\>1>, suppose every finite choice of
-  weights <math|a<rsub|i>> and points <math|t<rsub|i>> satisfies
+    <\enumerate>
+      <item*|<em|Step 1.>><em|Contraction from finite parameter evaluations.>
+      One sufficient quantitative estimate uses only real parameter lines.
+      For a line <math|z+t*v> of admissible inputs,
+      <math|<around|\||t|\|>\<leqslant\>1>, suppose every finite choice of
+      weights <math|a<rsub|i>> and points <math|t<rsub|i>> satisfies
 
-  <\align>
-    <tformat|<table|<row|<cell|<around*|\||<big|sum><rsub|i>a<rsub|i>*F*<around|(|z+t<rsub|i>*v|)>|\|>>|<cell|\<leqslant\>d*sup<rsub|n\<geqslant\>0><around*|\||<big|sum><rsub|i>a<rsub|i>*<around|(|t<rsub|i>/r|)><rsup|n>|\|>,<eq-number><label|ch10:finite-tests>>>|<row|<cell|<around*|\||<big|sum><rsub|i>a<rsub|i>*Q*<around|(|z+t<rsub|i>*v|)>|\|>>|<cell|\<leqslant\>f<rsub|m>*sup<rsub|n\<geqslant\>0><around*|\||<big|sum><rsub|i>a<rsub|i>*<around|(|t<rsub|i>/<around|(|2*r|)>|)><rsup|n>|\|>,<space|2em>r\<geqslant\>2.>>>>
-  </align>
+      <\align>
+        <tformat|<table|<row|<cell|<around*|\||<big|sum><rsub|i>a<rsub|i>*F*<around|(|z+t<rsub|i>*v|)>|\|>>|<cell|\<leqslant\>d*sup<rsub|n\<geqslant\>0><around*|\||<big|sum><rsub|i>a<rsub|i>*<around|(|t<rsub|i>/r|)><rsup|n>|\|>,<eq-number><label|ch10:finite-tests>>>|<row|<cell|<around*|\||<big|sum><rsub|i>a<rsub|i>*Q*<around|(|z+t<rsub|i>*v|)>|\|>>|<cell|\<leqslant\>f<rsub|m>*sup<rsub|n\<geqslant\>0><around*|\||<big|sum><rsub|i>a<rsub|i>*<around|(|t<rsub|i>/<around|(|2*r|)>|)><rsup|n>|\|>,<space|2em>r\<geqslant\>2.>>>>
+      </align>
 
-  These are estimates of the actual arrays in their derivative norm, not just
-  of the value of a partition function. They imply an absolutely convergent
-  one-variable expansion. Indeed the map <math|<around|(|<around|(|t/r|)><rsup|n>|)><rsub|n\<geqslant\>0>\<mapsto\>F*<around|(|z+t*v|)>>
-  extends linearly and boundedly from its span in <math|c<rsub|0>> to its
-  closure. That closure contains every coordinate vector: subtract the first
-  <math|n> coordinates, divide by <math|<around|(|t/r|)><rsup|n>>, and let
-  <math|t*\<downarrow\>*0>. Applying the bounded map to the geometric
-  expansion gives coefficients of norm at most <math|d>. Consequently
+      These are estimates of the actual arrays in their derivative norm, not
+      just of the value of a partition function. They imply an absolutely
+      convergent one-variable expansion. Indeed the map
+      <math|<around|(|<around|(|t/r|)><rsup|n>|)><rsub|n\<geqslant\>0>\<mapsto\>F*<around|(|z+t*v|)>>
+      extends linearly and boundedly from its span in <math|c<rsub|0>> to its
+      closure. That closure contains every coordinate vector: subtract the
+      first <math|n> coordinates, divide by <math|<around|(|t/r|)><rsup|n>>,
+      and let <math|t*\<downarrow\>*0>. Applying the bounded map to the
+      geometric expansion gives coefficients of norm at most <math|d>.
+      Consequently
 
-  <\equation*>
-    <around|\<\|\|\>|F*<around|(|z+t*v|)>-F<around|(|z|)>|\<\|\|\>>\<leqslant\>d<around|\||t|\|>/<around|(|r-<around|\||t|\|>|)>.
-  </equation*>
+      <\equation*>
+        <around|\<\|\|\>|F*<around|(|z+t*v|)>-F<around|(|z|)>|\<\|\|\>>\<leqslant\>d<around|\||t|\|>/<around|(|r-<around|\||t|\|>|)>.
+      </equation*>
 
-  The identical argument applies to <math|Q>. This short bounded-operator
-  argument records the precise information in the parameter evaluations; it
-  is not an inference of analyticity from continuity.
+      The identical argument applies to <math|Q>. This short bounded-operator
+      argument records the precise information in the parameter evaluations;
+      it is not an inference of analyticity from continuity.
 
-  For two inputs at distance <math|0\<less\>h\<leqslant\>1/4>, use the line
-  with direction <math|<around|(|z<rprime|'>-z|)>/<around|(|4*h|)>> and
-  evaluate at <math|t=4*h>. Activity norm along this line is at most
-  <math|1/8+1/4\<less\>1>. An inverse coupling reserve from the narrow band
-  to <math|33/40\<leqslant\>\<chi\><rsub|m>*\<lambda\>\<leqslant\>47/40>
-  makes the whole line admissible when <math|\<chi\><rsub|m>\<leqslant\>1/128>.
-  The resulting bounds are at most <math|4*d*h> and <math|4*f<rsub|m>*h>. If
-  <math|h\<gtr\>1/4>, use the separate output bounds; if the distance is
-  zero, use the same estimate with a vanishing seminorm direction and let the
-  parameter tend to zero. Thus <math|d\<leqslant\>1/256> and
-  <math|s<rsub|m>=2*f<rsub|m>> imply <eqref|ch10:lipschitz> with room to
-  spare. The finite-evaluation inequalities require the analytic estimates on
-  the local expansion established in the next subsection.
+      For two inputs at distance <math|0\<less\>h\<leqslant\>1/4>, use the
+      line with direction <math|<around|(|z<rprime|'>-z|)>/<around|(|4*h|)>>
+      and evaluate at <math|t=4*h>. Activity norm along this line is at most
+      <math|1/8+1/4\<less\>1>. An inverse coupling reserve from the narrow
+      band to <math|33/40\<leqslant\>\<chi\><rsub|m>*\<lambda\>\<leqslant\>47/40>
+      makes the whole line admissible when
+      <math|\<chi\><rsub|m>\<leqslant\>1/128>. The resulting bounds are at
+      most <math|4*d*h> and <math|4*f<rsub|m>*h>. If <math|h\<gtr\>1/4>, use
+      the separate output bounds; if the distance is zero, use the same
+      estimate with a vanishing seminorm direction and let the parameter tend
+      to zero. Thus <math|d\<leqslant\>1/256> and
+      <math|s<rsub|m>=2*f<rsub|m>> imply <eqref|ch10:lipschitz> with room to
+      spare. The finite-evaluation inequalities require the analytic
+      estimates on the local expansion established in the next step.
 
-  <subsection|Producing the finite parameter evaluations from the protected
-  expansion><label|ch10:parameter-supplier>
+      <item*|<em|Step 2.>><em|Parameter estimates from the local expansion.>
+      <with|the-label|2|<label|ch10:parameter-supplier>>
 
-  Here is the parameter estimate for the actual local factors. It uses the
-  protected change of variables and real Gaussian majorants of
-  Chapter<nbsp><reference|ch06:large-fields>, retaining their fixed
-  derivative order and support reserves. The incoming array is affine along
-  the parameter line. The path, event indicators, held fine reads and
-  coefficient projection are fixed. In particular the finite low-order
-  collection in Chapter<nbsp><reference|ch09:renormalization> is chosen on
-  the compact inverse coupling band independently of incoming activity
-  arrays. The estimates below therefore compare the same output construction
-  on different lines. For the estimates one uses the explicit local expansion
-  on the larger affine activity domain. Its polynomial products and
-  convergent logarithmic series define the array and local scalar outputs
-  there even when an extrapolated array has not been identified with a
-  positive density. Positivity is required for actual histories, not for this
-  algebraic extension of their local comparison formulas.
+      Here is the parameter estimate for the actual local factors. It uses
+      the protected change of variables and real Gaussian majorants of
+      Chapter<nbsp><reference|ch06:large-fields>, retaining their fixed
+      derivative order and support reserves. The incoming array is affine
+      along the parameter line. The path, event indicators, held fine reads
+      and coefficient projection are fixed. In particular the finite
+      low-order collection in Chapter<nbsp><reference|ch09:renormalization>
+      is chosen on the compact inverse coupling band independently of
+      incoming activity arrays. The estimates below therefore compare the
+      same output construction on different lines. For the estimates one uses
+      the explicit local expansion on the larger affine activity domain. Its
+      polynomial products and convergent logarithmic series define the array
+      and local scalar outputs there even when an extrapolated array has not
+      been identified with a positive density. Positivity is required for
+      actual histories, not for this algebraic extension of their local
+      comparison formulas.
 
-  Put <math|y=<wide|\<beta\>|^><rsub|m+1>>, <math|R=y<rsup|1/256>> and
-  <math|\<delta\>=y<rsup|-1/128>>. The inverse coupling is a square of an
-  affine function of the line parameter. The relative change on
-  <math|<around|\||t|\|>\<leqslant\>6*R> is
-  <math|O<around|(|R*y<rsup|-1/32>|)>=O<around|(|y<rsup|-7/256>|)>=o<around|(|\<delta\>|)>>.
-  Choose a slightly smaller reference inverse coupling
-  <math|\<beta\><rsub|0>> so that
+      Put <math|y=<wide|\<beta\>|^><rsub|m+1>>, <math|R=y<rsup|1/256>> and
+      <math|\<delta\>=y<rsup|-1/128>>. The inverse coupling is a square of an
+      affine function of the line parameter. The relative change on
+      <math|<around|\||t|\|>\<leqslant\>6*R> is
+      <math|O<around|(|R*y<rsup|-1/32>|)>=O<around|(|y<rsup|-7/256>|)>=o<around|(|\<delta\>|)>>.
+      Choose a slightly smaller reference inverse coupling
+      <math|\<beta\><rsub|0>> so that
 
-  <\equation*>
-    \<beta\><around|(|t|)>=\<beta\><rsub|0>*\<ell\><around|(|t|)><rsup|2>,<space|1em>\<ell\><around|(|t|)>=a+c*t,<space|2em>1\<leqslant\>a-6*R<around|\||c|\|>\<leqslant\>a+6*R<around|\||c|\|>\<leqslant\>1+\<delta\>.
-  </equation*>
+      <\equation*>
+        \<beta\><around|(|t|)>=\<beta\><rsub|0>*\<ell\><around|(|t|)><rsup|2>,<space|1em>\<ell\><around|(|t|)>=a+c*t,<space|2em>1\<leqslant\>a-6*R<around|\||c|\|>\<leqslant\>a+6*R<around|\||c|\|>\<leqslant\>1+\<delta\>.
+      </equation*>
 
-  All these real inverse couplings remain in the reserved band. Compensation
-  keeps each fine field read fixed: the Gaussian coordinate is rescaled by
-  <math|\<ell\><around|(|t|)>> while its fluctuation coefficient is divided
-  by <math|\<ell\><around|(|t|)>>. The cutoff-failure indicators and
-  measurable incoming values are consequently not differentiated in this
-  parameter.
+      All these real inverse couplings remain in the reserved band.
+      Compensation keeps each fine field read fixed: the Gaussian coordinate
+      is rescaled by <math|\<ell\><around|(|t|)>> while its fluctuation
+      coefficient is divided by <math|\<ell\><around|(|t|)>>. The
+      cutoff-failure indicators and measurable incoming values are
+      consequently not differentiated in this parameter.
 
-  For a parameter series use the norm <math|<around|\||f|\|><rsub|R>=<big|sum><rsub|n\<geqslant\>0><around|\||f<rsub|n>|\|>*R<rsup|n>>.
-  Its product estimate is the ordinary Cauchy-product inequality. A real
-  local energy factor, including its coordinate prefactor, has the form
+      For a parameter series use the norm
+      <math|<around|\||f|\|><rsub|R>=<big|sum><rsub|n\<geqslant\>0><around|\||f<rsub|n>|\|>*R<rsup|n>>.
+      Its product estimate is the ordinary Cauchy-product inequality. A real
+      local energy factor, including its coordinate prefactor, has the form
 
-  <\equation*>
-    J*<around|(|t,U|)>=A<around|(|U|)>*\<ell\><around|(|t|)><rsup|n>*exp
-    <around|{|<around|(|1-\<ell\><around|(|t|)><rsup|2>|)>*\<Gamma\><around|(|U|)>|}>.
-  </equation*>
+      <\equation*>
+        J*<around|(|t,U|)>=A<around|(|U|)>*\<ell\><around|(|t|)><rsup|n>*exp
+        <around|{|<around|(|1-\<ell\><around|(|t|)><rsup|2>|)>*\<Gamma\><around|(|U|)>|}>.
+      </equation*>
 
-  The energy <math|\<Gamma\>> can have either sign. It cannot be replaced by
-  its absolute value before estimating the exponential. For
-  <math|q=\<Gamma\><around|(|U|)>> the exponential series norm is at most
-  <math|e<rsup|H<around|(|q|)>>>, where
+      The energy <math|\<Gamma\>> can have either sign. It cannot be replaced
+      by its absolute value before estimating the exponential. For
+      <math|q=\<Gamma\><around|(|U|)>> the exponential series norm is at most
+      <math|e<rsup|H<around|(|q|)>>>, where
 
-  <\equation*>
-    H<around|(|q|)>=<around|(|1-a<rsup|2>|)>*q+2*a*R*<around|\||c*q*<around|\||+R<rsup|2>*c<rsup|2>|\|>*q|\|>.
-  </equation*>
+      <\equation*>
+        H<around|(|q|)>=<around|(|1-a<rsup|2>|)>*q+2*a*R*<around|\||c*q*<around|\||+R<rsup|2>*c<rsup|2>|\|>*q|\|>.
+      </equation*>
 
-  Choose the sign of <math|\<xi\>> so that <math|q*c*\<xi\>\<leqslant\>0> and
-  take <math|3\<leqslant\><around|\||\<xi\>|\|>\<leqslant\>4>. Since
-  <math|a\<geqslant\>1+6*R<around|\||c|\|>>, direct expansion gives
-  <math|H<around|(|q|)>\<leqslant\><around|(|1-\<ell\>*<around|(|R*\<xi\>|)><rsup|2>|)>*q>.
-  After <math|j> coarse-field derivatives, factoring out
-  <math|\<ell\><around|(|t|)><rsup|n>*e<rsup|<around|(|1-\<ell\><around|(|t|)><rsup|2>|)>*q>>
-  leaves a polynomial of degree at most <math|2*j>. Interpolate that
-  polynomial at <math|2*j+1> distinct such real nodes. Their scaled Lagrange
-  polynomials have a fixed coefficient norm. Thus real jet bounds
-  <math|C*d<rsup|i>> at those nodes imply
+      Choose the sign of <math|\<xi\>> so that <math|q*c*\<xi\>\<leqslant\>0>
+      and take <math|3\<leqslant\><around|\||\<xi\>|\|>\<leqslant\>4>. Since
+      <math|a\<geqslant\>1+6*R<around|\||c|\|>>, direct expansion gives
+      <math|H<around|(|q|)>\<leqslant\><around|(|1-\<ell\>*<around|(|R*\<xi\>|)><rsup|2>|)>*q>.
+      After <math|j> coarse-field derivatives, factoring out
+      <math|\<ell\><around|(|t|)><rsup|n>*e<rsup|<around|(|1-\<ell\><around|(|t|)><rsup|2>|)>*q>>
+      leaves a polynomial of degree at most <math|2*j>. Interpolate that
+      polynomial at <math|2*j+1> distinct such real nodes. Their scaled
+      Lagrange polynomials have a fixed coefficient norm. Thus real jet
+      bounds <math|C*d<rsup|i>> at those nodes imply
 
-  <\equation>
-    <label|ch10:real-node-bound><around|\||D<rsup|i>*J|(>\<cdot\>,U)\|<rsub|R>\<leqslant\>K<rsub|j>*<around|(|1+\<delta\>|)><rsup|n>*C*d<rsup|i>,<space|2em>i\<leqslant\>j.
-  </equation>
+      <\equation>
+        <label|ch10:real-node-bound><around|\||D<rsup|i>*J|(>\<cdot\>,U)\|<rsub|R>\<leqslant\>K<rsub|j>*<around|(|1+\<delta\>|)><rsup|n>*C*d<rsup|i>,<space|2em>i\<leqslant\>j.
+      </equation>
 
-  The node sign is chosen only for a pointwise bound and is never
-  differentiated. The same argument applied to the Gaussian density ratio in
-  <math|D> local real coordinates yields
+      The node sign is chosen only for a pointwise bound and is never
+      differentiated. The same argument applied to the Gaussian density ratio
+      in <math|D> local real coordinates yields
 
-  <\equation*>
-    <around*|\||\<ell\><around|(|t|)><rsup|D>*e<rsup|<around|(|1-\<ell\><around|(|t|)><rsup|2>|)>*Q<around|(|z|)>>|\|><rsub|R>\<leqslant\><around|(|1+\<delta\>|)><rsup|D>,<space|2em>Q<around|(|z|)>\<geqslant\>0.
-  </equation*>
+      <\equation*>
+        <around*|\||\<ell\><around|(|t|)><rsup|D>*e<rsup|<around|(|1-\<ell\><around|(|t|)><rsup|2>|)>*Q<around|(|z|)>>|\|><rsub|R>\<leqslant\><around|(|1+\<delta\>|)><rsup|D>,<space|2em>Q<around|(|z|)>\<geqslant\>0.
+      </equation*>
 
-  Only coordinates read by the local term enter <math|D>.
+      Only coordinates read by the local term enter <math|D>.
 
-  Small logarithmic factors require a different estimate. Their parameter
-  dependence is polynomial of degree at most two; real values and derivatives
-  of their exponential minus one have bound <math|v*d<rsup|i>> at
-  <math|-1,0,1>. For <math|v\<leqslant\>1/2>, taking the real logarithm at
-  these three nodes preserves a bound <math|C<rsub|j>*v*d<rsup|i>>.
-  Polynomial interpolation costs <math|C<rsub|j>*R<rsup|2>>, and
-  exponentiating in the coefficient algebra gives a bound
-  <math|C<rsub|j>*R<rsup|2>*v*d<rsup|i>> when
-  <math|C<rsub|j>*R<rsup|2>*v\<leqslant\>1>. Affine activities constrained to
-  cover prescribed large-field sites have the same polynomial interpolation
-  bound without taking a logarithm. These steps require no analyticity of the
-  incoming activity as a function of the gauge field beyond the already
-  imposed finite derivative order.
+      Small logarithmic factors require a different estimate. Their parameter
+      dependence is polynomial of degree at most two; real values and
+      derivatives of their exponential minus one have bound
+      <math|v*d<rsup|i>> at <math|-1,0,1>. For <math|v\<leqslant\>1/2>,
+      taking the real logarithm at these three nodes preserves a bound
+      <math|C<rsub|j>*v*d<rsup|i>>. Polynomial interpolation costs
+      <math|C<rsub|j>*R<rsup|2>>, and exponentiating in the coefficient
+      algebra gives a bound <math|C<rsub|j>*R<rsup|2>*v*d<rsup|i>> when
+      <math|C<rsub|j>*R<rsup|2>*v\<leqslant\>1>. Affine activities
+      constrained to cover prescribed large-field sites have the same
+      polynomial interpolation bound without taking a logarithm. These steps
+      require no analyticity of the incoming activity as a function of the
+      gauge field beyond the already imposed finite derivative order.
 
-  For the primitive bound <math|v=y<rsup|-7/16+o<around|(|1|)>>>, this radius
-  cost changes its exponent to <math|-7/16+2/256=-55/128\<less\>-2/5>. The
-  local factor estimate <eqref|ch10:real-node-bound> retains its negative
-  large-field energy: its additional <math|<around|(|1+\<delta\>|)><rsup|n>>
-  is absorbed into the fixed local factor cost. A local read set in support
-  <math|S> has at most <math|C<rsub|L>*<around|(|1+B|)><rsup|4>*C<rsub|B><around|(|S|)>>
-  coordinates. Since <math|B> is polynomial in <math|log y>, its Gaussian
-  prefactor satisfies, for any fixed <math|\<eta\>\<gtr\>0> and sufficiently
-  large <math|y>,
+      For the primitive bound <math|v=y<rsup|-7/16+o<around|(|1|)>>>, this
+      radius cost changes its exponent to
+      <math|-7/16+2/256=-55/128\<less\>-2/5>. The local factor estimate
+      <eqref|ch10:real-node-bound> retains its negative large-field energy:
+      its additional <math|<around|(|1+\<delta\>|)><rsup|n>> is absorbed into
+      the fixed local factor cost. A local read set in support <math|S> has
+      at most <math|C<rsub|L>*<around|(|1+B|)><rsup|4>*C<rsub|B><around|(|S|)>>
+      coordinates. Since <math|B> is polynomial in <math|log y>, its Gaussian
+      prefactor satisfies, for any fixed <math|\<eta\>\<gtr\>0> and
+      sufficiently large <math|y>,
 
-  <\equation*>
-    <around|(|1+\<delta\>|)><rsup|C<rsub|L>*<around|(|1+B|)><rsup|4>*C<rsub|B><around|(|S|)>>\<leqslant\>e<rsup|\<eta\>*C<rsub|B><around|(|S|)>>.
-  </equation*>
+      <\equation*>
+        <around|(|1+\<delta\>|)><rsup|C<rsub|L>*<around|(|1+B|)><rsup|4>*C<rsub|B><around|(|S|)>>\<leqslant\>e<rsup|\<eta\>*C<rsub|B><around|(|S|)>>.
+      </equation*>
 
-  This is absorbed by a support-exponent reserve, independently of the
-  volume. The joint cutoff-failure probability and Gaussian score moments are
-  those already used for the common majorant; Cauchy\USchwarz retains their
-  cutoff-failure gain without assuming independent cutoff failures.
+      This is absorbed by a support-exponent reserve, independently of the
+      volume. The joint cutoff-failure probability and Gaussian score moments
+      are those already used for the common majorant; Cauchy\USchwarz retains
+      their cutoff-failure gain without assuming independent cutoff failures.
 
-  We can therefore run the connected expansions of
-  Chapter<nbsp><reference|ch08:chapter> in this coefficient norm. A
-  derivative of order at most <math|j> of a product with <math|k> factors
-  costs at most <math|k<rsup|j>\<leqslant\>2<rsup|j*k>>, absorbed by
-  inflating each vertex bound by <math|2<rsup|j>>. Polynomial support moments
-  are absorbed by another fixed support reserve. The first connected
-  expansion has bound <math|y<rsup|-2/5+o<around|(|1|)>>>; the logarithmic
-  expansion and spatial derivative weights consequently have bound
-  <math|y<rsup|-3/8>> at radius <math|R/2>, after increasing the threshold
-  for the starting scale. The low-order projection uses finitely many
-  auxiliary volumes of side <math|O<around|(|B|)>> and supports coverable by
-  a fixed number of <math|B>-balls. Its polynomial factors have exponent
-  zero. Hence the actual raw projected regular family has finite-evaluation
-  bound
+      We can therefore run the connected expansions of
+      Chapter<nbsp><reference|ch08:chapter> in this coefficient norm. A
+      derivative of order at most <math|j> of a product with <math|k> factors
+      costs at most <math|k<rsup|j>\<leqslant\>2<rsup|j*k>>, absorbed by
+      inflating each vertex bound by <math|2<rsup|j>>. Polynomial support
+      moments are absorbed by another fixed support reserve. The first
+      connected expansion has bound <math|y<rsup|-2/5+o<around|(|1|)>>>; the
+      logarithmic expansion and spatial derivative weights consequently have
+      bound <math|y<rsup|-3/8>> at radius <math|R/2>, after increasing the
+      threshold for the starting scale. The low-order projection uses
+      finitely many auxiliary volumes of side <math|O<around|(|B|)>> and
+      supports coverable by a fixed number of <math|B>-balls. Its polynomial
+      factors have exponent zero. Hence the actual raw projected regular
+      family has finite-evaluation bound
 
-  <\equation>
-    <label|ch10:broad-test>\<cal-N\><around*|(|<big|sum><rsub|i>a<rsub|i>*H<around|(|t<rsub|i>|)>|)>\<leqslant\>y<rsup|-1/4>*sup<rsub|n\<geqslant\>0><around*|\||<big|sum><rsub|i>a<rsub|i>*<around|(|2*t<rsub|i>/R|)><rsup|n>|\|>.
-  </equation>
+      <\equation>
+        <label|ch10:broad-test>\<cal-N\><around*|(|<big|sum><rsub|i>a<rsub|i>*H<around|(|t<rsub|i>|)>|)>\<leqslant\>y<rsup|-1/4>*sup<rsub|n\<geqslant\>0><around*|\||<big|sum><rsub|i>a<rsub|i>*<around|(|2*t<rsub|i>/R|)><rsup|n>|\|>.
+      </equation>
 
-  Here <math|\<cal-N\>> is the full unnormalized regular derivative bound.
-  The margin between <math|-3/8> and <math|-1/4> absorbs the projection
-  factors. A cover number merely growing subpolynomially would not suffice
-  inside an exponential weight; its uniform bound is used here.
+      Here <math|\<cal-N\>> is the full unnormalized regular derivative
+      bound. The margin between <math|-3/8> and <math|-1/4> absorbs the
+      projection factors. A cover number merely growing subpolynomially would
+      not suffice inside an exponential weight; its uniform bound is used
+      here.
 
-  For completeness we explain the sharpening which makes this useful. At each
-  real point, the stronger one-step remainder estimate gives
+      For completeness we explain the sharpening which makes this useful. At
+      each real point, the stronger one-step remainder estimate gives
 
-  <\equation*>
-    \<cal-N\><around|(|H<around|(|t|)>|)>\<leqslant\>3*\<varepsilon\>*C<rsub|<math-up|st>>*x<rsup|-11/10>+O<around|(|x<rsup|-23/20+o<around|(|1|)>>|)>,<space|2em>x=<wide|\<beta\>|^><rsub|m>,
-  </equation*>
+      <\equation*>
+        \<cal-N\><around|(|H<around|(|t|)>|)>\<leqslant\>3*\<varepsilon\>*C<rsub|<math-up|st>>*x<rsup|-11/10>+O<around|(|x<rsup|-23/20+o<around|(|1|)>>|)>,<space|2em>x=<wide|\<beta\>|^><rsub|m>,
+      </equation*>
 
-  where the fixed response bound <math|\<varepsilon\>> can be made as small
-  as desired before choosing the inverse coupling threshold. This is the
-  small remainder estimate of Chapter<nbsp><reference|ch09:renormalization>
-  applied to this same collection. Let a finite parameter evaluation have
-  moment norm <math|M<rsub|q>> at a fixed radius <math|q>. Interpolation at
-  <math|k+1> fixed real nodes separates its moments through degree <math|k>
-  from the remainder. The interpolating evaluation functional has total
-  variation at most <math|U<rsub|k,q>*M<rsub|q>>; the remaining evaluation
-  functional has moment norm at radius <math|v\<geqslant\>q> at most
-  <math|<around|(|1+U<rsub|k,q>|)>*<around|(|q/v|)><rsup|k+1>*M<rsub|q>>.
-  Applying the pointwise bound to the first part and <eqref|ch10:broad-test>
-  to the second yields
+      where the fixed response bound <math|\<varepsilon\>> can be made as
+      small as desired before choosing the inverse coupling threshold. This
+      is the small remainder estimate of Chapter<nbsp><reference|ch09:renormalization>
+      applied to this same collection. Let a finite parameter evaluation have
+      moment norm <math|M<rsub|q>> at a fixed radius <math|q>. Interpolation
+      at <math|k+1> fixed real nodes separates its moments through degree
+      <math|k> from the remainder. The interpolating evaluation functional
+      has total variation at most <math|U<rsub|k,q>*M<rsub|q>>; the remaining
+      evaluation functional has moment norm at radius <math|v\<geqslant\>q>
+      at most <math|<around|(|1+U<rsub|k,q>|)>*<around|(|q/v|)><rsup|k+1>*M<rsub|q>>.
+      Applying the pointwise bound to the first part and
+      <eqref|ch10:broad-test> to the second yields
 
-  <\equation*>
-    M<rsub|q>*<around|{|U<rsub|k,q>*sup<rsub|t>
-    \<cal-N\><around|(|H<around|(|t|)>|)>+<around|(|1+U<rsub|k,q>|)>*<around|(|2*q/R|)><rsup|k+1>*y<rsup|-1/4>|}>.
-  </equation*>
+      <\equation*>
+        M<rsub|q>*<around|{|U<rsub|k,q>*sup<rsub|t>
+        \<cal-N\><around|(|H<around|(|t|)>|)>+<around|(|1+U<rsub|k,q>|)>*<around|(|2*q/R|)><rsup|k+1>*y<rsup|-1/4>|}>.
+      </equation*>
 
-  Take <math|k=300>. The last power is <math|y<rsup|-365/256>>, strictly
-  smaller than <math|y<rsup|-23/20>>. First choose <math|\<varepsilon\>> to
-  absorb the fixed interpolation constant, then increase the inverse coupling
-  threshold. The result is an arbitrarily small multiple of
-  <math|x<rsup|-11/10>*M<rsub|q>>. The scalar projection costs the squared
-  inverse field threshold; thus its bound has the form
+      Take <math|k=300>. The last power is <math|y<rsup|-365/256>>, strictly
+      smaller than <math|y<rsup|-23/20>>. First choose <math|\<varepsilon\>>
+      to absorb the fixed interpolation constant, then increase the inverse
+      coupling threshold. The result is an arbitrarily small multiple of
+      <math|x<rsup|-11/10>*M<rsub|q>>. The scalar projection costs the
+      squared inverse field threshold; thus its bound has the form
 
-  <\equation*>
-    f<rsub|m>=C*\<varepsilon\>*x<rsup|-11/10>/t<around|(|x|)><rsup|2>,<space|2em>t<around|(|x|)>=x<rsup|-1/2>*e<rsup|<around|(|log
-    log x|)><rsup|2>>.
-  </equation*>
+      <\equation*>
+        f<rsub|m>=C*\<varepsilon\>*x<rsup|-11/10>/t<around|(|x|)><rsup|2>,<space|2em>t<around|(|x|)>=x<rsup|-1/2>*e<rsup|<around|(|log
+        log x|)><rsup|2>>.
+      </equation*>
 
-  The reset is linear on finite parameter evaluations, and its fixed path
-  contribution costs <math|O<around|(|<around|\||\<alpha\>|\|>*t<around|(|x|)><rsup|3>|)>=o<around|(|x<rsup|-11/10>|)>>.
+      The reset is linear on finite parameter evaluations, and its fixed path
+      contribution costs <math|O<around|(|<around|\||\<alpha\>|\|>*t<around|(|x|)><rsup|3>|)>=o<around|(|x<rsup|-11/10>|)>>.
 
-  Arrays constrained to cover prescribed large-field sites retain one
-  compulsory large-field factor throughout fusion. Work with their
-  coefficientwise majorants, not separately chosen value bounds. A raw hard
-  bound <math|a<rsub|h>\<leqslant\>C*e<rsup|-c*P<around|(|y|)><rsup|2>>>,
-  where <math|P<around|(|y|)>=e<rsup|<around|(|log log y|)><rsup|2>>>, is
-  negligible compared with any fixed fraction <math|\<phi\>> of
-  <math|e<rsup|-P<around|(|x|)><rsup|1/5>>>. The soft correction has series
-  bound <math|a<rsub|s>\<leqslant\>y<rsup|-1/8>>. Put <math|p=y<rsup|1/16>>
-  and <math|\<zeta\>=-log <around|(|\<phi\>*p|)>\<geqslant\>0>. Then
-  <math|I=e<rsup|\<zeta\>>*a<rsub|h>+2*a<rsub|s>\<leqslant\><around|(|8*p|)><rsup|-1>+2*a<rsub|s>>
-  eventually, the support ball count times <math|I> tends to zero, and
+      Arrays constrained to cover prescribed large-field sites retain one
+      compulsory large-field factor throughout fusion. Work with their
+      coefficientwise majorants, not separately chosen value bounds. A raw
+      hard bound <math|a<rsub|h>\<leqslant\>C*e<rsup|-c*P<around|(|y|)><rsup|2>>>,
+      where <math|P<around|(|y|)>=e<rsup|<around|(|log log y|)><rsup|2>>>, is
+      negligible compared with any fixed fraction <math|\<phi\>> of
+      <math|e<rsup|-P<around|(|x|)><rsup|1/5>>>. The soft correction has
+      series bound <math|a<rsub|s>\<leqslant\>y<rsup|-1/8>>. Put
+      <math|p=y<rsup|1/16>> and <math|\<zeta\>=-log
+      <around|(|\<phi\>*p|)>\<geqslant\>0>. Then
+      <math|I=e<rsup|\<zeta\>>*a<rsub|h>+2*a<rsub|s>\<leqslant\><around|(|8*p|)><rsup|-1>+2*a<rsub|s>>
+      eventually, the support ball count times <math|I> tends to zero, and
 
-  <\equation*>
-    e<rsup|-\<zeta\>>*<around|(|e<rsup|I>-1|)>\<leqslant\>\<phi\>*<around|(|1/4+4*p*a<rsub|s>|)>\<leqslant\>\<phi\>.
-  </equation*>
+      <\equation*>
+        e<rsup|-\<zeta\>>*<around|(|e<rsup|I>-1|)>\<leqslant\>\<phi\>*<around|(|1/4+4*p*a<rsub|s>|)>\<leqslant\>\<phi\>.
+      </equation*>
 
-  This is exactly the connected fusion estimate with the hard factor retained
-  once. Radius reduction by a fixed factor converts the finite-evaluation
-  coefficient bounds into one summable majorant at every support. Eligibility
-  indicators are parameter independent and preserve it. The result proves
-  both inequalities <eqref|ch10:finite-tests>, with arbitrarily small fixed
-  <math|d>, for the protected local construction. The inverse coupling bound
-  above gives <math|s<rsub|m>=2*f<rsub|m>\<leqslant\>C<rsub|j>*x<rsup|-1/10>>
-  needed for cumulative control.
+      This is exactly the connected fusion estimate with the hard factor
+      retained once. Radius reduction by a fixed factor converts the
+      finite-evaluation coefficient bounds into one summable majorant at
+      every support. Eligibility indicators are parameter independent and
+      preserve it. The result proves both inequalities
+      <eqref|ch10:finite-tests>, with arbitrarily small fixed <math|d>, for
+      the protected local construction. The inverse coupling bound above
+      gives <math|s<rsub|m>=2*f<rsub|m>\<leqslant\>C<rsub|j>*x<rsup|-1/10>>
+      needed for cumulative control.
 
-  This argument uses the real-node bounds for the same protected local
-  sectors on the reserved inverse coupling band. Those bounds follow by
-  applying the real estimates of Chapter<nbsp><reference|ch06:large-fields>
-  with their constants fixed on that band; the rescaling keeps all fine reads
-  and event indicators fixed. It adds a parameter estimate to that
-  construction, not a differentiation of measurable cutoff indicators.
+      This argument uses the real-node bounds for the same protected local
+      sectors on the reserved inverse coupling band. Those bounds follow by
+      applying the real estimates of Chapter<nbsp><reference|ch06:large-fields>
+      with their constants fixed on that band; the rescaling keeps all fine
+      reads and event indicators fixed. It adds a parameter estimate to that
+      construction, not a differentiation of measurable cutoff indicators.
 
-  <subsection|Numerical cumulative control>
+      <item*|<em|Step 3.>><em|Summation over scales.>
 
-  The cumulative scalar bound is compatible with the schedule. Suppose at a
-  fixed stage its bound has the proved form
-  <math|s<around|(|x|)>\<leqslant\>C<rsub|j>*x<rsup|-1/10>>, where <math|x>
-  is the reference inverse coupling. For the stage increment
-  <math|a=\<kappa\><rsub|G>*log <with|math-font|cal*|L><rsub|j>\<gtr\>0> and
-  <math|x\<geqslant\>a>,
+      The cumulative scalar bound is compatible with the schedule. Suppose at
+      a fixed stage its bound has the proved form
+      <math|s<around|(|x|)>\<leqslant\>C<rsub|j>*x<rsup|-1/10>>, where
+      <math|x> is the reference inverse coupling. For the stage increment
+      <math|a=\<kappa\><rsub|G>*log <with|math-font|cal*|L><rsub|j>\<gtr\>0>
+      and <math|x\<geqslant\>a>,
 
-  <\equation*>
-    <around|(|x+a|)><rsup|31/32>-x<rsup|31/32>\<geqslant\><tfrac|31|32>2<rsup|-1/32>*a*x<rsup|-1/32>.
-  </equation*>
+      <\equation*>
+        <around|(|x+a|)><rsup|31/32>-x<rsup|31/32>\<geqslant\><tfrac|31|32>2<rsup|-1/32>*a*x<rsup|-1/32>.
+      </equation*>
 
-  Since <math|x<rsup|-1/10>=o<around|(|x<rsup|-1/32>|)>>, a threshold for the
-  starting scale ensures <math|s<around|(|x|)>\<leqslant\><around|(|<around|(|x+a|)><rsup|31/32>-x<rsup|31/32>|)>/128>.
-  Summation gives the required bound by telescoping, including all initial
-  scales once <math|<wide|\<beta\>|\<bar\>>> exceeds the first threshold. The
-  decay estimate for <math|s<around|(|x|)>> is required before this numerical
-  argument; an arbitrary stage constant would not suffice.
+      Since <math|x<rsup|-1/10>=o<around|(|x<rsup|-1/32>|)>>, a threshold for
+      the starting scale ensures <math|s<around|(|x|)>\<leqslant\><around|(|<around|(|x+a|)><rsup|31/32>-x<rsup|31/32>|)>/128>.
+      Summation gives the required bound by telescoping, including all
+      initial scales once <math|<wide|\<beta\>|\<bar\>>> exceeds the first
+      threshold. The decay estimate for <math|s<around|(|x|)>> is required
+      before this numerical argument; an arbitrary stage constant would not
+      suffice.
 
-  <subsection|Common-input continuity and the zero-array
-  histories><label|ch10:cutoff-supplier>
+      <item*|<em|Step 4.>><em|Continuity for a common input.>
+      <with|the-label|4|<label|ch10:cutoff-supplier>>
 
-  Use now the quadratic and path coefficient limits with the strict width
-  reserve established in Section<nbsp><reference|ch10:path-stability>. We
-  verify the cutoff-comparison part of Proposition<nbsp><reference|ch10:stability-assumption>
-  on the actual allowed inputs. All assertions in this paragraph are at one
-  fixed scale and period; constants need not be uniform in the scale.
+      Use now the quadratic and path coefficient limits with the strict width
+      reserve established in Section<nbsp><reference|ch10:path-stability>. We
+      verify the cutoff-comparison part of
+      Proposition<nbsp><reference|ch10:stability-assumption> on the actual
+      allowed inputs. All assertions in this paragraph are at one fixed scale
+      and period; constants need not be uniform in the scale.
 
-  For a finite collection of elementary labels and bounded path lengths, the
-  fine-coordinate dimension is finite. Write each integral in the same
-  physical coordinates at the two cutoffs. Convergence of the path
-  coefficients with a width reserve gives convergence of its finitely many
-  required derivatives, uniformly on the smaller local chart. The inverse
-  identity <math|H<rsub|N><rsup|-1>-H<rsup|-1>=H<rsub|N><rsup|-1>*<around|(|H-H<rsub|N>|)>*H<rsup|-1>>,
-  the common positive Hessian bound and stationary uniqueness give
-  convergence of means, precisions and stationary jets. Differentiated
-  Gaussian densities are their ordinary polynomial scores. On a sufficiently
-  late tail their precisions have a common smaller positive lower bound, so a
-  fixed Gaussian exponential times a polynomial dominates them. The protected
-  change of variables leaves measurable fine reads fixed. Thus the same input
-  activity discrepancy is bounded in its prescribed norm; no derivative of a
-  measurable indicator is introduced.
+      For a finite collection of elementary labels and bounded path lengths,
+      the fine-coordinate dimension is finite. Write each integral in the
+      same physical coordinates at the two cutoffs. Convergence of the path
+      coefficients with a width reserve gives convergence of its finitely
+      many required derivatives, uniformly on the smaller local chart. The
+      inverse identity <math|H<rsub|N><rsup|-1>-H<rsup|-1>=H<rsub|N><rsup|-1>*<around|(|H-H<rsub|N>|)>*H<rsup|-1>>,
+      the common positive Hessian bound and stationary uniqueness give
+      convergence of means, precisions and stationary jets. Differentiated
+      Gaussian densities are their ordinary polynomial scores. On a
+      sufficiently late tail their precisions have a common smaller positive
+      lower bound, so a fixed Gaussian exponential times a polynomial
+      dominates them. The protected change of variables leaves measurable
+      fine reads fixed. Thus the same input activity discrepancy is bounded
+      in its prescribed norm; no derivative of a measurable indicator is
+      introduced.
 
-  Use the physical fine coordinates also for the event indicators. At a fixed
-  level their threshold is determined by the fixed reference inverse
-  coupling, and the cutoff-failure catalogue, support dictionary and clipping
-  rule are independent of the terminal index. Thus the actual event indicator
-  is the same measurable function in both integrals. Although its expression
-  in a centered Gaussian variable would move with the mean or precision, no
-  such moving expression is compared here. The local change of density
-  includes its Jacobian and leaves that physical event indicator fixed. The
-  coarse small-field event indicators are likewise identical. This avoids any
-  uniform assertion about the measure of a moving threshold surface.
+      Use the physical fine coordinates also for the event indicators. At a
+      fixed level their threshold is determined by the fixed reference
+      inverse coupling, and the cutoff-failure catalogue, support dictionary
+      and clipping rule are independent of the terminal index. Thus the
+      actual event indicator is the same measurable function in both
+      integrals. Although its expression in a centered Gaussian variable
+      would move with the mean or precision, no such moving expression is
+      compared here. The local change of density includes its Jacobian and
+      leaves that physical event indicator fixed. The coarse small-field
+      event indicators are likewise identical. This avoids any uniform
+      assertion about the measure of a moving threshold surface.
 
-  To obtain the suprema in the output derivative bound, choose the protected
-  Gaussian and chart estimates through one order beyond the outgoing order.
-  This is a numerical derivative reserve for the integration kernels, and
-  does not require one additional derivative of an incoming activity. Indeed
-  in each differentiated integral the protected coordinate change holds its
-  entire fine activity read fixed. An additional coarse increment
-  differentiates the smooth density, chart and Jacobian scores, while the old
-  measurable factors remain unchanged. The bounds of
-  Chapter<nbsp><reference|ch06:large-fields> apply at every fixed requested
-  score order; increase that order before selecting the stage constants.
-  Direct path terms and the finite local projection are smooth and satisfy
-  the same extra order by their exponential coefficient bounds. Thus this
-  reserve is available also on a plateau with equal incoming and outgoing
-  activity derivative orders. On each common small-field chart it gives
-  equicontinuity of the finite collection of output derivatives. A finite net
-  on the compact coarse configuration domain and dominated convergence then
-  give uniform convergence there. The estimates extend to its closure from
-  the protected neighborhood; multiplication by the same small-field event
-  indicator preserves the resulting supremum bound.
+      To obtain the suprema in the output derivative bound, choose the
+      protected Gaussian and chart estimates through one order beyond the
+      outgoing order. This is a numerical derivative reserve for the
+      integration kernels, and does not require one additional derivative of
+      an incoming activity. Indeed in each differentiated integral the
+      protected coordinate change holds its entire fine activity read fixed.
+      An additional coarse increment differentiates the smooth density, chart
+      and Jacobian scores, while the old measurable factors remain unchanged.
+      The bounds of Chapter<nbsp><reference|ch06:large-fields> apply at every
+      fixed requested score order; increase that order before selecting the
+      stage constants. Direct path terms and the finite local projection are
+      smooth and satisfy the same extra order by their exponential
+      coefficient bounds. Thus this reserve is available also on a plateau
+      with equal incoming and outgoing activity derivative orders. On each
+      common small-field chart it gives equicontinuity of the finite
+      collection of output derivatives. A finite net on the compact coarse
+      configuration domain and dominated convergence then give uniform
+      convergence there. The estimates extend to its closure from the
+      protected neighborhood; multiplication by the same small-field event
+      indicator preserves the resulting supremum bound.
 
-  Next remove the finite-label restriction. Long paths have uniformly small
-  tails by the strict exponential width reserve. Large connected supports and
-  high cluster multiplicities have uniformly small tails by the support and
-  attachment reserves of the polymer estimates. Remaining multiplicities
-  inherited from the input arrays are treated by the Cauchy tail argument at
-  the end of this chapter: a fixed late array has a summable value tail, and
-  the activity-norm discrepancy bounds the tail of every later array. In a
-  protected derivative the input factors are kept at fixed fine reads, so
-  these are value tails; the differentiations fall on the controlled Gaussian
-  and chart factors. If an input derivative is explicitly present, its
-  difference is already controlled by the corresponding component of the
-  input norm. First truncate with these uniform errors, then compare the
-  finite integrals. This proves convergence in the output norm.
+      Next remove the finite-label restriction. Long paths have uniformly
+      small tails by the strict exponential width reserve. Large connected
+      supports and high cluster multiplicities have uniformly small tails by
+      the support and attachment reserves of the polymer estimates. Remaining
+      multiplicities inherited from the input arrays are treated by the
+      Cauchy tail argument at the end of this chapter: a fixed late array has
+      a summable value tail, and the activity-norm discrepancy bounds the
+      tail of every later array. In a protected derivative the input factors
+      are kept at fixed fine reads, so these are value tails; the
+      differentiations fall on the controlled Gaussian and chart factors. If
+      an input derivative is explicitly present, its difference is already
+      controlled by the corresponding component of the input norm. First
+      truncate with these uniform errors, then compare the finite integrals.
+      This proves convergence in the output norm.
 
-  The projected scalar is a finite linear functional of the same converging
-  local derivatives and therefore also converges. Local subtraction preserves
-  this conclusion by linearity; fusion preserves it by its convergent product
-  expansion with a strict attachment margin. The finite auxiliary projection
-  uses the same fields and periods at both cutoffs. Thus this comparison
-  concerns the actual returned arrays and <math|Q<rsub|m,N>>, not some other
-  representation of their densities.
+      The projected scalar is a finite linear functional of the same
+      converging local derivatives and therefore also converges. Local
+      subtraction preserves this conclusion by linearity; fusion preserves it
+      by its convergent product expansion with a strict attachment margin.
+      The finite auxiliary projection uses the same fields and periods at
+      both cutoffs. Thus this comparison concerns the actual returned arrays
+      and <math|Q<rsub|m,N>>, not some other representation of their
+      densities.
 
-  The same proof applies when the terminal activity is zero and the inverse
-  couplings below it are prescribed in advance. At the initial auxiliary
-  level the density is the positive bare path exponential, and all activity
-  bounds are zero. After each step its activity array has the small bound
-  proved above. Replacing the returned inverse coupling by the next
-  prescribed inverse coupling multiplies the represented density by a
-  strictly positive path exponential; its activity gas is unchanged.
-  Therefore positivity is retained, and the next step is an allowed input to
-  Theorem<nbsp><reference|ch09:step-theorem>. All stationary, support and
-  cutoff conditions depend on the common path and reference band, which have
-  not changed. In particular this induction supplies precisely the histories
-  with prescribed inverse couplings used in the convergence proof; it does
-  not assume that every abstract element of a completed norm ball represents
-  a positive density.
+      The same proof applies when the terminal activity is zero and the
+      inverse couplings below it are prescribed in advance. At the initial
+      auxiliary level the density is the positive bare path exponential, and
+      all activity bounds are zero. After each step its activity array has
+      the small bound proved above. Replacing the returned inverse coupling
+      by the next prescribed inverse coupling multiplies the represented
+      density by a strictly positive path exponential; its activity gas is
+      unchanged. Therefore positivity is retained, and the next step is an
+      allowed input to Theorem<nbsp><reference|ch09:step-theorem>. All
+      stationary, support and cutoff conditions depend on the common path and
+      reference band, which have not changed. In particular this induction
+      supplies precisely the histories with prescribed inverse couplings used
+      in the convergence proof; it does not assume that every abstract
+      element of a completed norm ball represents a positive density.
 
-  The quadratic limit of Proposition<nbsp><reference|ch05:horizon-limit>, the
-  affine coefficient comparison and the preceding local-integral argument
-  give the common-input continuity required here, including all zero-array
-  histories with prescribed inverse couplings. Together with the
-  finite-evaluation estimates and cumulative bound, this proves
-  Proposition<nbsp><reference|ch10:stability-assumption>.
+      The quadratic limit of Proposition<nbsp><reference|ch05:horizon-limit>,
+      the affine coefficient comparison and the preceding local-integral
+      argument give the common-input continuity required here, including all
+      zero-array histories with prescribed inverse couplings. Together with
+      the finite-evaluation estimates and cumulative bound, this proves
+      Proposition<nbsp><reference|ch10:stability-assumption>.
+    </enumerate>
+  </render-proof>
 
   <section|Convergence of the coupled histories><label|ch10:fixed-scale>
 
@@ -11581,13 +11617,14 @@
   The schedule, finite-history tuning and logarithmic running follow from the
   finite-step theorem. The fixed-scale conclusion is
   Theorem<nbsp><reference|ch10:convergence>.
-  Sections<nbsp><reference|ch10:parameter-supplier> and
-  <reference|ch10:cutoff-supplier> establish the stronger local comparisons
-  from the protected expansion and converging background coefficients.
-  Proposition<nbsp><reference|ch05:horizon-limit> supplies the fixed-scale
-  quadratic limit for the actual nested history. This completes the
-  fixed-scale construction, which remains distinct from subsequent
-  convergence of all continuum correlations.
+  Steps<nbsp><reference|ch10:parameter-supplier> and
+  <reference|ch10:cutoff-supplier> in the proof of
+  Proposition<nbsp><reference|ch10:stability-assumption> establish the
+  stronger local comparisons from the protected expansion and converging
+  background coefficients. Proposition<nbsp><reference|ch05:horizon-limit>
+  supplies the fixed-scale quadratic limit for the actual nested history.
+  This completes the fixed-scale construction, which remains distinct from
+  subsequent convergence of all continuum correlations.
 
   <assign|chapter-nr|10>
 
@@ -15214,11 +15251,14 @@
     set, which holds on a cutoff tail.
   </theorem>
 
-  The last assertion is a Riemann-sum consequence of locally uniform
-  convergence. Fixed forward, backward or centered stencils give the same
-  limit: telescope each stencil as a finite average of shifted unit forward
-  differences. The averaging weights sum to one and the shifted points
-  approach the same point.
+  <\proof>
+    The preceding section gives the full smooth limit on separated
+    configurations. The last assertion is a Riemann-sum consequence of
+    locally uniform convergence. Fixed forward, backward or centered stencils
+    give the same limit: telescope each stencil as a finite average of
+    shifted unit forward differences. The averaging weights sum to one and
+    the shifted points approach the same point.
+  </proof>
 
   The convergence threshold in this theorem may depend on <math|p>. Bounds on
   compact separated sets that were uniform in <math|p> remain uniform for the
@@ -22206,296 +22246,291 @@
   <\collection>
     <associate|auto-1|<tuple|?|5>>
     <associate|auto-10|<tuple|1.5|22>>
-    <associate|auto-100|<tuple|8.5|130>>
-    <associate|auto-101|<tuple|8.6|131>>
-    <associate|auto-102|<tuple|8.7|132>>
-    <associate|auto-103|<tuple|9|133>>
-    <associate|auto-104|<tuple|9.1|133>>
-    <associate|auto-105|<tuple|9.2|135>>
-    <associate|auto-106|<tuple|9.2.1|135>>
-    <associate|auto-107|<tuple|9.2.2|135>>
-    <associate|auto-108|<tuple|9.2.3|137>>
-    <associate|auto-109|<tuple|9.2.4|137>>
+    <associate|auto-100|<tuple|8.6|131>>
+    <associate|auto-101|<tuple|8.7|132>>
+    <associate|auto-102|<tuple|9|135>>
+    <associate|auto-103|<tuple|9.1|135>>
+    <associate|auto-104|<tuple|9.2|137>>
+    <associate|auto-105|<tuple|9.2.1|137>>
+    <associate|auto-106|<tuple|9.2.2|137>>
+    <associate|auto-107|<tuple|9.2.3|139>>
+    <associate|auto-108|<tuple|9.2.4|139>>
+    <associate|auto-109|<tuple|9.2.5|140>>
     <associate|auto-11|<tuple|1.6|23>>
-    <associate|auto-110|<tuple|9.2.5|138>>
-    <associate|auto-111|<tuple|9.2.6|140>>
-    <associate|auto-112|<tuple|9.2.7|141>>
-    <associate|auto-113|<tuple|9.3|142>>
-    <associate|auto-114|<tuple|9.4|143>>
-    <associate|auto-115|<tuple|9.5|144>>
-    <associate|auto-116|<tuple|9.6|145>>
-    <associate|auto-117|<tuple|9.7|146>>
-    <associate|auto-118|<tuple|9.8|148>>
-    <associate|auto-119|<tuple|9.9|149>>
+    <associate|auto-110|<tuple|9.2.6|142>>
+    <associate|auto-111|<tuple|9.2.7|143>>
+    <associate|auto-112|<tuple|9.3|144>>
+    <associate|auto-113|<tuple|9.4|145>>
+    <associate|auto-114|<tuple|9.5|146>>
+    <associate|auto-115|<tuple|9.6|147>>
+    <associate|auto-116|<tuple|9.7|148>>
+    <associate|auto-117|<tuple|9.8|150>>
+    <associate|auto-118|<tuple|9.9|151>>
+    <associate|auto-119|<tuple|10|153>>
     <associate|auto-12|<tuple|2|25>>
-    <associate|auto-120|<tuple|10|151>>
-    <associate|auto-121|<tuple|10.1|151>>
-    <associate|auto-122|<tuple|10.2|152>>
-    <associate|auto-123|<tuple|10.3|154>>
-    <associate|auto-124|<tuple|10.4|154>>
-    <associate|auto-125|<tuple|10.5|155>>
-    <associate|auto-126|<tuple|10.6|156>>
-    <associate|auto-127|<tuple|10.6.1|157>>
-    <associate|auto-128|<tuple|10.6.2|158>>
-    <associate|auto-129|<tuple|10.6.3|161>>
+    <associate|auto-120|<tuple|10.1|153>>
+    <associate|auto-121|<tuple|10.2|154>>
+    <associate|auto-122|<tuple|10.3|156>>
+    <associate|auto-123|<tuple|10.4|156>>
+    <associate|auto-124|<tuple|10.5|157>>
+    <associate|auto-125|<tuple|10.6|158>>
+    <associate|auto-126|<tuple|10.7|165>>
+    <associate|auto-127|<tuple|10.8|166>>
+    <associate|auto-128|<tuple|11|167>>
+    <associate|auto-129|<tuple|11.1|167>>
     <associate|auto-13|<tuple|2.1|25>>
-    <associate|auto-130|<tuple|10.6.4|161>>
-    <associate|auto-131|<tuple|10.7|162>>
-    <associate|auto-132|<tuple|10.8|164>>
-    <associate|auto-133|<tuple|11|165>>
-    <associate|auto-134|<tuple|11.1|165>>
-    <associate|auto-135|<tuple|11.1.1|166>>
-    <associate|auto-136|<tuple|11.2|166>>
-    <associate|auto-137|<tuple|11.3|167>>
-    <associate|auto-138|<tuple|11.4|168>>
-    <associate|auto-139|<tuple|11.4.1|170>>
+    <associate|auto-130|<tuple|11.1.1|168>>
+    <associate|auto-131|<tuple|11.2|168>>
+    <associate|auto-132|<tuple|11.3|169>>
+    <associate|auto-133|<tuple|11.4|170>>
+    <associate|auto-134|<tuple|11.4.1|172>>
+    <associate|auto-135|<tuple|11.4.2|174>>
+    <associate|auto-136|<tuple|11.5|175>>
+    <associate|auto-137|<tuple|11.5.1|176>>
+    <associate|auto-138|<tuple|11.5.2|177>>
+    <associate|auto-139|<tuple|11.6|178>>
     <associate|auto-14|<tuple|2.2|26>>
-    <associate|auto-140|<tuple|11.4.2|172>>
-    <associate|auto-141|<tuple|11.5|173>>
-    <associate|auto-142|<tuple|11.5.1|174>>
-    <associate|auto-143|<tuple|11.5.2|175>>
-    <associate|auto-144|<tuple|11.6|176>>
-    <associate|auto-145|<tuple|11.6.1|176>>
-    <associate|auto-146|<tuple|11.7|182>>
-    <associate|auto-147|<tuple|11.7.1|182>>
-    <associate|auto-148|<tuple|11.8|183>>
-    <associate|auto-149|<tuple|11.9|184>>
+    <associate|auto-140|<tuple|11.6.1|178>>
+    <associate|auto-141|<tuple|11.7|184>>
+    <associate|auto-142|<tuple|11.7.1|184>>
+    <associate|auto-143|<tuple|11.8|185>>
+    <associate|auto-144|<tuple|11.9|186>>
+    <associate|auto-145|<tuple|11.10|187>>
+    <associate|auto-146|<tuple|11.11|188>>
+    <associate|auto-147|<tuple|11.12|191>>
+    <associate|auto-148|<tuple|11.12.1|191>>
+    <associate|auto-149|<tuple|11.12.2|194>>
     <associate|auto-15|<tuple|2.3|27>>
-    <associate|auto-150|<tuple|11.10|185>>
-    <associate|auto-151|<tuple|11.11|186>>
-    <associate|auto-152|<tuple|11.12|189>>
-    <associate|auto-153|<tuple|11.12.1|189>>
-    <associate|auto-154|<tuple|11.12.2|192>>
-    <associate|auto-155|<tuple|11.12.3|197>>
-    <associate|auto-156|<tuple|11.12.4|199>>
-    <associate|auto-157|<tuple|11.12.5|201>>
-    <associate|auto-158|<tuple|12|207>>
-    <associate|auto-159|<tuple|12.1|207>>
+    <associate|auto-150|<tuple|11.12.3|199>>
+    <associate|auto-151|<tuple|11.12.4|201>>
+    <associate|auto-152|<tuple|11.12.5|203>>
+    <associate|auto-153|<tuple|12|209>>
+    <associate|auto-154|<tuple|12.1|209>>
+    <associate|auto-155|<tuple|12.2|210>>
+    <associate|auto-156|<tuple|12.3|211>>
+    <associate|auto-157|<tuple|12.4|212>>
+    <associate|auto-158|<tuple|12.5|213>>
+    <associate|auto-159|<tuple|12.6|214>>
     <associate|auto-16|<tuple|2.4|29>>
-    <associate|auto-160|<tuple|12.2|208>>
-    <associate|auto-161|<tuple|12.3|209>>
-    <associate|auto-162|<tuple|12.4|210>>
-    <associate|auto-163|<tuple|12.5|211>>
-    <associate|auto-164|<tuple|12.6|212>>
-    <associate|auto-165|<tuple|13|215>>
-    <associate|auto-166|<tuple|13.1|215>>
-    <associate|auto-167|<tuple|13.2|216>>
-    <associate|auto-168|<tuple|13.3|216>>
-    <associate|auto-169|<tuple|13.3.1|217>>
+    <associate|auto-160|<tuple|13|217>>
+    <associate|auto-161|<tuple|13.1|217>>
+    <associate|auto-162|<tuple|13.2|218>>
+    <associate|auto-163|<tuple|13.3|218>>
+    <associate|auto-164|<tuple|13.3.1|219>>
+    <associate|auto-165|<tuple|13.4|220>>
+    <associate|auto-166|<tuple|13.5|221>>
+    <associate|auto-167|<tuple|13.6|222>>
+    <associate|auto-168|<tuple|13.7|223>>
+    <associate|auto-169|<tuple|13.7.1|223>>
     <associate|auto-17|<tuple|2.5|31>>
-    <associate|auto-170|<tuple|13.4|218>>
-    <associate|auto-171|<tuple|13.5|219>>
-    <associate|auto-172|<tuple|13.6|220>>
-    <associate|auto-173|<tuple|13.7|221>>
-    <associate|auto-174|<tuple|13.7.1|221>>
-    <associate|auto-175|<tuple|13.7.2|222>>
-    <associate|auto-176|<tuple|13.7.3|223>>
-    <associate|auto-177|<tuple|13.8|223>>
-    <associate|auto-178|<tuple|13.9|228>>
-    <associate|auto-179|<tuple|13.10|230>>
+    <associate|auto-170|<tuple|13.7.2|224>>
+    <associate|auto-171|<tuple|13.7.3|225>>
+    <associate|auto-172|<tuple|13.8|225>>
+    <associate|auto-173|<tuple|13.9|230>>
+    <associate|auto-174|<tuple|13.10|232>>
+    <associate|auto-175|<tuple|13.10.1|233>>
+    <associate|auto-176|<tuple|13.10.2|233>>
+    <associate|auto-177|<tuple|13.10.3|234>>
+    <associate|auto-178|<tuple|13.10.4|236>>
+    <associate|auto-179|<tuple|14|239>>
     <associate|auto-18|<tuple|2.5.1|32>>
-    <associate|auto-180|<tuple|13.10.1|231>>
-    <associate|auto-181|<tuple|13.10.2|231>>
-    <associate|auto-182|<tuple|13.10.3|232>>
-    <associate|auto-183|<tuple|13.10.4|234>>
-    <associate|auto-184|<tuple|14|237>>
-    <associate|auto-185|<tuple|14.1|237>>
-    <associate|auto-186|<tuple|14.2|238>>
-    <associate|auto-187|<tuple|14.3|239>>
-    <associate|auto-188|<tuple|14.3.1|239>>
-    <associate|auto-189|<tuple|14.4|242>>
+    <associate|auto-180|<tuple|14.1|239>>
+    <associate|auto-181|<tuple|14.2|240>>
+    <associate|auto-182|<tuple|14.3|241>>
+    <associate|auto-183|<tuple|14.3.1|242>>
+    <associate|auto-184|<tuple|14.4|244>>
+    <associate|auto-185|<tuple|14.5|245>>
+    <associate|auto-186|<tuple|14.6|246>>
+    <associate|auto-187|<tuple|14.6.1|247>>
+    <associate|auto-188|<tuple|14.6.2|249>>
+    <associate|auto-189|<tuple|14.6.3|251>>
     <associate|auto-19|<tuple|2.5.2|32>>
-    <associate|auto-190|<tuple|14.5|242>>
-    <associate|auto-191|<tuple|14.6|244>>
-    <associate|auto-192|<tuple|14.6.1|244>>
-    <associate|auto-193|<tuple|14.6.2|246>>
-    <associate|auto-194|<tuple|14.6.3|248>>
-    <associate|auto-195|<tuple|14.7|249>>
-    <associate|auto-196|<tuple|14.7.1|250>>
-    <associate|auto-197|<tuple|14.7.2|251>>
-    <associate|auto-198|<tuple|14.8|251>>
-    <associate|auto-199|<tuple|15|255>>
+    <associate|auto-190|<tuple|14.7|252>>
+    <associate|auto-191|<tuple|14.7.1|253>>
+    <associate|auto-192|<tuple|14.7.2|254>>
+    <associate|auto-193|<tuple|14.8|254>>
+    <associate|auto-194|<tuple|15|257>>
+    <associate|auto-195|<tuple|15.1|257>>
+    <associate|auto-196|<tuple|15.2|257>>
+    <associate|auto-197|<tuple|15.3|259>>
+    <associate|auto-198|<tuple|15.4|259>>
+    <associate|auto-199|<tuple|15.5|260>>
     <associate|auto-2|<tuple|(iii)|5>>
-    <associate|auto-20|<tuple|2.5.3|33>>
-    <associate|auto-200|<tuple|15.1|255>>
-    <associate|auto-201|<tuple|15.2|255>>
-    <associate|auto-202|<tuple|15.3|257>>
-    <associate|auto-203|<tuple|15.4|257>>
-    <associate|auto-204|<tuple|15.5|258>>
-    <associate|auto-205|<tuple|15.6|259>>
-    <associate|auto-206|<tuple|15.7|260>>
-    <associate|auto-207|<tuple|16|261>>
-    <associate|auto-208|<tuple|16.1|261>>
-    <associate|auto-209|<tuple|16.2|263>>
-    <associate|auto-21|<tuple|2.6|34>>
-    <associate|auto-210|<tuple|16.3|264>>
-    <associate|auto-211|<tuple|16.4|265>>
-    <associate|auto-212|<tuple|16.5|266>>
-    <associate|auto-213|<tuple|16.6|268>>
-    <associate|auto-214|<tuple|17|271>>
-    <associate|auto-215|<tuple|17.1|271>>
-    <associate|auto-216|<tuple|17.2|272>>
-    <associate|auto-217|<tuple|17.2.1|273>>
-    <associate|auto-218|<tuple|17.3|275>>
-    <associate|auto-219|<tuple|17.4|276>>
-    <associate|auto-22|<tuple|3|37>>
-    <associate|auto-220|<tuple|17.4.1|276>>
-    <associate|auto-221|<tuple|17.4.2|277>>
-    <associate|auto-222|<tuple|17.4.3|278>>
-    <associate|auto-223|<tuple|17.4.4|279>>
-    <associate|auto-224|<tuple|17.4.5|280>>
-    <associate|auto-225|<tuple|17.4.6|281>>
-    <associate|auto-226|<tuple|17.4.7|282>>
-    <associate|auto-227|<tuple|17.5|283>>
-    <associate|auto-228|<tuple|17.5.1|284>>
-    <associate|auto-229|<tuple|17.5.2|285>>
-    <associate|auto-23|<tuple|3.1|37>>
-    <associate|auto-230|<tuple|17.5.3|285>>
-    <associate|auto-231|<tuple|17.5.4|287>>
-    <associate|auto-232|<tuple|17.5.5|288>>
-    <associate|auto-233|<tuple|17.6|289>>
-    <associate|auto-234|<tuple|17.7|290>>
-    <associate|auto-235|<tuple|17.7.1|290>>
-    <associate|auto-236|<tuple|17.7.2|292>>
-    <associate|auto-237|<tuple|17.7.3|296>>
-    <associate|auto-238|<tuple|17.8|297>>
-    <associate|auto-239|<tuple|17.9|298>>
-    <associate|auto-24|<tuple|3.2|38>>
-    <associate|auto-240|<tuple|18|301>>
-    <associate|auto-241|<tuple|18.1|301>>
-    <associate|auto-242|<tuple|18.2|303>>
-    <associate|auto-243|<tuple|18.3|305>>
-    <associate|auto-244|<tuple|18.4|306>>
-    <associate|auto-245|<tuple|18.5|308>>
-    <associate|auto-246|<tuple|19|309>>
-    <associate|auto-247|<tuple|19.1|309>>
-    <associate|auto-248|<tuple|19.2|309>>
-    <associate|auto-249|<tuple|19.3|311>>
-    <associate|auto-25|<tuple|3.3|39>>
-    <associate|auto-250|<tuple|19.3|313>>
-    <associate|auto-251|<tuple|1|314>>
-    <associate|auto-252|<tuple|1|315>>
-    <associate|auto-26|<tuple|3.4|40>>
-    <associate|auto-27|<tuple|3.5|41>>
-    <associate|auto-28|<tuple|3.6|43>>
-    <associate|auto-29|<tuple|3.7|44>>
+    <associate|auto-20|<tuple|2.6|35>>
+    <associate|auto-200|<tuple|15.6|261>>
+    <associate|auto-201|<tuple|15.7|262>>
+    <associate|auto-202|<tuple|16|263>>
+    <associate|auto-203|<tuple|16.1|263>>
+    <associate|auto-204|<tuple|16.2|265>>
+    <associate|auto-205|<tuple|16.3|266>>
+    <associate|auto-206|<tuple|16.4|267>>
+    <associate|auto-207|<tuple|16.5|268>>
+    <associate|auto-208|<tuple|16.6|270>>
+    <associate|auto-209|<tuple|17|273>>
+    <associate|auto-21|<tuple|3|37>>
+    <associate|auto-210|<tuple|17.1|273>>
+    <associate|auto-211|<tuple|17.2|274>>
+    <associate|auto-212|<tuple|17.2.1|275>>
+    <associate|auto-213|<tuple|17.3|277>>
+    <associate|auto-214|<tuple|17.4|278>>
+    <associate|auto-215|<tuple|17.4.1|278>>
+    <associate|auto-216|<tuple|17.4.2|279>>
+    <associate|auto-217|<tuple|17.4.3|280>>
+    <associate|auto-218|<tuple|17.4.4|281>>
+    <associate|auto-219|<tuple|17.4.5|282>>
+    <associate|auto-22|<tuple|3.1|37>>
+    <associate|auto-220|<tuple|17.4.6|283>>
+    <associate|auto-221|<tuple|17.4.7|284>>
+    <associate|auto-222|<tuple|17.5|285>>
+    <associate|auto-223|<tuple|17.5.1|286>>
+    <associate|auto-224|<tuple|17.5.2|287>>
+    <associate|auto-225|<tuple|17.5.3|287>>
+    <associate|auto-226|<tuple|17.5.4|289>>
+    <associate|auto-227|<tuple|17.5.5|290>>
+    <associate|auto-228|<tuple|17.6|291>>
+    <associate|auto-229|<tuple|17.7|292>>
+    <associate|auto-23|<tuple|3.2|38>>
+    <associate|auto-230|<tuple|17.7.1|292>>
+    <associate|auto-231|<tuple|17.7.2|294>>
+    <associate|auto-232|<tuple|17.7.3|298>>
+    <associate|auto-233|<tuple|17.8|299>>
+    <associate|auto-234|<tuple|17.9|300>>
+    <associate|auto-235|<tuple|18|303>>
+    <associate|auto-236|<tuple|18.1|303>>
+    <associate|auto-237|<tuple|18.2|305>>
+    <associate|auto-238|<tuple|18.3|307>>
+    <associate|auto-239|<tuple|18.4|308>>
+    <associate|auto-24|<tuple|3.3|39>>
+    <associate|auto-240|<tuple|18.5|310>>
+    <associate|auto-241|<tuple|19|311>>
+    <associate|auto-242|<tuple|19.1|311>>
+    <associate|auto-243|<tuple|19.2|311>>
+    <associate|auto-244|<tuple|19.3|313>>
+    <associate|auto-245|<tuple|19.3|315>>
+    <associate|auto-246|<tuple|1|316>>
+    <associate|auto-247|<tuple|1|317>>
+    <associate|auto-25|<tuple|3.4|40>>
+    <associate|auto-26|<tuple|3.5|41>>
+    <associate|auto-27|<tuple|3.6|43>>
+    <associate|auto-28|<tuple|3.7|44>>
+    <associate|auto-29|<tuple|3.8|45>>
     <associate|auto-3|<tuple|4|7>>
-    <associate|auto-30|<tuple|3.8|45>>
-    <associate|auto-31|<tuple|3.9|47>>
-    <associate|auto-32|<tuple|3.10|49>>
-    <associate|auto-33|<tuple|4|53>>
-    <associate|auto-34|<tuple|4.1|53>>
-    <associate|auto-35|<tuple|4.2|55>>
-    <associate|auto-36|<tuple|4.3|57>>
-    <associate|auto-37|<tuple|4.4|59>>
-    <associate|auto-38|<tuple|4.5|59>>
-    <associate|auto-39|<tuple|4.6|60>>
+    <associate|auto-30|<tuple|3.9|47>>
+    <associate|auto-31|<tuple|3.10|49>>
+    <associate|auto-32|<tuple|4|53>>
+    <associate|auto-33|<tuple|4.1|53>>
+    <associate|auto-34|<tuple|4.2|55>>
+    <associate|auto-35|<tuple|4.3|57>>
+    <associate|auto-36|<tuple|4.4|59>>
+    <associate|auto-37|<tuple|4.5|59>>
+    <associate|auto-38|<tuple|4.6|60>>
+    <associate|auto-39|<tuple|4.7|62>>
     <associate|auto-4|<tuple|4|9>>
-    <associate|auto-40|<tuple|4.7|62>>
-    <associate|auto-41|<tuple|5|63>>
-    <associate|auto-42|<tuple|5.1|63>>
-    <associate|auto-43|<tuple|5.2|64>>
-    <associate|auto-44|<tuple|5.3|65>>
-    <associate|auto-45|<tuple|5.4|66>>
-    <associate|auto-46|<tuple|5.5|67>>
-    <associate|auto-47|<tuple|5.6|69>>
-    <associate|auto-48|<tuple|5.6.1|71>>
-    <associate|auto-49|<tuple|5.7|72>>
+    <associate|auto-40|<tuple|5|63>>
+    <associate|auto-41|<tuple|5.1|63>>
+    <associate|auto-42|<tuple|5.2|64>>
+    <associate|auto-43|<tuple|5.3|65>>
+    <associate|auto-44|<tuple|5.4|66>>
+    <associate|auto-45|<tuple|5.5|67>>
+    <associate|auto-46|<tuple|5.6|69>>
+    <associate|auto-47|<tuple|5.6.1|71>>
+    <associate|auto-48|<tuple|5.7|72>>
+    <associate|auto-49|<tuple|5.8|75>>
     <associate|auto-5|<tuple|1|17>>
-    <associate|auto-50|<tuple|5.8|75>>
-    <associate|auto-51|<tuple|5.9|75>>
-    <associate|auto-52|<tuple|5.9.1|76>>
-    <associate|auto-53|<tuple|5.9.2|77>>
-    <associate|auto-54|<tuple|5.9.3|78>>
-    <associate|auto-55|<tuple|5.10|79>>
-    <associate|auto-56|<tuple|5.10.1|80>>
-    <associate|auto-57|<tuple|5.11|82>>
-    <associate|auto-58|<tuple|6|83>>
-    <associate|auto-59|<tuple|6.1|83>>
+    <associate|auto-50|<tuple|5.9|75>>
+    <associate|auto-51|<tuple|5.9.1|76>>
+    <associate|auto-52|<tuple|5.9.2|77>>
+    <associate|auto-53|<tuple|5.9.3|78>>
+    <associate|auto-54|<tuple|5.10|79>>
+    <associate|auto-55|<tuple|5.10.1|80>>
+    <associate|auto-56|<tuple|5.11|82>>
+    <associate|auto-57|<tuple|6|83>>
+    <associate|auto-58|<tuple|6.1|83>>
+    <associate|auto-59|<tuple|6.1.1|84>>
     <associate|auto-6|<tuple|1.1|17>>
-    <associate|auto-60|<tuple|6.1.1|84>>
-    <associate|auto-61|<tuple|6.1.2|86>>
-    <associate|auto-62|<tuple|6.2|89>>
-    <associate|auto-63|<tuple|6.2.1|89>>
-    <associate|auto-64|<tuple|6.2.2|90>>
-    <associate|auto-65|<tuple|6.2.3|91>>
-    <associate|auto-66|<tuple|6.2.4|92>>
-    <associate|auto-67|<tuple|6.3|93>>
-    <associate|auto-68|<tuple|6.3.1|94>>
-    <associate|auto-69|<tuple|6.4|95>>
+    <associate|auto-60|<tuple|6.1.2|86>>
+    <associate|auto-61|<tuple|6.2|89>>
+    <associate|auto-62|<tuple|6.2.1|90>>
+    <associate|auto-63|<tuple|6.2.2|90>>
+    <associate|auto-64|<tuple|6.2.3|91>>
+    <associate|auto-65|<tuple|6.2.4|92>>
+    <associate|auto-66|<tuple|6.3|93>>
+    <associate|auto-67|<tuple|6.3.1|94>>
+    <associate|auto-68|<tuple|6.4|95>>
+    <associate|auto-69|<tuple|6.4.1|96>>
     <associate|auto-7|<tuple|1.2|18>>
-    <associate|auto-70|<tuple|6.4.1|96>>
-    <associate|auto-71|<tuple|6.4.2|98>>
-    <associate|auto-72|<tuple|6.4.3|99>>
-    <associate|auto-73|<tuple|6.5|100>>
-    <associate|auto-74|<tuple|6.5.1|100>>
-    <associate|auto-75|<tuple|6.5.2|101>>
-    <associate|auto-76|<tuple|6.5.3|102>>
-    <associate|auto-77|<tuple|6.5.4|105>>
-    <associate|auto-78|<tuple|6.6|106>>
-    <associate|auto-79|<tuple|7|107>>
+    <associate|auto-70|<tuple|6.4.2|98>>
+    <associate|auto-71|<tuple|6.4.3|99>>
+    <associate|auto-72|<tuple|6.5|100>>
+    <associate|auto-73|<tuple|6.5.1|100>>
+    <associate|auto-74|<tuple|6.5.2|101>>
+    <associate|auto-75|<tuple|6.5.3|102>>
+    <associate|auto-76|<tuple|6.5.4|105>>
+    <associate|auto-77|<tuple|6.6|106>>
+    <associate|auto-78|<tuple|7|107>>
+    <associate|auto-79|<tuple|7.1|107>>
     <associate|auto-8|<tuple|1.3|19>>
-    <associate|auto-80|<tuple|7.1|107>>
-    <associate|auto-81|<tuple|7.2|108>>
-    <associate|auto-82|<tuple|7.3|109>>
-    <associate|auto-83|<tuple|7.4|110>>
-    <associate|auto-84|<tuple|7.5|111>>
-    <associate|auto-85|<tuple|7.6|113>>
-    <associate|auto-86|<tuple|7.6.1|114>>
-    <associate|auto-87|<tuple|7.6.2|115>>
-    <associate|auto-88|<tuple|7.6.3|119>>
-    <associate|auto-89|<tuple|7.7|119>>
+    <associate|auto-80|<tuple|7.2|108>>
+    <associate|auto-81|<tuple|7.3|109>>
+    <associate|auto-82|<tuple|7.4|110>>
+    <associate|auto-83|<tuple|7.5|111>>
+    <associate|auto-84|<tuple|7.6|113>>
+    <associate|auto-85|<tuple|7.6.1|114>>
+    <associate|auto-86|<tuple|7.6.2|115>>
+    <associate|auto-87|<tuple|7.6.3|119>>
+    <associate|auto-88|<tuple|7.7|119>>
+    <associate|auto-89|<tuple|7.7.1|119>>
     <associate|auto-9|<tuple|1.4|20>>
-    <associate|auto-90|<tuple|7.7.1|119>>
-    <associate|auto-91|<tuple|7.7.2|121>>
-    <associate|auto-92|<tuple|7.7.3|122>>
-    <associate|auto-93|<tuple|7.8|123>>
-    <associate|auto-94|<tuple|7.9|124>>
-    <associate|auto-95|<tuple|8|127>>
-    <associate|auto-96|<tuple|8.1|127>>
-    <associate|auto-97|<tuple|8.2|128>>
-    <associate|auto-98|<tuple|8.3|129>>
-    <associate|auto-99|<tuple|8.4|130>>
-    <associate|bib-Abbott1982|<tuple|Abb82|315>>
-    <associate|bib-Balaban1984Propagators|<tuple|Baª84|315>>
-    <associate|bib-Balaban1985Variational|<tuple|Baª85|315>>
-    <associate|bib-Balaban1987RG|<tuple|Baª87|315>>
-    <associate|bib-Balaban1988Expansions|<tuple|Baª88|315>>
-    <associate|bib-BalabanFeldmanKnoerrerTrubowitz2016|<tuple|BFKT16b|315>>
-    <associate|bib-BalabanFeldmanKnoerrerTrubowitzBloch2016|<tuple|BFKT16a|315>>
-    <associate|bib-Banach1922|<tuple|Ban22|315>>
-    <associate|bib-BarnichBrandtHenneaux2000|<tuple|BBH00|315>>
-    <associate|bib-BauerschmidtBrydgesSlade2015|<tuple|BBS15|315>>
-    <associate|bib-BrunettiFredenhagen2000|<tuple|BF00|315>>
-    <associate|bib-CollinsDuncanJoglekar1977|<tuple|CDJ77|315>>
-    <associate|bib-Foote1984|<tuple|Foo84|315>>
-    <associate|bib-FrobHolland2016|<tuple|FH16|315>>
-    <associate|bib-FrohlichIsraelLiebSimon1978|<tuple|FILS78|315>>
-    <associate|bib-GelfandNaimark1943|<tuple|GN43|315>>
-    <associate|bib-GrossWilczek1973|<tuple|GW73|315>>
-    <associate|bib-Hilbert1890|<tuple|Hil90|315>>
-    <associate|bib-Hobson1892|<tuple|Hob92|315>>
-    <associate|bib-Isserlis1918|<tuple|Iss18|315>>
-    <associate|bib-KoteckyPreiss1986|<tuple|KP86|315>>
-    <associate|bib-Landsman1998|<tuple|Lan98|315>>
-    <associate|bib-LeblSCV|<tuple|Leb|315>>
-    <associate|bib-LeonovShiryaev1959|<tuple|LS59|315>>
-    <associate|bib-LuscherWeisz1995|<tuple|LW95|316>>
-    <associate|bib-OsterwalderSchrader1973|<tuple|OS73|316>>
-    <associate|bib-OsterwalderSchrader1975|<tuple|OS75|316>>
-    <associate|bib-OsterwalderSeiler1978|<tuple|OS78|316>>
-    <associate|bib-Politzer1973|<tuple|Pol73|316>>
-    <associate|bib-Rudin1976|<tuple|Rud76|316>>
-    <associate|bib-Seiler1982|<tuple|Sei82|316>>
-    <associate|bib-StacksKoszul|<tuple|The|316>>
-    <associate|bib-Teschl2012|<tuple|Tes12|316>>
-    <associate|bib-TroppMatrixAnalysis2022|<tuple|Tro22|316>>
-    <associate|bib-Ueltschi2004|<tuple|Uel04|316>>
-    <associate|bib-Wick1950|<tuple|Wic50|316>>
-    <associate|bib-Wightman1956|<tuple|Wig56|316>>
-    <associate|bib-Wilson1969|<tuple|Wil69|316>>
-    <associate|bib-Wilson1974|<tuple|Wil74|316>>
-    <associate|bib-Wong2001|<tuple|Won01|316>>
+    <associate|auto-90|<tuple|7.7.2|121>>
+    <associate|auto-91|<tuple|7.7.3|122>>
+    <associate|auto-92|<tuple|7.8|123>>
+    <associate|auto-93|<tuple|7.9|124>>
+    <associate|auto-94|<tuple|8|127>>
+    <associate|auto-95|<tuple|8.1|127>>
+    <associate|auto-96|<tuple|8.2|128>>
+    <associate|auto-97|<tuple|8.3|129>>
+    <associate|auto-98|<tuple|8.4|130>>
+    <associate|auto-99|<tuple|8.5|130>>
+    <associate|bib-Abbott1982|<tuple|Abb82|317>>
+    <associate|bib-Balaban1984Propagators|<tuple|Baª84|317>>
+    <associate|bib-Balaban1985Variational|<tuple|Baª85|317>>
+    <associate|bib-Balaban1987RG|<tuple|Baª87|317>>
+    <associate|bib-Balaban1988Expansions|<tuple|Baª88|317>>
+    <associate|bib-BalabanFeldmanKnoerrerTrubowitz2016|<tuple|BFKT16b|317>>
+    <associate|bib-BalabanFeldmanKnoerrerTrubowitzBloch2016|<tuple|BFKT16a|317>>
+    <associate|bib-Banach1922|<tuple|Ban22|317>>
+    <associate|bib-BarnichBrandtHenneaux2000|<tuple|BBH00|317>>
+    <associate|bib-BauerschmidtBrydgesSlade2015|<tuple|BBS15|317>>
+    <associate|bib-BrunettiFredenhagen2000|<tuple|BF00|317>>
+    <associate|bib-CollinsDuncanJoglekar1977|<tuple|CDJ77|317>>
+    <associate|bib-Foote1984|<tuple|Foo84|317>>
+    <associate|bib-FrobHolland2016|<tuple|FH16|317>>
+    <associate|bib-FrohlichIsraelLiebSimon1978|<tuple|FILS78|317>>
+    <associate|bib-GelfandNaimark1943|<tuple|GN43|317>>
+    <associate|bib-GrossWilczek1973|<tuple|GW73|317>>
+    <associate|bib-Hilbert1890|<tuple|Hil90|317>>
+    <associate|bib-Hobson1892|<tuple|Hob92|317>>
+    <associate|bib-Isserlis1918|<tuple|Iss18|317>>
+    <associate|bib-KoteckyPreiss1986|<tuple|KP86|317>>
+    <associate|bib-Landsman1998|<tuple|Lan98|317>>
+    <associate|bib-LeblSCV|<tuple|Leb|317>>
+    <associate|bib-LeonovShiryaev1959|<tuple|LS59|317>>
+    <associate|bib-LuscherWeisz1995|<tuple|LW95|318>>
+    <associate|bib-OsterwalderSchrader1973|<tuple|OS73|318>>
+    <associate|bib-OsterwalderSchrader1975|<tuple|OS75|318>>
+    <associate|bib-OsterwalderSeiler1978|<tuple|OS78|318>>
+    <associate|bib-Politzer1973|<tuple|Pol73|318>>
+    <associate|bib-Rudin1976|<tuple|Rud76|318>>
+    <associate|bib-Seiler1982|<tuple|Sei82|318>>
+    <associate|bib-StacksKoszul|<tuple|The|318>>
+    <associate|bib-Teschl2012|<tuple|Tes12|318>>
+    <associate|bib-TroppMatrixAnalysis2022|<tuple|Tro22|318>>
+    <associate|bib-Ueltschi2004|<tuple|Uel04|318>>
+    <associate|bib-Wick1950|<tuple|Wic50|318>>
+    <associate|bib-Wightman1956|<tuple|Wig56|318>>
+    <associate|bib-Wilson1969|<tuple|Wil69|318>>
+    <associate|bib-Wilson1974|<tuple|Wil74|318>>
+    <associate|bib-Wong2001|<tuple|Won01|318>>
     <associate|ch01:casimir|<tuple|1.2|17>>
     <associate|ch01:chessboard|<tuple|1.16|21>>
     <associate|ch01:chessboard-root|<tuple|1.15|21>>
@@ -22530,7 +22565,7 @@
     <associate|ch01:wilson-section|<tuple|1.2|18>>
     <associate|ch02:avoiding-tests|<tuple|2.7|32>>
     <associate|ch02:bounds|<tuple|2.4|29>>
-    <associate|ch02:clover|<tuple|2.16|34>>
+    <associate|ch02:clover|<tuple|2.16|35>>
     <associate|ch02:curvature-square|<tuple|2.4|26>>
     <associate|ch02:direction|<tuple|2.11|30>>
     <associate|ch02:equation-adapted|<tuple|2.6|31>>
@@ -22543,7 +22578,7 @@
     <associate|ch02:labels|<tuple|2.2|26>>
     <associate|ch02:local-sections|<tuple|2.4|28>>
     <associate|ch02:microscopic-null|<tuple|2.14|31>>
-    <associate|ch02:normalization|<tuple|2.6|34>>
+    <associate|ch02:normalization|<tuple|2.6|35>>
     <associate|ch02:observables|<tuple|2|25>>
     <associate|ch02:radial-identity|<tuple|2.1|25>>
     <associate|ch02:radial-jets|<tuple|2.1|25>>
@@ -22695,16 +22730,16 @@
     <associate|ch06:base-scores|<tuple|6.21|95>>
     <associate|ch06:bounded-jet-route|<tuple|6.4.2|98>>
     <associate|ch06:clipped-source|<tuple|6.16|91>>
-    <associate|ch06:coarse-bound|<tuple|6.8|86>>
-    <associate|ch06:common-majorant|<tuple|6.6|100>>
+    <associate|ch06:coarse-bound|<tuple|6.8|87>>
+    <associate|ch06:common-majorant|<tuple|6.6|99>>
     <associate|ch06:component-extracted-energy|<tuple|6.30|104>>
     <associate|ch06:counts|<tuple|6.2|84>>
     <associate|ch06:density-ratio|<tuple|6.20|94>>
-    <associate|ch06:energy|<tuple|6.2|88>>
+    <associate|ch06:energy|<tuple|6.2|89>>
     <associate|ch06:fine-bound|<tuple|6.6|86>>
-    <associate|ch06:flat-identities|<tuple|6.3|84>>
+    <associate|ch06:flat-identities|<tuple|6.3|85>>
     <associate|ch06:gaussian-identity|<tuple|6.18|92>>
-    <associate|ch06:global-energy|<tuple|6.5|85>>
+    <associate|ch06:global-energy|<tuple|6.5|86>>
     <associate|ch06:joint-tails|<tuple|6.4|95>>
     <associate|ch06:large-fields|<tuple|6|83>>
     <associate|ch06:linear-comparison|<tuple|6.5.4|105>>
@@ -22723,11 +22758,11 @@
     <associate|ch06:signed-input|<tuple|6.1|87>>
     <associate|ch06:six-terms|<tuple|6.4|85>>
     <associate|ch06:tail-event|<tuple|6.22|95>>
-    <associate|ch06:tree-control|<tuple|6.13|89>>
+    <associate|ch06:tree-control|<tuple|6.13|90>>
     <associate|ch06:unaffected|<tuple|6.10|87>>
     <associate|ch06:window-error|<tuple|6.15|91>>
     <associate|ch06:windows|<tuple|6.3|91>>
-    <associate|ch06:windows-def|<tuple|6.14|90>>
+    <associate|ch06:windows-def|<tuple|6.14|91>>
     <associate|ch07:alpha|<tuple|7.5|109>>
     <associate|ch07:classical|<tuple|7.7|119>>
     <associate|ch07:classical-budget|<tuple|7.15|122>>
@@ -22781,372 +22816,372 @@
     <associate|ch08:log|<tuple|8.7|128>>
     <associate|ch08:overlap|<tuple|8.1|127>>
     <associate|ch08:parameters|<tuple|8.5|130>>
-    <associate|ch08:reassembly|<tuple|8.15|131>>
+    <associate|ch08:reassembly|<tuple|8.15|132>>
     <associate|ch08:reserve|<tuple|8.9|129>>
     <associate|ch08:root|<tuple|8.8|129>>
     <associate|ch08:site-norm|<tuple|8.4|128>>
     <associate|ch08:tail|<tuple|8.3|129>>
     <associate|ch08:ursell|<tuple|8.5|128>>
     <associate|ch08:weighted-tail|<tuple|8.10|129>>
-    <associate|ch09:aux-input|<tuple|9.3|137>>
-    <associate|ch09:before-fusion|<tuple|9.19|145>>
-    <associate|ch09:centered-log|<tuple|9.2.6|140>>
-    <associate|ch09:channel|<tuple|9.17|144>>
-    <associate|ch09:continuity|<tuple|9.7|146>>
-    <associate|ch09:degree-gain|<tuple|9.2|135>>
-    <associate|ch09:delta-bound|<tuple|9.16|144>>
-    <associate|ch09:drift|<tuple|9.23|147>>
-    <associate|ch09:early|<tuple|9.12|142>>
-    <associate|ch09:early-bounds|<tuple|9.13|142>>
-    <associate|ch09:even-gain|<tuple|9.5|138>>
-    <associate|ch09:exterior-bound|<tuple|9.8|140>>
-    <associate|ch09:fusion|<tuple|9.6|145>>
-    <associate|ch09:fusion-prop|<tuple|9.1|146>>
-    <associate|ch09:improvement|<tuple|9.2|135>>
-    <associate|ch09:integral|<tuple|9.1|133>>
-    <associate|ch09:joint-input|<tuple|9.1|134>>
-    <associate|ch09:localization|<tuple|9.11|141>>
-    <associate|ch09:path-identity|<tuple|9.18|145>>
-    <associate|ch09:path-reset|<tuple|9.5|144>>
-    <associate|ch09:preparatory|<tuple|9.3|142>>
-    <associate|ch09:pure-decomposition|<tuple|9.9|140>>
-    <associate|ch09:pure-small-bound|<tuple|9.10|141>>
-    <associate|ch09:renormalization|<tuple|9|133>>
-    <associate|ch09:reset|<tuple|9.22|146>>
-    <associate|ch09:reset-cost|<tuple|9.21|145>>
-    <associate|ch09:retained-identity|<tuple|9.6|139>>
-    <associate|ch09:stationary-cutoff-margin|<tuple|9.7|140>>
-    <associate|ch09:stationary-exterior|<tuple|9.2.5|138>>
-    <associate|ch09:stationary-remainder|<tuple|9.2.4|137>>
-    <associate|ch09:step|<tuple|9.9|149>>
-    <associate|ch09:step-theorem|<tuple|9.2|149>>
-    <associate|ch09:subtract-identity|<tuple|9.14|143>>
-    <associate|ch09:subtraction|<tuple|9.4|143>>
-    <associate|ch09:subtraction-bound|<tuple|9.15|144>>
-    <associate|ch09:truncated-integral|<tuple|9.4|138>>
-    <associate|ch09:wilson|<tuple|9.8|148>>
-    <associate|ch10:activity-truncation|<tuple|10.17|163>>
-    <associate|ch10:affine-contraction|<tuple|10.10|155>>
-    <associate|ch10:broad-test|<tuple|10.16|159>>
-    <associate|ch10:choices|<tuple|10.1|151>>
-    <associate|ch10:comparison-input|<tuple|10.6|156>>
-    <associate|ch10:convergence|<tuple|10.3|163>>
-    <associate|ch10:cutoff-supplier|<tuple|10.6.4|161>>
-    <associate|ch10:drift-floor|<tuple|10.2|151>>
-    <associate|ch10:equation-floor|<tuple|10.3|152>>
-    <associate|ch10:finite-history|<tuple|10.1|154>>
-    <associate|ch10:finite-tests|<tuple|10.14|157>>
-    <associate|ch10:fixed-scale|<tuple|10.7|162>>
-    <associate|ch10:identification|<tuple|10.8|164>>
-    <associate|ch10:inverse-coordinate|<tuple|10.12|156>>
-    <associate|ch10:late-entry|<tuple|10.6|153>>
-    <associate|ch10:lipschitz|<tuple|10.13|157>>
-    <associate|ch10:parameter-supplier|<tuple|10.6.2|158>>
-    <associate|ch10:path-stability|<tuple|10.5|155>>
-    <associate|ch10:path-truncation|<tuple|10.11|156>>
-    <associate|ch10:periods|<tuple|10.7|153>>
-    <associate|ch10:prefix|<tuple|10.18|163>>
-    <associate|ch10:real-node-bound|<tuple|10.15|159>>
-    <associate|ch10:reference|<tuple|10.5|153>>
-    <associate|ch10:running|<tuple|10.4|154>>
-    <associate|ch10:running-error|<tuple|10.8|154>>
-    <associate|ch10:running-limit|<tuple|10.9|155>>
-    <associate|ch10:scales|<tuple|10.4|153>>
-    <associate|ch10:schedule|<tuple|10.2|152>>
-    <associate|ch10:shooting|<tuple|10.3|154>>
-    <associate|ch10:stability-assumption|<tuple|10.2|157>>
-    <associate|ch10:step-drift|<tuple|10.1|151>>
-    <associate|ch10:trajectory|<tuple|10|151>>
-    <associate|ch11:absorption|<tuple|11.5|185>>
-    <associate|ch11:actual-equation-subspace|<tuple|11.24|188>>
-    <associate|ch11:actual-reader|<tuple|11.5.2|175>>
-    <associate|ch11:all-period-differences|<tuple|11.13|205>>
-    <associate|ch11:calibration-floor|<tuple|11.21|186>>
-    <associate|ch11:common-extraction|<tuple|11.12.1|189>>
-    <associate|ch11:conditional-curvature|<tuple|11.12|174>>
-    <associate|ch11:corrected-pair-comparison|<tuple|11.12.4|199>>
-    <associate|ch11:cover-transfer|<tuple|11.5|168>>
-    <associate|ch11:cumulants|<tuple|11.1|165>>
-    <associate|ch11:descent-error|<tuple|11.18|184>>
-    <associate|ch11:detector-bound|<tuple|11.20|184>>
-    <associate|ch11:detectors|<tuple|11.9|184>>
-    <associate|ch11:dispersal|<tuple|11.27|193>>
-    <associate|ch11:equation-calibration|<tuple|11.11|186>>
-    <associate|ch11:equation-comparison|<tuple|11.6|187>>
-    <associate|ch11:equation-root-error|<tuple|11.23|187>>
-    <associate|ch11:finite-arity-comparison|<tuple|11.12.5|201>>
-    <associate|ch11:finite-covariance|<tuple|11.30|197>>
-    <associate|ch11:finite-detector-input|<tuple|11.11|203>>
-    <associate|ch11:graph-difference|<tuple|11.9|171>>
-    <associate|ch11:graph-estimates|<tuple|11.8|170>>
-    <associate|ch11:higher-induction|<tuple|11.11|172>>
-    <associate|ch11:higher-modes|<tuple|11.4.2|172>>
-    <associate|ch11:insertions|<tuple|11|165>>
-    <associate|ch11:integrated-component|<tuple|11.6|169>>
-    <associate|ch11:joint-gaussian|<tuple|11.2|173>>
-    <associate|ch11:local-source|<tuple|11.3|166>>
-    <associate|ch11:lower-weighted-step|<tuple|11.28|195>>
-    <associate|ch11:marked-incidence|<tuple|11.7|169>>
-    <associate|ch11:marked-step|<tuple|11.4|168>>
-    <associate|ch11:mass|<tuple|11.1|166>>
-    <associate|ch11:n-mark-comparison|<tuple|11.10|201>>
-    <associate|ch11:n-mark-root|<tuple|11.32|202>>
-    <associate|ch11:one-graph|<tuple|11.4.1|170>>
-    <associate|ch11:opening-higher-weight|<tuple|11.31|200>>
-    <associate|ch11:positional|<tuple|11.7.1|182>>
-    <associate|ch11:raw-polynomial-error|<tuple|11.25|190>>
-    <associate|ch11:replicated|<tuple|11.7|182>>
-    <associate|ch11:replicated-bound|<tuple|11.16|182>>
-    <associate|ch11:restart-construction|<tuple|11.6.1|176>>
-    <associate|ch11:restart-density|<tuple|11.15|179>>
-    <associate|ch11:restart-endpoint|<tuple|11.3|177>>
-    <associate|ch11:restart-endpoint-error|<tuple|11.13|178>>
-    <associate|ch11:restart-endpoint-identity|<tuple|11.14|178>>
-    <associate|ch11:restart-family|<tuple|11.4|179>>
-    <associate|ch11:restore-forced|<tuple|11.9|194>>
-    <associate|ch11:restore-regular|<tuple|11.8|193>>
-    <associate|ch11:root-bound|<tuple|11.17|182>>
-    <associate|ch11:scaled-equation-labels|<tuple|11.22|187>>
-    <associate|ch11:separated-cover|<tuple|11.10|172>>
-    <associate|ch11:simultaneous-detector-lifts|<tuple|11.26|192>>
-    <associate|ch11:source-density|<tuple|11.2|166>>
-    <associate|ch11:spare-support|<tuple|11.4|168>>
-    <associate|ch11:tree-covariance|<tuple|11.5.1|174>>
-    <associate|ch11:trial-descent|<tuple|11.8|183>>
-    <associate|ch11:trial-error|<tuple|11.19|184>>
-    <associate|ch11:uniform-detector|<tuple|11.12|204>>
-    <associate|ch11:uniform-differences|<tuple|11.12|189>>
-    <associate|ch11:uniform-sweep|<tuple|11.7|189>>
-    <associate|ch11:weight-restoration|<tuple|11.12.2|192>>
-    <associate|ch11:weighted-output-envelope|<tuple|11.29|195>>
-    <associate|ch11:window-covariance|<tuple|11.12.3|197>>
-    <associate|ch12:conclusion|<tuple|12.6|212>>
-    <associate|ch12:contraction|<tuple|12.1|208>>
-    <associate|ch12:dense-cauchy|<tuple|12.4|211>>
-    <associate|ch12:forgetting|<tuple|12.2|209>>
-    <associate|ch12:graphs|<tuple|12.2|208>>
-    <associate|ch12:inputs|<tuple|12.1|207>>
-    <associate|ch12:normalization|<tuple|12.3|209>>
-    <associate|ch12:omission|<tuple|12.3|211>>
-    <associate|ch12:positive-partition|<tuple|12.1|209>>
-    <associate|ch12:root-bound|<tuple|12.3|210>>
-    <associate|ch12:smooth|<tuple|12.5|211>>
-    <associate|ch12:stopped|<tuple|12.2|210>>
-    <associate|ch12:stopping|<tuple|12.4|210>>
-    <associate|ch12:ultraviolet|<tuple|12|207>>
-    <associate|ch12:uv-theorem|<tuple|12.5|212>>
-    <associate|ch13:bounded-approximations|<tuple|13.8|223>>
-    <associate|ch13:bounded-singleton|<tuple|13.5|226>>
-    <associate|ch13:bounded-word|<tuple|13.6|228>>
-    <associate|ch13:calculus|<tuple|13.4|218>>
-    <associate|ch13:cells|<tuple|13.2|216>>
-    <associate|ch13:chess|<tuple|13.3|216>>
-    <associate|ch13:coarse-matrix|<tuple|13.16|223>>
-    <associate|ch13:coarse-residual|<tuple|13.17|223>>
-    <associate|ch13:coarse-residual-supplier|<tuple|13.4|224>>
-    <associate|ch13:cone-factorization|<tuple|13.20|227>>
-    <associate|ch13:continuum|<tuple|13|215>>
-    <associate|ch13:derivative-response|<tuple|13.8|218>>
-    <associate|ch13:extraction|<tuple|13.1|215>>
-    <associate|ch13:first-below|<tuple|13.14|223>>
-    <associate|ch13:inclusion-response|<tuple|13.7|218>>
-    <associate|ch13:normalized-null|<tuple|13.6|218>>
-    <associate|ch13:null|<tuple|13.5|216>>
-    <associate|ch13:ordered-limit|<tuple|13.2|215>>
-    <associate|ch13:positivity|<tuple|13.5|219>>
-    <associate|ch13:power|<tuple|13.10|219>>
-    <associate|ch13:quotient|<tuple|13.3|216>>
-    <associate|ch13:rank|<tuple|13.1|217>>
-    <associate|ch13:repeated|<tuple|13.6|220>>
-    <associate|ch13:residual-height|<tuple|13.18|224>>
-    <associate|ch13:residual-height-bound|<tuple|13.19|225>>
-    <associate|ch13:scale-thickness|<tuple|13.9|219>>
-    <associate|ch13:sharp-centered|<tuple|13.3|222>>
-    <associate|ch13:sharp-phase|<tuple|15.11|260>>
-    <associate|ch13:sharp-root|<tuple|13.12|222>>
-    <associate|ch13:sharp-schedule|<tuple|13.11|221>>
-    <associate|ch13:sharp-section|<tuple|13.7|221>>
-    <associate|ch13:sharp-separated|<tuple|13.15|223>>
-    <associate|ch13:vanishing-error|<tuple|13.4|216>>
-    <associate|ch13:volume-limit|<tuple|13.1|215>>
-    <associate|ch13:weight-size|<tuple|13.13|222>>
-    <associate|ch13:word-bound|<tuple|13.2|220>>
-    <associate|ch14:annular-input|<tuple|14.14|243>>
-    <associate|ch14:averaged-stress|<tuple|14.27|252>>
-    <associate|ch14:balanced-stress|<tuple|14.12|242>>
-    <associate|ch14:charge-commute|<tuple|14.15|243>>
-    <associate|ch14:charge-limits|<tuple|14.24|250>>
-    <associate|ch14:charges|<tuple|14.4|243>>
-    <associate|ch14:collinear|<tuple|14.6.3|248>>
-    <associate|ch14:comparison|<tuple|14.3|239>>
-    <associate|ch14:comparison-exponents|<tuple|14.8|239>>
-    <associate|ch14:conserved-line|<tuple|14.11|242>>
-    <associate|ch14:coordinate-spectrum|<tuple|14.3|238>>
-    <associate|ch14:derivative-commutator|<tuple|14.25|250>>
-    <associate|ch14:diagonal-mass|<tuple|14.22|248>>
-    <associate|ch14:flux|<tuple|14.13|242>>
-    <associate|ch14:formal-adjoint|<tuple|14.4|238>>
-    <associate|ch14:global-ward|<tuple|14.26|251>>
-    <associate|ch14:grid-cost|<tuple|14.7|239>>
-    <associate|ch14:grid-input|<tuple|14.6|239>>
-    <associate|ch14:heat|<tuple|14.2|237>>
-    <associate|ch14:heat-pairing|<tuple|14.1|237>>
-    <associate|ch14:lattice-comparison|<tuple|14.3.1|239>>
-    <associate|ch14:line-ward|<tuple|14.23|249>>
-    <associate|ch14:mixed-sign|<tuple|14.20|245>>
-    <associate|ch14:normalized-stress|<tuple|14.6|252>>
-    <associate|ch14:polynomial-moments|<tuple|14.17|244>>
-    <associate|ch14:positive-residual|<tuple|14.18|245>>
-    <associate|ch14:propagation|<tuple|14.7|249>>
-    <associate|ch14:reflection|<tuple|14.1|237>>
-    <associate|ch14:rotations|<tuple|14.5|252>>
-    <associate|ch14:rotations-section|<tuple|14.8|251>>
-    <associate|ch14:shells|<tuple|14.5|242>>
-    <associate|ch14:sign-induction|<tuple|14.21|246>>
-    <associate|ch14:sign-transfer|<tuple|14.19|245>>
-    <associate|ch14:slab-bound|<tuple|14.1|238>>
-    <associate|ch14:slab-laws|<tuple|14.5|238>>
-    <associate|ch14:slab-smooth|<tuple|14.2|239>>
-    <associate|ch14:slabs|<tuple|14.2|238>>
-    <associate|ch14:smooth-comparison|<tuple|14.3|241>>
-    <associate|ch14:spectral|<tuple|14.6|244>>
-    <associate|ch14:spectral-CS|<tuple|14.16|244>>
-    <associate|ch14:stress-line|<tuple|14.4|242>>
-    <associate|ch14:subset-root|<tuple|14.9|240>>
-    <associate|ch14:uniform-tests|<tuple|14.10|241>>
-    <associate|ch14:ward|<tuple|14|237>>
-    <associate|ch15:ae-ground|<tuple|15.10|259>>
-    <associate|ch15:algebra|<tuple|15.1|256>>
-    <associate|ch15:characters|<tuple|15.3|257>>
-    <associate|ch15:cluster|<tuple|15.3|256>>
-    <associate|ch15:compression|<tuple|15.2|255>>
-    <associate|ch15:compression-defect|<tuple|15.4|256>>
-    <associate|ch15:detector-moments|<tuple|15.8|258>>
-    <associate|ch15:fields|<tuple|15.5|258>>
-    <associate|ch15:ground|<tuple|15.1|255>>
-    <associate|ch15:mixture|<tuple|15.5|257>>
-    <associate|ch15:moment-norm|<tuple|15.6|257>>
-    <associate|ch15:phase-invariant|<tuple|15.7|258>>
-    <associate|ch15:phase-symmetry|<tuple|15.4|257>>
-    <associate|ch15:phases|<tuple|15|255>>
-    <associate|ch15:same-fields|<tuple|15.9|259>>
-    <associate|ch15:selection|<tuple|15.6|259>>
-    <associate|ch15:sharp-phase-section|<tuple|15.7|260>>
-    <associate|ch15:spatial-ground|<tuple|15.1|255>>
-    <associate|ch15:whole-gram|<tuple|15.2|256>>
-    <associate|ch16:boundary|<tuple|16.1|262>>
-    <associate|ch16:boundary-section|<tuple|16.1|261>>
-    <associate|ch16:charge-law|<tuple|16.13|269>>
-    <associate|ch16:charges-section|<tuple|16.6|268>>
-    <associate|ch16:cone-support|<tuple|16.6|263>>
-    <associate|ch16:covariance-section|<tuple|16.2|263>>
-    <associate|ch16:fields|<tuple|16.3|266>>
-    <associate|ch16:fields-section|<tuple|16.4|265>>
-    <associate|ch16:full-tube|<tuple|16.7|264>>
-    <associate|ch16:gap-bound|<tuple|16.3|262>>
-    <associate|ch16:heat-decay|<tuple|16.11|267>>
-    <associate|ch16:heat-function|<tuple|16.2|262>>
-    <associate|ch16:irreducible|<tuple|16.5|268>>
-    <associate|ch16:laplace|<tuple|16.5|263>>
-    <associate|ch16:local-commutator|<tuple|16.9|267>>
-    <associate|ch16:locality|<tuple|16.2|264>>
-    <associate|ch16:locality-section|<tuple|16.3|264>>
-    <associate|ch16:low-energy|<tuple|16.10|267>>
-    <associate|ch16:partial-boundary|<tuple|16.8|264>>
-    <associate|ch16:reconstruction|<tuple|16|261>>
-    <associate|ch16:slabs|<tuple|16.1|261>>
-    <associate|ch16:taylor-boundary|<tuple|16.4|262>>
-    <associate|ch16:vacuum|<tuple|16.4|267>>
-    <associate|ch16:vacuum-section|<tuple|16.5|266>>
-    <associate|ch16:weak-commutant|<tuple|16.12|268>>
-    <associate|ch17:actual-current-map|<tuple|17.19|287>>
-    <associate|ch17:all-radii|<tuple|17.5|298>>
-    <associate|ch17:block-algebra|<tuple|17.7|277>>
-    <associate|ch17:block-identities|<tuple|17.1|277>>
-    <associate|ch17:coefficient|<tuple|17.4|297>>
-    <associate|ch17:contact|<tuple|17.11|280>>
-    <associate|ch17:contact-Z|<tuple|17.10|279>>
-    <associate|ch17:contact-identity|<tuple|17.2|280>>
-    <associate|ch17:contact-section|<tuple|17.4.4|279>>
-    <associate|ch17:corrected-regulated-ward|<tuple|17.13|283>>
-    <associate|ch17:current|<tuple|17.3|275>>
-    <associate|ch17:current-alias|<tuple|17.15|284>>
-    <associate|ch17:current-suppliers|<tuple|17.4|276>>
-    <associate|ch17:defect-four|<tuple|17.14|284>>
-    <associate|ch17:exclusion|<tuple|17.9|298>>
-    <associate|ch17:finite-haar|<tuple|17.9|278>>
-    <associate|ch17:finite-sigma|<tuple|17.25|292>>
-    <associate|ch17:flat-current-map|<tuple|17.20|287>>
-    <associate|ch17:gradient-cancellation|<tuple|17.12|281>>
-    <associate|ch17:kernel-divergence|<tuple|17.24|291>>
-    <associate|ch17:kernel-score|<tuple|17.23|290>>
-    <associate|ch17:laplace|<tuple|17.2|271>>
-    <associate|ch17:limit|<tuple|17.8|297>>
-    <associate|ch17:marked-rates|<tuple|17.7|290>>
-    <associate|ch17:polynomial-response|<tuple|17.26|294>>
-    <associate|ch17:quadratic-current|<tuple|17.5|283>>
-    <associate|ch17:quadratic-current-contraction|<tuple|17.16|285>>
-    <associate|ch17:radii|<tuple|17.2|272>>
-    <associate|ch17:regulator-completion|<tuple|17.4.7|282>>
-    <associate|ch17:regulator-input|<tuple|17.6|276>>
-    <associate|ch17:rho|<tuple|17.5|275>>
-    <associate|ch17:running-radius|<tuple|17.3|272>>
-    <associate|ch17:scalar-log-supplier|<tuple|17.8|278>>
-    <associate|ch17:sigma-bound|<tuple|17.28|296>>
-    <associate|ch17:sigma-error|<tuple|17.27|295>>
-    <associate|ch17:spatial-moments|<tuple|17.3|293>>
-    <associate|ch17:spectral-pairing|<tuple|17.1|271>>
-    <associate|ch17:spectrum|<tuple|17.1|271>>
-    <associate|ch17:stability|<tuple|17.6|289>>
-    <associate|ch17:stable-functional|<tuple|17.21|289>>
-    <associate|ch17:stationary-higher-jets|<tuple|17.17|286>>
-    <associate|ch17:trace|<tuple|17|271>>
-    <associate|ch17:trace-law|<tuple|17.29|298>>
-    <associate|ch17:transfer|<tuple|17.22|290>>
-    <associate|ch17:unnormalized-defect|<tuple|17.18|286>>
-    <associate|ch17:variable-windows|<tuple|17.2.1|273>>
-    <associate|ch17:window-product|<tuple|17.4|273>>
-    <associate|ch18:coefficients|<tuple|18.3|302>>
-    <associate|ch18:dual|<tuple|18.1|301>>
-    <associate|ch18:extension|<tuple|18.4|306>>
-    <associate|ch18:extension-formula|<tuple|18.10|307>>
-    <associate|ch18:extension-theorem|<tuple|18.3|307>>
-    <associate|ch18:graded|<tuple|18.2|302>>
-    <associate|ch18:graded-distance|<tuple|13.22|229>>
-    <associate|ch18:graded-estimate|<tuple|13.7|229>>
-    <associate|ch18:graded-quotient-section|<tuple|13.9|228>>
-    <associate|ch18:graded-room|<tuple|13.21|229>>
-    <associate|ch18:group-weight|<tuple|13.26|232>>
-    <associate|ch18:high-step|<tuple|13.24|229>>
-    <associate|ch18:input|<tuple|18.2|303>>
-    <associate|ch18:lattice-estimate|<tuple|13.28|233>>
-    <associate|ch18:lattice-products|<tuple|13.10|230>>
-    <associate|ch18:lattice-replacement|<tuple|13.8|233>>
-    <associate|ch18:low-cone|<tuple|13.23|229>>
-    <associate|ch18:mixed-bound|<tuple|13.9|234>>
-    <associate|ch18:mixed-product-rate|<tuple|13.29|234>>
-    <associate|ch18:mixed-replacement|<tuple|13.10.4|234>>
-    <associate|ch18:normal-Taylor|<tuple|18.8|307>>
-    <associate|ch18:ope|<tuple|18.3|305>>
-    <associate|ch18:ope-bound|<tuple|18.5|305>>
-    <associate|ch18:ope-theorem|<tuple|18.2|305>>
-    <associate|ch18:pair-weights|<tuple|18.7|306>>
-    <associate|ch18:polynomial|<tuple|18.6|306>>
-    <associate|ch18:prescription|<tuple|18.1|301>>
-    <associate|ch18:products|<tuple|18|301>>
-    <associate|ch18:raw-replacement|<tuple|18.4|304>>
-    <associate|ch18:replacement-input|<tuple|18.1|303>>
-    <associate|ch18:replacement-moments|<tuple|18.4|303>>
-    <associate|ch18:residual-weights|<tuple|13.27|233>>
-    <associate|ch18:scope|<tuple|18.5|308>>
-    <associate|ch18:signed-transport|<tuple|13.25|231>>
-    <associate|ch18:subtraction|<tuple|18.9|307>>
-    <associate|ch19:assembly|<tuple|19|309>>
-    <associate|ch19:conditional|<tuple|19.1|310>>
-    <associate|ch19:conditional-trace|<tuple|19.2|310>>
-    <associate|ch19:family|<tuple|19.1|309>>
-    <associate|ch19:scope|<tuple|19.3|311>>
-    <associate|ch19:theorem-section|<tuple|19.2|309>>
+    <associate|ch09:aux-input|<tuple|9.3|139>>
+    <associate|ch09:before-fusion|<tuple|9.19|147>>
+    <associate|ch09:centered-log|<tuple|9.2.6|142>>
+    <associate|ch09:channel|<tuple|9.17|146>>
+    <associate|ch09:continuity|<tuple|9.7|148>>
+    <associate|ch09:degree-gain|<tuple|9.2|137>>
+    <associate|ch09:delta-bound|<tuple|9.16|146>>
+    <associate|ch09:drift|<tuple|9.23|149>>
+    <associate|ch09:early|<tuple|9.12|144>>
+    <associate|ch09:early-bounds|<tuple|9.13|144>>
+    <associate|ch09:even-gain|<tuple|9.5|140>>
+    <associate|ch09:exterior-bound|<tuple|9.8|142>>
+    <associate|ch09:fusion|<tuple|9.6|147>>
+    <associate|ch09:fusion-prop|<tuple|9.1|148>>
+    <associate|ch09:improvement|<tuple|9.2|137>>
+    <associate|ch09:integral|<tuple|9.1|135>>
+    <associate|ch09:joint-input|<tuple|9.1|136>>
+    <associate|ch09:localization|<tuple|9.11|143>>
+    <associate|ch09:path-identity|<tuple|9.18|147>>
+    <associate|ch09:path-reset|<tuple|9.5|146>>
+    <associate|ch09:preparatory|<tuple|9.3|144>>
+    <associate|ch09:pure-decomposition|<tuple|9.9|142>>
+    <associate|ch09:pure-small-bound|<tuple|9.10|143>>
+    <associate|ch09:renormalization|<tuple|9|135>>
+    <associate|ch09:reset|<tuple|9.22|148>>
+    <associate|ch09:reset-cost|<tuple|9.21|147>>
+    <associate|ch09:retained-identity|<tuple|9.6|141>>
+    <associate|ch09:stationary-cutoff-margin|<tuple|9.7|142>>
+    <associate|ch09:stationary-exterior|<tuple|9.2.5|140>>
+    <associate|ch09:stationary-remainder|<tuple|9.2.4|139>>
+    <associate|ch09:step|<tuple|9.9|151>>
+    <associate|ch09:step-theorem|<tuple|9.2|151>>
+    <associate|ch09:subtract-identity|<tuple|9.14|145>>
+    <associate|ch09:subtraction|<tuple|9.4|145>>
+    <associate|ch09:subtraction-bound|<tuple|9.15|146>>
+    <associate|ch09:truncated-integral|<tuple|9.4|140>>
+    <associate|ch09:wilson|<tuple|9.8|150>>
+    <associate|ch10:activity-truncation|<tuple|10.17|165>>
+    <associate|ch10:affine-contraction|<tuple|10.10|157>>
+    <associate|ch10:broad-test|<tuple|10.16|161>>
+    <associate|ch10:choices|<tuple|10.1|153>>
+    <associate|ch10:comparison-input|<tuple|10.6|158>>
+    <associate|ch10:convergence|<tuple|10.3|165>>
+    <associate|ch10:cutoff-supplier|<tuple|4|163>>
+    <associate|ch10:drift-floor|<tuple|10.2|153>>
+    <associate|ch10:equation-floor|<tuple|10.3|154>>
+    <associate|ch10:finite-history|<tuple|10.1|156>>
+    <associate|ch10:finite-tests|<tuple|10.14|159>>
+    <associate|ch10:fixed-scale|<tuple|10.7|165>>
+    <associate|ch10:identification|<tuple|10.8|166>>
+    <associate|ch10:inverse-coordinate|<tuple|10.12|158>>
+    <associate|ch10:late-entry|<tuple|10.6|155>>
+    <associate|ch10:lipschitz|<tuple|10.13|159>>
+    <associate|ch10:parameter-supplier|<tuple|2|160>>
+    <associate|ch10:path-stability|<tuple|10.5|157>>
+    <associate|ch10:path-truncation|<tuple|10.11|158>>
+    <associate|ch10:periods|<tuple|10.7|155>>
+    <associate|ch10:prefix|<tuple|10.18|165>>
+    <associate|ch10:real-node-bound|<tuple|10.15|161>>
+    <associate|ch10:reference|<tuple|10.5|155>>
+    <associate|ch10:running|<tuple|10.4|156>>
+    <associate|ch10:running-error|<tuple|10.8|156>>
+    <associate|ch10:running-limit|<tuple|10.9|157>>
+    <associate|ch10:scales|<tuple|10.4|155>>
+    <associate|ch10:schedule|<tuple|10.2|154>>
+    <associate|ch10:shooting|<tuple|10.3|156>>
+    <associate|ch10:stability-assumption|<tuple|10.2|159>>
+    <associate|ch10:step-drift|<tuple|10.1|153>>
+    <associate|ch10:trajectory|<tuple|10|153>>
+    <associate|ch11:absorption|<tuple|11.5|187>>
+    <associate|ch11:actual-equation-subspace|<tuple|11.24|190>>
+    <associate|ch11:actual-reader|<tuple|11.5.2|177>>
+    <associate|ch11:all-period-differences|<tuple|11.13|207>>
+    <associate|ch11:calibration-floor|<tuple|11.21|188>>
+    <associate|ch11:common-extraction|<tuple|11.12.1|191>>
+    <associate|ch11:conditional-curvature|<tuple|11.12|176>>
+    <associate|ch11:corrected-pair-comparison|<tuple|11.12.4|201>>
+    <associate|ch11:cover-transfer|<tuple|11.5|170>>
+    <associate|ch11:cumulants|<tuple|11.1|167>>
+    <associate|ch11:descent-error|<tuple|11.18|186>>
+    <associate|ch11:detector-bound|<tuple|11.20|186>>
+    <associate|ch11:detectors|<tuple|11.9|186>>
+    <associate|ch11:dispersal|<tuple|11.27|195>>
+    <associate|ch11:equation-calibration|<tuple|11.11|188>>
+    <associate|ch11:equation-comparison|<tuple|11.6|189>>
+    <associate|ch11:equation-root-error|<tuple|11.23|189>>
+    <associate|ch11:finite-arity-comparison|<tuple|11.12.5|203>>
+    <associate|ch11:finite-covariance|<tuple|11.30|199>>
+    <associate|ch11:finite-detector-input|<tuple|11.11|205>>
+    <associate|ch11:graph-difference|<tuple|11.9|173>>
+    <associate|ch11:graph-estimates|<tuple|11.8|172>>
+    <associate|ch11:higher-induction|<tuple|11.11|174>>
+    <associate|ch11:higher-modes|<tuple|11.4.2|174>>
+    <associate|ch11:insertions|<tuple|11|167>>
+    <associate|ch11:integrated-component|<tuple|11.6|171>>
+    <associate|ch11:joint-gaussian|<tuple|11.2|175>>
+    <associate|ch11:local-source|<tuple|11.3|168>>
+    <associate|ch11:lower-weighted-step|<tuple|11.28|197>>
+    <associate|ch11:marked-incidence|<tuple|11.7|171>>
+    <associate|ch11:marked-step|<tuple|11.4|170>>
+    <associate|ch11:mass|<tuple|11.1|168>>
+    <associate|ch11:n-mark-comparison|<tuple|11.10|203>>
+    <associate|ch11:n-mark-root|<tuple|11.32|204>>
+    <associate|ch11:one-graph|<tuple|11.4.1|172>>
+    <associate|ch11:opening-higher-weight|<tuple|11.31|202>>
+    <associate|ch11:positional|<tuple|11.7.1|184>>
+    <associate|ch11:raw-polynomial-error|<tuple|11.25|192>>
+    <associate|ch11:replicated|<tuple|11.7|184>>
+    <associate|ch11:replicated-bound|<tuple|11.16|184>>
+    <associate|ch11:restart-construction|<tuple|11.6.1|178>>
+    <associate|ch11:restart-density|<tuple|11.15|181>>
+    <associate|ch11:restart-endpoint|<tuple|11.3|179>>
+    <associate|ch11:restart-endpoint-error|<tuple|11.13|180>>
+    <associate|ch11:restart-endpoint-identity|<tuple|11.14|180>>
+    <associate|ch11:restart-family|<tuple|11.4|181>>
+    <associate|ch11:restore-forced|<tuple|11.9|196>>
+    <associate|ch11:restore-regular|<tuple|11.8|195>>
+    <associate|ch11:root-bound|<tuple|11.17|184>>
+    <associate|ch11:scaled-equation-labels|<tuple|11.22|189>>
+    <associate|ch11:separated-cover|<tuple|11.10|174>>
+    <associate|ch11:simultaneous-detector-lifts|<tuple|11.26|194>>
+    <associate|ch11:source-density|<tuple|11.2|168>>
+    <associate|ch11:spare-support|<tuple|11.4|170>>
+    <associate|ch11:tree-covariance|<tuple|11.5.1|176>>
+    <associate|ch11:trial-descent|<tuple|11.8|185>>
+    <associate|ch11:trial-error|<tuple|11.19|186>>
+    <associate|ch11:uniform-detector|<tuple|11.12|206>>
+    <associate|ch11:uniform-differences|<tuple|11.12|191>>
+    <associate|ch11:uniform-sweep|<tuple|11.7|191>>
+    <associate|ch11:weight-restoration|<tuple|11.12.2|194>>
+    <associate|ch11:weighted-output-envelope|<tuple|11.29|197>>
+    <associate|ch11:window-covariance|<tuple|11.12.3|199>>
+    <associate|ch12:conclusion|<tuple|12.6|214>>
+    <associate|ch12:contraction|<tuple|12.1|210>>
+    <associate|ch12:dense-cauchy|<tuple|12.4|213>>
+    <associate|ch12:forgetting|<tuple|12.2|211>>
+    <associate|ch12:graphs|<tuple|12.2|210>>
+    <associate|ch12:inputs|<tuple|12.1|209>>
+    <associate|ch12:normalization|<tuple|12.3|211>>
+    <associate|ch12:omission|<tuple|12.3|213>>
+    <associate|ch12:positive-partition|<tuple|12.1|211>>
+    <associate|ch12:root-bound|<tuple|12.3|212>>
+    <associate|ch12:smooth|<tuple|12.5|213>>
+    <associate|ch12:stopped|<tuple|12.2|212>>
+    <associate|ch12:stopping|<tuple|12.4|212>>
+    <associate|ch12:ultraviolet|<tuple|12|209>>
+    <associate|ch12:uv-theorem|<tuple|12.5|214>>
+    <associate|ch13:bounded-approximations|<tuple|13.8|225>>
+    <associate|ch13:bounded-singleton|<tuple|13.5|228>>
+    <associate|ch13:bounded-word|<tuple|13.6|230>>
+    <associate|ch13:calculus|<tuple|13.4|220>>
+    <associate|ch13:cells|<tuple|13.2|218>>
+    <associate|ch13:chess|<tuple|13.3|218>>
+    <associate|ch13:coarse-matrix|<tuple|13.16|225>>
+    <associate|ch13:coarse-residual|<tuple|13.17|225>>
+    <associate|ch13:coarse-residual-supplier|<tuple|13.4|226>>
+    <associate|ch13:cone-factorization|<tuple|13.20|229>>
+    <associate|ch13:continuum|<tuple|13|217>>
+    <associate|ch13:derivative-response|<tuple|13.8|220>>
+    <associate|ch13:extraction|<tuple|13.1|217>>
+    <associate|ch13:first-below|<tuple|13.14|225>>
+    <associate|ch13:inclusion-response|<tuple|13.7|220>>
+    <associate|ch13:normalized-null|<tuple|13.6|220>>
+    <associate|ch13:null|<tuple|13.5|218>>
+    <associate|ch13:ordered-limit|<tuple|13.2|217>>
+    <associate|ch13:positivity|<tuple|13.5|221>>
+    <associate|ch13:power|<tuple|13.10|221>>
+    <associate|ch13:quotient|<tuple|13.3|218>>
+    <associate|ch13:rank|<tuple|13.1|219>>
+    <associate|ch13:repeated|<tuple|13.6|222>>
+    <associate|ch13:residual-height|<tuple|13.18|226>>
+    <associate|ch13:residual-height-bound|<tuple|13.19|227>>
+    <associate|ch13:scale-thickness|<tuple|13.9|221>>
+    <associate|ch13:sharp-centered|<tuple|13.3|224>>
+    <associate|ch13:sharp-phase|<tuple|15.11|262>>
+    <associate|ch13:sharp-root|<tuple|13.12|224>>
+    <associate|ch13:sharp-schedule|<tuple|13.11|223>>
+    <associate|ch13:sharp-section|<tuple|13.7|223>>
+    <associate|ch13:sharp-separated|<tuple|13.15|225>>
+    <associate|ch13:vanishing-error|<tuple|13.4|218>>
+    <associate|ch13:volume-limit|<tuple|13.1|217>>
+    <associate|ch13:weight-size|<tuple|13.13|224>>
+    <associate|ch13:word-bound|<tuple|13.2|222>>
+    <associate|ch14:annular-input|<tuple|14.14|245>>
+    <associate|ch14:averaged-stress|<tuple|14.27|255>>
+    <associate|ch14:balanced-stress|<tuple|14.12|245>>
+    <associate|ch14:charge-commute|<tuple|14.15|246>>
+    <associate|ch14:charge-limits|<tuple|14.24|252>>
+    <associate|ch14:charges|<tuple|14.4|246>>
+    <associate|ch14:collinear|<tuple|14.6.3|251>>
+    <associate|ch14:comparison|<tuple|14.3|241>>
+    <associate|ch14:comparison-exponents|<tuple|14.8|242>>
+    <associate|ch14:conserved-line|<tuple|14.11|244>>
+    <associate|ch14:coordinate-spectrum|<tuple|14.3|240>>
+    <associate|ch14:derivative-commutator|<tuple|14.25|252>>
+    <associate|ch14:diagonal-mass|<tuple|14.22|250>>
+    <associate|ch14:flux|<tuple|14.13|245>>
+    <associate|ch14:formal-adjoint|<tuple|14.4|240>>
+    <associate|ch14:global-ward|<tuple|14.26|254>>
+    <associate|ch14:grid-cost|<tuple|14.7|241>>
+    <associate|ch14:grid-input|<tuple|14.6|241>>
+    <associate|ch14:heat|<tuple|14.2|239>>
+    <associate|ch14:heat-pairing|<tuple|14.1|239>>
+    <associate|ch14:lattice-comparison|<tuple|14.3.1|242>>
+    <associate|ch14:line-ward|<tuple|14.23|252>>
+    <associate|ch14:mixed-sign|<tuple|14.20|248>>
+    <associate|ch14:normalized-stress|<tuple|14.6|255>>
+    <associate|ch14:polynomial-moments|<tuple|14.17|247>>
+    <associate|ch14:positive-residual|<tuple|14.18|247>>
+    <associate|ch14:propagation|<tuple|14.7|252>>
+    <associate|ch14:reflection|<tuple|14.1|239>>
+    <associate|ch14:rotations|<tuple|14.5|255>>
+    <associate|ch14:rotations-section|<tuple|14.8|254>>
+    <associate|ch14:shells|<tuple|14.5|245>>
+    <associate|ch14:sign-induction|<tuple|14.21|248>>
+    <associate|ch14:sign-transfer|<tuple|14.19|248>>
+    <associate|ch14:slab-bound|<tuple|14.1|240>>
+    <associate|ch14:slab-laws|<tuple|14.5|241>>
+    <associate|ch14:slab-smooth|<tuple|14.2|241>>
+    <associate|ch14:slabs|<tuple|14.2|240>>
+    <associate|ch14:smooth-comparison|<tuple|14.3|244>>
+    <associate|ch14:spectral|<tuple|14.6|246>>
+    <associate|ch14:spectral-CS|<tuple|14.16|246>>
+    <associate|ch14:stress-line|<tuple|14.4|244>>
+    <associate|ch14:subset-root|<tuple|14.9|242>>
+    <associate|ch14:uniform-tests|<tuple|14.10|243>>
+    <associate|ch14:ward|<tuple|14|239>>
+    <associate|ch15:ae-ground|<tuple|15.10|261>>
+    <associate|ch15:algebra|<tuple|15.1|258>>
+    <associate|ch15:characters|<tuple|15.3|259>>
+    <associate|ch15:cluster|<tuple|15.3|258>>
+    <associate|ch15:compression|<tuple|15.2|257>>
+    <associate|ch15:compression-defect|<tuple|15.4|258>>
+    <associate|ch15:detector-moments|<tuple|15.8|260>>
+    <associate|ch15:fields|<tuple|15.5|260>>
+    <associate|ch15:ground|<tuple|15.1|257>>
+    <associate|ch15:mixture|<tuple|15.5|259>>
+    <associate|ch15:moment-norm|<tuple|15.6|259>>
+    <associate|ch15:phase-invariant|<tuple|15.7|260>>
+    <associate|ch15:phase-symmetry|<tuple|15.4|259>>
+    <associate|ch15:phases|<tuple|15|257>>
+    <associate|ch15:same-fields|<tuple|15.9|261>>
+    <associate|ch15:selection|<tuple|15.6|261>>
+    <associate|ch15:sharp-phase-section|<tuple|15.7|262>>
+    <associate|ch15:spatial-ground|<tuple|15.1|257>>
+    <associate|ch15:whole-gram|<tuple|15.2|258>>
+    <associate|ch16:boundary|<tuple|16.1|264>>
+    <associate|ch16:boundary-section|<tuple|16.1|263>>
+    <associate|ch16:charge-law|<tuple|16.13|271>>
+    <associate|ch16:charges-section|<tuple|16.6|270>>
+    <associate|ch16:cone-support|<tuple|16.6|265>>
+    <associate|ch16:covariance-section|<tuple|16.2|265>>
+    <associate|ch16:fields|<tuple|16.3|268>>
+    <associate|ch16:fields-section|<tuple|16.4|267>>
+    <associate|ch16:full-tube|<tuple|16.7|266>>
+    <associate|ch16:gap-bound|<tuple|16.3|264>>
+    <associate|ch16:heat-decay|<tuple|16.11|269>>
+    <associate|ch16:heat-function|<tuple|16.2|264>>
+    <associate|ch16:irreducible|<tuple|16.5|270>>
+    <associate|ch16:laplace|<tuple|16.5|265>>
+    <associate|ch16:local-commutator|<tuple|16.9|269>>
+    <associate|ch16:locality|<tuple|16.2|266>>
+    <associate|ch16:locality-section|<tuple|16.3|266>>
+    <associate|ch16:low-energy|<tuple|16.10|269>>
+    <associate|ch16:partial-boundary|<tuple|16.8|266>>
+    <associate|ch16:reconstruction|<tuple|16|263>>
+    <associate|ch16:slabs|<tuple|16.1|263>>
+    <associate|ch16:taylor-boundary|<tuple|16.4|264>>
+    <associate|ch16:vacuum|<tuple|16.4|269>>
+    <associate|ch16:vacuum-section|<tuple|16.5|268>>
+    <associate|ch16:weak-commutant|<tuple|16.12|270>>
+    <associate|ch17:actual-current-map|<tuple|17.19|289>>
+    <associate|ch17:all-radii|<tuple|17.5|300>>
+    <associate|ch17:block-algebra|<tuple|17.7|279>>
+    <associate|ch17:block-identities|<tuple|17.1|279>>
+    <associate|ch17:coefficient|<tuple|17.4|299>>
+    <associate|ch17:contact|<tuple|17.11|282>>
+    <associate|ch17:contact-Z|<tuple|17.10|281>>
+    <associate|ch17:contact-identity|<tuple|17.2|282>>
+    <associate|ch17:contact-section|<tuple|17.4.4|281>>
+    <associate|ch17:corrected-regulated-ward|<tuple|17.13|285>>
+    <associate|ch17:current|<tuple|17.3|277>>
+    <associate|ch17:current-alias|<tuple|17.15|286>>
+    <associate|ch17:current-suppliers|<tuple|17.4|278>>
+    <associate|ch17:defect-four|<tuple|17.14|286>>
+    <associate|ch17:exclusion|<tuple|17.9|300>>
+    <associate|ch17:finite-haar|<tuple|17.9|280>>
+    <associate|ch17:finite-sigma|<tuple|17.25|294>>
+    <associate|ch17:flat-current-map|<tuple|17.20|289>>
+    <associate|ch17:gradient-cancellation|<tuple|17.12|283>>
+    <associate|ch17:kernel-divergence|<tuple|17.24|293>>
+    <associate|ch17:kernel-score|<tuple|17.23|292>>
+    <associate|ch17:laplace|<tuple|17.2|273>>
+    <associate|ch17:limit|<tuple|17.8|299>>
+    <associate|ch17:marked-rates|<tuple|17.7|292>>
+    <associate|ch17:polynomial-response|<tuple|17.26|296>>
+    <associate|ch17:quadratic-current|<tuple|17.5|285>>
+    <associate|ch17:quadratic-current-contraction|<tuple|17.16|287>>
+    <associate|ch17:radii|<tuple|17.2|274>>
+    <associate|ch17:regulator-completion|<tuple|17.4.7|284>>
+    <associate|ch17:regulator-input|<tuple|17.6|278>>
+    <associate|ch17:rho|<tuple|17.5|277>>
+    <associate|ch17:running-radius|<tuple|17.3|274>>
+    <associate|ch17:scalar-log-supplier|<tuple|17.8|280>>
+    <associate|ch17:sigma-bound|<tuple|17.28|298>>
+    <associate|ch17:sigma-error|<tuple|17.27|297>>
+    <associate|ch17:spatial-moments|<tuple|17.3|295>>
+    <associate|ch17:spectral-pairing|<tuple|17.1|273>>
+    <associate|ch17:spectrum|<tuple|17.1|273>>
+    <associate|ch17:stability|<tuple|17.6|291>>
+    <associate|ch17:stable-functional|<tuple|17.21|291>>
+    <associate|ch17:stationary-higher-jets|<tuple|17.17|288>>
+    <associate|ch17:trace|<tuple|17|273>>
+    <associate|ch17:trace-law|<tuple|17.29|300>>
+    <associate|ch17:transfer|<tuple|17.22|292>>
+    <associate|ch17:unnormalized-defect|<tuple|17.18|288>>
+    <associate|ch17:variable-windows|<tuple|17.2.1|275>>
+    <associate|ch17:window-product|<tuple|17.4|275>>
+    <associate|ch18:coefficients|<tuple|18.3|304>>
+    <associate|ch18:dual|<tuple|18.1|303>>
+    <associate|ch18:extension|<tuple|18.4|308>>
+    <associate|ch18:extension-formula|<tuple|18.10|309>>
+    <associate|ch18:extension-theorem|<tuple|18.3|309>>
+    <associate|ch18:graded|<tuple|18.2|304>>
+    <associate|ch18:graded-distance|<tuple|13.22|231>>
+    <associate|ch18:graded-estimate|<tuple|13.7|231>>
+    <associate|ch18:graded-quotient-section|<tuple|13.9|230>>
+    <associate|ch18:graded-room|<tuple|13.21|231>>
+    <associate|ch18:group-weight|<tuple|13.26|234>>
+    <associate|ch18:high-step|<tuple|13.24|231>>
+    <associate|ch18:input|<tuple|18.2|305>>
+    <associate|ch18:lattice-estimate|<tuple|13.28|235>>
+    <associate|ch18:lattice-products|<tuple|13.10|232>>
+    <associate|ch18:lattice-replacement|<tuple|13.8|235>>
+    <associate|ch18:low-cone|<tuple|13.23|231>>
+    <associate|ch18:mixed-bound|<tuple|13.9|236>>
+    <associate|ch18:mixed-product-rate|<tuple|13.29|236>>
+    <associate|ch18:mixed-replacement|<tuple|13.10.4|236>>
+    <associate|ch18:normal-Taylor|<tuple|18.8|309>>
+    <associate|ch18:ope|<tuple|18.3|307>>
+    <associate|ch18:ope-bound|<tuple|18.5|307>>
+    <associate|ch18:ope-theorem|<tuple|18.2|307>>
+    <associate|ch18:pair-weights|<tuple|18.7|308>>
+    <associate|ch18:polynomial|<tuple|18.6|308>>
+    <associate|ch18:prescription|<tuple|18.1|303>>
+    <associate|ch18:products|<tuple|18|303>>
+    <associate|ch18:raw-replacement|<tuple|18.4|306>>
+    <associate|ch18:replacement-input|<tuple|18.1|305>>
+    <associate|ch18:replacement-moments|<tuple|18.4|305>>
+    <associate|ch18:residual-weights|<tuple|13.27|235>>
+    <associate|ch18:scope|<tuple|18.5|310>>
+    <associate|ch18:signed-transport|<tuple|13.25|233>>
+    <associate|ch18:subtraction|<tuple|18.9|309>>
+    <associate|ch19:assembly|<tuple|19|311>>
+    <associate|ch19:conditional|<tuple|19.1|312>>
+    <associate|ch19:conditional-trace|<tuple|19.2|312>>
+    <associate|ch19:family|<tuple|19.1|311>>
+    <associate|ch19:scope|<tuple|19.3|313>>
+    <associate|ch19:theorem-section|<tuple|19.2|311>>
   </collection>
 </references>
 
@@ -23294,7 +23329,7 @@
       BrunettiFredenhagen2000
     </associate>
     <\associate|table>
-      <tuple|normal|<surround|<hidden-binding|<tuple>|1>||>|<pageref|auto-251>>
+      <tuple|normal|<surround|<hidden-binding|<tuple>|1>||>|<pageref|auto-246>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Main
@@ -23369,951 +23404,929 @@
       prescribed link <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-18>>
 
-      <with|par-left|<quote|1tab>|2.5.2<space|2spc>Wilson forces and the
-      linear equation ideal <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|2.5.2<space|2spc>Construction of the
+      equation-adapted section <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-19>>
-
-      <with|par-left|<quote|1tab>|2.5.3<space|2spc>Exact integration by parts
-      and assembly <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-20>>
 
       2.6<space|2spc>Examples and the remaining normalization problem
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-21>
+      <no-break><pageref|auto-20>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>The
       free Maxwell comparison theory> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22><vspace|0.5fn>
+      <no-break><pageref|auto-21><vspace|0.5fn>
 
       3.1<space|2spc>Curvature covariance
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-23>
+      <no-break><pageref|auto-22>
 
       3.2<space|2spc>Local polynomials and Wick correlations
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-24>
+      <no-break><pageref|auto-23>
 
       3.3<space|2spc>The on-shell polynomial space
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-25>
+      <no-break><pageref|auto-24>
 
       3.4<space|2spc>Reflection and the meaning of nondegeneracy
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-26>
+      <no-break><pageref|auto-25>
 
       3.5<space|2spc>Strict positivity of finite jet families
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-27>
+      <no-break><pageref|auto-26>
 
       3.6<space|2spc>Quadratic fields and normalization checks
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-28>
+      <no-break><pageref|auto-27>
 
       3.7<space|2spc>The degree-four conserved tensor
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29>
+      <no-break><pageref|auto-28>
 
       3.8<space|2spc>Local stress fluxes <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30>
+      <no-break><pageref|auto-29>
 
       3.9<space|2spc>Separating fields by insertions of bounded scaling
       dimension <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31>
+      <no-break><pageref|auto-30>
 
       3.10<space|2spc>Finite correlation criteria for infinitesimal
       symmetries <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32>
+      <no-break><pageref|auto-31>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Exact
       blocking and effective densities> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33><vspace|0.5fn>
+      <no-break><pageref|auto-32><vspace|0.5fn>
 
       4.1<space|2spc>Local gauges and a symmetric frame choice
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34>
+      <no-break><pageref|auto-33>
 
       4.2<space|2spc>Gauge-covariant block averaging and the exact kernel
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35>
+      <no-break><pageref|auto-34>
 
       4.3<space|2spc>A first-power bound for the actual block average
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-36>
+      <no-break><pageref|auto-35>
 
       4.4<space|2spc>Small fields and density coordinates
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-37>
+      <no-break><pageref|auto-36>
 
       4.5<space|2spc>The prescribed leading action
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38>
+      <no-break><pageref|auto-37>
 
       4.6<space|2spc>The exact-cover representation and its norms
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39>
+      <no-break><pageref|auto-38>
 
       4.7<space|2spc>Conditions for a one-step induction
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-40>
+      <no-break><pageref|auto-39>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Gaussian
       kernels and stationary backgrounds>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-41><vspace|0.5fn>
+      <no-break><pageref|auto-40><vspace|0.5fn>
 
       5.1<space|2spc>Lattice differential forms and zero modes
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-42>
+      <no-break><pageref|auto-41>
 
       5.2<space|2spc>The exact Gaussian block transformation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-43>
+      <no-break><pageref|auto-42>
 
       5.3<space|2spc>Averaging and the Fourier alias formula
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-44>
+      <no-break><pageref|auto-43>
 
       5.4<space|2spc>Gauge reduction and a regular curvature symbol
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-45>
+      <no-break><pageref|auto-44>
 
       5.5<space|2spc>Uniform estimates over finite blocking histories
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-46>
+      <no-break><pageref|auto-45>
 
       5.6<space|2spc>Exact transports and the curvature defect
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-47>
+      <no-break><pageref|auto-46>
 
       <with|par-left|<quote|1tab>|5.6.1<space|2spc>A positive factorization
       of the defect <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-48>>
+      <no-break><pageref|auto-47>>
 
       5.7<space|2spc>Convergence at a fixed scale
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-49>
+      <no-break><pageref|auto-48>
 
       5.8<space|2spc>Uniform inverse bounds: the hypotheses that matter
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-50>
+      <no-break><pageref|auto-49>
 
       5.9<space|2spc>The actual block average and the forest coordinates
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-51>
+      <no-break><pageref|auto-50>
 
       <with|par-left|<quote|1tab>|5.9.1<space|2spc>A common analytic branch
       for all local labels <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-52>>
+      <no-break><pageref|auto-51>>
 
       <with|par-left|<quote|1tab>|5.9.2<space|2spc>The tree comparison and
       the actual Hessian <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-53>>
+      <no-break><pageref|auto-52>>
 
       <with|par-left|<quote|1tab>|5.9.3<space|2spc>A smooth representative of
       the stationary tangent <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-54>>
+      <no-break><pageref|auto-53>>
 
       5.10<space|2spc>A stationary background on a uniform neighborhood
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-55>
+      <no-break><pageref|auto-54>
 
       <with|par-left|<quote|1tab>|5.10.1<space|2spc>Supplying the local
       derivative estimates <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-56>>
+      <no-break><pageref|auto-55>>
 
       5.11<space|2spc>Scope of the completed Gaussian construction
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-57>
+      <no-break><pageref|auto-56>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Large
       fields and local Gaussian integration>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-58><vspace|0.5fn>
+      <no-break><pageref|auto-57><vspace|0.5fn>
 
       6.1<space|2spc>Selected tests and the local energy
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-59>
+      <no-break><pageref|auto-58>
 
       <with|par-left|<quote|1tab>|6.1.1<space|2spc>An exact completion of
       squares <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-60>>
+      <no-break><pageref|auto-59>>
 
       <with|par-left|<quote|1tab>|6.1.2<space|2spc>Direct bounds and the
       signed comparison <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-61>>
+      <no-break><pageref|auto-60>>
 
       6.2<space|2spc>The actual sector Gaussian
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-62>
+      <no-break><pageref|auto-61>
 
       <with|par-left|<quote|1tab>|6.2.1<space|2spc>Transferring a local tree
       estimate to the actual rows <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-63>>
+      <no-break><pageref|auto-62>>
 
       <with|par-left|<quote|1tab>|6.2.2<space|2spc>Local inverse columns
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-64>>
+      <no-break><pageref|auto-63>>
 
       <with|par-left|<quote|1tab>|6.2.3<space|2spc>The source and derivatives
       on a fixed sector <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-65>>
+      <no-break><pageref|auto-64>>
 
       <with|par-left|<quote|1tab>|6.2.4<space|2spc>The exact integral and its
       normalization <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-66>>
+      <no-break><pageref|auto-65>>
 
       6.3<space|2spc>Differentiation on a common dependence region
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-67>
+      <no-break><pageref|auto-66>
 
       <with|par-left|<quote|1tab>|6.3.1<space|2spc>Differentiation under the
       common Gaussian law <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-68>>
+      <no-break><pageref|auto-67>>
 
       6.4<space|2spc>Simultaneous tail estimates
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-69>
+      <no-break><pageref|auto-68>
 
       <with|par-left|<quote|1tab>|6.4.1<space|2spc>The deterministic estimate
       behind a cutoff remainder <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-70>>
+      <no-break><pageref|auto-69>>
 
       <with|par-left|<quote|1tab>|6.4.2<space|2spc>The bounded-jet route for
       local activities <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-71>>
+      <no-break><pageref|auto-70>>
 
       <with|par-left|<quote|1tab>|6.4.3<space|2spc>One majorant for the
       product <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-72>>
+      <no-break><pageref|auto-71>>
 
       6.5<space|2spc>Weighted bounds for the primitive local factors
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-73>
+      <no-break><pageref|auto-72>
 
       <with|par-left|<quote|1tab>|6.5.1<space|2spc>Gaussian correction series
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-74>>
+      <no-break><pageref|auto-73>>
 
       <with|par-left|<quote|1tab>|6.5.2<space|2spc>Short local and inherited
       terms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-75>>
+      <no-break><pageref|auto-74>>
 
       <with|par-left|<quote|1tab>|6.5.3<space|2spc>Components and assembly
       under one law <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-76>>
+      <no-break><pageref|auto-75>>
 
       <with|par-left|<quote|1tab>|6.5.4<space|2spc>Comparison with the linear
       local integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-77>>
+      <no-break><pageref|auto-76>>
 
       6.6<space|2spc>What must be checked for a concrete step
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-78>
+      <no-break><pageref|auto-77>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>Local
       matching and the one-loop coefficient>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-79><vspace|0.5fn>
+      <no-break><pageref|auto-78><vspace|0.5fn>
 
       7.1<space|2spc>Common Taylor kernels and Ward identities
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-80>
+      <no-break><pageref|auto-79>
 
       7.2<space|2spc>Division by the lattice curl
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-81>
+      <no-break><pageref|auto-80>
 
       7.3<space|2spc>The marginal quadratic coefficient
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-82>
+      <no-break><pageref|auto-81>
 
       7.4<space|2spc>Haar measure and gauge completion
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-83>
+      <no-break><pageref|auto-82>
 
       7.5<space|2spc>The auxiliary lattice determinant
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-84>
+      <no-break><pageref|auto-83>
 
       7.6<space|2spc>Uniform comparison of determinants
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-85>
+      <no-break><pageref|auto-84>
 
       <with|par-left|<quote|1tab>|7.6.1<space|2spc>The stationary branch and
       the block average contact term <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-86>>
+      <no-break><pageref|auto-85>>
 
       <with|par-left|<quote|1tab>|7.6.2<space|2spc>Bounds for the actual
       centered matrices <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-87>>
+      <no-break><pageref|auto-86>>
 
       <with|par-left|<quote|1tab>|7.6.3<space|2spc>The one-loop drift
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-88>>
+      <no-break><pageref|auto-87>>
 
       7.7<space|2spc>Classical matching through fourth order
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-89>
+      <no-break><pageref|auto-88>
 
       <with|par-left|<quote|1tab>|7.7.1<space|2spc>Uniform classical
       stationary coefficients <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-90>>
+      <no-break><pageref|auto-89>>
 
       <with|par-left|<quote|1tab>|7.7.2<space|2spc>Construction of the
       matching curvature terms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-91>>
+      <no-break><pageref|auto-90>>
 
       <with|par-left|<quote|1tab>|7.7.3<space|2spc>Preserving the classical
       coefficient bound <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-92>>
+      <no-break><pageref|auto-91>>
 
       7.8<space|2spc>Inherited loops: four differences and alias suppression
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-93>
+      <no-break><pageref|auto-92>
 
       7.9<space|2spc>Output coefficients and the remaining analytic width
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-94>
+      <no-break><pageref|auto-93>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|8<space|2spc>Polymer
       expansions and connected correlations>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-95><vspace|0.5fn>
+      <no-break><pageref|auto-94><vspace|0.5fn>
 
       8.1<space|2spc>Activities, supports and incompatibility
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-96>
+      <no-break><pageref|auto-95>
 
       8.2<space|2spc>The logarithm and its convergence criterion
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-97>
+      <no-break><pageref|auto-96>
 
       8.3<space|2spc>A spatially local bound with a geometric tail
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-98>
+      <no-break><pageref|auto-97>
 
       8.4<space|2spc>Deleting polymers and controlling local changes
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-99>
+      <no-break><pageref|auto-98>
 
       8.5<space|2spc>Parameters, derivatives and connected insertions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-100>
+      <no-break><pageref|auto-99>
 
       8.6<space|2spc>Large-field constraints and exact reassembly
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-101>
+      <no-break><pageref|auto-100>
 
       8.7<space|2spc>What an application must supply
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-102>
+      <no-break><pageref|auto-101>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|9<space|2spc>The
       nonlinear renormalization step> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-103><vspace|0.5fn>
+      <no-break><pageref|auto-102><vspace|0.5fn>
 
       9.1<space|2spc>The exact local integral and its first expansion
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-104>
+      <no-break><pageref|auto-103>
 
       9.2<space|2spc>Improving the regular remainder
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-105>
+      <no-break><pageref|auto-104>
 
       <with|par-left|<quote|1tab>|9.2.1<space|2spc>Terms containing several
       elementary factors <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-106>>
+      <no-break><pageref|auto-105>>
 
       <with|par-left|<quote|1tab>|9.2.2<space|2spc>The linear inherited
       regular term <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-107>>
+      <no-break><pageref|auto-106>>
 
       <with|par-left|<quote|1tab>|9.2.3<space|2spc>Low-order terms and
       localization <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-108>>
+      <no-break><pageref|auto-107>>
 
       <with|par-left|<quote|1tab>|9.2.4<space|2spc>The stationary integral
       with its cutoff retained <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-109>>
+      <no-break><pageref|auto-108>>
 
       <with|par-left|<quote|1tab>|9.2.5<space|2spc>Identifying the retained
       region in the actual integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-110>>
+      <no-break><pageref|auto-109>>
 
       <with|par-left|<quote|1tab>|9.2.6<space|2spc>Centering the full
       logarithm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-111>>
+      <no-break><pageref|auto-110>>
 
       <with|par-left|<quote|1tab>|9.2.7<space|2spc>Recovering a local density
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-112>>
+      <no-break><pageref|auto-111>>
 
       9.3<space|2spc>A precise preparatory output
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-113>
+      <no-break><pageref|auto-112>
 
       9.4<space|2spc>Local quadratic subtraction
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-114>
+      <no-break><pageref|auto-113>
 
       9.5<space|2spc>Replacing the local quadratic term by the path action
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-115>
+      <no-break><pageref|auto-114>
 
       9.6<space|2spc>Absorbing logarithmic corrections into large-field
       activities <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-116>
+      <no-break><pageref|auto-115>
 
       9.7<space|2spc>The normalization of the field-independent term and
       continuity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-117>
+      <no-break><pageref|auto-116>
 
       9.8<space|2spc>Wilson initialization
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-118>
+      <no-break><pageref|auto-117>
 
       9.9<space|2spc>The one-step conclusion and its input data
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-119>
+      <no-break><pageref|auto-118>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|10<space|2spc>A
       common trajectory and fixed-scale stability>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-120><vspace|0.5fn>
+      <no-break><pageref|auto-119><vspace|0.5fn>
 
       10.1<space|2spc>What is fixed before choosing the scales
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-121>
+      <no-break><pageref|auto-120>
 
       10.2<space|2spc>A slowly increasing stage schedule
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-122>
+      <no-break><pageref|auto-121>
 
       10.3<space|2spc>Tuning a finite history to the coarse endpoint
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-123>
+      <no-break><pageref|auto-122>
 
       10.4<space|2spc>Uniform logarithmic running
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-124>
+      <no-break><pageref|auto-123>
 
       10.5<space|2spc>The coefficient comparison before the activity
       comparison <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-125>
+      <no-break><pageref|auto-124>
 
       10.6<space|2spc>The stronger local comparison required for cutoff
       limits <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-126>
-
-      <with|par-left|<quote|1tab>|10.6.1<space|2spc>How finite evaluations of
-      the real parameters yield the contraction
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-127>>
-
-      <with|par-left|<quote|1tab>|10.6.2<space|2spc>Producing the finite
-      parameter evaluations from the protected expansion
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-128>>
-
-      <with|par-left|<quote|1tab>|10.6.3<space|2spc>Numerical cumulative
-      control <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-129>>
-
-      <with|par-left|<quote|1tab>|10.6.4<space|2spc>Common-input continuity
-      and the zero-array histories <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-130>>
+      <no-break><pageref|auto-125>
 
       10.7<space|2spc>Convergence of the coupled histories
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-131>
+      <no-break><pageref|auto-126>
 
       10.8<space|2spc>Identifying the analytic comparison on the selected
       family <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-132>
+      <no-break><pageref|auto-127>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|11<space|2spc>Marked
       insertions and finite-scale comparison>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-133><vspace|0.5fn>
+      <no-break><pageref|auto-128><vspace|0.5fn>
 
       11.1<space|2spc>An algebra for finitely many insertions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-134>
+      <no-break><pageref|auto-129>
 
       <with|par-left|<quote|1tab>|11.1.1<space|2spc>The exact density and its
       integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-135>>
+      <no-break><pageref|auto-130>>
 
       11.2<space|2spc>Joint local terms and large-field components
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-136>
+      <no-break><pageref|auto-131>
 
       11.3<space|2spc>Support bounds for several marked components
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-137>
+      <no-break><pageref|auto-132>
 
       11.4<space|2spc>One marked step with the actual local factors
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-138>
+      <no-break><pageref|auto-133>
 
       <with|par-left|<quote|1tab>|11.4.1<space|2spc>The one-insertion graph
       estimates <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-139>>
+      <no-break><pageref|auto-134>>
 
       <with|par-left|<quote|1tab>|11.4.2<space|2spc>Propagating the already
       formed terms involving at least two insertions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-140>>
+      <no-break><pageref|auto-135>>
 
       11.5<space|2spc>A common Gaussian comparison
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-141>
+      <no-break><pageref|auto-136>
 
       <with|par-left|<quote|1tab>|11.5.1<space|2spc>The exact
       cross-covariance on the selected forest
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-142>>
+      <no-break><pageref|auto-137>>
 
       <with|par-left|<quote|1tab>|11.5.2<space|2spc>Actual local coordinate
       and cutoff estimates <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-143>>
+      <no-break><pageref|auto-138>>
 
       11.6<space|2spc>Restarting below a comparison level
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-144>
+      <no-break><pageref|auto-139>
 
       <with|par-left|<quote|1tab>|11.6.1<space|2spc>Constructing the
       restarted representations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-145>>
+      <no-break><pageref|auto-140>>
 
       11.7<space|2spc>The normalized integral with several insertions
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-146>
+      <no-break><pageref|auto-141>
 
       <with|par-left|<quote|1tab>|11.7.1<space|2spc>An independent positional
       modulus <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-147>>
+      <no-break><pageref|auto-142>>
 
       11.8<space|2spc>Backward comparison of a local trial
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-148>
+      <no-break><pageref|auto-143>
 
       11.9<space|2spc>Finite-dimensional detection before taking limits
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-149>
+      <no-break><pageref|auto-144>
 
       11.10<space|2spc>Collected estimates and local calibration
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-150>
+      <no-break><pageref|auto-145>
 
       11.11<space|2spc>Calibrating the microscopic equations on the same
       history <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-151>
+      <no-break><pageref|auto-146>
 
       11.12<space|2spc>The moving equation space and uniform finite
       differences <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-152>
+      <no-break><pageref|auto-147>
 
       <with|par-left|<quote|1tab>|11.12.1<space|2spc>A common localization
       map for the separating family <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-153>>
+      <no-break><pageref|auto-148>>
 
       <with|par-left|<quote|1tab>|11.12.2<space|2spc>Absorbing the larger
       source weight <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-154>>
+      <no-break><pageref|auto-149>>
 
       <with|par-left|<quote|1tab>|11.12.3<space|2spc>The actual covariance on
       a comparison window <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-155>>
+      <no-break><pageref|auto-150>>
 
       <with|par-left|<quote|1tab>|11.12.4<space|2spc>From the common
       polynomial localization to the corrected pair bound
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-156>>
+      <no-break><pageref|auto-151>>
 
       <with|par-left|<quote|1tab>|11.12.5<space|2spc>Finite-arity comparison
       on a common finite set of scales <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-157>>
+      <no-break><pageref|auto-152>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|12<space|2spc>The
       ultraviolet limit at fixed volume> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-158><vspace|0.5fn>
+      <no-break><pageref|auto-153><vspace|0.5fn>
 
       12.1<space|2spc>Fixed-level convergence data
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-159>
+      <no-break><pageref|auto-154>
 
       12.2<space|2spc>Contraction of the complete marked remainder
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-160>
+      <no-break><pageref|auto-155>
 
       12.3<space|2spc>The scalar normalization cancels
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-161>
+      <no-break><pageref|auto-156>
 
       12.4<space|2spc>A stopping estimate uniform in the stopping level
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-162>
+      <no-break><pageref|auto-157>
 
       12.5<space|2spc>Smoothness and all lattice differences
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-163>
+      <no-break><pageref|auto-158>
 
       12.6<space|2spc>The fixed-volume conclusion
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-164>
+      <no-break><pageref|auto-159>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|13<space|2spc>Continuum
       correlations and local fields> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-165><vspace|0.5fn>
+      <no-break><pageref|auto-160><vspace|0.5fn>
 
       13.1<space|2spc>One subsequence of volumes
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-166>
+      <no-break><pageref|auto-161>
 
       13.2<space|2spc>Separated cells and errors in local observables
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-167>
+      <no-break><pageref|auto-162>
 
       13.3<space|2spc>Fields as equivalence classes of labels
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-168>
+      <no-break><pageref|auto-163>
 
       <with|par-left|<quote|1tab>|13.3.1<space|2spc>Representatives chosen
       before the spectators <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-169>>
+      <no-break><pageref|auto-164>>
 
       13.4<space|2spc>Inclusions and derivatives
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-170>
+      <no-break><pageref|auto-165>
 
       13.5<space|2spc>Reflection positivity and separated power bounds
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-171>
+      <no-break><pageref|auto-166>
 
       13.6<space|2spc>Repeated reflected words
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-172>
+      <no-break><pageref|auto-167>
 
       13.7<space|2spc>Sharp fixed-arity short-distance bounds
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-173>
+      <no-break><pageref|auto-168>
 
       <with|par-left|<quote|1tab>|13.7.1<space|2spc>A normalized local
       insertion <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-174>>
+      <no-break><pageref|auto-169>>
 
       <with|par-left|<quote|1tab>|13.7.2<space|2spc>The stopping scale and
       centered estimate <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-175>>
+      <no-break><pageref|auto-170>>
 
       <with|par-left|<quote|1tab>|13.7.3<space|2spc>Arbitrary separated
       points <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-176>>
+      <no-break><pageref|auto-171>>
 
       13.8<space|2spc>Bounded real approximations for separated words
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-177>
+      <no-break><pageref|auto-172>
 
       13.9<space|2spc>Scaling dimension and the physical quotient
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-178>
+      <no-break><pageref|auto-173>
 
       13.10<space|2spc>Local replacement of a cluster on the lattice
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-179>
+      <no-break><pageref|auto-174>
 
       <with|par-left|<quote|1tab>|13.10.1<space|2spc>Signed local transport
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-180>>
+      <no-break><pageref|auto-175>>
 
       <with|par-left|<quote|1tab>|13.10.2<space|2spc>Grouping marks and
       retaining their supports <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-181>>
+      <no-break><pageref|auto-176>>
 
       <with|par-left|<quote|1tab>|13.10.3<space|2spc>Extraction with a freely
       chosen residual weight <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-182>>
+      <no-break><pageref|auto-177>>
 
       <with|par-left|<quote|1tab>|13.10.4<space|2spc>A mixed-correlation
       consequence without phases <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-183>>
+      <no-break><pageref|auto-178>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|14<space|2spc>Reflection
       spaces, Ward identities and Euclidean symmetry>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-184><vspace|0.5fn>
+      <no-break><pageref|auto-179><vspace|0.5fn>
 
       14.1<space|2spc>Reflection spaces for the coordinate axes
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-185>
+      <no-break><pageref|auto-180>
 
       14.2<space|2spc>Bounded insertions in a slab
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-186>
+      <no-break><pageref|auto-181>
 
       14.3<space|2spc>Comparing the mixed fields with free fields
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-187>
+      <no-break><pageref|auto-182>
 
       <with|par-left|<quote|1tab>|14.3.1<space|2spc>Obtaining the three
       comparison bounds from one lattice family
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-188>>
+      <no-break><pageref|auto-183>>
 
       14.4<space|2spc>The conserved stress line
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-189>
+      <no-break><pageref|auto-184>
 
       14.5<space|2spc>Shrinking shells and local charge fields
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-190>
+      <no-break><pageref|auto-185>
 
       14.6<space|2spc>Coordinate spectral measures and the angular boundary
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-191>
+      <no-break><pageref|auto-186>
 
       <with|par-left|<quote|1tab>|14.6.1<space|2spc>What opposite reflection
       signs control <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-192>>
+      <no-break><pageref|auto-187>>
 
       <with|par-left|<quote|1tab>|14.6.2<space|2spc>The separate
       diagonal-stress estimate <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-193>>
+      <no-break><pageref|auto-188>>
 
       <with|par-left|<quote|1tab>|14.6.3<space|2spc>Vanishing angular flux at
       infinity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-194>>
+      <no-break><pageref|auto-189>>
 
       14.7<space|2spc>Normalization and propagation of the Ward identities
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-195>
+      <no-break><pageref|auto-190>
 
       <with|par-left|<quote|1tab>|14.7.1<space|2spc>Analyticity supplied by a
       positive Gram kernel <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-196>>
+      <no-break><pageref|auto-191>>
 
       <with|par-left|<quote|1tab>|14.7.2<space|2spc>A finite path through
       separated configurations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-197>>
+      <no-break><pageref|auto-192>>
 
       14.8<space|2spc>The rotation action and the normalized tensor
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-198>
+      <no-break><pageref|auto-193>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|15<space|2spc>Decomposition
       into phases> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-199><vspace|0.5fn>
+      <no-break><pageref|auto-194><vspace|0.5fn>
 
       15.1<space|2spc>The zero-energy subspace
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-200>
+      <no-break><pageref|auto-195>
 
       15.2<space|2spc>Compression and separation of clusters
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-201>
+      <no-break><pageref|auto-196>
 
       15.3<space|2spc>Characters and the representing measure
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-202>
+      <no-break><pageref|auto-197>
 
       15.4<space|2spc>Symmetries in each phase
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-203>
+      <no-break><pageref|auto-198>
 
       15.5<space|2spc>Positivity, field identities and null spaces
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-204>
+      <no-break><pageref|auto-199>
 
       15.6<space|2spc>Selecting a phase with a unique ground vector
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-205>
+      <no-break><pageref|auto-200>
 
       15.7<space|2spc>Sharp separated bounds in every phase
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-206>
+      <no-break><pageref|auto-201>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|16<space|2spc>Relativistic
       reconstruction in every phase> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-207><vspace|0.5fn>
+      <no-break><pageref|auto-202><vspace|0.5fn>
 
       16.1<space|2spc>Complex time and a uniform boundary distribution
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-208>
+      <no-break><pageref|auto-203>
 
       16.2<space|2spc>Lorentz covariance and the spectral cone
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-209>
+      <no-break><pageref|auto-204>
 
       16.3<space|2spc>The spacetime tube and locality
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-210>
+      <no-break><pageref|auto-205>
 
       16.4<space|2spc>Field words and the reflection space
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-211>
+      <no-break><pageref|auto-206>
 
       16.5<space|2spc>The low-energy estimate and uniqueness of the vacuum in
       each phase <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-212>
+      <no-break><pageref|auto-207>
 
       16.6<space|2spc>The weak commutant and local stress charges
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-213>
+      <no-break><pageref|auto-208>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|17<space|2spc>The
       trace law and its consequences> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-214><vspace|0.5fn>
+      <no-break><pageref|auto-209><vspace|0.5fn>
 
       17.1<space|2spc>Centering and the positive spectral measure
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-215>
+      <no-break><pageref|auto-210>
 
       17.2<space|2spc>Comparison at prescribed radii
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-216>
+      <no-break><pageref|auto-211>
 
       <with|par-left|<quote|1tab>|17.2.1<space|2spc>Comparison windows
       crossing changes of stage <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-217>>
+      <no-break><pageref|auto-212>>
 
       17.3<space|2spc>Tensor coordinates and the regulated current
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-218>
+      <no-break><pageref|auto-213>
 
       17.4<space|2spc>Exact current transport and the scalar regulator
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-219>
+      <no-break><pageref|auto-214>
 
       <with|par-left|<quote|1tab>|17.4.1<space|2spc>Difference-preserving
       block averages <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-220>>
+      <no-break><pageref|auto-215>>
 
       <with|par-left|<quote|1tab>|17.4.2<space|2spc>What scalar mass
       regularization changes <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-221>>
+      <no-break><pageref|auto-216>>
 
       <with|par-left|<quote|1tab>|17.4.3<space|2spc>Exact integration by
       parts and the remaining current estimate
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-222>>
+      <no-break><pageref|auto-217>>
 
       <with|par-left|<quote|1tab>|17.4.4<space|2spc>The group-coordinate
       contact identity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-223>>
+      <no-break><pageref|auto-218>>
 
       <with|par-left|<quote|1tab>|17.4.5<space|2spc>Cancellation of the
       action-gradient terms <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-224>>
+      <no-break><pageref|auto-219>>
 
       <with|par-left|<quote|1tab>|17.4.6<space|2spc>Power counting the
       regulator remainder <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-225>>
+      <no-break><pageref|auto-220>>
 
       <with|par-left|<quote|1tab>|17.4.7<space|2spc>The corrected coefficient
       and order of limits <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-226>>
+      <no-break><pageref|auto-221>>
 
       17.5<space|2spc>Current conservation and uniform transfer bounds
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-227>
+      <no-break><pageref|auto-222>
 
       <with|par-left|<quote|1tab>|17.5.1<space|2spc>Preservation of the low
       moments <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-228>>
+      <no-break><pageref|auto-223>>
 
       <with|par-left|<quote|1tab>|17.5.2<space|2spc>A homogeneous bound for
       the quadratic channel <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-229>>
+      <no-break><pageref|auto-224>>
 
       <with|par-left|<quote|1tab>|17.5.3<space|2spc>The nonlinear terms need
       fixed-ratio bounds <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-230>>
+      <no-break><pageref|auto-225>>
 
       <with|par-left|<quote|1tab>|17.5.4<space|2spc>Why action matching
       introduces no source <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-231>>
+      <no-break><pageref|auto-226>>
 
       <with|par-left|<quote|1tab>|17.5.5<space|2spc>Uniform current and
       difference-primitive bounds <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-232>>
+      <no-break><pageref|auto-227>>
 
       17.6<space|2spc>Quantitative stability of the trace functional
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-233>
+      <no-break><pageref|auto-228>
 
       17.7<space|2spc>From the current identity to marked coefficient
       estimates <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-234>
+      <no-break><pageref|auto-229>
 
       <with|par-left|<quote|1tab>|17.7.1<space|2spc>A differentiated block
       kernel <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-235>>
+      <no-break><pageref|auto-230>>
 
       <with|par-left|<quote|1tab>|17.7.2<space|2spc>The finite degree-five
       coefficient <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-236>>
+      <no-break><pageref|auto-231>>
 
       <with|par-left|<quote|1tab>|17.7.3<space|2spc>The equation direction
       and the necessary rates <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-237>>
+      <no-break><pageref|auto-232>>
 
       17.8<space|2spc>The coefficient and the all-radius limit
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-238>
+      <no-break><pageref|auto-233>
 
       17.9<space|2spc>What the trace law excludes
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-239>
+      <no-break><pageref|auto-234>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|18<space|2spc>Operator
       products and extensions across diagonals>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-240><vspace|0.5fn>
+      <no-break><pageref|auto-235><vspace|0.5fn>
 
       18.1<space|2spc>A fixed prescription for all finite degrees
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-241>
+      <no-break><pageref|auto-236>
 
       18.2<space|2spc>The marked replacement estimate
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-242>
+      <no-break><pageref|auto-237>
 
       18.3<space|2spc>Finite-order operator product expansion
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-243>
+      <no-break><pageref|auto-238>
 
       18.4<space|2spc>An explicit finite-order extension across every
       diagonal <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-244>
+      <no-break><pageref|auto-239>
 
       18.5<space|2spc>Sharper subtraction and dependence on the prescription
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-245>
+      <no-break><pageref|auto-240>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|19<space|2spc>Assembly
       and the scope of the construction> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-246><vspace|0.5fn>
+      <no-break><pageref|auto-241><vspace|0.5fn>
 
       19.1<space|2spc>One family and the order of its limits
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-247>
+      <no-break><pageref|auto-242>
 
       19.2<space|2spc>Assembly of the construction
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-248>
+      <no-break><pageref|auto-243>
 
       19.3<space|2spc>Conclusions that are not supplied
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-249>
+      <no-break><pageref|auto-244>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Notation
       in the current draft> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-250><vspace|0.5fn>
+      <no-break><pageref|auto-245><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|References>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-252><vspace|0.5fn>
+      <no-break><pageref|auto-247><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
