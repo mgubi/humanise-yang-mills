@@ -52,7 +52,7 @@
       href="blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="docs/proof-standard.html">Proof
       standard</a><font class="ym-sep">&middot;</font><a href="CONTRIBUTING.html">Contributing</a>
     </div>
-    <div class="ym-revision">This site is generated from revision <a href="https://github.com/hairer/humanise-yang-mills/commit/dbe2cdd87072fbe9147e532a388f0965a85617a4"><code>dbe2cdd</code></a> (2026-11-20) of the <a href="https://github.com/hairer/humanise-yang-mills">source repository</a>.</div>
+    <div class="ym-revision">This site is generated from revision <a href="https://github.com/hairer/humanise-yang-mills/commit/9b3f3af3b80e5da5f3d1bc6e5590fd0aa98f8a3b"><code>9b3f3af</code></a> (2026-11-20) of the <a href="https://github.com/hairer/humanise-yang-mills">source repository</a>.</div>
     <p>
       <h1>Humanise Yang-Mills</h1><a id="humanise-yang-mills"></a>
     </p>
@@ -84,29 +84,6 @@
         </li>
       </ul>
     </div>
-    <div class="max-toc">
-      <div class="max-toc-title">
-        Contents
-      </div>
-      <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Contribute an agent</b> <span style="margin-left: 5mm"></span> <a href="#auto-1">1</a>
-      </p>
-      <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>How the work fits together</b> <span style="margin-left: 5mm"></span> <a href="#auto-2">2</a>
-      </p>
-      <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Repository map</b> <span style="margin-left: 5mm"></span> <a href="#auto-3">2</a>
-      </p>
-      <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Prior dependency mapping</b> <span style="margin-left: 5mm"></span> <a href="#auto-4">3</a>
-      </p>
-      <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Before opening the queue</b> <span style="margin-left: 5mm"></span> <a href="#auto-5">3</a>
-      </p>
-      <p style="margin-top: 1em; margin-bottom: 0.5em">
-        <b>Licence</b> <span style="margin-left: 5mm"></span> <a href="#auto-6">3</a>
-      </p>
-    </div>
     <p>
       This project coordinates a crowd-sourced effort to turn the announced
       Lean formalisation of four-dimensional Yang&ndash;Mills theory into a
@@ -123,6 +100,11 @@
       its proof.
     </p>
     <p>
+      At this stage, the overall structure of the document is frozen. Anyone
+      is still welcome to contribute PRs with improvements to the exposition
+      or to the proof itself.
+    </p>
+    <p>
       <strong>Lean source and dependency mapping.</strong> The source is
       pinned to revision <tt class="verbatim">3456e5e75cf8d4cd558955a5c7638fba2d68f464</tt>.
       The 17 audited release roots and a first-pass mathematical decomposition
@@ -130,67 +112,7 @@
       outline</a>, and <a href="blueprint/unit-plan.html">provisional unit plan</a>. A full build, axiom
       audit, and line-by-line mathematical audit are still outstanding.
     </p>
-    <h2 id="auto-1"><a id="contribute-an-agent"></a>Contribute an agent<span style="margin-left: 1em"></span></h2>
-    <ol>
-      <li>
-        <p>
-          Read <a href="CONTRIBUTING.html">CONTRIBUTING.md</a> and <a href="AGENTS.html">AGENTS.md</a>.
-        </p>
-      </li>
-      <li>
-        <p>
-          Look at the <a href="https://github.com/hairer/humanise-yang-mills/issues">issues</a> and <a href="https://github.com/hairer/humanise-yang-mills/pulls">open pull requests</a>.
-          Choose one small, ready task and check for overlapping work.
-        </p>
-      </li>
-      <li>
-        <p>
-          Post a scoped self-claim with a UTC expiry, recheck for conflicts,
-          and begin. No manual approval is required.
-        </p>
-      </li>
-      <li>
-        <p>
-          Work in your own fork or worktree. Submit one focused pull request
-          with evidence.
-        </p>
-      </li>
-    </ol>
-    <p>
-      Use the <a href="docs/agent-prompts.html">copy-and-paste agent prompts</a>. The same workflow
-      works with Fable, Codex, and other tools: explicitly give the agent <tt
-      class="verbatim">AGENTS.md</tt> if its tool does not load that file automatically.
-    </p>
-    <h2 id="auto-2"><a id="how-the-work-fits-together"></a>How the work fits together<span style="margin-left: 1em"></span></h2>
-    <p>
-      Start at the final theorem and work backwards to a graph of mathematical
-      results. Identify results that can be supplied by the literature, and
-      agree on the statements and interfaces requiring exposition. Write
-      detailed LaTeX proofs as soon as each local interface is precise; do not
-      wait for the whole blueprint. Track outstanding prerequisite proofs
-      explicitly. Prioritise shared definitions and results needed by many
-      other parts. A proof unit can span several files; a large file can
-      contain several units. Formal helper declarations do not each become a
-      writing task.
-    </p>
-    <pre class="verbatim" xml:space="preserve">
-flowchart LR
-    A[Pin and audit Lean source] --&gt; B[Map theorem dependencies]
-    B --&gt; C[Find literature results and agree on proof units]
-    C --&gt; D[LaTeX sections and linked blueprint records]
-    D --&gt; B
-    D --&gt; E[Lean correspondence review]
-    D --&gt; F[Mathematical review]
-    E --&gt; G[Integrate the exposition]
-    F --&gt; G</pre>
-    <p>
-      GitHub <strong>issues</strong> are the live task queue and discussion
-      space. <strong>Pull requests</strong> hold proposed changes and reviews.
-      The repository holds the resulting knowledge; <tt class="verbatim">Bots/</tt>
-      preserves concise handoffs and discoveries, rather than a running chat
-      log. See the <a href="docs/coordination.html">coordination rules</a>.
-    </p>
-    <h2 id="auto-3"><a id="repository-map"></a>Repository map<span style="margin-left: 1em"></span></h2>
+    <h2 id="auto-1"><a id="repository-map"></a>Repository map<span style="margin-left: 1em"></span></h2>
     <table style="width: 100%">
       <tbody><tr>
         <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid"><strong>Path</strong></td>
@@ -233,7 +155,7 @@ flowchart LR
       accurately describes the formal theorem; that correspondence requires
       review. See Lean's <a href="https://lean-lang.org/doc/reference/latest/ValidatingProofs/">proof validation guidance</a>.
     </p>
-    <h2 id="auto-4"><a id="prior-dependency-mapping"></a>Prior dependency mapping<span style="margin-left: 1em"></span></h2>
+    <h2 id="auto-2"><a id="prior-dependency-mapping"></a>Prior dependency mapping<span style="margin-left: 1em"></span></h2>
     <p>
       The initial source clustering and much of the navigation data used by
       this repository come from Scott Armstrong's <a href="https://github.com/scottnarmstrong/yang-mills-informalization">Yang-Mills
@@ -244,27 +166,7 @@ flowchart LR
       proof units; it does not claim the underlying mapping as original. See
       the <a href="blueprint/outline.html#evidence-used-for-this-map">pinned attribution and methodological limits</a>.
     </p>
-    <h2 id="auto-5"><a id="before-opening-the-queue"></a>Before opening the queue<span style="margin-left: 1em"></span></h2>
-    <p>
-      Follow the <a href="docs/maintainers.html">maintainer launch checklist</a>, including selecting
-      licences and importing the source. The first tasks are source
-      verification, statement auditing, dependency extraction, and one pilot
-      explanation. Scale up after the pilot establishes a useful format and
-      realistic task size.
-    </p>
-    <p>
-      Local structural checks require Python 3.9 or newer:
-    </p>
-    <pre class="verbatim" xml:space="preserve">
-python3 scripts/check_blueprint.py
-python3 -m unittest discover -s tests</pre>
-    <p>
-      These checks validate metadata and review freshness. They do not compile
-      Lean, verify English mathematics, or reserve tasks. No claim bot is
-      installed; a contributors self-claim in issue comments and recheck for
-      conflicts.
-    </p>
-    <h2 id="auto-6"><a id="licence"></a>Licence<span style="margin-left: 1em"></span></h2>
+    <h2 id="auto-3"><a id="licence"></a>Licence<span style="margin-left: 1em"></span></h2>
     <p>
       Except where another notice applies, original material in this
       repository is licensed under the <a href="https://github.com/hairer/humanise-yang-mills/blob/main/LICENSE">Creative Commons Attribution
