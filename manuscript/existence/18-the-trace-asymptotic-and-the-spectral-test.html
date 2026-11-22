@@ -12,26 +12,28 @@
       collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
       left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
       font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
-      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
-      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
-      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
-      text-align: center } .wide { position: relative; margin-left: -0.4em }
-      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
-      .title-block { width: 100%; text-align: center } .title-block p {
-      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
-      .left-tab { text-align: left } .center-tab { text-align: center }
-      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
-      cursor: help; position: relative; } .balloon-anchor [hidden] {
-      margin-left: -999em; position: absolute; display: none; }
-      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
-      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
-      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
-      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
-      { float: right; position: relative; top: -1em; } .no-breaks {
-      white-space: nowrap; } .underline { text-decoration: underline; }
-      .overline { text-decoration: overline; } .strike-through {
-      text-decoration: line-through; } del { text-decoration: line-through
-      wavy red; } .fill-out { text-decoration: underline dotted; } 
+      dd p, dd .tmhtml-p { padding-top: 0em; } .subsup { display: inline;
+      vertical-align: -0.2em } .subsup td { padding: 0px; text-align: left}
+      .fraction { display: inline; vertical-align: -0.8em } .fraction td {
+      padding: 0px; text-align: center } .wide { position: relative;
+      margin-left: -0.4em } .accent { position: relative; margin-left: -0.4em;
+      top: -0.1em } .title-block { width: 100%; text-align: center } .tmhtml-p
+      { margin-top: 1em; margin-bottom: 1em } .title-block p, .title-block
+      .tmhtml-p { margin: 0px } .compact-block p, .compact-block .tmhtml-p {
+      margin-top: 0px; margin-bottom: 0px } .left-tab { text-align: left }
+      .center-tab { text-align: center } .balloon-anchor { border-bottom: 1px
+      dotted #000000; outline: none; cursor: help; position: relative; }
+      .balloon-anchor [hidden] { margin-left: -999em; position: absolute;
+      display: none; } .balloon-anchor: hover [hidden] { position: absolute;
+      left: 1em; top: 2em; z-index: 99; margin-left: 0; width: 500px; display:
+      inline-block; } .balloon-body { } .ornament { border-width: 1px;
+      border-style: solid; border-color: black; display: inline-block;
+      padding: 0.2em; } .right-tab { float: right; position: relative; top:
+      -1em; } .no-breaks { white-space: nowrap; } .underline {
+      text-decoration: underline; } .overline { text-decoration: overline; }
+      .strike-through { text-decoration: line-through; } del {
+      text-decoration: line-through wavy red; } .fill-out { text-decoration:
+      underline dotted; } 
     </style>
     <link href="max-html.css" rel="stylesheet" type="text/css"></link>
     <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
@@ -3002,7 +3004,7 @@ W \geqslant 0 \quad \Longrightarrow \quad W
       \chi\) on a common tail. The two real/imaginary channel charges may be
       equal; they are nevertheless counted twice.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Regular atoms.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         For a regular source of mass \(m\), use the actual small- and
@@ -3012,7 +3014,7 @@ W \geqslant 0 \quad \Longrightarrow \quad W
         costs \(W\), and the two cloud readouts cost at most \(2 Havm /
         \chi\). Including the motion factor \(O\) gives
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle \frac{m}{\chi} O (Wu + 2 Hav) \leqslant \frac{ym}{\chi}
       .\)
@@ -3027,7 +3029,7 @@ W \geqslant 0 \quad \Longrightarrow \quad W
       the effective-representation certificate; they are not inferred from a
       pointwise bound. Thus the cost pair is \((ym / \chi, \rho m)\).
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Basis atoms.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         Let \(e_{\alpha}\) be a nonconstant normalized basis column, and
@@ -3048,7 +3050,7 @@ W \geqslant 0 \quad \Longrightarrow \quad W
         \(\delta_x\) by <class style="font-style: normal">(<a href="#eq:trace-eve-probe-envelope">18.61</a>)</class>. Thus the
         actual principal probe error is bounded by
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle \pi (p) \Lambda L^d  \hspace{0.17em} 2 (e|u (x) | +
       \delta_x) + \delta_x
@@ -3088,7 +3090,7 @@ W \geqslant 0 \quad \Longrightarrow \quad W
       z^{\circ} \|_1\), where \((\mathcal{V}_L z)_{\alpha} = L^{d -
       g_{\alpha}} z_{\alpha}\).
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Forced atoms.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         Let a forced source have fine mass \(m \geqslant 0\), and set \(g =
@@ -3108,7 +3110,7 @@ W \geqslant 0 \quad \Longrightarrow \quad W
         same splitting calculation. The flagged profile identity there is
         required; equality of scalar densities alone would not justify it.
       </div>
-    </p>
+    </div>
     <p>
       Lemma <a href="#lem:ex-lattice-medal-gas-price">18.15</a> gives \(\rho g \leqslant y / \chi\) eventually.
       Consequently
@@ -3245,12 +3247,12 @@ W \geqslant 0 \quad \Longrightarrow \quad W
       at each order and bounding its finite ordered-partition sum by <class
       style="font-style: normal">(<a href="#eq:ex-lattice-tail-probe-sum">18.33</a>)</class>.<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Actual finite-rate receipts.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         In the construction the polynomial direction-growth constants are
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle h_k (x) = 4 KM \hspace{0.17em} C_{dk} (\sigma)  (1 + 4 L
       (R (x) + 2))^{dk},
@@ -4790,7 +4792,7 @@ e^{- \sigma b / 2} e^{\sigma |z|_1} |q (z) |
       ordered finpartition index set proves <class style="font-style: normal">(<a href="#eq:ex-lattice-local-probe">18.75</a>)</class>.<span
       style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The arrays in the selected construction.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         In the selected construction the probe is the composition of the
@@ -4805,7 +4807,7 @@ e^{- \sigma b / 2} e^{\sigma |z|_1} |q (z) |
         the covering lattice; the coefficient-growth receipt is \(\|W_k (y)\|
         \leqslant KW_{dk} (y)\). The actual array is its patched periodic lift
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle A^{(1)} (z) = V_k (z) = \left\{ \begin{array}{ll}
   W_k
@@ -5753,7 +5755,7 @@ c_k) q. \)</td>
       vector and to the duet's marked spatial site being the origin. It does
       not assert that the observed field values vanish.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The planted polynomial and its full moment.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         Fix an admitted window \((J, m, l)\) and retain the label \(b\)
@@ -5768,7 +5770,7 @@ c_k) q. \)</td>
         \(u\) to \(v \leqslant u\), and \(\textsf{B}_{v, u}\) for its
         observable adjoint. Define the following actual polynomials:
       </div>
-    </p>
+    </div>
     <table width="100%">
       <tr>
         <td align="center" width="100%"><a id="eq:coffer-planted-polynomial"></a>\(\displaystyle Q_N = R_N  \prod_{a \in
@@ -5853,7 +5855,7 @@ F_a), \qquad X_m =
       full moment identity, including all mixed terms, with the same partition
       function. It is stronger than a check of the singleton densities.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Constructing the two support ledgers.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         We construct the served representation on the opened centered-cell
@@ -5866,7 +5868,7 @@ F_a), \qquad X_m =
         below at their actual selected interfaces. The served representation
         and both support ledgers will be built from these data.
       </div>
-    </p>
+    </div>
     <p>
       Write \(\tau_i\) for the weight \(w_m\) marched from \(m\) to \(i\), and
       \(\Omega_i\) for the weight \(w_m / a\) marched by the same positive
@@ -10573,7 +10575,7 @@ t_i  | \Lambda
       follow below from their uniform short-test estimate and the derivative
       laws of the two tables.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Identifying the actual reference fields and their
       normalization.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
@@ -10585,7 +10587,7 @@ t_i  | \Lambda
         \(\text{obs}_d\) be passage to the on-shell Wick polynomial. The
         actual reference table is defined by
       </div>
-    </p>
+    </div>
     <table width="100%">
       <tr>
         <td align="center" width="100%"><a id="eq:scribe-reference-dictionary"></a>\(\displaystyle S_0  (\pi_{d_1}^0 c_{d_1}
@@ -10698,7 +10700,7 @@ J^0_{ab}
       now supplies input 3 without an additional reference-normalization
       assumption.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The tested-bound input for this lift.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The Ward comparison's (S4) is supplied by the quantitative invoice of
@@ -10710,7 +10712,7 @@ J^0_{ab}
         calibrated column isomorphism. The invoice gives, for every
         coefficient vector \(v\),
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle |Av - Tv|_1 \leqslant H^{- 1 / 2}  |Av|_1 .\)
     </center>
@@ -10740,7 +10742,7 @@ J^0_{ab}
       comparison's initial-level bound, with the same inverse reading and
       lift.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The adjacent-column receipt.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         Fix a level \(m\) beyond the grade-five entrance, and retain the
@@ -10749,7 +10751,7 @@ J^0_{ab}
         \(k \geqslant 1\) be the selected local forecast bound and \(r > 0\)
         the fixed local remainder transport bound at that transition. Put
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle z = | \text{core} \tilde{z}_{m + 1} |_1, \qquad y = |
       \text{core} \tilde{z}_m
@@ -10879,7 +10881,7 @@ L^5 z\).
       chart level and its summit gives the single ultrafilter-large set used
       in the Ward comparison's transport proof.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The actual branch recording family.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The recording estimates in the branch unit are applications of one
@@ -10897,7 +10899,7 @@ L^5 z\).
         to the already chosen local functions and their labels; they do not
         require a new purchase for each test point.
       </div>
-    </p>
+    </div>
     <p>
       The local analytic construction and healthy derivative calculation of
       Subsubsection <a href="#subsec:trace-charge-healthy-prices">18.25.7</a> apply to precisely these entries,
@@ -10974,7 +10976,7 @@ L^5 z\).
       three branch field limits and the principal and false weighted trace
       washout are supplied for this very history and these very chart maps.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Installing the normalized energy in the selected algebra.<span
       style="margin-left: 1em"></span></h6>
       <div style="display: inline">
@@ -10992,7 +10994,7 @@ L^5 z\).
         existence of a fixed tensor \(J\); it does not change the table or its
         finite-volume extraction.
       </div>
-    </p>
+    </div>
     <p>
       The annular-field construction of Proposition <a href="17-the-stress-tensor-and-ward-identities.html#prop:ex-lattice-annular-field">17.22</a> applied
       to this \(J\) gives its translation and angular response maps. The
@@ -11087,7 +11089,7 @@ K_{bj} R_4 (K) Q_{ij} .\)</td>
       restrict the later trace scalings: once constructed, \(J\), its scalar
       and all its Ward identities are fixed statements on \(S\).
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Centering preserves the physical Ward normalization.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         There is no scalar-normalization loss in passing from the raw energy
@@ -11101,7 +11103,7 @@ K_{bj} R_4 (K) Q_{ij} .\)</td>
         spectator fields, the contribution of the subtracted tensor to a
         translation shell is a sum of terms
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle - c_{ab}  \hspace{0.17em} S (\text{spectator fields}) 
       \int_{\mathbb{R}^4}
@@ -11145,7 +11147,7 @@ K_{bj} R_4 (K) Q_{ij} .\)</td>
       detector is fixed without using the interacting trace asymptotic or
       retaining an additional reference-identification premise.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>From chart comparison to the tested and shell limits.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The tested approach property of Subsection <a href="17-the-stress-tensor-and-ward-identities.html#sec:ex-lattice-firesky-gallery">17.2</a>, on the
@@ -11161,7 +11163,7 @@ K_{bj} R_4 (K) Q_{ij} .\)</td>
         zero. The derivative laws (4c) remain the laws of the selected and
         reference tables.
       </div>
-    </p>
+    </div>
     <p>
       We now check the stronger compact comparison needed in (4d). Use exactly
       the completed corrected maps of Theorem <a href="17-the-stress-tensor-and-ward-identities.html#thm:ex-lattice-selected-trace-gallery">17.5</a> and its <a
@@ -12899,12 +12901,12 @@ O ; x) .\)
       supplied by Corollary <a href="#prop:trace-selected-rounded-receipt">18.51</a>. All other steps are proved
       here or are results proved earlier in the text.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Configurations and the comparison window.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         For \(n \geqslant 1\) a configuration is
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle x = (x_0, \ldots, x_{n - 1}) \in (\mathbb{R}^4)^n\)
     </center>
@@ -12920,14 +12922,14 @@ O ; x) .\)
       \geqslant 10^{- 2}, |x|
 \leqslant 100\} .\)
     </center>
-    <p>
+    <div class="tmhtml-p">
       <h5>Rounding.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         For \(m > 0\) and \(x \in (\mathbb{R}^4)^n\) write \(\lceil mx
         \rceil\) for the coordinatewise ceiling, an element of
         \((\mathbb{Z}^4)^n\), and put
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle \rho_m (x) = m^{- 1}  \lceil mx \rceil .\)
     </center>
@@ -12945,7 +12947,7 @@ O ; x) .\)
       Rounding is idempotent: \(\lceil m \rho_m (x) \rceil = \lceil mx
       \rceil\), because \(m \rho_m (x)\) already has integer coordinates.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>The selected chart family data.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         We use the following data, indexed by \(i \in \mathbb{N}\), together
@@ -12953,7 +12955,7 @@ O ; x) .\)
         mesh&ndash;period pairs \((N, p)\) finer than its fused filter, along
         which the mesh \(N\) tends to infinity.
       </div>
-    </p>
+    </div>
     <ol>
       <dt>
         (G1)
@@ -13021,14 +13023,14 @@ O ; x) .\)
       idempotence of rounding, \(x\) is fit if and only if \(\rho_{m_i} (x)\)
       is fit.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>The pairwise receipt.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Fix \(i\), a grade \(d \leqslant i\), a configuration \(x\) fit at
         level \(i\), and two vectors \(e, e' \in E_d\). Write \(q = \rho_{m_i}
         (x)\). Put
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle j_0 = S_0  (e ; q_0), \qquad j_1 = S_0  (e' ; q_1),
       \qquad \kappa = S_0  (e,
@@ -13093,7 +13095,7 @@ e' ; q_0, q_1) - j_0 j_1,\)
       and substituting the one-point parts gives \(\Phi_{\{0, 1\}} = (f_0^{N,
       p} - j_0)  (f_1^{N, p} - j_1) - \kappa\).
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Phase inputs.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Let \(\mathcal{A}\), \(\Omega\), \(\Xi\) and \(\mu\) be the
@@ -13103,7 +13105,7 @@ e' ; q_0, q_1) - j_0 j_1,\)
         order, and let \(S_{\chi} (w) = \chi (M (w))\) be as in <class style="font-style: normal">(<a
         href="5-reflection-positivity-and-the-phase-decomposition.html#ex-phase-word">5.23</a>)</class>. We assume:
       </div>
-    </p>
+    </div>
     <ol>
       <dt>
         (Ph1)
@@ -13388,7 +13390,7 @@ e, U_i e' ; z_0, z_1) = S_{\chi}  (U_i e, U_i e'
       \(x (t)\) is coordinatewise separated, its coordinates being \(0\) and
       \(t / 2 \ne 0\) in each direction.<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Status.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Corollary <a href="#cor:trace-rounded-input">18.47</a> produces the pointwise, continuity and
@@ -13406,7 +13408,7 @@ e, U_i e' ; z_0, z_1) = S_{\chi}  (U_i e, U_i e'
         the moving-label and logarithmic clauses, and the reference
         normalization are separate inputs, discussed after Input <a href="#input:trace-scales">18.42</a>.
       </div>
-    </p>
+    </div>
     <h3 id="auto-268"><a id="subsec:trace-rounded-receipt"></a>18.22<span style="margin-left: 1em"></span>The pairwise receipt from the
     level budget<span style="margin-left: 1em"></span></h3>
     <p>
@@ -13422,14 +13424,14 @@ e, U_i e' ; z_0, z_1) = S_{\chi}  (U_i e, U_i e'
       show how the replica-root estimate of Subsection <a href="14-uniform-estimates-for-marked-correlations.html#sec:rank-root-normalization">14.19</a>
       yields (B), and attach its inputs to the selected funded family.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Charts at a fixed level.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Throughout, \(\mu_k \geqslant 1\) is the clock monitor of (G1), with
         \(\mu_k \to \infty\); it is the diverging monitor \(\mathcal{M}_k\) of
         Subsection <a href="14-uniform-estimates-for-marked-correlations.html#sec:rank-root-normalization">14.19</a>. Fix a grade cutoff \(d\) and let
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle M = M_d = d + 2\)
     </center>
@@ -13671,7 +13673,7 @@ e, U_i e' ; z_0, z_1) = S_{\chi}  (U_i e, U_i e'
       thresholds, and its conclusions hold for the resulting selection.<span
       style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Supply of the level budget.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         The bound <class style="font-style: normal">(<a href="#eq:trace-receipt-budget">18.202</a>)</class> is the
@@ -13679,7 +13681,7 @@ e, U_i e' ; z_0, z_1) = S_{\chi}  (U_i e, U_i e'
         allowance \(M\). Write \(q_0\) for the number of replica cells, which
         is also the site count of the selected output torus. With
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle I_k = \frac{\log \mu_k}{16 M}, \qquad a = e^{2 I_k} =
       \mu_k^{1 / (8 M)}
@@ -13781,7 +13783,7 @@ e, U_i e' ; z_0, z_1) = S_{\chi}  (U_i e, U_i e'
       preserving the exact prescribed radii, the background history and its
       extraction.<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Status.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         The conditional producer Proposition <a href="#prop:trace-rounded-receipt">18.50</a> continues to
@@ -13792,7 +13794,7 @@ e, U_i e' ; z_0, z_1) = S_{\chi}  (U_i e, U_i e'
         and representation constructions; it does not assert the receipt for
         an arbitrary chart with merely the same numerical scales.
       </div>
-    </p>
+    </div>
     <h4>18.22.1<span style="margin-left: 1em"></span>Removing rounding and subsequences<span
     style="margin-left: 1em"></span></h4>
     <p>
@@ -15203,13 +15205,13 @@ C_{\text{stage}} + 2 D_G \log z.\)
       frame chamber. All constructions used the same \((N, p)\), transport and
       gauge interfaces.<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The actual labels.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         For a fixed raw reference label \(v\) of grade \(d \leqslant 5\), the
         tested finite-height lift at frame \(j\) has coefficient bound
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle \| \text{col}_j (Lv)\|_1 \leqslant a_j^d 
       \hspace{0.17em} 2 (2\mathcal{M}_j)^2
@@ -15258,7 +15260,7 @@ a_j^5 T (1) .\)
       application uses the actual odd-sector spine transport; a summit
       coefficient bound for an unrelated label would not suffice.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The intermediate insertion and the served-representation seam.<span
       style="margin-left: 1em"></span></h6>
       <div style="display: inline">
@@ -15276,7 +15278,7 @@ a_j^5 T (1) .\)
         the same sound gauge interfaces. The two transition profiles have
         bounds
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle 2 \tau_{r + 1} a_{r + 1}^{- d} D_r  (g_{r + 1} +\|Z_{r +
       1} .x\|_1) \leqslant
@@ -15356,7 +15358,7 @@ a_j^5 T (1) .\)
       from the generic phase-grid discussion for the primary insertions used
       here.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Assembly of the actual Crown witness.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         <a id="par:trace-actual-crown"></a> The localizer just constructed is the grade-four test of
@@ -15372,7 +15374,7 @@ a_j^5 T (1) .\)
         \leqslant T (- 1800000)\). Suppose its actual healthy-region identity
         gives
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle |X_e - Y_e + c_e | \leqslant e^{- \text{prism}
       (\hat{\beta}_k)}, \qquad |X_e -
@@ -15395,13 +15397,13 @@ Y_e | \leqslant \hat{\beta}_k^M\)
       summation, scaling and signed-average argument above then produces the
       witness to which the Crown buffer applies.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Payment of the paired local lens estimate.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The moving-depth bound of each local lens can also be made explicit.
         Write \(t = \hat{\beta}_k\), \(p = \text{prism} (t)\) and set
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle w_r = T (1000000) t^{2 (r - j)}, \qquad j \leqslant r
       \leqslant k.\)
@@ -15662,7 +15664,7 @@ K}) = Z_e - \beta B_e + \text{div}
       signed axial average kills \((c_e)\), exactly as in the Crown assembly
       above.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Selecting and localizing the actual geometric current.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The current in this construction is selected from the inherited
@@ -15684,7 +15686,7 @@ K}) = Z_e - \beta B_e + \text{div}
         coupling increment \(v = \gamma \log L\) is fixed. Increasing the
         stage entry ensures
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle (\log t)^{- 1} \leqslant \min (b_{\ast}, a_{\ast} / 2),
       \quad (\log (t +

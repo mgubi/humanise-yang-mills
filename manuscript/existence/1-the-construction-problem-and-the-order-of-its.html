@@ -12,26 +12,28 @@
       collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
       left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
       font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
-      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
-      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
-      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
-      text-align: center } .wide { position: relative; margin-left: -0.4em }
-      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
-      .title-block { width: 100%; text-align: center } .title-block p {
-      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
-      .left-tab { text-align: left } .center-tab { text-align: center }
-      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
-      cursor: help; position: relative; } .balloon-anchor [hidden] {
-      margin-left: -999em; position: absolute; display: none; }
-      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
-      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
-      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
-      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
-      { float: right; position: relative; top: -1em; } .no-breaks {
-      white-space: nowrap; } .underline { text-decoration: underline; }
-      .overline { text-decoration: overline; } .strike-through {
-      text-decoration: line-through; } del { text-decoration: line-through
-      wavy red; } .fill-out { text-decoration: underline dotted; } 
+      dd p, dd .tmhtml-p { padding-top: 0em; } .subsup { display: inline;
+      vertical-align: -0.2em } .subsup td { padding: 0px; text-align: left}
+      .fraction { display: inline; vertical-align: -0.8em } .fraction td {
+      padding: 0px; text-align: center } .wide { position: relative;
+      margin-left: -0.4em } .accent { position: relative; margin-left: -0.4em;
+      top: -0.1em } .title-block { width: 100%; text-align: center } .tmhtml-p
+      { margin-top: 1em; margin-bottom: 1em } .title-block p, .title-block
+      .tmhtml-p { margin: 0px } .compact-block p, .compact-block .tmhtml-p {
+      margin-top: 0px; margin-bottom: 0px } .left-tab { text-align: left }
+      .center-tab { text-align: center } .balloon-anchor { border-bottom: 1px
+      dotted #000000; outline: none; cursor: help; position: relative; }
+      .balloon-anchor [hidden] { margin-left: -999em; position: absolute;
+      display: none; } .balloon-anchor: hover [hidden] { position: absolute;
+      left: 1em; top: 2em; z-index: 99; margin-left: 0; width: 500px; display:
+      inline-block; } .balloon-body { } .ornament { border-width: 1px;
+      border-style: solid; border-color: black; display: inline-block;
+      padding: 0.2em; } .right-tab { float: right; position: relative; top:
+      -1em; } .no-breaks { white-space: nowrap; } .underline {
+      text-decoration: underline; } .overline { text-decoration: overline; }
+      .strike-through { text-decoration: line-through; } del {
+      text-decoration: line-through wavy red; } .fill-out { text-decoration:
+      underline dotted; } 
     </style>
     <link href="max-html.css" rel="stylesheet" type="text/css"></link>
     <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
@@ -1236,7 +1238,7 @@
       changing the family in response to a requested sequence of periods would
       give a weaker statement.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>A caution about the target of this section.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         The public target formulated after Subsection <a href="#ex-construction-headline">1.1</a> is one
@@ -1264,7 +1266,7 @@
         detailed construction and an explicit account of the remaining
         assembly.
       </div>
-    </p>
+    </div>
     <p>
       We assume familiarity with finite-dimensional Lie groups, probability
       Haar measure on compact groups, Lebesgue integration and dominated
@@ -1545,7 +1547,7 @@ S^{\chi}_{\boldsymbol{A}} (\boldsymbol{x})  \hspace{0.17em}
         requested order and refinement. The lattice family does not.</i>
       </p>
     </div>
-    <p>
+    <div class="tmhtml-p">
       <h5>Scope.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         This formulation selects conclusions of the construction; it does not
@@ -1558,7 +1560,7 @@ S^{\chi}_{\boldsymbol{A}} (\boldsymbol{x})  \hspace{0.17em}
         href="19-the-common-scale-choice-and-final-assembly.html#eq:public-family-running">19.29</a>)</class> identify this value with the bare
         coefficients of this very Wilson family.
       </div>
-    </p>
+    </div>
     <p>
       No uniqueness of the infinite-volume limit or independence of the
       spacing sequence, local sections or blocking scheme is claimed. The
@@ -1906,12 +1908,12 @@ S^{\chi}_{\boldsymbol{A}} (\boldsymbol{x})  \hspace{0.17em} d
       construction. The formal development and its review are documented in
       the accompanying blueprint. We give the construction here.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>The field.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Let \(\mu\) be the measure on \(\mathbb{R}^4\) with density
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle w (p) = \frac{(p^2)^2}{\log^2 (e + p^2)}, \qquad p^2 =
       E^2 -
@@ -1941,7 +1943,7 @@ S^{\chi}_{\boldsymbol{A}} (\boldsymbol{x})  \hspace{0.17em} d
       of the polynomials in the momenta that distinct Wick monomials produce,
       this shows that every nonzero label acts nontrivially.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>The relativistic theory.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         The Hilbert space is the closed span of the vectors obtained by
@@ -1954,7 +1956,7 @@ S^{\chi}_{\boldsymbol{A}} (\boldsymbol{x})  \hspace{0.17em} d
         \geqslant 1\) the total energy is positive almost everywhere; no mass
         gap is needed), and locality. Let
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle S (\xi) = \int e^{- | \xi | E}  \hspace{0.17em} d \mu
       (p), \qquad \xi \in
@@ -1972,7 +1974,7 @@ S^{\chi}_{\boldsymbol{A}} (\boldsymbol{x})  \hspace{0.17em} d
       continuation to complex times and the boundary values <class style="font-style: normal">(<a
       href="#eq:public-selected-boundary">1.7</a>)</class> are obtained from the same momentum integrals.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Operator products.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         The expansion of a cluster of Wick monomials is given by Wick's
@@ -1991,13 +1993,13 @@ S^{\chi}_{\boldsymbol{A}} (\boldsymbol{x})  \hspace{0.17em} d
         uniform in the allowed positions, and for fixed parameters the factor
         \(r^{- \epsilon}\) absorbs the constants.
       </div>
-    </p>
-    <p>
+    </div>
+    <div class="tmhtml-p">
       <h5>The trace requirement.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         On the time axis, with \(e_t = (\boldsymbol{0}, 1)\),
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle \lim_{r \downarrow 0} r^8 \log^2 (r^{- 1}) 
       \hspace{0.17em} S (re_t) = 384 \pi
@@ -2010,7 +2012,7 @@ S^{\chi}_{\boldsymbol{A}} (\boldsymbol{x})  \hspace{0.17em} d
       href="19-the-common-scale-choice-and-final-assembly.html#ex-trace-limit">19.32</a>)</class> holds with the required constant. The profile
       exclusion follows from this asymptotic alone, by Theorem <a href="18-the-trace-asymptotic-and-the-spectral-test.html#thm:profile-exclusion">18.40</a>.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>The lattice clauses.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         The correlations just described are multilinear in the fields, so the
@@ -2023,13 +2025,13 @@ S^{\chi}_{\boldsymbol{A}} (\boldsymbol{x})  \hspace{0.17em} d
         and one channel with zero field is added in each grade; it relies on
         the vanishing of the correlations when a field is zero.
       </div>
-    </p>
-    <p>
+    </div>
+    <div class="tmhtml-p">
       <h5>Why the target admits this.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Three features of the target, each already noted above, combine.
       </div>
-    </p>
+    </div>
     <ol>
       <li>
         <p>
@@ -2061,7 +2063,7 @@ S^{\chi}_{\boldsymbol{A}} (\boldsymbol{x})  \hspace{0.17em} d
         </p>
       </li>
     </ol>
-    <p>
+    <div class="tmhtml-p">
       <h5>Relation to the review of the source.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         The weakness of the target is not a new observation in its general
@@ -2083,8 +2085,8 @@ S^{\chi}_{\boldsymbol{A}} (\boldsymbol{x})  \hspace{0.17em} d
         stronger combined target, which refers to the lattice family of the
         construction.
       </div>
-    </p>
-    <p>
+    </div>
+    <div class="tmhtml-p">
       <h5>What this does and does not say.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         The proposition concerns the target as a specification. It shows that
@@ -2102,7 +2104,7 @@ S^{\chi}_{\boldsymbol{A}} (\boldsymbol{x})  \hspace{0.17em} d
         That question is not settled by the target, since the target is
         satisfied by one, and it is not addressed in this article.
       </div>
-    </p>
+    </div>
     
     <div class="ym-chapter-nav"><span class="ym-chapter-prev"></span><span class="ym-chapter-up"><a href="../existence.html">Contents</a></span><span class="ym-chapter-next"><a href="2-outline-of-the-argument.html">2 Outline of the argument &rarr;</a></span></div>
 </body>

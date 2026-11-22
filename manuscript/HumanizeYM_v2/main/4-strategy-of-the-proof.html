@@ -12,26 +12,28 @@
       collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
       left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
       font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
-      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
-      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
-      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
-      text-align: center } .wide { position: relative; margin-left: -0.4em }
-      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
-      .title-block { width: 100%; text-align: center } .title-block p {
-      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
-      .left-tab { text-align: left } .center-tab { text-align: center }
-      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
-      cursor: help; position: relative; } .balloon-anchor [hidden] {
-      margin-left: -999em; position: absolute; display: none; }
-      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
-      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
-      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
-      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
-      { float: right; position: relative; top: -1em; } .no-breaks {
-      white-space: nowrap; } .underline { text-decoration: underline; }
-      .overline { text-decoration: overline; } .strike-through {
-      text-decoration: line-through; } del { text-decoration: line-through
-      wavy red; } .fill-out { text-decoration: underline dotted; } 
+      dd p, dd .tmhtml-p { padding-top: 0em; } .subsup { display: inline;
+      vertical-align: -0.2em } .subsup td { padding: 0px; text-align: left}
+      .fraction { display: inline; vertical-align: -0.8em } .fraction td {
+      padding: 0px; text-align: center } .wide { position: relative;
+      margin-left: -0.4em } .accent { position: relative; margin-left: -0.4em;
+      top: -0.1em } .title-block { width: 100%; text-align: center } .tmhtml-p
+      { margin-top: 1em; margin-bottom: 1em } .title-block p, .title-block
+      .tmhtml-p { margin: 0px } .compact-block p, .compact-block .tmhtml-p {
+      margin-top: 0px; margin-bottom: 0px } .left-tab { text-align: left }
+      .center-tab { text-align: center } .balloon-anchor { border-bottom: 1px
+      dotted #000000; outline: none; cursor: help; position: relative; }
+      .balloon-anchor [hidden] { margin-left: -999em; position: absolute;
+      display: none; } .balloon-anchor: hover [hidden] { position: absolute;
+      left: 1em; top: 2em; z-index: 99; margin-left: 0; width: 500px; display:
+      inline-block; } .balloon-body { } .ornament { border-width: 1px;
+      border-style: solid; border-color: black; display: inline-block;
+      padding: 0.2em; } .right-tab { float: right; position: relative; top:
+      -1em; } .no-breaks { white-space: nowrap; } .underline {
+      text-decoration: underline; } .overline { text-decoration: overline; }
+      .strike-through { text-decoration: line-through; } del {
+      text-decoration: line-through wavy red; } .fill-out { text-decoration:
+      underline dotted; } 
     </style>
     <link href="max-html.css" rel="stylesheet" type="text/css"></link>
     <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
@@ -754,7 +756,7 @@
         </tr></tbody>
       </table>
     </div>
-    <p>
+    <div class="tmhtml-p">
       <h5>One coupling to tune.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         In the local radial-gauge expansion of a gauge-invariant local term
@@ -773,8 +775,8 @@
         plays the role of the localization operator of Bauerschmidt, Brydges
         and Slade [<a href="references.html#bib-BauerschmidtBrydgesSlade2019">6</a>, &sect;5.2].
       </div>
-    </p>
-    <p>
+    </div>
+    <div class="tmhtml-p">
       <h5>The scales.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Write, at one level, \(b = \hat{\beta}_m\) for the reference
@@ -787,7 +789,7 @@
         that size enlarged by \(M\), and \(t \to 0\). The comparisons that fix
         these choices are, for \(\beta \asymp b\):
       </div>
-    </p>
+    </div>
     <center>
       <p style="margin-top: 0.5em; margin-bottom: 0.5em">
         <font style="font-size: 84.0%"><table style="display: inline-table; vertical-align: middle">
@@ -821,7 +823,7 @@
       every fixed \(k\) but much larger than \(e^{- cM^2}\); this leaves room
       for the combinatorial losses of the forced terms.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>The cancellations.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Two cancellations make the regular bound contract. First, an incoming
@@ -846,8 +848,8 @@
         / 20}\), and long paths, large supports and products with an incoming
         activity also stay below \({b'}^{- 23 / 20}\).
       </div>
-    </p>
-    <p>
+    </div>
+    <div class="tmhtml-p">
       <h5>Localizing the cancellations.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         For the remaining terms, estimates of sums over reflected tori yield
@@ -871,7 +873,7 @@
         the same local formula on \(\Lambda_i\) with its flat value
         subtracted, and put
       </div>
-    </p>
+    </div>
     <table width="100%">
       <tr>
         <td align="center" width="100%"><a id="eq:five-torus"></a>\(\displaystyle \lambda_i = \frac{(- 1)^i
@@ -930,7 +932,7 @@
       As \(23 / 20 > 11 / 10\), the localized terms satisfy the regular
       activity bound with room to spare.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Large fields.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         The estimates keep the configurations with large fields; they never
@@ -953,7 +955,7 @@
         kernel is positive; it does not require any activity to be
         nonnegative.
       </div>
-    </p>
+    </div>
     <p>
       Figure <a href="#fig:rg-marked-tracks">5</a> separates the singleton and mixed contributions
       carried by the same integration history.
@@ -979,7 +981,7 @@
         </tr></tbody>
       </table>
     </div>
-    <p>
+    <div class="tmhtml-p">
       <h5>Growing block ratios.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         The drift error of one step is bounded by a constant
@@ -1004,7 +1006,7 @@
         the ratio, the others may depend on a stage whose ratio is already
         fixed (Section <a href="9-constants-and-order-of-choice.html#sec:constants">9</a>).
       </div>
-    </p>
+    </div>
     <h3 id="auto-25"><a id="sec:tuning-convergence"></a>4.2<span style="margin-left: 1em"></span>Tuning, uniqueness and
     convergence<span style="margin-left: 1em"></span></h3>
     <p>

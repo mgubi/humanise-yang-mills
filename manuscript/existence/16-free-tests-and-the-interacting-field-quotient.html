@@ -12,26 +12,28 @@
       collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
       left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
       font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
-      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
-      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
-      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
-      text-align: center } .wide { position: relative; margin-left: -0.4em }
-      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
-      .title-block { width: 100%; text-align: center } .title-block p {
-      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
-      .left-tab { text-align: left } .center-tab { text-align: center }
-      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
-      cursor: help; position: relative; } .balloon-anchor [hidden] {
-      margin-left: -999em; position: absolute; display: none; }
-      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
-      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
-      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
-      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
-      { float: right; position: relative; top: -1em; } .no-breaks {
-      white-space: nowrap; } .underline { text-decoration: underline; }
-      .overline { text-decoration: overline; } .strike-through {
-      text-decoration: line-through; } del { text-decoration: line-through
-      wavy red; } .fill-out { text-decoration: underline dotted; } 
+      dd p, dd .tmhtml-p { padding-top: 0em; } .subsup { display: inline;
+      vertical-align: -0.2em } .subsup td { padding: 0px; text-align: left}
+      .fraction { display: inline; vertical-align: -0.8em } .fraction td {
+      padding: 0px; text-align: center } .wide { position: relative;
+      margin-left: -0.4em } .accent { position: relative; margin-left: -0.4em;
+      top: -0.1em } .title-block { width: 100%; text-align: center } .tmhtml-p
+      { margin-top: 1em; margin-bottom: 1em } .title-block p, .title-block
+      .tmhtml-p { margin: 0px } .compact-block p, .compact-block .tmhtml-p {
+      margin-top: 0px; margin-bottom: 0px } .left-tab { text-align: left }
+      .center-tab { text-align: center } .balloon-anchor { border-bottom: 1px
+      dotted #000000; outline: none; cursor: help; position: relative; }
+      .balloon-anchor [hidden] { margin-left: -999em; position: absolute;
+      display: none; } .balloon-anchor: hover [hidden] { position: absolute;
+      left: 1em; top: 2em; z-index: 99; margin-left: 0; width: 500px; display:
+      inline-block; } .balloon-body { } .ornament { border-width: 1px;
+      border-style: solid; border-color: black; display: inline-block;
+      padding: 0.2em; } .right-tab { float: right; position: relative; top:
+      -1em; } .no-breaks { white-space: nowrap; } .underline {
+      text-decoration: underline; } .overline { text-decoration: overline; }
+      .strike-through { text-decoration: line-through; } del {
+      text-decoration: line-through wavy red; } .fill-out { text-decoration:
+      underline dotted; } 
     </style>
     <link href="max-html.css" rel="stylesheet" type="text/css"></link>
     <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
@@ -5023,7 +5025,7 @@ y^{\alpha - e_i - e_j}\) vanishes unless \(i, j\) lie in
       |p|_1\). Since \(|p|_1 \leqslant B |Au|_1\), the claim follows.<span
       style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The polynomial pre-pin and its normalization.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The primary coefficient space and the polynomial jet space have
@@ -5033,7 +5035,7 @@ y^{\alpha - e_i - e_j}\) vanishes unless \(i, j\) lie in
         finitely many jet variables are positive integers. Fix \(c_d \geqslant
         1\) such that
       </div>
-    </p>
+    </div>
     <table width="100%">
       <tr>
         <td align="center" width="100%"><a id="eq:rank-exposure-cost"></a>\(\displaystyle |v|_1 \leqslant c_d 
@@ -5289,9 +5291,9 @@ a_d C_b \leqslant H^{\gamma}, \qquad \tau
       calibrated-list data. It also distinguishes the covariance used in the
       coefficient reading from the polynomial evaluated on a physical field.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Constructing the raw polynomial and its Gaussian reading<span style="margin-left: 1em"></span></h5>
-    </p>
+    </div>
     <p>
       The terminal approximation and its Gaussian reading use two related
       polynomials. We distinguish them before giving the estimates. For a
@@ -5348,7 +5350,7 @@ a_d C_b \leqslant H^{\gamma}, \qquad \tau
       polynomial transports, not an assertion that a cutoff nonlinear sector
       integral is already Gaussian.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The Taylor polynomial of the calibrated regular list.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         Here are explicit sufficient data for this construction, retaining
@@ -5363,7 +5365,7 @@ a_d C_b \leqslant H^{\gamma}, \qquad \tau
         \geqslant d\). If \(e_a\) is the corresponding nonnegative direction
         bound, the calibrated bounds needed are
       </div>
-    </p>
+    </div>
     <table width="100%">
       <tr>
         <td align="center" width="100%"><a id="eq:rank-list-input"></a>\(\displaystyle \sum_{a \text{ near}}
@@ -5514,7 +5516,7 @@ n_b)^D \eta M_u,\)
       <class style="font-style: normal">(<a href="#eq:rank-ray-comparison">16.61</a>)</class> with \(C_b = C (1 + b)^v\)
       and \(\tau = \theta\), independently of the number of links.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Invariant-frame membership.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The original atlas covariance has the form \(K_{(x, a), (y, b)} =
@@ -5535,8 +5537,8 @@ n_b)^D \eta M_u,\)
         This proves the frame-membership hypothesis of Lemma <a href="#lem:rank-growing-wick-pin">16.22</a>
         for this atlas; small entries alone would not prove it.
       </div>
-    </p>
-    <p>
+    </div>
+    <div class="tmhtml-p">
       <h6>Healthy-field approximation by the raw polynomial.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         Use the axial paths based at the origin in the nonwrapping patch.
@@ -5547,7 +5549,7 @@ n_b)^D \eta M_u,\)
         vector \(x\) and the linear sum \(y\) of the same plaquette curvatures
         divided by \(\theta\) satisfy
       </div>
-    </p>
+    </div>
     <table width="100%">
       <tr>
         <td align="center" width="100%"><a id="eq:rank-axial-terminal-error"></a>\(\displaystyle \|x\| \leqslant r := 2 a
@@ -5658,7 +5660,7 @@ n_b)^D \eta M_u,\)
       terminal stamp; they are not a bound for evaluating \(\mathcal{H}u\) on
       the physical field.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The terminal mask correction and the lift's bound.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         Let \(f_u\) be the near sum with each original support mask restored
@@ -5670,7 +5672,7 @@ n_b)^D \eta M_u,\)
         M_u\) on every field: each masked regular term is bounded by its own
         zeroth-order bound. There is the exact decomposition
       </div>
-    </p>
+    </div>
     <table width="100%">
       <tr>
         <td align="center" width="100%"><a id="eq:rank-terminal-three-pieces"></a>\(\displaystyle f_u = \chi W_u + \chi
@@ -5710,7 +5712,7 @@ F_u^{\text{near}}) .\)</td>
       supports and pieces; the value estimate is not a substitute for those
       separate compiler hypotheses.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Attaching the lists to the selected coefficient.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         Here are the precise data furnished by the calibrated family used at
@@ -5721,7 +5723,7 @@ F_u^{\text{near}}) .\)</td>
         Its regular remainder is a countable family \((X_a, h_a)\), with
         nonnegative direction bounds \(e_a\), such that
       </div>
-    </p>
+    </div>
     <table width="100%">
       <tr>
         <td align="center" width="100%"><a id="eq:rank-selected-cap"></a>\(\displaystyle \sum_a e^{e_k q_a} e_a
@@ -5779,7 +5781,7 @@ F_u^{\text{near}}) .\)</td>
       all axial reads. This checks the support, projection and locality
       conditions of the Taylor construction.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Paying the order and columns on one calendar.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         Choose \(D\) before the stage profile, large enough for the fixed
@@ -5790,7 +5792,7 @@ F_u^{\text{near}}) .\)</td>
         = c_{J (k)}\). Put \(\gamma = 1 / (16 (D + 2))\). For fixed \(c_j\)
         there is a finite threshold \(s_j\) such that
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle c_j \leqslant \exp \{\gamma (\log \log s)^2 \}  \quad (s
       \geqslant s_j) .\)
@@ -5821,14 +5823,14 @@ F_u^{\text{near}}) .\)</td>
       endpoint. They prove the quantitative hypotheses of the pre-pin and
       terminal estimates on that endpoint simultaneously.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Which part of the birth is replaced.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         Write \(h_u^{\text{wide}}\) for the wide sum with its original masks.
         The selected coefficient's exponential entry, in physical
         normalization, is exactly
       </div>
-    </p>
+    </div>
     <table width="100%">
       <tr>
         <td align="center" width="100%"><a id="eq:rank-selected-entry-split"></a>\(\displaystyle F_u^{\text{exp}} = f_u +
@@ -6235,7 +6237,7 @@ y^4\)
       of \(N, p\) and of the chosen chart with bounded arc. This proves
       (F3).<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Status.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The actual restarted construction now supplies (V), and the preceding
@@ -6250,7 +6252,7 @@ y^4\)
         joint chart selection or the stress calibration required by the trace
         endpoint.
       </div>
-    </p>
+    </div>
     <h3 id="auto-230"><a id="sec:actual-phase-detector-moments"></a>16.9<span style="margin-left: 1em"></span>All powers of the corrected
     phase detectors<span style="margin-left: 1em"></span></h3>
     <p>

@@ -12,26 +12,28 @@
       collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
       left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
       font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
-      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
-      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
-      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
-      text-align: center } .wide { position: relative; margin-left: -0.4em }
-      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
-      .title-block { width: 100%; text-align: center } .title-block p {
-      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
-      .left-tab { text-align: left } .center-tab { text-align: center }
-      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
-      cursor: help; position: relative; } .balloon-anchor [hidden] {
-      margin-left: -999em; position: absolute; display: none; }
-      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
-      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
-      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
-      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
-      { float: right; position: relative; top: -1em; } .no-breaks {
-      white-space: nowrap; } .underline { text-decoration: underline; }
-      .overline { text-decoration: overline; } .strike-through {
-      text-decoration: line-through; } del { text-decoration: line-through
-      wavy red; } .fill-out { text-decoration: underline dotted; } 
+      dd p, dd .tmhtml-p { padding-top: 0em; } .subsup { display: inline;
+      vertical-align: -0.2em } .subsup td { padding: 0px; text-align: left}
+      .fraction { display: inline; vertical-align: -0.8em } .fraction td {
+      padding: 0px; text-align: center } .wide { position: relative;
+      margin-left: -0.4em } .accent { position: relative; margin-left: -0.4em;
+      top: -0.1em } .title-block { width: 100%; text-align: center } .tmhtml-p
+      { margin-top: 1em; margin-bottom: 1em } .title-block p, .title-block
+      .tmhtml-p { margin: 0px } .compact-block p, .compact-block .tmhtml-p {
+      margin-top: 0px; margin-bottom: 0px } .left-tab { text-align: left }
+      .center-tab { text-align: center } .balloon-anchor { border-bottom: 1px
+      dotted #000000; outline: none; cursor: help; position: relative; }
+      .balloon-anchor [hidden] { margin-left: -999em; position: absolute;
+      display: none; } .balloon-anchor: hover [hidden] { position: absolute;
+      left: 1em; top: 2em; z-index: 99; margin-left: 0; width: 500px; display:
+      inline-block; } .balloon-body { } .ornament { border-width: 1px;
+      border-style: solid; border-color: black; display: inline-block;
+      padding: 0.2em; } .right-tab { float: right; position: relative; top:
+      -1em; } .no-breaks { white-space: nowrap; } .underline {
+      text-decoration: underline; } .overline { text-decoration: overline; }
+      .strike-through { text-decoration: line-through; } del {
+      text-decoration: line-through wavy red; } .fill-out { text-decoration:
+      underline dotted; } 
     </style>
     <link href="max-html.css" rel="stylesheet" type="text/css"></link>
     <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
@@ -866,7 +868,7 @@ dx, \qquad (\mathcal{W}_{\text{rel}} \psi)
       particular \(G_{\Theta}\) is real, nonnegative and nonincreasing.<span
       style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Comparison at prescribed radii.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Use the scaling frames of Definition <a href="6-the-continuum-limit-stress-phases-trace-and.html#def:D12">6.6</a>:
@@ -881,7 +883,7 @@ dx, \qquad (\mathcal{W}_{\text{rel}} \psi)
         along the ordered limits retained in the proof of Lemma <a href="15-infinite-volume-and-field-calculus.html#lem:F2">15.5</a>;
         the radius level \(n_i\) precedes the insertion level \(k_i\).
       </div>
-    </p>
+    </div>
     <p>
       The next lemma extends Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G2.1">16.8</a> to prescribed radii. Its
       proof also transfers the derivative argument of <class style="font-style: normal">(<a href="16-free-fields-ward-identities-and-rotations.html#eq:G-derivative-limit">16.23</a>)</class>
@@ -1141,7 +1143,7 @@ d}^{\text{sc}} A\) with the response of
       \kappa_G \log (1 / a_n)\), the imposed bound on \(u \log M_n\) proves
       <class style="font-style: normal">(<a href="#eq:I-adjustable">18.1</a>)</class>.<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Tensor coordinates.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Set \(L = T^{\text{Max}}\), \(D_{ab} = \delta_{ab}
@@ -1152,7 +1154,7 @@ d}^{\text{sc}} A\) with the response of
         Q_{ab}\) and \(D = \tfrac{1}{4} \delta Q_{\text{tot}}\); in the basis
         \(Z^{(1)}, Z^{(2)}, Z^{(3)}\) of the proof of Lemma <a href="16-free-fields-ward-identities-and-rotations.html#lem:G1.1">16.1</a>,
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle L = - \tfrac{1}{2} Z^{(1)} + \tfrac{1}{4} Z^{(2)} -
       Z^{(3)}, \qquad \Xi =
@@ -1214,7 +1216,7 @@ c} \langle F_{ac}, \partial_b F_{ac} \rangle\).
       \(v_{\text{eom}} = (0, 0, 1)\) and \(\rho_{\text{tr}} (v_{\text{eom}}) =
       0\); thus \(V_5\) is two dimensional.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Lattice stress current.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         We construct the lattice insertions from plaquette curvatures. Let
@@ -1222,7 +1224,7 @@ c} \langle F_{ac}, \partial_b F_{ac} \rangle\).
         without its coupling, defined in Section <a href="12-path-actions-and-the-one-loop-coupling.html#subsec:C-matching">12.2</a>, and let
         \(\textsf{s}_a q (x) = q (x + e_a)\) be the lattice shift.
       </div>
-    </p>
+    </div>
     <p style="margin-top: 1em">
       <strong class="enunciation-name">Definition <class style="font-style: normal">18.4</class>. </strong><class
       style="font-style: normal"><strong>(Lattice stress current) </strong></class><a id="def:I-current"></a> At
@@ -1252,14 +1254,14 @@ x} f_{b, e^{\text{dir}}} (x)
       identities (a)&ndash;(b) of Lemma <a href="#lem:I-regulator">18.5</a> below with \(q = 0\)
       and \(\textsf{t} = 0\).
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Block transfer.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         The averaging kernels must respect the particular difference
         \(\nabla_a\). For odd block ratio \(\ell\), define commuting finite
         sums
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle \textsf{M}_a = \ell^{- 1}  \sum_{j = 0}^{\ell - 1}
       \textsf{s}_a^j, \qquad
@@ -1397,13 +1399,13 @@ h_{\text{fr}}) \tilde{Q} (U, h_{\text{fr}})^{-
       operations on the local contractions defining \(\Xi, D\) give
       \(B_i^{\Xi}, B_i^D\).
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Extraction of the scalar coefficient.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         We first calculate the scalar coefficient before marked transport.
         For a chart function \(F\) define its Hessian Fourier kernel by
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle \hat{F}_{c \alpha, c \alpha}  (p, q) = \sum_{x, y} e^{i
       (p \cdot x + q \cdot
@@ -1684,7 +1686,7 @@ y)} D^2 F (0) [e_{x, c, \alpha}, e_{y, c, \alpha}]
       \infty\). This proves the limit without differentiating an asymptotic
       error.<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>A stability lemma.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         The next lemma gives a criterion for raw coefficient maps to converge
@@ -1692,7 +1694,7 @@ y)} D^2 F (0) [e_{x, c, \alpha}, e_{y, c, \alpha}]
         these maps into functionals that read \(\rho_{\text{tr}}\) with a
         rate.
       </div>
-    </p>
+    </div>
     <div class="theorem">
       <p style="margin-top: 1em; margin-bottom: 1em">
         <strong class="enunciation-name">Lemma <class style="font-style: normal">18.6</class>. </strong><i><class
@@ -1770,7 +1772,7 @@ y)} D^2 F (0) [e_{x, c, \alpha}, e_{y, c, \alpha}]
       stated identities and estimate follow by composition with \(t\).<span
       style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Transfer to the continuum.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Put \(b_i = \hat{\beta}_{k_i}\), \(E_i = \exp ((\log \log b_i)^2 /
@@ -1783,7 +1785,7 @@ y)} D^2 F (0) [e_{x, c, \alpha}, e_{y, c, \alpha}]
         href="16-free-fields-ward-identities-and-rotations.html#lem:G2.2">16.10</a>. Functionals below act on \(V_5\), with any fixed
         norm.
       </div>
-    </p>
+    </div>
     <div style="margin-top: 1em; margin-bottom: 1em">
       <table style="width: 100%">
         <tbody><tr>
@@ -1832,7 +1834,7 @@ y)} D^2 F (0) [e_{x, c, \alpha}, e_{y, c, \alpha}]
         </tr></tbody>
       </table>
     </div>
-    <p>
+    <div class="tmhtml-p">
       <h5>Why a rate is needed.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         The divergence of the amplified stress field \(\beta_i B_i^L\) may
@@ -1846,7 +1848,7 @@ y)} D^2 F (0) [e_{x, c, \alpha}, e_{y, c, \alpha}]
         this accuracy; its proof follows. Here \(\Upsilon\) ranges over the
         indicated tensors.
       </div>
-    </p>
+    </div>
     <div class="theorem">
       <p style="margin-top: 1em">
         <strong class="enunciation-name">Lemma <class style="font-style: normal">18.8</class>. </strong><i><class

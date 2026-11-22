@@ -12,26 +12,28 @@
       collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
       left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
       font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
-      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
-      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
-      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
-      text-align: center } .wide { position: relative; margin-left: -0.4em }
-      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
-      .title-block { width: 100%; text-align: center } .title-block p {
-      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
-      .left-tab { text-align: left } .center-tab { text-align: center }
-      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
-      cursor: help; position: relative; } .balloon-anchor [hidden] {
-      margin-left: -999em; position: absolute; display: none; }
-      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
-      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
-      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
-      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
-      { float: right; position: relative; top: -1em; } .no-breaks {
-      white-space: nowrap; } .underline { text-decoration: underline; }
-      .overline { text-decoration: overline; } .strike-through {
-      text-decoration: line-through; } del { text-decoration: line-through
-      wavy red; } .fill-out { text-decoration: underline dotted; } 
+      dd p, dd .tmhtml-p { padding-top: 0em; } .subsup { display: inline;
+      vertical-align: -0.2em } .subsup td { padding: 0px; text-align: left}
+      .fraction { display: inline; vertical-align: -0.8em } .fraction td {
+      padding: 0px; text-align: center } .wide { position: relative;
+      margin-left: -0.4em } .accent { position: relative; margin-left: -0.4em;
+      top: -0.1em } .title-block { width: 100%; text-align: center } .tmhtml-p
+      { margin-top: 1em; margin-bottom: 1em } .title-block p, .title-block
+      .tmhtml-p { margin: 0px } .compact-block p, .compact-block .tmhtml-p {
+      margin-top: 0px; margin-bottom: 0px } .left-tab { text-align: left }
+      .center-tab { text-align: center } .balloon-anchor { border-bottom: 1px
+      dotted #000000; outline: none; cursor: help; position: relative; }
+      .balloon-anchor [hidden] { margin-left: -999em; position: absolute;
+      display: none; } .balloon-anchor: hover [hidden] { position: absolute;
+      left: 1em; top: 2em; z-index: 99; margin-left: 0; width: 500px; display:
+      inline-block; } .balloon-body { } .ornament { border-width: 1px;
+      border-style: solid; border-color: black; display: inline-block;
+      padding: 0.2em; } .right-tab { float: right; position: relative; top:
+      -1em; } .no-breaks { white-space: nowrap; } .underline {
+      text-decoration: underline; } .overline { text-decoration: overline; }
+      .strike-through { text-decoration: line-through; } del {
+      text-decoration: line-through wavy red; } .fill-out { text-decoration:
+      underline dotted; } 
     </style>
     <link href="max-html.css" rel="stylesheet" type="text/css"></link>
     <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
@@ -724,7 +726,7 @@
         </p>
       </dd>
     </ol>
-    <p>
+    <div class="tmhtml-p">
       <h5>Induction scheme.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Sections <a href="#sec:partII-B">11</a>&ndash;<a href="13-activities-and-the-inductive-step.html#sec:partII-D">13</a> prove one descending
@@ -746,7 +748,7 @@
         division (Lemma <a href="12-path-actions-and-the-one-loop-coupling.html#lem:C3">12.5</a>) and gauge completion (Lemma <a
         href="12-path-actions-and-the-one-loop-coupling.html#lem:C5">12.7</a>) do not use the induction.
       </div>
-    </p>
+    </div>
     <p>
       Throughout, use the group and metric of Definition <a href="2-definitions.html#def:D01">2.1</a>, the
       Wilson term <class style="font-style: normal">(<a href="2-definitions.html#eq:I12-price-chord">2.1</a>)</class>, and the level
@@ -1136,7 +1138,7 @@ U)\), and apply the induction hypothesis
       invariance of Haar measure. Their product and the tag sum prove the
       second identity.<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Measurability and covariance of the block kernel.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         The branch tests are Borel; unique compact minimizers depend
@@ -1151,7 +1153,7 @@ U)\), and apply the induction hypothesis
         minimizing branches and reindexing on the other branches therefore
         give
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle k^{(m)}_{\beta} (U^{\gamma}, V^{\gamma \circ \iota}) =
       k^{(m)}_{\beta} (U, V),
@@ -1932,7 +1934,7 @@ W_F - (W_F d_c - d_f L) \eta .\)
     </p>
     <h3 id="auto-67"><a id="subsec:B-stationary"></a>11.3<span style="margin-left: 1em"></span>The stationary background and
     Gaussian coordinates<span style="margin-left: 1em"></span></h3>
-    <p>
+    <div class="tmhtml-p">
       <h5>Tree gauge.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Given a spanning tree of a set of sites, rooted at \(x_0\), let
@@ -1946,7 +1948,7 @@ W_F - (W_F d_c - d_f L) \eta .\)
         = U (y, 1)\), \(g_{y + e_1 + e_2} = U (y, 1) U (y + e_1, 2)\) and
         \(g_{y + e_2} = U (y, 2)\), so the remaining link becomes
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle g_{y + e_2} U (y + e_2, 1) g_{y + e_1 + e_2}^{- 1} =
       U_{y ; 12}^{- 1}, \qquad
@@ -2040,7 +2042,7 @@ U_{y ; 12} = U (y, 1) U (y + e_1, 2) U (y +
       D_{\psi}^2 S (0, 0)\). The path bounds make these unclipped sums
       analytic near zero.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Block norms.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         A fine field that is smooth on the block scale has energy of order
@@ -2052,7 +2054,7 @@ U_{y ; 12} = U (y, 1) U (y + e_1, 2) U (y +
         kernel estimates below use centred representatives instead. Put \(\mu
         = \ell^{- 1}\), \(\theta_z (\xi) = (\xi + 2 \pi z) / \ell\), and
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle \begin{array}{c}
   \omega_z (\xi) = \left( \mu^2 +
@@ -2368,7 +2370,7 @@ a\|_2^2 \hspace{0.17em} .\)
       href="#eq:B-weighted-interp">11.10</a>)</class> applies to polynomial jets of any fixed degree
       and to a cubic remainder when \(j \geqslant 6\).<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Gaussian coordinates.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Write \(U_v = U (v, \psi (v))\) and \(\textsf{Q} (v) = D_{\psi}^2 S
@@ -2395,7 +2397,7 @@ a\|_2^2 \hspace{0.17em} .\)
         field fixed. We evaluate it along the stationary background; its value
         at the flat field has fine kinetic part \(\textsf{K}_f\). Put
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle X = D_{w = 0}  [- \log (\Psi (U, h_{\text{fr}})^{- 1}
       \Psi (\text{e}^w (U,
@@ -2523,12 +2525,12 @@ X\mathcal{R}= I, \qquad \det (\mathcal{R},
       (Lemma <a href="#lem:B5">11.9</a>), and a Ward identity for the predictor contact
       term (Lemma <a href="#lem:B6">11.10</a>).
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>The regulator.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         For a fine site field put
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle (d_U \phi)_e = \phi (e^-) - \text{Ad} (U_e) \phi (e^+),
       \quad \Delta_U =
@@ -2550,7 +2552,7 @@ d_U^{\ast} d_U, \quad P_{\mu} = \mu^2  (\Delta_U +
       its trace norm keeps the \(\ell^4\) fine aliases out of the determinant
       comparison.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>The predictor contact term.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         At the stationary background for \(v\), let \(Q_v (w)\) be the framed
@@ -2558,7 +2560,7 @@ d_U^{\ast} d_U, \quad P_{\mu} = \mu^2  (\Delta_U +
         variables. Set \(Q_0 (v) = Q_v (0)\) and use the output chart based at
         this predictor:
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle p_v (w) = \log (Q_v (w) Q_0 (v)^{- 1}), \qquad
       \text{Pen}_v (p) = \textsf{b}
@@ -2604,13 +2606,13 @@ d_U^{\ast} d_U, \quad P_{\mu} = \mu^2  (\Delta_U +
       -\mathcal{Q}_m W_0) = \textsf{K}_c\) (Step 6 of the proof of Lemma <a
       href="#lem:B2">11.5</a>).
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>The compared operators.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         The gauge-completed Hessian, the ghost operator and the auxiliary
         fine operator are
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle \textsf{C}_{\mu} = \textsf{J} + F_{\mu}^{\ast} F_{\mu},
       \quad F_{\mu} =
@@ -2679,7 +2681,7 @@ d_U^{\ast} +
       kernel, and its higher Taylor terms enter the activities of Section <a
       href="13-activities-and-the-inductive-step.html#sec:partII-D">13</a>.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Insertion bounds.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         For weighted bounds use the nearest projection \(\pi\) from Lemma <a
@@ -2694,7 +2696,7 @@ d_U^{\ast} +
         two operators. Its smooth centred background insertions use the joint
         direction \((v, W_{\text{s}} v, 0)\).
       </div>
-    </p>
+    </div>
     <p>
       The uninserted inverse and the geometric insertions are controlled by
       one constant \(C_j^{\text{ins}}\), chosen before the nonlinear path
@@ -2997,7 +2999,7 @@ C\|w_{\perp} \|_{\text{bl}}) \hspace{0.17em} .\)
       neither the ratio nor the nonlinear path coefficients; these enter only
       through the insertion norms \(M_1, M_2\).
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Vertices.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         For a translation-invariant Taylor kernel, momentum order at least
@@ -3005,7 +3007,7 @@ C\|w_{\perp} \|_{\text{bl}}) \hspace{0.17em} .\)
         \(s\) vanishes at zero. Let \(V_r\) be the degree-\(r\) Taylor kernel
         of the fine leading action minus Wilson, for \(r = 2, 3, 4\). We use:
       </div>
-    </p>
+    </div>
     <ol>
       <dt>
         (a)
@@ -3254,7 +3256,7 @@ pairings}} \mathcal{V}_3  [\mathcal{W}, \mathcal{W},
       pairings in a symmetric fourth derivative have identical bounds. This
       proves (iii).<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>The stationary Ward identity.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         On the smooth interpolated field write
@@ -3266,7 +3268,7 @@ pairings}} \mathcal{V}_3  [\mathcal{W}, \mathcal{W},
         derivatives of the contact insertion as well as those of the inverse,
         introduce an independent coarse link source \(u\) and put
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle \textsf{R} (v, u) = \textsf{C}^{\text{rem}}_{\mu} (v)^{-
       1}  \sum_{\lambda}
@@ -3485,7 +3487,7 @@ R_{\ast} = \lfloor B / 100000 \rfloor, \qquad
     <p>
       for every fixed \(n\). All limits below are taken in this way.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Square completion.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         The input and output row maps on two-forms are \(\mathcal{B}_f =
@@ -3495,7 +3497,7 @@ R_{\ast} = \lfloor B / 100000 \rfloor, \qquad
         \(\mathcal{B}_c^{\ast} \mathcal{B}_c = \textsf{H}_c\). The free
         square-completion maps are
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle \begin{array}{c}
   M_f =\mathcal{B}_f \textsf{H}_f^{- 1}
@@ -3664,7 +3666,7 @@ K^{\text{loc}}_f +
       the cross terms need not cancel and individual terms can be negative, so
       the defects \(E_L, E_D\) must be estimated.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Selections.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Fix a mismatch multiplier \(W > 0\), chosen after \(\ell\) below, and
@@ -3672,7 +3674,7 @@ K^{\text{loc}}_f +
         the tree slice of a rooted block tree, that is, in the tree gauge of
         Figure <a href="#fig:B-tree-gauge">12</a> for a rooted spanning tree of each block.
       </div>
-    </p>
+    </div>
     <p style="margin-top: 1em">
       <strong class="enunciation-name">Definition <class style="font-style: normal">11.11</class>. </strong><class
       style="font-style: normal"><strong>(Selections and allocation sectors) </strong></class><a
@@ -4545,7 +4547,7 @@ P^{\ast} f_Y .\)</td>
         </tr></tbody>
       </table>
     </div>
-    <p>
+    <div class="tmhtml-p">
       <h5>The differentiated local integral.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         We state the local estimate for the finite products used in the
@@ -4559,7 +4561,7 @@ P^{\ast} f_Y .\)</td>
         radius-\(h_{\text{loc}} B\) neighbourhoods of the distinct chosen
         components are disjoint.
       </div>
-    </p>
+    </div>
     <p>
       A factor has a complete read support \(S_i\) containing the projected
       endpoints of every link it uses, every path and relaxed threshold test
@@ -4600,7 +4602,7 @@ P^{\ast} f_Y .\)</td>
       Jacobian and the Gaussian density. The nested chart cutoffs below ensure
       that this change is valid wherever a differentiated factor is nonzero.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Factors and their bounds.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         The retained square corrections are the exponential differences
@@ -4610,7 +4612,7 @@ P^{\ast} f_Y .\)</td>
         Gaussian-density corrections. Incoming forced activities are bounded
         by their measurable supremum envelopes.
       </div>
-    </p>
+    </div>
     <p>
       For the chart cutoffs choose a smooth \(\chi : [0, \infty) \to [0, 1]\)
       equal to one on \([0, 1]\) and zero on \([2, \infty)\). On an active
@@ -4683,7 +4685,7 @@ t_{\text{f}}\) after reducing \(\xi\), so both active chart
     <p>
       Each distinct address contributes once.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>The reference law and the transported integrand.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Assume \(\beta \in \mathfrak{B}_{m + 1}\). Use the local prescription
@@ -4691,7 +4693,7 @@ t_{\text{f}}\) after reducing \(\xi\), so both active chart
         throughout this local integral. Conditional on the fixed sector and
         tags the reference law is
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle d \nu = dH_F (Y)  \hspace{0.17em} d \gamma_{\Gamma} (z)
       .\)

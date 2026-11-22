@@ -12,26 +12,28 @@
       collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
       left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
       font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
-      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
-      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
-      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
-      text-align: center } .wide { position: relative; margin-left: -0.4em }
-      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
-      .title-block { width: 100%; text-align: center } .title-block p {
-      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
-      .left-tab { text-align: left } .center-tab { text-align: center }
-      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
-      cursor: help; position: relative; } .balloon-anchor [hidden] {
-      margin-left: -999em; position: absolute; display: none; }
-      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
-      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
-      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
-      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
-      { float: right; position: relative; top: -1em; } .no-breaks {
-      white-space: nowrap; } .underline { text-decoration: underline; }
-      .overline { text-decoration: overline; } .strike-through {
-      text-decoration: line-through; } del { text-decoration: line-through
-      wavy red; } .fill-out { text-decoration: underline dotted; } 
+      dd p, dd .tmhtml-p { padding-top: 0em; } .subsup { display: inline;
+      vertical-align: -0.2em } .subsup td { padding: 0px; text-align: left}
+      .fraction { display: inline; vertical-align: -0.8em } .fraction td {
+      padding: 0px; text-align: center } .wide { position: relative;
+      margin-left: -0.4em } .accent { position: relative; margin-left: -0.4em;
+      top: -0.1em } .title-block { width: 100%; text-align: center } .tmhtml-p
+      { margin-top: 1em; margin-bottom: 1em } .title-block p, .title-block
+      .tmhtml-p { margin: 0px } .compact-block p, .compact-block .tmhtml-p {
+      margin-top: 0px; margin-bottom: 0px } .left-tab { text-align: left }
+      .center-tab { text-align: center } .balloon-anchor { border-bottom: 1px
+      dotted #000000; outline: none; cursor: help; position: relative; }
+      .balloon-anchor [hidden] { margin-left: -999em; position: absolute;
+      display: none; } .balloon-anchor: hover [hidden] { position: absolute;
+      left: 1em; top: 2em; z-index: 99; margin-left: 0; width: 500px; display:
+      inline-block; } .balloon-body { } .ornament { border-width: 1px;
+      border-style: solid; border-color: black; display: inline-block;
+      padding: 0.2em; } .right-tab { float: right; position: relative; top:
+      -1em; } .no-breaks { white-space: nowrap; } .underline {
+      text-decoration: underline; } .overline { text-decoration: overline; }
+      .strike-through { text-decoration: line-through; } del {
+      text-decoration: line-through wavy red; } .fill-out { text-decoration:
+      underline dotted; } 
     </style>
     <link href="max-html.css" rel="stylesheet" type="text/css"></link>
     <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
@@ -1682,7 +1684,7 @@ c_i^1 \text{tr} \hspace{0.17em} U_{\Delta, i} .\)
     <center>
       \(\displaystyle Y_i (T) = r_i^4 U_i^{- 1} T.\)
     </center>
-    <p>
+    <div class="tmhtml-p">
       <h6>Joint-curve input for calibrated stress.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         <a id="par:ex-trace-joint-curve"></a> Fix the physical and reference tables, their derivative
@@ -1704,7 +1706,7 @@ c_i^1 \text{tr} \hspace{0.17em} U_{\Delta, i} .\)
         tensors and weights. For the corrected tensor \(T_i\), require both
         separated shell-flux limits
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle \phi_i (R) \longrightarrow y \ne 0, \qquad \phi_i (T_i)
       \longrightarrow y.\)
@@ -2155,14 +2157,14 @@ at location }
       This implication does not assert the one-stage property for an arbitrary
       sequence without its additional input.<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Completion and uniform tests.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         <a id="par:ex-trace-completed-uniform-tests"></a> To obtain isomorphisms at every index, fix for each grade
         \(d\) an index \(k_d \geqslant d\) for which \(C_{k_d, d}\) is
         invertible, and set
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle U_{k, d} = \left\{ \begin{array}{ll}
   C_{k, d}, & d
@@ -2445,7 +2447,7 @@ at location }
       not on \(k, N, p\). Hence taking the maximum for \(0 \leqslant d'
       \leqslant d\) gives one finite-cutoff threshold.<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Paying and averaging the complete stamp.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The symmetry of the covariance used here is a property of the actual
@@ -2454,7 +2456,7 @@ at location }
         quadratic form of the selected one-form comparison, let \(d\) be the
         discrete curl and let \(P\) be its chosen solution operator, so that
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle QP = d^{\ast}, \qquad \ker Q \subseteq \ker d, \qquad
       \kappa = dP.\)
@@ -2676,14 +2678,14 @@ H^{- D - 15 / 16}  |Au|_1 \leqslant H^{- D}
       paid by one later threshold at fixed grade and order, before the volume,
       period or panel offset is chosen.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Paying the finite moment and cumulant operations.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The numerical portion of the local chart purchase can be made before
         the coupling and the finite volume are chosen. We give the argument,
         including its order of choices. Put
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle H (s) = \exp ((\log \log s)^2), \qquad T (s) = 3 \exp
       ((\log \log s)^{3 / 2})
@@ -2980,7 +2982,7 @@ k^2}{2} .\)
       actual amplitudes; those estimates must have the coefficients,
       covariance and normalization of the selected history.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Room and the actual restarted steps.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The period-independent room requirement is also a consequence of the
@@ -2989,7 +2991,7 @@ k^2}{2} .\)
         = \beta_{\ast} + s_G t_i\). For sufficiently large \(i\) the retimed
         microscopic radius is at most \(4 s_i\). Therefore
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle \frac{100 (1 + 4 s_i)}{e^{t_i}} \longrightarrow 0.\)
     </center>
@@ -3068,7 +3070,7 @@ k^2}{2} .\)
       choices above are not a substitute for verifying those comparison
       estimates for the selected covariance.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Reader comparison across a profile change.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The plateau formulation in Subsection <a href="14-uniform-estimates-for-marked-correlations.html#sec:actual-reader-dawn-selection">14.9</a> extends to
@@ -3084,7 +3086,7 @@ k^2}{2} .\)
         and the two actual clips identify the transferred covariance with the
         original coarse covariance, exactly as in Subsection <a href="14-uniform-estimates-for-marked-correlations.html#sec:actual-covariance-transport">14.13</a>.
       </div>
-    </p>
+    </div>
     <p>
       For completeness, the short-row comparison has the following two cases.
       At an address retained by the short-row rule the prescribed row is the
@@ -3281,7 +3283,7 @@ f_2 + 2 H^{z + 1} f_1 .\)
       These statements verify the preliminary endpoint budget for the actual
       re-expression, before using its marked change of weights.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Changing the marked budget at the endpoint.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         We spell out the old-to-new marked support payment as well. Let the
@@ -3292,7 +3294,7 @@ f_2 + 2 H^{z + 1} f_1 .\)
         desired suppression \(\Gamma = (g + 8) \log H\). Put \(u_0 = (a / 2)
         \log s\). Then
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle r \leqslant 1 = e^{u_0} r_0, \qquad 100000 C (e + 2)
       \leqslant B \theta / 2,
@@ -3399,7 +3401,7 @@ H^{- 8} + d_s),\)
       the endpoint's marked budget, in addition to its unmarked re-expression,
       uniformly in the ambient torus.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The original mixed-grade marked expansion.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The original marked expansion used in the endpoint change of weights
@@ -3417,7 +3419,7 @@ H^{- 8} + d_s),\)
         representations and their lawfulness are those retained in Subsection
         <a href="19-the-common-scale-choice-and-final-assembly.html#sec:public-run-binding">19.5</a>.
       </div>
-    </p>
+    </div>
     <p>
       Fix a finite census of marked slots \(V\), allowing different grades
       \(d_a\) and labels \(v_a\) at its slots. The census includes the
@@ -3521,7 +3523,7 @@ H^{- 8} + d_s),\)
       \(A_{\nu}, K_{\lambda}\). No family, interface, calibration or partition
       denominator has been reselected.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Paying the census hypotheses on these charts.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         We verify the geometry and label payment in the preceding
@@ -3531,7 +3533,7 @@ H^{- 8} + d_s),\)
         census slot is a pair \((c, a)\) consisting of a replication cell and
         one of the finitely many insertion positions. Its position is
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle o_k (c, a) = \omega_c z_a + t_c,\)
     </center>
@@ -3638,7 +3640,7 @@ w_a} = \zeta_{d_a, k} .\)
       paid on these very charts and the actual radius \(x = s^{- z / 2}\) used
       by their endpoint budget change.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The fixed-stage purchase interface.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         Write \(p_j\) for the order of the stage-\(j\) profile and assume
@@ -3651,7 +3653,7 @@ w_a} = \zeta_{d_a, k} .\)
         the common selected stamp and calibration. The local panel purchase
         has the following interface.
       </div>
-    </p>
+    </div>
     <ol>
       <li>
         <p>
@@ -4046,13 +4048,13 @@ L} \right\rceil .\)
       The monitor is \(\mu_k =\mathcal{M}_k\) of Subsection <a href="14-uniform-estimates-for-marked-correlations.html#sec:rank-root-normalization">14.19</a>,
       and \(\hat{\beta}_j\) is the clock coupling of Subsection <a href="19-the-common-scale-choice-and-final-assembly.html#sec:common-scale-selection">19.2</a>.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Two levels attached to a chart.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         Let the chart have base arc \(b\), and put \(m = \mu_k^b\). Its
         <em>middle level</em> and <em>root depth</em> are
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle \ell = \max \left\{ j \leqslant k : \frac{a_j}{a_k}
       \geqslant m \mu_k^2
@@ -4067,14 +4069,14 @@ L} \right\rceil .\)
       taken on the centered tiling at depth \(w\), whose cells are indexed by
       the sites of the level-\(w\) torus.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The witness fields.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         A chart witness at level \(k\) with base arc \(b\) supplies the
         following fields. Here \(M\) is the marker allowance of the chart, \(N
         > k\) and \(p\) are arbitrary.
       </div>
-    </p>
+    </div>
     <ol>
       <dt>
         (F1)
@@ -4199,7 +4201,7 @@ L} \right\rceil .\)
       (k) - 1\). Hence \(J (w) \geqslant J (k) - 1\), and \(w \to \infty\) as
       \(k \to \infty\) because \(J\) diverges.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Corrected labels.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         Write \(\sigma = \sigma_{k, N, p} = (\beta_{N, p, k}^{1 / 2} 
@@ -4214,7 +4216,7 @@ L} \right\rceil .\)
         below, \(T_{d'}\) is invertible. The <em>corrected label</em> of a
         basis vector \(e\) of \(V_{d'}\) is
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle X_{N, p} e = T_{d'}^{- 1}  (S_{\sigma}^{- 1} W_m e) .\)
     </center>
@@ -4250,7 +4252,7 @@ L} \right\rceil .\)
       is <class style="font-style: normal">(<a href="16-free-tests-and-the-interacting-field-quotient.html#eq:rank-common-lifts">16.55</a>)</class> with \(\rho = m\).<span
       style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Status.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         Fields (F1)&ndash;(F5) are fields of the funded witness. For the
@@ -4260,7 +4262,7 @@ L} \right\rceil .\)
         the remark after it, and Proposition <a href="14-uniform-estimates-for-marked-correlations.html#prop:rank-root-output-ticket">14.50</a>. The inputs
         listed elsewhere that these fields supply are:
       </div>
-    </p>
+    </div>
     <ul>
       <li>
         <p>
@@ -5727,7 +5729,7 @@ e^{y_m + o_m \textsf{S} (B_m) d_m} - 1
       separate and does not assume equality of the interacting and reference
       actions.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The actual fine finite-mask payment.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         <a id="par:shell-actual-mask"></a> The finite-mask cost in the shell construction is the
@@ -5747,7 +5749,7 @@ e^{y_m + o_m \textsf{S} (B_m) d_m} - 1
         differentiating that array, and Subsection <a href="19-the-common-scale-choice-and-final-assembly.html#sec:ope-history-service">19.4</a> uses that
         same map for its multiple-insertion estimate.
       </div>
-    </p>
+    </div>
     <p>
       With \(\alpha = s_k + 1 / 2\), the producer's scalar \(s (x)\) is
       exactly
@@ -5956,7 +5958,7 @@ p_0}  (\mathcal{F}_{m, x}^{N, q} (z_x (N,
       stated above; it does not claim one late event simultaneously for the
       growing collar.<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The scale note.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         Definition <a href="#def:ex-lattice-shell-receipt">17.19</a> also requires \(\log r_m / \lambda_m
@@ -5967,7 +5969,7 @@ p_0}  (\mathcal{F}_{m, x}^{N, q} (z_x (N,
         \(\log B_m / \lambda_m \to 0\). Indeed \(\lambda_{m + 1} = \lambda_m +
         \log L_m\), so \(\lambda_{m + 1} / \lambda_m \to 1\), and
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle \frac{\log r_m}{\lambda_m} = \frac{\log 128}{\lambda_m}
       + 2 \hspace{0.17em}
@@ -5979,7 +5981,7 @@ p_0}  (\mathcal{F}_{m, x}^{N, q} (z_x (N,
     <p>
       In particular \(r_m \to 0\).
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Shell schedule, chamber placement and birth quota on the selected
       family.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
@@ -5987,7 +5989,7 @@ p_0}  (\mathcal{F}_{m, x}^{N, q} (z_x (N,
         without changing the history or its extraction. Write \(s_m = \log
         (a_m^{- 1})\). The selected schedule has \(s_m \to \infty\) and
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle 0 \leqslant \frac{s_{m + 1} - s_m}{s_m} = \frac{\log
       L_{J (m + 1)}}{s_m}
@@ -6316,7 +6318,7 @@ B_{m + 1}^2) \leqslant a_{p_0}\)
       extractor's record or change family, history, or scale sequence between
       the receipt and the stress law.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Openings.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         A reference level \(m\) is <em>opened at</em> a level \(k\) (with
@@ -6325,7 +6327,7 @@ B_{m + 1}^2) \leqslant a_{p_0}\)
         is stated for every opened pair, so it says nothing unless openings
         exist. They do, under the selected tab schedule.
       </div>
-    </p>
+    </div>
     <div class="theorem">
       <p style="margin-top: 1em; margin-bottom: 1em">
         <strong class="enunciation-name">Lemma <class style="font-style: normal">17.20</class>. </strong><i><class
@@ -6357,7 +6359,7 @@ B_j^2 \leqslant \frac{2}{3} f_j,\)
       \(B_{k_0}^2 \leqslant a_m / a_{k_0}\); then \(m\) is opened at \(k_0\).
       By persistence it is opened at \(k = \max (k_0, k_1)\).<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>A slotwise bound before the physical Ward construction.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The derivative bound needed by the annulus argument can be obtained
@@ -6369,7 +6371,7 @@ B_j^2 \leqslant \frac{2}{3} f_j,\)
         \boldsymbol{v}}\) such that the slab operator of this word, with
         mutual and boundary separation at least \(r \in (0, 1]\), satisfies
       </div>
-    </p>
+    </div>
     <table width="100%">
       <tr>
         <td align="center" width="100%"><a id="eq:scribe-slotwise-slab"></a>\(\displaystyle \|A_d (w)\| \leqslant
@@ -8407,7 +8409,7 @@ b} v.
       there are no pairwise collision constraints and the sums are empty or
       single-term.<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The collinear identity from the stress tensor.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The preceding theorem needs no stress tensor once its collinear
@@ -8421,7 +8423,7 @@ b} v.
         The flux argument uses the compactly supported test described below;
         it does not assume that a noncompact rotation field is admissible.
       </div>
-    </p>
+    </div>
     <p>
       Until the scalar comparison \(p = c\mathcal{P}\) is proved, write
       \(\mathcal{A}_K  (p, Y ; q ; x)\) for the expression <class style="font-style: normal">(<a
@@ -8847,15 +8849,15 @@ q ; x) + \sum_i S (q [i \mapsto (d + 1,
       terms vanish. Subtracting gives the stated line identity. For the empty
       word it is the empty sum.<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Finite-level bridges used by the selected scale.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The line identity and the collinear rotational identity are only the
         geometric part of the finite-level argument. The selected scale uses
         the following additional bridges; their order matters.
       </div>
-    </p>
-    <p>
+    </div>
+    <div class="tmhtml-p">
       <h6>The stress-law package.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         At the local algebraic stage the commutation relation and the
@@ -8863,7 +8865,7 @@ q ; x) + \sum_i S (q [i \mapsto (d + 1,
         are derived from the stress-law package rather than postulated
         separately. We first state that package precisely.
       </div>
-    </p>
+    </div>
     <p>
       A <em>window</em> for a separated tuple \((x_0, x_1, \ldots, x_n)\) is a
       smooth, compactly supported, real function \(\chi\) on \(\mathbb{R}^4\)
@@ -9196,7 +9198,7 @@ k\boldsymbol{x})\). As \((x_0, \boldsymbol{x},
       \(\textsf{m}_k \boldsymbol{q}\), and faithfulness gives the claim.<span
       style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Readout limits on the comparison curve.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         We next prove the two limits that compare the raw responses with the
@@ -9208,7 +9210,7 @@ k\boldsymbol{x})\). As \((x_0, \boldsymbol{x},
         and \(J^0\) the reference stress. We write \(S^1\) and \(S^0\) for
         physical and reference moments.
       </div>
-    </p>
+    </div>
     <div class="theorem">
       <p style="margin-top: 1em">
         <strong class="enunciation-name">Proposition <class style="font-style: normal">17.28</class>.

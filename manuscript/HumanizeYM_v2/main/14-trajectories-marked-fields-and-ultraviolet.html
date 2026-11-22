@@ -12,26 +12,28 @@
       collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
       left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
       font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
-      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
-      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
-      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
-      text-align: center } .wide { position: relative; margin-left: -0.4em }
-      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
-      .title-block { width: 100%; text-align: center } .title-block p {
-      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
-      .left-tab { text-align: left } .center-tab { text-align: center }
-      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
-      cursor: help; position: relative; } .balloon-anchor [hidden] {
-      margin-left: -999em; position: absolute; display: none; }
-      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
-      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
-      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
-      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
-      { float: right; position: relative; top: -1em; } .no-breaks {
-      white-space: nowrap; } .underline { text-decoration: underline; }
-      .overline { text-decoration: overline; } .strike-through {
-      text-decoration: line-through; } del { text-decoration: line-through
-      wavy red; } .fill-out { text-decoration: underline dotted; } 
+      dd p, dd .tmhtml-p { padding-top: 0em; } .subsup { display: inline;
+      vertical-align: -0.2em } .subsup td { padding: 0px; text-align: left}
+      .fraction { display: inline; vertical-align: -0.8em } .fraction td {
+      padding: 0px; text-align: center } .wide { position: relative;
+      margin-left: -0.4em } .accent { position: relative; margin-left: -0.4em;
+      top: -0.1em } .title-block { width: 100%; text-align: center } .tmhtml-p
+      { margin-top: 1em; margin-bottom: 1em } .title-block p, .title-block
+      .tmhtml-p { margin: 0px } .compact-block p, .compact-block .tmhtml-p {
+      margin-top: 0px; margin-bottom: 0px } .left-tab { text-align: left }
+      .center-tab { text-align: center } .balloon-anchor { border-bottom: 1px
+      dotted #000000; outline: none; cursor: help; position: relative; }
+      .balloon-anchor [hidden] { margin-left: -999em; position: absolute;
+      display: none; } .balloon-anchor: hover [hidden] { position: absolute;
+      left: 1em; top: 2em; z-index: 99; margin-left: 0; width: 500px; display:
+      inline-block; } .balloon-body { } .ornament { border-width: 1px;
+      border-style: solid; border-color: black; display: inline-block;
+      padding: 0.2em; } .right-tab { float: right; position: relative; top:
+      -1em; } .no-breaks { white-space: nowrap; } .underline {
+      text-decoration: underline; } .overline { text-decoration: overline; }
+      .strike-through { text-decoration: line-through; } del {
+      text-decoration: line-through wavy red; } .fill-out { text-decoration:
+      underline dotted; } 
     </style>
     <link href="max-html.css" rel="stylesheet" type="text/css"></link>
     <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
@@ -1953,7 +1955,7 @@ K |\mathbf{y}|_1, \qquad |\mathbf{y}^{\circ}
       An empty product is the identity. For \(N < m_{\text{ref}} (d)\) choose
       an arbitrary invertible map, as allowed in Definition <a href="2-definitions.html#def:D08">2.8</a>.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>The curvature square at the terminal map.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         We continue the example of Section <a href="10-local-polynomial-fields.html#sec:A-example">10.5</a>. The curvature
@@ -1983,7 +1985,7 @@ K |\mathbf{y}|_1, \qquad |\mathbf{y}^{\circ}
         <class style="font-style: normal">(<a href="#eq:E-log-cost">14.11</a>)</class>. Section <a href="15-infinite-volume-and-field-calculus.html#sec:partII-F">15</a>
         continues the example with the quotient field.
       </div>
-    </p>
+    </div>
     <p>
       The next lemma carries one insertion from the cutoff to the reference
       level. Its content is the representation at the cutoff, whose forced
@@ -2316,7 +2318,7 @@ K |\mathbf{y}|_1, \qquad |\mathbf{y}^{\circ}
       supplies the intervening bounds. The case \(i = 4\) proves <class style="font-style: normal">(<a
       href="#eq:F-uncentered">14.20</a>)</class>.<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Replicated sources.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Several insertions are carried at once by giving each a nilpotent
@@ -2327,7 +2329,7 @@ K |\mathbf{y}|_1, \qquad |\mathbf{y}^{\circ}
         I_0)\). Write \(z_I = \prod_{i \in I} z_i\) for the mode \(I\). The
         exact source density starts at
       </div>
-    </p>
+    </div>
     <table width="100%">
       <tr>
         <td align="center" width="100%"><a id="eq:E-multiple-density"></a>\(\displaystyle \mathcal{H}_N  (z ; U) =
@@ -3808,14 +3810,14 @@ cB_t}) .\)</td>
         <td align="right">(14.42)</td>
       </tr>
     </table>
-    <p>
+    <div class="tmhtml-p">
       <h5>Comparison windows.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         A comparison window is a triple of levels \(k < l < t\); put
         \(\mathcal{M}= M^{\text{cut}}_t\). The proofs of Lemmas <a href="#lem:E-source-polynomial">14.25</a>&ndash;<a
         href="#lem:E-source-integral">14.27</a> use the window only through the following conditions:
       </div>
-    </p>
+    </div>
     <ol>
       <dt>
         (Win1)

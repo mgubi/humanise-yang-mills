@@ -12,26 +12,28 @@
       collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
       left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
       font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
-      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
-      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
-      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
-      text-align: center } .wide { position: relative; margin-left: -0.4em }
-      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
-      .title-block { width: 100%; text-align: center } .title-block p {
-      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
-      .left-tab { text-align: left } .center-tab { text-align: center }
-      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
-      cursor: help; position: relative; } .balloon-anchor [hidden] {
-      margin-left: -999em; position: absolute; display: none; }
-      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
-      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
-      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
-      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
-      { float: right; position: relative; top: -1em; } .no-breaks {
-      white-space: nowrap; } .underline { text-decoration: underline; }
-      .overline { text-decoration: overline; } .strike-through {
-      text-decoration: line-through; } del { text-decoration: line-through
-      wavy red; } .fill-out { text-decoration: underline dotted; } 
+      dd p, dd .tmhtml-p { padding-top: 0em; } .subsup { display: inline;
+      vertical-align: -0.2em } .subsup td { padding: 0px; text-align: left}
+      .fraction { display: inline; vertical-align: -0.8em } .fraction td {
+      padding: 0px; text-align: center } .wide { position: relative;
+      margin-left: -0.4em } .accent { position: relative; margin-left: -0.4em;
+      top: -0.1em } .title-block { width: 100%; text-align: center } .tmhtml-p
+      { margin-top: 1em; margin-bottom: 1em } .title-block p, .title-block
+      .tmhtml-p { margin: 0px } .compact-block p, .compact-block .tmhtml-p {
+      margin-top: 0px; margin-bottom: 0px } .left-tab { text-align: left }
+      .center-tab { text-align: center } .balloon-anchor { border-bottom: 1px
+      dotted #000000; outline: none; cursor: help; position: relative; }
+      .balloon-anchor [hidden] { margin-left: -999em; position: absolute;
+      display: none; } .balloon-anchor: hover [hidden] { position: absolute;
+      left: 1em; top: 2em; z-index: 99; margin-left: 0; width: 500px; display:
+      inline-block; } .balloon-body { } .ornament { border-width: 1px;
+      border-style: solid; border-color: black; display: inline-block;
+      padding: 0.2em; } .right-tab { float: right; position: relative; top:
+      -1em; } .no-breaks { white-space: nowrap; } .underline {
+      text-decoration: underline; } .overline { text-decoration: overline; }
+      .strike-through { text-decoration: line-through; } del {
+      text-decoration: line-through wavy red; } .fill-out { text-decoration:
+      underline dotted; } 
     </style>
     <link href="max-html.css" rel="stylesheet" type="text/css"></link>
     <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
@@ -8203,7 +8205,7 @@ F_{c, I} (U) .\)
       H^{\kappa}\) for a constant \(\kappa\), by Lemma <a href="#lem:allarity-upper-count-power">14.45</a>
       below. It follows that \(d_{k - l} \leqslant H^{\kappa - q}\).
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>The marker weights<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Two marker weights are used, each the same at every mark, replica and
@@ -8213,7 +8215,7 @@ F_{c, I} (U) .\)
         at the middle level \(\ell\) down to the output torus of the replica
         estimate, the weight is
       </div>
-    </p>
+    </div>
     <table width="100%">
       <tr>
         <td align="center" width="100%"><a id="eq:allarity-marker-weight"></a>\(\displaystyle \omega = H^{1 / (8 u)}
@@ -8604,7 +8606,7 @@ U},\)
       \(\text{chg}_e\) is monotone in the cover number, the bound
       follows.<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The prescribed polynomials are reference integrals.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         Fix a cell and its mark set \(J\), \(|J| = n\), and work in the
@@ -8620,7 +8622,7 @@ U},\)
         \ldots, T_j\) of \(\prod_l q_{T_l} z_{T_1 \cup \cdots \cup T_j}\).
         Each unordered partition with \(j\) blocks occurs \(j\)! times, so
       </div>
-    </p>
+    </div>
     <table width="100%">
       <tr>
         <td align="center" width="100%"><a id="eq:allarity-moment-cumulant"></a>\(\displaystyle \log_{\ast} \left( 1 +
@@ -8750,7 +8752,7 @@ c^{(i)}_B .\)
       coupling, taken as suprema over the healthy base configurations of the
       region. That section already lists the primitive comparison as an input.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Uniformity of the primitive comparison.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         There is already a producer for the primitive rates: Subsection <a
@@ -8766,7 +8768,7 @@ c^{(i)}_B .\)
         1\), and its local direction bounds. These conditions must hold for
         the cutoff coordinates as well as the insertion coordinates.
       </div>
-    </p>
+    </div>
     <p>
       Under these hypotheses there are functions \(C (s), v (s), t (s)\),
       independent of the period, forest, tag and healthy base point, such that
@@ -9246,7 +9248,7 @@ C_{JI} C_I^{- 1} x), \qquad S =
       cutoff can vary with that parameter too. Bounds on the full cutoff do
       not by themselves give its projected parameter-jet bounds.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Which sector law has to be identified.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The measure in (CI)(a) is the measure of the selected principal
@@ -9259,7 +9261,7 @@ C_{JI} C_I^{- 1} x), \qquad S =
         body's marker variables to zero does not remove its unmarked activity;
         selecting the component with no body letters does.
       </div>
-    </p>
+    </div>
     <p>
       For clarity, consider a fixed principal-only component whose integrand,
       before Gaussian integration, is
@@ -9534,7 +9536,7 @@ C_{JI} C_I^{- 1} x), \qquad S =
       implies the first purchase in <class style="font-style: normal">(<a href="#eq:allarity-step-purchases">14.114</a>)</class>
       because \(\omega_- \leqslant 1\).<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>A polynomial history with a local transport error.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The compensated coordinate map need not be affine. Indeed, on the
@@ -9548,7 +9550,7 @@ C_{JI} C_I^{- 1} x), \qquad S =
         now give an alternative which keeps the prescribed polynomial history
         throughout.
       </div>
-    </p>
+    </div>
     <div class="theorem">
       <p style="margin-top: 1em">
         <strong class="enunciation-name">Lemma <class style="font-style: normal">14.27</class>. </strong><i><class
@@ -9609,7 +9611,7 @@ d_i := 2 \beta_0  (1 + \gamma_0) \tau_n \Pi .\)
       Thus this route needs no additional invariant function space for a
       second, reference-transported history.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The joint Gaussian construction with separate guards.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         There is a more direct route for the selected principal components.
@@ -9618,7 +9620,7 @@ d_i := 2 \beta_0  (1 + \gamma_0) \tau_n \Pi .\)
         one. The following argument supplies the finite-arity comparison
         without assuming either (M) or exact reference transport (CI)(b).
       </div>
-    </p>
+    </div>
     <div class="theorem">
       <p style="margin-top: 1em">
         <strong class="enunciation-name">Lemma <class style="font-style: normal">14.28</class>. </strong><i><class
@@ -9899,7 +9901,7 @@ a_f .\)
       A growing stage profile must place each such finite purchase before its
       own delay.<span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Attachment to the actual adjacent step.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         For the actual joint reader model of Subsection <a href="#sec:ex-lattice-all-arity-reader-gaussian-model">14.15</a>,
@@ -9922,7 +9924,7 @@ a_f .\)
         prescribed polynomial coefficient bounds provide the \(H^c\) bounds,
         after a fixed increase of \(c\).
       </div>
-    </p>
+    </div>
     <p>
       The component identification uses Subsection <a href="#sec:actual-mixed-marked-compiler">14.4</a>,
       specifically its split \(W_h = \Gamma_h W_h + (1 - \Gamma_h) W_h\) on
@@ -10013,14 +10015,14 @@ a_f .\)
       uses only \(L_j \geqslant 3\) and the maximality of \(\ell\); no floor
       on the block lengths and no stage condition is needed.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>What this supplies and what remains.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         On the leading interval, the lemmas of this subsection and Lemma <a
         href="#lem:allarity-upper-count-power">14.45</a> give the following, all at the weight \(\omega_-\) and
         eventually in \(s\) uniformly in the finite period:
       </div>
-    </p>
+    </div>
     <ul>
       <li>
         <p>
@@ -10218,7 +10220,7 @@ M_0 \ell\} .\)</td>
       \(\alpha \geqslant 8 T_e\) and \(q \geqslant 6\) are those of Subsection
       <a href="#subsec:allarity-step-supply">14.18.5</a>.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The invoice and its parts.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         Let \(f_0, f_1\) be the two finite-volume insertions of a fit
@@ -10230,7 +10232,7 @@ M_0 \ell\} .\)</td>
         is \(\exp_{\ast} D\) for a unique \(D\) with zero constant
         coefficient, namely
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle D = j_0 z_0 + j_1 z_1 + \kappa z_0 z_1, \qquad j_c = S_0
       (\{c\}), \quad \kappa
@@ -10275,7 +10277,7 @@ M_0 \ell\} .\)</td>
     <p style="margin-bottom: 1em">
       <span style="margin-left: 1em"></span>\(\Box\)
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Cells and sites.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The cells of the centered tiling at depth \(w\) of the level-\(N\)
@@ -10284,8 +10286,8 @@ M_0 \ell\} .\)</td>
         count of the level-\(w\) torus. This is the equality required in the
         scalar envelope: the output torus is the level-\(w\) torus.
       </div>
-    </p>
-    <p>
+    </div>
+    <div class="tmhtml-p">
       <h6>Propagation below the middle level.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         On the rungs \(j\) with \(w \leqslant j < \ell\) there are no leading
@@ -10297,7 +10299,7 @@ M_0 \ell\} .\)</td>
         is the actual lower-interval attenuation, the lower calculation gives
         two outputs:
       </div>
-    </p>
+    </div>
     <ul>
       <li>
         <p>
@@ -10466,7 +10468,7 @@ M_0 \ell\} .\)</td>
       D_R)  \prod_c (1 + f_c z_c)\) is the invoice, with \(D_R = D\) the
       reference cumulant polynomial.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The reference factor commutes with every push.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The polynomial \(\exp_{\ast} (- D_R)\) has field-independent
@@ -10481,8 +10483,8 @@ M_0 \ell\} .\)</td>
         identity of densities. It does not by itself give a priced
         representation, for the following reason.
       </div>
-    </p>
-    <p>
+    </div>
+    <div class="tmhtml-p">
       <h6>The failed mask.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         For one mode, let \(\chi\) be the healthy mask of its prescribed
@@ -10491,7 +10493,7 @@ M_0 \ell\} .\)</td>
         \(\chi W\), while the reference factor contributes \(R\) everywhere.
         Hence
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle \chi W - R = \chi (W - R) - (1 - \chi) R.\)
     </center>
@@ -10503,7 +10505,7 @@ M_0 \ell\} .\)</td>
       of the realignment subsection. Its bound is controlled by a bound on the
       reference coefficients \(R\), not by the healthy bound.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>The corrected budget.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         The bound on the corrected pieces is already proved in Subsection <a
@@ -10519,7 +10521,7 @@ M_0 \ell\} .\)</td>
         / 2}\) by Subsection <a href="#sec:marked-healthy-cumulant-launch">14.17</a>. Both statements hold under
         the hypotheses stated in those sections.
       </div>
-    </p>
+    </div>
     <div class="theorem">
       <p style="margin-top: 1em">
         <strong class="enunciation-name">Lemma <class style="font-style: normal">14.35</class>. </strong><i><class
@@ -10601,7 +10603,7 @@ M_0 \ell\} .\)</td>
       the failed-mask pieces, from a spare support exponent and from the
       smallness of the forced background.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Geometric and pricing hypotheses at the launch.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         For a cell \(c\) let \(Y_c = \bigcup_I X_{c, I}\) be its halo, the
@@ -10609,7 +10611,7 @@ M_0 \ell\} .\)</td>
         the number of cells \(c\) with \(X \cap Y_c \ne \varnothing\). We
         assume:
       </div>
-    </p>
+    </div>
     <ol>
       <dt>
         (F)
@@ -11340,13 +11342,13 @@ w - 1}\). For
       leading rungs the discrepancy lemma uses the power bound of Corollary <a
       href="#cor:allarity-rung-amplitude">14.16</a>.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h6>Status of the propagation to the output.<span style="margin-left: 1em"></span></h6>
       <div style="display: inline">
         Proposition <a href="#prop:allarity-output-price">14.34</a> is proved from the following inputs,
         all on the common history of the chart:
       </div>
-    </p>
+    </div>
     <ol>
       <li>
         <p>

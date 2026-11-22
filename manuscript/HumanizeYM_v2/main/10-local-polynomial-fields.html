@@ -12,26 +12,28 @@
       collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
       left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
       font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
-      dd p { padding-top: 0em; } .subsup { display: inline; vertical-align:
-      -0.2em } .subsup td { padding: 0px; text-align: left} .fraction {
-      display: inline; vertical-align: -0.8em } .fraction td { padding: 0px;
-      text-align: center } .wide { position: relative; margin-left: -0.4em }
-      .accent { position: relative; margin-left: -0.4em; top: -0.1em }
-      .title-block { width: 100%; text-align: center } .title-block p {
-      margin: 0px } .compact-block p { margin-top: 0px; margin-bottom: 0px }
-      .left-tab { text-align: left } .center-tab { text-align: center }
-      .balloon-anchor { border-bottom: 1px dotted #000000; outline: none;
-      cursor: help; position: relative; } .balloon-anchor [hidden] {
-      margin-left: -999em; position: absolute; display: none; }
-      .balloon-anchor: hover [hidden] { position: absolute; left: 1em; top:
-      2em; z-index: 99; margin-left: 0; width: 500px; display: inline-block; }
-      .balloon-body { } .ornament { border-width: 1px; border-style: solid;
-      border-color: black; display: inline-block; padding: 0.2em; } .right-tab
-      { float: right; position: relative; top: -1em; } .no-breaks {
-      white-space: nowrap; } .underline { text-decoration: underline; }
-      .overline { text-decoration: overline; } .strike-through {
-      text-decoration: line-through; } del { text-decoration: line-through
-      wavy red; } .fill-out { text-decoration: underline dotted; } 
+      dd p, dd .tmhtml-p { padding-top: 0em; } .subsup { display: inline;
+      vertical-align: -0.2em } .subsup td { padding: 0px; text-align: left}
+      .fraction { display: inline; vertical-align: -0.8em } .fraction td {
+      padding: 0px; text-align: center } .wide { position: relative;
+      margin-left: -0.4em } .accent { position: relative; margin-left: -0.4em;
+      top: -0.1em } .title-block { width: 100%; text-align: center } .tmhtml-p
+      { margin-top: 1em; margin-bottom: 1em } .title-block p, .title-block
+      .tmhtml-p { margin: 0px } .compact-block p, .compact-block .tmhtml-p {
+      margin-top: 0px; margin-bottom: 0px } .left-tab { text-align: left }
+      .center-tab { text-align: center } .balloon-anchor { border-bottom: 1px
+      dotted #000000; outline: none; cursor: help; position: relative; }
+      .balloon-anchor [hidden] { margin-left: -999em; position: absolute;
+      display: none; } .balloon-anchor: hover [hidden] { position: absolute;
+      left: 1em; top: 2em; z-index: 99; margin-left: 0; width: 500px; display:
+      inline-block; } .balloon-body { } .ornament { border-width: 1px;
+      border-style: solid; border-color: black; display: inline-block;
+      padding: 0.2em; } .right-tab { float: right; position: relative; top:
+      -1em; } .no-breaks { white-space: nowrap; } .underline {
+      text-decoration: underline; } .overline { text-decoration: overline; }
+      .strike-through { text-decoration: line-through; } del {
+      text-decoration: line-through wavy red; } .fill-out { text-decoration:
+      underline dotted; } 
     </style>
     <link href="max-html.css" rel="stylesheet" type="text/css"></link>
     <link href="ym-outline.css" rel="stylesheet" type="text/css"></link>
@@ -1200,7 +1202,7 @@ every } b \right\}, \qquad
       invertible; the map and its inverse preserve the filtration by minimum
       factor count.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Idea: free equations in an interacting theory.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Haar integration by parts in one link, a lattice
@@ -1238,8 +1240,8 @@ every } b \right\}, \qquad
         does \(G_{\Theta}\) agree with a finite Wick profile (Proposition <a
         href="6-the-continuum-limit-stress-phases-trace-and.html#prop:NF">6.19</a>).
       </div>
-    </p>
-    <p>
+    </div>
+    <div class="tmhtml-p">
       <h5>Lattice symmetries.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         We record the symmetries of the Wilson measure deferred from
@@ -1253,7 +1255,7 @@ every } b \right\}, \qquad
         \(n_{\text{tor}} \geqslant 1\), real \(\beta\), site gauge
         transformation \(\gamma_{\text{g}}\) and bounded measurable \(F\),
       </div>
-    </p>
+    </div>
     <table width="100%">
       <tr>
         <td align="center" width="100%"><a id="eq:A-Wilson-invariance"></a>\(\displaystyle \int F
@@ -1578,7 +1580,7 @@ E^{\text{W}} (U^{e, A, \epsilon})}
       href="14-trajectories-marked-fields-and-ultraviolet.html#sec:partII-E">14</a> and <a href="15-infinite-volume-and-field-calculus.html#sec:partII-F">15</a> construct the terminal map and the
       quotient used at its end.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>The label.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         With \(F_{ab}\) as in Section <a href="#sec:A-equations">10.4</a>, radial gauge gives
@@ -1586,7 +1588,7 @@ E^{\text{W}} (U^{e, A, \epsilon})}
         \(\mathcal{A} (0) = 0\), \(F_{ab}\) is the curvature of the jet at the
         origin. The curvature square is the label
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle c_{F^2} (\textsf{j}) = \frac{1}{4}  \sum_{a, b} \langle
       F_{ab}, F_{ab}
@@ -1600,14 +1602,14 @@ E^{\text{W}} (U^{e, A, \epsilon})}
       invariant, real and \(H_4\) invariant, of bidegree \((4, 2)\), and lies
       in \(V_d\) for every \(d \geqslant 4\).
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>Two lattice readings.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         For \(a < b\) and \(s, s' = \pm 1\), let \(\square_{ab}^{ss'}\) be
         the plaquette with corner \(0\) spanned by \(se_a\) and \(s' e_b\).
         The clover
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle P^{\text{cl}} (U) = \frac{1}{4}  \sum_{a < b} \sum_{s,
       s' = \pm 1} \text{pr}
@@ -1632,7 +1634,7 @@ E^{\text{W}} (U^{e, A, \epsilon})}
       label on it. The two differ by an observable with vanishing Taylor map;
       the terminal map below refers to the section of Lemma <a href="#lem:A1">10.2</a>.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>The insertion.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Take \(d = 4\). A nonconstant monomial of weight at most four is a
@@ -1656,7 +1658,7 @@ E^{\text{W}} (U^{e, A, \epsilon})}
         fine-cutoff coefficient vector and, by Definition <a href="2-definitions.html#def:D08">2.8</a>,
         the insertion are therefore
       </div>
-    </p>
+    </div>
     <center>
       \(\displaystyle \begin{array}{rl}
   \textsf{Z}_{N, p, 4}^{- 1} c_{F^2} &
@@ -1697,7 +1699,7 @@ E^{\text{W}} (U^{e, A, \epsilon})}
       first to the class in \(F_6\) with the same correlations, which need not
       be the class of the second.
     </p>
-    <p>
+    <div class="tmhtml-p">
       <h5>The field.<span style="margin-left: 1em"></span></h5>
       <div style="display: inline">
         Degree four has no invisible labels. Labels in \(V_4\) depend only on
@@ -1713,7 +1715,7 @@ E^{\text{W}} (U^{e, A, \epsilon})}
         function at separation \(r\) is \(3 d_{\mathfrak{g}} \pi^{- 4} r^{-
         8}\); Section <a href="18-the-trace-law-and-non-free-comparisons.html#sec:partII-I">18</a> compares the stress trace with it.
       </div>
-    </p>
+    </div>
     
     <div class="ym-chapter-nav"><span class="ym-chapter-prev"><a href="index-of-notation.html">&larr; Index of notation</a></span><span class="ym-chapter-up"><a href="../main.html">Contents</a></span><span class="ym-chapter-next"><a href="11-gauges-and-block-integration.html">11 Gauges and block integration &rarr;</a></span></div>
 </body>
