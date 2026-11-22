@@ -11,17 +11,19 @@
       collapse } td { padding: 0.2em; vertical-align: baseline } dt { float:
       left; min-width: 1.75em; text-align: right; padding-right: 0.75em;
       font-weight: bold; } dd { margin-left: 2.75em; padding-bottom: 0.25em; }
-      dd p, dd .tmhtml-p { padding-top: 0em; } .subsup { display: inline;
-      vertical-align: -0.2em } .subsup td { padding: 0px; text-align: left}
-      .fraction { display: inline; vertical-align: -0.8em } .fraction td {
-      padding: 0px; text-align: center } .wide { position: relative;
-      margin-left: -0.4em } .accent { position: relative; margin-left: -0.4em;
-      top: -0.1em } .title-block { width: 100%; text-align: center } .tmhtml-p
-      { margin-top: 1em; margin-bottom: 1em } .title-block p, .title-block
-      .tmhtml-p { margin: 0px } .compact-block p, .compact-block .tmhtml-p {
-      margin-top: 0px; margin-bottom: 0px } .left-tab { text-align: left }
-      .center-tab { text-align: center } .balloon-anchor { border-bottom: 1px
-      dotted #000000; outline: none; cursor: help; position: relative; }
+      dd p { padding-top: 0em; } dd div:where(.tmhtml-p) { padding-top: 0em; }
+      .subsup { display: inline; vertical-align: -0.2em } .subsup td {
+      padding: 0px; text-align: left} .fraction { display: inline;
+      vertical-align: -0.8em } .fraction td { padding: 0px; text-align: center
+      } .wide { position: relative; margin-left: -0.4em } .accent { position:
+      relative; margin-left: -0.4em; top: -0.1em } .title-block { width: 100%;
+      text-align: center } div:where(.tmhtml-p) { margin-top: 1em;
+      margin-bottom: 1em } .title-block p { margin: 0px } .title-block
+      div:where(.tmhtml-p) { margin: 0px } .compact-block p { margin-top: 0px;
+      margin-bottom: 0px } .compact-block div:where(.tmhtml-p) { margin-top:
+      0px; margin-bottom: 0px } .left-tab { text-align: left } .center-tab {
+      text-align: center } .balloon-anchor { border-bottom: 1px dotted
+      #000000; outline: none; cursor: help; position: relative; }
       .balloon-anchor [hidden] { margin-left: -999em; position: absolute;
       display: none; } .balloon-anchor: hover [hidden] { position: absolute;
       left: 1em; top: 2em; z-index: 99; margin-left: 0; width: 500px; display:
@@ -54,7 +56,7 @@
       href="blueprint/external-map.html">Literature</a><font class="ym-sep">&middot;</font><a href="docs/proof-standard.html">Proof
       standard</a><font class="ym-sep">&middot;</font><a href="CONTRIBUTING.html">Contributing</a>
     </div>
-    <div class="ym-revision">This site is generated from revision <a href="https://github.com/hairer/humanise-yang-mills/commit/0d296ca9b95e7df0fc34719642792bd1dad72ff0"><code>0d296ca</code></a> (2026-11-21) of the <a href="https://github.com/hairer/humanise-yang-mills">source repository</a>.</div>
+    <div class="ym-revision">This site is generated from revision <a href="https://github.com/hairer/humanise-yang-mills/commit/37633f9306ceeffb0144a45f137789fb39453e69"><code>37633f9</code></a> (2026-11-22) of the <a href="https://github.com/hairer/humanise-yang-mills">source repository</a>.</div>
     <p>
       <h1>Humanise Yang-Mills</h1><a id="humanise-yang-mills"></a>
     </p>
