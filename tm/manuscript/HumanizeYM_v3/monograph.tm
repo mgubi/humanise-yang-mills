@@ -395,7 +395,7 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-27>
 
-    3.7<space|2spc>The degree-four conserved tensor
+    3.7<space|2spc>The conserved tensor of scaling dimension four
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-28>
 
@@ -2679,23 +2679,25 @@
 
   <section|Local polynomials and Wick correlations><label|ch03:wick>
 
-  A local polynomial is a polynomial in finitely many curvature derivatives
-  at one point. Its scaling dimension is computed by assigning degree
-  <math|2> to <math|F> and degree <math|1> to each derivative. For example,
-  <math|F<rsup|\<alpha\>><rsub|\<mu\>*\<nu\>>*F<rsup|\<beta\>><rsub|\<rho\>*\<sigma\>>>
-  has degree <math|4>, whereas <math|\<partial\><rsub|\<lambda\>>*F<rsup|\<alpha\>><rsub|\<mu\>*\<nu\>>>
-  has degree <math|3>. Scaling dimension is an algebraic grading of the
-  reference model; it is not an assertion about anomalous dimensions of the
-  interacting fields.
+  A <em|local polynomial at a point>, or <em|insertion>, is a pair
+  <math|<around|(|P,x|)>>, where <math|x\<in\><RR><rsup|4>> and <math|P> is a
+  polynomial in finitely many components of the curvature and its
+  derivatives. All factors of <math|P> are taken at <math|x>. We use the
+  classical scaling dimension of Definition<nbsp><reference|ch02:labels>:
+  curvature has scaling dimension two, each derivative adds one, and
+  dimensions add in a product. Thus <math|F<rsup|\<alpha\>><rsub|\<mu\>*\<nu\>>*F<rsup|\<beta\>><rsub|\<rho\>*\<sigma\>>>
+  has scaling dimension four and <math|\<partial\><rsub|\<lambda\>>*F<rsup|\<alpha\>><rsub|\<mu\>*\<nu\>>>
+  has scaling dimension three.
 
-  The polynomial attached to one insertion is Wick ordered. We use the usual
-  Gaussian pairing rule, whose operator formulation is due to
-  Wick<nbsp><cite|Wick1950>. Here it can be taken as the definition of the
-  separated correlation functions. Expand each polynomial into monomials,
-  regard each factor as a distinguishable occurrence, and sum over pairings
-  of all occurrences subject to the condition that paired occurrences belong
-  to different insertions. For each pair use <eqref|ch03:jet-covariance>. The
-  empty pairing has value one. The resulting finite sum is denoted by
+  We write <math|:P<around|(|x|)>>: for the Wick-ordered insertion
+  <math|<around|(|P,x|)>>. We use the usual Gaussian pairing rule, whose
+  operator formulation is due to Wick<nbsp><cite|Wick1950>. Here it can be
+  taken as the definition of the separated correlation functions. Expand each
+  polynomial into monomials, regard each factor as a distinguishable
+  occurrence, and sum over pairings of all occurrences subject to the
+  condition that paired occurrences belong to different insertions. For each
+  pair use <eqref|ch03:jet-covariance>. The empty pairing has value one. The
+  resulting finite sum is denoted by
 
   <\equation*>
     S<rsub|n><rsup|<math-up|Max>>*<around|(|P<rsub|1>,\<ldots\>,P<rsub|n>;x<rsub|1>,\<ldots\>,x<rsub|n>|)>,<space|2em>x<rsub|i>\<ne\>x<rsub|j>*<space|1em><around|(|i\<ne\>j|)>.
@@ -2711,13 +2713,11 @@
   </align*>
 
   Here <math|C*<around|(|X,Y;z|)>> denotes the bilinear covariance obtained
-  from <eqref|ch03:jet-covariance>. By contrast, in a word containing several
-  insertions in the same time half-space, contractions between those
-  <em|different> insertions are included. Wick ordering removes
-  self-contractions at each insertion, not all contractions inside a word.
+  from <eqref|ch03:jet-covariance>.
 
   The pairing rule gives complex multilinearity, symmetry under simultaneous
-  permutation of labels and positions, reality, and the unit identity
+  permutation of the pairs <math|<around|(|P<rsub|i>,x<rsub|i>|)>>, reality,
+  and the unit identity
 
   <\equation*>
     S<rsub|n+1><rsup|<math-up|Max>>*<around|(|1,P<rsub|1>,\<ldots\>,P<rsub|n>;x<rsub|0>,x<rsub|1>,\<ldots\>,x<rsub|n>|)>=S<rsub|n><rsup|<math-up|Max>>*<around|(|P<rsub|1>,\<ldots\>,P<rsub|n>;x<rsub|1>,\<ldots\>,x<rsub|n>|)>.
@@ -2727,20 +2727,20 @@
   product rule therefore agrees with ordinary differentiation of the
   correlation function in that insertion position.
 
-  If the labels are homogeneous of degrees
-  <math|d<rsub|1>,\<ldots\>,d<rsub|n>>, then
+  If each polynomial <math|P<rsub|i>> is homogeneous of scaling dimension
+  <math|d<rsub|i>>, then
 
   <\equation>
     <label|ch03:homogeneity>S<rsub|n><rsup|<math-up|Max>>*<around|(|P<rsub|1>,\<ldots\>,P<rsub|n>;\<lambda\>*x<rsub|1>,\<ldots\>,\<lambda\>*x<rsub|n>|)>=\<lambda\><rsup|-<big|sum><rsub|i>d<rsub|i>>*S<rsub|n><rsup|<math-up|Max>>*<around|(|P<rsub|1>,\<ldots\>,P<rsub|n>;x<rsub|1>,\<ldots\>,x<rsub|n>|)>*<space|1em><around|(|\<lambda\>\<gtr\>0|)>.
   </equation>
 
-  For general labels of bounded degree, decompose into finitely many
-  homogeneous pieces. Equations <eqref|ch03:jet-covariance> and
-  <eqref|ch03:homogeneity> give bounds on all derivatives on separated
-  configuration spaces. In particular, smearing against a smooth compactly
-  supported function whose support avoids collisions is well defined. This
-  statement is weaker than specifying the correlations on test functions
-  whose supports meet collision diagonals.
+  For general polynomials of bounded scaling dimension, decompose each
+  <math|P<rsub|i>> into its homogeneous components. Equations
+  <eqref|ch03:jet-covariance> and <eqref|ch03:homogeneity> give bounds on all
+  derivatives on separated configuration spaces. In particular, smearing
+  against a smooth compactly supported function whose support avoids
+  collisions is well defined. This statement is weaker than specifying the
+  correlations on test functions whose supports meet collision diagonals.
 
   <section|The on-shell polynomial space><label|ch03:shell>
 
@@ -2773,35 +2773,48 @@
   polynomials are the gauge-invariant local observables of the free reference
   theory.
 
-  To compare this definition with the radial-potential labels
-  <math|V<rsub|d>>, associate to a closed homogeneous curvature
-  <math|F<rsup|<around|(|j|)>>> the radial potential
+  Each <math|F<rsub|j>\<in\>\<cal-S\><rsub|j>> has a unique homogeneous
+  radial potential <math|A<rsub|j>> of degree <math|j+1>. The radial homotopy
+  formula gives
 
   <\equation>
-    <label|ch03:radial>A<rsup|<around|(|j+1|)>><rsub|\<mu\>><around|(|x|)>=<big|int><rsub|0><rsup|1>t*x<rsup|\<nu\>>*F<rsup|<around|(|j|)>><rsub|\<nu\>*\<mu\>>*<around|(|t*x|)>*<space|0.17em>d*t=<frac|1|j+2>*<big|sum><rsub|\<nu\>>x<rsup|\<nu\>>*F<rsup|<around|(|j|)>><rsub|\<nu\>*\<mu\>><around|(|x|)>.
+    <label|ch03:radial><around|(|A<rsub|j>|)><rsub|\<mu\>><around|(|x|)>=<big|int><rsub|0><rsup|1>t*<big|sum><rsub|\<nu\>>x<rsup|\<nu\>><around|(|F<rsub|j>|)><rsub|\<nu\>*\<mu\>>*<around|(|t*x|)>*<space|0.17em>d*t=<frac|1|j+2>*<big|sum><rsub|\<nu\>>x<rsup|\<nu\>><around|(|F<rsub|j>|)><rsub|\<nu\>*\<mu\>><around|(|x|)>.
   </equation>
 
-  There is a sum over <math|\<nu\>> in the integral as well. This is the
-  usual radial homotopy formula: <math|x<rsup|\<mu\>>*A<rsub|\<mu\>>=0> and
-  <math|d*A=F> when <math|d*F=0>. The connection here is the <em|linear>
-  Maxwell potential; no nonabelian commutator is inserted into this formula.
-  Restricting a label in <math|V<rsub|d>> to these radial potentials gives a
-  map
+  Here <math|x<rsup|\<mu\>><around|(|A<rsub|j>|)><rsub|\<mu\>>=0> and
+  <math|d*A<rsub|j>=F<rsub|j>> since <math|F<rsub|j>> is closed. Thus
+  <math|<around|(|F<rsub|j>|)><rsub|j>\<mapsto\><around|(|A<rsub|j>|)><rsub|j>>
+  identifies <math|<big|oplus><rsub|0\<leqslant\>j\<leqslant\>d-2>\<cal-S\><rsub|j>>
+  with the linear subspace of <math|\<cal-J\><rsub|\<leqslant\>d>> consisting
+  of radial jets satisfying <math|\<delta\>*d*A<rsub|j>=0> in every layer.
 
-  <\equation*>
-    \<omega\><rsub|d>:V<rsub|d>\<longrightarrow\><around|{|<text|complex
-    polynomials on Maxwell solution jets of weight at most >d|}>.
-  </equation*>
-
-  It preserves the unit, conjugation and the geometric actions. Define
+  For <math|P\<in\>V<rsub|d>>, define <math|\<omega\><rsub|d>*P> to be the
+  restriction of <math|P> to this subspace. In curvature coordinates,
+  <math|<around|(|\<omega\><rsub|d>*P|)><around|(|<around|(|F<rsub|j>|)><rsub|j>|)>=P<around|(|<around|(|A<rsub|j>|)><rsub|j>|)>>
+  with <math|A<rsub|j>> given by <eqref|ch03:radial>. Restriction preserves
+  the unit and commutes with conjugation, gauge transformations at the origin
+  and orthogonal changes of coordinates. Its kernel is precisely
+  <math|\<cal-I\><rsub|d>> of Section<nbsp><reference|ch02:equation-section>,
+  the polynomials in <math|V<rsub|d>> vanishing on all Maxwell solution jets.
+  Hence the free polynomial space is
 
   <\equation>
-    <label|ch03:free-space>\<cal-M\><rsub|d><rsup|<math-up|Max>>=<math-up|im><space|0.17em>\<omega\><rsub|d>.
+    <label|ch03:free-space>\<cal-M\><rsub|d><rsup|<math-up|Max>>=<math-up|im><space|0.17em>\<omega\><rsub|d>\<simeq\>V<rsub|d>/\<cal-I\><rsub|d>.
   </equation>
 
-  Equivalently, this is <math|V<rsub|d>/ker \<omega\><rsub|d>> as a vector
-  space. The image formulation is useful: it does not assume a separate
-  surjectivity theorem onto a larger invariant-polynomial space.
+  This description of the solution jets is the constant-coefficient case of
+  the <math|D>-module description of a linear differential system
+  <cite-detail|Malgrange1964|Ÿ<space|0.17em>3, p.<nbsp>84>. Take
+  <math|D=<RR><around|[|\<partial\><rsub|1>,\<ldots\>,\<partial\><rsub|4>|]>>
+  and let <math|M> be the graded <math|D>-module generated in degree zero by
+  the components of the two-form <math|F>, with relations <math|d*F=0> and
+  <math|\<delta\>*F=0>. Multiplying the relations by derivatives imposes the
+  differentiated equations on the Taylor coefficients. Thus
+  <math|\<cal-S\><rsub|j>> is the dual of the degree-<math|j> part of
+  <math|M>: an order-<math|j> derivative pairs with <math|F<rsub|j>> by
+  applying it to the corresponding component and evaluating at the origin.
+  The map <math|\<omega\><rsub|d>> then restricts polynomial observables to
+  these jets.
 
   The covariance identities <eqref|ch03:maxwell-equations> make the Wick
   correlations well defined on these on-shell polynomial images. Products of
@@ -2813,60 +2826,135 @@
   The free spaces form a filtration. The inclusion
   <math|\<cal-M\><rsub|d><rsup|<math-up|Max>>\<to\>\<cal-M\><rsub|e><rsup|<math-up|Max>>>
   for <math|d\<leqslant\>e> retains the same polynomial, while
-  differentiation raises weight by one. For a simple nonabelian Lie algebra
-  there is no nonzero invariant linear form on <math|<gLie>>. Therefore every
-  gauge-invariant field of degree less than four in this polynomial image is
-  a constant. This low-degree statement follows from the weights: a
-  nonconstant monomial below degree four would have just one curvature factor
-  or one of its first derivatives.
+  differentiation raises scaling dimension by one. For a simple nonabelian
+  Lie algebra there is no nonzero invariant linear form on <math|<gLie>>.
+  Therefore every gauge-invariant field of scaling dimension less than four
+  in this polynomial image is a constant. Indeed, a nonconstant monomial of
+  scaling dimension less than four would have just one curvature factor or
+  one of its first derivatives.
 
   <section|Reflection and the meaning of nondegeneracy><label|ch03:reflection>
 
   Let <math|\<vartheta\>*<around|(|\<b-x\>,t|)>=<around|(|\<b-x\>,-t|)>>.
   Reflection acts on a two-form by pullback, so a component with one time
-  index changes sign and a purely spatial component does not. On a local
-  polynomial, <math|\<theta\>> combines this action with complex conjugation.
-  On a word it also reverses the order and reflects every insertion point.
-  This is the antilinear reflection used in the Osterwalder\USchrader form,
-  not merely conjugation of scalar coefficients.
+  index changes sign and a purely spatial component does not. Write
+  <math|\<theta\>*P> for the polynomial obtained by this pullback and complex
+  conjugation. Reflection sends the insertion <math|<around|(|P,x|)>> to
+  <math|<around|(|\<theta\>*P,\<vartheta\>*x|)>>. A <em|word> is a finite
+  ordered list of such pairs at distinct points, written as the product
+  <math|w=:P<rsub|1><around|(|x<rsub|1>|)>:\<cdots\>:P<rsub|n><around|(|x<rsub|n>|)>>:.
+  Reflection acts on each pair and reverses the order of the list. This is
+  the antilinear reflection used in the Osterwalder\USchrader form, not
+  merely conjugation of scalar coefficients.
 
-  For words <math|w<rsub|i>> supported at distinct points in the positive
-  half-space, the free field has reflection positivity:
+  If a collection of words <math|w<rsub|i>> is such that every insertion in
+  each word <math|w<rsub|i>> lies at positive time, the free field has
+  reflection positivity:
 
   <\equation>
     <label|ch03:rp><big|sum><rsub|i,j><wide|c<rsub|i>|\<bar\>>c<rsub|j>*S<rsup|<math-up|Max>>*<around|(|\<theta\>*w<rsub|i>*<space|0.17em>w<rsub|j>|)>\<geqslant\>0.
   </equation>
 
-  The same inequality holds for smooth joint test functions supported on
-  separated positive-time configurations. This is the standard Gaussian
-  reflection-positive construction underlying Osterwalder\USchrader
-  reconstruction<nbsp><cite|OsterwalderSchrader1973|OsterwalderSchrader1975>,
-  applied to the curvature covariance rather than to an unconstrained
-  vector-potential observable. Its hypotheses can be checked at the
-  one-particle level: spatial Fourier transformation of <eqref|ch03:green>
-  gives
+  Here <math|S<rsup|<math-up|Max>>*<around|(|\<theta\>*w<rsub|i>*<space|0.17em>w<rsub|j>|)>>
+  is the separated correlation of all insertions in the concatenated list. We
+  first verify the inequality for linear curvature insertions.
+
+  Write <math|x=<around|(|\<b-x\>,t|)>> and <math|y=<around|(|\<b-y\>,s|)>>
+  with <math|t,s\<gtr\>0>. Let <math|u> denote the time difference and let
+  <math|<wide|\<Gamma\>|^>*<around|(|\<b-p\>,u|)>> denote the Fourier
+  transform of <math|\<Gamma\>*<around|(|\<b-z\>,u|)>> in <math|\<b-z\>>
+  alone. Taking this spatial transform in
+  <math|-\<Delta\>*\<Gamma\>=\<delta\><rsub|0>> gives
 
   <\equation*>
-    <frac|e<rsup|-<around|\||\<b-p\>|\|>*<around|(|t+s|)>>|2<around|\||\<b-p\>|\|>>*<space|2em><around|(|t,s\<gtr\>0|)>,
+    <around|(|<around|\||\<b-p\>|\|><rsup|2>-\<partial\><rsub|u><rsup|2>|)>*<wide|\<Gamma\>|^>*<around|(|\<b-p\>,u|)>=\<delta\><rsub|0><around|(|u|)>.
   </equation*>
 
-  and taking the two curls with the reflected two-form indices gives the
-  positive transverse-polarization Gram form. Derivative jets act on the same
-  factors. The Gaussian Fock construction then gives <eqref|ch03:rp>;
-  contractions within each positive-time word are included in its Fock
-  vector. On compact separated supports the kernels are smooth, so the
-  corresponding form on joint test functions follows by integration. We use
-  this standard argument by citation rather than repeating the Fock-space
-  construction.
+  Indeed, the spatial Laplacian has symbol
+  <math|-<around|\||\<b-p\>|\|><rsup|2>> and the spatial transform of the
+  point mass in four dimensions leaves the time point mass
+  <math|\<delta\><rsub|0><around|(|u|)>>. Transforming also in <math|u>, with
+  dual variable <math|\<xi\>>, gives <math|<around|(|<around|\||\<b-p\>|\|><rsup|2>+\<xi\><rsup|2>|)>*<space|0.17em>\<cal-F\><rsub|u>*<wide|\<Gamma\>|^>*<around|(|\<b-p\>,\<xi\>|)>=1>.
+  For <math|\<b-p\>\<ne\>0> we can divide and invert in <math|\<xi\>> to
+  obtain
 
-  A simple sign check is informative. At separation <math|z=r*e<rsub|4>>, the
-  six unordered curvature components have diagonal covariance. Three purely
-  spatial components have value <math|1/<around|(|\<pi\><rsup|2>*r<rsup|4>|)>>;
-  the three components <math|F<rsub|i*4>> have value
-  <math|-1/<around|(|\<pi\><rsup|2>*r<rsup|4>|)>>. Reflection changes the
-  sign of <math|F<rsub|i*4>> in the first slot. The reflected one-jet form is
-  therefore positive in all six directions. Without the tensorial reflection,
-  the same displayed covariance would give the wrong positivity statement.
+  <\equation*>
+    <wide|\<Gamma\>|^>*<around|(|\<b-p\>,u|)>=<big|int><rsub|<RR>><frac|e<rsup|i*\<xi\>*u>|<around|\||\<b-p\>|\|><rsup|2>+\<xi\><rsup|2>>*<space|0.17em><frac|d*\<xi\>|2*\<pi\>>=<frac|e<rsup|-<around|\||\<b-p\>|\|><space|0.17em><around|\||u|\|>>|2<around|\||\<b-p\>|\|>>.
+  </equation*>
+
+  In the reflected two-point function the arguments are <math|\<vartheta\>*x>
+  and <math|y>, so <math|u=-t-s>. In particular, one has
+
+  <\equation*>
+    \<Gamma\>*<around|(|\<vartheta\>*x-y|)>=<big|int><rsub|<RR><rsup|3>>e<rsup|i*\<b-p\>\<cdot\><around|(|\<b-y\>-\<b-x\>|)>>*<space|0.17em><frac|e<rsup|-<around|\||\<b-p\>|\|>*<around|(|t+s|)>>*d<rsup|3>*\<b-p\>|<around|(|2*\<pi\>|)><rsup|3>*<space|0.17em>2<around|\||\<b-p\>|\|>>.
+  </equation*>
+
+  Here we used the evenness of <math|<wide|\<Gamma\>|^>> in <math|\<b-p\>>.
+  Writing <math|h<rsub|\<b-p\>><around|(|x|)>=e<rsup|i*\<b-p\>\<cdot\>\<b-x\>-<around|\||\<b-p\>|\|>*t>>,
+  the two exponential factors have product
+  <math|<wide|h<rsub|\<b-p\>><around|(|x|)>|\<bar\>><space|0.17em>h<rsub|\<b-p\>><around|(|y|)>>.
+
+  To see the effect of the curl, work in one Lie algebra component. For a
+  linear combination <math|L=<big|sum><rsub|a,\<mu\>\<less\>\<nu\>>c<rsup|a><rsub|\<mu\>*\<nu\>>*F<rsub|\<mu\>*\<nu\>><around|(|x<rsub|a>|)>>
+  at positive times, consider its action on a vector potential of the form
+  <math|A<around|(|x|)>=v*h<rsub|\<b-p\>><around|(|x|)>> with constant
+  amplitude <math|v\<in\>\<bbb-C\><rsup|4>>. Writing
+  <math|q=<around|(|i*\<b-p\>,-<around|\||\<b-p\>|\|>|)>>, the curl gives
+
+  <\equation*>
+    L<around|(|A|)>=<big|sum><rsub|a,\<mu\>\<less\>\<nu\>>c<rsup|a><rsub|\<mu\>*\<nu\>>*h<rsub|\<b-p\>><around|(|x<rsub|a>|)>*<around|(|q<rsub|\<mu\>>*v<rsub|\<nu\>>-q<rsub|\<nu\>>*v<rsub|\<mu\>>|)>=<big|sum><rsub|\<nu\>=1><rsup|4>J<rsub|\<nu\>><around|(|\<b-p\>|)>*v<rsub|\<nu\>>.
+  </equation*>
+
+  This defines <math|J=<around|(|\<b-J\>,J<rsub|4>|)>>. Substituting
+  <math|v=q> makes each curl vanish, hence
+  <math|<around|\||\<b-p\>|\|>*J<rsub|4>=i*\<b-p\>\<cdot\>\<b-J\>>.
+  Reflection commutes with the curl and acts on the potential by
+  <math|<math-up|diag><around|(|1,1,1,-1|)>>. Applying <math|L> in the second
+  slot and its reflected conjugate in the first slot of the factorized
+  potential covariance therefore gives
+
+  <\equation*>
+    S<rsup|<math-up|Max>>*<around|(|\<theta\>*L*<space|0.17em>L|)>=<big|int><rsub|<RR><rsup|3>><around*|(|<around|\||\<b-J\>|\|><rsup|2>-<around|\||J<rsub|4>|\|><rsup|2>|)>*<space|0.17em><frac|d<rsup|3>*\<b-p\>|<around|(|2*\<pi\>|)><rsup|3>*<space|0.17em>2<around|\||\<b-p\>|\|>>=<big|int><rsub|<RR><rsup|3>><around*|\||\<b-J\>-<frac|\<b-p\>\<cdot\>\<b-J\>|<around|\||\<b-p\>|\|><rsup|2>>*\<b-p\>|\|><rsup|2>*<space|0.17em><frac|d<rsup|3>*\<b-p\>|<around|(|2*\<pi\>|)><rsup|3>*<space|0.17em>2<around|\||\<b-p\>|\|>>\<geqslant\>0.
+  </equation*>
+
+  A derivative <math|\<partial\><rsup|b>*F<rsub|\<mu\>*\<nu\>>> supplies the
+  extra factor <math|q<rsup|b>> in its summand, so the same calculation
+  applies to curvature derivatives. The full covariance sums these forms over
+  the orthonormal Lie algebra components.
+
+  For polynomial words, Wick's rule gives the usual Gaussian extension of
+  reflection positivity<nbsp><cite|OsterwalderSchrader1973|OsterwalderSchrader1975>.
+  First contract any number of pairs within each word, allowing only pairs
+  from distinct insertions as in Section<nbsp><reference|ch03:wick>. For each
+  word, sum the symmetrized tensors of the remaining linear factors, weighted
+  by the internal contractions, grouping terms by the number <math|n> of
+  remaining factors. The contractions across the reflection plane then pair
+  two such tensors by summing over all <math|n>! bijections. This is
+  <math|n>! times their inner product in the symmetric tensor power of the
+  one-particle space defined by the preceding Gram form (with symmetrization
+  by averaging). Thus the left side of <eqref|ch03:rp> is a sum of squared
+  norms with coefficients <math|n>!. The same inequality holds after smearing
+  with smooth joint test functions compactly supported on separated
+  positive-time configurations, by approximation of the integrals by finite
+  sums.
+
+  For an explicit sign check, take <math|x=<tfrac|r|2>e<rsub|4>> with
+  <math|r\<gtr\>0>, so that <math|\<vartheta\>*x-x=-r*e<rsub|4>>. In a fixed
+  unit Lie algebra direction, <eqref|ch03:kernel> and <eqref|ch03:hessian>
+  give the diagonal entries of the curvature covariance at this separation:
+
+  <\equation*>
+    C<rsub|i*j,i*j>*<around|(|-r*e<rsub|4>|)>=<frac|1|\<pi\><rsup|2>*r<rsup|4>>*<space|1em><around|(|1\<leqslant\>i\<less\>j\<leqslant\>3|)>,<space|2em>C<rsub|i*4,i*4>*<around|(|-r*e<rsub|4>|)>=-<frac|1|\<pi\><rsup|2>*r<rsup|4>>*<space|1em><around|(|1\<leqslant\>i\<leqslant\>3|)>.
+  </equation*>
+
+  The entries between distinct index pairs vanish when each pair is written
+  in increasing order. Reflection of the first insertion contributes a
+  further minus sign precisely for <math|F<rsub|i*4>>. Thus for each
+  <math|1\<leqslant\>\<mu\>\<less\>\<nu\>\<leqslant\>4>,
+
+  <\equation*>
+    S<rsup|<math-up|Max>>*<around*|(|\<theta\><around|(|F<rsub|\<mu\>*\<nu\>><around|(|x|)>|)>*<space|0.17em>F<rsub|\<mu\>*\<nu\>><around|(|x|)>|)>=<frac|1|\<pi\><rsup|2>*r<rsup|4>>.
+  </equation*>
 
   Positive semidefiniteness of <eqref|ch03:rp> alone does not identify its
   null space. For later rank arguments one needs the stronger statement that
@@ -2886,33 +2974,43 @@
     P<rsub|a*b><around|(|v|)>=<big|sum><rsub|i<rsub|1>,\<ldots\>,i<rsub|j>>P<rsub|a*b;i<rsub|1>*\<cdots\>*i<rsub|j>>*v<rsub|i<rsub|1>>*\<cdots\>*v<rsub|i<rsub|j>>.
   </equation*>
 
-  The derivative-index coefficients are symmetric. On this coefficient space
-  use the Frobenius inner product, summing both orders of the antisymmetric
-  field indices, all ordered derivative indices and components in the basis
-  of Section<nbsp><reference|ch01:gauge>. In particular, no factor <math|1/2>
-  is inserted for the field indices. The linear jet probe represented by
-  <math|P> is
+  The coefficients <math|P<rsub|a*b;i<rsub|1>*\<cdots\>*i<rsub|j>>\<in\><gLie>>
+  are symmetric in the derivative indices. Their Frobenius inner product
+  <math|<around|\<langle\>|P,Q|\<rangle\>><rsub|F>> is the sum of the Lie
+  algebra inner products of corresponding coefficients over all ordered
+  tuples <math|<around|(|a,b,i<rsub|1>,\<ldots\>,i<rsub|j>|)>>. Both orders
+  of the antisymmetric pair <math|<around|(|a,b|)>> are included, with no
+  factor <math|1/2>. The constant-coefficient differential operator
+  <math|\<ell\><rsub|P>> acts on a two-form <math|F> by
 
   <\equation>
-    <label|ch03:probe>\<ell\><rsub|P><around|(|F|)>=<frac|1|j!>*<big|sum><rsub|a,b,i<rsub|1>,\<ldots\>,i<rsub|j>,\<alpha\>>P<rsup|\<alpha\>><rsub|a*b;i<rsub|1>*\<cdots\>*i<rsub|j>>*\<partial\><rsub|i<rsub|1>>*\<cdots\>*\<partial\><rsub|i<rsub|j>>*F<rsup|\<alpha\>><rsub|a*b>.
+    <label|ch03:probe>\<ell\><rsub|P><around|(|F|)>=<frac|1|j!>*<big|sum><rsub|a,b,i<rsub|1>,\<ldots\>,i<rsub|j>><around*|\<langle\>|P<rsub|a*b;i<rsub|1>*\<cdots\>*i<rsub|j>>,\<partial\><rsub|i<rsub|1>>*\<cdots\>*\<partial\><rsub|i<rsub|j>>*F<rsub|a*b>|\<rangle\>><rsub|<gLie>>.
   </equation>
 
-  The factor <math|1/j>! matches our Taylor convention. Every linear
-  functional on the order-<math|j> solution jets has this form.
+  With this normalization, <math|\<ell\><rsub|P><around|(|Q|)><around|(|0|)>=<around|\<langle\>|P,Q|\<rangle\>><rsub|F>>
+  for <math|P,Q\<in\>\<cal-S\><rsub|j>>. Indeed, symmetry of the derivative
+  indices gives <math|\<partial\><rsub|i<rsub|1>>*\<cdots\>*\<partial\><rsub|i<rsub|j>>*Q<rsub|a*b><around|(|0|)>=j!<space|0.17em>Q<rsub|a*b;i<rsub|1>*\<cdots\>*i<rsub|j>>>.
+  Thus the Frobenius inner product identifies each linear functional on the
+  order-<math|j> solution jets with a unique <math|P\<in\>\<cal-S\><rsub|j>>.
 
   Put <math|I<around|(|z|)>=z/<around|\||z|\|><rsup|2>> and
   <math|R<rsub|z>=1-2*z*z<rsup|<math-ss|T>>/<around|\||z|\|><rsup|2>>. For a
   two-form, <math|R<rsub|z><rsup|<around|(|2|)>>> means applying
   <math|R<rsub|z>> to both form indices. The full reflection on a polynomial
   solution is <math|<around|(|R<rsub|z>\<cdot\>P|)><around|(|v|)>=R<rsub|z><rsup|<around|(|2|)>>*P*<around|(|R<rsub|z>*v|)>>:
-  the derivative indices are reflected as well. For real probes define
+  the derivative indices are reflected as well. For real
+  <math|P\<in\>\<cal-S\><rsub|j>>, <math|Q\<in\>\<cal-S\><rsub|k>> and
+  <math|z\<ne\>0>, define
 
   <\equation*>
-    B<rsub|z>*<around|(|P,Q|)>=S<rsub|2><rsup|<math-up|Max>>*<around|(|\<ell\><rsub|P>,\<ell\><rsub|R<rsub|z>\<cdot\>Q>;z,0|)>.
+    B<rsub|z>*<around|(|P,Q|)>=S<rsub|2><rsup|<math-up|Max>>*<around*|(|\<ell\><rsub|P><around|(|F|)>,\<ell\><rsub|R<rsub|z>\<cdot\>Q><around|(|F|)>;z,0|)>.
   </equation*>
 
-  Extend this bilinearly across different derivative orders. Covariance and
-  exchange of the two insertions show that <math|B<rsub|z>> is symmetric.
+  Here <math|F> is the free Maxwell curvature. Applying the two operators to
+  <math|F> gives the linear polynomials in its derivatives that are inserted
+  at <math|z> and at the origin, respectively. Extend this bilinearly across
+  different derivative orders. Covariance and exchange of the two insertions
+  show that <math|B<rsub|z>> is symmetric.
 
   <\proposition>
     <dueto|Finite-jet nondegeneracy><label|ch03:jet-positive> For every
@@ -3019,9 +3117,9 @@
       P\<longmapsto\><around*|(|S<rsub|2><rsup|<math-up|Max>>*<around|(|P,P<rsub|j>;x,y|)>|)><rsub|j=1><rsup|s>
     </equation*>
 
-    is injective. Consequently a label in <math|V<rsub|d>> vanishes in every
-    separated correlation if and only if its on-shell polynomial
-    <math|\<omega\><rsub|d>> vanishes.
+    is injective. Consequently <math|P\<in\>V<rsub|d>> vanishes in every
+    separated correlation if and only if its restriction
+    <math|\<omega\><rsub|d>*P> vanishes.
   </corollary>
 
   <\proof>
@@ -3042,9 +3140,9 @@
     preserves positivity. If all basis-column pairings vanish, the pairing
     with the reflected conjugate of the polynomial vanishes too, forcing that
     polynomial to be zero. This also identifies the correlation-null labels.
-    On any fixed finite-dimensional degree space, the map of correlation
-    pairings has a positive minimum norm on the unit sphere. Small
-    perturbations of its matrix remain injective; applying this fact to
+    For each fixed bound <math|d> on scaling dimension, the map of
+    correlation pairings has a positive minimum norm on the unit sphere.
+    Small perturbations of its matrix remain injective; applying this fact to
     interacting correlations still requires a quantitative comparison
     estimate.
   </proof>
@@ -3090,37 +3188,48 @@
   conclusions require the interacting stress Ward identity and quantitative
   estimates on moving comparison fields.
 
-  <section|The degree-four conserved tensor><label|ch03:classification>
+  <section|The conserved tensor of scaling dimension
+  four><label|ch03:classification>
 
-  The finite-dimensional classification needed for the stress tensor is small
-  enough to state explicitly. In this section <em|centered> means that the
-  constant Wick coefficient is zero. By the Wick prescription it is also the
-  one-point expectation. We consider real symmetric tensor fields
-  <math|J<rsub|a*b>> of degree at most four, invariant under the adjoint
-  action and transforming as a rank-two tensor under the signed coordinate
-  permutations <math|H<rsub|4>>. Conservation is an identity in the on-shell
-  polynomial space, or equivalently in every separated free correlation by
-  Corollary<nbsp><reference|ch03:detectors>.
+  Let <math|<with|math-font|cal*|T><rsub|\<leqslant\>4>> be the real vector
+  space of centered symmetric tensor fields <math|J=<around|(|J<rsub|a*b>|)>>
+  in the free Maxwell theory whose components are adjoint-invariant local
+  polynomials of scaling dimension at most four and which transform as
+  rank-two tensors under the group <math|H<rsub|4>> of signed coordinate
+  permutations. Centering means that each component has zero constant Wick
+  coefficient, equivalently zero one-point expectation. For
+  <math|J\<in\><with|math-font|cal*|T><rsub|\<leqslant\>4>>, write
+  <math|<around|(|<math-up|div><space|0.17em>J|)><rsub|b>=<big|sum><rsub|a>\<partial\><rsub|a>*J<rsub|a*b>>.
+  Its vanishing is understood in the on-shell polynomial space, equivalently
+  in every separated free correlation by Corollary<nbsp><reference|ch03:detectors>.
 
   <\proposition>
-    <dueto|Conserved tensor line><label|ch03:stress-line> The space of such
-    centered tensors has dimension three. Its conserved subspace is the line
-    <math|<RR>T<rsup|<math-up|Max>>>, with <math|T<rsup|<math-up|Max>>> as in
+    <dueto|Conserved tensor line><label|ch03:stress-line> The space
+    <math|<with|math-font|cal*|T><rsub|\<leqslant\>4>> has dimension three,
+    and
+
+    <\equation*>
+      <around|{|J\<in\><with|math-font|cal*|T><rsub|\<leqslant\>4>:<math-up|div><space|0.17em>J=0|}>=<RR>T<rsup|<math-up|Max>>,
+    </equation*>
+
+    where <math|T<rsup|<math-up|Max>>> is the Maxwell stress tensor of
     <eqref|ch03:stress>.
   </proposition>
 
   <\proof>
     Simplicity of <math|<gLie>> excludes invariant linear forms on
     <math|<gLie>> and makes an invariant symmetric bilinear form on
-    <math|<gLie>> a multiple of the fixed metric. Through degree four a
-    centered invariant polynomial therefore contains two undifferentiated
-    curvature factors. Indeed, a derivative on one of two factors would raise
-    the degree to at least five, while a single differentiated factor still
-    has no invariant linear functional on <math|<gLie>>.
+    <math|<gLie>> a multiple of the fixed metric. Up to scaling dimension
+    four a centered invariant polynomial therefore contains two
+    undifferentiated curvature factors. Indeed, a derivative on one of two
+    factors would raise the scaling dimension to at least five, while a
+    single differentiated factor still has no invariant linear functional on
+    <math|<gLie>>.
 
     Recall the quadratic fields <math|Q<rsub|a*b>> and
-    <math|Q<rsub|<math-up|tot>>> from <eqref|ch03:quadratics>. A basis of the
-    tensor candidates is
+    <math|Q<rsub|<math-up|tot>>> from <eqref|ch03:quadratics>. We claim that
+    the following tensors form a basis of
+    <math|<with|math-font|cal*|T><rsub|\<leqslant\>4>>:
 
     <\align*>
       <tformat|<table|<row|<cell|Z<rsup|<around|(|1|)>><rsub|a*b>>|<cell|=\<delta\><rsub|a*b>*Q<rsub|a*a>,>>|<row|<cell|Z<rsup|<around|(|2|)>><rsub|a*b>>|<cell|=\<delta\><rsub|a*b>*<around|(|Q<rsub|<math-up|tot>>-2*Q<rsub|a*a>|)>,>>|<row|<cell|Z<rsup|<around|(|3|)>><rsub|a*b>>|<cell|=<around|(|1-\<delta\><rsub|a*b>|)>*Q<rsub|a*b>.>>>>
@@ -3130,12 +3239,13 @@
     formulas. To see that these span, consider sign reversal of each
     coordinate. A diagonal component can contain only squares of curvature
     components. Permutations fixing its distinguished axis divide them into
-    two classes: those containing that axis, and those containing neither
-    instance of it. An off-diagonal component with indices <math|a,b> must be
-    odd in axes <math|a,b> and even in the others. Its possible contractions
-    are <math|:<around|\<langle\>|F<rsub|a*c>,F<rsub|b*c>|\<rangle\>><rsub|<gLie>>>:
+    two classes: those containing that axis, and those with both indices
+    distinct from that axis. An off-diagonal component with indices
+    <math|a,b> must be odd in axes <math|a,b> and even in the others. Its
+    possible contractions are <math|:<around|\<langle\>|F<rsub|a*c>,F<rsub|b*c>|\<rangle\>><rsub|<gLie>>>:
     with <math|c\<nin\><around|{|a,b|}>>; permutations identify their
-    coefficients. This gives exactly the three candidates displayed above.
+    coefficients. Thus <math|Z<rsup|<around|(|1|)>>,Z<rsup|<around|(|2|)>>,Z<rsup|<around|(|3|)>>>
+    span <math|<with|math-font|cal*|T><rsub|\<leqslant\>4>>.
 
     For an explicit rank check, let <math|Q<rsub|i*j,i*j>=:<around|\<\|\|\>|F<rsub|i*j>|\<\|\|\>><rsub|<gLie>><rsup|2>>:.
     Evaluate the first component of the divergence of each
@@ -3158,8 +3268,10 @@
     whereas the correlation of <math|Z<rsup|<around|(|3|)>><rsub|12><around|(|e<rsub|1>|)>>
     with <math|:<around|\<langle\>|F<rsub|13>,F<rsub|23>|\<rangle\>><rsub|<gLie>>:<around|(|0|)>>
     equals <math|-16*d<rsub|<gLie>>/<around|(|4*\<pi\><rsup|2>|)><rsup|2>>.
-    Thus the candidate tensors are themselves independent, and the kernel of
-    divergence has dimension at most one.
+    Thus the three tensors are linearly independent. In this basis of
+    <math|<with|math-font|cal*|T><rsub|\<leqslant\>4>>, every conserved
+    tensor has its coefficient vector in the kernel of
+    <eqref|ch03:divergence-matrix>, which has dimension one.
 
     The Maxwell stress is conserved and
 
@@ -3168,13 +3280,13 @@
     </equation*>
 
     It is nonzero by the preceding off-diagonal correlation. Hence it spans
-    that kernel.
+    the conserved subspace of <math|<with|math-font|cal*|T><rsub|\<leqslant\>4>>.
   </proof>
 
   This result fixes only a line of conserved tensors. Multiplying the stress
   by a scalar preserves all the properties used in the proposition. We next
   fix its normalization by a local Ward flux and then classify linear
-  responses on fields of arbitrary bounded degree.
+  responses on fields of bounded scaling dimension.
 
   <section|Local stress fluxes><label|ch03:ward>
 
@@ -3310,10 +3422,10 @@
   are evaluated in the free curvature field defined in
   Section<nbsp><reference|ch03:covariance>.
 
-  Corollary<nbsp><reference|ch03:detectors> detects a field of degree
-  <math|d> by another field of degree <math|d>. A different statement is
-  needed when a charge can raise degree: its response must be tested by
-  spectators whose degree remains fixed. Their <em|number> may be arbitrary.
+  Corollary<nbsp><reference|ch03:detectors> separates the fields of scaling
+  dimension at most <math|d> by pairings with fields in the same space. When
+  a charge can raise scaling dimension, we need a single bound on the scaling
+  dimensions of the spectator fields. Their <em|number> may be arbitrary.
 
   We first make explicit the polynomial space used here. The free image
   <math|\<cal-M\><rsub|d><rsup|<math-up|Max>>> in <eqref|ch03:free-space> is
@@ -3336,7 +3448,7 @@
 
   where the equality is required for every separated word with
   <math|P<rsub|i>\<in\>\<cal-M\><rsub|D><rsup|<math-up|Max>>>. There is no
-  restriction on the degree of <math|P> or the length <math|n>.
+  restriction on the scaling dimension of <math|P> or the length <math|n>.
 
   <\proposition>
     <dueto|A separating family of insertions of bounded scaling
@@ -22093,7 +22205,7 @@
   </with>
 
   <\bibliography|bib|tm-alpha|monograph>
-    <\bib-list|40>
+    <\bib-list|41>
       <bibitem*|Abb82><label|bib-Abbott1982>L.<nbsp>F.<nbsp>Abbott.
       <newblock>Introduction to the background field method.
       <newblock><with|font-shape|italic|Acta Physica Polonica B>,
@@ -22229,6 +22341,12 @@
       loops. <newblock><with|font-shape|italic|Nuclear Physics B>,
       452:234\U260, 1995.<newblock>
 
+      <bibitem*|Mal64><label|bib-Malgrange1964>Bernard Malgrange.
+      <newblock>Systèmes différentiels à coefficients constants.
+      <newblock><localize|In ><with|font-shape|italic|Séminaire Bourbaki,
+      1962/63>, <localize|volume><nbsp>8, <localize|pages >79\U89. Société
+      Mathématique de France, 1964. <newblock>Exposé no.<nbsp>246.<newblock>
+
       <bibitem*|OS73><label|bib-OsterwalderSchrader1973>Konrad
       Osterwalder<localize| and >Robert Schrader. <newblock>Axioms for
       Euclidean Green's functions. <newblock><with|font-shape|italic|Communications
@@ -22344,69 +22462,69 @@
     <associate|auto-119|<tuple|10|153>>
     <associate|auto-12|<tuple|2|25>>
     <associate|auto-120|<tuple|10.1|153>>
-    <associate|auto-121|<tuple|10.2|154>>
+    <associate|auto-121|<tuple|10.2|155>>
     <associate|auto-122|<tuple|10.3|156>>
-    <associate|auto-123|<tuple|10.4|156>>
+    <associate|auto-123|<tuple|10.4|157>>
     <associate|auto-124|<tuple|10.5|157>>
-    <associate|auto-125|<tuple|10.6|158>>
+    <associate|auto-125|<tuple|10.6|159>>
     <associate|auto-126|<tuple|10.7|165>>
     <associate|auto-127|<tuple|10.8|166>>
-    <associate|auto-128|<tuple|11|167>>
-    <associate|auto-129|<tuple|11.1|167>>
+    <associate|auto-128|<tuple|11|169>>
+    <associate|auto-129|<tuple|11.1|169>>
     <associate|auto-13|<tuple|2.1|25>>
-    <associate|auto-130|<tuple|11.1.1|168>>
-    <associate|auto-131|<tuple|11.2|168>>
-    <associate|auto-132|<tuple|11.3|169>>
-    <associate|auto-133|<tuple|11.4|170>>
-    <associate|auto-134|<tuple|11.4.1|172>>
-    <associate|auto-135|<tuple|11.4.2|174>>
-    <associate|auto-136|<tuple|11.5|175>>
-    <associate|auto-137|<tuple|11.5.1|176>>
-    <associate|auto-138|<tuple|11.5.2|177>>
-    <associate|auto-139|<tuple|11.6|178>>
+    <associate|auto-130|<tuple|11.1.1|170>>
+    <associate|auto-131|<tuple|11.2|171>>
+    <associate|auto-132|<tuple|11.3|171>>
+    <associate|auto-133|<tuple|11.4|172>>
+    <associate|auto-134|<tuple|11.4.1|174>>
+    <associate|auto-135|<tuple|11.4.2|176>>
+    <associate|auto-136|<tuple|11.5|177>>
+    <associate|auto-137|<tuple|11.5.1|178>>
+    <associate|auto-138|<tuple|11.5.2|179>>
+    <associate|auto-139|<tuple|11.6|180>>
     <associate|auto-14|<tuple|2.2|26>>
-    <associate|auto-140|<tuple|11.6.1|178>>
-    <associate|auto-141|<tuple|11.7|184>>
-    <associate|auto-142|<tuple|11.7.1|184>>
-    <associate|auto-143|<tuple|11.8|185>>
-    <associate|auto-144|<tuple|11.9|186>>
-    <associate|auto-145|<tuple|11.10|187>>
-    <associate|auto-146|<tuple|11.11|188>>
-    <associate|auto-147|<tuple|11.12|191>>
-    <associate|auto-148|<tuple|11.12.1|191>>
-    <associate|auto-149|<tuple|11.12.2|194>>
+    <associate|auto-140|<tuple|11.6.1|180>>
+    <associate|auto-141|<tuple|11.7|186>>
+    <associate|auto-142|<tuple|11.7.1|187>>
+    <associate|auto-143|<tuple|11.8|188>>
+    <associate|auto-144|<tuple|11.9|189>>
+    <associate|auto-145|<tuple|11.10|190>>
+    <associate|auto-146|<tuple|11.11|191>>
+    <associate|auto-147|<tuple|11.12|193>>
+    <associate|auto-148|<tuple|11.12.1|194>>
+    <associate|auto-149|<tuple|11.12.2|197>>
     <associate|auto-15|<tuple|2.3|27>>
-    <associate|auto-150|<tuple|11.12.3|199>>
-    <associate|auto-151|<tuple|11.12.4|201>>
-    <associate|auto-152|<tuple|11.12.5|203>>
-    <associate|auto-153|<tuple|12|209>>
-    <associate|auto-154|<tuple|12.1|209>>
-    <associate|auto-155|<tuple|12.2|210>>
-    <associate|auto-156|<tuple|12.3|211>>
-    <associate|auto-157|<tuple|12.4|212>>
-    <associate|auto-158|<tuple|12.5|213>>
-    <associate|auto-159|<tuple|12.6|214>>
+    <associate|auto-150|<tuple|11.12.3|202>>
+    <associate|auto-151|<tuple|11.12.4|204>>
+    <associate|auto-152|<tuple|11.12.5|206>>
+    <associate|auto-153|<tuple|12|211>>
+    <associate|auto-154|<tuple|12.1|211>>
+    <associate|auto-155|<tuple|12.2|212>>
+    <associate|auto-156|<tuple|12.3|213>>
+    <associate|auto-157|<tuple|12.4|214>>
+    <associate|auto-158|<tuple|12.5|215>>
+    <associate|auto-159|<tuple|12.6|216>>
     <associate|auto-16|<tuple|2.4|29>>
-    <associate|auto-160|<tuple|13|217>>
-    <associate|auto-161|<tuple|13.1|217>>
-    <associate|auto-162|<tuple|13.2|218>>
-    <associate|auto-163|<tuple|13.3|218>>
-    <associate|auto-164|<tuple|13.3.1|219>>
-    <associate|auto-165|<tuple|13.4|220>>
-    <associate|auto-166|<tuple|13.5|221>>
-    <associate|auto-167|<tuple|13.6|222>>
-    <associate|auto-168|<tuple|13.7|223>>
-    <associate|auto-169|<tuple|13.7.1|223>>
+    <associate|auto-160|<tuple|13|219>>
+    <associate|auto-161|<tuple|13.1|219>>
+    <associate|auto-162|<tuple|13.2|220>>
+    <associate|auto-163|<tuple|13.3|220>>
+    <associate|auto-164|<tuple|13.3.1|221>>
+    <associate|auto-165|<tuple|13.4|222>>
+    <associate|auto-166|<tuple|13.5|223>>
+    <associate|auto-167|<tuple|13.6|223>>
+    <associate|auto-168|<tuple|13.7|224>>
+    <associate|auto-169|<tuple|13.7.1|225>>
     <associate|auto-17|<tuple|2.5|31>>
-    <associate|auto-170|<tuple|13.7.2|224>>
-    <associate|auto-171|<tuple|13.7.3|225>>
-    <associate|auto-172|<tuple|13.8|225>>
-    <associate|auto-173|<tuple|13.9|230>>
-    <associate|auto-174|<tuple|13.10|232>>
-    <associate|auto-175|<tuple|13.10.1|233>>
-    <associate|auto-176|<tuple|13.10.2|233>>
-    <associate|auto-177|<tuple|13.10.3|234>>
-    <associate|auto-178|<tuple|13.10.4|236>>
+    <associate|auto-170|<tuple|13.7.2|226>>
+    <associate|auto-171|<tuple|13.7.3|226>>
+    <associate|auto-172|<tuple|13.8|227>>
+    <associate|auto-173|<tuple|13.9|232>>
+    <associate|auto-174|<tuple|13.10|234>>
+    <associate|auto-175|<tuple|13.10.1|234>>
+    <associate|auto-176|<tuple|13.10.2|235>>
+    <associate|auto-177|<tuple|13.10.3|236>>
+    <associate|auto-178|<tuple|13.10.4|237>>
     <associate|auto-179|<tuple|14|239>>
     <associate|auto-18|<tuple|2.5.1|32>>
     <associate|auto-180|<tuple|14.1|239>>
@@ -22485,13 +22603,13 @@
     <associate|auto-246|<tuple|1|316>>
     <associate|auto-247|<tuple|1|317>>
     <associate|auto-25|<tuple|3.4|40>>
-    <associate|auto-26|<tuple|3.5|41>>
-    <associate|auto-27|<tuple|3.6|43>>
-    <associate|auto-28|<tuple|3.7|44>>
-    <associate|auto-29|<tuple|3.8|45>>
+    <associate|auto-26|<tuple|3.5|42>>
+    <associate|auto-27|<tuple|3.6|44>>
+    <associate|auto-28|<tuple|3.7|45>>
+    <associate|auto-29|<tuple|3.8|46>>
     <associate|auto-3|<tuple|4|7>>
-    <associate|auto-30|<tuple|3.9|47>>
-    <associate|auto-31|<tuple|3.10|49>>
+    <associate|auto-30|<tuple|3.9|48>>
+    <associate|auto-31|<tuple|3.10|50>>
     <associate|auto-32|<tuple|4|53>>
     <associate|auto-33|<tuple|4.1|53>>
     <associate|auto-34|<tuple|4.2|55>>
@@ -22525,7 +22643,7 @@
     <associate|auto-6|<tuple|1.1|17>>
     <associate|auto-60|<tuple|6.1.2|86>>
     <associate|auto-61|<tuple|6.2|89>>
-    <associate|auto-62|<tuple|6.2.1|89>>
+    <associate|auto-62|<tuple|6.2.1|90>>
     <associate|auto-63|<tuple|6.2.2|90>>
     <associate|auto-64|<tuple|6.2.3|91>>
     <associate|auto-65|<tuple|6.2.4|92>>
@@ -22540,8 +22658,8 @@
     <associate|auto-73|<tuple|6.5.1|100>>
     <associate|auto-74|<tuple|6.5.2|101>>
     <associate|auto-75|<tuple|6.5.3|102>>
-    <associate|auto-76|<tuple|6.5.4|104>>
-    <associate|auto-77|<tuple|6.6|105>>
+    <associate|auto-76|<tuple|6.5.4|105>>
+    <associate|auto-77|<tuple|6.6|106>>
     <associate|auto-78|<tuple|7|107>>
     <associate|auto-79|<tuple|7.1|107>>
     <associate|auto-8|<tuple|1.3|19>>
@@ -22549,12 +22667,12 @@
     <associate|auto-81|<tuple|7.3|109>>
     <associate|auto-82|<tuple|7.4|110>>
     <associate|auto-83|<tuple|7.5|111>>
-    <associate|auto-84|<tuple|7.6|113>>
+    <associate|auto-84|<tuple|7.6|114>>
     <associate|auto-85|<tuple|7.6.1|114>>
     <associate|auto-86|<tuple|7.6.2|115>>
     <associate|auto-87|<tuple|7.6.3|119>>
-    <associate|auto-88|<tuple|7.7|119>>
-    <associate|auto-89|<tuple|7.7.1|119>>
+    <associate|auto-88|<tuple|7.7|120>>
+    <associate|auto-89|<tuple|7.7.1|120>>
     <associate|auto-9|<tuple|1.4|20>>
     <associate|auto-90|<tuple|7.7.2|121>>
     <associate|auto-91|<tuple|7.7.3|122>>
@@ -22591,6 +22709,7 @@
     <associate|bib-LeblSCV|<tuple|Leb|317>>
     <associate|bib-LeonovShiryaev1959|<tuple|LS59|317>>
     <associate|bib-LuscherWeisz1995|<tuple|LW95|318>>
+    <associate|bib-Malgrange1964|<tuple|Mal64|318>>
     <associate|bib-OsterwalderSchrader1973|<tuple|OS73|318>>
     <associate|bib-OsterwalderSchrader1975|<tuple|OS75|318>>
     <associate|bib-OsterwalderSeiler1978|<tuple|OS78|318>>
@@ -22668,50 +22787,50 @@
     <associate|ch02:taylor-section|<tuple|2.2|26>>
     <associate|ch02:test-holonomy|<tuple|2.5|27>>
     <associate|ch02:transported-curvature|<tuple|2.8|28>>
-    <associate|ch03:ND|<tuple|3.24|47>>
-    <associate|ch03:bounded-detector|<tuple|3.9|47>>
-    <associate|ch03:classification|<tuple|3.7|44>>
+    <associate|ch03:ND|<tuple|3.24|48>>
+    <associate|ch03:bounded-detector|<tuple|3.9|48>>
+    <associate|ch03:classification|<tuple|3.7|45>>
     <associate|ch03:covariance|<tuple|3.1|37>>
     <associate|ch03:curvature|<tuple|3.2|37>>
-    <associate|ch03:detectors|<tuple|3.2|43>>
-    <associate|ch03:diagonal-gram|<tuple|3.15|42>>
-    <associate|ch03:divergence-matrix|<tuple|3.19|45>>
-    <associate|ch03:finite-ward|<tuple|3.10|49>>
-    <associate|ch03:flux|<tuple|3.20|45>>
+    <associate|ch03:detectors|<tuple|3.2|44>>
+    <associate|ch03:diagonal-gram|<tuple|3.15|44>>
+    <associate|ch03:divergence-matrix|<tuple|3.19|46>>
+    <associate|ch03:finite-ward|<tuple|3.10|50>>
+    <associate|ch03:flux|<tuple|3.20|46>>
     <associate|ch03:free-space|<tuple|3.9|40>>
-    <associate|ch03:free-ward|<tuple|3.4|46>>
+    <associate|ch03:free-ward|<tuple|3.4|47>>
     <associate|ch03:green|<tuple|3.1|37>>
     <associate|ch03:hessian|<tuple|3.4|37>>
-    <associate|ch03:hobson|<tuple|3.12|42>>
+    <associate|ch03:hobson|<tuple|3.12|43>>
     <associate|ch03:homogeneity|<tuple|3.7|39>>
-    <associate|ch03:internal-tests|<tuple|3.7|50>>
+    <associate|ch03:internal-tests|<tuple|3.7|52>>
     <associate|ch03:jet-covariance|<tuple|3.6|38>>
-    <associate|ch03:jet-positive|<tuple|3.1|41>>
-    <associate|ch03:kelvin|<tuple|3.13|42>>
+    <associate|ch03:jet-positive|<tuple|3.1|43>>
+    <associate|ch03:kelvin|<tuple|3.13|43>>
     <associate|ch03:kernel|<tuple|3.3|37>>
-    <associate|ch03:lie|<tuple|3.21|45>>
+    <associate|ch03:lie|<tuple|3.21|47>>
     <associate|ch03:maxwell|<tuple|3|37>>
     <associate|ch03:maxwell-equations|<tuple|3.5|38>>
-    <associate|ch03:panel|<tuple|3.27|49>>
-    <associate|ch03:probe|<tuple|3.11|41>>
-    <associate|ch03:quadratic|<tuple|3.6|43>>
-    <associate|ch03:quadratics|<tuple|3.16|43>>
+    <associate|ch03:panel|<tuple|3.27|51>>
+    <associate|ch03:probe|<tuple|3.11|42>>
+    <associate|ch03:quadratic|<tuple|3.6|44>>
+    <associate|ch03:quadratics|<tuple|3.16|44>>
     <associate|ch03:radial|<tuple|3.8|39>>
     <associate|ch03:reflection|<tuple|3.4|40>>
-    <associate|ch03:replacement|<tuple|3.25|48>>
-    <associate|ch03:replacement-null|<tuple|3.26|48>>
+    <associate|ch03:replacement|<tuple|3.25|49>>
+    <associate|ch03:replacement-null|<tuple|3.26|49>>
     <associate|ch03:rp|<tuple|3.10|40>>
-    <associate|ch03:scalar-pair|<tuple|3.18|44>>
+    <associate|ch03:scalar-pair|<tuple|3.18|45>>
     <associate|ch03:shell|<tuple|3.3|39>>
-    <associate|ch03:stress|<tuple|3.17|43>>
-    <associate|ch03:stress-line|<tuple|3.3|44>>
-    <associate|ch03:strict|<tuple|3.5|41>>
-    <associate|ch03:triangular|<tuple|3.14|42>>
-    <associate|ch03:uniform-detector|<tuple|3.5|47>>
-    <associate|ch03:vector-tests|<tuple|3.6|49>>
-    <associate|ch03:ward|<tuple|3.8|45>>
-    <associate|ch03:ward-identity|<tuple|3.23|46>>
-    <associate|ch03:weight|<tuple|3.22|45>>
+    <associate|ch03:stress|<tuple|3.17|44>>
+    <associate|ch03:stress-line|<tuple|3.3|45>>
+    <associate|ch03:strict|<tuple|3.5|42>>
+    <associate|ch03:triangular|<tuple|3.14|43>>
+    <associate|ch03:uniform-detector|<tuple|3.5|48>>
+    <associate|ch03:vector-tests|<tuple|3.6|50>>
+    <associate|ch03:ward|<tuple|3.8|46>>
+    <associate|ch03:ward-identity|<tuple|3.23|47>>
+    <associate|ch03:weight|<tuple|3.22|47>>
     <associate|ch03:wick|<tuple|3.2|38>>
     <associate|ch04:activities|<tuple|4.5|59>>
     <associate|ch04:activity-bounds|<tuple|4.24|62>>
@@ -22793,7 +22912,7 @@
     <associate|ch05:stationary-prop|<tuple|5.3|79>>
     <associate|ch05:stationary-tangent|<tuple|5.33|79>>
     <associate|ch05:transport-formula|<tuple|5.14|69>>
-    <associate|ch05:transport-identities|<tuple|5.16|69>>
+    <associate|ch05:transport-identities|<tuple|5.16|70>>
     <associate|ch05:transport-input|<tuple|5.12|69>>
     <associate|ch05:transports|<tuple|5.6|69>>
     <associate|ch05:tree-comparison|<tuple|5.26|77>>
@@ -22805,19 +22924,19 @@
     <associate|ch06:base-scores|<tuple|6.21|95>>
     <associate|ch06:bounded-jet-route|<tuple|6.4.2|98>>
     <associate|ch06:clipped-source|<tuple|6.16|91>>
-    <associate|ch06:coarse-bound|<tuple|6.8|86>>
+    <associate|ch06:coarse-bound|<tuple|6.8|87>>
     <associate|ch06:common-majorant|<tuple|6.6|99>>
     <associate|ch06:component-extracted-energy|<tuple|6.30|104>>
     <associate|ch06:counts|<tuple|6.2|84>>
     <associate|ch06:density-ratio|<tuple|6.20|94>>
-    <associate|ch06:energy|<tuple|6.2|88>>
+    <associate|ch06:energy|<tuple|6.2|89>>
     <associate|ch06:fine-bound|<tuple|6.6|86>>
-    <associate|ch06:flat-identities|<tuple|6.3|84>>
+    <associate|ch06:flat-identities|<tuple|6.3|85>>
     <associate|ch06:gaussian-identity|<tuple|6.18|92>>
-    <associate|ch06:global-energy|<tuple|6.5|85>>
+    <associate|ch06:global-energy|<tuple|6.5|86>>
     <associate|ch06:joint-tails|<tuple|6.4|95>>
     <associate|ch06:large-fields|<tuple|6|83>>
-    <associate|ch06:linear-comparison|<tuple|6.5.4|104>>
+    <associate|ch06:linear-comparison|<tuple|6.5.4|105>>
     <associate|ch06:macro-comparison|<tuple|6.11|87>>
     <associate|ch06:majorant-form|<tuple|6.27|99>>
     <associate|ch06:mean-cancellation|<tuple|6.5|97>>
@@ -22833,19 +22952,19 @@
     <associate|ch06:signed-input|<tuple|6.1|87>>
     <associate|ch06:six-terms|<tuple|6.4|85>>
     <associate|ch06:tail-event|<tuple|6.22|95>>
-    <associate|ch06:tree-control|<tuple|6.13|89>>
+    <associate|ch06:tree-control|<tuple|6.13|90>>
     <associate|ch06:unaffected|<tuple|6.10|87>>
     <associate|ch06:window-error|<tuple|6.15|91>>
     <associate|ch06:windows|<tuple|6.3|91>>
-    <associate|ch06:windows-def|<tuple|6.14|90>>
+    <associate|ch06:windows-def|<tuple|6.14|91>>
     <associate|ch07:alpha|<tuple|7.5|109>>
-    <associate|ch07:classical|<tuple|7.7|119>>
-    <associate|ch07:classical-budget|<tuple|7.15|122>>
-    <associate|ch07:classical-match|<tuple|7.7|121>>
-    <associate|ch07:classical-uniform|<tuple|7.7.1|119>>
-    <associate|ch07:comparison|<tuple|7.6|113>>
+    <associate|ch07:classical|<tuple|7.7|120>>
+    <associate|ch07:classical-budget|<tuple|7.15|123>>
+    <associate|ch07:classical-match|<tuple|7.7|122>>
+    <associate|ch07:classical-uniform|<tuple|7.7.1|120>>
+    <associate|ch07:comparison|<tuple|7.6|114>>
     <associate|ch07:comparison-input|<tuple|7.4|118>>
-    <associate|ch07:comparison-prop|<tuple|7.5|118>>
+    <associate|ch07:comparison-prop|<tuple|7.5|119>>
     <associate|ch07:completion|<tuple|7.4|110>>
     <associate|ch07:contact|<tuple|7.6.1|114>>
     <associate|ch07:contact-exact|<tuple|7.12|115>>
@@ -22870,7 +22989,7 @@
     <associate|ch07:tangent-orthogonal|<tuple|7.13|120>>
     <associate|ch07:thermal|<tuple|7.6|110>>
     <associate|ch07:theta|<tuple|7.10|114>>
-    <associate|ch07:uniform-stationary-jets|<tuple|7.14|120>>
+    <associate|ch07:uniform-stationary-jets|<tuple|7.14|121>>
     <associate|ch07:unique|<tuple|7.2|110>>
     <associate|ch07:ward|<tuple|7.1|107>>
     <associate|ch07:weighted|<tuple|7.6.2|115>>
@@ -22919,7 +23038,7 @@
     <associate|ch09:path-identity|<tuple|9.18|147>>
     <associate|ch09:path-reset|<tuple|9.5|146>>
     <associate|ch09:preparatory|<tuple|9.3|144>>
-    <associate|ch09:pure-decomposition|<tuple|9.9|142>>
+    <associate|ch09:pure-decomposition|<tuple|9.9|143>>
     <associate|ch09:pure-small-bound|<tuple|9.10|143>>
     <associate|ch09:renormalization|<tuple|9|135>>
     <associate|ch09:reset|<tuple|9.22|148>>
@@ -22936,151 +23055,151 @@
     <associate|ch09:truncated-integral|<tuple|9.4|140>>
     <associate|ch09:wilson|<tuple|9.8|150>>
     <associate|ch10:activity-truncation|<tuple|10.17|165>>
-    <associate|ch10:affine-contraction|<tuple|10.10|157>>
-    <associate|ch10:broad-test|<tuple|10.16|161>>
+    <associate|ch10:affine-contraction|<tuple|10.10|158>>
+    <associate|ch10:broad-test|<tuple|10.16|162>>
     <associate|ch10:choices|<tuple|10.1|153>>
-    <associate|ch10:comparison-input|<tuple|10.6|158>>
+    <associate|ch10:comparison-input|<tuple|10.6|159>>
     <associate|ch10:convergence|<tuple|10.3|165>>
     <associate|ch10:cutoff-supplier|<tuple|4|163>>
-    <associate|ch10:drift-floor|<tuple|10.2|153>>
+    <associate|ch10:drift-floor|<tuple|10.2|154>>
     <associate|ch10:equation-floor|<tuple|10.3|154>>
     <associate|ch10:finite-history|<tuple|10.1|156>>
-    <associate|ch10:finite-tests|<tuple|10.14|159>>
+    <associate|ch10:finite-tests|<tuple|10.14|160>>
     <associate|ch10:fixed-scale|<tuple|10.7|165>>
     <associate|ch10:identification|<tuple|10.8|166>>
-    <associate|ch10:inverse-coordinate|<tuple|10.12|158>>
+    <associate|ch10:inverse-coordinate|<tuple|10.12|159>>
     <associate|ch10:late-entry|<tuple|10.6|155>>
     <associate|ch10:lipschitz|<tuple|10.13|159>>
     <associate|ch10:parameter-supplier|<tuple|2|160>>
     <associate|ch10:path-stability|<tuple|10.5|157>>
     <associate|ch10:path-truncation|<tuple|10.11|158>>
-    <associate|ch10:periods|<tuple|10.7|155>>
-    <associate|ch10:prefix|<tuple|10.18|165>>
+    <associate|ch10:periods|<tuple|10.7|156>>
+    <associate|ch10:prefix|<tuple|10.18|166>>
     <associate|ch10:real-node-bound|<tuple|10.15|161>>
     <associate|ch10:reference|<tuple|10.5|155>>
-    <associate|ch10:running|<tuple|10.4|156>>
-    <associate|ch10:running-error|<tuple|10.8|156>>
+    <associate|ch10:running|<tuple|10.4|157>>
+    <associate|ch10:running-error|<tuple|10.8|157>>
     <associate|ch10:running-limit|<tuple|10.9|157>>
     <associate|ch10:scales|<tuple|10.4|155>>
-    <associate|ch10:schedule|<tuple|10.2|154>>
+    <associate|ch10:schedule|<tuple|10.2|155>>
     <associate|ch10:shooting|<tuple|10.3|156>>
     <associate|ch10:stability-assumption|<tuple|10.2|159>>
     <associate|ch10:step-drift|<tuple|10.1|153>>
     <associate|ch10:trajectory|<tuple|10|153>>
-    <associate|ch11:absorption|<tuple|11.5|187>>
-    <associate|ch11:actual-equation-subspace|<tuple|11.24|190>>
-    <associate|ch11:actual-reader|<tuple|11.5.2|177>>
-    <associate|ch11:all-period-differences|<tuple|11.13|207>>
-    <associate|ch11:calibration-floor|<tuple|11.21|188>>
-    <associate|ch11:common-extraction|<tuple|11.12.1|191>>
-    <associate|ch11:conditional-curvature|<tuple|11.12|176>>
-    <associate|ch11:corrected-pair-comparison|<tuple|11.12.4|201>>
-    <associate|ch11:cover-transfer|<tuple|11.5|170>>
-    <associate|ch11:cumulants|<tuple|11.1|167>>
-    <associate|ch11:descent-error|<tuple|11.18|186>>
-    <associate|ch11:detector-bound|<tuple|11.20|186>>
-    <associate|ch11:detectors|<tuple|11.9|186>>
-    <associate|ch11:dispersal|<tuple|11.27|195>>
-    <associate|ch11:equation-calibration|<tuple|11.11|188>>
-    <associate|ch11:equation-comparison|<tuple|11.6|189>>
-    <associate|ch11:equation-root-error|<tuple|11.23|189>>
-    <associate|ch11:finite-arity-comparison|<tuple|11.12.5|203>>
-    <associate|ch11:finite-covariance|<tuple|11.30|199>>
-    <associate|ch11:finite-detector-input|<tuple|11.11|205>>
-    <associate|ch11:graph-difference|<tuple|11.9|173>>
-    <associate|ch11:graph-estimates|<tuple|11.8|172>>
-    <associate|ch11:higher-induction|<tuple|11.11|174>>
-    <associate|ch11:higher-modes|<tuple|11.4.2|174>>
-    <associate|ch11:insertions|<tuple|11|167>>
-    <associate|ch11:integrated-component|<tuple|11.6|171>>
-    <associate|ch11:joint-gaussian|<tuple|11.2|175>>
-    <associate|ch11:local-source|<tuple|11.3|168>>
-    <associate|ch11:lower-weighted-step|<tuple|11.28|197>>
-    <associate|ch11:marked-incidence|<tuple|11.7|171>>
-    <associate|ch11:marked-step|<tuple|11.4|170>>
-    <associate|ch11:mass|<tuple|11.1|168>>
-    <associate|ch11:n-mark-comparison|<tuple|11.10|203>>
-    <associate|ch11:n-mark-root|<tuple|11.32|204>>
-    <associate|ch11:one-graph|<tuple|11.4.1|172>>
-    <associate|ch11:opening-higher-weight|<tuple|11.31|202>>
-    <associate|ch11:positional|<tuple|11.7.1|184>>
-    <associate|ch11:raw-polynomial-error|<tuple|11.25|192>>
-    <associate|ch11:replicated|<tuple|11.7|184>>
-    <associate|ch11:replicated-bound|<tuple|11.16|184>>
-    <associate|ch11:restart-construction|<tuple|11.6.1|178>>
-    <associate|ch11:restart-density|<tuple|11.15|181>>
-    <associate|ch11:restart-endpoint|<tuple|11.3|179>>
-    <associate|ch11:restart-endpoint-error|<tuple|11.13|180>>
-    <associate|ch11:restart-endpoint-identity|<tuple|11.14|180>>
-    <associate|ch11:restart-family|<tuple|11.4|181>>
-    <associate|ch11:restore-forced|<tuple|11.9|196>>
-    <associate|ch11:restore-regular|<tuple|11.8|195>>
-    <associate|ch11:root-bound|<tuple|11.17|184>>
-    <associate|ch11:scaled-equation-labels|<tuple|11.22|189>>
-    <associate|ch11:separated-cover|<tuple|11.10|174>>
-    <associate|ch11:simultaneous-detector-lifts|<tuple|11.26|194>>
-    <associate|ch11:source-density|<tuple|11.2|168>>
-    <associate|ch11:spare-support|<tuple|11.4|170>>
-    <associate|ch11:tree-covariance|<tuple|11.5.1|176>>
-    <associate|ch11:trial-descent|<tuple|11.8|185>>
-    <associate|ch11:trial-error|<tuple|11.19|186>>
-    <associate|ch11:uniform-detector|<tuple|11.12|206>>
-    <associate|ch11:uniform-differences|<tuple|11.12|191>>
-    <associate|ch11:uniform-sweep|<tuple|11.7|191>>
-    <associate|ch11:weight-restoration|<tuple|11.12.2|194>>
-    <associate|ch11:weighted-output-envelope|<tuple|11.29|197>>
-    <associate|ch11:window-covariance|<tuple|11.12.3|199>>
-    <associate|ch12:conclusion|<tuple|12.6|214>>
-    <associate|ch12:contraction|<tuple|12.1|210>>
-    <associate|ch12:dense-cauchy|<tuple|12.4|213>>
-    <associate|ch12:forgetting|<tuple|12.2|211>>
-    <associate|ch12:graphs|<tuple|12.2|210>>
-    <associate|ch12:inputs|<tuple|12.1|209>>
-    <associate|ch12:normalization|<tuple|12.3|211>>
-    <associate|ch12:omission|<tuple|12.3|213>>
-    <associate|ch12:positive-partition|<tuple|12.1|211>>
-    <associate|ch12:root-bound|<tuple|12.3|212>>
-    <associate|ch12:smooth|<tuple|12.5|213>>
-    <associate|ch12:stopped|<tuple|12.2|212>>
-    <associate|ch12:stopping|<tuple|12.4|212>>
-    <associate|ch12:ultraviolet|<tuple|12|209>>
-    <associate|ch12:uv-theorem|<tuple|12.5|214>>
-    <associate|ch13:bounded-approximations|<tuple|13.8|225>>
-    <associate|ch13:bounded-singleton|<tuple|13.5|228>>
-    <associate|ch13:bounded-word|<tuple|13.6|230>>
-    <associate|ch13:calculus|<tuple|13.4|220>>
-    <associate|ch13:cells|<tuple|13.2|218>>
-    <associate|ch13:chess|<tuple|13.3|218>>
-    <associate|ch13:coarse-matrix|<tuple|13.16|225>>
-    <associate|ch13:coarse-residual|<tuple|13.17|225>>
-    <associate|ch13:coarse-residual-supplier|<tuple|13.4|226>>
-    <associate|ch13:cone-factorization|<tuple|13.20|229>>
-    <associate|ch13:continuum|<tuple|13|217>>
-    <associate|ch13:derivative-response|<tuple|13.8|220>>
-    <associate|ch13:extraction|<tuple|13.1|217>>
-    <associate|ch13:first-below|<tuple|13.14|225>>
-    <associate|ch13:inclusion-response|<tuple|13.7|220>>
-    <associate|ch13:normalized-null|<tuple|13.6|220>>
-    <associate|ch13:null|<tuple|13.5|218>>
-    <associate|ch13:ordered-limit|<tuple|13.2|217>>
-    <associate|ch13:positivity|<tuple|13.5|221>>
-    <associate|ch13:power|<tuple|13.10|221>>
-    <associate|ch13:quotient|<tuple|13.3|218>>
-    <associate|ch13:rank|<tuple|13.1|219>>
-    <associate|ch13:repeated|<tuple|13.6|222>>
-    <associate|ch13:residual-height|<tuple|13.18|226>>
-    <associate|ch13:residual-height-bound|<tuple|13.19|227>>
-    <associate|ch13:scale-thickness|<tuple|13.9|221>>
-    <associate|ch13:sharp-centered|<tuple|13.3|224>>
+    <associate|ch11:absorption|<tuple|11.5|189>>
+    <associate|ch11:actual-equation-subspace|<tuple|11.24|193>>
+    <associate|ch11:actual-reader|<tuple|11.5.2|179>>
+    <associate|ch11:all-period-differences|<tuple|11.13|210>>
+    <associate|ch11:calibration-floor|<tuple|11.21|191>>
+    <associate|ch11:common-extraction|<tuple|11.12.1|194>>
+    <associate|ch11:conditional-curvature|<tuple|11.12|179>>
+    <associate|ch11:corrected-pair-comparison|<tuple|11.12.4|204>>
+    <associate|ch11:cover-transfer|<tuple|11.5|172>>
+    <associate|ch11:cumulants|<tuple|11.1|170>>
+    <associate|ch11:descent-error|<tuple|11.18|188>>
+    <associate|ch11:detector-bound|<tuple|11.20|189>>
+    <associate|ch11:detectors|<tuple|11.9|189>>
+    <associate|ch11:dispersal|<tuple|11.27|198>>
+    <associate|ch11:equation-calibration|<tuple|11.11|191>>
+    <associate|ch11:equation-comparison|<tuple|11.6|192>>
+    <associate|ch11:equation-root-error|<tuple|11.23|192>>
+    <associate|ch11:finite-arity-comparison|<tuple|11.12.5|206>>
+    <associate|ch11:finite-covariance|<tuple|11.30|202>>
+    <associate|ch11:finite-detector-input|<tuple|11.11|208>>
+    <associate|ch11:graph-difference|<tuple|11.9|176>>
+    <associate|ch11:graph-estimates|<tuple|11.8|175>>
+    <associate|ch11:higher-induction|<tuple|11.11|177>>
+    <associate|ch11:higher-modes|<tuple|11.4.2|176>>
+    <associate|ch11:insertions|<tuple|11|169>>
+    <associate|ch11:integrated-component|<tuple|11.6|173>>
+    <associate|ch11:joint-gaussian|<tuple|11.2|177>>
+    <associate|ch11:local-source|<tuple|11.3|171>>
+    <associate|ch11:lower-weighted-step|<tuple|11.28|200>>
+    <associate|ch11:marked-incidence|<tuple|11.7|174>>
+    <associate|ch11:marked-step|<tuple|11.4|172>>
+    <associate|ch11:mass|<tuple|11.1|170>>
+    <associate|ch11:n-mark-comparison|<tuple|11.10|206>>
+    <associate|ch11:n-mark-root|<tuple|11.32|207>>
+    <associate|ch11:one-graph|<tuple|11.4.1|174>>
+    <associate|ch11:opening-higher-weight|<tuple|11.31|205>>
+    <associate|ch11:positional|<tuple|11.7.1|187>>
+    <associate|ch11:raw-polynomial-error|<tuple|11.25|195>>
+    <associate|ch11:replicated|<tuple|11.7|186>>
+    <associate|ch11:replicated-bound|<tuple|11.16|187>>
+    <associate|ch11:restart-construction|<tuple|11.6.1|180>>
+    <associate|ch11:restart-density|<tuple|11.15|184>>
+    <associate|ch11:restart-endpoint|<tuple|11.3|181>>
+    <associate|ch11:restart-endpoint-error|<tuple|11.13|182>>
+    <associate|ch11:restart-endpoint-identity|<tuple|11.14|183>>
+    <associate|ch11:restart-family|<tuple|11.4|184>>
+    <associate|ch11:restore-forced|<tuple|11.9|199>>
+    <associate|ch11:restore-regular|<tuple|11.8|198>>
+    <associate|ch11:root-bound|<tuple|11.17|187>>
+    <associate|ch11:scaled-equation-labels|<tuple|11.22|191>>
+    <associate|ch11:separated-cover|<tuple|11.10|176>>
+    <associate|ch11:simultaneous-detector-lifts|<tuple|11.26|197>>
+    <associate|ch11:source-density|<tuple|11.2|170>>
+    <associate|ch11:spare-support|<tuple|11.4|172>>
+    <associate|ch11:tree-covariance|<tuple|11.5.1|178>>
+    <associate|ch11:trial-descent|<tuple|11.8|188>>
+    <associate|ch11:trial-error|<tuple|11.19|189>>
+    <associate|ch11:uniform-detector|<tuple|11.12|209>>
+    <associate|ch11:uniform-differences|<tuple|11.12|193>>
+    <associate|ch11:uniform-sweep|<tuple|11.7|194>>
+    <associate|ch11:weight-restoration|<tuple|11.12.2|197>>
+    <associate|ch11:weighted-output-envelope|<tuple|11.29|200>>
+    <associate|ch11:window-covariance|<tuple|11.12.3|202>>
+    <associate|ch12:conclusion|<tuple|12.6|216>>
+    <associate|ch12:contraction|<tuple|12.1|212>>
+    <associate|ch12:dense-cauchy|<tuple|12.4|215>>
+    <associate|ch12:forgetting|<tuple|12.2|213>>
+    <associate|ch12:graphs|<tuple|12.2|212>>
+    <associate|ch12:inputs|<tuple|12.1|211>>
+    <associate|ch12:normalization|<tuple|12.3|213>>
+    <associate|ch12:omission|<tuple|12.3|215>>
+    <associate|ch12:positive-partition|<tuple|12.1|213>>
+    <associate|ch12:root-bound|<tuple|12.3|214>>
+    <associate|ch12:smooth|<tuple|12.5|215>>
+    <associate|ch12:stopped|<tuple|12.2|214>>
+    <associate|ch12:stopping|<tuple|12.4|214>>
+    <associate|ch12:ultraviolet|<tuple|12|211>>
+    <associate|ch12:uv-theorem|<tuple|12.5|216>>
+    <associate|ch13:bounded-approximations|<tuple|13.8|227>>
+    <associate|ch13:bounded-singleton|<tuple|13.5|230>>
+    <associate|ch13:bounded-word|<tuple|13.6|231>>
+    <associate|ch13:calculus|<tuple|13.4|222>>
+    <associate|ch13:cells|<tuple|13.2|220>>
+    <associate|ch13:chess|<tuple|13.3|220>>
+    <associate|ch13:coarse-matrix|<tuple|13.16|227>>
+    <associate|ch13:coarse-residual|<tuple|13.17|227>>
+    <associate|ch13:coarse-residual-supplier|<tuple|13.4|228>>
+    <associate|ch13:cone-factorization|<tuple|13.20|230>>
+    <associate|ch13:continuum|<tuple|13|219>>
+    <associate|ch13:derivative-response|<tuple|13.8|222>>
+    <associate|ch13:extraction|<tuple|13.1|219>>
+    <associate|ch13:first-below|<tuple|13.14|226>>
+    <associate|ch13:inclusion-response|<tuple|13.7|222>>
+    <associate|ch13:normalized-null|<tuple|13.6|221>>
+    <associate|ch13:null|<tuple|13.5|220>>
+    <associate|ch13:ordered-limit|<tuple|13.2|219>>
+    <associate|ch13:positivity|<tuple|13.5|223>>
+    <associate|ch13:power|<tuple|13.10|223>>
+    <associate|ch13:quotient|<tuple|13.3|220>>
+    <associate|ch13:rank|<tuple|13.1|221>>
+    <associate|ch13:repeated|<tuple|13.6|223>>
+    <associate|ch13:residual-height|<tuple|13.18|228>>
+    <associate|ch13:residual-height-bound|<tuple|13.19|228>>
+    <associate|ch13:scale-thickness|<tuple|13.9|223>>
+    <associate|ch13:sharp-centered|<tuple|13.3|226>>
     <associate|ch13:sharp-phase|<tuple|15.11|262>>
-    <associate|ch13:sharp-root|<tuple|13.12|224>>
-    <associate|ch13:sharp-schedule|<tuple|13.11|223>>
-    <associate|ch13:sharp-section|<tuple|13.7|223>>
-    <associate|ch13:sharp-separated|<tuple|13.15|225>>
-    <associate|ch13:vanishing-error|<tuple|13.4|218>>
-    <associate|ch13:volume-limit|<tuple|13.1|217>>
-    <associate|ch13:weight-size|<tuple|13.13|224>>
-    <associate|ch13:word-bound|<tuple|13.2|222>>
+    <associate|ch13:sharp-root|<tuple|13.12|225>>
+    <associate|ch13:sharp-schedule|<tuple|13.11|225>>
+    <associate|ch13:sharp-section|<tuple|13.7|224>>
+    <associate|ch13:sharp-separated|<tuple|13.15|227>>
+    <associate|ch13:vanishing-error|<tuple|13.4|220>>
+    <associate|ch13:volume-limit|<tuple|13.1|219>>
+    <associate|ch13:weight-size|<tuple|13.13|226>>
+    <associate|ch13:word-bound|<tuple|13.2|224>>
     <associate|ch14:annular-input|<tuple|14.14|245>>
     <associate|ch14:averaged-stress|<tuple|14.27|255>>
     <associate|ch14:balanced-stress|<tuple|14.12|245>>
@@ -23222,20 +23341,20 @@
     <associate|ch18:extension-formula|<tuple|18.10|309>>
     <associate|ch18:extension-theorem|<tuple|18.3|309>>
     <associate|ch18:graded|<tuple|18.2|304>>
-    <associate|ch18:graded-distance|<tuple|13.22|231>>
-    <associate|ch18:graded-estimate|<tuple|13.7|231>>
-    <associate|ch18:graded-quotient-section|<tuple|13.9|230>>
-    <associate|ch18:graded-room|<tuple|13.21|231>>
-    <associate|ch18:group-weight|<tuple|13.26|234>>
-    <associate|ch18:high-step|<tuple|13.24|231>>
+    <associate|ch18:graded-distance|<tuple|13.22|232>>
+    <associate|ch18:graded-estimate|<tuple|13.7|232>>
+    <associate|ch18:graded-quotient-section|<tuple|13.9|232>>
+    <associate|ch18:graded-room|<tuple|13.21|232>>
+    <associate|ch18:group-weight|<tuple|13.26|235>>
+    <associate|ch18:high-step|<tuple|13.24|233>>
     <associate|ch18:input|<tuple|18.2|305>>
-    <associate|ch18:lattice-estimate|<tuple|13.28|235>>
-    <associate|ch18:lattice-products|<tuple|13.10|232>>
-    <associate|ch18:lattice-replacement|<tuple|13.8|235>>
-    <associate|ch18:low-cone|<tuple|13.23|231>>
-    <associate|ch18:mixed-bound|<tuple|13.9|236>>
-    <associate|ch18:mixed-product-rate|<tuple|13.29|236>>
-    <associate|ch18:mixed-replacement|<tuple|13.10.4|236>>
+    <associate|ch18:lattice-estimate|<tuple|13.28|237>>
+    <associate|ch18:lattice-products|<tuple|13.10|234>>
+    <associate|ch18:lattice-replacement|<tuple|13.8|237>>
+    <associate|ch18:low-cone|<tuple|13.23|233>>
+    <associate|ch18:mixed-bound|<tuple|13.9|238>>
+    <associate|ch18:mixed-product-rate|<tuple|13.29|238>>
+    <associate|ch18:mixed-replacement|<tuple|13.10.4|237>>
     <associate|ch18:normal-Taylor|<tuple|18.8|309>>
     <associate|ch18:ope|<tuple|18.3|307>>
     <associate|ch18:ope-bound|<tuple|18.5|307>>
@@ -23247,9 +23366,9 @@
     <associate|ch18:raw-replacement|<tuple|18.4|306>>
     <associate|ch18:replacement-input|<tuple|18.1|305>>
     <associate|ch18:replacement-moments|<tuple|18.4|305>>
-    <associate|ch18:residual-weights|<tuple|13.27|235>>
+    <associate|ch18:residual-weights|<tuple|13.27|236>>
     <associate|ch18:scope|<tuple|18.5|310>>
-    <associate|ch18:signed-transport|<tuple|13.25|233>>
+    <associate|ch18:signed-transport|<tuple|13.25|234>>
     <associate|ch18:subtraction|<tuple|18.9|309>>
     <associate|ch19:assembly|<tuple|19|311>>
     <associate|ch19:conditional|<tuple|19.1|312>>
@@ -23290,6 +23409,8 @@
       OsterwalderSeiler1978
 
       Wick1950
+
+      Malgrange1964
 
       OsterwalderSchrader1973
 
@@ -23515,7 +23636,7 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-27>
 
-      3.7<space|2spc>The degree-four conserved tensor
+      3.7<space|2spc>The conserved tensor of scaling dimension four
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-28>
 
