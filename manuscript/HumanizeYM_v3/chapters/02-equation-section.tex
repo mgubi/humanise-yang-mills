@@ -58,8 +58,10 @@ equation-of-motion identity for Wilson's measure
 
 \subsection{Curvature tests avoiding a prescribed link}
 
-A curvature coordinate means a real colour component of
-$\sigma_{\gamma,\square}$ in \eqref{ch02:transported-curvature}.
+For $u\in\gLie$, pairing the transported curvature
+\eqref{ch02:transported-curvature} with $u$ gives the real-valued function
+$U\mapsto\langle u,\sigma_{\gamma,\square}(U)\rangle_{\gLie}$.
+We call any such function a curvature coordinate.
 Call it admissible for an oriented link $e$ if neither its plaquette
 nor its transporting path uses the underlying unoriented link $e$.
 Such a coordinate is independent of $U_e$.
@@ -73,17 +75,23 @@ $\mathcal J_{\le d}$.
 It suffices to show that their common annihilator is zero.
 Removing one link does not disconnect $\ZZ^4$, so every plaquette
 not containing $e$ admits a transporting path avoiding $e$.
-At the zero jet transport has no effect on linearized curvature.
-Consequently a jet in the annihilator has zero sampled linear curl
-on all plaquettes except the finitely many containing $e$.
+Let $A$ be the polynomial one-form representing a jet in the annihilator.
+At the zero connection the derivative of transport around an oriented
+unit plaquette $\square$ in direction $A$ is
+$\oint_{\partial\square}A=\int_\square dA$ by Stokes' theorem.
+Transport to the anchor does not change this first variation.
+Consequently $\int_\square dA=0$ for every plaquette that does not
+contain $e$.
 
-For each orientation, this sampled curl is a polynomial in the
-plaquette's integer base point. A polynomial vanishing at all but
-finitely many integer points vanishes identically: fix all but one
-coordinate, use the one-variable assertion, and repeat.
-If $A_j$ is the highest nonzero homogeneous layer, the highest-degree
-part of its sampled curl is $dA_j$; lower layers cannot contribute
-to that part. Thus $dA_j=0$. Radial gauge and Euler's identity give
+For each orientation $(\mu,\nu)$, this integral is a polynomial in
+the base point $z$ of the plaquette. It vanishes at all but finitely
+many integer points and hence identically, by the one-variable polynomial
+identity applied successively in each coordinate. Let $A_j$ be the
+highest nonzero homogeneous layer of $A$. Averaging a polynomial over
+a translated unit square preserves its highest homogeneous part as a
+polynomial in $z$. Thus the degree-$j$ part of the integral is
+$(dA_j)_{\mu\nu}(z)$. Since the integral vanishes for every orientation,
+$dA_j=0$. Radial gauge and Euler's identity give
 \[
  0=\partial_i(x^\mu A_{j,\mu})
    =A_{j,i}+x^\mu\partial_i A_{j,\mu}
@@ -95,12 +103,6 @@ proves the assertion. Finite-dimensional duality now selects a
 finite spanning collection of admissible coordinates.
 \end{proof}
 
-The equality of the leading sampled curl with $dA_j$ follows directly
-by integrating the polynomial connection around a unit square:
-Stokes' formula averages $dA_j$ over that square, which changes only
-lower polynomial degrees. This also explains why no assumption
-about an infinite-dimensional configuration space enters the lemma.
-
 \subsection{Construction of the equation-adapted section}
 
 \begin{proof}[Proof of Theorem~\ref{ch02:equation-adapted}]
@@ -110,20 +112,20 @@ We then integrate by parts in a single link and assemble the local section.
 \smallskip\noindent\emph{Step 1. Representation by Wilson forces.}
 
 Write $S_W$ for the Wilson action without its factor $\beta$.
-For a positive link $e$ and an orthonormal colour basis $(E_a)$,
-define its force $F_e$ by
+For a positive link $e$ and a direction $X\in\gLie$,
+the force $F_e\in\gLie$ is characterized by
 \[
- \partial_{e,a}S_W=\langle E_a,F_e\rangle,\qquad
- \partial_{e,a}f(U)=
- \left.\frac{d}{dt}f(U_e\leftarrow e^{tE_a}U_e)\right|_{t=0}.
+ \partial_{e,X}S_W=\langle X,F_e\rangle,\qquad
+ \partial_{e,X}f(U)=
+ \left.\frac{d}{dt}f(U_e\leftarrow e^{tX}U_e)\right|_{t=0}.
 \]
 Differentiating the plaquettes incident on $e$ expresses $F_e$
 as a signed sum of plaquette-curvature coordinates based at the
 initial vertex of $e$. The precise signs follow the chosen
 plaquette orientations. Transport the force to the anchor by a
-path avoiding $e$, and take a colour component there.
-Its linearization is the corresponding discrete divergence of
-sampled linear curls.
+path avoiding $e$, and pair it there with an arbitrary element of $\gLie$.
+At the zero connection the force is the signed sum, to first order in
+$A$, of the integrals $\int_\square dA$ over plaquettes incident on $e$.
 
 Fix a layer $j$. These linear force functionals, restricted to jets
 through layer $j$, span every functional which acts only on $A_j$
@@ -134,8 +136,9 @@ terms are
 \[
  -\sum_\mu\partial_\mu(dA_j)_{\mu\nu}.
 \]
-This follows by taking the first difference of the sampled curl
-in its transverse coordinate. Thus the top layer is a Maxwell
+For a link in direction $\nu$, the two incident $(\mu,\nu)$ plaquettes
+enter with opposite signs. Their integrals therefore give a first
+difference in the $\mu$ direction. Thus the top layer is a Maxwell
 solution potential. Every functional of the indicated type
 annihilates the common force kernel and is therefore a finite
 linear combination of these forces. Notice that this argument
@@ -186,16 +189,17 @@ count. This is why the order in
 \smallskip\noindent\emph{Step 2. Integration by parts and construction of the section.}
 
 Every force term above has the form
-$\langle E_a,F_e\rangle H_a$, where $H_a$ includes the transporting
-matrix, the other curvature factors, and an exterior spectator.
-All these factors avoid $e$. Freeze the other links. Haar invariance
+$H\langle X,F_e\rangle$, where $X$ is the fixed direction at the
+anchor transported back to the link, and $H$ is the product of the
+remaining curvature coordinates and the exterior spectator.
+Freeze the other links. Both $X$ and $H$ are then constant in $U_e$. Haar invariance
 on the compact group gives
 \[
- 0=\int_G\partial_{e,a}\{e^{-\beta S_W}\}\,dU_e
-   =-\beta\int_G\langle E_a,F_e\rangle
+ 0=\int_G\partial_{e,X}\{e^{-\beta S_W}\}\,dU_e
+   =-\beta\int_G\langle X,F_e\rangle
                           e^{-\beta S_W}\,dU_e.
 \]
-Multiplication by $H_a$ is legitimate because it is constant in
+Multiplication by $H$ is legitimate because it is constant in
 $U_e$. Fubini then proves the desired zero expectation, even for a
 merely bounded measurable exterior spectator. This proof never
 differentiates that spectator.
@@ -209,7 +213,7 @@ They are independent of $\beta$ and of the exterior spectator.
 
 Average the constructed functions over the gauge element at the
 anchor. Every transported curvature transforms there by the adjoint
-action, so this is a finite-dimensional average of colour tensors.
+action, so this is a finite-dimensional average of tensors under the adjoint action.
 It preserves the number of curvature factors and
 \eqref{ch02:equation-triangle}. It also preserves the exact zero
 identity: gauge invariance of the Wilson law transfers the gauge
