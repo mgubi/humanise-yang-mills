@@ -23,6 +23,17 @@
   as a claim that v2 reviews certify v3. Original notices and separate source
   licenses remain applicable.
 
+  The paragraph "The dilation current at short separation" after Theorem
+  <verbatim|ch17:all-radii> restores, in v3 notation, the remark
+  <verbatim|rem:trace-dilation-current> written by Stephanie Alexander for
+  task #406 and merged in #424 (<verbatim|manuscript/existence/trace-asymptotic.tex>).
+  Its former assumptions, stress conservation at separated points and the
+  unit-insertion identity, are now supplied by Proposition
+  <verbatim|ch14:normalized-stress> and Section <verbatim|ch17:spectrum>. A
+  formal check of the identity and of the limit against the pinned release
+  <verbatim|3456e5e> is in <verbatim|stalex444/yang-mills-conformal-current>
+  at <verbatim|dbae2a6>; it is an acknowledgement, not part of the proof.
+
   <ym-title|Source migration and attribution \V inherited adaptations in
   HumanizeYM_v2><label|source-migration-and-attribution--inherited-adaptations-in-humanizeym_v2>
 

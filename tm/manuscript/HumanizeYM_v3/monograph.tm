@@ -1309,8 +1309,8 @@
   The choice of representation is part of the normalization of the model, not
   an inessential choice of matrix coordinates.
 
-  Write <math|d<rsub|<gLie>>=dim<rsub|<RR>><gLie>> and let
-  <math|<around|(|e<rsub|\<alpha\>>|)>> be an orthonormal basis for
+  Write <math|d<rsub|<gLie>>=dim<rsub|<RR>><gLie>> and fix once and for all
+  an arbitrary orthonormal basis <math|<around|(|e<rsub|\<alpha\>>|)>> for
   <eqref|ch01:metric>. The adjoint Casimir is the positive number
 
   <\equation>
@@ -2321,12 +2321,13 @@
 
   <subsection|Curvature tests avoiding a prescribed link>
 
-  A curvature coordinate means a real colour component of
-  <math|\<sigma\><rsub|\<gamma\>,\<square\>>> in
-  <eqref|ch02:transported-curvature>. Call it admissible for an oriented link
-  <math|e> if neither its plaquette nor its transporting path uses the
-  underlying unoriented link <math|e>. Such a coordinate is independent of
-  <math|U<rsub|e>>.
+  For <math|u\<in\><gLie>>, pairing the transported curvature
+  <eqref|ch02:transported-curvature> with <math|u> gives the real-valued
+  function <math|U\<mapsto\><around|\<langle\>|u,\<sigma\><rsub|\<gamma\>,\<square\>><around|(|U|)>|\<rangle\>><rsub|<gLie>>>.
+  We call any such function a curvature coordinate. Call it admissible for an
+  oriented link <math|e> if neither its plaquette nor its transporting path
+  uses the underlying unoriented link <math|e>. Such a coordinate is
+  independent of <math|U<rsub|e>>.
 
   <\lemma>
     <label|ch02:avoiding-tests>For each <math|e>, the linearizations at the
@@ -2337,18 +2338,25 @@
   <\proof>
     It suffices to show that their common annihilator is zero. Removing one
     link does not disconnect <math|<ZZ><rsup|4>>, so every plaquette not
-    containing <math|e> admits a transporting path avoiding <math|e>. At the
-    zero jet transport has no effect on linearized curvature. Consequently a
-    jet in the annihilator has zero sampled linear curl on all plaquettes
-    except the finitely many containing <math|e>.
+    containing <math|e> admits a transporting path avoiding <math|e>. Let
+    <math|A> be the polynomial one-form representing a jet in the
+    annihilator. At the zero connection the derivative of transport around an
+    oriented unit plaquette <math|\<square\>> in direction <math|A> is
+    <math|<big|oint><rsub|\<partial\>*\<square\>>A=<big|int><rsub|\<square\>>d*A>
+    by Stokes' theorem. Transport to the anchor does not change this first
+    variation. Consequently <math|<big|int><rsub|\<square\>>d*A=0> for every
+    plaquette that does not contain <math|e>.
 
-    For each orientation, this sampled curl is a polynomial in the
-    plaquette's integer base point. A polynomial vanishing at all but
-    finitely many integer points vanishes identically: fix all but one
-    coordinate, use the one-variable assertion, and repeat. If
-    <math|A<rsub|j>> is the highest nonzero homogeneous layer, the
-    highest-degree part of its sampled curl is <math|d*A<rsub|j>>; lower
-    layers cannot contribute to that part. Thus <math|d*A<rsub|j>=0>. Radial
+    For each orientation <math|<around|(|\<mu\>,\<nu\>|)>>, this integral is
+    a polynomial in the base point <math|z> of the plaquette. It vanishes at
+    all but finitely many integer points and hence identically, by the
+    one-variable polynomial identity applied successively in each coordinate.
+    Let <math|A<rsub|j>> be the highest nonzero homogeneous layer of
+    <math|A>. Averaging a polynomial over a translated unit square preserves
+    its highest homogeneous part as a polynomial in <math|z>. Thus the
+    degree-<math|j> part of the integral is
+    <math|<around|(|d*A<rsub|j>|)><rsub|\<mu\>*\<nu\>><around|(|z|)>>. Since
+    the integral vanishes for every orientation, <math|d*A<rsub|j>=0>. Radial
     gauge and Euler's identity give
 
     <\equation*>
@@ -2361,12 +2369,6 @@
     admissible coordinates.
   </proof>
 
-  The equality of the leading sampled curl with <math|d*A<rsub|j>> follows
-  directly by integrating the polynomial connection around a unit square:
-  Stokes' formula averages <math|d*A<rsub|j>> over that square, which changes
-  only lower polynomial degrees. This also explains why no assumption about
-  an infinite-dimensional configuration space enters the lemma.
-
   <subsection|Construction of the equation-adapted section>
 
   <\render-proof|Proof of Theorem<nbsp><reference|ch02:equation-adapted>>
@@ -2377,19 +2379,23 @@
     <vspace*|0.5fn><no-indent><em|Step 1. Representation by Wilson forces.>
 
     Write <math|S<rsub|W>> for the Wilson action without its factor
-    <math|\<beta\>>. For a positive link <math|e> and an orthonormal colour
-    basis <math|<around|(|E<rsub|a>|)>>, define its force <math|F<rsub|e>> by
+    <math|\<beta\>>. For a positive link <math|e> and a direction
+    <math|X\<in\><gLie>>, the force <math|F<rsub|e>\<in\><gLie>> is
+    characterized by
 
     <\equation*>
-      \<partial\><rsub|e,a>*S<rsub|W>=<around|\<langle\>|E<rsub|a>,F<rsub|e>|\<rangle\>>,<space|2em>\<partial\><rsub|e,a>*f<around|(|U|)>=<around*|\<nobracket\>|<frac|d|d*t>*f*<around|(|U<rsub|e>\<leftarrow\>e<rsup|t*E<rsub|a>>*U<rsub|e>|)>|\|><rsub|t=0>.
+      \<partial\><rsub|e,X>*S<rsub|W>=<around|\<langle\>|X,F<rsub|e>|\<rangle\>>,<space|2em>\<partial\><rsub|e,X>*f<around|(|U|)>=<around*|\<nobracket\>|<frac|d|d*t>*f*<around|(|U<rsub|e>\<leftarrow\>e<rsup|t*X>*U<rsub|e>|)>|\|><rsub|t=0>.
     </equation*>
 
     Differentiating the plaquettes incident on <math|e> expresses
     <math|F<rsub|e>> as a signed sum of plaquette-curvature coordinates based
     at the initial vertex of <math|e>. The precise signs follow the chosen
     plaquette orientations. Transport the force to the anchor by a path
-    avoiding <math|e>, and take a colour component there. Its linearization
-    is the corresponding discrete divergence of sampled linear curls.
+    avoiding <math|e>, and pair it there with an arbitrary element of
+    <math|<gLie>>. At the zero connection the force is the signed sum, to
+    first order in <math|A>, of the integrals
+    <math|<big|int><rsub|\<square\>>d*A> over plaquettes incident on
+    <math|e>.
 
     Fix a layer <math|j>. These linear force functionals, restricted to jets
     through layer <math|j>, span every functional which acts only on
@@ -2401,13 +2407,15 @@
       -<big|sum><rsub|\<mu\>>\<partial\><rsub|\<mu\>>*<around|(|d*A<rsub|j>|)><rsub|\<mu\>*\<nu\>>.
     </equation*>
 
-    This follows by taking the first difference of the sampled curl in its
-    transverse coordinate. Thus the top layer is a Maxwell solution
-    potential. Every functional of the indicated type annihilates the common
-    force kernel and is therefore a finite linear combination of these
-    forces. Notice that this argument identifies the top layer only; it does
-    not identify the entire kernel of the discrete force system with the
-    continuum solution jet space.
+    For a link in direction <math|\<nu\>>, the two incident
+    <math|<around|(|\<mu\>,\<nu\>|)>> plaquettes enter with opposite signs.
+    Their integrals therefore give a first difference in the <math|\<mu\>>
+    direction. Thus the top layer is a Maxwell solution potential. Every
+    functional of the indicated type annihilates the common force kernel and
+    is therefore a finite linear combination of these forces. Notice that
+    this argument identifies the top layer only; it does not identify the
+    entire kernel of the discrete force system with the continuum solution
+    jet space.
 
     Here is the corresponding description of the polynomial ideal. Choose a
     linear projection of each jet layer onto its solution subspace and let
@@ -2451,19 +2459,20 @@
     <vspace*|0.5fn><no-indent><em|Step 2. Integration by parts and
     construction of the section.>
 
-    Every force term above has the form <math|<around|\<langle\>|E<rsub|a>,F<rsub|e>|\<rangle\>>*H<rsub|a>>,
-    where <math|H<rsub|a>> includes the transporting matrix, the other
-    curvature factors, and an exterior spectator. All these factors avoid
-    <math|e>. Freeze the other links. Haar invariance on the compact group
-    gives
+    Every force term above has the form <math|H*<around|\<langle\>|X,F<rsub|e>|\<rangle\>>>,
+    where <math|X> is the fixed direction at the anchor transported back to
+    the link, and <math|H> is the product of the remaining curvature
+    coordinates and the exterior spectator. Freeze the other links. Both
+    <math|X> and <math|H> are then constant in <math|U<rsub|e>>. Haar
+    invariance on the compact group gives
 
     <\equation*>
-      0=<big|int><rsub|G>\<partial\><rsub|e,a><around|{|e<rsup|-\<beta\>*S<rsub|W>>|}>*<space|0.17em>d*U<rsub|e>=-\<beta\>*<big|int><rsub|G><around|\<langle\>|E<rsub|a>,F<rsub|e>|\<rangle\>>*e<rsup|-\<beta\>*S<rsub|W>>*<space|0.17em>d*U<rsub|e>.
+      0=<big|int><rsub|G>\<partial\><rsub|e,X><around|{|e<rsup|-\<beta\>*S<rsub|W>>|}>*<space|0.17em>d*U<rsub|e>=-\<beta\>*<big|int><rsub|G><around|\<langle\>|X,F<rsub|e>|\<rangle\>>*e<rsup|-\<beta\>*S<rsub|W>>*<space|0.17em>d*U<rsub|e>.
     </equation*>
 
-    Multiplication by <math|H<rsub|a>> is legitimate because it is constant
-    in <math|U<rsub|e>>. Fubini then proves the desired zero expectation,
-    even for a merely bounded measurable exterior spectator. This proof never
+    Multiplication by <math|H> is legitimate because it is constant in
+    <math|U<rsub|e>>. Fubini then proves the desired zero expectation, even
+    for a merely bounded measurable exterior spectator. This proof never
     differentiates that spectator.
 
     All lists used in constructing a basis are finite. Enlarge one radius to
@@ -2475,11 +2484,12 @@
 
     Average the constructed functions over the gauge element at the anchor.
     Every transported curvature transforms there by the adjoint action, so
-    this is a finite-dimensional average of colour tensors. It preserves the
-    number of curvature factors and <eqref|ch02:equation-triangle>. It also
-    preserves the exact zero identity: gauge invariance of the Wilson law
-    transfers the gauge transformation to the bounded exterior spectator
-    without changing its support. The result is fully gauge invariant.
+    this is a finite-dimensional average of tensors under the adjoint action.
+    It preserves the number of curvature factors and
+    <eqref|ch02:equation-triangle>. It also preserves the exact zero
+    identity: gauge invariance of the Wilson law transfers the gauge
+    transformation to the bounded exterior spectator without changing its
+    support. The result is fully gauge invariant.
 
     Choose a basis of each homogeneous part of <math|\<cal-I\><rsub|d>>,
     perform this construction there, and extend to a basis of
@@ -2591,11 +2601,12 @@
   short-distance comparison. No interacting limit is assumed in this chapter.
 
   We fix the positive inner product on the real Lie algebra <math|<gLie>> and
-  write <math|d<rsub|<gLie>>=dim<rsub|<RR>><gLie>>. Choose an orthonormal
-  basis <math|<around|(|e<rsub|\<alpha\>>|)><rsub|\<alpha\>=1><rsup|d<rsub|<gLie>>>>.
+  write <math|d<rsub|<gLie>>=dim<rsub|<RR>><gLie>>. Use the orthonormal basis
+  of Section<nbsp><reference|ch01:gauge>,
+  <math|<around|(|e<rsub|\<alpha\>>|)><rsub|\<alpha\>=1><rsup|d<rsub|<gLie>>>>.
   Greek letters <math|\<mu\>,\<nu\>,\<rho\>,\<sigma\>> from the middle of the
   alphabet denote coordinate indices in <math|<around|{|1,2,3,4|}>>;
-  <math|\<alpha\>,\<beta\>> denote colour indices. Time is the fourth
+  <math|\<alpha\>,\<beta\>> denote indices in this basis. Time is the fourth
   coordinate. The superscript <math|<math-up|Max>> always denotes the free
   reference theory. We first define its correlations at distinct points; this
   requires no multiplication of distributions at the same point.
@@ -2617,7 +2628,11 @@
   gauge-invariant local observables used in the construction.
 
   Write <math|F<rsup|\<alpha\>><rsub|\<mu\>*\<nu\>>=-F<rsup|\<alpha\>><rsub|\<nu\>*\<mu\>>>
-  for the curvature components. Their two-point function is
+  for the curvature components in this basis. The covariance is the product
+  of the inner product on <math|<gLie>> and a spacetime kernel <math|C>:
+  pairing the two fields with <math|u,v\<in\><gLie>> gives
+  <math|<around|\<langle\>|u,v|\<rangle\>><rsub|<gLie>>*C<rsub|\<mu\>*\<nu\>,\<rho\>*\<sigma\>>*<around|(|x-y|)>>.
+  In coordinates,
 
   <\equation>
     <label|ch03:curvature>S<rsup|<math-up|Max>><rsub|2>*<around|(|F<rsup|\<alpha\>><rsub|\<mu\>*\<nu\>>,F<rsup|\<beta\>><rsub|\<rho\>*\<sigma\>>;x,y|)>=\<delta\><rsub|\<alpha\>*\<beta\>>*C<rsub|\<mu\>*\<nu\>,\<rho\>*\<sigma\>>*<around|(|x-y|)>,
@@ -2754,8 +2769,9 @@
   scaling dimension of a homogeneous jet polynomial. Consequently polynomials
   of weight at most <math|d> use only the spaces <math|\<cal-S\><rsub|j>>
   with <math|j\<leqslant\>d-2>. Constants are retained at every degree. The
-  colour action is the adjoint action of <math|G>; invariant polynomials are
-  the gauge-invariant local observables of the free reference theory.
+  action on <math|<gLie>> is the adjoint action of <math|G>; invariant
+  polynomials are the gauge-invariant local observables of the free reference
+  theory.
 
   To compare this definition with the radial-potential labels
   <math|V<rsub|d>>, associate to a closed homogeneous curvature
@@ -2872,9 +2888,10 @@
 
   The derivative-index coefficients are symmetric. On this coefficient space
   use the Frobenius inner product, summing both orders of the antisymmetric
-  field indices, all ordered derivative indices and colours. In particular,
-  no factor <math|1/2> is inserted for the field indices. The linear jet
-  probe represented by <math|P> is
+  field indices, all ordered derivative indices and components in the basis
+  of Section<nbsp><reference|ch01:gauge>. In particular, no factor <math|1/2>
+  is inserted for the field indices. The linear jet probe represented by
+  <math|P> is
 
   <\equation>
     <label|ch03:probe>\<ell\><rsub|P><around|(|F|)>=<frac|1|j!>*<big|sum><rsub|a,b,i<rsub|1>,\<ldots\>,i<rsub|j>,\<alpha\>>P<rsup|\<alpha\>><rsub|a*b;i<rsub|1>*\<cdots\>*i<rsub|j>>*\<partial\><rsub|i<rsub|1>>*\<cdots\>*\<partial\><rsub|i<rsub|j>>*F<rsup|\<alpha\>><rsub|a*b>.
@@ -3034,12 +3051,12 @@
 
   <section|Quadratic fields and normalization checks><label|ch03:quadratic>
 
-  We return to the free curvature covariance <eqref|ch03:curvature>; each of
-  the <math|d<rsub|<gLie>>> colours has that same covariance and different
-  colours have zero cross-covariance. Define
+  We return to the free curvature covariance <eqref|ch03:curvature>; in the
+  basis of Section<nbsp><reference|ch01:gauge>, each component has the same
+  covariance and orthogonal components have zero cross-covariance. Define
 
   <\align>
-    <tformat|<table|<row|<cell|Q<rsub|\<mu\>*\<nu\>>>|<cell|=<big|sum><rsub|\<alpha\>=1><rsup|d<rsub|<gLie>>><big|sum><rsub|\<rho\>=1><rsup|4>:F<rsup|\<alpha\>><rsub|\<mu\>*\<rho\>>*F<rsup|\<alpha\>><rsub|\<nu\>*\<rho\>>:,>|<cell|Q<rsub|<math-up|tot>>>|<cell|=<big|sum><rsub|\<mu\>>Q<rsub|\<mu\>*\<mu\>>,<eq-number><label|ch03:quadratics>>>|<row|<cell|\<cal-E\><rsup|<math-up|Max>>>|<cell|=<tfrac|1|4>Q<rsub|<math-up|tot>>,>|<cell|T<rsup|<math-up|Max>><rsub|\<mu\>*\<nu\>>>|<cell|=-Q<rsub|\<mu\>*\<nu\>>+<tfrac|1|4>\<delta\><rsub|\<mu\>*\<nu\>>*Q<rsub|<math-up|tot>>.<eq-number><label|ch03:stress>>>>>
+    <tformat|<table|<row|<cell|Q<rsub|\<mu\>*\<nu\>>>|<cell|=<big|sum><rsub|\<rho\>=1><rsup|4>:<around|\<langle\>|F<rsub|\<mu\>*\<rho\>>,F<rsub|\<nu\>*\<rho\>>|\<rangle\>><rsub|<gLie>>:,>|<cell|Q<rsub|<math-up|tot>>>|<cell|=<big|sum><rsub|\<mu\>>Q<rsub|\<mu\>*\<mu\>>,<eq-number><label|ch03:quadratics>>>|<row|<cell|\<cal-E\><rsup|<math-up|Max>>>|<cell|=<tfrac|1|4>Q<rsub|<math-up|tot>>,>|<cell|T<rsup|<math-up|Max>><rsub|\<mu\>*\<nu\>>>|<cell|=-Q<rsub|\<mu\>*\<nu\>>+<tfrac|1|4>\<delta\><rsub|\<mu\>*\<nu\>>*Q<rsub|<math-up|tot>>.<eq-number><label|ch03:stress>>>>>
   </align>
 
   The sign of <math|T<rsup|<math-up|Max>>> is chosen to match the shell-flux
@@ -3061,7 +3078,7 @@
   </equation>
 
   For checking constants, at separation <math|r*e<rsub|4>> one has
-  <math|\<cal-E\><rsup|<math-up|Max>>=<tfrac|1|2><big|sum><rsub|\<alpha\>,\<mu\>\<less\>\<nu\>>:<around|(|F<rsup|\<alpha\>><rsub|\<mu\>*\<nu\>>|)><rsup|2>>:.
+  <math|\<cal-E\><rsup|<math-up|Max>>=<tfrac|1|2><big|sum><rsub|\<mu\>\<less\>\<nu\>>:<around|\<\|\|\>|F<rsub|\<mu\>*\<nu\>>|\<\|\|\>><rsub|<gLie>><rsup|2>>:.
   The two cross-pairings of each square, the six unordered components, and
   the prefactor <math|1/4> give <math|<tfrac|1|4>\<cdot\>2\<cdot\>6*d<rsub|<gLie>>=3*d<rsub|<gLie>>>.
   Orthogonal covariance makes the answer independent of the direction of
@@ -3079,7 +3096,7 @@
   enough to state explicitly. In this section <em|centered> means that the
   constant Wick coefficient is zero. By the Wick prescription it is also the
   one-point expectation. We consider real symmetric tensor fields
-  <math|J<rsub|a*b>> of degree at most four, invariant under the colour
+  <math|J<rsub|a*b>> of degree at most four, invariant under the adjoint
   action and transforming as a rank-two tensor under the signed coordinate
   permutations <math|H<rsub|4>>. Conservation is an identity in the on-shell
   polynomial space, or equivalently in every separated free correlation by
@@ -3093,12 +3110,13 @@
   </proposition>
 
   <\proof>
-    Simplicity of <math|<gLie>> excludes invariant linear colour forms and
-    makes an invariant symmetric bilinear colour form a multiple of the fixed
-    metric. Through degree four a centered invariant polynomial therefore
-    contains two undifferentiated curvature factors. Indeed, a derivative on
-    one of two factors would raise the degree to at least five, while a
-    single differentiated factor still has no invariant colour contraction.
+    Simplicity of <math|<gLie>> excludes invariant linear forms on
+    <math|<gLie>> and makes an invariant symmetric bilinear form on
+    <math|<gLie>> a multiple of the fixed metric. Through degree four a
+    centered invariant polynomial therefore contains two undifferentiated
+    curvature factors. Indeed, a derivative on one of two factors would raise
+    the degree to at least five, while a single differentiated factor still
+    has no invariant linear functional on <math|<gLie>>.
 
     Recall the quadratic fields <math|Q<rsub|a*b>> and
     <math|Q<rsub|<math-up|tot>>> from <eqref|ch03:quadratics>. A basis of the
@@ -3115,11 +3133,11 @@
     two classes: those containing that axis, and those containing neither
     instance of it. An off-diagonal component with indices <math|a,b> must be
     odd in axes <math|a,b> and even in the others. Its possible contractions
-    are <math|<big|sum><rsub|\<alpha\>>:F<rsup|\<alpha\>><rsub|a*c>*F<rsup|\<alpha\>><rsub|b*c>>:
+    are <math|:<around|\<langle\>|F<rsub|a*c>,F<rsub|b*c>|\<rangle\>><rsub|<gLie>>>:
     with <math|c\<nin\><around|{|a,b|}>>; permutations identify their
     coefficients. This gives exactly the three candidates displayed above.
 
-    For an explicit rank check, let <math|Q<rsub|i*j,i*j>=<big|sum><rsub|\<alpha\>>:<around|(|F<rsup|\<alpha\>><rsub|i*j>|)><rsup|2>>:.
+    For an explicit rank check, let <math|Q<rsub|i*j,i*j>=:<around|\<\|\|\>|F<rsub|i*j>|\<\|\|\>><rsub|<gLie>><rsup|2>>:.
     Evaluate the first component of the divergence of each
     <math|Z<rsup|<around|(|l|)>>> at <math|e<rsub|1>>, against
     <math|Q<rsub|12,12><around|(|0|)>> and
@@ -3138,7 +3156,7 @@
     division. The first two columns are independent. Also
     <math|Z<rsup|<around|(|1|)>><rsub|12>=Z<rsup|<around|(|2|)>><rsub|12>=0>,
     whereas the correlation of <math|Z<rsup|<around|(|3|)>><rsub|12><around|(|e<rsub|1>|)>>
-    with <math|<big|sum><rsub|\<alpha\>>:F<rsup|\<alpha\>><rsub|13>*F<rsup|\<alpha\>><rsub|23>:<around|(|0|)>>
+    with <math|:<around|\<langle\>|F<rsub|13>,F<rsub|23>|\<rangle\>><rsub|<gLie>>:<around|(|0|)>>
     equals <math|-16*d<rsub|<gLie>>/<around|(|4*\<pi\><rsup|2>|)><rsup|2>>.
     Thus the candidate tensors are themselves independent, and the kernel of
     divergence has dimension at most one.
@@ -3198,8 +3216,8 @@
   </equation>
 
   where <math|X<rsub|j,\<lambda\>>> are any linear coordinates on
-  order-<math|j> solution jets, including colour. The sum is finite on each
-  polynomial.
+  order-<math|j> solution jets, including the <math|<gLie>> components. The
+  sum is finite on each polynomial.
 
   <\proposition>
     <dueto|Normalized free Ward identities><label|ch03:free-ward> For
@@ -3224,13 +3242,13 @@
     Polarize our stress between closed two-forms <math|f,g>:
 
     <\equation*>
-      t<rsub|a*b>*<around|(|f,g|)>=-<big|sum><rsub|c><around|(|f<rsub|a*c>*g<rsub|b*c>+g<rsub|a*c>*f<rsub|b*c>|)>+<tfrac|1|2>\<delta\><rsub|a*b>*<big|sum><rsub|c,d>f<rsub|c*d>*g<rsub|c*d>,
+      t<rsub|a*b>*<around|(|f,g|)>=-<big|sum><rsub|c><around*|(|<around|\<langle\>|f<rsub|a*c>,g<rsub|b*c>|\<rangle\>><rsub|<gLie>>+<around|\<langle\>|g<rsub|a*c>,f<rsub|b*c>|\<rangle\>><rsub|<gLie>>|)>+<tfrac|1|2>\<delta\><rsub|a*b>*<big|sum><rsub|c,d><around|\<langle\>|f<rsub|c*d>,g<rsub|c*d>|\<rangle\>><rsub|<gLie>>.
     </equation*>
 
-    with colour pairings understood. The Bianchi identity gives
+    The Bianchi identity gives
 
     <\equation*>
-      <big|sum><rsub|a>\<partial\><rsub|a>*t<rsub|a*b>=-<big|sum><rsub|c><around*|(|<around|(|<math-up|div><space|0.17em>f|)><rsub|c>*g<rsub|b*c>+f<rsub|b*c><around|(|<math-up|div><space|0.17em>g|)><rsub|c>|)>.
+      <big|sum><rsub|a>\<partial\><rsub|a>*t<rsub|a*b>=-<big|sum><rsub|c><around*|(|<around|\<langle\>|<around|(|<math-up|div><space|0.17em>f|)><rsub|c>,g<rsub|b*c>|\<rangle\>><rsub|<gLie>>+<around|\<langle\>|f<rsub|b*c>,<around|(|<math-up|div><space|0.17em>g|)><rsub|c>|\<rangle\>><rsub|<gLie>>|)>.
     </equation*>
 
     The tensor is symmetric and traceless. Thus contracting with a constant,
@@ -3350,11 +3368,12 @@
     detection at bounded jet order.
 
     To obtain a uniform bound, we use a collision that lowers the highest jet
-    order. Write <math|X<rsub|j,\<alpha\>><around|(|p|)>> for the
-    colour-<math|\<alpha\>> order-<math|j> coordinate associated with an
-    uncoloured probe <math|p>. Fix a polynomial <math|P> with highest jet
-    order <math|j> and a quadratic spectator
-    <math|<big|sum><rsub|\<alpha\>>:X<rsub|k,\<alpha\>><around|(|p|)>*X<rsub|l,\<alpha\>><around|(|q|)>>:,
+    order. For a linear functional <math|p> on scalar order-<math|j> jets,
+    let <math|X<rsub|j><around|(|p|)>\<in\><gLie>> be its evaluation on the
+    spacetime indices of the jet. Write <math|X<rsub|j,\<alpha\>><around|(|p|)>=<around|\<langle\>|e<rsub|\<alpha\>>,X<rsub|j><around|(|p|)>|\<rangle\>><rsub|<gLie>>>
+    in the basis of Section<nbsp><reference|ch01:gauge>. Fix a polynomial
+    <math|P> with highest jet order <math|j> and a quadratic spectator
+    <math|:<around|\<langle\>|X<rsub|k><around|(|p|)>,X<rsub|l><around|(|q|)>|\<rangle\>><rsub|<gLie>>>:,
     where <math|l\<less\>k>. Contracting just its order-<math|k> leg with the
     top-order variables of <math|P> leaves the polynomial
 
@@ -3362,7 +3381,8 @@
       <label|ch03:replacement>\<cal-R\><rsub|p,q,j><around|(|z|)>*P=<big|sum><rsub|\<alpha\>,\<lambda\>>X<rsub|l,\<alpha\>><around|(|q|)>*C<rsub|k,j>*<around|(|p,e<rsub|\<lambda\>>;z|)><frac|\<partial\>*P|\<partial\>*X<rsub|j,\<alpha\>><around|(|e<rsub|\<lambda\>>|)>>.
     </equation>
 
-    The covariance <math|C<rsub|k,j>> is in one colour. We claim that
+    The covariance <math|C<rsub|k,j>> is in a single unit direction in
+    <math|<gLie>>. We claim that
 
     <\equation>
       <label|ch03:replacement-null>P\<in\>\<cal-N\><rsub|D>,<space|1em>k+l+4\<leqslant\>D<space|1em>\<Longrightarrow\><space|1em>\<cal-R\><rsub|p,q,j><around|(|z|)>*P\<in\>\<cal-N\><rsub|D>*<space|1em><around|(|z\<ne\>0|)>.
@@ -3412,16 +3432,16 @@
     zero.
 
     The matrix of polynomial entries <math|<around|(|X<rsub|l,\<alpha\>><around|(|q<rsub|l>|)>|)><rsub|l,\<alpha\>>>
-    has nonzero determinant: assigning the chosen order-<math|l> jet to
-    colour <math|l+1> and zero to the other colours makes it the identity.
-    Multiplication by its adjugate, in the polynomial integral domain, shows
-    that every colour-resolved top-order contraction derivative in
-    <eqref|ch03:replacement> vanishes. As <math|p,z> vary, the functionals
-    <math|C<rsub|k,j>*<around|(|p,\<cdot\>;z|)>> span the dual of the
-    order-<math|j> solution space. To verify this last assertion, a vector
-    annihilated by all of them has a response wave whose order-<math|k> jets
-    vanish everywhere off zero. It is then a polynomial of degree below
-    <math|k> there; its negative homogeneity makes it zero.
+    has nonzero determinant: choose the jets so that
+    <math|X<rsub|l><around|(|q<rsub|l>|)>=e<rsub|l+1>> for each <math|l>. At
+    these jets the matrix is the identity. Multiplication by its adjugate, in
+    the polynomial integral domain, shows that every componentwise top-order
+    contraction derivative in <eqref|ch03:replacement> vanishes. As
+    <math|p,z> vary, the functionals <math|C<rsub|k,j>*<around|(|p,\<cdot\>;z|)>>
+    span the dual of the order-<math|j> solution space. To verify this last
+    assertion, a vector annihilated by all of them has a response wave whose
+    order-<math|k> jets vanish everywhere off zero. It is then a polynomial
+    of degree below <math|k> there; its negative homogeneity makes it zero.
     Formula<nbsp><eqref|ch03:kelvin> makes the original vector zero. Hence
     all top-order partial derivatives of <math|P> vanish. Descending removes
     every jet order above <math|g>, and the fixed-order argument with
@@ -3467,10 +3487,10 @@
     be the scalar-valued solution jets, so
     <math|\<cal-S\><rsub|j>=<gLie>\<otimes\>\<cal-S\><rsub|j><rsup|<math-up|sc>>>,
     and write <math|U<rsub|j>=<around|(|\<cal-S\><rsub|j><rsup|<math-up|sc>>|)><rsup|\<ast\>>>
-    for the uncoloured order-<math|j> probes and
-    <math|Q*<around|(|p,q|)>=<big|sum><rsub|\<alpha\>>X<rsub|j,\<alpha\>><around|(|p|)>*X<rsub|k,\<alpha\>><around|(|q|)>>
-    for their colour-contracted quadratic. The invariant metric on a simple
-    Lie algebra is unique up to scalar. Hence
+    for the scalar order-<math|j> probes and
+    <math|Q*<around|(|p,q|)>=<around|\<langle\>|X<rsub|j><around|(|p|)>,X<rsub|k><around|(|q|)>|\<rangle\>><rsub|<gLie>>>
+    for the corresponding quadratic polynomial. The invariant metric on a
+    simple Lie algebra is unique up to scalar. Hence
     <math|\<cal-M\><rsub|4><rsup|<math-up|Max>>> is spanned by the unit and
     <math|Q*<around|(|p,q|)>> with <math|p,q\<in\>U<rsub|0>>; weight five
     adds exactly the mixed quadratics with
@@ -3485,11 +3505,11 @@
     </equation*>
 
     Uniqueness follows by assigning independent zero- and first-order
-    solution jets in one colour. Here and until the coefficient comparison,
-    <math|b> is fixed.
+    solution jets in a single unit direction in <math|<gLie>>. Here and until
+    the coefficient comparison, <math|b> is fixed.
 
-    Denote the one-colour covariance of probes by
-    <math|C*<around|(|p,q;z|)>>. The three-quadratic Wick rule is
+    Denote the scalar covariance of probes by <math|C*<around|(|p,q;z|)>>.
+    The three-quadratic Wick rule is
 
     <\align*>
       <tformat|<table|<row|<cell|>|<cell|S<rsub|3><rsup|<math-up|Max>>*<around|(|Q*<around|(|a,v|)>,Q*<around|(|p,p|)>,Q*<around|(|q,q|)>;x,y,z|)>>>|<row|<cell|>|<cell|<space|1em>=4*d<rsub|<gLie>>*<around*|[|C*<around|(|a,p;x-y|)>*C*<around|(|v,q;x-z|)>+C*<around|(|v,p;x-y|)>*C*<around|(|a,q;x-z|)>|]>*C*<around|(|p,q;y-z|)>.>>>>
@@ -3596,8 +3616,8 @@
     Recall <math|R<rsub|x>=I-2*x*x<rsup|<math-ss|T>>/<around|\||x|\|><rsup|2>>,
     the reflection normal to <math|x>. The zero-order covariance is
     <math|\<pi\><rsup|-2><around|\||x|\|><rsup|-4><big|wedge><rsup|2>R<rsub|x>>
-    in each colour. Wick's rule consequently gives, for
-    <math|<around|\||x|\|>=<around|\||y|\|>>,
+    tensored with the identity on <math|<gLie>>. Wick's rule consequently
+    gives, for <math|<around|\||x|\|>=<around|\||y|\|>>,
 
     <\equation*>
       B<rsub|x>*<around|(|P,Q|)>=B<rsub|y>*<around|(|\<rho\>*<around|(|R<rsub|y>*R<rsub|x>|)>*P,Q|)><space|2em><around|(|P,Q\<in\>\<cal-M\><rsub|4><rsup|<math-up|Max>>|)>.
@@ -4561,8 +4581,8 @@
 
   Suppose an auxiliary, translation-invariant Gaussian one-form has diagonal
   covariance symbol <math|<math-up|diag><around|(|c<rsub|\<mu\>><around|(|\<theta\>|)>|)>>
-  in the direction index. Color indices are suppressed and are unchanged by
-  this calculation. The symbol of the covariance of
+  in the direction index. The covariance acts as the identity on the
+  <math|<gLie>> factor. The symbol of the covariance of
   <math|M*a+b<rsup|-1/2>*\<xi\>> is
 
   <\equation>
@@ -5353,8 +5373,8 @@
     D*U*<around|(|0,0|)><around|[|h,z|]>=<math-up|rep><space|0.17em>h+\<iota\><rsub|F>*z,<space|2em>D*U*<around|(|0,0|)><around|[|0,z|]>=\<iota\><rsub|F>*z.<label|ch05:forest-derivative>
   </equation>
 
-  All color coordinates are orthonormal for the trace metric. Thus
-  <math|<around|\<\|\|\>|\<iota\><rsub|F>*z|\<\|\|\>><rsub|2>=<around|\<\|\|\>|z|\<\|\|\>><rsub|2>>
+  Use the orthonormal coordinates of Section<nbsp><reference|ch01:gauge> for
+  the trace metric. Thus <math|<around|\<\|\|\>|\<iota\><rsub|F>*z|\<\|\|\>><rsub|2>=<around|\<\|\|\>|z|\<\|\|\>><rsub|2>>
   in counting norms. This identifies the vertical coordinates used by the
   Hessian with the arrays in the tree inequality below; no volume-dependent
   coordinate conversion occurs.
@@ -5442,7 +5462,7 @@
   <around|(|\<epsilon\>*a|)>> with <math|a> zero on tree edges, and
   <math|V=1>. Divide by <math|<around|\||\<epsilon\>|\|>> and let
   <math|\<epsilon\>\<to\>0>. The first-order variation of the distance from
-  the identity is the color norm, so
+  the identity is the norm on <math|<gLie>>, so
 
   <\equation*>
     <around|\||a<rsub|e>|\|>\<leqslant\>C<rsub|j,L>*<big|sum><rsub|p<text| in
@@ -6389,7 +6409,8 @@
   <math|<math-ss|D><rsup|\<ast\>><math-ss|D>\<geqslant\>c<rsub|L>*I>. The
   other rows add nonnegative squares. The gauge may depend on the edge at
   which the local inequality is applied, but it is fixed during
-  differentiation; invariance of the color norm permits the subsequent sum.
+  differentiation; invariance of the norm on <math|<gLie>> permits the
+  subsequent sum.
 
   This provides the precise route from a local tree comparison to the actual
   matrix gap. It leaves no need to compare whole determinants of actual and
@@ -7161,9 +7182,10 @@
   similar to a positive matrix, and the convergent real logarithm series
   agrees with its positive determinant.
 
-  Each word is indexed by its ordered sequence of bonds, with color indices
-  summed inside the matrix entries. For each fixed derivative order <math|k>,
-  the corresponding derivative of the amplitude is bounded by
+  Each word is indexed by its ordered sequence of bonds, with the
+  intermediate Lie algebra indices contracted in each matrix product. For
+  each fixed derivative order <math|k>, the corresponding derivative of the
+  amplitude is bounded by
 
   <\equation*>
     C<rsub|k><around|(|B|)>*e<rsup|-c*B>*<around|{|C<rsub|k><around|(|B|)>*e<rsup|-c*B>|}><rsup|n>,
@@ -7579,22 +7601,22 @@
   waves. After division by the number of lattice sites, its symbol is a
   tensor <math|f*<around|(|p<rsub|1>,\<ldots\>,p<rsub|n-1>|)>>, with
   <math|p<rsub|0>=-<big|sum><rsub|i\<gtr\>0>p<rsub|i>>. The tensor has one
-  direction and one colour index for each field. The symbol is periodic with
-  period <math|2*\<pi\>> in each independent momentum. A common symbol means
-  one function chosen on the infinite lattice whose restriction to each
-  finite momentum grid describes the corresponding torus coefficient. This
-  requirement is stronger than a separate smooth extension of each finite
-  grid.
+  spacetime index and one argument in <math|<gLie>> for each field. The
+  symbol is periodic with period <math|2*\<pi\>> in each independent
+  momentum. A common symbol means one function chosen on the infinite lattice
+  whose restriction to each finite momentum grid describes the corresponding
+  torus coefficient. This requirement is stronger than a separate smooth
+  extension of each finite grid.
 
   For <math|\<sigma\>\<gtr\>0>, write <math|<around|\||f|\|><rsub|\<sigma\>>\<leqslant\>A>
   when every component is holomorphic and bounded by <math|A> on the strip
   <math|<around|\||<math-up|Im><space|0.17em>p<rsub|i><rsup|a>|\|>\<less\>\<sigma\>>.
-  There are only finitely many direction and colour components at fixed
-  <math|n>. Reducing the strip gives an exponentially weighted sum of Fourier
-  coefficients, with a constant depending on <math|n,\<sigma\>,G>. Thus
-  common strip bounds imply locality uniformly in the period. An
-  order-<math|r> zero means that all momentum Taylor coefficients of total
-  degree below <math|r> vanish.
+  There are only finitely many direction and Lie algebra components in the
+  basis of Section<nbsp><reference|ch01:gauge> at fixed <math|n>. Reducing
+  the strip gives an exponentially weighted sum of Fourier coefficients, with
+  a constant depending on <math|n,\<sigma\>,G>. Thus common strip bounds
+  imply locality uniformly in the period. An order-<math|r> zero means that
+  all momentum Taylor coefficients of total degree below <math|r> vanish.
 
   Let <math|q<rsub|a><around|(|p|)>=e<rsup|i*p<rsub|a>>-1> and
   <math|d<rsub|1><around|(|p|)>*v=q<around|(|p|)>\<wedge\>v> be the lattice
@@ -7612,9 +7634,10 @@
   Contraction is algebraic, without complex conjugation; it acts only on the
   direction index of the indicated leg. Reality means
   <math|<wide|f*<around|(|-p|)>|\<bar\>>=f<around|(|p|)>> on real momenta.
-  Constant gauge transformations make its colour tensor adjoint invariant. A
-  Ward identity verified on all finite momentum grids passes to the common
-  continuous symbol by density. This last step requires a common kernel.
+  Constant gauge transformations make the tensor invariant under the diagonal
+  adjoint action. A Ward identity verified on all finite momentum grids
+  passes to the common continuous symbol by density. This last step requires
+  a common kernel.
 
   <section|Division by the lattice curl><label|ch07:division>
 
@@ -7638,7 +7661,7 @@
 
     For <math|n=2> the same assertion holds if <math|f> has order <math|r+2>,
     <math|r\<geqslant\>0>; then <math|g> can be chosen with order <math|r>.
-    Reality and invariant colour coefficients can be imposed with a fixed
+    Reality and adjoint-invariant coefficients can be imposed with a fixed
     additional norm factor.
   </lemma>
 
@@ -7706,9 +7729,9 @@
     on a common smaller strip and their number is fixed.
 
     Finally replace <math|g> by <math|<around|(|g<around|(|p|)>+<wide|g*<around|(|-p|)>|\<bar\>>|)>/2>
-    and project each colour coefficient onto the invariant real tensors.
-    Contraction acts on direction indices and commutes with this
-    finite-dimensional projection. These operations preserve the
+    and project each coefficient tensor on <math|<gLie>> onto the invariant
+    real tensors. Contraction acts on direction indices and commutes with
+    this finite-dimensional projection. These operations preserve the
     reconstruction and all retained orders, with a fixed norm factor.
   </proof>
 
@@ -7721,15 +7744,16 @@
   </equation>
 
   All factors transform at the common anchor <math|x>, so an invariant
-  multilinear colour contraction is gauge invariant. Its length is the sum of
-  the path lengths plus four per plaquette. The linearization of each factor
-  is the corresponding curl. The Fourier coefficients of <math|g> therefore
-  produce an exact leading Taylor coefficient <math|f>. Symmetrizing the legs
-  implements the convention <math|C<rsub|n>=D<rsup|n>/n>!; it introduces no
-  extra factorial.
+  multilinear form on <math|<gLie>> is gauge invariant. Its length is the sum
+  of the path lengths plus four per plaquette. The linearization of each
+  factor is the corresponding curl. The Fourier coefficients of <math|g>
+  therefore produce an exact leading Taylor coefficient <math|f>.
+  Symmetrizing the legs implements the convention
+  <math|C<rsub|n>=D<rsup|n>/n>!; it introduces no extra factorial.
 
   If <math|a> denotes such a multilinear term and <math|<around|\||a|\|>> the
-  sum of absolute colour coefficients, the result is
+  sum of absolute components in the basis of
+  Section<nbsp><reference|ch01:gauge>, the result is
 
   <\equation>
     <label|ch07:path-norm><big|sum><rsub|a><around|\||a|\|>*e<rsup|w<math-up|length><around|(|a|)>>\<leqslant\>K<rsub|w>*A*<space|2em><around|(|0\<less\>w\<less\>\<eta\>|)>.
@@ -7745,7 +7769,7 @@
   </equation>
 
   These are the value and first derivatives of its symbol at zero. They hold
-  separately for each orientation and colour pair.
+  separately for each orientation and each pair of Lie algebra arguments.
 
   <section|The marginal quadratic coefficient><label|ch07:quadratic>
 
@@ -7756,8 +7780,9 @@
     <label|ch07:alpha>\<alpha\><around|(|f|)>=2<math-up|Re><around|[|t<rsup|2>|]>*f<rsub|22><rsup|u*u>*<around|(|t*e<rsub|1>|)>,
   </equation>
 
-  where <math|u> is any unit colour basis vector. The kinetic symbol
-  <math|b<rsub|H>> of <math|J> has quadratic homogeneous term
+  where <math|u> is any unit vector in <math|<gLie>>, inserted in both Lie
+  algebra arguments. The kinetic symbol <math|b<rsub|H>> of <math|J> has
+  quadratic homogeneous term
 
   <\equation*>
     <around|(|b<rsub|H>|)><rsub|a*b><rsup|u*v,<around|[|2|]>><around|(|p|)>=<tfrac|1|2><around|(|<around|\||p|\|><rsup|2>*\<delta\><rsub|a*b>-p<rsub|a>*p<rsub|b>|)>*\<delta\><rsub|u*v>,
@@ -7772,7 +7797,7 @@
     quadratic symbol from an invariant real action, with exchange symmetry
     and signed-coordinate symmetry, has <math|f-\<alpha\><around|(|f|)>*b<rsub|H>=O<around|(|<around|\||p|\|><rsup|4>|)>>.
     Its coefficient <math|\<alpha\>> is independent of the transverse axis
-    pair and the chosen unit colour.
+    pair and the unit vector <math|u>.
   </lemma>
 
   <\proof>
@@ -7782,11 +7807,11 @@
     phases have constant term one; their higher terms multiply the already
     vanishing constant coefficient.
 
-    At quadratic order the colour-symmetric diagonal forms are scalar
-    multiples of the invariant metric. A self-adjoint operator commuting with
-    the adjoint action has invariant eigenspaces, which are ideals;
-    simplicity leaves only one eigenvalue. Coordinate reflections allow only
-    <math|p<rsub|c><rsup|2>> in a diagonal direction entry and
+    At quadratic order the symmetric diagonal forms on <math|<gLie>> are
+    scalar multiples of the invariant metric. A self-adjoint operator
+    commuting with the adjoint action has invariant eigenspaces, which are
+    ideals; simplicity leaves only one eigenvalue. Coordinate reflections
+    allow only <math|p<rsub|c><rsup|2>> in a diagonal direction entry and
     <math|p<rsub|a>*p<rsub|b>> in an <math|a,b> off-diagonal entry.
     Permutation symmetry identifies their coefficients. The transverse Ward
     equations then force the tensor to be a scalar multiple of
@@ -7882,7 +7907,7 @@
   coefficient of <math|<frac|1|2>*<around|\<langle\>|d<rsub|1>*v,d<rsub|1>*v|\<rangle\>>>.
 
   For external momentum <math|t*e<rsub|1>>, polarization <math|e<rsub|2>>,
-  and unit colour <math|u>, the leading ghost vertex is
+  and unit vector <math|u\<in\><gLie>>, the leading ghost vertex is
   <math|-2*i*k<rsub|2><math-up|ad><space|0.17em>u>. The vector vertex has
   four copies of this orbital term and the spin term
   <math|2*i*t*<around|(|E<rsub|21>-E<rsub|12>|)><math-up|ad><space|0.17em>u>.
@@ -7895,9 +7920,9 @@
     <label|ch07:pole>h<around|(|k|)>=4*C<rsub|G>*<around*|(|<frac|k<rsub|2><rsup|2>|<around|\||k|\|><rsup|6>>-<frac|4*k<rsub|1><rsup|2>*k<rsub|2><rsup|2>|<around|\||k|\|><rsup|8>>-<frac|1|<around|\||k|\|><rsup|4>>|)>.
   </equation>
 
-  This is the standard background-field bubble calculation, with its colour
-  normalization expressed in our metric. It is not a claim that the full
-  lattice integrand equals <math|h>.
+  This is the standard background-field bubble calculation, with its Lie
+  algebra normalization expressed in our metric. It is not a claim that the
+  full lattice integrand equals <math|h>.
 
   <\proposition>
     <dueto|The lattice integrand remainder><label|ch07:integrand-input> Let
@@ -7947,7 +7972,8 @@
     least three; a Taylor derivative or a factor of <math|A> counts as one
     weight. This follows by expanding the four edge exponentials and their
     transports. At weight four the row squares and direct term therefore have
-    colour-direction coefficient <math|c<rsub|<math-up|dir>>*I+<wide|\<rho\>|^><around|(|0|)><rsup|\<ast\>>*<wide|\<rho\>|^><around|(|0|)>=I>.
+    coefficient on <math|<gLie>>-valued one-forms
+    <math|c<rsub|<math-up|dir>>*I+<wide|\<rho\>|^><around|(|0|)><rsup|\<ast\>>*<wide|\<rho\>|^><around|(|0|)>=I>.
     Cubic and quartic curvature terms have weights at least six and eight.
     The leading local density is consequently the Wilson curvature-square
     density. All differences from it have weight at least five. Exponential
@@ -7973,9 +7999,9 @@
 
     The ghost denominator is <math|\<omega\><around|(|k|)>*I>, with
     <math|\<omega\><around|(|k|)>=<big|sum><rsub|a><around|\||q<rsub|a><around|(|k|)>|\|><rsup|2>=<around|\||k|\|><rsup|2>+O<around|(|<around|\||k|\|><rsup|4>|)>>.
-    For a mark of direction <math|a> and colour <math|u>, expanding the
-    Wilson cubic vertex and adding the gauge-fixing vertex gives the linear
-    vector insertion
+    For a mark of direction <math|a> and Lie algebra direction <math|u>,
+    expanding the Wilson cubic vertex and adding the gauge-fixing vertex
+    gives the linear vector insertion
 
     <\equation*>
       b<rsub|<math-up|lin>>*<around|(|p;k|)><rsub|i*j>=<around*|[|-i*<around|(|2*k<rsub|a>+p<rsub|a>|)>*\<delta\><rsub|i*j>+2*i*p<rsub|j>*\<delta\><rsub|i*a>-2*i*p<rsub|i>*\<delta\><rsub|j*a>|]><math-up|ad><space|0.17em>u.
@@ -8126,8 +8152,8 @@
   <math|\<zeta\><around|(|0|)>=0> and tangent
   <math|<around|(|W*x,r<rsub|x>|)>>, where <math|r<rsub|x>> is its coarse
   scalar component after recentering. For each scalar determinant function
-  <math|f*<around|(|x,z|)>>, constant colour rotations act orthogonally on
-  its matrices and leave <math|f> invariant. Every invariant linear
+  <math|f*<around|(|x,z|)>>, constant gauge transformations act orthogonally
+  on its matrices and leave <math|f> invariant. Every invariant linear
   functional on the simple Lie algebra vanishes, since it annihilates
   brackets and <math|<around|[|<gLie>,<gLie>|]>=<gLie>>. Applying this to
   each coordinate gives <math|D*f<around|(|0|)>=0>. Thus
@@ -8158,7 +8184,8 @@
   <math|<around|\<langle\>|a,Y<around|(|x|)>|\<rangle\>>=<tr><around|(|A<around|(|x|)><rsup|-1>*S<rsub|x><around|(|a|)>|)>>.
   The block average is covariant, and the internal matrices transform by the
   same congruence. Cyclicity of trace therefore makes <math|Y> a covariant
-  coarse vector. Constant colour rotations imply <math|Y<around|(|0|)>=0>.
+  coarse vector. Constant gauge transformations imply
+  <math|Y<around|(|0|)>=0>.
 
   The linear block identity <math|Q*W=I-b<rsup|-1>*K<rsub|c>> fixes the
   derivative of the penalty gradient: <math|D*r<around|(|0|)>=-K<rsub|c>=:J>.
@@ -8191,9 +8218,9 @@
   external mesh momenta. Write <math|M<around|(|p|)>> for the mixed kernel of
   <math|D*Y>. Its Ward identity along <math|p=t*e<rsub|\<nu\>>> reads
   <math|q<rsub|\<nu\>>*<around|(|t*e<rsub|\<nu\>>|)>*M<rsub|j*\<nu\>>*<around|(|t*e<rsub|\<nu\>>|)>=0>
-  in each colour. Hence every column of <math|M<around|(|0|)>> is zero and
-  <math|M<around|(|p|)>=O<around|(|<around|\||p|\|>|)>>. Since
-  <math|J<around|(|p|)>=-K<rsub|c><around|(|p|)>=O<around|(|<around|\||p|\|><rsup|2>|)>>,
+  as an identity on <math|<gLie>>. Hence every column of
+  <math|M<around|(|0|)>> is zero and <math|M<around|(|p|)>=O<around|(|<around|\||p|\|>|)>>.
+  Since <math|J<around|(|p|)>=-K<rsub|c><around|(|p|)>=O<around|(|<around|\||p|\|><rsup|2>|)>>,
   the first two terms of <eqref|ch07:contact-exact> have order at least
   three, and the last has order at least four. Therefore the contact
   correction has zero <math|\<alpha\>>. Only qualitative analyticity at fixed
@@ -8797,7 +8824,8 @@
 
   has order four, satisfies <math|S*d<rsub|0>=d<rsub|0><rsup|\<ast\>>*S=0>,
   and has strip bound <math|C*\<Lambda\><rsub|m+1><rsup|<math-up|loop>>>.
-  Symmetrization and colour indices are understood; they cost fixed
+  Symmetrization and Lie algebra indices in the basis of
+  Section<nbsp><reference|ch01:gauge> are understood; they cost fixed
   constants.
 
   An analytic periodic function with an order-four zero is a sum of products
@@ -9511,11 +9539,11 @@
   splits into parts with inverse-ratio sizes
   <math|L<rsup|-1>,L<rsup|-2>,L<rsup|-3>>: a constant part, its affine
   variation, and its remainder. The constant part is removed by a local gauge
-  transformation. Curvature therefore begins at weight two. Gauge and color
-  invariance remove linear curvature terms, and the incoming affine-Hessian
-  condition removes the quadratic curvature term of weight four. Every
-  surviving selection in the ordered Taylor expansion has weight at least
-  five.
+  transformation. Curvature therefore begins at weight two. Invariance under
+  constant gauge transformations remove linear curvature terms, and the
+  incoming affine-Hessian condition removes the quadratic curvature term of
+  weight four. Every surviving selection in the ordered Taylor expansion has
+  weight at least five.
 
   Here is the support estimate needed to sum that local calculation. Let
   <math|d> be the incoming covering number. For <math|d<rsup|3>\<less\>L> the
@@ -10089,9 +10117,9 @@
   gradients. The zero-curl part of an affine potential is a discrete gradient
   of a quadratic site function. It can be extended periodically using a
   cutoff outside the dependence region. Therefore the Hessian on affine
-  fields depends only on their constant curls. Constant color invariance and
-  simplicity of <math|<gLie>> make its color bilinear form a multiple of the
-  invariant metric. Thus <math|Q<rsub|f>> has the same affine Hessian as
+  fields depends only on their constant curls. Invariance under the adjoint
+  action and simplicity of <math|<gLie>> make its bilinear form a multiple of
+  the invariant metric. Thus <math|Q<rsub|f>> has the same affine Hessian as
   <math|f>. This is the local Ward-identity argument of
   Section<nbsp><reference|ch07:kernels> in finite coordinates.
 
@@ -12355,10 +12383,11 @@
   </equation>
 
   This proves every cross-entry simultaneously, including different
-  plaquettes and color coordinates. It retains both actual metrics, even when
-  an adjacent pair straddles a change of stage. The right side is positive
-  because the left is a covariance. Harmonic and gauge modes were handled
-  through the range equations, not discarded.
+  plaquettes and coordinates in the basis of
+  Section<nbsp><reference|ch01:gauge>. It retains both actual metrics, even
+  when an adjacent pair straddles a change of stage. The right side is
+  positive because the left is a covariance. Harmonic and gauge modes were
+  handled through the range equations, not discarded.
 
   At zero background the actual row Gram is precisely <math|A<rsub|F>>: the
   absolutely summed path coefficients reproduce their curvature
@@ -13670,8 +13699,8 @@
   and choose <math|c<rsub|d>> with <math|<around|\<\|\|\>|v|\<\|\|\>><rsub|1>\<leqslant\>c<rsub|d>*<around|\<\|\|\>|\<cal-E\>*v|\<\|\|\>><rsub|<math-up|coeff>>>.
   The low-weight coefficient extraction of <math|<with|math-font|cal*|P>*u>
   belongs to this frame: the original covariance is a real spatial matrix
-  tensored with the colour identity, so its contractions commute with the
-  adjoint colour action. Axial conversion and weighted truncation also
+  tensored with the identity on <math|<gLie>>, so its contractions commute
+  with the adjoint action. Axial conversion and weighted truncation also
   commute with that action. Define <math|T*u> to be precisely these frame
   coefficients, retaining the inverse coupling scaling above. Using
   <math|\<alpha\>=1/<around|(|4*<around|(|D+2|)>|)>>, the preceding
@@ -14142,9 +14171,9 @@
   integral by at most <math|C*<around|(|1+<around|\||x|\|>|)>/N<rsub|<math-up|per>>>:
   on frequency cubes of side <math|N<rsub|<math-up|per>><rsup|-1>> use the
   derivative bound <math|C/<around|\||p|\|>>, which is integrable in four
-  dimensions, and the phase difference. This also handles the cube containing
-  the singular sampled point. Gaussian regularization of the continuum
-  potential has kernel <math|<around|(|4*\<pi\><rsup|2><around|\||x|\|><rsup|2>|)><rsup|-1>*<around|(|1-e<rsup|-<around|\||x|\|><rsup|2>/4>|)>>
+  dimensions, and the phase difference. This also handles the frequency cube
+  containing <math|p=0>. Gaussian regularization of the continuum potential
+  has kernel <math|<around|(|4*\<pi\><rsup|2><around|\||x|\|><rsup|2>|)><rsup|-1>*<around|(|1-e<rsup|-<around|\||x|\|><rsup|2>/4>|)>>
   in radian convention. Differentiating it therefore changes the separated
   Maxwell covariance only by an exponentially decreasing term. Consequently,
   for <math|<around|\||x|\|>\<geqslant\>1>,
@@ -17236,16 +17265,15 @@
   covariant vector spaces. The free divergence calculation of
   Chapter<nbsp><reference|ch03:maxwell> has rank two. To check that its
   target is the full covariant vector space, note that degree five permits
-  only colour-contracted <math|F*\<partial\>*F>. Sign parity and permutations
-  leave the two expressions
+  only pairings of <math|F> with <math|\<partial\>*F> in <math|<gLie>>. Sign
+  parity and permutations leave the two expressions
 
   <\equation*>
-    V<rsub|b><rsup|<around|(|1|)>>=<big|sum><rsub|c>:F<rsub|b*c>*\<partial\><rsub|b>*F<rsub|b*c>:,<space|2em>V<rsub|b><rsup|<around|(|2|)>>=<big|sum><rsub|c\<less\>d,c,d\<ne\>b>:F<rsub|c*d>*\<partial\><rsub|b>*F<rsub|c*d>:,
+    V<rsub|b><rsup|<around|(|1|)>>=<big|sum><rsub|c>:<around|\<langle\>|F<rsub|b*c>,\<partial\><rsub|b>*F<rsub|b*c>|\<rangle\>><rsub|<gLie>>:,<space|2em>V<rsub|b><rsup|<around|(|2|)>>=<big|sum><rsub|c\<less\>d,c,d\<ne\>b>:<around|\<langle\>|F<rsub|c*d>,\<partial\><rsub|b>*F<rsub|c*d>|\<rangle\>><rsub|<gLie>>:.
   </equation*>
 
-  with colour summation understood. The apparent further contractions
-  <math|<big|sum><rsub|c,d>F<rsub|b*d>*\<partial\><rsub|c>*F<rsub|c*d>> and
-  <math|<big|sum><rsub|c,d>F<rsub|c*d>*\<partial\><rsub|c>*F<rsub|b*d>>
+  The apparent further contractions <math|<big|sum><rsub|c,d>:<around|\<langle\>|F<rsub|b*d>,\<partial\><rsub|c>*F<rsub|c*d>|\<rangle\>><rsub|<gLie>>>:
+  and <math|<big|sum><rsub|c,d>:<around|\<langle\>|F<rsub|c*d>,\<partial\><rsub|c>*F<rsub|b*d>|\<rangle\>><rsub|<gLie>>>:
   reduce to these: use the Maxwell equation in the first and the Bianchi
   identity in the second. The two independent rows of correlation pairings in
   <eqref|ch03:divergence-matrix> show that these vectors are independent and
@@ -19382,7 +19410,7 @@
   Use the free scalar and tensor
 
   <\equation*>
-    \<cal-O\>=<tfrac|1|4><big|sum><rsub|a,b,\<alpha\>>:<around|(|F<rsub|a*b><rsup|\<alpha\>>|)><rsup|2>:,<space|1em>L=T<rsup|<math-up|Max>>,<space|1em>D<rsub|a*b>=\<delta\><rsub|a*b>*\<cal-O\>,<space|1em>X<rsub|a*b>=<around|(|1-\<delta\><rsub|a*b>|)>*<big|sum><rsub|c,\<alpha\>>:F<rsub|a*c><rsup|\<alpha\>>*F<rsub|b*c><rsup|\<alpha\>>:.
+    \<cal-O\>=<tfrac|1|4><big|sum><rsub|a,b>:<around|\<\|\|\>|F<rsub|a*b>|\<\|\|\>><rsub|<gLie>><rsup|2>:,<space|1em>L=T<rsup|<math-up|Max>>,<space|1em>D<rsub|a*b>=\<delta\><rsub|a*b>*\<cal-O\>,<space|1em>X<rsub|a*b>=<around|(|1-\<delta\><rsub|a*b>|)>*<big|sum><rsub|c>:<around|\<langle\>|F<rsub|a*c>,F<rsub|b*c>|\<rangle\>><rsub|<gLie>>:.
   </equation*>
 
   The coordinate sum in <math|\<cal-O\>> is over ordered pairs. The symbol
@@ -19392,15 +19420,14 @@
   coordinates in <math|E=<RR><rsup|3>>, represented by
 
   <\equation*>
-    <big|sum><rsub|c>F<rsub|b*c>*\<partial\><rsub|b>*F<rsub|b*c>,<space|2em><big|sum><rsub|a,c>F<rsub|a*c>*\<partial\><rsub|b>*F<rsub|a*c>,<space|2em><big|sum><rsub|a,c>F<rsub|b*c>*\<partial\><rsub|a>*F<rsub|a*c>,
+    <big|sum><rsub|c>:<around|\<langle\>|F<rsub|b*c>,\<partial\><rsub|b>*F<rsub|b*c>|\<rangle\>><rsub|<gLie>>:,<space|2em><big|sum><rsub|a,c>:<around|\<langle\>|F<rsub|a*c>,\<partial\><rsub|b>*F<rsub|a*c>|\<rangle\>><rsub|<gLie>>:,<space|2em><big|sum><rsub|a,c>:<around|\<langle\>|F<rsub|b*c>,\<partial\><rsub|a>*F<rsub|a*c>|\<rangle\>><rsub|<gLie>>:.
   </equation*>
 
-  with colour contraction and Wick ordering understood. The free quotient
-  <math|s:E\<to\>V> has kernel spanned by <math|v=<around|(|0,0,1|)>>, and
-  <math|V> is the two-dimensional vector space of
-  Section<nbsp><reference|ch14:stress-line>. For a tensor with diagonal
-  entries <math|z<rsub|0>*<big|sum><rsub|c>F<rsub|a*c><rsup|2>+z<rsub|1>*<big|sum><rsub|b,c>F<rsub|b*c><rsup|2>>
-  and off-diagonal entries <math|z<rsub|2>*<big|sum><rsub|c>F<rsub|a*c>*F<rsub|b*c>>,
+  The free quotient <math|s:E\<to\>V> has kernel spanned by
+  <math|v=<around|(|0,0,1|)>>, and <math|V> is the two-dimensional vector
+  space of Section<nbsp><reference|ch14:stress-line>. For a tensor with
+  diagonal entries <math|z<rsub|0>*<big|sum><rsub|c>:<around|\<\|\|\>|F<rsub|a*c>|\<\|\|\>><rsub|<gLie>><rsup|2>:+z<rsub|1>*<big|sum><rsub|b,c>:<around|\<\|\|\>|F<rsub|b*c>|\<\|\|\>><rsub|<gLie>><rsup|2>>:
+  and off-diagonal entries <math|z<rsub|2>*<big|sum><rsub|c>:<around|\<langle\>|F<rsub|a*c>,F<rsub|b*c>|\<rangle\>><rsub|<gLie>>>:,
   Bianchi gives divergence coordinates <math|<around|(|2*<around|(|z<rsub|0>-z<rsub|2>|)>,2*z<rsub|1>+z<rsub|2>/2,z<rsub|2>|)>>.
   Hence
 
@@ -19432,19 +19459,19 @@
   During transfer they must remain exact forward differences; smallness of
   their values alone would not suffice for the trace rate below.
 
-  We fix the coefficient functionals in that calculation. For a local scalar
-  <math|F>, its Hessian Fourier kernel is
+  Fix a unit vector <math|u\<in\><gLie>> and write
+  <math|e<rsub|x,c><around|(|u|)>> for the variation equal to <math|u> on
+  link <math|<around|(|x,c|)>> and zero elsewhere. For a local scalar
+  <math|F>, the Fourier kernel of its Hessian in this direction is
 
   <\equation*>
-    <wide|F|^><rsub|c*\<alpha\>,c*\<alpha\>>*<around|(|p,q|)>=<big|sum><rsub|x,y>e<rsup|i*<around|(|p\<cdot\>x+q\<cdot\>y|)>>*D<rsup|2>*F<around|(|0|)><around|[|e<rsub|x,c,\<alpha\>>,e<rsub|y,c,\<alpha\>>|]>,
+    <wide|F|^><rsub|c*u,c*u>*<around|(|p,q|)>=<big|sum><rsub|x,y>e<rsup|i*<around|(|p\<cdot\>x+q\<cdot\>y|)>>*D<rsup|2>*F<around|(|0|)><around|[|e<rsub|x,c><around|(|u|)>,e<rsub|y,c><around|(|u|)>|]>.
   </equation*>
 
-  where <math|e<rsub|x,c,\<alpha\>>> is the link-coordinate basis vector. Fix
-  one colour <math|\<alpha\>>. For a vector <math|F<rsub|b>> and a scalar
-  action <math|F> put
+  For a vector <math|F<rsub|b>> and a scalar action <math|F> put
 
   <\align*>
-    <tformat|<table|<row|<cell|<math-ss|l><around|(|F|)>>|<cell|=<math-up|Re><big|sum><rsub|a\<ne\>c,b>i*<around|[|z<rsup|2>*t|]><wide|F<rsub|b>|^><rsub|c*\<alpha\>,c*\<alpha\>><around|(|z*e<rsub|a>,-z*e<rsub|a>+t*e<rsub|b>|)>,>>|<row|<cell|<math-ss|q><around|(|F|)>>|<cell|=<around|\||\<Lambda\>|\|><rsup|-1><math-up|Re><big|sum><rsub|a\<ne\>c><around|[|z<rsup|2>|]>*<wide|F|^><rsub|c*\<alpha\>,c*\<alpha\>>*<around|(|z*e<rsub|a>,-z*e<rsub|a>|)>,>>|<row|<cell|<math-ss|h><around|(|F|)>>|<cell|=<math-ss|l><around|(|F|)>-<tfrac|1|2><math-up|Re><big|sum><rsub|a\<ne\>c><around|[|z<rsup|2>|]><wide|F<rsub|c>|^><rsub|c*\<alpha\>,c*\<alpha\>><around|(|z*e<rsub|a>,-z*e<rsub|a>|)>.>>>>
+    <tformat|<table|<row|<cell|<math-ss|l><around|(|F|)>>|<cell|=<math-up|Re><big|sum><rsub|a\<ne\>c,b>i*<around|[|z<rsup|2>*t|]><wide|F<rsub|b>|^><rsub|c*u,c*u><around|(|z*e<rsub|a>,-z*e<rsub|a>+t*e<rsub|b>|)>,>>|<row|<cell|<math-ss|q><around|(|F|)>>|<cell|=<around|\||\<Lambda\>|\|><rsup|-1><math-up|Re><big|sum><rsub|a\<ne\>c><around|[|z<rsup|2>|]>*<wide|F|^><rsub|c*u,c*u>*<around|(|z*e<rsub|a>,-z*e<rsub|a>|)>,>>|<row|<cell|<math-ss|h><around|(|F|)>>|<cell|=<math-ss|l><around|(|F|)>-<tfrac|1|2><math-up|Re><big|sum><rsub|a\<ne\>c><around|[|z<rsup|2>|]><wide|F<rsub|c>|^><rsub|c*u,c*u><around|(|z*e<rsub|a>,-z*e<rsub|a>|)>.>>>>
   </align*>
 
   Brackets denote Taylor coefficients including reciprocal factorials. The
@@ -19707,8 +19734,9 @@
   </equation*>
 
   Indices <math|i> run through link coordinates and <math|\<alpha\>> through
-  gauge coordinates. Differentiating gauge invariance first in <math|v>, then
-  in <math|z>, gives <math|H*d=-N>.
+  gauge coordinates, using the basis of Section<nbsp><reference|ch01:gauge>
+  at each link and site. Differentiating gauge invariance first in <math|v>,
+  then in <math|z>, gives <math|H*d=-N>.
 
   For <math|\<mu\>\<gtr\>0> at a background where the following inverses
   exist, write
@@ -19910,14 +19938,18 @@
   <subsection|The corrected coefficient and order of
   limits><label|ch17:regulator-completion>
 
-  We can retain the lattice correction in <math|<math-ss|h>> throughout,
-  avoiding an unsupported claim that it vanishes separately. Write
-  <math|<math-ss|c><around|(|F|)>=<frac|1|2><math-up|Re><big|sum><rsub|a\<ne\>c><around|[|z<rsup|2>|]><wide|F<rsub|c>|^><rsub|c*\<alpha\>,c*\<alpha\>><around|(|z*e<rsub|a>,-z*e<rsub|a>|)>>,
-  so <math|<math-ss|h>=<math-ss|l>-<math-ss|c>>. The quadratic variation
-  <math|D*F<around|[|Z|]>> in the preceding calculation starts at momentum
-  degree three. Thus <math|<math-ss|c><around|(|D*F<around|[|Z|]>|)>=0>, in
-  addition to <eqref|ch17:gradient-cancellation>. Both functionals therefore
-  annihilate the action-gradient terms of <eqref|ch17:contact>.
+  Retain the lattice correction in <math|<math-ss|h>>. For the same unit
+  vector <math|u\<in\><gLie>>, set
+
+  <\equation*>
+    <math-ss|c><around|(|F|)>=<tfrac|1|2><math-up|Re><big|sum><rsub|a\<ne\>c><around|[|z<rsup|2>|]><wide|F<rsub|c>|^><rsub|c*u,c*u><around|(|z*e<rsub|a>,-z*e<rsub|a>|)>,<space|2em><math-ss|h>=<math-ss|l>-<math-ss|c>.
+  </equation*>
+
+  The quadratic variation <math|D*F<around|[|Z|]>> in the preceding
+  calculation starts at momentum degree three. Thus
+  <math|<math-ss|c><around|(|D*F<around|[|Z|]>|)>=0>, in addition to
+  <eqref|ch17:gradient-cancellation>. Both functionals therefore annihilate
+  the action-gradient terms of <eqref|ch17:contact>.
 
   Suppose now that the actual current sequence has the following properties
   at the fixed output level: uniform exponentially weighted order-two through
@@ -19953,7 +19985,9 @@
   extracted.
 
   The definitions of <math|W<rsup|<around|(|1|)>>,W<rsup|<around|(|0|)>>>
-  give an exact trace decomposition. Use <math|R*d=d*G+R*N*G> to obtain
+  give an exact trace decomposition. Using the same link and site bases
+  induced by Section<nbsp><reference|ch01:gauge>, apply <math|R*d=d*G+R*N*G>
+  to obtain
 
   <\align*>
     <tformat|<table|<row|<cell|<math-up|tr><around|(|R*V<rsub|b>|)>=>|<cell|<math-up|tr><around*|(|R*<around|(|D<rsub|b>-<tfrac|1|2>T<rsub|b><rsup|<around|(|1|)>>|)>|)>+<tfrac|1|2><math-up|tr><around|(|G*T<rsub|b><rsup|<around|(|0|)>>|)>+D*S<around|[|Z<rsub|b><rprime|'>|]>+<math-up|Rem><rsub|b>,>>|<row|<cell|<math-up|Rem><rsub|b>=>|<cell|<math-up|tr><around|(|R*W<rsub|b><rsup|<around|(|1|)>>|)>+<math-up|tr><around|(|G*W<rsub|b><rsup|<around|(|0|)>>|)>,>>|<row|<cell|\<ell\><around|(|Z<rsub|b><rprime|'>|)>=>|<cell|<big|sum><rsub|i,\<alpha\>><around|(|G*M<rsub|b>*R|)><rsub|\<alpha\>*i>*\<ell\>*<around|(|J<rsub|U>*<around|(|e<rsub|\<alpha\>>,e<rsub|i>|)>|)>.>>>>
@@ -20062,15 +20096,15 @@
   exactly
 
   <\equation*>
-    \<partial\><rsub|a>*<around*|(|<tfrac|1|4>\<delta\><rsub|a*b>*<big|sum><rsub|c,d>F<rsub|c*d><rsup|2>-<big|sum><rsub|c>F<rsub|a*c>*F<rsub|b*c>|)>+<big|sum><rsub|c>F<rsub|b*c>*\<partial\><rsub|a>*F<rsub|a*c>=0.
+    \<partial\><rsub|a>*<around*|(|<tfrac|1|4>\<delta\><rsub|a*b>*<big|sum><rsub|c,d><around|\<\|\|\>|F<rsub|c*d>|\<\|\|\>><rsub|<gLie>><rsup|2>-<big|sum><rsub|c><around|\<langle\>|F<rsub|a*c>,F<rsub|b*c>|\<rangle\>><rsub|<gLie>>|)>+<big|sum><rsub|c><around|\<langle\>|F<rsub|b*c>,\<partial\><rsub|a>*F<rsub|a*c>|\<rangle\>><rsub|<gLie>>=0.
   </equation*>
 
-  The identity uses the linear Bianchi equation; colour inner products are
-  implicit. Lower spatial degrees vanish because each curvature contains a
-  difference and the action variation contains one more. All remaining
-  lattice Taylor terms have degree at least four. The same reasoning applies
-  to any initial path action with the normalized weight-four Taylor
-  polynomial already established in Chapter<nbsp><reference|ch07:matching>.
+  The identity uses the linear Bianchi equation. Lower spatial degrees vanish
+  because each curvature contains a difference and the action variation
+  contains one more. All remaining lattice Taylor terms have degree at least
+  four. The same reasoning applies to any initial path action with the
+  normalized weight-four Taylor polynomial already established in
+  Chapter<nbsp><reference|ch07:matching>.
 
   <subsection|Preservation of the low moments>
 
@@ -20659,7 +20693,7 @@
   through degree five and let <math|f> be curvature-factor count on a
   homogeneous coefficient. Set <math|\<cal-P\><rsub|5,t>=t<rsup|f-2>*\<cal-P\><rsub|5>>,
   followed by real signed-permutation averaging. There are no invariant
-  linear color terms. Thus the nonzero vector coefficients under
+  linear forms on <math|<gLie>>. Thus the nonzero vector coefficients under
   consideration have <math|f\<geqslant\>2>, and this normalization does not
   introduce a negative power of <math|t> beyond the displayed
   <math|t<rsup|-2>>.
@@ -20802,11 +20836,11 @@
 
     The actual tangent is <math|W<rsub|a>=W<rsub|s>-d<rsub|f>*E*R*W<rsub|s>>.
     Its difference from <math|W<rsub|s>> is a fine gradient. The coefficient
-    source is a color scalar and a spacetime vector, invariant under local
-    fine gauge transformations. Indeed gauge equivariance of <math|Y> and
-    invariance of Haar volume imply invariance of
-    <math|<math-up|div><rsub|<math-up|Haar>><space|0.17em>Y>; the action and
-    loop variations are invariant for the same reason. Apply the
+    source is a spacetime vector with trivial adjoint action on its values,
+    invariant under local fine gauge transformations. Indeed gauge
+    equivariance of <math|Y> and invariance of Haar volume imply invariance
+    of <math|<math-up|div><rsub|<math-up|Haar>><space|0.17em>Y>; the action
+    and loop variations are invariant for the same reason. Apply the
     corresponding fine gauge transformation before evaluating its local jet.
     The Baker\UCampbell\UHausdorff formula with the same local gauge choice
     compares the two exponential representatives with an error
@@ -20850,13 +20884,13 @@
     already retained large-field bound. Finite coefficient recovery has a
     fixed stage cost.
 
-    There are no invariant constant spacetime-vector or linear color terms.
-    Hence these regular sources start at field order two. Their values and
-    normalized-link derivatives on the threshold ball contain a factor
-    <math|t<rsup|2>>; the explicit <math|t<rsup|-2>> removes exactly this
-    factor. The classical part has already been cancelled and its order-five
-    remainder treated separately above. Thus for the present sources
-    <math|N<rsub|k>\<leqslant\>H<rsup|\<theta\><rsub|j>+o<around|(|1|)>>>,
+    There are no invariant constant spacetime-vector or terms linear in the
+    <math|<gLie>>-valued field. Hence these regular sources start at field
+    order two. Their values and normalized-link derivatives on the threshold
+    ball contain a factor <math|t<rsup|2>>; the explicit <math|t<rsup|-2>>
+    removes exactly this factor. The classical part has already been
+    cancelled and its order-five remainder treated separately above. Thus for
+    the present sources <math|N<rsub|k>\<leqslant\>H<rsup|\<theta\><rsub|j>+o<around|(|1|)>>>,
     with <math|\<theta\><rsub|j>\<to\>0>: current norms are logarithmic and
     the retained loop norm has this bound. Since <math|B> and all crop radii
     are fixed powers of <math|log <wide|\<beta\>|^><rsub|k>>, their
@@ -21117,7 +21151,8 @@
     with <math|H=I-2*x*x<rsup|<math-ss|T>>/<around|\||x|\|><rsup|2>>
     orthogonal. The sum of its squared numerators over ordered pairs is
     <math|24>. The two Wick pairings and the two factors <math|1/4> give
-    <math|2\<cdot\>24/16=3> per colour.
+    <math|2\<cdot\>24/16=3> for each of the <math|d<rsub|<gLie>>> orthogonal
+    components.
 
     Start with any prescribed null sequence of radii, and take its comparison
     subsequence. Proposition<nbsp><reference|ch17:coefficient> gives
@@ -21137,6 +21172,46 @@
     sequence has a subsequence with limit <math|\<cal-A\><rsub|G>>, which
     proves <eqref|ch17:trace-law> by the subsequence criterion.
   </proof>
+
+  <paragraph|The dilation current at short separation.> Let <math|v> be a
+  continuously differentiable vector field on <math|<RR><rsup|4>> with
+  <math|\<partial\><rsub|a>*v<rsub|b>+\<partial\><rsub|b>*v<rsub|a>=2*\<varphi\>*<space|0.17em>\<delta\><rsub|a*b>>
+  for a real function <math|\<varphi\>>. For <math|x<rsub|0>\<neq\>x<rsub|1>>
+  put <math|j<rsub|a><around|(|x<rsub|0>|)>=<big|sum><rsub|b>v<rsub|b><around|(|x<rsub|0>|)>*<space|0.17em>S<rsub|2><rsup|\<xi\><rsub|\<ast\>>>*<around|(|T<rsub|a*b>,\<Theta\>;x<rsub|0>,x<rsub|1>|)>>,
+  the current <math|<big|sum><rsub|b>T<rsub|a*b>*v<rsub|b>> at
+  <math|x<rsub|0>> against the centered trace at <math|x<rsub|1>>. Then
+
+  <\equation*>
+    <big|sum><rsub|a>\<partial\><rsub|<around|(|x<rsub|0>|)><rsub|a>>*j<rsub|a><around|(|x<rsub|0>|)>=\<varphi\><around|(|x<rsub|0>|)>*<space|0.17em>S<rsub|2><rsup|\<xi\><rsub|\<ast\>>>*<around|(|\<tau\>,\<Theta\>;x<rsub|0>,x<rsub|1>|)>=\<varphi\><around|(|x<rsub|0>|)>*<space|0.17em>G<rsub|\<Theta\>><around|(|<around|\||x<rsub|0>-x<rsub|1>|\|>|)>*<space|2em><around|(|x<rsub|0>\<neq\>x<rsub|1>|)>.
+  </equation*>
+
+  Indeed, the product rule gives two sums. The one containing the derivatives
+  of the correlations vanishes because <math|T> is conserved
+  (Proposition<nbsp><reference|ch14:normalized-stress>). In the other,
+  symmetry of <math|T> allows <math|\<partial\><rsub|a>*v<rsub|b>> to be
+  replaced by <math|<tfrac|1|2><around|(|\<partial\><rsub|a>*v<rsub|b>+\<partial\><rsub|b>*v<rsub|a>|)>=\<varphi\>*<space|0.17em>\<delta\><rsub|a*b>>,
+  and bilinearity leaves <math|\<varphi\>*<space|0.17em>S<rsub|2><rsup|\<xi\><rsub|\<ast\>>>*<around|(|\<tau\>,\<Theta\>;x<rsub|0>,x<rsub|1>|)>>.
+  Finally <math|\<tau\>=\<Theta\>+e<rsub|<math-up|tr>>*1>; a unit insertion
+  leaves correlations unchanged and <math|\<Theta\>> is centered
+  (Section<nbsp><reference|ch17:spectrum>), so
+  <math|S<rsub|2><rsup|\<xi\><rsub|\<ast\>>>*<around|(|\<tau\>,\<Theta\>;x<rsub|0>,x<rsub|1>|)>=S<rsub|2><rsup|\<xi\><rsub|\<ast\>>>*<around|(|\<Theta\>,\<Theta\>;x<rsub|0>,x<rsub|1>|)>=G<rsub|\<Theta\>><around|(|<around|\||x<rsub|0>-x<rsub|1>|\|>|)>>
+  by translation and rotation invariance.
+
+  For the dilation field <math|v<around|(|z|)>=z> one has
+  <math|\<varphi\>=1>, so for a pair at distance <math|r> the divergence of
+  <math|j> is <math|G<rsub|\<Theta\>><around|(|r|)>>, and
+  Theorem<nbsp><reference|ch17:all-radii> gives
+  <math|r<rsup|8>*log<rsup|2><around|(|1/r|)>*<space|0.17em>G<rsub|\<Theta\>><around|(|r|)>\<to\>\<cal-A\><rsub|G>\<gtr\>0>.
+  Thus, against the centered trace, the dilation current is not divergence
+  free at short separation, although the classical Yang\UMills action is
+  scale invariant. In fact <math|G<rsub|\<Theta\>><around|(|r|)>\<gtr\>0> for
+  every <math|r\<gtr\>0>: in <eqref|ch17:laplace> the measure
+  <math|\<rho\><rsub|\<Theta\>>> is positive, and nonzero since the limit is
+  positive. For translations and rotations <math|\<varphi\>=0>, and the
+  identity is the conservation behind the Ward identities of
+  Chapter<nbsp><reference|ch14:ward>. In the free Maxwell theory of
+  Chapter<nbsp><reference|ch03:maxwell> the stress is traceless, and the
+  dilation current is divergence free.
 
   <section|What the trace law excludes><label|ch17:exclusion>
 
@@ -22393,8 +22468,8 @@
     <associate|auto-230|<tuple|17.7.1|292>>
     <associate|auto-231|<tuple|17.7.2|294>>
     <associate|auto-232|<tuple|17.7.3|298>>
-    <associate|auto-233|<tuple|17.8|299>>
-    <associate|auto-234|<tuple|17.9|300>>
+    <associate|auto-233|<tuple|17.8|300>>
+    <associate|auto-234|<tuple|17.9|301>>
     <associate|auto-235|<tuple|18|303>>
     <associate|auto-236|<tuple|18.1|303>>
     <associate|auto-237|<tuple|18.2|305>>
@@ -22450,7 +22525,7 @@
     <associate|auto-6|<tuple|1.1|17>>
     <associate|auto-60|<tuple|6.1.2|86>>
     <associate|auto-61|<tuple|6.2|89>>
-    <associate|auto-62|<tuple|6.2.1|90>>
+    <associate|auto-62|<tuple|6.2.1|89>>
     <associate|auto-63|<tuple|6.2.2|90>>
     <associate|auto-64|<tuple|6.2.3|91>>
     <associate|auto-65|<tuple|6.2.4|92>>
@@ -22465,8 +22540,8 @@
     <associate|auto-73|<tuple|6.5.1|100>>
     <associate|auto-74|<tuple|6.5.2|101>>
     <associate|auto-75|<tuple|6.5.3|102>>
-    <associate|auto-76|<tuple|6.5.4|105>>
-    <associate|auto-77|<tuple|6.6|106>>
+    <associate|auto-76|<tuple|6.5.4|104>>
+    <associate|auto-77|<tuple|6.6|105>>
     <associate|auto-78|<tuple|7|107>>
     <associate|auto-79|<tuple|7.1|107>>
     <associate|auto-8|<tuple|1.3|19>>
@@ -22730,19 +22805,19 @@
     <associate|ch06:base-scores|<tuple|6.21|95>>
     <associate|ch06:bounded-jet-route|<tuple|6.4.2|98>>
     <associate|ch06:clipped-source|<tuple|6.16|91>>
-    <associate|ch06:coarse-bound|<tuple|6.8|87>>
+    <associate|ch06:coarse-bound|<tuple|6.8|86>>
     <associate|ch06:common-majorant|<tuple|6.6|99>>
     <associate|ch06:component-extracted-energy|<tuple|6.30|104>>
     <associate|ch06:counts|<tuple|6.2|84>>
     <associate|ch06:density-ratio|<tuple|6.20|94>>
-    <associate|ch06:energy|<tuple|6.2|89>>
+    <associate|ch06:energy|<tuple|6.2|88>>
     <associate|ch06:fine-bound|<tuple|6.6|86>>
-    <associate|ch06:flat-identities|<tuple|6.3|85>>
+    <associate|ch06:flat-identities|<tuple|6.3|84>>
     <associate|ch06:gaussian-identity|<tuple|6.18|92>>
-    <associate|ch06:global-energy|<tuple|6.5|86>>
+    <associate|ch06:global-energy|<tuple|6.5|85>>
     <associate|ch06:joint-tails|<tuple|6.4|95>>
     <associate|ch06:large-fields|<tuple|6|83>>
-    <associate|ch06:linear-comparison|<tuple|6.5.4|105>>
+    <associate|ch06:linear-comparison|<tuple|6.5.4|104>>
     <associate|ch06:macro-comparison|<tuple|6.11|87>>
     <associate|ch06:majorant-form|<tuple|6.27|99>>
     <associate|ch06:mean-cancellation|<tuple|6.5|97>>
@@ -22758,11 +22833,11 @@
     <associate|ch06:signed-input|<tuple|6.1|87>>
     <associate|ch06:six-terms|<tuple|6.4|85>>
     <associate|ch06:tail-event|<tuple|6.22|95>>
-    <associate|ch06:tree-control|<tuple|6.13|90>>
+    <associate|ch06:tree-control|<tuple|6.13|89>>
     <associate|ch06:unaffected|<tuple|6.10|87>>
     <associate|ch06:window-error|<tuple|6.15|91>>
     <associate|ch06:windows|<tuple|6.3|91>>
-    <associate|ch06:windows-def|<tuple|6.14|91>>
+    <associate|ch06:windows-def|<tuple|6.14|90>>
     <associate|ch07:alpha|<tuple|7.5|109>>
     <associate|ch07:classical|<tuple|7.7|119>>
     <associate|ch07:classical-budget|<tuple|7.15|122>>
@@ -23098,7 +23173,7 @@
     <associate|ch17:all-radii|<tuple|17.5|300>>
     <associate|ch17:block-algebra|<tuple|17.7|279>>
     <associate|ch17:block-identities|<tuple|17.1|279>>
-    <associate|ch17:coefficient|<tuple|17.4|299>>
+    <associate|ch17:coefficient|<tuple|17.4|300>>
     <associate|ch17:contact|<tuple|17.11|282>>
     <associate|ch17:contact-Z|<tuple|17.10|281>>
     <associate|ch17:contact-identity|<tuple|17.2|282>>
@@ -23108,15 +23183,15 @@
     <associate|ch17:current-alias|<tuple|17.15|286>>
     <associate|ch17:current-suppliers|<tuple|17.4|278>>
     <associate|ch17:defect-four|<tuple|17.14|286>>
-    <associate|ch17:exclusion|<tuple|17.9|300>>
+    <associate|ch17:exclusion|<tuple|17.9|301>>
     <associate|ch17:finite-haar|<tuple|17.9|280>>
-    <associate|ch17:finite-sigma|<tuple|17.25|294>>
+    <associate|ch17:finite-sigma|<tuple|17.25|295>>
     <associate|ch17:flat-current-map|<tuple|17.20|289>>
     <associate|ch17:gradient-cancellation|<tuple|17.12|283>>
     <associate|ch17:kernel-divergence|<tuple|17.24|293>>
     <associate|ch17:kernel-score|<tuple|17.23|292>>
     <associate|ch17:laplace|<tuple|17.2|273>>
-    <associate|ch17:limit|<tuple|17.8|299>>
+    <associate|ch17:limit|<tuple|17.8|300>>
     <associate|ch17:marked-rates|<tuple|17.7|292>>
     <associate|ch17:polynomial-response|<tuple|17.26|296>>
     <associate|ch17:quadratic-current|<tuple|17.5|285>>
@@ -23133,7 +23208,7 @@
     <associate|ch17:spectral-pairing|<tuple|17.1|273>>
     <associate|ch17:spectrum|<tuple|17.1|273>>
     <associate|ch17:stability|<tuple|17.6|291>>
-    <associate|ch17:stable-functional|<tuple|17.21|291>>
+    <associate|ch17:stable-functional|<tuple|17.21|292>>
     <associate|ch17:stationary-higher-jets|<tuple|17.17|288>>
     <associate|ch17:trace|<tuple|17|273>>
     <associate|ch17:trace-law|<tuple|17.29|300>>
