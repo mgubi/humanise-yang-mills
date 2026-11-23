@@ -22836,14 +22836,14 @@
     <associate|auto-222|<tuple|17.1|287>>
     <associate|auto-223|<tuple|17.2.1|287>>
     <associate|auto-224|<tuple|17.3|289>>
-    <associate|auto-225|<tuple|17.4|291>>
+    <associate|auto-225|<tuple|17.4|290>>
     <associate|auto-226|<tuple|17.4.1|291>>
     <associate|auto-227|<tuple|17.4.2|292>>
-    <associate|auto-228|<tuple|17.4.3|293>>
+    <associate|auto-228|<tuple|17.4.3|292>>
     <associate|auto-229|<tuple|17.4.4|293>>
     <associate|auto-23|<tuple|2.6|39>>
     <associate|auto-230|<tuple|17.4.5|295>>
-    <associate|auto-231|<tuple|17.4.6|296>>
+    <associate|auto-231|<tuple|17.4.6|295>>
     <associate|auto-232|<tuple|17.4.7|296>>
     <associate|auto-233|<tuple|17.5|298>>
     <associate|auto-234|<tuple|17.5.1|299>>
@@ -22854,7 +22854,7 @@
     <associate|auto-239|<tuple|17.6|304>>
     <associate|auto-24|<tuple|3|41>>
     <associate|auto-240|<tuple|17.7|304>>
-    <associate|auto-241|<tuple|17.7.1|305>>
+    <associate|auto-241|<tuple|17.7.1|304>>
     <associate|auto-242|<tuple|17.7.2|306>>
     <associate|auto-243|<tuple|17.7.3|310>>
     <associate|auto-244|<tuple|17.8|312>>
@@ -23036,7 +23036,7 @@
     <associate|ch02:direction|<tuple|2.11|34>>
     <associate|ch02:equation-adapted|<tuple|2.6|35>>
     <associate|ch02:equation-section|<tuple|2.5|35>>
-    <associate|ch02:equation-triangle|<tuple|2.15|38>>
+    <associate|ch02:equation-triangle|<tuple|2.15|37>>
     <associate|ch02:factor-scaling|<tuple|2.3|30>>
     <associate|ch02:fig-transported-curvatures|<tuple|2.1|32>>
     <associate|ch02:jet-dilation|<tuple|2.6|31>>
@@ -23580,16 +23580,16 @@
     <associate|ch17:corrected-regulated-ward|<tuple|17.13|297>>
     <associate|ch17:current|<tuple|17.3|289>>
     <associate|ch17:current-alias|<tuple|17.15|299>>
-    <associate|ch17:current-suppliers|<tuple|17.4|291>>
+    <associate|ch17:current-suppliers|<tuple|17.4|290>>
     <associate|ch17:defect-four|<tuple|17.14|298>>
     <associate|ch17:exclusion|<tuple|17.9|313>>
     <associate|ch17:fig-radius-windows|<tuple|17.1|287>>
-    <associate|ch17:finite-haar|<tuple|17.9|293>>
+    <associate|ch17:finite-haar|<tuple|17.9|292>>
     <associate|ch17:finite-sigma|<tuple|17.25|307>>
     <associate|ch17:flat-current-map|<tuple|17.20|302>>
     <associate|ch17:gradient-cancellation|<tuple|17.12|295>>
     <associate|ch17:kernel-divergence|<tuple|17.24|305>>
-    <associate|ch17:kernel-score|<tuple|17.23|305>>
+    <associate|ch17:kernel-score|<tuple|17.23|304>>
     <associate|ch17:laplace|<tuple|17.2|285>>
     <associate|ch17:limit|<tuple|17.8|312>>
     <associate|ch17:marked-rates|<tuple|17.7|304>>
@@ -23637,7 +23637,7 @@
     <associate|ch18:mixed-bound|<tuple|13.9|248>>
     <associate|ch18:mixed-product-rate|<tuple|13.29|248>>
     <associate|ch18:mixed-replacement|<tuple|13.10.4|248>>
-    <associate|ch18:normal-Taylor|<tuple|18.8|320>>
+    <associate|ch18:normal-Taylor|<tuple|18.8|321>>
     <associate|ch18:ope|<tuple|18.3|319>>
     <associate|ch18:ope-bound|<tuple|18.5|319>>
     <associate|ch18:ope-theorem|<tuple|18.2|319>>
