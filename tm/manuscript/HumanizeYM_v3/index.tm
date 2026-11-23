@@ -63,6 +63,9 @@
 
     <item><verbatim|chapters/>: book text and included proof fragments.
 
+    <item><verbatim|figures/>: editable TikZ illustrations, each included
+    from the chapter that discusses it.
+
     <item><verbatim|audit/>: chapter-specific source checks and independent
     mathematical reviews.
 
@@ -91,10 +94,11 @@
   The most recently reviewed draft PDF is copied to <verbatim|monograph.pdf>;
   build logs and rendered review images stay in <verbatim|build/>. The
   current source covers all nineteen planned chapters, including the
-  current-transfer and arbitrary-radius estimates. The delivered PDF is 273
-  pages. Pages i\Uii state the main theorem and point to the proofs of its
-  parts. Consult <verbatim|PROGRESS.md> for the final review record and the
-  scope of the claims.
+  current-transfer and arbitrary-radius estimates. The illustrated PDF is 279
+  pages. Its linked list of figures is on page x. Pages i\Uii state the main
+  theorem and point to the proofs of its parts. Consult
+  <verbatim|PROGRESS.md> for the final review record and the scope of the
+  claims.
 </body>
 
 <\initial>

@@ -267,6 +267,12 @@ exported whole, so every number (sections, theorems, equations, citations)
 is that of the whole document; `split.py` then cuts the exported page at its
 top-level headings:
 
+- A list of figures or tables (`\listoffigures`, front matter of a book)
+  stays on the contents page; its entries read "Figure N." (linked to the
+  figure on its chapter page) followed by the caption, without the page
+  numbers of the typeset document. In a book, figures and tables are
+  numbered within chapters, as in LaTeX; `\caption[short]{long}` keeps the
+  long caption, also in the list.
 - `manuscript/existence.html` (the URL of the document) is the contents page:
   navigation bar, title, front matter and the table of contents (sections
   and subsections, as `tocdepth` 2), whose entries link to the chapter pages;

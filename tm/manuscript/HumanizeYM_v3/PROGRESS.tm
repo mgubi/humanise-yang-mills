@@ -30,12 +30,13 @@
     <no-break><pageref|auto-4><vspace|0.5fn>
   </table-of-contents>
 
-  Updated 19 November 2026. The requested blueprint and a full first draft of
-  the monograph are complete in this folder. The draft is <strong|273 pages>,
-  with all nineteen chapters, a notation index and 41 cited references. It is
-  a working mathematical exposition of the supplied construction and still
-  merits expert review; the writing and focused dependency audits are not
-  independent certification of the underlying existence claim.
+  Updated 22 November 2026. The requested blueprint and a full first draft of
+  the monograph are complete in this folder. The draft is <strong|279 pages>,
+  with all nineteen chapters, eleven figures, a notation index and 41 cited
+  references. It is a working mathematical exposition of the supplied
+  construction and still merits expert review; the writing and focused
+  dependency audits are not independent certification of the underlying
+  existence claim.
 
   <section|Delivered files><label|delivered-files>
 
@@ -43,8 +44,8 @@
     <item><verbatim|monograph.pdf>: reviewed standalone PDF.
 
     <item><verbatim|monograph.tex>, <verbatim|preamble.tex>,
-    <verbatim|chapters/>, <verbatim|references.bib>: complete buildable LaTeX
-    sources.
+    <verbatim|chapters/>, <verbatim|figures/>, <verbatim|references.bib>:
+    complete buildable LaTeX sources.
 
     <item><verbatim|BLUEPRINT.md> and <verbatim|blueprint/>: chapter/section
     instructions, bounded source packets, dependencies, shared notation,
@@ -90,7 +91,7 @@
 
   <section|Verification><label|verification>
 
-  The master includes all 39 text files checked by
+  The master includes all 50 TeX files checked by
   <verbatim|tools/check_draft.py>; there are no unattached chapter fragments,
   duplicate labels or unresolved explicit references. The complete LaTeX
   build has no undefined-reference/citation warnings or overfull/underfull
@@ -103,6 +104,9 @@
   and the notation index. The revised PDF builds without warnings. Selected
   pages, including the contents and revised section headings, were rendered
   and inspected.
+
+  The illustrated edition adds eleven chapter figures. The list of figures
+  and each in-text reference link to the illustrations.
 
   <section|Continuing editorial work><label|continuing-editorial-work>
 

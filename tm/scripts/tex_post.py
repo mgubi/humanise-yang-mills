@@ -134,6 +134,11 @@ def theorem_setup():
         # \numberwithin{equation}{section}, or a book
         out.append(['assign', 'display-equation', ['macro', 'nr', ['concat', ['the-' + within], '.', ['arg', 'nr']]]])
         resets[within].append(['reset-equation'])
+    if meta.get('class') in ('book', 'report'):
+        # book and report classes number figures and tables within chapters
+        for kind in ('figure', 'table'):
+            out.append(['assign', 'display-' + kind, ['macro', 'nr', ['concat', ['the-chapter'], '.', ['arg', 'nr']]]])
+            resets['chapter'].append(['reset-' + kind])
     if resets['section']:
         r = resets['section']
         out.append(['assign', 'ym-section-resets', ['macro', r[0] if len(r) == 1 else ['concat'] + r]])
@@ -463,6 +468,10 @@ def rewrite(x):
         if not any(t['env'] == x[1] and t['counter'] == x[1] for t in meta.get('theorems', [])):
             raise SystemExit(f'tex_post: \\setcounter of an unknown theorem counter {x[1]}')
         return ['assign', x[1] + '-env-nr', x[2]]
+    if x == ['listoffigures'] or x == ['listoftables']:
+        # \listoffigures: TeXmacs's own list, filled when the document is typeset
+        kind = 'figure' if x[0] == 'listoffigures' else 'table'
+        return ['list-of-' + kind + 's', kind, ['document', '']]
     if x[0] == 'tmfigure' and len(x) == 2 and isinstance(x[1], str) and x[1].isdigit():
         # a TikZ picture (tex_prep.py), rendered by figures.py into
         # <page>-figures/fig-N.svg next to the document

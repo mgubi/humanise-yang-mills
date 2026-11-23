@@ -240,6 +240,8 @@ PAGINATION = [r'\\begin\{samepage\}', r'\\end\{samepage\}',
               r'\\[Nn]eedspace\*?\{[^{}]*\}', r'\\enlargethispage\*?\{[^{}]*\}',
               r'\\allowdisplaybreaks(?:\[[0-4]\])?', r'\\displaybreak(?:\[[0-4]\])?',
               r'\\(?:small|med|big)break\b', r'\\filbreak\b', r'\\goodbreak\b',
+              # placeins: floats are not floating in HTML
+              r'\\FloatBarrier\b',
               # multiple columns (an HTML page has one; multicols itself
               # is treated as a group in groups())
               # hyperref anchors without text (the HTML has its own)
@@ -458,6 +460,13 @@ def equation_alias(s):
     return s
 
 
+def short_captions(s):
+    r"""\caption[short]{long}: the importer makes it a caption* that stays in
+    the body of the figure; keep the long caption (also in the list of
+    figures, as for the short titles of chapters)"""
+    return re.sub(r'\\caption\[[^\[\]{}]*(?:\{[^{}]*\}[^\[\]{}]*)*\]\{', r'\\caption{', s)
+
+
 def contents_lines(s):
     r"""\section*{X}\addcontentsline{toc}{section}{X}: TeXmacs adds unnumbered
     sections to the table of contents by itself, drop the line; any other
@@ -466,6 +475,10 @@ def contents_lines(s):
                r'\1', s)
     # (book class: \chapter*{X}\addcontentsline{toc}{chapter}{X})
     s = re.sub(r'(\\chapter\*\{[^{}]*\}(?:\s*\\label\{[^{}]*\})?)\s*\\addcontentsline\{toc\}\{chapter\}\{[^{}]*\}',
+               r'\1', s)
+    # \addcontentsline{toc}{..}{List of figures}\listoffigures: TeXmacs's
+    # list of figures is a section of its own, drop the line
+    s = re.sub(r'\\addcontentsline\{toc\}\{(?:chapter|(?:sub)*section)\}\{[^{}]*\}(\s*\\listof(?:figures|tables)\b)',
                r'\1', s)
     m = re.search(r'\\addcontentsline\{[^\n]*', s)
     if m:
@@ -660,7 +673,8 @@ def book_matter(s):
         if mode in ('front', 'back'):
             part = re.sub(r'\\chapter(?![A-Za-z*])', r'\\chapter*', part)
         if mode == 'front':
-            front += len(re.findall(r'\\chapter(?![A-Za-z])', part))
+            # (a list of figures or tables is a chapter heading of its own)
+            front += len(re.findall(r'\\chapter(?![A-Za-z])|\\listof(?:figures|tables)\b', part))
         out.append(part)
         if kind != 'end':
             mode = {'frontmatter': 'front', 'mainmatter': 'main', 'backmatter': 'back'}[kind]
@@ -851,7 +865,9 @@ def chapters(s, bib, skip=0):
     body = s[s.find(r'\begin{document}'):]
     out, n = [], 0
     top = 'chapter' if CHAPTERS else 'section'
-    heads = list(re.finditer(r'\\' + top + r'(\*?)\s*\{|\\tmsetcounter\{' + top + r'\}\{(\d+)\}', body))
+    # (in a book, a list of figures or tables is a front-matter chapter heading)
+    lists = r'|\\listof(?:figures|tables)\b' if CHAPTERS else ''
+    heads = list(re.finditer(r'\\' + top + r'(\*?)\s*\{|\\tmsetcounter\{' + top + r'\}\{(\d+)\}' + lists, body))
     seen = 0
     for m in heads:
         if m.group(2) is not None:         # \setcounter{chapter}{N}
@@ -860,6 +876,8 @@ def chapters(s, bib, skip=0):
         seen += 1
         if seen <= skip:                   # front matter: on the contents page
             continue
+        if m.group(0).startswith('\\listof'):
+            raise SystemExit('tex_prep: a list of figures or tables outside the front matter')
         title = latex_text(body[m.end():balanced(body, m.end() - 1) - 1])
         if m.group(1):
             name = slug(title)
@@ -927,6 +945,7 @@ def main():
     s = list_labels(s)
     s = paragraph_labels(s)
     s = contents_lines(s)
+    s = short_captions(s)
     s = bibliography_group(s)
     s = groups(s)
     s = longtables(s)

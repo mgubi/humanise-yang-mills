@@ -147,6 +147,36 @@ def contents():
     return ''.join(out)
 
 
+def figure_lists(part):
+    """a list of figures or tables on the contents page: each entry (the
+    caption, then the page number of the typeset document) becomes "Figure
+    N." linked to the figure, then the caption"""
+    text_of = dict(zip(files, pieces))
+
+    def entry(m):
+        body, ref = m.group(1), m.group(2)
+        page = where.get(html.unescape(ref))
+        src = text_of.get(page, '')
+        at = src.find(f'id="{ref}"')
+        at = src.rfind('<', 0, at) if at >= 0 else at     # the start of the <a> tag
+        # the caption starts with <b>Figure N. </b> just before the anchor
+        n = re.search(r'(Figure|Table)\s*([0-9][0-9.]*[0-9]|[0-9])\.?\s*</b>\s*(?:<a [^>]*></a>\s*)*$', src[max(at - 300, 0):at]) if at >= 0 else None
+        if not n:
+            fail(f'list of figures: no number for the entry linked to #{ref}')
+        return f'<p><a href="#{ref}">{n.group(1)} {n.group(2)}.</a> {body.strip()}</p>'
+    def section(m):
+        return m.group(1) + re.sub(
+            r'<p>((?:(?!</p>).)*?)<span\s+style="margin-left: 5mm"></span>\s*<a\s+href="#([^"]*)">[0-9ivxlcdm]+</a>\s*</p>',
+            entry, m.group(2), flags=re.S)
+    # only inside the sections headed "List of figures" / "List of tables"
+    out = re.sub(r'(<h[12][^>]*>List of (?:figures|tables)\b.*?</h[12]>)(.*?)(?=<h[12][\s>]|<div class="ym-|\Z)',
+                  section, part, flags=re.S)
+    for m in re.finditer(r'<h[12][^>]*>List of (?:figures|tables)\b.*?</h[12]>(.*?)(?=<h[12][\s>]|<div class="ym-|\Z)', out, re.S):
+        if re.search(r'margin-left: 5mm', m.group(1)):
+            fail('list of figures: an entry with a page number was not rewritten')
+    return out
+
+
 title = re.search(r'<title>(.*?)</title>', head, re.S)
 os.makedirs(stem, exist_ok=True)
 for f in os.listdir(stem):
@@ -164,6 +194,7 @@ for i, (c, p, name) in enumerate(zip(chapters, pieces, files)):
     page_html = (h + relink(top, name) + bar + relink(toc_html, name) + relink(p, name) + bar + tail)
     open(os.path.join(os.path.dirname(stem), name), 'w', encoding='utf-8', errors='surrogateescape').write(page_html)
     sizes.append((len(page_html.encode(errors='surrogateescape')), name))
+front = figure_lists(front)
 front = front.replace(toc_html, contents())
 main = head + relink(front, base + '.html') + tail
 open(PAGE, 'w', encoding='utf-8', errors='surrogateescape').write(main)

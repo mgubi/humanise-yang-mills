@@ -23,6 +23,18 @@
   as a claim that v2 reviews certify v3. Original notices and separate source
   licenses remain applicable.
 
+  The illustrations were drawn for this synthesis. The diagrams of
+  transported curvatures, framed block paths, exact covers, cutoff histories,
+  ordered limits, Ward shells and cluster exchange develop examples from
+  Scott's and Trish's figures (<verbatim|fig:A-transported>,
+  <verbatim|fig:B-predictor>, <verbatim|fig:covers>,
+  <verbatim|fig:two-cutoffs>, <verbatim|fig:two-limits>,
+  <verbatim|fig:G-shell> and <verbatim|fig:H-exchange>). Trish's
+  <verbatim|fig:rg-block-step> and <verbatim|fig:rg-cutoff-comparison> also
+  informed the blocking and cutoff diagrams. The chessboard, Fourier alias,
+  radius window and pair projection figures illustrate the corresponding
+  constructions directly in the notation of this manuscript.
+
   The paragraph "The dilation current at short separation" after Theorem
   <verbatim|ch17:all-radii> restores, in v3 notation, the remark
   <verbatim|rem:trace-dilation-current> written by Stephanie Alexander for
