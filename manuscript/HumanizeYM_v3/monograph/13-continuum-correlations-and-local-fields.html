@@ -126,6 +126,18 @@
       <p>
         
       </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
     </div>
 <div class="ym-nav">
       <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
@@ -669,7 +681,7 @@
       </p>
       <p>
         11.3<span style="margin-left: 1em"></span>Support bounds for several marked components
-        <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-139">181</a>
+        <span style="margin-left: 5mm"></span> <a href="11-marked-insertions-and-finite-scale-comparison.html#auto-139">182</a>
       </p>
       <p>
         11.4<span style="margin-left: 1em"></span>One marked step with the actual local factors
@@ -837,7 +849,7 @@
       </p>
       <p>
         13.10<span style="margin-left: 1em"></span>Local replacement of a cluster on the lattice
-        <span style="margin-left: 5mm"></span> <a href="#auto-182">244</a>
+        <span style="margin-left: 5mm"></span> <a href="#auto-182">245</a>
       </p>
       <p>
         13.10.1<span style="margin-left: 1em"></span>Signed local transport <span style="margin-left: 5mm"></span>
@@ -845,11 +857,11 @@
       </p>
       <p>
         13.10.2<span style="margin-left: 1em"></span>Grouping marks and retaining their supports
-        <span style="margin-left: 5mm"></span> <a href="#auto-184">245</a>
+        <span style="margin-left: 5mm"></span> <a href="#auto-184">246</a>
       </p>
       <p>
         13.10.3<span style="margin-left: 1em"></span>Extraction with a freely chosen residual
-        weight <span style="margin-left: 5mm"></span> <a href="#auto-185">246</a>
+        weight <span style="margin-left: 5mm"></span> <a href="#auto-185">247</a>
       </p>
       <p>
         13.10.4<span style="margin-left: 1em"></span>A mixed-correlation consequence without
@@ -1021,7 +1033,7 @@
       </p>
       <p>
         17.4.6<span style="margin-left: 1em"></span>Power counting the regulator remainder <span
-        style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-231">295</a>
+        style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-231">296</a>
       </p>
       <p>
         17.4.7<span style="margin-left: 1em"></span>The corrected coefficient and order of
@@ -2134,10 +2146,13 @@ a_m^{- d - \epsilon}, \qquad \|c\|
       involving at least two insertions are at most one.
     </p>
     <p>
-      Let \(\mathcal{I}\) index the cells of the reflected tiling and let \(-
-      U_v\) denote the terminal insertion used for cell \(v\). In the product
-      above the coefficient of \(\prod_{v \in \mathcal{I}} z_v\) at level
-      \(h\) is
+      Let \(\textsf{P}_{h, N}\) push densities from level \(N\) to level \(h\)
+      by successive applications of <class style="font-style: normal">(<a href="4-exact-blocking-and-effective-densities.html#ch04:block-operator">4.9</a>)</class>
+      along the chosen history. Its adjoint \(\mathcal{P}_{N, h}\) pulls
+      observables back from \(h\) to \(N\). Let \(\mathcal{I}\) index the
+      cells of the reflected tiling and let \(- U_v\) denote the terminal
+      insertion used for cell \(v\). In the product above the coefficient of
+      \(\prod_{v \in \mathcal{I}} z_v\) at level \(h\) is
     </p>
     <center>
       \(\displaystyle \sum_{A \subseteq \mathcal{I}} \textsf{P}_{h, N} \left(
@@ -2206,16 +2221,19 @@ P_d^{\text{loc}} [S_{1 /
       variables.
     </p>
     <p>
-      Let \(\mathcal{K}_{N, h} (U, dV)\) be the forward probability kernel
-      from fine links to level \(h\), and set \(\mathcal{P}_{N, h} F (U) =
-      \int F (V) \mathcal{K}_{N, h} (U, dV)\). It preserves real values and
-      contracts the supremum norm. Locality here must include every random
-      variable used to choose a gauge-covariant block average or gauge frame.
-      Conditional on the preceding link field, use independent primitive
-      random variables for those choices and for each coarse-link sample. The
-      full ancestor cone of a stencil contains its fine-link reads and all
-      these random variables at every intermediate level. For disjoint cones,
-      conditioning and integrating the independent variables gives
+      Let \(\mathcal{K}_{N, h} (U, dV)\) be the composition of the one-step
+      probability kernels \(k^{(L_i)}_{\beta}  (U, V)  \hspace{0.17em} dV\) of
+      <class style="font-style: normal">(<a href="4-exact-blocking-and-effective-densities.html#ch04:kernel">4.8</a>)</class>, in order from \(i = N - 1\)
+      down to \(h\) and with the coupling of each step, and set
+      \(\mathcal{P}_{N, h} F (U) = \int F (V) \mathcal{K}_{N, h} (U, dV)\). It
+      preserves real values and contracts the supremum norm. Locality here
+      must include every random variable used to choose a gauge-covariant
+      block average or gauge frame. Conditional on the preceding link field,
+      use independent primitive random variables for those choices and for
+      each coarse-link sample. The full ancestor cone of a stencil contains
+      its fine-link reads and all these random variables at every intermediate
+      level. For disjoint cones, conditioning and integrating the independent
+      variables gives
     </p>
     <table width="100%">
       <tr>
@@ -2537,11 +2555,13 @@ a_m^{- (t - i)}
       Extracting the polynomial part of a local degree-\(t\) marked density
       gives a coefficient vector \(x_l\). Write \(r_l\) for the norm of the
       remaining density, whose extracted polynomial part vanishes. The
-      dimensionless density obeys \(H_l = L_l^t \mathcal{B}_l H_{l + 1}\); the
-      physical source density has no additional factor. These conventions are
-      those of Section <a href="11-marked-insertions-and-finite-scale-comparison.html#ch11:one-graph">11.4.1</a>. Keep the full prescribed
-      large-field set and its normalization by the square root of the
-      large-field bound in this remainder norm.
+      dimensionless density obeys \(H_l = L_l^t \mathcal{B}^{(L_l)}_{\beta}
+      H_{l + 1}\), with \(\beta\) the inverse coupling used for the step \(l +
+      1 \to l\) in <class style="font-style: normal">(<a href="4-exact-blocking-and-effective-densities.html#ch04:block-operator">4.9</a>)</class>. The physical
+      source density has no additional factor. These conventions are those of
+      Section <a href="11-marked-insertions-and-finite-scale-comparison.html#ch11:one-graph">11.4.1</a>. Keep the full prescribed large-field set
+      and its normalization by the square root of the large-field bound in
+      this remainder norm.
     </p>
     <p>
       The local-trial argument of Section <a href="11-marked-insertions-and-finite-scale-comparison.html#ch11:trial-descent">11.8</a> applies on any

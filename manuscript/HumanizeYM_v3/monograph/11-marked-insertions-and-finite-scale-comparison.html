@@ -126,6 +126,18 @@
       <p>
         
       </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
+      <p>
+        
+      </p>
     </div>
 <div class="ym-nav">
       <a href="../../../index.html">Home</a><font class="ym-sep">&middot;</font><a href="../../../blueprint/public-statement.html">The
@@ -669,7 +681,7 @@
       </p>
       <p>
         11.3<span style="margin-left: 1em"></span>Support bounds for several marked components
-        <span style="margin-left: 5mm"></span> <a href="#auto-139">181</a>
+        <span style="margin-left: 5mm"></span> <a href="#auto-139">182</a>
       </p>
       <p>
         11.4<span style="margin-left: 1em"></span>One marked step with the actual local factors
@@ -837,7 +849,7 @@
       </p>
       <p>
         13.10<span style="margin-left: 1em"></span>Local replacement of a cluster on the lattice
-        <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-182">244</a>
+        <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-182">245</a>
       </p>
       <p>
         13.10.1<span style="margin-left: 1em"></span>Signed local transport <span style="margin-left: 5mm"></span>
@@ -845,11 +857,11 @@
       </p>
       <p>
         13.10.2<span style="margin-left: 1em"></span>Grouping marks and retaining their supports
-        <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-184">245</a>
+        <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-184">246</a>
       </p>
       <p>
         13.10.3<span style="margin-left: 1em"></span>Extraction with a freely chosen residual
-        weight <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-185">246</a>
+        weight <span style="margin-left: 5mm"></span> <a href="13-continuum-correlations-and-local-fields.html#auto-185">247</a>
       </p>
       <p>
         13.10.4<span style="margin-left: 1em"></span>A mixed-correlation consequence without
@@ -1021,7 +1033,7 @@
       </p>
       <p>
         17.4.6<span style="margin-left: 1em"></span>Power counting the regulator remainder <span
-        style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-231">295</a>
+        style="margin-left: 5mm"></span> <a href="17-the-trace-law-and-its-consequences.html#auto-231">296</a>
       </p>
       <p>
         17.4.7<span style="margin-left: 1em"></span>The corrected coefficient and order of
@@ -1223,25 +1235,28 @@
       <tr>
         <td align="center" width="100%"><a id="ch11:source-density"></a>\(\displaystyle q_N  (z, U) = \rho_N (U) 
         \prod_{i \in \mathcal{I}} (1 + z_i F_i (U)), \qquad
-q_m =\mathcal{B}_m
-        q_{m + 1} . \)</td>
+q_m
+        =\mathcal{B}^{(L_m)}_{\beta} q_{m + 1} . \)</td>
         <td align="right">(11.2)</td>
       </tr>
     </table>
     <p>
-      The block map acts coefficientwise. Consequently \(Z_N^{- 1}  \int [z_S]
-      q_m  \hspace{0.17em} d \lambda_m\) is the original cutoff moment of the
+      Here \(\beta\) is the inverse coupling used for the step \(m + 1 \to m\)
+      on the chosen history. The block map of <class style="font-style: normal">(<a href="4-exact-blocking-and-effective-densities.html#ch04:block-operator">4.9</a>)</class>
+      acts coefficientwise. Consequently \(Z_N^{- 1}  \int [z_S] q_m 
+      \hspace{0.17em} d \lambda_m\) is the original cutoff moment of the
       insertions indexed by \(S\).
     </p>
     <p>
       If one instead uses the dimensionless one-insertion density of degree
-      \(d\), its recursion is \(H_m = L_m^d \mathcal{B}_m H_{m + 1}\). The
-      scalar rescaling belongs to this convention; it is absent from <class
-      style="font-style: normal">(<a href="#ch11:source-density">11.2</a>)</class>, where the physical normalization is
-      already in \(F_i\). Mixing these two conventions changes the unit
-      insertion. In particular the reference-level coefficient of the physical
-      unit in a degree-\(d\) convention is \(a_{r (d)}^d e_0\), not the
-      coefficient obtained from the individual scaling dimension of \(e_0\).
+      \(d\), its recursion is \(H_m = L_m^d \mathcal{B}^{(L_m)}_{\beta} H_{m +
+      1}\). The scalar rescaling belongs to this convention; it is absent from
+      <class style="font-style: normal">(<a href="#ch11:source-density">11.2</a>)</class>, where the physical
+      normalization is already in \(F_i\). Mixing these two conventions
+      changes the unit insertion. In particular the reference-level
+      coefficient of the physical unit in a degree-\(d\) convention is \(a_{r
+      (d)}^d e_0\), not the coefficient obtained from the individual scaling
+      dimension of \(e_0\).
     </p>
     <div class="theorem">
       <p style="margin-top: 1em; margin-bottom: 1em">
@@ -2362,9 +2377,9 @@ e^{- E} .\)
       <i><table width="100%">
         <tr>
           <td align="center" width="100%"><a id="ch11:restart-density"></a>\(\displaystyle D_k = \rho_{N, p, k},
-          \qquad D_i =\mathcal{B}_{i, \beta} D_{i + 1} =
-\text{density} (P_i),
-          \qquad \int D_i = Z_{N, p} . \)</td>
+          \qquad D_i =\mathcal{B}^{(L_i)}_{\beta} D_{i + 1} =
+\text{density}
+          (P_i), \qquad \int D_i = Z_{N, p} . \)</td>
           <td align="right">(11.15)</td>
         </tr>
       </table></i>
@@ -2526,7 +2541,7 @@ B_i^{\text{ref}} - A_i)}\); \(B_i^{\text{ref}}\) here is the
       left outside the regular family. Averaging the regular pieces over the
       finite signed motion group retains their anchored bound and invariant
       sum. The exact factorization and reassembly thus give \(D_i
-      =\mathcal{B}_{i, \beta} D_{i + 1}\) on every coarse configuration,
+      =\mathcal{B}^{(L_i)}_{\beta} D_{i + 1}\) on every coarse configuration,
       including configurations with failed cutoff conditions. There is no
       division by a large-field activity, which can vanish.
     </p>
