@@ -88,8 +88,13 @@
           <strong>Gauge normalization (3 pages).</strong> Fix a faithful
           realization of a closed group <tt class="verbatim">G &sub; U(n_G)</tt> with
           simple nonabelian real Lie algebra; connectedness is not required.
-          Use the inner product <tt class="verbatim">&minus;Re tr(XY)/n_G</tt>, define
-          <tt class="verbatim">d_g</tt>, <tt class="verbatim">C_g</tt>, <tt class="verbatim">b_0</tt>, <tt
+          Define \(\lVert A \rVert_G^2 = n_G^{- 1}  \sum_{i, j} \lvert A_{ij}
+          \rvert^2\) for any complex matrix of size \(n_G\). Explain that each
+          unitary matrix has norm one and that left and right unitary
+          multiplication preserve the norm, so the distance between two group
+          elements is \(\lVert u - v \rVert_G\). On the Lie algebra use the
+          inner product <tt class="verbatim">&minus;Re tr(XY)/n_G</tt> and define <tt
+          class="verbatim">d_g</tt>, <tt class="verbatim">C_g</tt>, <tt class="verbatim">b_0</tt>, <tt
           class="verbatim">&kappa;_G=2b_0</tt>. State the standard invariant-form fact
           with a reference rather than a proof of Lie theory. Work out SU(n):
           <tt class="verbatim">C_g=2n&sup2;</tt>, <tt class="verbatim">&kappa;_G=11n&sup2;/(12&pi;&sup2;)</tt>.
@@ -103,9 +108,12 @@
           <strong>Links, plaquettes and the Wilson law (4 pages).</strong>
           Define positive and reversed links, ordered path holonomy, site
           gauge action, plaquette orientation and probability Haar product.
-          Define <tt class="verbatim">w(U)=1&minus;Re tr(U)/n_G</tt>, <tt class="verbatim">&chi;(U)=||U&minus;1||_F/&radic;n_G</tt>,
-          <tt class="verbatim">&chi;&sup2;=2w</tt>, <tt class="verbatim">E_s^W</tt>, <tt class="verbatim">Z_{s,&beta;}</tt>,
-          <tt class="verbatim">&mu;_{s,&beta;}</tt>. Compactness gives existence for
+          Express the energy of a plaquette as \(\tfrac{1}{2} \lVert
+          U_{\square} - 1 \rVert_G^2 = 1 - n_G^{- 1}
+          \text{Retr}
+U_{\square}\). Sum over unoriented plaquettes to define
+          <tt class="verbatim">E_s^W</tt>, then introduce <tt class="verbatim">Z_{s,&beta;}</tt>
+          and <tt class="verbatim">&mu;_{s,&beta;}</tt>. Compactness gives existence for
           every real &beta;, while the positivity statements require
           &beta;&#x2A7E;0. Give the one-line endpoint transformation of a path
           and its consequence for closed loops; do not expand four cancelling
@@ -319,10 +327,12 @@
           Explain mixing with lower-weight labels, with F&sup2; able to
           acquire an additive constant. Introduce raw insertions <tt class="verbatim">P_d^loc[c](y;U)</tt>;
           reserve the name 'renormalized insertion' until the terminal map
-          exists in the observable-transfer chapter. Give the clover example
-          and its coefficient &frac14; over the 24 corner plaquettes. Explain
-          that a fixed physical Wilson loop has a stencil growing with the
-          cutoff and lies outside the theorem. Describe the two later
+          exists in the observable-transfer chapter. Give the clover average
+          \(\tfrac{1}{8} \sum_{\square \ni y} \lVert U_{\square} - 1
+          \rVert_G^2\). The four plaquettes in each of the six coordinate
+          planes give the leading coefficient \(\tfrac{1}{2}\) per plane.
+          Explain that a fixed physical Wilson loop has a stencil growing with
+          the cutoff and lies outside the theorem. Describe the two later
           obligations in words: invertible finite-dimensional normalization at
           a reference scale, and volume-uniform estimates. Defer exact
           equations of motion and null-ideal identification to the

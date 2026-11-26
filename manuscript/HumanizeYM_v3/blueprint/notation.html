@@ -228,6 +228,12 @@
         <td style="border-right: 1px solid; border-bottom: 1px solid">Ch. 1; <tt class="verbatim">part1/02-definitions.tex</tt>,
         def:D01</td>
       </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">\(\lVert A \rVert_G\)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Normalized matrix norm, \(\lVert A \rVert_G^2 = n_G^{- 1} 
+        \sum_{i, j} \lvert A_{ij} \rvert^2\). All unitary matrices have norm
+        one.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Ch. 1, <tt class="verbatim">ch01:matrix-norm</tt></td>
+      </tr><tr>
         <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid"><tt class="verbatim">&lt;X,Y&gt;_g</tt></td>
         <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">&minus;Re tr(XY)/n_G</tt> on g</td>
         <td style="border-right: 1px solid; border-bottom: 1px solid">same</td>
@@ -267,10 +273,13 @@
         transport</td>
         <td style="border-right: 1px solid; border-bottom: 1px solid">Ch. 1; def:D02</td>
       </tr><tr>
-        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">w(u), &chi;(u)</td>
-        <td style="border-right: 1px solid; border-bottom: 1px solid"><tt class="verbatim">1&minus;Re tr(u)/n_G</tt>, normalized
-        Hilbert&ndash;Schmidt distance from the identity</td>
-        <td style="border-right: 1px solid; border-bottom: 1px solid">Ch. 1; eq:I12-price-chord; Scott pr/ch renamed</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">\(\lVert u - v \rVert_G\)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Distance between group elements, invariant under left and
+        right translations. A plaquette of holonomy \(u\) has Wilson energy
+        \(\tfrac{1}{2} \lVert u - 1 \rVert_G^2 = 1 - n_G^{- 1} \text{Retr}
+        u\).</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Ch. 1, <tt class="verbatim">ch01:matrix-norm</tt> and <tt class="verbatim">ch01:wilson-energy</tt>;
+        source <tt class="verbatim">eq:I12-price-chord</tt></td>
       </tr><tr>
         <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">E_s^W, Z_{s,&beta;}, &mu;_{s,&beta;}</td>
         <td style="border-right: 1px solid; border-bottom: 1px solid">Wilson energy, partition function, law</td>
@@ -473,8 +482,8 @@
         <td style="border-right: 1px solid; border-bottom: 1px solid">eq:I12-tag-mass</td>
       </tr><tr>
         <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">q_&gamma;(u)</td>
-        <td style="border-right: 1px solid; border-bottom: 1px solid">Haar-normalized density proportional to
-        exp[&minus;&gamma;w(u)]</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Haar-normalized density proportional to \(\exp [-
+        \tfrac{\gamma}{2} \lVert u - 1 \rVert_G^2]\)</td>
         <td style="border-right: 1px solid; border-bottom: 1px solid">def:D04</td>
       </tr><tr>
         <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">k^{(m)}_&beta;, B^{(m)}_&beta;</td>
@@ -483,7 +492,8 @@
         <td style="border-right: 1px solid; border-bottom: 1px solid">def:D04</td>
       </tr><tr>
         <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">Bad_m(U)</td>
-        <td style="border-right: 1px solid; border-bottom: 1px solid">Sites incident to a plaquette with &chi;&gt;t_m</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Sites incident to a plaquette with \(\lVert U_{\square} - 1
+        \rVert_G > t_m\)</td>
         <td style="border-right: 1px solid; border-bottom: 1px solid">sec:density; Scott Flag</td>
       </tr><tr>
         <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">E_i^reg, K_i^lf</td>
@@ -602,6 +612,12 @@
         <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">M_d^Max, S^Max, &Gamma;</td>
         <td style="border-right: 1px solid; border-bottom: 1px solid">Free Maxwell quotient fields, correlations, covariance</td>
         <td style="border-right: 1px solid; border-bottom: 1px solid">def:D11</td>
+      </tr><tr>
+        <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">\(\mathcal{S}_j, \langle P, Q \rangle_j\)</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Homogeneous degree-\(j\) Maxwell solution jets. Sum the Lie
+        algebra inner products of corresponding coefficients over all ordered
+        indices, including both orders of the antisymmetric index pair.</td>
+        <td style="border-right: 1px solid; border-bottom: 1px solid">Ch. 3, <tt class="verbatim">ch03:shell</tt> and <tt class="verbatim">ch03:strict</tt></td>
       </tr><tr>
         <td style="border-right: 1px solid; border-bottom: 1px solid; border-left: 1px solid">mathscr U_{k,d}, r_k</td>
         <td style="border-right: 1px solid; border-bottom: 1px solid">Short-distance comparison maps and scale sequence</td>
