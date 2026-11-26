@@ -272,7 +272,10 @@ top-level headings:
   figure on its chapter page) followed by the caption, without the page
   numbers of the typeset document. In a book, figures and tables are
   numbered within chapters, as in LaTeX; `\caption[short]{long}` keeps the
-  long caption, also in the list.
+  long caption, also in the list. Author comments in the margin
+  (`\margincomment[colour]{text}`, `margincomment.sty`, and the macros built
+  on it such as `\martin`) appear inline, in their colour and in brackets:
+  the HTML export drops TeXmacs marginal notes.
 - `manuscript/existence.html` (the URL of the document) is the contents page:
   navigation bar, title, front matter and the table of contents (sections
   and subsections, as `tocdepth` 2), whose entries link to the chapter pages;

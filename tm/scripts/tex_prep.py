@@ -467,6 +467,24 @@ def short_captions(s):
     return re.sub(r'\\caption\[[^\[\]{}]*(?:\{[^{}]*\}[^\[\]{}]*)*\]\{', r'\\caption{', s)
 
 
+def margin_comments(s):
+    """\\margincomment[colour]{text} (the manuscript's margincomment.sty, a
+    coloured box in the margin; the importer does not read local packages)
+    -> \\textcolor{colour}{[text]}, inline: the HTML export drops TeXmacs
+    marginal notes without a word"""
+    out, i = [], 0
+    pat = re.compile(r'\\margincomment(?![A-Za-z])\s*(?:\[([^\[\]{}]*)\])?\s*\{')
+    while True:
+        m = pat.search(s, i)
+        if not m:
+            out.append(s[i:])
+            return ''.join(out)
+        j = balanced(s, m.end() - 1)
+        out.append(s[i:m.start()])
+        out.append('\\textcolor{%s}{[%s]}' % (m.group(1) or 'darkred', s[m.end():j - 1]))
+        i = j
+
+
 def contents_lines(s):
     r"""\section*{X}\addcontentsline{toc}{section}{X}: TeXmacs adds unnumbered
     sections to the table of contents by itself, drop the line; any other
@@ -946,6 +964,7 @@ def main():
     s = paragraph_labels(s)
     s = contents_lines(s)
     s = short_captions(s)
+    s = margin_comments(s)
     s = bibliography_group(s)
     s = groups(s)
     s = longtables(s)
