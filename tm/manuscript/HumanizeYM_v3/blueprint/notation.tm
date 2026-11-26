@@ -151,7 +151,10 @@
   <block|<tformat|<twith|table-width|1par>|<twith|table-hmode|exact>|<cwith|1|-1|1|-1|cell-hyphen|t>|<cwith|1|1|1|-1|cell-bborder|1ln>|<cwith|1|1|1|-1|cell-valign|bottom>|<table|<row|<cell|<strong|Symbol>>|<cell|<strong|Definition/type>>|<cell|<strong|First
   definition; source>>>|<row|<cell|G, n_G, g>|<cell|Fixed closed subgroup of
   U(n_G), matrix dimension, real Lie algebra>|<cell|Ch. 1;
-  <verbatim|part1/02-definitions.tex>, def:D01>>|<row|<cell|<verbatim|\<less\>X,Y\<gtr\>_g>>|<cell|<verbatim|\<minus\>Re
+  <verbatim|part1/02-definitions.tex>, def:D01>>|<row|<cell|<math|<around|\<lVert\>|A|\<rVert\>><rsub|G>>>|<cell|Normalized
+  matrix norm, <math|<around|\<lVert\>|A|\<rVert\>><rsub|G><rsup|2>=n<rsub|G><rsup|-1>*<big|sum><rsub|i,j><around|\<lvert\>|A<rsub|i*j>|\<rvert\>><rsup|2>>.
+  All unitary matrices have norm one.>|<cell|Ch. 1,
+  <verbatim|ch01:matrix-norm>>>|<row|<cell|<verbatim|\<less\>X,Y\<gtr\>_g>>|<cell|<verbatim|\<minus\>Re
   tr(XY)/n_G> on g>|<cell|same>>|<row|<cell|d_g, C_g>|<cell|<verbatim|dim_R
   g>; adjoint Casimir in that metric>|<cell|same; C_g=2n\<twosuperior\> for
   defining SU(n)>>|<row|<cell|b\<#2080\>,
@@ -167,10 +170,12 @@
   eq:I12-physical-placement>>|<row|<cell|dist_s(x,y)>|<cell|Periodic sup
   distance in lattice units>|<cell|Ch. 1; Outline I.1.1>>|<row|<cell|U_e,
   U_{y;\<mu\>\<nu\>}, U_\<gamma\>>|<cell|Link variable, plaquette product,
-  ordered path transport>|<cell|Ch. 1; def:D02>>|<row|<cell|w(u),
-  \<chi\>(u)>|<cell|<verbatim|1\<minus\>Re tr(u)/n_G>, normalized
-  Hilbert\USchmidt distance from the identity>|<cell|Ch. 1;
-  eq:I12-price-chord; Scott pr/ch renamed>>|<row|<cell|E_s^W, Z_{s,\<beta\>},
+  ordered path transport>|<cell|Ch. 1; def:D02>>|<row|<cell|<math|<around|\<lVert\>|u-v|\<rVert\>><rsub|G>>>|<cell|Distance
+  between group elements, invariant under left and right translations. A
+  plaquette of holonomy <math|u> has Wilson energy
+  <math|<tfrac|1|2><around|\<lVert\>|u-1|\<rVert\>><rsub|G><rsup|2>=1-n<rsub|G><rsup|-1><math-up|Retr>u>.>|<cell|Ch.
+  1, <verbatim|ch01:matrix-norm> and <verbatim|ch01:wilson-energy>; source
+  <verbatim|eq:I12-price-chord>>>|<row|<cell|E_s^W, Z_{s,\<beta\>},
   \<mu\>_{s,\<beta\>}>|<cell|Wilson energy, partition function,
   law>|<cell|Ch. 1; def:D02>>|<row|<cell|D_m, a_m,
   \<tau\>_m>|<cell|Cumulative denominator, D_m\<#207B\>\<onesuperior\>, log
@@ -263,12 +268,12 @@
   eq:I12-predictor>>|<row|<cell|\<alpha\>_tag,
   \<lambda\>^tag(U,\<alpha\>_tag)>|<cell|Auxiliary discrete branch choice and
   probability>|<cell|eq:I12-tag-mass>>|<row|<cell|q_\<gamma\>(u)>|<cell|Haar-normalized
-  density proportional to exp[\<minus\>\<gamma\>w(u)]>|<cell|def:D04>>|<row|<cell|k^{(m)}_\<beta\>,
+  density proportional to <math|exp <around|[|-<tfrac|\<gamma\>|2><around|\<lVert\>|u-1|\<rVert\>><rsub|G><rsup|2>|]>>>|<cell|def:D04>>|<row|<cell|k^{(m)}_\<beta\>,
   B^{(m)}_\<beta\>>|<cell|Normalized block kernel, exact density integration
   map m+1\<rightarrow\>m>|<cell|def:D04>>|<row|<cell|Bad_m(U)>|<cell|Sites
-  incident to a plaquette with \<chi\>\<gtr\>t_m>|<cell|sec:density; Scott
-  Flag>>|<row|<cell|E_i^reg, K_i^lf>|<cell|Small-field local correction;
-  large-field polymer activity>|<cell|eq:I12-forced-eligibility>>|<row|<cell|I_i^bad>|<cell|Exactly
+  incident to a plaquette with <math|<around|\<lVert\>|U<rsub|\<square\>>-1|\<rVert\>><rsub|G>\<gtr\>t<rsub|m>>>|<cell|sec:density;
+  Scott Flag>>|<row|<cell|E_i^reg, K_i^lf>|<cell|Small-field local
+  correction; large-field polymer activity>|<cell|eq:I12-forced-eligibility>>|<row|<cell|I_i^bad>|<cell|Exactly
   prescribed nonempty set Bad_m(U)\<cap\>Y_i>|<cell|same; not a field
   insertion>>|<row|<cell|mathfrak F_m(U)>|<cell|Disjoint polymer families
   exactly covering Bad_m(U)>|<cell|def:D06>>|<row|<cell|\<rho\>, v_sc,
@@ -319,7 +324,11 @@
   inclusion>>|<row|<cell|1_d, F_tag>|<cell|Class [u_d]; disjoint union of
   degree-tagged quotient spaces>|<cell|sec:field-spaces>>|<row|<cell|M_d^Max,
   S^Max, \<Gamma\>>|<cell|Free Maxwell quotient fields, correlations,
-  covariance>|<cell|def:D11>>|<row|<cell|mathscr U_{k,d},
+  covariance>|<cell|def:D11>>|<row|<cell|<math|\<cal-S\><rsub|j>,<around|\<langle\>|P,Q|\<rangle\>><rsub|j>>>|<cell|Homogeneous
+  degree-<math|j> Maxwell solution jets. Sum the Lie algebra inner products
+  of corresponding coefficients over all ordered indices, including both
+  orders of the antisymmetric index pair.>|<cell|Ch. 3, <verbatim|ch03:shell>
+  and <verbatim|ch03:strict>>>|<row|<cell|mathscr U_{k,d},
   r_k>|<cell|Short-distance comparison maps and scale
   sequence>|<cell|def:D12>>|<row|<cell|T^Max_{\<mu\>\<nu\>},
   T_{\<mu\>\<nu\>}>|<cell|Free Maxwell stress tensor; Ward-normalized

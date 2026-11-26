@@ -38,23 +38,27 @@
   <\enumerate>
     <item><strong|Gauge normalization (3 pages).> Fix a faithful realization
     of a closed group <verbatim|G \<subset\> U(n_G)> with simple nonabelian
-    real Lie algebra; connectedness is not required. Use the inner product
-    <verbatim|\<minus\>Re tr(XY)/n_G>, define <verbatim|d_g>, <verbatim|C_g>,
-    <verbatim|b_0>, <verbatim|\<kappa\>_G=2b_0>. State the standard
-    invariant-form fact with a reference rather than a proof of Lie theory.
-    Work out SU(n): <verbatim|C_g=2n\<twosuperior\>>,
-    <verbatim|\<kappa\>_G=11n\<twosuperior\>/(12\<pi\>\<twosuperior\>)>.
+    real Lie algebra; connectedness is not required. Define
+    <math|<around|\<lVert\>|A|\<rVert\>><rsub|G><rsup|2>=n<rsub|G><rsup|-1>*<big|sum><rsub|i,j><around|\<lvert\>|A<rsub|i*j>|\<rvert\>><rsup|2>>
+    for any complex matrix of size <math|n<rsub|G>>. Explain that each
+    unitary matrix has norm one and that left and right unitary
+    multiplication preserve the norm, so the distance between two group
+    elements is <math|<around|\<lVert\>|u-v|\<rVert\>><rsub|G>>. On the Lie
+    algebra use the inner product <verbatim|\<minus\>Re tr(XY)/n_G> and
+    define <verbatim|d_g>, <verbatim|C_g>, <verbatim|b_0>,
+    <verbatim|\<kappa\>_G=2b_0>. State the standard invariant-form fact with
+    a reference rather than a proof of Lie theory. Work out SU(n):
+    <verbatim|C_g=2n\<twosuperior\>>, <verbatim|\<kappa\>_G=11n\<twosuperior\>/(12\<pi\>\<twosuperior\>)>.
     Explain that <verbatim|\<beta\>=2n/g\<twosuperior\>> in conventional
     SU(n) Wilson normalization; do not silently identify \<beta\> with
     g\<#207B\>\<twosuperior\>.
 
     <item><strong|Links, plaquettes and the Wilson law (4 pages).> Define
     positive and reversed links, ordered path holonomy, site gauge action,
-    plaquette orientation and probability Haar product. Define
-    <verbatim|w(U)=1\<minus\>Re tr(U)/n_G>,
-    <verbatim|\<chi\>(U)=\|\|U\<minus\>1\|\|_F/\<sqrt\>n_G>,
-    <verbatim|\<chi\>\<twosuperior\>=2w>, <verbatim|E_s^W>,
-    <verbatim|Z_{s,\<beta\>}>, <verbatim|\<mu\>_{s,\<beta\>}>. Compactness
+    plaquette orientation and probability Haar product. Express the energy of
+    a plaquette as <math|<tfrac|1|2><around|\<lVert\>|U<rsub|\<square\>>-1|\<rVert\>><rsub|G><rsup|2>=1-n<rsub|G><rsup|-1><math-up|Retr>U<rsub|\<square\>>>.
+    Sum over unoriented plaquettes to define <verbatim|E_s^W>, then introduce
+    <verbatim|Z_{s,\<beta\>}> and <verbatim|\<mu\>_{s,\<beta\>}>. Compactness
     gives existence for every real \<beta\>, while the positivity statements
     require \<beta\>\<geqslant\>0. Give the one-line endpoint transformation
     of a path and its consequence for closed loops; do not expand four
@@ -232,14 +236,16 @@
     mixing with lower-weight labels, with F\<twosuperior\> able to acquire an
     additive constant. Introduce raw insertions <verbatim|P_d^loc[c](y;U)>;
     reserve the name 'renormalized insertion' until the terminal map exists
-    in the observable-transfer chapter. Give the clover example and its
-    coefficient \<onequarter\> over the 24 corner plaquettes. Explain that a
-    fixed physical Wilson loop has a stencil growing with the cutoff and lies
-    outside the theorem. Describe the two later obligations in words:
-    invertible finite-dimensional normalization at a reference scale, and
-    volume-uniform estimates. Defer exact equations of motion and null-ideal
-    identification to the comparison/observable chapters, because Outline
-    II.1 explicitly marks their identification as tentative.
+    in the observable-transfer chapter. Give the clover average
+    <math|<tfrac|1|8><big|sum><rsub|\<square\>\<ni\>y><around|\<lVert\>|U<rsub|\<square\>>-1|\<rVert\>><rsub|G><rsup|2>>.
+    The four plaquettes in each of the six coordinate planes give the leading
+    coefficient <math|<tfrac|1|2>> per plane. Explain that a fixed physical
+    Wilson loop has a stencil growing with the cutoff and lies outside the
+    theorem. Describe the two later obligations in words: invertible
+    finite-dimensional normalization at a reference scale, and volume-uniform
+    estimates. Defer exact equations of motion and null-ideal identification
+    to the comparison/observable chapters, because Outline II.1 explicitly
+    marks their identification as tentative.
   </enumerate>
 
   <subsection|Exports and source packet><label|exports-and-source-packet>
@@ -290,10 +296,10 @@
 
 <\references>
   <\collection>
-    <associate|audit-points|<tuple|2.4|4>>
+    <associate|audit-points|<tuple|2.4|5>>
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|2.3|4>>
-    <associate|auto-11|<tuple|2.4|4>>
+    <associate|auto-11|<tuple|2.4|5>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|1.2|1>>
     <associate|auto-4|<tuple|1.3|2>>

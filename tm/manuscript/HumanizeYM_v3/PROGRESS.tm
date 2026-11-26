@@ -30,8 +30,8 @@
     <no-break><pageref|auto-4><vspace|0.5fn>
   </table-of-contents>
 
-  Updated 25 November 2026. The requested blueprint and a full first draft of
-  the monograph are complete in this folder. The draft is <strong|280 pages>,
+  Updated 26 November 2026. The requested blueprint and a full first draft of
+  the monograph are complete in this folder. The draft is <strong|281 pages>,
   with all nineteen chapters, eleven figures, a notation index and 41 cited
   references. It is a working mathematical exposition of the supplied
   construction and still merits expert review; the writing and focused
@@ -91,19 +91,25 @@
 
   <section|Verification><label|verification>
 
-  The master includes all 50 TeX files checked by
-  <verbatim|tools/check_draft.py>; there are no unattached chapter fragments,
-  duplicate labels or unresolved explicit references. The complete LaTeX
-  build has no undefined-reference/citation warnings or overfull/underfull
-  boxes. At first-draft delivery the PDF was rendered and inspected,
-  including every newly written or changed region; unchanged regions were
-  covered by the earlier recorded checkpoints. The final layout removes the
-  nearly empty closing page of Chapter18.
+  The master and its inputs comprise 49 TeX files. All chapter fragments are
+  included, all explicit cross-references resolve, and all labels are unique.
+  The PDF builds with all citations resolved and no overfull boxes. At
+  first-draft delivery the PDF was rendered and inspected, including every
+  newly written or changed region; unchanged regions were covered by the
+  earlier recorded checkpoints. The final layout removes the nearly empty
+  closing page of Chapter18.
 
   The terminology revision covers all nineteen chapters, the reading guide
   and the notation index. The revised PDF builds without warnings. Selected
   pages, including the contents and revised section headings, were rendered
   and inspected.
+
+  Section 1.1 now defines the normalized matrix norm entrywise. Group
+  distances and Wilson energies throughout the manuscript use this norm. The
+  clover, frame and block-kernel normalizations were checked against the
+  trace formula. Section 4.3 defines which fine plaquettes are counted and
+  proves the quartic bound on their multiplicities. Chapters 5 and 6 refer to
+  the summed frame estimate on each patch.
 
   The illustrated edition adds eleven chapter figures. The list of figures
   and each in-text reference link to the illustrations.

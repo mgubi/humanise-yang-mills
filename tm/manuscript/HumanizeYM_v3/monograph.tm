@@ -438,7 +438,7 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-37>
 
-    4.3<space|2spc>A first-power bound for the actual block average
+    4.3<space|2spc>A linear bound on coarse plaquette distances
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-39>
 
@@ -1422,10 +1422,23 @@
   <section|The gauge group and its normalization><label|ch01:gauge>
 
   Fix a closed subgroup <math|G\<subset\>U<around|(|n<rsub|G>|)>> in a
-  specified faithful unitary representation. Its real Lie algebra
-  <math|<gLie>> consists of skew-Hermitian matrices, and we assume that
-  <math|<gLie>> is simple and nonabelian. The group itself need not be
-  connected. We use the invariant inner product
+  specified faithful unitary representation. For any complex
+  <math|n<rsub|G>\<times\>n<rsub|G>> matrix <math|A>, set
+
+  <\equation>
+    <around|\<\|\|\>|A|\<\|\|\>><rsub|G><rsup|2>=<frac|1|n<rsub|G>>*<big|sum><rsub|i,j=1><rsup|n<rsub|G>><around|\||A<rsub|i*j>|\|><rsup|2>=<frac|1|n<rsub|G>><tr><around|(|A<rsup|\<ast\>>*A|)>.<label|ch01:matrix-norm>
+  </equation>
+
+  The normalization gives <math|<around|\<\|\|\>|u|\<\|\|\>><rsub|G>=1> for
+  every <math|u\<in\>G>, since <math|u<rsup|\<ast\>>*u=1>. Left and right
+  multiplication by unitary matrices preserve this norm. In particular,
+  <math|<around|\<\|\|\>|u*v<rsup|-1>-1|\<\|\|\>><rsub|G>=<around|\<\|\|\>|u-v|\<\|\|\>><rsub|G>>
+  for <math|u,v\<in\>G>.
+
+  The real Lie algebra <math|<gLie>> of <math|G> consists of skew-Hermitian
+  matrices. We assume that <math|<gLie>> is simple and nonabelian. The group
+  itself need not be connected. On <math|<gLie>> the norm
+  <eqref|ch01:matrix-norm> is induced by the invariant inner product
 
   <\equation>
     <around|\<langle\>|X,Y|\<rangle\>><rsub|<gLie>>=-<frac|1|n<rsub|G>><math-up|Re><space|0.17em><tr><around|(|X*Y|)>,<space|2em>X,Y\<in\><gLie>.<label|ch01:metric>
@@ -1497,16 +1510,16 @@
     U<rsub|y;\<mu\>*\<nu\>>=U*<around|(|y,\<mu\>|)>*U*<around|(|y+e<rsub|\<mu\>>,\<nu\>|)>*U*<around|(|y+e<rsub|\<nu\>>,\<mu\>|)><rsup|-1>*U*<around|(|y,\<nu\>|)><rsup|-1>.<label|ch01:plaquette>
   </equation>
 
-  Define the plaquette energy and the normalized Hilbert\USchmidt distance
-  from the identity by
+  The Wilson energy of a single plaquette with holonomy <math|u> is half its
+  squared distance from the identity. Expanding the square in
+  <eqref|ch01:matrix-norm> and using <math|u<rsup|\<ast\>>*u=1> gives the
+  usual trace formula
 
-  <\equation>
-    w<around|(|u|)>=1-<frac|1|n<rsub|G>><math-up|Re><space|0.17em><tr><space|0.17em>u,<space|2em>\<chi\><around|(|u|)>=<frac|<around|\<\|\|\>|u-1|\<\|\|\>><rsub|<math-up|F>>|<sqrt|n<rsub|G>>>,<space|2em>\<chi\><around|(|u|)><rsup|2>=2*w<around|(|u|)>.<label|ch01:chord>
-  </equation>
+  <\equation*>
+    <tfrac|1|2><around|\<\|\|\>|u-1|\<\|\|\>><rsub|G><rsup|2>=1-<frac|1|n<rsub|G>><math-up|Re><space|0.17em><tr><space|0.17em>u.
+  </equation*>
 
-  Both functions are invariant under conjugation and inversion; they vanish
-  at the identity. The last identity follows directly from
-  <math|u<rsup|\<ast\>>*u=1>.
+  This energy is invariant under conjugation and inversion.
 
   <\definition>
     <dueto|Wilson measure><label|ch01:wilson>Let <math|d*h> be probability
@@ -1514,16 +1527,15 @@
     <math|\<Lambda\><rsub|s>> are
 
     <\align>
-      <tformat|<table|<row|<cell|E<rsub|s><rsup|<math-up|W>><around|(|U|)>>|<cell|=<big|sum><rsub|y\<in\>\<Lambda\><rsub|s>><big|sum><rsub|\<mu\>\<less\>\<nu\>>w<around|(|U<rsub|y;\<mu\>*\<nu\>>|)>,>|<cell|>|<cell|<eq-number><label|ch01:wilson-energy>>>|<row|<cell|d*\<mu\><rsub|s,\<beta\>><around|(|U|)>>|<cell|=Z<rsub|s,\<beta\>><rsup|-1>*e<rsup|-\<beta\>*E<rsub|s><rsup|<math-up|W>><around|(|U|)>>*<big|prod><rsub|e\<in\>E<rsub|s>>d*h<around|(|U<rsub|e>|)>,>|<cell|Z<rsub|s,\<beta\>>>|<cell|=<big|int>e<rsup|-\<beta\>*E<rsub|s><rsup|<math-up|W>><around|(|U|)>>*<big|prod><rsub|e\<in\>E<rsub|s>>d*h<around|(|U<rsub|e>|)>.<eq-number><label|ch01:wilson-law>>>>>
+      <tformat|<table|<row|<cell|E<rsub|s><rsup|<math-up|W>><around|(|U|)>>|<cell|=<frac|1|2>*<big|sum><rsub|y\<in\>\<Lambda\><rsub|s>><big|sum><rsub|\<mu\>\<less\>\<nu\>><around|\<\|\|\>|U<rsub|y;\<mu\>*\<nu\>>-1|\<\|\|\>><rsub|G><rsup|2>,>|<cell|>|<cell|<eq-number><label|ch01:wilson-energy>>>|<row|<cell|d*\<mu\><rsub|s,\<beta\>><around|(|U|)>>|<cell|=Z<rsub|s,\<beta\>><rsup|-1>*e<rsup|-\<beta\>*E<rsub|s><rsup|<math-up|W>><around|(|U|)>>*<big|prod><rsub|e\<in\>E<rsub|s>>d*h<around|(|U<rsub|e>|)>,>|<cell|Z<rsub|s,\<beta\>>>|<cell|=<big|int>e<rsup|-\<beta\>*E<rsub|s><rsup|<math-up|W>><around|(|U|)>>*<big|prod><rsub|e\<in\>E<rsub|s>>d*h<around|(|U<rsub|e>|)>.<eq-number><label|ch01:wilson-law>>>>>
     </align>
   </definition>
 
-  Every unoriented coordinate square is counted once, through
-  <math|\<mu\>\<less\>\<nu\>>. There is no additional factor of <math|1/2> in
-  <eqref|ch01:wilson-energy>. The configuration space is compact and the
-  integrand defining <math|Z<rsub|s,\<beta\>>> is continuous and strictly
-  positive, so <math|0\<less\>Z<rsub|s,\<beta\>>\<less\>\<infty\>> for every
-  real <math|\<beta\>>. The reflection-positivity arguments below require
+  The sum over <math|\<mu\>\<less\>\<nu\>> counts every unoriented coordinate
+  square once. The configuration space is compact and the integrand defining
+  <math|Z<rsub|s,\<beta\>>> is continuous and strictly positive, so
+  <math|0\<less\>Z<rsub|s,\<beta\>>\<less\>\<infty\>> for every real
+  <math|\<beta\>>. The reflection-positivity arguments below require
   <math|\<beta\>\<geqslant\>0>.
 
   A site gauge transformation <math|g:\<Lambda\><rsub|s>\<to\>G> acts by
@@ -1558,9 +1570,8 @@
   plaquettes rather than individual links. The pure-gauge configuration
   <math|U*<around|(|y,\<mu\>|)>=g<around|(|y|)>*g*<around|(|y+e<rsub|\<mu\>>|)><rsup|-1>>
   can have links far from the identity while every plaquette holonomy is the
-  identity. Later, small-field regions will be specified by bounds on the
-  gauge-invariant quantity <math|\<chi\><around|(|U<rsub|y;\<mu\>*\<nu\>>|)>>
-  from <eqref|ch01:chord>.
+  identity. Later, small-field regions will be specified by bounds on
+  <math|<around|\<\|\|\>|U<rsub|y;\<mu\>*\<nu\>>-1|\<\|\|\>><rsub|G>>.
 
   The connection with classical curvature is most cleanly stated using exact
   parallel transport. For a smooth <math|<gLie>>-valued connection <math|A>,
@@ -1577,7 +1588,7 @@
     U<rsub|x;\<mu\>*\<nu\>>=1+a<rsup|2>*F<rsub|\<mu\>*\<nu\>><around|(|x|)>+O<around|(|a<rsup|3>|)>,<space|1em>F<rsub|\<mu\>*\<nu\>>=\<partial\><rsub|\<mu\>>*A<rsub|\<nu\>>-\<partial\><rsub|\<nu\>>*A<rsub|\<mu\>>+<around|[|A<rsub|\<mu\>>,A<rsub|\<nu\>>|]>.<label|ch01:classical-curvature>
   </equation>
 
-  Consequently <math|w<around|(|U<rsub|x;\<mu\>*\<nu\>>|)>=<frac|1|2>*a<rsup|4>\|F<rsub|\<mu\>*\<nu\>><around|(|x|)>\|<rsub|<gLie>><rsup|2>+O<around|(|a<rsup|5>|)>>.
+  Consequently <math|<tfrac|1|2><around|\<\|\|\>|U<rsub|x;\<mu\>*\<nu\>>-1|\<\|\|\>><rsub|G><rsup|2>=<tfrac|1|2>a<rsup|4>\|F<rsub|\<mu\>*\<nu\>><around|(|x|)>\|<rsub|<gLie>><rsup|2>+O<around|(|a<rsup|5>|)>>.
   This familiar classical expansion motivates the action. It is not a
   regularity assertion about typical lattice configurations, nor about an
   eventual continuum random connection.
@@ -2126,11 +2137,12 @@
 
   <section|Finite-stencil representatives><label|ch02:sections>
 
-  The construction uses lattice curvature transported to a common point.
-  Extend the metric <eqref|ch01:metric> to the ambient real matrix space as
-  <math|<math-up|Re><space|0.17em><tr><around|(|X<rsup|\<ast\>>*Y|)>/n<rsub|G>>,
-  and let <math|\<Pi\><rsub|<gLie>>> be orthogonal projection onto
-  <math|<gLie>>. For a plaquette based at <math|z>, set
+  The construction uses lattice curvature transported to a common point. On
+  complex matrices the real inner product associated with
+  <eqref|ch01:matrix-norm> is <math|<math-up|Re><space|0.17em><tr><around|(|X<rsup|\<ast\>>*Y|)>/n<rsub|G>>.
+  Let <math|\<Pi\><rsub|<gLie>>> denote orthogonal projection onto
+  <math|<gLie>> for this inner product. For a plaquette based at <math|z>,
+  set
 
   <\equation*>
     F<rsub|\<square\>><around|(|U|)>=\<Pi\><rsub|<gLie>>*<frac|U<rsub|\<square\>>-U<rsub|\<square\>><rsup|-1>|2>.
@@ -2301,13 +2313,12 @@
   dimensions.
 
   We now use the factor-count property of
-  Theorem<nbsp><reference|ch02:local-sections>. Recall from
-  <eqref|ch01:chord> that <math|\<chi\><around|(|u|)>=<around|\<\|\|\>|u-1|\<\|\|\>><rsub|<math-up|F>>/<sqrt|n<rsub|G>>>
-  measures the size of a plaquette. On a fixed local stencil, a bound
-  <math|\<chi\><around|(|U<rsub|\<square\>>|)>\<leqslant\>t> gives a factor
-  <math|t> for each transported curvature in
-  <eqref|ch02:transported-curvature>. The same factor is retained under
-  suitably scaled derivatives.
+  Theorem<nbsp><reference|ch02:local-sections>. With the normalized matrix
+  norm of <eqref|ch01:matrix-norm>, a bound
+  <math|<around|\<\|\|\>|U<rsub|\<square\>>-1|\<\|\|\>><rsub|G>\<leqslant\>t>
+  on every plaquette in the stencil gives a factor <math|t> for each
+  transported curvature in <eqref|ch02:transported-curvature>. The same
+  factor is retained under suitably scaled derivatives.
 
   For a collection <math|A=<around|(|A<rsub|e>|)><rsub|e\<in\>E<rsub|s>>> of
   Lie algebra elements, define the left derivative
@@ -2334,9 +2345,9 @@
     <math|d,q,p<rsub|0>> there are finite constants
     <math|C<rsub|d,q,p<rsub|0>>> and <math|C<rsub|d>>, independent of
     <math|s>, <math|y> and <math|0\<less\>t\<leqslant\>1>, with the following
-    properties. If every plaquette used by the translated section has
-    distance from the identity at most <math|t>, then for every list of
-    permitted directions of length <math|k\<leqslant\>q>,
+    properties. If <math|<around|\<\|\|\>|U<rsub|\<square\>>-1|\<\|\|\>><rsub|G>\<leqslant\>t>
+    for every plaquette used by the translated section, then for every list
+    of permitted directions of length <math|k\<leqslant\>q>,
 
     <\equation>
       <around*|\||D<rsub|A<rsub|1>><rsup|L>*\<cdots\>*D<rsub|A<rsub|k>><rsup|L>*P<rsub|d><rsup|<math-up|loc>><around|[|b<rsub|d,i>|]><around|(|y;U|)>|\|>\<leqslant\>C<rsub|d,q,p<rsub|0>>*t<rsup|f<rsub|i>>.<label|ch02:section-small-bound>
@@ -2355,7 +2366,7 @@
     Projection is contractive and <math|U<rsup|-1>=U<rsup|\<ast\>>>, so
 
     <\equation*>
-      <around|\||F<rsub|\<square\>><around|(|U|)>|\|><rsub|<gLie>>\<leqslant\><frac|<around|\<\|\|\>|U<rsub|\<square\>>-U<rsub|\<square\>><rsup|\<ast\>>|\<\|\|\>><rsub|<math-up|F>>|2*<sqrt|n<rsub|G>>>\<leqslant\>\<chi\><around|(|U<rsub|\<square\>>|)>.
+      <around|\||F<rsub|\<square\>><around|(|U|)>|\|><rsub|<gLie>>\<leqslant\><tfrac|1|2><around|\<\|\|\>|U<rsub|\<square\>>-U<rsub|\<square\>><rsup|\<ast\>>|\<\|\|\>><rsub|G>\<leqslant\><around|\<\|\|\>|U<rsub|\<square\>>-1|\<\|\|\>><rsub|G>.
     </equation*>
 
     Transport by a unitary matrix preserves the metric. An undifferentiated
@@ -2690,24 +2701,25 @@
   clover average
 
   <\equation>
-    P<rsup|<math-up|cl>>*<around|(|y;U|)>=<frac|1|4>*<big|sum><rsub|\<square\>\<ni\>y>w<around|(|U<rsub|\<square\>>|)>,<label|ch02:clover>
+    P<rsup|<math-up|cl>>*<around|(|y;U|)>=<frac|1|8>*<big|sum><rsub|\<square\>\<ni\>y><around|\<\|\|\>|U<rsub|\<square\>>-1|\<\|\|\>><rsub|G><rsup|2>,<label|ch02:clover>
   </equation>
 
   where the sum has four corner plaquettes in each of the six coordinate
-  planes, hence <math|24> terms. Orientation does not matter because
-  <math|w<around|(|u<rsup|-1>|)>=w<around|(|u|)>>. For a smooth test
-  connection the expansion <eqref|ch01:classical-curvature> yields
+  planes, hence <math|24> terms. Reversing orientation preserves each term
+  since <math|<around|\<\|\|\>|u<rsup|-1>-1|\<\|\|\>><rsub|G>=<around|\<\|\|\>|u-1|\<\|\|\>><rsub|G>>.
+  For a smooth test connection the expansion <eqref|ch01:classical-curvature>
+  yields
 
   <\equation*>
     P<rsup|<math-up|cl>>*<around|(|y;U*<around|(|h,J|)>|)>=h<rsup|4>*c<rsub|F<rsup|2>><around|(|J|)>+O<around|(|h<rsup|5>|)>
   </equation*>
 
   at the origin, and thus <math|<math-up|Tay><rsub|4><space|0.17em>P<rsup|<math-up|cl>>=c<rsub|F<rsup|2>>>.
-  The factors are consistent: each plaquette contributes
-  <math|<frac|1|2>*h<rsup|4><around|\||F<rsub|\<mu\>*\<nu\>>|\|><rsub|<gLie>><rsup|2>>,
-  four copies occur per plane, and the prefactor is <math|1/4>. This example
-  fixes the normalization, but the general construction is free to use a
-  different section satisfying the same Taylor identity.
+  Each squared distance has leading term <math|h<rsup|4><around|\||F<rsub|\<mu\>*\<nu\>>|\|><rsub|<gLie>><rsup|2>>.
+  The four plaquettes per plane and the prefactor <math|1/8> thus give
+  <math|<tfrac|1|2>h<rsup|4>*<big|sum><rsub|\<mu\>\<less\>\<nu\>><around|\||F<rsub|\<mu\>*\<nu\>>|\|><rsub|<gLie>><rsup|2>>.
+  This example fixes the normalization, but the general construction is free
+  to use a different section satisfying the same Taylor identity.
 
   The clover formula does not solve the quantum normalization problem. Under
   blocking, the curvature square can mix with the constant. A general
@@ -3121,8 +3133,9 @@
   </equation*>
 
   The coefficients <math|P<rsub|a*b;i<rsub|1>*\<cdots\>*i<rsub|j>>\<in\><gLie>>
-  are symmetric in the derivative indices. Their Frobenius inner product
-  <math|<around|\<langle\>|P,Q|\<rangle\>><rsub|F>> is the sum of the Lie
+  are symmetric in the derivative indices. For
+  <math|P,Q\<in\>\<cal-S\><rsub|j>>, define
+  <math|<around|\<langle\>|P,Q|\<rangle\>><rsub|j>> as the sum of the Lie
   algebra inner products of corresponding coefficients over all ordered
   tuples <math|<around|(|a,b,i<rsub|1>,\<ldots\>,i<rsub|j>|)>>. Both orders
   of the antisymmetric pair <math|<around|(|a,b|)>> are included, with no
@@ -3133,11 +3146,12 @@
     <label|ch03:probe>\<ell\><rsub|P><around|(|F|)>=<frac|1|j!>*<big|sum><rsub|a,b,i<rsub|1>,\<ldots\>,i<rsub|j>><around*|\<langle\>|P<rsub|a*b;i<rsub|1>*\<cdots\>*i<rsub|j>>,\<partial\><rsub|i<rsub|1>>*\<cdots\>*\<partial\><rsub|i<rsub|j>>*F<rsub|a*b>|\<rangle\>><rsub|<gLie>>.
   </equation>
 
-  With this normalization, <math|\<ell\><rsub|P><around|(|Q|)><around|(|0|)>=<around|\<langle\>|P,Q|\<rangle\>><rsub|F>>
+  With this normalization, <math|\<ell\><rsub|P><around|(|Q|)><around|(|0|)>=<around|\<langle\>|P,Q|\<rangle\>><rsub|j>>
   for <math|P,Q\<in\>\<cal-S\><rsub|j>>. Indeed, symmetry of the derivative
   indices gives <math|\<partial\><rsub|i<rsub|1>>*\<cdots\>*\<partial\><rsub|i<rsub|j>>*Q<rsub|a*b><around|(|0|)>=j!<space|0.17em>Q<rsub|a*b;i<rsub|1>*\<cdots\>*i<rsub|j>>>.
-  Thus the Frobenius inner product identifies each linear functional on the
-  order-<math|j> solution jets with a unique <math|P\<in\>\<cal-S\><rsub|j>>.
+  Thus this coefficient inner product identifies each linear functional on
+  the order-<math|j> solution jets with a unique
+  <math|P\<in\>\<cal-S\><rsub|j>>.
 
   Put <math|I<around|(|z|)>=z/<around|\||z|\|><rsup|2>> and
   <math|R<rsub|z>=1-2*z*z<rsup|<math-ss|T>>/<around|\||z|\|><rsup|2>>. For a
@@ -3233,16 +3247,16 @@
     insertion gives
 
     <\equation*>
-      B<rsub|z>*<around|(|\<Sigma\><rsub|z>*P,Q|)>=<around|(|-1|)><rsup|k><around*|\<langle\>|R<rsub|z>\<cdot\>Q,<math-up|Taylor><rsub|k><around|[|\<cal-R\>*<around|(|\<Sigma\><rsub|z>*P|)>|]><around|(|z|)>|\<rangle\>><rsub|F>.
+      B<rsub|z>*<around|(|\<Sigma\><rsub|z>*P,Q|)>=<around|(|-1|)><rsup|k><around*|\<langle\>|R<rsub|z>\<cdot\>Q,<math-up|Taylor><rsub|k><around|[|\<cal-R\>*<around|(|\<Sigma\><rsub|z>*P|)>|]><around|(|z|)>|\<rangle\>><rsub|k>.
     </equation*>
 
     It follows that this expression vanishes if <math|k\<less\>j>, and at
-    <math|k=j> equals <math|<around|(|-1|)><rsup|j>*c<rsub|j><around|\||z|\|><rsup|-2*j-4><around|\<langle\>|P,Q|\<rangle\>><rsub|F>>.
+    <math|k=j> equals <math|<around|(|-1|)><rsup|j>*c<rsub|j><around|\||z|\|><rsup|-2*j-4><around|\<langle\>|P,Q|\<rangle\>><rsub|j>>.
     Transforming the second argument introduces only lower orders in addition
     to its unchanged top order. Symmetry therefore gives, on the full tower,
 
     <\equation>
-      <label|ch03:diagonal-gram>B<rsub|z>*<around|(|\<Sigma\><rsub|z>*P,\<Sigma\><rsub|z>*Q|)>=<big|sum><rsub|j\<less\>m><frac|<around|(|j+1|)>*<around|(|j+2|)>*2<rsup|j>|\<pi\><rsup|2><around|\||z|\|><rsup|2*j+4>>*<around|\<langle\>|P<rsub|j>,Q<rsub|j>|\<rangle\>><rsub|F>.
+      <label|ch03:diagonal-gram>B<rsub|z>*<around|(|\<Sigma\><rsub|z>*P,\<Sigma\><rsub|z>*Q|)>=<big|sum><rsub|j\<less\>m><frac|<around|(|j+1|)>*<around|(|j+2|)>*2<rsup|j>|\<pi\><rsup|2><around|\||z|\|><rsup|2*j+4>>*<around|\<langle\>|P<rsub|j>,Q<rsub|j>|\<rangle\>><rsub|j>.
     </equation>
 
     Every coefficient is positive. Finally <math|\<Sigma\><rsub|z>> is
@@ -3961,18 +3975,21 @@
   action, a scalar normalization, local corrections on small-field regions,
   and a sum over polymers covering the large-field sites.
 
-  The gauge group, Haar measure and plaquette energy <math|w> are as in
-  Chapter<nbsp><reference|ch01:lattice>. Recall that
-  <math|a<rsub|m>=D<rsub|m><rsup|-1>> is the physical spacing,
-  <math|R<rsub|p>> is the physical period, and the odd ratio <math|L<rsub|m>>
-  relates levels <math|m+1> and <math|m>. In this chapter we examine a single
-  step <math|m+1\<to\>m>. Write <math|L=L<rsub|m>>, fix a positive integer
-  smoothing order <math|j>, and set <math|R=<around|(|j+3|)>*L>. Fine links
-  <math|U> live on <math|\<Lambda\><rsub|R<rsub|p>*D<rsub|m+1>>> and coarse
-  links <math|V> on <math|\<Lambda\><rsub|R<rsub|p>*D<rsub|m>>>. Patches are
-  first described on the covering lattice and then placed periodically. The
-  constants and path coefficients introduced here are inputs; their
-  simultaneous choice along a trajectory will require the later estimates.
+  We use the gauge group and Haar measure of
+  Chapter<nbsp><reference|ch01:lattice> and the normalized matrix norm
+  <math|<around|\<\|\|\>|\<cdummy\>|\<\|\|\>><rsub|G>> of
+  <eqref|ch01:matrix-norm>. Left or right multiplication by a group element
+  preserves this norm. Recall that <math|a<rsub|m>=D<rsub|m><rsup|-1>> is the
+  physical spacing, <math|R<rsub|p>> is the physical period, and the odd
+  ratio <math|L<rsub|m>> relates levels <math|m+1> and <math|m>. In this
+  chapter we examine a single step <math|m+1\<to\>m>. Write
+  <math|L=L<rsub|m>>, fix a positive integer smoothing order <math|j>, and
+  set <math|R=<around|(|j+3|)>*L>. Fine links <math|U> live on
+  <math|\<Lambda\><rsub|R<rsub|p>*D<rsub|m+1>>> and coarse links <math|V> on
+  <math|\<Lambda\><rsub|R<rsub|p>*D<rsub|m>>>. Patches are first described on
+  the covering lattice and then placed periodically. The constants and path
+  coefficients introduced here are inputs; their simultaneous choice along a
+  trajectory will require the later estimates.
 
   <section|Local gauges and a symmetric frame choice><label|ch04:frames>
 
@@ -4014,15 +4031,16 @@
     \<cal-T\><rsub|x*y;o><rsup|o<rsub|0>>=g<rsub|x><rsup|0,o<rsub|0>>*T<rsub|U>*<around|(|x\<to\>y;o|)><around|(|g<rsub|y><rsup|0,o<rsub|0>>|)><rsup|-1>.
   </equation*>
 
-  Its normalized Hilbert\USchmidt distance from the identity is gauge
-  invariant. Fix a small constant <math|\<delta\><rsub|<math-up|fr>>\<gtr\>0>.
-  If <math|\<chi\><around|(|\<cal-T\><rsub|x*y;o><rsup|o<rsub|0>>|)>\<less\>\<delta\><rsub|<math-up|fr>>>
+  Gauge transformations conjugate this loop transport, preserving its
+  distance from the identity. Fix a small constant
+  <math|\<delta\><rsub|<math-up|fr>>\<gtr\>0>. If
+  <math|<around|\<\|\|\>|\<cal-T\><rsub|x*y;o><rsup|o<rsub|0>>-1|\<\|\|\>><rsub|G>\<less\>\<delta\><rsub|<math-up|fr>>>
   for every <math|x,y\<in\>\<bbb-B\><rsub|R>> and every
   <math|o,o<rsub|0>\<in\>S<rsub|4>>, use the normalized minimizer, with
   <math|h<rsub|0>=1>, of
 
   <\equation>
-    \<cal-E\><rsub|U><around|(|h|)>=<frac|1|24<around|\||\<bbb-B\><rsub|R>|\|><rsup|2>>*<big|sum><rsub|x,y\<in\>\<bbb-B\><rsub|R>><big|sum><rsub|o\<in\>S<rsub|4>>w*<around*|(|h<rsub|x>*T<rsub|U>*<around|(|x\<to\>y;o|)>*h<rsub|y><rsup|-1>|)>.<label|ch04:frame-energy>
+    \<cal-E\><rsub|U><around|(|h|)>=<frac|1|48<around|\||\<bbb-B\><rsub|R>|\|><rsup|2>>*<big|sum><rsub|x,y\<in\>\<bbb-B\><rsub|R>><big|sum><rsub|o\<in\>S<rsub|4>><around*|\||h<rsub|x>*T<rsub|U>*<around|(|x\<to\>y;o|)>-h<rsub|y>|\|><rsub|G><rsup|2>.<label|ch04:frame-energy>
   </equation>
 
   The test includes every order <math|o<rsub|0>>, so it does not privilege a
@@ -4033,8 +4051,8 @@
   <math|<around|(|z,o|)>> eligible when
 
   <\equation>
-    <big|sum><rsub|e<text| internal to >\<bbb-B\><rsub|R>>\<chi\><around|(|U<rsub|e><rsup|z,o>|)>\<leqslant\>a<rsub|<math-up|ax>>*<around|(|2*R+1|)>*<big|sum><rsub|\<square\><text|
-    internal to >\<bbb-B\><rsub|R>>\<chi\><around|(|U<rsub|\<square\>>|)>.<label|ch04:axial-eligible>
+    <big|sum><rsub|e<text| internal to >\<bbb-B\><rsub|R>><around|\<\|\|\>|U<rsub|e><rsup|z,o>-1|\<\|\|\>><rsub|G>\<leqslant\>a<rsub|<math-up|ax>>*<around|(|2*R+1|)>*<big|sum><rsub|\<square\><text|
+    internal to >\<bbb-B\><rsub|R>><around|\<\|\|\>|U<rsub|\<square\>>-1|\<\|\|\>><rsub|G>.<label|ch04:axial-eligible>
   </equation>
 
   Choose one pair <math|<around|(|z,o|)>\<in\>\<bbb-B\><rsub|R>\<times\>S<rsub|4>>
@@ -4070,7 +4088,7 @@
     small convex ball about <math|1>,
 
     <\equation>
-      <around|\<\|\|\>|\<pi\><around|(|A|)>-\<pi\><around|(|B|)>-\<Pi\><rsub|<gLie>>*<around|(|A-B|)>|\<\|\|\>><rsub|<math-up|F>>\<leqslant\><tfrac|1|4><around|\<\|\|\>|A-B|\<\|\|\>><rsub|<math-up|F>>.<label|ch04:projection-bound>
+      <around|\<\|\|\>|\<pi\><around|(|A|)>-\<pi\><around|(|B|)>-\<Pi\><rsub|<gLie>>*<around|(|A-B|)>|\<\|\|\>><rsub|G>\<leqslant\><tfrac|1|4><around|\<\|\|\>|A-B|\<\|\|\>><rsub|G>.<label|ch04:projection-bound>
     </equation>
 
     This is the mean-value estimate for <math|D*\<pi\>-\<Pi\><rsub|<gLie>>>,
@@ -4080,23 +4098,22 @@
     origin with this coordinate order. In this gauge the transport from
     <math|x> to <math|y> in order <math|o> is
     <math|\<cal-T\><rsub|x*y;o><rsup|o<rsub|0>>>. On the minimizing branch
-    the loop test gives <math|<around|\<\|\|\>|\<cal-T\><rsub|x*y;o><rsup|o<rsub|0>>-1|\<\|\|\>><rsub|<math-up|F>>\<leqslant\>d>,
-    where <math|d> can be chosen arbitrarily small by reducing
-    <math|\<delta\><rsub|<math-up|fr>>>. Reversing a route gives its inverse
-    and permutes the coordinate orders. A minimizer exists by compactness.
-    Common left multiplication leaves the energy invariant, so minimization
-    with the normalization <math|h<rsub|0>=1> also gives an unconstrained
-    minimizer after allowing that common multiplier. Comparison with the
-    constant frame, and the squared triangle inequality, give
+    the loop test gives <math|<around|\<\|\|\>|\<cal-T\><rsub|x*y;o><rsup|o<rsub|0>>-1|\<\|\|\>><rsub|G>\<less\>\<delta\><rsub|<math-up|fr>>>.
+    Reversing a route gives its inverse and permutes the coordinate orders. A
+    minimizer exists by compactness. Common left multiplication leaves the
+    energy invariant, so minimization with the normalization
+    <math|h<rsub|0>=1> also gives an unconstrained minimizer after allowing
+    that common multiplier. Comparison with the constant frame and the
+    squared triangle inequality give
 
     <\equation*>
-      <frac|1|<around|\||\<bbb-B\><rsub|R>|\|><rsup|2>>*<big|sum><rsub|x,y\<in\>\<bbb-B\><rsub|R>><around|\<\|\|\>|h<rsub|x>-h<rsub|y>|\<\|\|\>><rsub|<math-up|F>><rsup|2>\<leqslant\>4*d<rsup|2>.
+      <frac|1|<around|\||\<bbb-B\><rsub|R>|\|><rsup|2>>*<big|sum><rsub|x,y\<in\>\<bbb-B\><rsub|R>><around|\<\|\|\>|h<rsub|x>-h<rsub|y>|\<\|\|\>><rsub|G><rsup|2>\<leqslant\>4*\<delta\><rsub|<math-up|fr>><rsup|2>.
     </equation*>
 
     Multiply all <math|h<rsub|x>> on the left by one group element so that
     <math|1> is nearest to their centroid
     <math|<wide|h|\<bar\>>=<around|\||\<bbb-B\><rsub|R>|\|><rsup|-1>*<big|sum><rsub|x\<in\>\<bbb-B\><rsub|R>>h<rsub|x>>.
-    Then <math|<around|\<\|\|\>|<wide|h|\<bar\>>-1|\<\|\|\>><rsub|<math-up|F>>\<leqslant\>2*d>.
+    Then <math|<around|\<\|\|\>|<wide|h|\<bar\>>-1|\<\|\|\>><rsub|G>\<leqslant\>2*\<delta\><rsub|<math-up|fr>>>.
     For each fixed <math|x>, coordinatewise minimization shows that
     <math|h<rsub|x>> is nearest to
 
@@ -4104,25 +4121,31 @@
       F<rsub|x><around|(|h|)>=<frac|1|24<around|\||\<bbb-B\><rsub|R>|\|>>*<big|sum><rsub|y\<in\>\<bbb-B\><rsub|R>><big|sum><rsub|o\<in\>S<rsub|4>>h<rsub|y><around|(|\<cal-T\><rsub|x*y;o><rsup|o<rsub|0>>|)><rsup|-1>.
     </equation*>
 
-    Including the diagonal term <math|y=x> does not invalidate this
-    assertion: it adds a term whose maximum is attained at the old coordinate
-    <math|h<rsub|x>>. Since <math|<around|\<\|\|\>|F<rsub|x><around|(|h|)>-<wide|h|\<bar\>>|\<\|\|\>><rsub|<math-up|F>>\<leqslant\>d>,
-    all feedback matrices lie within <math|3*d> of <math|1>. For small enough
-    <math|d> they lie in the projection ball, and
-    <math|h<rsub|x>=\<pi\><around|(|F<rsub|x><around|(|h|)>|)>>.
+    Indeed, when varying <math|h<rsub|x>> to <math|v>, retaining the old
+    <math|h<rsub|x>> in the diagonal term <math|y=x> adds a nonnegative
+    multiple of <math|<around|\<\|\|\>|v-h<rsub|x>|\<\|\|\>><rsub|G><rsup|2>>,
+    which vanishes at <math|v=h<rsub|x>>. Since
+    <math|<around|\<\|\|\>|F<rsub|x><around|(|h|)>-<wide|h|\<bar\>>|\<\|\|\>><rsub|G>\<leqslant\>\<delta\><rsub|<math-up|fr>>>,
+    all feedback matrices lie within <math|3*\<delta\><rsub|<math-up|fr>>> of
+    <math|1>. For small enough <math|\<delta\><rsub|<math-up|fr>>> they lie
+    in the projection ball, and <math|h<rsub|x>=\<pi\><around|(|F<rsub|x><around|(|h|)>|)>>.
 
     Center two minimizers <math|h,k> in this way and set
-    <math|u=max<rsub|x><around|\<\|\|\>|h<rsub|x>-k<rsub|x>|\<\|\|\>><rsub|<math-up|F>>>.
+    <math|u=max<rsub|x><around|\<\|\|\>|h<rsub|x>-k<rsub|x>|\<\|\|\>><rsub|G>>.
     Their feedback differences satisfy
 
     <\equation*>
-      <around|\<\|\|\>|F<rsub|x><around|(|h|)>-F<rsub|x><around|(|k|)>|\<\|\|\>><rsub|<math-up|F>>\<leqslant\>u,<space|2em><around|\<\|\|\>|F<rsub|x><around|(|h|)>-F<rsub|x><around|(|k|)>-<around|(|<wide|h|\<bar\>>-<wide|k|\<bar\>>|)>|\<\|\|\>><rsub|<math-up|F>>\<leqslant\>d*u.
+      <around|\<\|\|\>|F<rsub|x><around|(|h|)>-F<rsub|x><around|(|k|)>|\<\|\|\>><rsub|G>\<leqslant\>u,<space|2em><around|\<\|\|\>|F<rsub|x><around|(|h|)>-F<rsub|x><around|(|k|)>-<around|(|<wide|h|\<bar\>>-<wide|k|\<bar\>>|)>|\<\|\|\>><rsub|G>\<leqslant\><sqrt|n<rsub|G>>*<space|0.17em>\<delta\><rsub|<math-up|fr>>*u.
     </equation*>
 
-    The two centroids are normal to <math|G> at <math|1>, so
+    For the second inequality, apply <math|<around|\<\|\|\>|A*B|\<\|\|\>><rsub|G>\<leqslant\><around|\<\|\|\>|A|\<\|\|\>><rsub|G><around|\<\|\|\>|B|\<\|\|\>><rsub|<math-up|op>>>
+    to each summand and use <math|<around|\<\|\|\>|B|\<\|\|\>><rsub|<math-up|op>>\<leqslant\><sqrt|n<rsub|G>><around|\<\|\|\>|B|\<\|\|\>><rsub|G>>.
+    The differences <math|<wide|h|\<bar\>>-1> and <math|<wide|k|\<bar\>>-1>
+    are normal to <math|G> at <math|1>, so
     <math|\<Pi\><rsub|<gLie>>*<around|(|<wide|h|\<bar\>>-<wide|k|\<bar\>>|)>=0>.
     At an index attaining the maximum, <eqref|ch04:projection-bound> gives
-    <math|u\<leqslant\><around|(|d+1/4|)>*u>. Taking <math|d\<leqslant\>1/4>
+    <math|u\<leqslant\><around|(|<sqrt|n<rsub|G>>*<space|0.17em>\<delta\><rsub|<math-up|fr>>+1/4|)>*u>.
+    Choosing <math|<sqrt|n<rsub|G>>*<space|0.17em>\<delta\><rsub|<math-up|fr>>\<leqslant\>1/4>
     forces <math|u=0>. Thus minimizers differ only by a common left
     multiplier, removed by <math|h<rsub|0>=1>. Only averages occur in the
     contraction, which explains why its constants do not grow with the patch.
@@ -4131,15 +4154,17 @@
     argument to a rectangular slice <math|X> with <math|r> varying
     coordinates. Write <math|\<Sigma\><rsub|<math-up|link>>*<around|(|X,U|)>>
     and <math|\<Sigma\><rsub|<math-up|plaq>>*<around|(|X,U|)>> for the sums
-    of <math|\<chi\>> over its internal positive links and plaquettes,
-    respectively. Choose a layer <math|X<rsub|0>> perpendicular to the last
-    coordinate whose internal plaquette sum is no greater than the average
-    over layers. Use the axial construction on that layer, then extend it
-    along the last coordinate, setting those links to one. Every remaining
-    link differs from its transported link on the chosen layer by a product
-    of intervening plaquettes. The triangle inequality for the normalized
-    Hilbert\USchmidt distance and conjugation invariance yield, writing
-    <math|n=2*R+1>,
+    of <math|<around|\<\|\|\>|U<rsub|e>-1|\<\|\|\>><rsub|G>> over its
+    internal positive links and <math|<around|\<\|\|\>|U<rsub|\<square\>>-1|\<\|\|\>><rsub|G>>
+    over its internal plaquettes, respectively. Choose a layer
+    <math|X<rsub|0>> perpendicular to the last coordinate whose internal
+    plaquette sum is no greater than the average over layers. Use the axial
+    construction on that layer, then extend it along the last coordinate,
+    setting those links to one. Every remaining link differs from its
+    transported link on the chosen layer by a product of intervening
+    plaquettes. By the triangle inequality and unitary invariance of
+    <math|<around|\<\|\|\>|\<cdummy\>|\<\|\|\>><rsub|G>>, with <math|n=2*R+1>
+    we obtain
 
     <\equation*>
       \<Sigma\><rsub|<math-up|link>>*<around|(|X,U<rsup|<math-up|ax>>|)>\<leqslant\>n*<around*|(|\<Sigma\><rsub|<math-up|link>>*<around|(|X<rsub|0>,U<rsup|<math-up|ax>>|)>+\<Sigma\><rsub|<math-up|plaq>>*<around|(|X,U|)>|)>.
@@ -4184,19 +4209,19 @@
   connector average to the group, minimizes
 
   <\equation>
-    \<cal-P\><rsub|e><around|(|u|)>=<big|sum><rsub|z>w<rsub|z><rsup|<math-up|av>>*w*<around|(|Y<rsub|e,z>*u<rsup|-1>|)>,<space|2em>u\<in\>G.<label|ch04:predictor-cost>
+    \<cal-P\><rsub|e><around|(|u|)>=<tfrac|1|2><big|sum><rsub|z>w<rsub|z><rsup|<math-up|av>>*<around|\<\|\|\>|Y<rsub|e,z>-u|\<\|\|\>><rsub|G><rsup|2>,<space|2em>u\<in\>G.<label|ch04:predictor-cost>
   </equation>
 
-  Since all matrices <math|Y<rsub|e,z>> and <math|u> are unitary,
+  Expanding about the weighted mean gives
 
   <\equation*>
-    2*n<rsub|G>*\<cal-P\><rsub|e><around|(|u|)>=<big|sum><rsub|z>w<rsub|z><rsup|<math-up|av>>\<\|\|\>Y<rsub|e,z>-<wide|Y|\<bar\>><rsub|e>\<\|\|\><rsub|<math-up|F>><rsup|2>+<around|\<\|\|\>|<wide|Y|\<bar\>><rsub|e>-u|\<\|\|\>><rsub|<math-up|F>><rsup|2>.
+    2*\<cal-P\><rsub|e><around|(|u|)>=<big|sum><rsub|z>w<rsub|z><rsup|<math-up|av>>\<\|\|\>Y<rsub|e,z>-<wide|Y|\<bar\>><rsub|e>\<\|\|\><rsub|G><rsup|2>+<around|\<\|\|\>|<wide|Y|\<bar\>><rsub|e>-u|\<\|\|\>><rsub|G><rsup|2>.
   </equation*>
 
   Thus the minimizers are precisely the nearest group points to
   <math|<wide|Y|\<bar\>><rsub|e>>. If <math|min<rsub|u\<in\>G>
   \<cal-P\><rsub|e><around|(|u|)>\<less\>\<varepsilon\><rsub|<math-up|pred>>>,
-  the identity above gives <math|<math-up|dist><rsub|<math-up|F>><around|(|<wide|Y|\<bar\>><rsub|e>,G|)>\<less\><sqrt|2*n<rsub|G>*\<varepsilon\><rsub|<math-up|pred>>>>.
+  the identity above gives <math|min<rsub|u\<in\>G><around|\<\|\|\>|<wide|Y|\<bar\>><rsub|e>-u|\<\|\|\>><rsub|G>\<less\><sqrt|2*\<varepsilon\><rsub|<math-up|pred>>>>.
   Choose <math|\<varepsilon\><rsub|<math-up|pred>>> small enough that
   <math|<wide|Y|\<bar\>><rsub|e>> then lies in the tubular neighborhood used
   in Lemma<nbsp><reference|ch04:frame-lemma>. The block average is then
@@ -4206,9 +4231,9 @@
   and assign uniform mass to redundant block average labels
   <math|z\<in\>\<bbb-B\><rsub|R>>. If the test fails, let label <math|z>
   select <math|Q<rsub|e><rsup|<math-up|pred>>=Y<rsub|e,z>> with probability
-  <math|w<rsub|z><rsup|<math-up|av>>>. Equality with either cutoff belongs to
-  the alternative branch; the strict inequalities defining the minimizing
-  branches are part of the convention.
+  <math|w<rsub|z><rsup|<math-up|av>>>. Equality in either the loop test or
+  the test on <math|min<rsub|u\<in\>G> \<cal-P\><rsub|e><around|(|u|)>>
+  selects the corresponding axial frame or connector.
 
   <big-figure|<with|par-mode|center|<image|monograph-figures/fig-3.svg|244.180274pt|99.497793pt||><label|ch04:fig-block-paths>>|Two
   connectors in the matrix average <math|<wide|Y|\<bar\>><rsub|e>> for
@@ -4233,7 +4258,7 @@
   soft conditioning used here.> For <math|\<gamma\>\<geqslant\>0>, let
 
   <\equation*>
-    q<rsub|\<gamma\>><around|(|u|)>=<frac|e<rsup|-\<gamma\>*w<around|(|u|)>>|<big|int><rsub|G>e<rsup|-\<gamma\>*w<around|(|v|)>>*<space|0.17em>d*h<around|(|v|)>>.
+    q<rsub|\<gamma\>><around|(|u|)>=Z<rsub|\<gamma\>><rsup|-1>*e<rsup|-\<gamma\>*<around|\<\|\|\>|u-1|\<\|\|\>><rsub|G><rsup|2>/2>,<space|2em>Z<rsub|\<gamma\>>=<big|int><rsub|G>e<rsup|-\<gamma\>*<around|\<\|\|\>|v-1|\<\|\|\>><rsub|G><rsup|2>/2>*<space|0.17em>d*h<around|(|v|)>.
   </equation*>
 
   This is a probability density on <math|G> with respect to Haar measure.
@@ -4241,13 +4266,8 @@
   For a fixed fine field <math|U> and choice <math|\<alpha\>>, the block
   average <math|Q<rsub|e>=Q<rsub|e><rsup|<math-up|pred>>*<around|(|U,\<alpha\>|)>>
   represents transport across the coarse edge <math|e>. We impose agreement
-  of <math|V<rsub|e>> with <math|Q<rsub|e>> by a soft constraint. By
-  unitarity and <eqref|ch01:chord>, its energy is
-
-  <\equation*>
-    b*\<beta\>*w*<around|(|V<rsub|e>*Q<rsub|e><rsup|-1>|)>=<frac|b*\<beta\>|2*n<rsub|G>>*<around|\<\|\|\>|V<rsub|e>-Q<rsub|e>|\<\|\|\>><rsub|<math-up|F>><rsup|2>.
-  </equation*>
-
+  of <math|V<rsub|e>> with <math|Q<rsub|e>> by a soft constraint. By unitary
+  invariance its energy is <math|<tfrac|1|2>b*\<beta\>*<around|\<\|\|\>|V<rsub|e>-Q<rsub|e>|\<\|\|\>><rsub|G><rsup|2>>.
   This penalizes the discrepancy in a gauge-invariant way, since
   <math|V<rsub|e>> and <math|Q<rsub|e>> transform by the same matrices at
   their endpoints. At large <math|b*\<beta\>> the conditional law thus
@@ -4323,155 +4343,221 @@
   The equality of integrals <eqref|ch04:exact-integral> holds even when the
   coarse action has terms beyond the Wilson plaquette action.
 
-  <section|A first-power bound for the actual block
-  average><label|ch04:predictor-geometry>
+  <section|A linear bound on coarse plaquette
+  distances><label|ch04:predictor-geometry>
 
-  The later tree comparison needs the block average on both of its branches,
-  including configurations far from the identity. Let
-  <math|\<cal-P\><rsub|y><around|(|U|)>> be the sum of fine plaquette
-  distances from the identity in the lifted macro-box of radius
-  <math|<around|(|j+7|)>*L> centered at <math|L*y>. Write
-  <math|\<cal-P\><rsub|y><around|(|U|)>=<big|sum><rsub|q>m<rsub|y><around|(|q|)>*\<chi\><around|(|U<rsub|q>|)>>,
-  counting periodic lifts with their multiplicities. For a coarse plaquette
-  <math|p> based near <math|y>, fix the block choices <math|\<alpha\>> and
-  abbreviate <math|Q<rsub|e><rsup|<math-up|pred>>*<around|(|U,\<alpha\>|)>>
-  to <math|Q<rsub|e><around|(|U|)>>. We shall prove
+  We bound the distance of a coarse plaquette holonomy from the identity in
+  terms of the fine plaquette holonomies in a surrounding box and the
+  discrepancies between the four coarse boundary links and their block
+  averages. Fix a site <math|y> of the coarse torus
+  <math|\<Lambda\><rsub|s>>. Choose a lift
+  <math|<wide|y|~>\<in\><ZZ><rsup|4>> and form the fine lattice box
 
-  <\equation>
-    \<chi\><around|(|V<rsub|p>|)>\<leqslant\><big|sum><rsub|e\<in\>\<partial\>*p>\<chi\>*<around|(|V<rsub|e>*Q<rsub|e><around|(|U|)><rsup|-1>|)>+C<rsub|j>*L<rsup|-2>*\<cal-P\><rsub|y><around|(|U|)>,<space|2em>sup<rsub|q>
-    <big|sum><rsub|y>m<rsub|y><around|(|q|)>\<leqslant\>K<rsub|j>.<label|ch04:macro-comparison>
-  </equation>
+  <\equation*>
+    M<rsub|y>=L*<wide|y|~>+\<bbb-B\><rsub|<around|(|j+7|)>*L>.
+  </equation*>
 
-  The constants are independent of the block ratio and period. The
-  first-power estimate is essential: a square-root consequence of a
-  squared-energy comparison would not give the factor needed here.
+  For a fine plaquette <math|q> on <math|\<Lambda\><rsub|L*s>>, let
+  <math|m<rsub|y><around|(|q|)>> be the number of its lifts with all four
+  vertices in <math|M<rsub|y>>. Changing the lift of <math|y> translates the
+  whole box by a fine period and leaves this count unchanged. If
+  <math|s\<gtr\>2*<around|(|j+7|)>>, the box can contain at most one lift of
+  each plaquette. Write
+
+  <\equation*>
+    \<cal-P\><rsub|y><around|(|U|)>=<big|sum><rsub|q>m<rsub|y><around|(|q|)>*<around|\<\|\|\>|U<rsub|q>-1|\<\|\|\>><rsub|G>,
+  </equation*>
+
+  where the sum ranges over all fine plaquettes on the torus, with one
+  orientation per square.
 
   <\lemma>
-    <dueto|First-power block average comparison><label|ch04:predictor-comparison>Fix
-    the smoothing order <math|j> and frame eligibility constants. For the
-    block average of <eqref|ch04:predictor-cost>, every set of choices
-    <math|\<alpha\>> with <math|\<lambda\>*<around|(|U,\<alpha\>|)>\<gtr\>0>
-    satisfies <eqref|ch04:macro-comparison>, with <math|C<rsub|j>,K<rsub|j>>
-    independent of <math|L> and the period, whenever the coarse period is at
-    least <math|100*<around|(|j+8|)>>.
+    <dueto|Coarse plaquette estimate><label|ch04:predictor-comparison>Fix the
+    smoothing order <math|j> and the constants in the frame and block average
+    choices of Sections<nbsp><reference|ch04:frames>
+    and<nbsp><reference|ch04:kernel-section>. Suppose
+    <math|s\<geqslant\>100*<around|(|j+8|)>>. Let <math|p> be a coarse
+    plaquette whose four vertices lie within periodic sup distance <math|2>
+    of <math|y> in coarse lattice units. In particular, <math|y> may be any
+    vertex of <math|p>. For every fine field <math|U>, coarse field <math|V>,
+    and choice <math|\<alpha\>> with <math|\<lambda\>*<around|(|U,\<alpha\>|)>\<gtr\>0>,
+    write <math|Q<rsub|e><around|(|U|)>=Q<rsub|e><rsup|<math-up|pred>>*<around|(|U,\<alpha\>|)>>.
+    Then
+
+    <\equation>
+      <around|\<\|\|\>|V<rsub|p>-1|\<\|\|\>><rsub|G>\<leqslant\><big|sum><rsub|e\<in\>\<partial\>*p>\<\|\|\>V<rsub|e>-Q<rsub|e><around|(|U|)>\<\|\|\><rsub|G>+C<rsub|j>*L<rsup|-2>*\<cal-P\><rsub|y><around|(|U|)>,<space|2em>sup<rsub|q>
+      <big|sum><rsub|y\<in\>\<Lambda\><rsub|s>>m<rsub|y><around|(|q|)>\<leqslant\><around|(|2*j+15|)><rsup|4>.<label|ch04:macro-comparison>
+    </equation>
+
+    The constant <math|C<rsub|j>> is independent of <math|L> and <math|s>.
+  </lemma>
+
+  <\lemma>
+    <dueto|Mean distance from a constant frame><label|ch04:minimizing-frame-bound>Let
+    <math|U> be a link field on a finite lattice box <math|X>, and let
+    <math|h> minimize the frame energy <eqref|ch04:frame-energy> on <math|X>.
+    Take uniform averages over the indicated sites <math|x,z\<in\>X> and
+    coordinate orders <math|o\<in\>S<rsub|4>>. There exists <math|c\<in\>G>
+    such that
+
+    <\equation>
+      <math-up|av><rsub|x><around|\<\|\|\>|h<rsub|x>-c|\<\|\|\>><rsub|G>\<leqslant\>C<rsub|G><math-up|av><rsub|x,z,o><around|\<\|\|\>|T<rsub|U>*<around|(|x\<to\>z;o|)>-1|\<\|\|\>><rsub|G>,<label|ch04:frame-first-power>
+    </equation>
+
+    where <math|C<rsub|G>> depends only on <math|G>.
   </lemma>
 
   <\proof>
-    We first record the estimate for a minimizing frame on a finite set of
-    <math|N> points. Write <math|W<rsub|i*j*\<alpha\>>> for its path
-    transports, with reverse paths paired among the labels <math|\<alpha\>>.
-    In what follows <math|<math-up|av>> denotes the uniform average over its
-    subscripts: each point index ranges over the <math|N> points and
-    <math|\<alpha\>> over the path labels. Put
-    <math|b<rsub|i>=<math-up|av><rsub|j,\<alpha\>><space|0.17em>\<chi\><around|(|W<rsub|i*j*\<alpha\>>|)>>
-    and <math|b=<math-up|av><rsub|i><space|0.17em>b<rsub|i>>. If <math|h>
-    minimizes the averaged squared-distance energy, then some <math|c\<in\>G>
-    satisfies
+    Put <math|d<rsub|x>=<math-up|av><rsub|z,o><around|\<\|\|\>|T<rsub|U>*<around|(|x\<to\>z;o|)>-1|\<\|\|\>><rsub|G>>
+    and <math|<wide|d|\<bar\>>=<math-up|av><rsub|x><space|0.17em>d<rsub|x>>.
+    The constant frame has energy at most <math|<wide|d|\<bar\>>>, since each
+    path distance is at most two. Minimality and the squared triangle
+    inequality give <math|<math-up|av><rsub|x,z><around|\<\|\|\>|h<rsub|x>-h<rsub|z>|\<\|\|\>><rsub|G><rsup|2>\<leqslant\>8*<wide|d|\<bar\>>>.
+    Let <math|m=<math-up|av><rsub|z><space|0.17em>h<rsub|z>> and
+    <math|m<rsub|x>=<math-up|av><rsub|z,o><space|0.17em>h<rsub|z>*T<rsub|U>*<around|(|x\<to\>z;o|)><rsup|-1>>,
+    so <math|<around|\<\|\|\>|m<rsub|x>-m|\<\|\|\>><rsub|G>\<leqslant\>d<rsub|x>>.
+    As in the proof of Lemma<nbsp><reference|ch04:frame-lemma>, varying
+    <math|h<rsub|x>> shows that it is a nearest group element to
+    <math|m<rsub|x>>. Indeed, reversing the path interchanges the two
+    off-diagonal terms involving <math|x>. Freezing the second endpoint of
+    the diagonal term adds a nonnegative squared distance that vanishes at
+    <math|h<rsub|x>>.
+
+    Choose <math|c> nearest to <math|m>. Since each <math|h<rsub|x>> lies in
+    <math|G>, Jensen's inequality gives <math|<around|\<\|\|\>|m-c|\<\|\|\>><rsub|G><rsup|2>\<leqslant\><math-up|av><rsub|x><around|\<\|\|\>|m-h<rsub|x>|\<\|\|\>><rsub|G><rsup|2>\<leqslant\>8*<wide|d|\<bar\>>>.
+    Choose <math|\<varepsilon\>\<gtr\>0> so that the nearest-point projection
+    is Lipschitz on the ball of radius <math|2*\<varepsilon\>> about
+    <math|c>, uniformly in <math|c\<in\>G>, as in
+    Lemma<nbsp><reference|ch04:frame-lemma>. First suppose
+    <math|8*<wide|d|\<bar\>>\<less\>\<varepsilon\><rsup|2>>. At sites with
+    <math|d<rsub|x>\<less\>\<varepsilon\>> both <math|m> and <math|m<rsub|x>>
+    lie in this ball, so <math|<around|\<\|\|\>|h<rsub|x>-c|\<\|\|\>><rsub|G>\<leqslant\>C<rsub|G>*d<rsub|x>>.
+    At the remaining sites use <math|<around|\<\|\|\>|h<rsub|x>-c|\<\|\|\>><rsub|G>\<leqslant\>2\<leqslant\>2*d<rsub|x>/\<varepsilon\>>.
+    Averaging gives <eqref|ch04:frame-first-power>. For
+    <math|8*<wide|d|\<bar\>>\<geqslant\>\<varepsilon\><rsup|2>> the bound
+    follows from <math|<around|\<\|\|\>|h<rsub|x>-c|\<\|\|\>><rsub|G>\<leqslant\>2>.
+    The same proof applies on any finite set for a uniformly averaged family
+    of paths paired under reversal with identity transports on the diagonal.
+  </proof>
+
+  <\render-proof|Proof of Lemma<nbsp><reference|ch04:predictor-comparison>>
+    Let <math|X> be a fine lattice box with <math|\<ell\>> sites in each
+    direction and <math|N=\<ell\><rsup|4>>. For a link field <math|U> on
+    <math|X>, define the sum over its internal positive links by
+
+    <\equation*>
+      E<rsub|X><around|(|U|)>=<big|sum><rsub|\<mu\>=1><rsup|4><big|sum><rsub|<stack|<tformat|<table|<row|<cell|x\<in\>X>>|<row|<cell|x+e<rsub|\<mu\>>\<in\>X>>>>>><around|\<\|\|\>|U*<around|(|x,\<mu\>|)>-1|\<\|\|\>><rsub|G>.
+    </equation*>
+
+    For each coordinate order <math|o> we have
+
+    <\equation*>
+      <big|sum><rsub|x,z\<in\>X><around|\<\|\|\>|T<rsub|U>*<around|(|x\<to\>z;o|)>-1|\<\|\|\>><rsub|G>\<leqslant\>N*\<ell\>*E<rsub|X><around|(|U|)>.
+    </equation*>
+
+    Indeed, choose <math|x,z> independently and uniformly in <math|X>. On the
+    segment in direction <math|\<mu\>>, the other three coordinates are
+    uniform on the <math|\<ell\><rsup|3>> transverse sites. Each is taken
+    from <math|x> or <math|z> according to the order <math|o>. The triangle
+    inequality bounds the segment distance by the sum of link distances along
+    its entire coordinate line. Its expectation is therefore at most
+    <math|\<ell\><rsup|-3>> times the sum over all positive
+    <math|\<mu\>>-links in <math|X>. Sum over <math|\<mu\>> and multiply by
+    <math|N<rsup|2>>.
+
+    Let <math|H> be any gauge on <math|X>. If <math|f> is the minimizing
+    frame for <math|U>, then <math|h<rsub|x>=f<rsub|x>*H<rsub|x><rsup|-1>>
+    minimizes the frame energy for <math|H\<cdot\>U>, since substituting
+    <math|h> gives the same energy term by term. A common left multiplication
+    can restore the normalization at the centre. Applying
+    Lemma<nbsp><reference|ch04:minimizing-frame-bound> and the path bound
+    gives
+
+    <\equation*>
+      <big|sum><rsub|x\<in\>X><around|\<\|\|\>|f<rsub|x>-c*H<rsub|x>|\<\|\|\>><rsub|G>\<leqslant\>C<rsub|G>*\<ell\>*E<rsub|X>*<around|(|H\<cdot\>U|)>
+    </equation*>
+
+    for some <math|c\<in\>G>. For an eligible axial frame, put
+    <math|g<rsub|x>=f<rsub|x>*H<rsub|x><rsup|-1>>. The pure gauge
+    <math|g\<cdot\>1> has transport <math|g<rsub|x>*g<rsub|z><rsup|-1>> from
+    <math|x> to <math|z>, and the linkwise triangle inequality gives
+    <math|E<rsub|X>*<around|(|g\<cdot\>1|)>\<leqslant\>E<rsub|X>*<around|(|f\<cdot\>U|)>+E<rsub|X>*<around|(|H\<cdot\>U|)>>.
+    Applying the path bound to <math|g\<cdot\>1> and averaging over <math|z>
+    yields some <math|c=g<rsub|z>> with
+
+    <\equation*>
+      <big|sum><rsub|x\<in\>X><around|\<\|\|\>|f<rsub|x>-c*H<rsub|x>|\<\|\|\>><rsub|G>\<leqslant\>\<ell\>*<around*|(|E<rsub|X>*<around|(|H\<cdot\>U|)>+E<rsub|X>*<around|(|f\<cdot\>U|)>|)>.
+    </equation*>
+
+    By the eligibility condition <eqref|ch04:axial-eligible>,
+    <math|E<rsub|X>*<around|(|f\<cdot\>U|)>\<leqslant\>a<rsub|<math-up|ax>>*\<ell\>*<big|sum><rsub|q\<subset\>X><around|\<\|\|\>|U<rsub|q>-1|\<\|\|\>><rsub|G>>,
+    where the sum runs over plaquettes with all four vertices in <math|X>.
+
+    Now choose the axial gauge <math|H> of
+    Lemma<nbsp><reference|ch04:frame-lemma> on <math|M<rsub|y>>. Since this
+    box has side <math|2*<around|(|j+7|)>*L+1>, the axial estimate gives
+    <math|E<rsub|M<rsub|y>>*<around|(|H\<cdot\>U|)>\<leqslant\>C<rsub|j>*L*\<cal-P\><rsub|y><around|(|U|)>>.
+    Lift the four vertices <math|z> of <math|p> to
+    <math|<wide|y|~>+\<bbb-B\><rsub|2>>. Their frame patches
+    <math|L*z+\<bbb-B\><rsub|R>>, with <math|R=<around|(|j+3|)>*L>, and the
+    straight paths between them all lie in <math|M<rsub|y>>. Each patch has
+    side <math|2*R+1=O<rsub|j><around|(|L|)>>. Applying the preceding bounds
+    on that patch, for either frame choice, gives <math|c<rsub|z>\<in\>G>
+    such that
 
     <\equation>
-      <math-up|av><rsub|i><space|0.17em>\<chi\>*<around|(|h<rsub|i>*c<rsup|-1>|)>\<leqslant\>C<rsub|G>*b.<label|ch04:frame-first-power>
+      <big|sum><rsub|i\<in\>\<bbb-B\><rsub|R>><around|\<\|\|\>|h<rsub|z,i>-c<rsub|z>*H<rsub|L*z+i>|\<\|\|\>><rsub|G>\<leqslant\>C<rsub|j>*L<rsup|2>*\<cal-P\><rsub|y><around|(|U|)>.<label|ch04:patch-frame-sum>
     </equation>
 
-    Here the constant is independent of <math|N> and the number of path
-    labels. To verify this, comparison with the constant frame and
-    <math|\<chi\><rsup|2>/2\<leqslant\>\<chi\>> give
-    <math|<math-up|av><rsub|i,j><around|\<\|\|\>|h<rsub|i>-h<rsub|j>|\<\|\|\>><rsub|<math-up|F>><rsup|2>\<leqslant\>C<rsub|G>*b>.
-    Let <math|m=<math-up|av><rsub|j><space|0.17em>h<rsub|j>> and
-    <math|m<rsub|i>=<math-up|av><rsub|j,\<alpha\>><space|0.17em>h<rsub|j>*W<rsub|i*j*\<alpha\>><rsup|-1>>.
-    Varying one frame coordinate shows that <math|h<rsub|i>> is a nearest
-    group point to <math|m<rsub|i>>, and <math|<around|\<\|\|\>|m<rsub|i>-m|\<\|\|\>><rsub|<math-up|F>>\<leqslant\><sqrt|n<rsub|G>>*b<rsub|i>>.
-    The diagonal self-term causes no problem: freezing its second endpoint
-    adds a nonnegative squared distance from the identity which is zero at
-    the minimizer.
-
-    When <math|b> is sufficiently small, choose a nearest group point
-    <math|c> to <math|m>. The mean-square bound puts <math|m> in a fixed
-    tubular neighborhood of <math|c>. The smooth nearest-point projection of
-    Lemma<nbsp><reference|ch04:frame-lemma> is uniformly Lipschitz there. For
-    <math|b<rsub|i>> smaller than a fixed constant it therefore gives
-    <math|\<chi\>*<around|(|h<rsub|i>*c<rsup|-1>|)>\<leqslant\>C<rsub|G>*b<rsub|i>>.
-    For the other indices, <math|\<chi\>\<leqslant\>2\<leqslant\>C<rsub|G>*b<rsub|i>>.
-    Averaging proves <eqref|ch04:frame-first-power>. If <math|b> is not
-    small, the same conclusion follows from <math|\<chi\>\<leqslant\>2> after
-    enlarging <math|C<rsub|G>>.
-
-    Fix a box <math|X> of side <math|q> with <math|N=q<rsup|4>> sites and a
-    coordinate order. Write <math|U<rsub|x\<to\>y>> for transport along the
-    corresponding path from <math|x> to <math|y>. Then
+    The convolution weights satisfy <math|w<rsub|i><rsup|<math-up|av>>\<leqslant\>L<rsup|-4>>.
+    Given the last <math|j-1> uniform points, at most one of the
+    <math|L<rsup|4>> possible first points yields a prescribed sum. Thus each
+    endpoint frame in the connector <eqref|ch04:connector> contributes at
+    most <math|C<rsub|j>*L<rsup|-2>*\<cal-P\><rsub|y><around|(|U|)>> to the
+    weighted discrepancy. For its middle path, at each of the <math|L> steps
+    translation of the offset <math|i> is injective. The unweighted sum of
+    the path distances in gauge <math|H> is therefore at most
+    <math|L*E<rsub|M<rsub|y>>*<around|(|H\<cdot\>U|)>>. Combining these
+    bounds gives, for each link of <math|\<partial\>*p> written in its
+    positive orientation <math|e=<around|(|z,\<mu\>|)>>,
 
     <\equation*>
-      <big|sum><rsub|x,y\<in\>X>\<chi\><around|(|U<rsub|x\<to\>y>|)>\<leqslant\>4*N*q*<big|sum><rsub|e<text|
-      in box>>\<chi\><around|(|U<rsub|e>|)>.
+      <big|sum><rsub|i>w<rsub|i><rsup|<math-up|av>>*<around|\<\|\|\>|Y<rsub|e,i>-c<rsub|z>*c<rsub|z+e<rsub|\<mu\>>><rsup|-1>|\<\|\|\>><rsub|G>\<leqslant\>C<rsub|j>*L<rsup|-2>*\<cal-P\><rsub|y><around|(|U|)>.
     </equation*>
 
-    Indeed, choose <math|x> and <math|y> independently and uniformly in
-    <math|X>. During the segment in direction <math|\<mu\>>, the other three
-    coordinates are uniform on the <math|q<rsup|3>> transverse sites: each is
-    taken from either <math|x> or <math|y> according to the fixed order. The
-    triangle inequality bounds the distance for this segment by the sum of
-    link distances on its entire coordinate line. Its expectation is thus at
-    most <math|q<rsup|-3>=q/N> times the sum of link distances in the box.
-    Sum over the four directions and multiply by <math|N<rsup|2>> to recover
-    the displayed bound. Apply <eqref|ch04:frame-first-power> after any
-    comparison gauge <math|H>. For a minimizing frame <math|f>, this gives a
-    constant rotation <math|c> such that <math|<big|sum><rsub|i>\<chi\>*<around|(|c<rsup|-1>*f<rsub|i>*H<rsub|i><rsup|-1>|)>\<leqslant\>C<rsub|G>*q*E*<around|(|H\<cdot\>U|)>>,
-    where <math|E> is the sum of bond distances from the identity. For an
-    eligible axial fallback frame, apply the same path count to the pure
-    gauge <math|f*H<rsup|-1>>, whose bond sum is at most
-    <math|E*<around|(|f\<cdot\>U|)>+E*<around|(|H\<cdot\>U|)>>. The
-    eligibility rule bounds the first term by <math|K<rsub|<math-up|ax>>*q>
-    times the sum of plaquette distances from the identity. Thus both frame
-    branches obey the same bound with this additional term.
-
-    Choose an axial gauge <math|H> on the macro-box of radius
-    <math|<around|(|j+7|)>*L>. The axial estimate in
-    Lemma<nbsp><reference|ch04:frame-lemma> gives
-    <math|E*<around|(|H\<cdot\>U|)>\<leqslant\>C<rsub|j>*L*\<cal-P\><rsub|y><around|(|U|)>>.
-    On each translated frame patch, centred at <math|L*z>, let
-    <math|h<rsub|z,i>> be the patch gauge at offset <math|i> as in
-    Section<nbsp><reference|ch04:kernel-section>. Its side is
-    <math|O<rsub|j><around|(|L|)>>, so the preceding bound gives a constant
-    <math|c<rsub|z>\<in\>G> with
+    For either choice of block average and any <math|u<rsub|\<ast\>>\<in\>G>
+    we have
 
     <\equation*>
-      <big|sum><rsub|i\<in\>\<bbb-B\><rsub|R>>\<chi\>*<around|(|c<rsub|z><rsup|-1>*h<rsub|z,i>*H<rsub|L*z+i><rsup|-1>|)>\<leqslant\>C<rsub|j>*L<rsup|2>*\<cal-P\><rsub|y><around|(|U|)>.
+      <around|\<\|\|\>|Q<rsub|e><around|(|U|)>-u<rsub|\<ast\>>|\<\|\|\>><rsub|G>\<leqslant\>2*max
+      <around|{|1,\<varepsilon\><rsub|<math-up|pred>><rsup|-1>|}>*<big|sum><rsub|i>w<rsub|i><rsup|<math-up|av>>*<around|\<\|\|\>|Y<rsub|e,i>-u<rsub|\<ast\>>|\<\|\|\>><rsub|G>.
     </equation*>
 
-    The convolution weights obey <math|w<rsub|i><rsup|<math-up|av>>\<leqslant\>L<rsup|-4>>:
-    condition on all but the first of the <math|j> uniform points. For a
-    fixed sum there is at most one possible first point. The two endpoint
-    errors in an averaged connector consequently cost at most
-    <math|C<rsub|j>*L<rsup|-2>*\<cal-P\><rsub|y><around|(|U|)>>. For the
-    middle straight path, each of its <math|L> translations is injective, so
-    its unweighted sum is at most <math|L*E*<around|(|H\<cdot\>U|)>>. Its
-    weighted sum has the same bound <math|C<rsub|j>*L<rsup|-2>*\<cal-P\><rsub|y><around|(|U|)>>.
+    On the minimizing branch <math|Q<rsub|e><around|(|U|)>> is a nearest
+    group point to the weighted mean of the <math|Y<rsub|e,i>>, so the
+    triangle inequality gives the factor two. On the other branch the minimum
+    of <eqref|ch04:predictor-cost> is at least
+    <math|\<varepsilon\><rsub|<math-up|pred>>>. Every group distance is at
+    most two, so <math|\<varepsilon\><rsub|<math-up|pred>>\<leqslant\>\<cal-P\><rsub|e><around|(|u<rsub|\<ast\>>|)>\<leqslant\><big|sum><rsub|i>w<rsub|i><rsup|<math-up|av>>*<around|\<\|\|\>|Y<rsub|e,i>-u<rsub|\<ast\>>|\<\|\|\>><rsub|G>>
+    and <math|<around|\<\|\|\>|Q<rsub|e><around|(|U|)>-u<rsub|\<ast\>>|\<\|\|\>><rsub|G>\<leqslant\>2>.
+    Take <math|u<rsub|\<ast\>>=c<rsub|z>*c<rsub|z+e<rsub|\<mu\>>><rsup|-1>>
+    on each link. These four transports multiply to the identity around
+    <math|p>, with inverses on reversed links. Replacing one factor at a
+    time, first by the corresponding <math|Q<rsub|e><around|(|U|)>> and then
+    by <math|V<rsub|e>>, proves the first inequality in
+    <eqref|ch04:macro-comparison>.
 
-    Fix a coarse edge <math|e=<around|(|z,\<mu\>|)>> and write
-    <math|Q=Q<rsub|e><around|(|U|)>> and <math|Y<rsub|i>=Y<rsub|e,i>> for its
-    selected block average and its connector at offset <math|i>. For every
-    <math|u<rsub|\<ast\>>\<in\>G>,
-
-    <\equation*>
-      \<chi\>*<around|(|Q*u<rsub|\<ast\>><rsup|-1>|)>\<leqslant\>2*max
-      <around|{|1,\<varepsilon\><rsub|<math-up|pred>><rsup|-1>|}>*<big|sum><rsub|i>w<rsub|i><rsup|<math-up|av>>*\<chi\>*<around|(|Y<rsub|i>*u<rsub|\<ast\>><rsup|-1>|)>.
-    </equation*>
-
-    On the minimizing branch this follows by comparison of the nearest group
-    point to the matrix centroid with <math|u<rsub|\<ast\>>>. On the fallback
-    branch, the minimum cost is at least <math|\<varepsilon\><rsub|<math-up|pred>>>,
-    whereas the cost at <math|u<rsub|\<ast\>>> is at most the displayed
-    weighted first moment, and <math|\<chi\>\<leqslant\>2>. This holds for
-    every selected fallback connector, however small its probability. Use
-    <math|u<rsub|\<ast\>>=c<rsub|z>*c<rsub|z+e<rsub|\<mu\>>><rsup|-1>>. The
-    four rotations cancel around a coarse plaquette, proving its block
-    average curvature bound. The triangle inequality bounds the resulting
-    change in plaquette distance by the sum of the four link distances
-    <math|\<chi\>*<around|(|V<rsub|e>*Q<rsub|e><around|(|U|)><rsup|-1>|)>>.
-    Finally, a fixed fine plaquette belongs to only
-    <math|O<rsub|j><around|(|1|)>> macro-boxes centered at points of
-    <math|L<ZZ><rsup|4>>; count its periodic lifts with multiplicity. This
-    proves the second bound in <eqref|ch04:macro-comparison> as well.
-  </proof>
+    For the overlap bound, fix one lift of <math|q> with base vertex
+    <math|a\<in\><ZZ><rsup|4>>. Summing <math|m<rsub|y><around|(|q|)>> over
+    coarse sites is equivalent to fixing this lift and counting all centres
+    <math|L*z>, <math|z\<in\><ZZ><rsup|4>>, whose boxes contain it. Indeed, a
+    lift translated by a fine period is in <math|M<rsub|y>> exactly when the
+    fixed lift is in the oppositely translated box. Each coordinate must
+    satisfy <math|<around|\||L*z<rsub|\<mu\>>-a<rsub|\<mu\>>|\|>\<leqslant\><around|(|j+7|)>*L>,
+    leaving at most <math|2*<around|(|j+7|)>+1=2*j+15> integer choices for
+    <math|z<rsub|\<mu\>>>. The four coordinates give the stated bound
+    <math|<around|(|2*j+15|)><rsup|4>=O<around|(|j<rsup|4>|)>>.
+  </render-proof>
 
   <section|Small fields and density coordinates><label|ch04:density-coordinates>
 
@@ -4496,7 +4582,7 @@
 
   At the present scale write <math|\<Lambda\>=\<Lambda\><rsub|R<rsub|p>*D<rsub|m>>>,
   and let <math|<math-up|Bad><rsub|m><around|(|U|)>> be the sites incident to
-  at least one plaquette with <math|\<chi\><around|(|U<rsub|\<square\>>|)>\<gtr\>t<rsub|m>>.
+  at least one plaquette with <math|<around|\<\|\|\>|U<rsub|\<square\>>-1|\<\|\|\>><rsub|G>\<gtr\>t<rsub|m>>.
   A set <math|X> is small-field if <math|X\<cap\><math-up|Bad><rsub|m><around|(|U|)>=\<varnothing\>>;
   write its indicator as <math|h<rsub|X><around|(|U|)>>. Thus every plaquette
   meeting <math|X> must have small distance from the identity. This
@@ -4554,14 +4640,14 @@
   with <math|16*c<rsub|<math-up|lin>>\<less\>c<rsub|<math-up|dir>>>. Define
 
   <\align>
-    <tformat|<table|<row|<cell|<math-up|clip><rsub|t><around|(|r|)>>|<cell|=<choice|<tformat|<table|<row|<cell|c<rsub|<math-up|dir>>*r<rsup|2>/2,>|<cell|r\<leqslant\>t,>>|<row|<cell|c<rsub|<math-up|lin>>*t*r,>|<cell|r\<gtr\>t,>>>>><eq-number><label|ch04:clip>>>|<row|<cell|\<chi\><rsup|<math-up|rel>><rsub|m,x><around|(|U|)>>|<cell|=\<b-1\>*<around*|{|\<chi\><around|(|U<rsub|y;\<mu\>*\<nu\>>|)>\<leqslant\>t<rsub|m>*e<rsup|<math-up|dist><around|(|x,y|)>/R<rsup|<math-up|rel>>><text|
+    <tformat|<table|<row|<cell|<math-up|clip><rsub|t><around|(|r|)>>|<cell|=<choice|<tformat|<table|<row|<cell|c<rsub|<math-up|dir>>*r<rsup|2>/2,>|<cell|r\<leqslant\>t,>>|<row|<cell|c<rsub|<math-up|lin>>*t*r,>|<cell|r\<gtr\>t,>>>>><eq-number><label|ch04:clip>>>|<row|<cell|\<chi\><rsup|<math-up|rel>><rsub|m,x><around|(|U|)>>|<cell|=\<b-1\>*<around*|{|<around|\<\|\|\>|U<rsub|y;\<mu\>*\<nu\>>-1|\<\|\|\>><rsub|G>\<leqslant\>t<rsub|m>*e<rsup|<math-up|dist><around|(|x,y|)>/R<rsup|<math-up|rel>>><text|
     for every >y,\<mu\>\<less\>\<nu\>|}>.<eq-number><label|ch04:relaxed-test>>>>>
   </align>
 
   The distance is periodic and measured in lattice units. Although written as
   a test on every plaquette, <eqref|ch04:relaxed-test> reads only a finite
-  neighborhood: <math|\<chi\>\<leqslant\>2> makes all tests with
-  <math|t<rsub|m>*e<rsup|<math-up|dist><around|(|x,y|)>/R<rsup|<math-up|rel>>>\<geqslant\>2>
+  neighborhood: <math|<around|\<\|\|\>|U<rsub|y;\<mu\>*\<nu\>>-1|\<\|\|\>><rsub|G>\<leqslant\>2>
+  makes all tests with <math|t<rsub|m>*e<rsup|<math-up|dist><around|(|x,y|)>/R<rsup|<math-up|rel>>>\<geqslant\>2>
   automatic. Any claim of locality must include the remaining tested
   plaquettes in its dependence region.
 
@@ -4582,7 +4668,7 @@
   the coefficient sums converge absolutely at the fixed finite volume. Set
 
   <\align>
-    <tformat|<table|<row|<cell|P<rsup|<math-up|raw>><rsub|N,m>*<around|(|\<beta\>,U|)>>|<cell|=\<beta\>*<big|sum><rsub|x,\<frak-p\>><around*|[|<math-up|clip><rsub|t<rsub|m>><around|(|\<chi\><around|(|U<rsub|x;\<frak-p\>>|)>|)>+<tfrac|1|2>\<chi\><rsup|<math-up|rel>><rsub|m,x><around|(|U|)>*<around|\||\<cal-L\><rsup|<math-up|path>><rsub|\<frak-p\>>*<around|(|U,x|)>|\|><rsup|2>|]>>>|<row|<cell|>|<cell|<space|1em>+\<beta\>*<big|sum><rsub|x,i><around|(|A<rsub|i><rsup|<around|(|3|)>>+A<rsub|i><rsup|<around|(|4|)>>|)>*<around|(|U,x|)>+<big|sum><rsub|x,i>A<rsub|i><rsup|<around|(|2|)>>*<around|(|U,x|)>,<eq-number>>>|<row|<cell|P<rsup|<math-up|path>><rsub|N,m>*<around|(|\<beta\>,U|)>>|<cell|=<frac|1|<around|\||H<rsub|4>|\|>>*<big|sum><rsub|h\<in\>H<rsub|4>>P<rsup|<math-up|raw>><rsub|N,m>*<around|(|\<beta\>,h<rsup|\<ast\>>*U|)>.<eq-number><label|ch04:path-action>>>>>
+    <tformat|<table|<row|<cell|P<rsup|<math-up|raw>><rsub|N,m>*<around|(|\<beta\>,U|)>>|<cell|=\<beta\>*<big|sum><rsub|x,\<frak-p\>><around*|[|<math-up|clip><rsub|t<rsub|m>><around|(|<around|\<\|\|\>|U<rsub|x;\<frak-p\>>-1|\<\|\|\>><rsub|G>|)>+<tfrac|1|2>\<chi\><rsup|<math-up|rel>><rsub|m,x><around|(|U|)>*<around|\||\<cal-L\><rsup|<math-up|path>><rsub|\<frak-p\>>*<around|(|U,x|)>|\|><rsup|2>|]>>>|<row|<cell|>|<cell|<space|1em>+\<beta\>*<big|sum><rsub|x,i><around|(|A<rsub|i><rsup|<around|(|3|)>>+A<rsub|i><rsup|<around|(|4|)>>|)>*<around|(|U,x|)>+<big|sum><rsub|x,i>A<rsub|i><rsup|<around|(|2|)>>*<around|(|U,x|)>,<eq-number>>>|<row|<cell|P<rsup|<math-up|path>><rsub|N,m>*<around|(|\<beta\>,U|)>>|<cell|=<frac|1|<around|\||H<rsub|4>|\|>>*<big|sum><rsub|h\<in\>H<rsub|4>>P<rsup|<math-up|raw>><rsub|N,m>*<around|(|\<beta\>,h<rsup|\<ast\>>*U|)>.<eq-number><label|ch04:path-action>>>>>
   </align>
 
   The coefficients are held fixed as <math|\<beta\>> varies. Thus this action
@@ -5820,23 +5906,26 @@
   For a fine edge <math|e>, join its endpoints to their block roots along the
   chosen trees. In the tree slice the resulting walk has transport
   <math|U<rsub|e>>. It lies in one or two adjacent blocks and has length at
-  most <math|2*L<rsup|4>-1>. In the macro axial gauge of
-  Section<nbsp><reference|ch04:predictor-geometry>, its distance from the
-  identity is bounded by this length times the sum of bond distances from the
-  identity in the macro-box. The first-power frame estimate controls the two
-  root-to-frame discrepancies; the block average estimate controls the coarse
-  root-to-root transport. Thus
+  most <math|2*L<rsup|4>-1>. In the axial gauge of
+  Section<nbsp><reference|ch04:predictor-geometry>, the distance of this
+  transport from <math|1>, measured in the matrix norm
+  <eqref|ch01:matrix-norm>, is at most the length of the walk times
+  <math|<big|sum><rsub|b><around|\<\|\|\>|U<rsub|b>-1|\<\|\|\>><rsub|G>>,
+  summed over bonds in the macro-box in that gauge. The first-power frame
+  estimate controls the two root-to-frame discrepancies; the block average
+  estimate controls the coarse root-to-root transport. Thus
 
   <\equation>
-    \<chi\><around*|(|U<rsub|e><around|(|<math-up|rep><space|0.17em>V|)><rsub|e><rsup|-1>|)>\<leqslant\>C<rsub|j,L>*\<cal-P\><rsub|y><around|(|U|)>+\<b-1\><rsub|<around|{|e<text|
-    crosses blocks>|}>>*\<chi\>*<around|(|V<rsub|y,\<mu\>>*Q<rsub|y,\<mu\>><around|(|U|)><rsup|-1>|)>.<label|ch05:nonlinear-tree>
+    <around|\<\|\|\>|U<rsub|e>-<around|(|<math-up|rep><space|0.17em>V|)><rsub|e>|\<\|\|\>><rsub|G>\<leqslant\>C<rsub|j,L>*\<cal-P\><rsub|y><around|(|U|)>+\<b-1\><rsub|<around|{|e<text|
+    crosses blocks>|}>>*<around|\<\|\|\>|V<rsub|y,\<mu\>>-Q<rsub|y,\<mu\>><around|(|U|)>|\<\|\|\>><rsub|G>.<label|ch05:nonlinear-tree>
   </equation>
 
   For an internal edge the walk closes at its root and only the first term is
   needed. For a crossing edge, insert the block average between the two root
-  frames and use the triangle inequality for the normalized Hilbert\USchmidt
-  distance. The endpoint errors are bounded by the sum in
-  <eqref|ch04:frame-first-power>, so this step requires no pointwise frame
+  frames and use the triangle inequality for
+  <math|<around|\<\|\|\>|\<cdummy\>|\<\|\|\>><rsub|G>>. The endpoint errors
+  are bounded by the sum over the corresponding frame patch in
+  <eqref|ch04:patch-frame-sum>, so this step requires no pointwise frame
   estimate not already proved. The constant is allowed to depend on <math|L>;
   the stronger pre-<math|L> factor in <eqref|ch04:macro-comparison> is not
   required for this use.
@@ -5844,8 +5933,8 @@
   Apply <eqref|ch05:nonlinear-tree> to <math|U=exp
   <around|(|\<epsilon\>*a|)>> with <math|a> zero on tree edges, and
   <math|V=1>. Divide by <math|<around|\||\<epsilon\>|\|>> and let
-  <math|\<epsilon\>\<to\>0>. The first-order variation of the distance from
-  the identity is the norm on <math|<gLie>>, so
+  <math|\<epsilon\>\<to\>0>. Since <math|<around|\<\|\|\>|e<rsup|\<epsilon\>*X>-1|\<\|\|\>><rsub|G>/<around|\||\<epsilon\>|\|>\<to\><around|\||X|\|>>
+  for <math|X\<in\><gLie>>, we obtain
 
   <\equation*>
     <around|\||a<rsub|e>|\|>\<leqslant\>C<rsub|j,L>*<big|sum><rsub|p<text| in
@@ -5869,8 +5958,8 @@
   inverse coupling or inherited loop action, and set
 
   <\equation>
-    f*<around|(|v,\<psi\>|)>=\<cal-A\><rsub|f>*<around|(|U*<around|(|v,\<psi\>|)>|)>+b*<big|sum><rsub|e<text|
-    coarse>>w*<around*|(|<around|(|exp v|)><rsub|e>*Q<rsub|e>*<around|(|U*<around|(|v,\<psi\>|)>|)><rsup|-1>|)>.<label|ch05:actual-action>
+    f*<around|(|v,\<psi\>|)>=\<cal-A\><rsub|f>*<around|(|U*<around|(|v,\<psi\>|)>|)>+<frac|b|2>*<big|sum><rsub|e<text|
+    coarse>><around*|\||<around|(|exp v|)><rsub|e>-Q<rsub|e>*<around|(|U*<around|(|v,\<psi\>|)>|)>|\|><rsub|G><rsup|2>.<label|ch05:actual-action>
   </equation>
 
   Assume that the Hessian of the fine action <math|\<cal-A\><rsub|f>> at the
@@ -6288,17 +6377,18 @@
   <math|Q<around|(|U|)>> of Chapter<nbsp><reference|ch04:blocking>, put
 
   <\equation*>
-    r<rsub|p><rsup|f>=\<chi\><around|(|U<rsub|p>|)>,<space|2em>r<rsub|p><rsup|c>=\<chi\><around|(|V<rsub|p>|)>,<space|2em>n<rsub|e>=\<chi\>*<around|(|V<rsub|e>*Q<rsub|e><around|(|U|)><rsup|-1>|)>.
+    r<rsub|p><rsup|f>=<around|\<\|\|\>|U<rsub|p>-1|\<\|\|\>><rsub|G>,<space|2em>r<rsub|p><rsup|c>=<around|\<\|\|\>|V<rsub|p>-1|\<\|\|\>><rsub|G>,<space|2em>n<rsub|e>=<around|\<\|\|\>|V<rsub|e>-Q<rsub|e><around|(|U|)>|\<\|\|\>><rsub|G>.
   </equation*>
 
-  Here <math|\<chi\>> is the normalized Hilbert\USchmidt distance from the
-  identity. A selection <math|A=<around|(|A<rsub|f>,A<rsub|n>,A<rsub|c>|)>>
-  consists of fine plaquettes, coarse mismatch edges, and coarse sites. Its
-  size is the sum of the three cardinalities. Its location contains the
-  projected corners of its plaquettes, the endpoints of its edges, and its
-  sites. Write <math|A<rsup|<around|[|r|]>>> for the coarse
-  <math|r>-neighborhood of that location. Fix <math|W\<gtr\>0>. A selection
-  is consistent if, on all tests meeting <math|A<rsup|<around|[|5*B|]>>>,
+  Here <math|<around|\<\|\|\>|\<cdummy\>|\<\|\|\>><rsub|G>> is the matrix
+  norm of <eqref|ch01:matrix-norm>. A selection
+  <math|A=<around|(|A<rsub|f>,A<rsub|n>,A<rsub|c>|)>> consists of fine
+  plaquettes, coarse mismatch edges, and coarse sites. Its size is the sum of
+  the three cardinalities. Its location contains the projected corners of its
+  plaquettes, the endpoints of its edges, and its sites. Write
+  <math|A<rsup|<around|[|r|]>>> for the coarse <math|r>-neighborhood of that
+  location. Fix <math|W\<gtr\>0>. A selection is consistent if, on all tests
+  meeting <math|A<rsup|<around|[|5*B|]>>>,
 
   <\align*>
     <tformat|<table|<row|<cell|>|<cell|r<rsub|p><rsup|f>\<geqslant\>t<rsub|f>/4*<space|1em><around|(|p\<in\>A<rsub|f>|)>,>|<cell|>|<cell|r<rsub|p><rsup|f>\<leqslant\>t<rsub|f>/2*<space|1em><around|(|p\<nin\>A<rsub|f>|)>,>>|<row|<cell|>|<cell|n<rsub|e>\<geqslant\>W*t<rsub|f>*<space|1em><around|(|e\<in\>A<rsub|n>|)>,>|<cell|>|<cell|n<rsub|e>\<leqslant\>2*W*t<rsub|f>*<space|1em><around|(|e\<nin\>A<rsub|n>|)>,>>>>
@@ -6503,10 +6593,11 @@
   <math|C*<around|(|1+R<rsup|<math-up|rel>>*log
   <around|(|r<rsub|q><rsup|f>/t<rsub|f>|)>|)><rsup|4>\<leqslant\>C*r<rsub|q><rsup|f>/t<rsub|f>>.
   All witnesses lie within <math|B/50> for sufficiently large reference
-  coupling. They belong to the selected set by consistency. Split path
-  endpoints into those with distance from the identity at most
-  <math|t<rsub|f>> and the rest. The row bound handles the former, and the
-  column bound handles the latter, giving
+  coupling. They belong to the selected set by consistency. Split the
+  endpoint plaquettes <math|q> according as
+  <math|r<rsub|q><rsup|f>\<leqslant\>t<rsub|f>> or
+  <math|r<rsub|q><rsup|f>\<gtr\>t<rsub|f>>. The row bound handles the former,
+  and the column bound handles the latter, giving
 
   <\equation*>
     <big|sum><rsub|<text|omitted rows >p><around|\||L<rsub|f,R<rsub|\<ast\>>>*<around|(|U,p|)>|\|>\<leqslant\>C*R<rsub|f>.
@@ -6530,12 +6621,13 @@
   The coarse path contribution cancels exactly in <math|E<rsub|c>>. The
   direct part is <math|c<rsub|<math-up|dir,c>>*<around|(|\<alpha\><rsub|p>-\<alpha\><rsub|p><rsup|2>/2|)>\|F<around|(|V<rsub|p>|)>\|<rsup|2>-<math-up|clip><rsub|t<rsub|c>><around|(|r<rsub|p><rsup|c>|)>>.
   The squared normal displacement from the tangent space is
-  <math|O<around|(|\<chi\><around|(|g|)><rsup|4>|)>>, so
-  <math|<around|\||F<around|(|g|)>|\|><rsup|2>\<geqslant\>\<chi\><around|(|g|)><rsup|2>-C*\<chi\><around|(|g|)><rsup|4>>
+  <math|O<around|(|<around|\<\|\|\>|g-1|\<\|\|\>><rsub|G><rsup|4>|)>>, so
+  <math|<around|\||F<around|(|g|)>|\|><rsup|2>\<geqslant\><around|\<\|\|\>|g-1|\<\|\|\>><rsub|G><rsup|2>-C*<around|\<\|\|\>|g-1|\<\|\|\>><rsub|G><rsup|4>>
   near the identity. Choose fixed <math|\<delta\>\<gtr\>0> so that also
-  <math|<around|\||F<around|(|g|)>|\|><rsup|2>\<geqslant\>3*\<chi\><around|(|g|)><rsup|2>/4>
-  below <math|\<delta\>>. The clip coefficients satisfy
-  <math|c<rsub|<math-up|dir,c>>\<gtr\>16*c<rsub|<math-up|lin,c>>>, and hence
+  <math|<around|\||F<around|(|g|)>|\|><rsup|2>\<geqslant\>3*<around|\<\|\|\>|g-1|\<\|\|\>><rsub|G><rsup|2>/4>
+  whenever <math|<around|\<\|\|\>|g-1|\<\|\|\>><rsub|G>\<leqslant\>\<delta\>>.
+  The clip coefficients satisfy <math|c<rsub|<math-up|dir,c>>\<gtr\>16*c<rsub|<math-up|lin,c>>>,
+  and hence
 
   <\equation>
     E<rsub|c><around|(|p|)>\<geqslant\><choice|<tformat|<table|<row|<cell|-C*t<rsub|c><rsup|4>,>|<cell|r<rsub|p><rsup|c>\<leqslant\>t<rsub|c>,>>|<row|<cell|c<rsub|<math-up|dir,c>>*t<rsub|c>*r<rsub|p><rsup|c>/4,>|<cell|t<rsub|c>\<less\>r<rsub|p><rsup|c>\<leqslant\>\<delta\>,>>|<row|<cell|-c<rsub|<math-up|lin,c>>*t<rsub|c>*r<rsub|p><rsup|c>,>|<cell|r<rsub|p><rsup|c>\<gtr\>\<delta\>.>>>>><label|ch06:coarse-bound>
@@ -6567,24 +6659,23 @@
   </proposition>
 
   <\proof>
-    In a lifted patch of radius <math|<around|(|j+7|)>*L>, let
-    <math|\<cal-P\><rsub|y><around|(|U|)>=<big|sum><rsub|q>m<rsub|y><around|(|q|)>*r<rsub|q><rsup|f>>
-    be the sum of fine plaquette distances from the identity with the actual
-    route multiplicities. The required comparison is
+    For a coarse plaquette <math|p> based at <math|y>, let
+    <math|m<rsub|y><around|(|q|)>> count the lifts of a fine plaquette
+    <math|q> with all four vertices in the fine box <math|M<rsub|y>> of
+    Section<nbsp><reference|ch04:predictor-geometry>. Thus
+    <math|\<cal-P\><rsub|y><around|(|U|)>=<big|sum><rsub|q>m<rsub|y><around|(|q|)>*r<rsub|q><rsup|f>>.
+    For either choice of block average, Lemma<nbsp><reference|ch04:predictor-comparison>
+    gives
 
     <\equation>
       r<rsub|p><rsup|c>\<leqslant\><big|sum><rsub|e\<in\>\<partial\>*p>n<rsub|e>+C<rsub|j>*L<rsup|-2>*\<cal-P\><rsub|y><around|(|U|)>,<space|2em>sup<rsub|q>
-      <big|sum><rsub|y>m<rsub|y><around|(|q|)>\<leqslant\>K<rsub|j>.<label|ch06:macro-comparison>
+      <big|sum><rsub|y>m<rsub|y><around|(|q|)>\<leqslant\><around|(|2*j+15|)><rsup|4>.<label|ch06:macro-comparison>
     </equation>
 
-    This estimate does hold for the precise branches of
-    Chapter<nbsp><reference|ch04:blocking>, as the following argument shows.
-    It is a first-power bound; comparison of squared frame energies alone
-    would give an inadequate square-root bound.
-
-    The first-power block average estimate is
-    Lemma<nbsp><reference|ch04:predictor-comparison>; its comparison uses the
-    same macro-frame and rooted paths as here.
+    Here the sum over <math|y> runs over the coarse torus. The linear
+    dependence on <math|r<rsub|q><rsup|f>> allows the factor
+    <math|L<rsup|-2>> to be retained when summing the fine plaquette
+    contributions over coarse sites.
 
     The same bound localizes coarse plaquettes with
     <math|r<rsub|p><rsup|c>\<gtr\>\<delta\>>. If every fine or mismatch test
@@ -6604,27 +6695,29 @@
     absorbing its upper bound into the enlarged loss constants. It is not a
     new positivity assertion for <math|E<rsub|L>>.
 
-    Outside <math|H>, all fine plaquette distances from the identity and
-    block average mismatches in the surrounding fixed macro-patches are at
-    most <math|t<rsub|<math-up|hi>>>. The unselected tests obey this too,
-    since <math|2*W*t<rsub|f>\<leqslant\>t<rsub|<math-up|hi>>> eventually.
-    The verified macro-comparison bounds coarse plaquette distances from the
-    identity there by <math|C<rsub|j,L,W>*t<rsub|<math-up|hi>>>. Choose a
-    coarse axial gauge on a box of radius <math|B/2>. Its sum of bond
-    distances from the identity is bounded by
-    <math|C<rsub|j,L,W>*B<rsup|5>*t<rsub|<math-up|hi>>>. To compare a fine
-    link with the replicated coarse link, join its two endpoints to their
-    block roots along the actual tree. All tree transports are the identity.
-    The resulting walk lies in two neighboring blocks. In a macro axial gauge
-    its distance from the identity is bounded by the route length times the
-    sum of bond distances from the identity in the macro-box. Comparing a
-    crossing walk with the block average adds the two endpoint frame errors
-    already bounded in Lemma<nbsp><reference|ch04:predictor-comparison>, and
-    then the mismatch <math|n<rsub|e>>. Consequently, with a constant
-    depending on the fixed tree family and <math|L>,
+    Outside <math|H>, all fine plaquette deviations <math|r<rsub|q><rsup|f>>
+    and block average mismatches <math|n<rsub|e>> in the surrounding fixed
+    macro-patches are at most <math|t<rsub|<math-up|hi>>>. The unselected
+    tests obey this too, since <math|2*W*t<rsub|f>\<leqslant\>t<rsub|<math-up|hi>>>
+    eventually. The verified macro-comparison bounds <math|r<rsub|p><rsup|c>>
+    there by <math|C<rsub|j,L,W>*t<rsub|<math-up|hi>>>. Choose a coarse axial
+    gauge on a box of radius <math|B/2>. In that gauge the sum of
+    <math|<around|\<\|\|\>|V<rsub|e>-1|\<\|\|\>><rsub|G>> over its internal
+    bonds is at most <math|C<rsub|j,L,W>*B<rsup|5>*t<rsub|<math-up|hi>>>. To
+    compare a fine link with the replicated coarse link, join its two
+    endpoints to their block roots along the actual tree. All tree transports
+    are the identity. The resulting walk lies in two neighboring blocks. In a
+    macro axial gauge the distance of the transport from <math|1> is at most
+    the length of the walk times the sum of
+    <math|<around|\<\|\|\>|U<rsub|b>-1|\<\|\|\>><rsub|G>> over bonds <math|b>
+    in the macro-box in that gauge. Comparing a crossing walk with the block
+    average adds the two endpoint frame errors bounded by
+    <eqref|ch04:patch-frame-sum>, and then the mismatch <math|n<rsub|e>>.
+    Consequently, with a constant depending on the fixed tree family and
+    <math|L>,
 
     <\equation*>
-      \<chi\><around*|(|U<rsub|e><around|(|<math-up|rep><space|0.17em>V|)><rsub|e><rsup|-1>|)>\<leqslant\>C<rsub|j,L>*\<cal-P\><rsub|y><around|(|U|)>+n<rsub|e<rsub|c>>
+      <around|\<\|\|\>|U<rsub|e>-<around|(|<math-up|rep><space|0.17em>V|)><rsub|e>|\<\|\|\>><rsub|G>\<leqslant\>C<rsub|j,L>*\<cal-P\><rsub|y><around|(|U|)>+n<rsub|e<rsub|c>>
     </equation*>
 
     for crossing edges; omit the mismatch for internal edges. Any tree in a
@@ -6702,13 +6795,13 @@
     The choices are in that order: increase <math|L> for the fine excess, and
     <math|W> for the mismatch excess.
 
-    Assign each coarse large-field site to one incident plaquette with
-    distance from the identity above <math|t<rsub|c>>. A plaquette has at
-    most four such sites. Since <math|t<rsub|f>\<leqslant\>2*t<rsub|c>>
+    Assign each coarse large-field site to one incident plaquette <math|p>
+    with <math|r<rsub|p><rsup|c>\<gtr\>t<rsub|c>>. A plaquette has at most
+    four such sites. Since <math|t<rsub|f>\<leqslant\>2*t<rsub|c>>
     eventually, the middle range of <eqref|ch06:coarse-bound> contributes
     <math|4*a*t<rsub|f><rsup|2>> per plaquette and therefore
     <math|a*t<rsub|f><rsup|2>> per assigned site. The exceptional plaquettes
-    with distance from the identity above <math|\<delta\>> number at most
+    with <math|r<rsub|p><rsup|c>\<gtr\>\<delta\>> number at most
     <math|K<around|\||D|\|>>; their negative energies cancel the positive
     term in <eqref|ch06:affected>. Their missing site contributions cost at
     most <math|4*a*K*t<rsub|f><rsup|2><around|\||D|\|>>. Also
@@ -7019,19 +7112,19 @@
   whole Gaussian space.
 
   Choose a fixed logarithm radius <math|d<rsub|\<ast\>>\<gtr\>0> and a smooth
-  radial function <math|\<chi\>> equal to one on
-  <math|<around|\||u|\|>\<leqslant\>d<rsub|\<ast\>>> and zero on
+  radial cutoff <math|\<vartheta\>:<gLie>\<to\><around|[|0,1|]>> equal to one
+  on <math|<around|\||u|\|>\<leqslant\>d<rsub|\<ast\>>> and zero on
   <math|<around|\||u|\|>\<geqslant\>2*d<rsub|\<ast\>>>. For a group element
   <math|M> sufficiently near the identity put
 
   <\equation*>
-    F<rsub|M><around|(|u|)>=u+\<psi\>*<around|(|M,u|)>,<space|2em>\<psi\>*<around|(|M,u|)>=\<chi\><around|(|u|)>*<around*|(|log
+    F<rsub|M><around|(|u|)>=u+\<psi\>*<around|(|M,u|)>,<space|2em>\<psi\>*<around|(|M,u|)>=\<vartheta\><around|(|u|)>*<around*|(|log
     <around|(|exp <around|(|u|)>*M|)>-u|)>.
   </equation*>
 
-  The logarithm is used only on the support of <math|\<chi\>>. At <math|M=1>,
-  <math|\<psi\>=0> and <math|D<rsub|u>*\<psi\>=0>. Compactness of that
-  support permits one common neighborhood of <math|1> on which
+  The logarithm is used only on the support of <math|\<vartheta\>>. At
+  <math|M=1>, <math|\<psi\>=0> and <math|D<rsub|u>*\<psi\>=0>. Compactness of
+  that support permits one common neighborhood of <math|1> on which
   <math|<around|\||\<psi\>|\|>\<less\>d<rsub|\<ast\>>/2> and
   <math|<around|\<\|\|\>|D<rsub|u>*\<psi\>|\<\|\|\>>\<less\>1/2>. For every
   target <math|v>, the map <math|u\<mapsto\>v-\<psi\>*<around|(|M,u|)>> is a
@@ -7368,18 +7461,18 @@
   comparison term at most <math|C*t<rsub|f>>. Choose <math|L> and the block
   average plateau width <math|W> so these bounds lie strictly inside their
   respective plateau thresholds, as in the energy estimate. The preceding
-  proposition, the nonlinear Taylor error, and the noise estimate then leave
-  the fine plaquette distance from the identity below <math|t<rsub|f>/4> and
-  the block average discrepancy below <math|W*t<rsub|f>>. All corresponding
-  likelihood factors are on their plateaux. The bond increment is bounded by
-  <math|C*t<rsub|f>> on this event, so a sufficiently broad fixed chart
-  cutoff is also one. A cutoff-failure indicator assigned within the
-  compulsory component region is zero by definition; every other such
-  indicator has these small-field neighborhoods. Replacing <math|\<xi\>> by
-  <math|\<xi\>/2> gives strict margins on a neighborhood and hence the
-  zero-germ support condition. This proves the implication
-  <eqref|ch06:tail-event> for these actual event indicators, with the fixed
-  comparison term and plateau choices just stated.
+  proposition, the nonlinear Taylor error, and the noise estimate then give
+  <math|<around|\<\|\|\>|U<rsub|p>-1|\<\|\|\>><rsub|G>\<less\>t<rsub|f>/4> on
+  each tested fine plaquette and <math|<around|\<\|\|\>|V<rsub|e>-Q<rsub|e><around|(|U|)>|\<\|\|\>><rsub|G>\<less\>W*t<rsub|f>>
+  on each tested coarse link. The associated likelihood factors are on their
+  plateaux. The bond increment is bounded by <math|C*t<rsub|f>> on this
+  event, so a sufficiently broad fixed chart cutoff is also one. A
+  cutoff-failure indicator assigned within the compulsory component region is
+  zero by definition; every other such indicator has these small-field
+  neighborhoods. Replacing <math|\<xi\>> by <math|\<xi\>/2> gives strict
+  margins on a neighborhood and hence the zero-germ support condition. This
+  proves the implication <eqref|ch06:tail-event> for these actual event
+  indicators, with the fixed comparison term and plateau choices just stated.
 
   <subsection|The bounded-jet route for local
   activities><label|ch06:bounded-jet-route>
@@ -7726,20 +7819,20 @@
   independence.
 
   For this component estimate impose the allocation's weak test conditions
-  through distance <math|300*B>: every unselected fine plaquette has distance
-  from the identity at most <math|t<rsub|f>/2>, every unselected block
-  average discrepancy is at most <math|2*W*t<rsub|f>>, the stored coarse
-  large-field indicators equal the actual coarse large-field indicators, and
-  no coarse large-field site occurs away from the selected coarse sites.
-  Retained frame tags have positive likelihood. These are conditions on the
-  actual factor; they are stronger than the initial <math|5*B> consistency
-  definition. For an annular anchor at distance greater than <math|2*B> from
-  the selected set, its required <math|B> neighborhood and the smaller
-  comparison patches are consequently free of selected tests. All such reads
-  fit inside the retained <math|300*B> region. Smooth chart cutoff factors
-  are retained throughout <math|304*B>. Local determinant terms are assigned
-  through <math|200*B>, whereas Haar terms are assigned through <math|304*B>;
-  these two sets are not identified.
+  through distance <math|300*B>: every unselected fine plaquette satisfies
+  <math|<around|\<\|\|\>|U<rsub|p>-1|\<\|\|\>><rsub|G>\<leqslant\>t<rsub|f>/2>,
+  every unselected block average discrepancy is at most <math|2*W*t<rsub|f>>,
+  the stored coarse large-field indicators equal the actual coarse
+  large-field indicators, and no coarse large-field site occurs away from the
+  selected coarse sites. Retained frame tags have positive likelihood. These
+  are conditions on the actual factor; they are stronger than the initial
+  <math|5*B> consistency definition. For an annular anchor at distance
+  greater than <math|2*B> from the selected set, its required <math|B>
+  neighborhood and the smaller comparison patches are consequently free of
+  selected tests. All such reads fit inside the retained <math|300*B> region.
+  Smooth chart cutoff factors are retained throughout <math|304*B>. Local
+  determinant terms are assigned through <math|200*B>, whereas Haar terms are
+  assigned through <math|304*B>; these two sets are not identified.
 
   Let <math|H> be the actual fine and block average rows extracted from the
   annulus by the stencil selection. The selected stencil has radius at most
@@ -7805,9 +7898,9 @@
   <eqref|ch06:annulus-extraction>. The clean annular fields are below the
   fine threshold, so the fine clip is its quadratic branch. The retained path
   tests also equal one: within their nontrivial range the patch is clean, and
-  beyond that range their permitted bound exceeds the uniform bound on the
-  distance from the identity in the group. This checks the actual row formula
-  used in the argument.
+  beyond that range their permitted bound exceeds the uniform bound
+  <math|<around|\<\|\|\>|u-1|\<\|\|\>><rsub|G>\<leqslant\>2> for
+  <math|u\<in\>G>. This checks the actual row formula used in the argument.
 
   For precision, let <math|\<sigma\>> range over the signed lattice
   orientations with their probability weights
@@ -10068,7 +10161,7 @@
   matrices in the following argument belong to the same pure small-field
   block integral: incoming activities are omitted, the prescribed path and
   block kernel are unchanged, and the fine-field indicator
-  <math|\<b-1\><rsub|<around|{|\<chi\><around|(|U<rsub|p>|)>\<leqslant\>t<rsub|f><text|for
+  <math|\<b-1\><rsub|<around|{|<around|\<\|\|\>|U<rsub|p>-1|\<\|\|\>><rsub|G>\<leqslant\>t<rsub|f><text|for
   every fine >p|}>>> is retained, where <math|t<rsub|f>=t<rsub|m+1>>. Thus
   its integrand is zero on the fine large-field complement. The other fine
   sectors have already been assigned to the large-field expansion.
@@ -10285,7 +10378,7 @@
   second derivatives. Thus
 
   <\equation>
-    sup<rsub|p> \<chi\><around|(|\<cal-U\><around|(|x|)><rsub|p>|)>\<leqslant\>C<rsub|j>*L<rsup|-2>*t<rsub|c>+P<rsub|j,L><around|(|B|)>*t<rsub|c><rsup|2>.<label|ch09:stationary-cutoff-margin>
+    sup<rsub|p><around|\<\|\|\>|\<cal-U\><around|(|x|)><rsub|p>-1|\<\|\|\>><rsub|G>\<leqslant\>C<rsub|j>*L<rsup|-2>*t<rsub|c>+P<rsub|j,L><around|(|B|)>*t<rsub|c><rsup|2>.<label|ch09:stationary-cutoff-margin>
   </equation>
 
   Choose <math|L> so that <math|C<rsub|j>*L<rsup|-2>*t<rsub|c>\<leqslant\>t<rsub|f>/8>,
@@ -10299,16 +10392,16 @@
   physical fine-link supremum coordinates. Local chart maps have fixed-stage
   derivative bounds. Consequently variation of <math|x> by <math|z<rsup|-1>>
   and of the stationary fine coordinates by <math|g*\<xi\>>,
-  <math|<around|\||\<xi\>|\|>\<leqslant\>D>, changes every plaquette distance
-  from the identity by at most <math|C<rsub|j,L>*z<rsup|-1>+L<rsub|0>*g*D>,
-  after incorporating the fixed chart norm conversion into <math|L<rsub|0>>.
-  Choose <math|d<rsub|0>> sufficiently small, so that
-  <math|L<rsub|0>*g*D\<leqslant\>t<rsub|f>/8>, and then raise the threshold
-  for the microscopic term. Every point of each retained region is now fine
-  small-field, with a strict margin. The common chart and tag-coincidence
-  radius contain these regions because <math|h+g*D\<to\>0>. We have therefore
-  obtained, on a full microscopic neighborhood of each tested small-field
-  coarse configuration,
+  <math|<around|\||\<xi\>|\|>\<leqslant\>D>, changes each
+  <math|<around|\<\|\|\>|U<rsub|p>-1|\<\|\|\>><rsub|G>> by at most
+  <math|C<rsub|j,L>*z<rsup|-1>+L<rsub|0>*g*D>, after incorporating the fixed
+  chart norm conversion into <math|L<rsub|0>>. Choose <math|d<rsub|0>>
+  sufficiently small, so that <math|L<rsub|0>*g*D\<leqslant\>t<rsub|f>/8>,
+  and then raise the threshold for the microscopic term. Every point of each
+  retained region is now fine small-field, with a strict margin. The common
+  chart and tag-coincidence radius contain these regions because
+  <math|h+g*D\<to\>0>. We have therefore obtained, on a full microscopic
+  neighborhood of each tested small-field coarse configuration,
 
   <\equation>
     0\<leqslant\><with|math-font|cal*|Z><around|(|y|)>-\<Omega\>*e<rsup|-\<Phi\><around|(|y|)>>*R*<around|(|g,y|)>\<leqslant\>\<Omega\>*e<rsup|-\<Phi\><around|(|y|)>>*e<rsup|-c<rsub|0>*M<rsup|2>>,<space|2em>c<rsub|0>\<gtr\>0.<label|ch09:exterior-bound>
@@ -10418,8 +10511,10 @@
   <math|0\<leqslant\><wide|q|\<bar\>>\<less\>2*v>. Apply this map
   coordinatewise. Write <math|U<rsub|i,z>> for the pullback of the original
   field under <math|q\<mapsto\>z+\<pi\><rsub|w+i><around|(|q|)>> on
-  <math|\<Lambda\><rsub|i>>. Reversed links are inverted, so small plaquette
-  distances from the identity stay small. Let
+  <math|\<Lambda\><rsub|i>>. Folding may reverse plaquette orientation. In
+  the matrix norm <eqref|ch01:matrix-norm>, conjugation and inversion
+  preserve <math|<around|\<\|\|\>|U<rsub|p>-1|\<\|\|\>><rsub|G>>, so the
+  folded field satisfies the same small-field bound. Let
   <math|F<rsub|y><rsup|<around|(|i|)>>> denote the same local formula on
   <math|\<Lambda\><rsub|i>> with its flat value subtracted, and set
 
@@ -10827,11 +10922,12 @@
   There is a second, intrinsic way to identify the reset. On an even-sided
   torus choose direction-one links alternately equal to <math|u> and <math|1>
   on even and odd second-coordinate slices, with
-  <math|\<chi\><around|(|u|)>=r*t> for sufficiently small fixed
-  <math|r\<gtr\>0>. Every nontrivial plaquette has this distance from the
-  identity. The direct positive plaquette term dominates the cubic and
-  quartic terms when <math|r> is small, so this small-field configuration
-  <math|U<rsub|\<ast\>>> satisfies <math|\<cal-K\><around|(|U<rsub|\<ast\>>|)>\<geqslant\>c<rsub|\<ast\>><around|\||\<Lambda\>|\|>*t<rsup|2>>.
+  <math|<around|\<\|\|\>|u-1|\<\|\|\>><rsub|G>=r*t> for sufficiently small
+  fixed <math|r\<gtr\>0>. Thus <math|<around|\<\|\|\>|U<rsub|p>-1|\<\|\|\>><rsub|G>=r*t>
+  for each nontrivial plaquette. The direct positive plaquette term dominates
+  the cubic and quartic terms when <math|r> is small, so this small-field
+  configuration <math|U<rsub|\<ast\>>> satisfies
+  <math|\<cal-K\><around|(|U<rsub|\<ast\>>|)>\<geqslant\>c<rsub|\<ast\>><around|\||\<Lambda\>|\|>*t<rsup|2>>.
   Hold the constructed activities fixed and vary only a trial inverse
   coupling correction <math|d>. The scalar discrepancy is
 
@@ -10893,18 +10989,19 @@
   <section|Wilson initialization><label|ch09:wilson>
 
   The finest-scale representation can be constructed directly from the Wilson
-  action <cite|Wilson1974>, without a limiting argument. Write
-  <math|W<around|(|u|)>=1-<math-up|Re><space|0.17em><tr><around|(|u|)>/n<rsub|G>>
-  for the Wilson plaquette energy and <math|F<around|(|u|)>=<math-up|proj><rsub|<gLie>><around|(|u-u<rsup|-1>|)>/2>.
+  action <cite|Wilson1974>, without a limiting argument. Recall from
+  <eqref|ch01:wilson-energy> that the Wilson plaquette energy is
+  <math|<tfrac|1|2><around|\<\|\|\>|u-1|\<\|\|\>><rsub|G><rsup|2>>. Write
+  <math|F<around|(|u|)>=<math-up|proj><rsub|<gLie>><around|(|u-u<rsup|-1>|)>/2>.
   The map <math|X\<mapsto\>F<around|(|e<rsup|X>|)>> has derivative <math|I>
   at zero and a local inverse <math|\<psi\>>. The map and its inverse are
-  odd, and <math|W<around|(|u<rsup|-1>|)>=W<around|(|u|)>>, so
-  <math|W<around|(|e<rsup|\<psi\><around|(|Y|)>>|)>> is even. Let
-  <math|T<rsub|4>> be the degree-four Taylor term of the Wilson plaquette
-  energy evaluated at <math|e<rsup|\<psi\><around|(|Y|)>>>. Then
+  odd, and <math|<around|\<\|\|\>|u<rsup|-1>-1|\<\|\|\>><rsub|G>=<around|\<\|\|\>|u-1|\<\|\|\>><rsub|G>>,
+  so the plaquette energy at <math|e<rsup|\<psi\><around|(|Y|)>>> is even in
+  <math|Y>. Let <math|T<rsub|4>> be the degree-four Taylor term of the Wilson
+  plaquette energy evaluated at <math|e<rsup|\<psi\><around|(|Y|)>>>. Then
 
   <\equation*>
-    R<around|(|u|)>=W<around|(|u|)>-<tfrac|1|2>\|F<around|(|u|)>\|<rsup|2>-T<rsub|4><around|(|F<around|(|u|)>|)>
+    R<around|(|u|)>=<tfrac|1|2>\<\|\|\>u-1\<\|\|\><rsub|G><rsup|2>-<tfrac|1|2>\|F<around|(|u|)>\|<rsup|2>-T<rsub|4><around|(|F<around|(|u|)>|)>
   </equation*>
 
   vanishes through degree four at the identity. Choose the finest row
@@ -10918,18 +11015,17 @@
   Define the residual energy
 
   <\equation*>
-    \<cal-W\><rsub|p>=<choice|<tformat|<table|<row|<cell|W<around|(|U<rsub|p>|)>-c<rsub|<math-up|lin>>*t*\<chi\><around|(|U<rsub|p>|)>,>|<cell|\<chi\><around|(|U<rsub|p>|)>\<gtr\>t,>>|<row|<cell|h<rsub|p>*k<rsub|p>+<around|(|1-h<rsub|p>|)>*<around|(|1-c<rsub|<math-up|dir>>|)>*W<around|(|U<rsub|p>|)>-\<chi\><rsub|p><rsup|<math-up|rel>>*k<rsub|p>,>|<cell|\<chi\><around|(|U<rsub|p>|)>\<leqslant\>t.>>>>>
+    \<cal-W\><rsub|p>=<choice|<tformat|<table|<row|<cell|<tfrac|1|2>\<\|\|\>U<rsub|p>-1\<\|\|\><rsub|G><rsup|2>-c<rsub|<math-up|lin>>*t*<around|\<\|\|\>|U<rsub|p>-1|\<\|\|\>><rsub|G>,>|<cell|<around|\<\|\|\>|U<rsub|p>-1|\<\|\|\>><rsub|G>\<gtr\>t,>>|<row|<cell|h<rsub|p>*k<rsub|p>+<tfrac|1|2><around|(|1-h<rsub|p>|)>*<around|(|1-c<rsub|<math-up|dir>>|)>\<\|\|\>U<rsub|p>-1\<\|\|\><rsub|G><rsup|2>-\<chi\><rsub|p><rsup|<math-up|rel>>*k<rsub|p>,>|<cell|<around|\<\|\|\>|U<rsub|p>-1|\<\|\|\>><rsub|G>\<leqslant\>t.>>>>>
   </equation*>
 
-  Since <math|<around|\||F<around|(|u|)>|\|>\<leqslant\>\<chi\><around|(|u|)>>
-  and <math|W<around|(|u|)>=\<chi\><around|(|u|)><rsup|2>/2>, this is
-  nonnegative; when <math|\<chi\><around|(|U<rsub|p>|)>\<gtr\>t> it is at
-  least <math|t<rsup|2>/4>. The relaxed small-field condition implies that
-  the plaquette itself is small, and the condition can also fail because of a
-  nearby bad plaquette. Direct substitution gives
+  Since <math|<around|\||F<around|(|u|)>|\|>\<leqslant\><around|\<\|\|\>|u-1|\<\|\|\>><rsub|G>>,
+  this is nonnegative; when <math|<around|\<\|\|\>|U<rsub|p>-1|\<\|\|\>><rsub|G>\<gtr\>t>
+  it is at least <math|t<rsup|2>/4>. The relaxed small-field condition
+  implies that the plaquette itself is small, and the condition can also fail
+  because of a nearby bad plaquette. Direct substitution gives
 
   <\equation*>
-    W<around|(|U<rsub|p>|)>=L<rsub|p>+<around|(|1-c<rsub|<math-up|dir>>|)>*h<rsub|p>*T<rsub|4><around|(|F<around|(|U<rsub|p>|)>|)>+<around|(|1-c<rsub|<math-up|dir>>|)>*h<rsub|p>*R<around|(|U<rsub|p>|)>+\<cal-W\><rsub|p>,
+    <tfrac|1|2><around|\<\|\|\>|U<rsub|p>-1|\<\|\|\>><rsub|G><rsup|2>=L<rsub|p>+<around|(|1-c<rsub|<math-up|dir>>|)>*h<rsub|p>*T<rsub|4><around|(|F<around|(|U<rsub|p>|)>|)>+<around|(|1-c<rsub|<math-up|dir>>|)>*h<rsub|p>*R<around|(|U<rsub|p>|)>+\<cal-W\><rsub|p>,
   </equation*>
 
   where <math|L<rsub|p>> is the actual clipped quadratic channel. If the
@@ -13430,14 +13526,14 @@
   insertions come from <eqref|ch11:higher-induction>.
 
   Choose <math|0\<less\>\<rho\>\<leqslant\>1> below the small-field
-  threshold. A maximal packing in the ambient real matrix space of dimension
-  <math|D<rsub|G>>, with Haar invariance, gives
-  <math|\<mu\><rsub|G>*<around|{|\<chi\><around|(|U|)>\<leqslant\>r|}>\<geqslant\><around|(|r/4|)><rsup|D<rsub|G>>>.
-  Restrict every forward link to normalized Hilbert\USchmidt distance from
-  the identity at most <math|\<rho\>/4>; the event has probability at least
-  <math|<around|(|\<rho\>/16|)><rsup|4*D<rsub|G>*V>> and all plaquettes have
-  normalized Hilbert\USchmidt distance from the identity at most
-  <math|\<rho\>>. If the exact action there is bounded by
+  threshold. With the matrix norm <eqref|ch01:matrix-norm>, a maximal packing
+  in the ambient real space of dimension <math|D<rsub|G>> and Haar invariance
+  give <math|\<mu\><rsub|G>*<around|{|U\<in\>G:<around|\<\|\|\>|U-1|\<\|\|\>><rsub|G>\<leqslant\>r|}>\<geqslant\><around|(|r/4|)><rsup|D<rsub|G>>>
+  for <math|0\<less\>r\<leqslant\>1>. Restrict every forward link
+  <math|U<rsub|e>> to <math|<around|\<\|\|\>|U<rsub|e>-1|\<\|\|\>><rsub|G>\<leqslant\>\<rho\>/4>.
+  This event has probability at least <math|<around|(|\<rho\>/16|)><rsup|4*D<rsub|G>*V>>,
+  and <math|<around|\<\|\|\>|U<rsub|p>-1|\<\|\|\>><rsub|G>\<leqslant\>\<rho\>>
+  on every plaquette. If the exact action there is bounded by
   <math|V*<around|[|b<rsub|<math-up|act>>+\<beta\>*b<rsub|<math-up|loc>><around|(|\<rho\>|)>|]>>,
   positivity gives
 
@@ -14895,8 +14991,9 @@
   <eqref|ch11:weighted-output-envelope>. To normalize it one must retain the
   Gaussian power in the partition function. Tree gauge fixing leaves
   <math|3*V+1> free links on a four-dimensional torus of <math|V> sites.
-  Restrict them to a ball for the normalized Hilbert\USchmidt distance of
-  radius <math|g/4> to obtain
+  Restrict each free link <math|U<rsub|e>> to the ball
+  <math|<around|\<\|\|\>|U<rsub|e>-1|\<\|\|\>><rsub|G>\<leqslant\>g/4> in the
+  matrix norm <eqref|ch01:matrix-norm> to obtain
 
   <\equation*>
     Z\<geqslant\>e<rsup|\<sigma\>-V*c<rsub|1>>*<around|(|c<rsub|->*g<rsup|dim
@@ -14930,7 +15027,7 @@
   Haar invariance evaluates its factor. All other plaquette factors are at
   most one and may be discarded. This proves the stated <math|3*V-3>
   integrations, including the wrapping links except for the four explicitly
-  retained ones. The Haar estimate <math|<big|int><rsub|G>e<rsup|-\<chi\><around|(|u|)>/<around|(|g/c|)>>*d*u\<leqslant\>c<rsub|+>*<around|(|g/c|)><rsup|dim
+  retained ones. The Haar estimate <math|<big|int><rsub|G>e<rsup|-c*<around|\<\|\|\>|u-1|\<\|\|\>><rsub|G>/g>*<space|0.17em>d*h<around|(|u|)>\<leqslant\>c<rsub|+>*<around|(|g/c|)><rsup|dim
   <gLie>>> then gives the corresponding upper bound. It follows that the
   normalized coefficient with weight <math|z> obeys
 
@@ -16238,18 +16335,17 @@
   normalization cost of <eqref|ch11:replicated-bound>; it is not a marked
   density or the scalar coupling correction. For the admissible path-action
   representation one can use <math|q<rsub|i><rsup|<math-up|site>>\<leqslant\>C<rsub|J<around|(|i|)>>*<around|(|1+log
-  <wide|\<beta\>|^><rsub|i>|)>>. Indeed the scalar-free exponent has upper
-  bound <math|C<rsub|J<around|(|i|)>>*V>, while on the event that every link
-  <math|U> has normalized Hilbert\USchmidt distance
-  <math|\<chi\><around|(|U|)>> at most <math|<wide|\<beta\>|^><rsub|i><rsup|-1/2>/4>
-  it has lower bound <math|-C<rsub|J<around|(|i|)>>*V> and all large-field
-  indicators vanish. The leading positive path quadratic is bounded there by
-  <math|C<rsub|J<around|(|i|)>>*<wide|\<beta\>|^><rsub|i>*\<rho\><rsup|2>*V>
-  with <math|\<rho\>=<wide|\<beta\>|^><rsub|i><rsup|-1/2>>; exponential path
-  summability bounds the path lengths in this estimate. Signed regular costs
-  and the absolute activity site sum have their admissible bounds. The
-  Haar-ball argument of Section<nbsp><reference|ch11:replicated> therefore
-  costs only <math|C<rsub|J<around|(|i|)>>*V+2*D<rsub|G>*V*log
+  <wide|\<beta\>|^><rsub|i>|)>>. Indeed the scalar-free exponent is at most
+  <math|C<rsub|J<around|(|i|)>>*V>. Set <math|\<rho\>=<wide|\<beta\>|^><rsub|i><rsup|-1/2>>
+  and restrict every link to <math|<around|\<\|\|\>|U<rsub|e>-1|\<\|\|\>><rsub|G>\<leqslant\>\<rho\>/4>,
+  using the matrix norm <eqref|ch01:matrix-norm>. On this event the exponent
+  is at least <math|-C<rsub|J<around|(|i|)>>*V> and all large-field
+  indicators vanish. Exponential summability in the path length bounds the
+  leading positive path quadratic by <math|C<rsub|J<around|(|i|)>>*<wide|\<beta\>|^><rsub|i>*\<rho\><rsup|2>*V>.
+  Signed regular costs and the absolute activity site sum have their
+  admissible bounds. The Haar-ball argument of
+  Section<nbsp><reference|ch11:replicated> therefore costs only
+  <math|C<rsub|J<around|(|i|)>>*V+2*D<rsub|G>*V*log
   <wide|\<beta\>|^><rsub|i>>, where <math|D<rsub|G>> is an ambient real
   matrix dimension for the gauge group.
 
@@ -21111,11 +21207,18 @@
 
   In the exact kernel <math|k<rsup|<around|(|L|)>><rsub|\<beta\>>> of
   <eqref|ch04:kernel>, condition on the fine field <math|U> and all auxiliary
-  choices <math|\<alpha\>>. The conditional density of <math|V<rsub|e>> is
-  <math|q<rsub|b*\<beta\>>*<around|(|V<rsub|e>*Q<rsub|e><rsup|-1>|)>>, where
-  <math|q<rsub|\<gamma\>><around|(|u|)>=Z<rsub|\<gamma\>><rsup|-1>*exp
-  <around|[|-\<gamma\>*w<around|(|u|)>|]>>. For every fixed order <math|r>,
-  compactness and smoothness of <math|w> give
+  choices <math|\<alpha\>>. Write <math|Q<rsub|e>=Q<rsub|e><rsup|<math-up|pred>>*<around|(|U,\<alpha\>|)>>
+  for the resulting block average. By unitary invariance of the matrix norm
+  <eqref|ch01:matrix-norm>, the conditional Haar density of <math|V<rsub|e>>
+  is
+
+  <\equation*>
+    q<rsub|b*\<beta\>>*<around|(|V<rsub|e>*Q<rsub|e><rsup|-1>|)>=Z<rsub|b*\<beta\>><rsup|-1>*exp
+    <around*|(|-<tfrac|b*\<beta\>|2><around|\<\|\|\>|V<rsub|e>-Q<rsub|e>|\<\|\|\>><rsub|G><rsup|2>|)>.
+  </equation*>
+
+  For every fixed order <math|r>, compactness of <math|G> and smoothness of
+  the squared norm give
 
   <\equation>
     <label|ch17:kernel-score><around|\||D<rsup|r>*q<rsub|\<gamma\>><around|(|u|)>|\|>\<leqslant\>C<rsub|r>*<around|(|1+\<gamma\>|)><rsup|r>*q<rsub|\<gamma\>><around|(|u|)>.
@@ -21123,11 +21226,11 @@
 
   Here <math|D<rsup|r>> denotes <math|r> successive left derivatives in unit
   Lie algebra directions. Dividing by <math|q<rsub|\<gamma\>>>, the result is
-  a polynomial in derivatives of <math|w> with at most <math|r> factors of
-  <math|\<gamma\>>. The normalization is independent of <math|u>. For a
-  product of link kernels the corresponding bound has an additional
-  polynomial in the number of differentiated links. No lower bound on
-  <math|q<rsub|\<gamma\>>> is used.
+  a polynomial in derivatives of <math|u\<mapsto\><tfrac|1|2><around|\<\|\|\>|u-1|\<\|\|\>><rsub|G><rsup|2>>
+  with at most <math|r> factors of <math|\<gamma\>>. The normalization is
+  independent of <math|u>. For a product of link kernels the corresponding
+  bound has an additional polynomial in the number of differentiated links.
+  No lower bound on <math|q<rsub|\<gamma\>>> is used.
 
   First truncate the exponentially local current and its stationary kernels
   on a finite neighborhood. For the displacement use a finite covariant
@@ -22574,18 +22677,20 @@
   distances must not be interchanged.
 
   <\with|font-size|0.84>
-    <big-table|<tabular*|<tformat|<cwith|1|-1|1|1|cell-lborder|0ln>|<cwith|1|-1|1|1|cell-rborder|0ln>|<cwith|1|-1|1|-1|cell-valign|c>|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|1|1|1|-1|cell-bborder|1ln>|<cwith|52|52|1|-1|cell-bborder|1ln>|<twith|table-width|1par>|<twith|table-hmode|exact>|<cwith|1|-1|1|1|cell-width|.22par>|<cwith|1|-1|1|1|cell-hmode|exact>|<cwith|1|-1|1|1|cell-hyphen|t>|<cwith|1|-1|2|2|cell-width|.73par>|<cwith|1|-1|2|2|cell-hmode|exact>|<cwith|1|-1|2|2|cell-hyphen|t>|<table|<row|<cell|Symbol>|<cell|Meaning
+    <big-table|<tabular*|<tformat|<cwith|1|-1|1|1|cell-lborder|0ln>|<cwith|1|-1|1|1|cell-rborder|0ln>|<cwith|1|-1|1|-1|cell-valign|c>|<cwith|1|1|1|-1|cell-tborder|1ln>|<cwith|1|1|1|-1|cell-bborder|1ln>|<cwith|53|53|1|-1|cell-bborder|1ln>|<twith|table-width|1par>|<twith|table-hmode|exact>|<cwith|1|-1|1|1|cell-width|.22par>|<cwith|1|-1|1|1|cell-hmode|exact>|<cwith|1|-1|1|1|cell-hyphen|t>|<cwith|1|-1|2|2|cell-width|.73par>|<cwith|1|-1|2|2|cell-hmode|exact>|<cwith|1|-1|2|2|cell-hyphen|t>|<table|<row|<cell|Symbol>|<cell|Meaning
     and definition>>|<row|<cell|<math|G,<gLie>,n<rsub|G>>>|<cell|Compact
     matrix gauge group, its real Lie algebra and matrix size;
-    Section<nbsp><reference|ch01:gauge>.>>|<row|<cell|<math|C<rsub|<gLie>>,\<kappa\><rsub|G>>>|<cell|Adjoint
+    Section<nbsp><reference|ch01:gauge>.>>|<row|<cell|<math|<around|\<\|\|\>|\<cdummy\>|\<\|\|\>><rsub|G>>>|<cell|Normalized
+    matrix norm, <math|<around|\<\|\|\>|A|\<\|\|\>><rsub|G><rsup|2>=n<rsub|G><rsup|-1><tr><around|(|A<rsup|\<ast\>>*A|)>>;
+    <eqref|ch01:matrix-norm>.>>|<row|<cell|<math|C<rsub|<gLie>>,\<kappa\><rsub|G>>>|<cell|Adjoint
     Casimir and inverse-coupling logarithmic coefficient;
     <eqref|ch01:casimir>--<eqref|ch01:slope>.>>|<row|<cell|<math|\<Lambda\><rsub|s>,E<rsub|s>>>|<cell|Periodic
     lattice with <math|s> sites per direction and its positive links;
     Section<nbsp><reference|ch01:wilson-section>.>>|<row|<cell|<math|U<rsub|e>,U<rsub|y;\<mu\>*\<nu\>>>>|<cell|Link
     variable and oriented plaquette holonomy;
-    <eqref|ch01:plaquette>.>>|<row|<cell|<math|w,\<chi\>>>|<cell|Wilson
-    plaquette energy and normalized Hilbert--Schmidt distance from the
-    identity; <eqref|ch01:chord>.>>|<row|<cell|<math|Z<rsub|s,\<beta\>>,\<mu\><rsub|s,\<beta\>>>>|<cell|Partition
+    <eqref|ch01:plaquette>.>>|<row|<cell|<math|E<rsub|s><rsup|<math-up|W>>>>|<cell|Wilson
+    energy, the sum of <math|<tfrac|1|2><around|\<\|\|\>|U<rsub|y;\<mu\>*\<nu\>>-1|\<\|\|\>><rsub|G><rsup|2>>
+    over plaquettes; <eqref|ch01:wilson-energy>.>>|<row|<cell|<math|Z<rsub|s,\<beta\>>,\<mu\><rsub|s,\<beta\>>>>|<cell|Partition
     function and Wilson probability measure;
     Definition<nbsp><reference|ch01:wilson>.>>|<row|<cell|<math|R<rsub|p>,L<rsub|m>>>|<cell|Physical
     period and odd block ratio, respectively;
@@ -22603,9 +22708,10 @@
     representative of a local polynomial;
     Theorem<nbsp><reference|ch02:local-sections>.>>|<row|<cell|<math|S<rsub|n><rsup|<math-up|Max>>>>|<cell|Wick
     correlations in the free Maxwell comparison theory;
-    Section<nbsp><reference|ch03:wick>.>>|<row|<cell|<math|\<cal-S\><rsub|j>>>|<cell|Homogeneous
-    degree-<math|j> Maxwell solution jets;
-    Section<nbsp><reference|ch03:shell>.>>|<row|<cell|<math|\<omega\><rsub|d>>>|<cell|Restriction
+    Section<nbsp><reference|ch03:wick>.>>|<row|<cell|<math|\<cal-S\><rsub|j>,<around|\<langle\>|\<cdummy\>,\<cdummy\>|\<rangle\>><rsub|j>>>|<cell|Homogeneous
+    degree-<math|j> Maxwell solution jets
+    (Section<nbsp><reference|ch03:shell>) and their coefficient inner product
+    (Section<nbsp><reference|ch03:strict>).>>|<row|<cell|<math|\<omega\><rsub|d>>>|<cell|Restriction
     from radial-potential labels to free solution jets;
     Section<nbsp><reference|ch03:shell>.>>|<row|<cell|<math|b>>|<cell|Positive
     penalty in the soft block constraint, distinct from inverse coupling
@@ -22956,7 +23062,7 @@
     <associate|auto-128|<tuple|10.3|166>>
     <associate|auto-129|<tuple|10.4|167>>
     <associate|auto-13|<tuple|1.6|26>>
-    <associate|auto-130|<tuple|10.5|167>>
+    <associate|auto-130|<tuple|10.5|168>>
     <associate|auto-131|<tuple|10.6|169>>
     <associate|auto-132|<tuple|10.7|175>>
     <associate|auto-133|<tuple|10.1|176>>
@@ -22964,8 +23070,8 @@
     <associate|auto-135|<tuple|11|179>>
     <associate|auto-136|<tuple|11.1|179>>
     <associate|auto-137|<tuple|11.1.1|180>>
-    <associate|auto-138|<tuple|11.2|181>>
-    <associate|auto-139|<tuple|11.3|182>>
+    <associate|auto-138|<tuple|11.2|180>>
+    <associate|auto-139|<tuple|11.3|181>>
     <associate|auto-14|<tuple|2|29>>
     <associate|auto-140|<tuple|11.4|182>>
     <associate|auto-141|<tuple|11.4.1|184>>
@@ -23004,7 +23110,7 @@
     <associate|auto-171|<tuple|13.3|231>>
     <associate|auto-172|<tuple|13.3.1|232>>
     <associate|auto-173|<tuple|13.4|233>>
-    <associate|auto-174|<tuple|13.5|233>>
+    <associate|auto-174|<tuple|13.5|234>>
     <associate|auto-175|<tuple|13.6|234>>
     <associate|auto-176|<tuple|13.7|235>>
     <associate|auto-177|<tuple|13.7.1|236>>
@@ -23055,7 +23161,7 @@
     <associate|auto-217|<tuple|16.5|280>>
     <associate|auto-218|<tuple|16.6|282>>
     <associate|auto-219|<tuple|17|285>>
-    <associate|auto-22|<tuple|2.5.2|37>>
+    <associate|auto-22|<tuple|2.5.2|36>>
     <associate|auto-220|<tuple|17.1|285>>
     <associate|auto-221|<tuple|17.2|286>>
     <associate|auto-222|<tuple|17.1|287>>
@@ -23068,7 +23174,7 @@
     <associate|auto-229|<tuple|17.4.4|293>>
     <associate|auto-23|<tuple|2.6|39>>
     <associate|auto-230|<tuple|17.4.5|295>>
-    <associate|auto-231|<tuple|17.4.6|296>>
+    <associate|auto-231|<tuple|17.4.6|295>>
     <associate|auto-232|<tuple|17.4.7|296>>
     <associate|auto-233|<tuple|17.5|298>>
     <associate|auto-234|<tuple|17.5.1|299>>
@@ -23116,8 +23222,8 @@
     <associate|auto-39|<tuple|4.3|64>>
     <associate|auto-4|<tuple|4|9>>
     <associate|auto-40|<tuple|4.4|66>>
-    <associate|auto-41|<tuple|4.5|66>>
-    <associate|auto-42|<tuple|4.6|67>>
+    <associate|auto-41|<tuple|4.5|67>>
+    <associate|auto-42|<tuple|4.6|68>>
     <associate|auto-43|<tuple|4.7|69>>
     <associate|auto-44|<tuple|5|71>>
     <associate|auto-45|<tuple|5.1|71>>
@@ -23126,15 +23232,15 @@
     <associate|auto-48|<tuple|5.1|74>>
     <associate|auto-49|<tuple|5.4|74>>
     <associate|auto-5|<tuple|4|17>>
-    <associate|auto-50|<tuple|5.5|75>>
-    <associate|auto-51|<tuple|5.6|77>>
-    <associate|auto-52|<tuple|5.6.1|79>>
-    <associate|auto-53|<tuple|5.7|80>>
+    <associate|auto-50|<tuple|5.5|76>>
+    <associate|auto-51|<tuple|5.6|78>>
+    <associate|auto-52|<tuple|5.6.1|80>>
+    <associate|auto-53|<tuple|5.7|81>>
     <associate|auto-54|<tuple|5.8|83>>
     <associate|auto-55|<tuple|5.9|84>>
-    <associate|auto-56|<tuple|5.9.1|84>>
-    <associate|auto-57|<tuple|5.9.2|85>>
-    <associate|auto-58|<tuple|5.9.3|86>>
+    <associate|auto-56|<tuple|5.9.1|85>>
+    <associate|auto-57|<tuple|5.9.2|86>>
+    <associate|auto-58|<tuple|5.9.3|87>>
     <associate|auto-59|<tuple|5.10|88>>
     <associate|auto-6|<tuple|1|19>>
     <associate|auto-60|<tuple|5.10.1|89>>
@@ -23144,7 +23250,7 @@
     <associate|auto-64|<tuple|6.1.1|94>>
     <associate|auto-65|<tuple|6.1.2|96>>
     <associate|auto-66|<tuple|6.2|99>>
-    <associate|auto-67|<tuple|6.2.1|100>>
+    <associate|auto-67|<tuple|6.2.1|99>>
     <associate|auto-68|<tuple|6.2.2|100>>
     <associate|auto-69|<tuple|6.2.3|101>>
     <associate|auto-7|<tuple|1.1|19>>
@@ -23165,20 +23271,20 @@
     <associate|auto-83|<tuple|7|117>>
     <associate|auto-84|<tuple|7.1|117>>
     <associate|auto-85|<tuple|7.2|118>>
-    <associate|auto-86|<tuple|7.3|119>>
-    <associate|auto-87|<tuple|7.4|120>>
+    <associate|auto-86|<tuple|7.3|120>>
+    <associate|auto-87|<tuple|7.4|121>>
     <associate|auto-88|<tuple|7.5|121>>
     <associate|auto-89|<tuple|7.6|124>>
     <associate|auto-9|<tuple|1.3|21>>
-    <associate|auto-90|<tuple|7.6.1|124>>
-    <associate|auto-91|<tuple|7.6.2|125>>
-    <associate|auto-92|<tuple|7.6.3|129>>
+    <associate|auto-90|<tuple|7.6.1|125>>
+    <associate|auto-91|<tuple|7.6.2|126>>
+    <associate|auto-92|<tuple|7.6.3|130>>
     <associate|auto-93|<tuple|7.7|130>>
     <associate|auto-94|<tuple|7.7.1|130>>
-    <associate|auto-95|<tuple|7.7.2|131>>
-    <associate|auto-96|<tuple|7.7.3|132>>
-    <associate|auto-97|<tuple|7.8|133>>
-    <associate|auto-98|<tuple|7.9|134>>
+    <associate|auto-95|<tuple|7.7.2|132>>
+    <associate|auto-96|<tuple|7.7.3|133>>
+    <associate|auto-97|<tuple|7.8|134>>
+    <associate|auto-98|<tuple|7.9|135>>
     <associate|auto-99|<tuple|8|137>>
     <associate|bib-Abbott1982|<tuple|Abb82|331>>
     <associate|bib-Balaban1984Propagators|<tuple|Baª84|331>>
@@ -23221,10 +23327,9 @@
     <associate|bib-Wilson1969|<tuple|Wil69|332>>
     <associate|bib-Wilson1974|<tuple|Wil74|332>>
     <associate|bib-Wong2001|<tuple|Won01|332>>
-    <associate|ch01:casimir|<tuple|1.2|19>>
+    <associate|ch01:casimir|<tuple|1.3|19>>
     <associate|ch01:chessboard|<tuple|1.16|24>>
     <associate|ch01:chessboard-root|<tuple|1.15|23>>
-    <associate|ch01:chord|<tuple|1.6|20>>
     <associate|ch01:classical-curvature|<tuple|1.10|21>>
     <associate|ch01:fig-chessboard|<tuple|1.1|23>>
     <associate|ch01:gauge|<tuple|1.1|19>>
@@ -23234,10 +23339,11 @@
     <associate|ch01:lattice-smear|<tuple|1.18|24>>
     <associate|ch01:limits|<tuple|1.5|24>>
     <associate|ch01:locality|<tuple|1.2|21>>
-    <associate|ch01:metric|<tuple|1.1|19>>
+    <associate|ch01:matrix-norm|<tuple|1.1|19>>
+    <associate|ch01:metric|<tuple|1.2|19>>
     <associate|ch01:ordered-limit|<tuple|1.6|25>>
     <associate|ch01:placement|<tuple|1.12|22>>
-    <associate|ch01:plaquette|<tuple|1.5|20>>
+    <associate|ch01:plaquette|<tuple|1.6|20>>
     <associate|ch01:reflection|<tuple|1.4|22>>
     <associate|ch01:reflection-links|<tuple|1.13|23>>
     <associate|ch01:rp|<tuple|1.14|23>>
@@ -23245,9 +23351,9 @@
     <associate|ch01:scales|<tuple|1.3|22>>
     <associate|ch01:scales-section|<tuple|1.3|21>>
     <associate|ch01:separated-test|<tuple|1.5|24>>
-    <associate|ch01:slope|<tuple|1.3|19>>
+    <associate|ch01:slope|<tuple|1.4|20>>
     <associate|ch01:strategy|<tuple|1.6|26>>
-    <associate|ch01:su-n|<tuple|1.4|20>>
+    <associate|ch01:su-n|<tuple|1.5|20>>
     <associate|ch01:uv-limit|<tuple|1.19|25>>
     <associate|ch01:volume-limit|<tuple|1.20|25>>
     <associate|ch01:wilson|<tuple|1.1|20>>
@@ -23269,7 +23375,7 @@
     <associate|ch02:label-space|<tuple|2.2|30>>
     <associate|ch02:labels|<tuple|2.2|30>>
     <associate|ch02:local-sections|<tuple|2.4|32>>
-    <associate|ch02:microscopic-null|<tuple|2.14|36>>
+    <associate|ch02:microscopic-null|<tuple|2.14|35>>
     <associate|ch02:normalization|<tuple|2.6|39>>
     <associate|ch02:observables|<tuple|2|29>>
     <associate|ch02:radial-identity|<tuple|2.1|29>>
@@ -23330,20 +23436,20 @@
     <associate|ch03:ward-identity|<tuple|3.23|51>>
     <associate|ch03:weight|<tuple|3.22|51>>
     <associate|ch03:wick|<tuple|3.2|42>>
-    <associate|ch04:activities|<tuple|4.5|66>>
-    <associate|ch04:activity-bounds|<tuple|4.24|69>>
+    <associate|ch04:activities|<tuple|4.6|67>>
+    <associate|ch04:activity-bounds|<tuple|4.25|70>>
     <associate|ch04:admissibility|<tuple|4.7|69>>
     <associate|ch04:axial-eligible|<tuple|4.3|60>>
     <associate|ch04:axial-frame|<tuple|4.1|59>>
     <associate|ch04:block-map|<tuple|4.2|63>>
     <associate|ch04:block-operator|<tuple|4.9|63>>
     <associate|ch04:blocking|<tuple|4|59>>
-    <associate|ch04:clip|<tuple|4.17|67>>
+    <associate|ch04:clip|<tuple|4.18|67>>
     <associate|ch04:connector|<tuple|4.5|61>>
     <associate|ch04:density-coordinates|<tuple|4.4|66>>
-    <associate|ch04:density-norms|<tuple|4.6|67>>
-    <associate|ch04:effective-density|<tuple|4.21|68>>
-    <associate|ch04:eligibility|<tuple|4.16|66>>
+    <associate|ch04:density-norms|<tuple|4.6|68>>
+    <associate|ch04:effective-density|<tuple|4.22|68>>
+    <associate|ch04:eligibility|<tuple|4.17|67>>
     <associate|ch04:exact-integral|<tuple|4.11|63>>
     <associate|ch04:fig-block-paths|<tuple|4.1|62>>
     <associate|ch04:frame-energy|<tuple|4.2|60>>
@@ -23354,27 +23460,29 @@
     <associate|ch04:kernel-normalization|<tuple|4.10|63>>
     <associate|ch04:kernel-properties|<tuple|4.3|63>>
     <associate|ch04:kernel-section|<tuple|4.2|61>>
-    <associate|ch04:leading-action|<tuple|4.5|66>>
-    <associate|ch04:local-seminorm|<tuple|4.22|68>>
+    <associate|ch04:leading-action|<tuple|4.5|67>>
+    <associate|ch04:local-seminorm|<tuple|4.23|69>>
     <associate|ch04:macro-comparison|<tuple|4.12|64>>
-    <associate|ch04:path-action|<tuple|4.20|67>>
+    <associate|ch04:minimizing-frame-bound|<tuple|4.5|64>>
+    <associate|ch04:patch-frame-sum|<tuple|4.14|65>>
+    <associate|ch04:path-action|<tuple|4.21|68>>
     <associate|ch04:predictor-comparison|<tuple|4.4|64>>
     <associate|ch04:predictor-cost|<tuple|4.6|62>>
     <associate|ch04:predictor-geometry|<tuple|4.3|64>>
     <associate|ch04:projection-bound|<tuple|4.4|60>>
-    <associate|ch04:relaxed-test|<tuple|4.18|67>>
+    <associate|ch04:relaxed-test|<tuple|4.19|67>>
     <associate|ch04:tag-law|<tuple|4.7|62>>
-    <associate|ch04:thresholds|<tuple|4.15|66>>
-    <associate|ch04:weighted-sums|<tuple|4.23|68>>
-    <associate|ch05:H0|<tuple|5.8|74>>
+    <associate|ch04:thresholds|<tuple|4.16|66>>
+    <associate|ch04:weighted-sums|<tuple|4.24|69>>
+    <associate|ch05:H0|<tuple|5.8|75>>
     <associate|ch05:actual-Q|<tuple|5.24|85>>
     <associate|ch05:actual-action|<tuple|5.27|86>>
     <associate|ch05:actual-bridge|<tuple|5.32|87>>
     <associate|ch05:actual-coordinates|<tuple|5.9|84>>
-    <associate|ch05:actual-gap|<tuple|5.29|86>>
+    <associate|ch05:actual-gap|<tuple|5.29|87>>
     <associate|ch05:actual-hessian|<tuple|5.28|86>>
     <associate|ch05:actual-stationary|<tuple|5.4|90>>
-    <associate|ch05:actual-tangent|<tuple|5.9.3|86>>
+    <associate|ch05:actual-tangent|<tuple|5.9.3|87>>
     <associate|ch05:actual-transport-identities|<tuple|5.31|87>>
     <associate|ch05:alias|<tuple|5.3|73>>
     <associate|ch05:alias-recursion|<tuple|5.6|73>>
@@ -23387,22 +23495,22 @@
     <associate|ch05:forest-chart|<tuple|5.21|84>>
     <associate|ch05:forest-derivative|<tuple|5.22|84>>
     <associate|ch05:forms|<tuple|5.1|71>>
-    <associate|ch05:fourier|<tuple|5.2|71>>
+    <associate|ch05:fourier|<tuple|5.2|72>>
     <associate|ch05:frame-linearization|<tuple|5.23|85>>
     <associate|ch05:gaussian|<tuple|5|71>>
-    <associate|ch05:histories|<tuple|5.5|75>>
+    <associate|ch05:histories|<tuple|5.5|76>>
     <associate|ch05:history-filter|<tuple|5.11|76>>
-    <associate|ch05:history-prop|<tuple|5.1|75>>
-    <associate|ch05:horizon-convergence|<tuple|5.7|80>>
+    <associate|ch05:history-prop|<tuple|5.1|76>>
+    <associate|ch05:horizon-convergence|<tuple|5.7|81>>
     <associate|ch05:horizon-limit|<tuple|5.2|81>>
     <associate|ch05:horizon-weighted|<tuple|5.20|81>>
     <associate|ch05:inverse|<tuple|5.8|83>>
     <associate|ch05:kinetic|<tuple|5.1|71>>
     <associate|ch05:metric-modification|<tuple|5.10|75>>
-    <associate|ch05:nonlinear-tree|<tuple|5.25|85>>
+    <associate|ch05:nonlinear-tree|<tuple|5.25|86>>
     <associate|ch05:path-budget|<tuple|5.34|89>>
     <associate|ch05:pending|<tuple|5.11|91>>
-    <associate|ch05:physical-transports|<tuple|5.17|78>>
+    <associate|ch05:physical-transports|<tuple|5.17|79>>
     <associate|ch05:pole-cancel|<tuple|5.9|75>>
     <associate|ch05:positive-defect|<tuple|5.19|80>>
     <associate|ch05:quotient|<tuple|5.7|74>>
@@ -23410,11 +23518,11 @@
     <associate|ch05:schur-data|<tuple|5.3|72>>
     <associate|ch05:stationary|<tuple|5.10|88>>
     <associate|ch05:stationary-prop|<tuple|5.3|88>>
-    <associate|ch05:stationary-tangent|<tuple|5.33|87>>
+    <associate|ch05:stationary-tangent|<tuple|5.33|88>>
     <associate|ch05:transport-formula|<tuple|5.14|78>>
     <associate|ch05:transport-identities|<tuple|5.16|78>>
     <associate|ch05:transport-input|<tuple|5.12|78>>
-    <associate|ch05:transports|<tuple|5.6|77>>
+    <associate|ch05:transports|<tuple|5.6|78>>
     <associate|ch05:tree-comparison|<tuple|5.26|86>>
     <associate|ch06:actual-forcing|<tuple|6.17|102>>
     <associate|ch06:actual-jet-integral|<tuple|6.26|108>>
@@ -23429,7 +23537,7 @@
     <associate|ch06:component-extracted-energy|<tuple|6.30|114>>
     <associate|ch06:counts|<tuple|6.2|94>>
     <associate|ch06:density-ratio|<tuple|6.20|104>>
-    <associate|ch06:energy|<tuple|6.2|99>>
+    <associate|ch06:energy|<tuple|6.2|98>>
     <associate|ch06:fine-bound|<tuple|6.6|96>>
     <associate|ch06:flat-identities|<tuple|6.3|94>>
     <associate|ch06:gaussian-identity|<tuple|6.18|102>>
@@ -23452,47 +23560,47 @@
     <associate|ch06:signed-input|<tuple|6.1|97>>
     <associate|ch06:six-terms|<tuple|6.4|95>>
     <associate|ch06:tail-event|<tuple|6.22|105>>
-    <associate|ch06:tree-control|<tuple|6.13|100>>
+    <associate|ch06:tree-control|<tuple|6.13|99>>
     <associate|ch06:unaffected|<tuple|6.10|97>>
     <associate|ch06:window-error|<tuple|6.15|101>>
     <associate|ch06:windows|<tuple|6.3|101>>
     <associate|ch06:windows-def|<tuple|6.14|100>>
-    <associate|ch07:alpha|<tuple|7.5|119>>
+    <associate|ch07:alpha|<tuple|7.5|120>>
     <associate|ch07:classical|<tuple|7.7|130>>
     <associate|ch07:classical-budget|<tuple|7.15|133>>
     <associate|ch07:classical-match|<tuple|7.7|132>>
     <associate|ch07:classical-uniform|<tuple|7.7.1|130>>
     <associate|ch07:comparison|<tuple|7.6|124>>
-    <associate|ch07:comparison-input|<tuple|7.4|128>>
+    <associate|ch07:comparison-input|<tuple|7.4|129>>
     <associate|ch07:comparison-prop|<tuple|7.5|129>>
-    <associate|ch07:completion|<tuple|7.4|120>>
-    <associate|ch07:contact|<tuple|7.6.1|124>>
+    <associate|ch07:completion|<tuple|7.4|121>>
+    <associate|ch07:contact|<tuple|7.6.1|125>>
     <associate|ch07:contact-exact|<tuple|7.12|125>>
     <associate|ch07:curl|<tuple|7.1|118>>
     <associate|ch07:division|<tuple|7.2|118>>
-    <associate|ch07:inherited|<tuple|7.16|133>>
-    <associate|ch07:inherited-proof|<tuple|7.8|133>>
-    <associate|ch07:integrand-input|<tuple|7.3|121>>
+    <associate|ch07:inherited|<tuple|7.16|134>>
+    <associate|ch07:inherited-proof|<tuple|7.8|134>>
+    <associate|ch07:integrand-input|<tuple|7.3|122>>
     <associate|ch07:kernels|<tuple|7.1|117>>
     <associate|ch07:matching|<tuple|7|117>>
     <associate|ch07:moments|<tuple|7.4|119>>
     <associate|ch07:one-loop|<tuple|7.5|121>>
-    <associate|ch07:output|<tuple|7.9|134>>
+    <associate|ch07:output|<tuple|7.9|135>>
     <associate|ch07:path-norm|<tuple|7.3|119>>
-    <associate|ch07:pole|<tuple|7.7|121>>
-    <associate|ch07:quadratic|<tuple|7.3|119>>
+    <associate|ch07:pole|<tuple|7.7|122>>
+    <associate|ch07:quadratic|<tuple|7.3|120>>
     <associate|ch07:regulator-budgets|<tuple|7.9|123>>
     <associate|ch07:response-integrand|<tuple|7.8|122>>
-    <associate|ch07:slope|<tuple|7.6|129>>
+    <associate|ch07:slope|<tuple|7.6|130>>
     <associate|ch07:slot|<tuple|7.2|119>>
-    <associate|ch07:tangent-chain|<tuple|7.11|124>>
+    <associate|ch07:tangent-chain|<tuple|7.11|125>>
     <associate|ch07:tangent-orthogonal|<tuple|7.13|130>>
-    <associate|ch07:thermal|<tuple|7.6|120>>
+    <associate|ch07:thermal|<tuple|7.6|121>>
     <associate|ch07:theta|<tuple|7.10|124>>
     <associate|ch07:uniform-stationary-jets|<tuple|7.14|131>>
     <associate|ch07:unique|<tuple|7.2|120>>
-    <associate|ch07:ward|<tuple|7.1|117>>
-    <associate|ch07:weighted|<tuple|7.6.2|125>>
+    <associate|ch07:ward|<tuple|7.1|118>>
+    <associate|ch07:weighted|<tuple|7.6.2|126>>
     <associate|ch08:activities|<tuple|8.1|137>>
     <associate|ch08:application|<tuple|8.7|142>>
     <associate|ch08:cauchy|<tuple|8.13|140>>
@@ -23555,13 +23663,13 @@
     <associate|ch09:subtraction-bound|<tuple|9.15|156>>
     <associate|ch09:truncated-integral|<tuple|9.4|150>>
     <associate|ch09:wilson|<tuple|9.8|160>>
-    <associate|ch10:activity-truncation|<tuple|10.17|175>>
+    <associate|ch10:activity-truncation|<tuple|10.17|176>>
     <associate|ch10:affine-contraction|<tuple|10.10|168>>
     <associate|ch10:broad-test|<tuple|10.16|172>>
     <associate|ch10:choices|<tuple|10.1|163>>
     <associate|ch10:comparison-input|<tuple|10.6|169>>
     <associate|ch10:convergence|<tuple|10.3|175>>
-    <associate|ch10:cutoff-supplier|<tuple|4|173>>
+    <associate|ch10:cutoff-supplier|<tuple|4|174>>
     <associate|ch10:drift-floor|<tuple|10.2|164>>
     <associate|ch10:equation-floor|<tuple|10.3|164>>
     <associate|ch10:fig-cutoff-histories|<tuple|10.1|176>>
@@ -23573,7 +23681,7 @@
     <associate|ch10:late-entry|<tuple|10.6|165>>
     <associate|ch10:lipschitz|<tuple|10.13|169>>
     <associate|ch10:parameter-supplier|<tuple|2|170>>
-    <associate|ch10:path-stability|<tuple|10.5|167>>
+    <associate|ch10:path-stability|<tuple|10.5|168>>
     <associate|ch10:path-truncation|<tuple|10.11|168>>
     <associate|ch10:periods|<tuple|10.7|166>>
     <associate|ch10:prefix|<tuple|10.18|176>>
@@ -23596,28 +23704,28 @@
     <associate|ch11:common-extraction|<tuple|11.12.1|204>>
     <associate|ch11:conditional-curvature|<tuple|11.12|189>>
     <associate|ch11:corrected-pair-comparison|<tuple|11.12.4|214>>
-    <associate|ch11:cover-transfer|<tuple|11.5|183>>
-    <associate|ch11:cumulants|<tuple|11.1|180>>
+    <associate|ch11:cover-transfer|<tuple|11.5|182>>
+    <associate|ch11:cumulants|<tuple|11.1|179>>
     <associate|ch11:descent-error|<tuple|11.18|198>>
     <associate|ch11:detector-bound|<tuple|11.20|199>>
     <associate|ch11:detectors|<tuple|11.9|199>>
     <associate|ch11:dispersal|<tuple|11.27|208>>
     <associate|ch11:equation-calibration|<tuple|11.11|201>>
-    <associate|ch11:equation-comparison|<tuple|11.6|202>>
+    <associate|ch11:equation-comparison|<tuple|11.6|201>>
     <associate|ch11:equation-root-error|<tuple|11.23|202>>
     <associate|ch11:finite-arity-comparison|<tuple|11.12.5|216>>
     <associate|ch11:finite-covariance|<tuple|11.30|212>>
     <associate|ch11:finite-detector-input|<tuple|11.11|218>>
-    <associate|ch11:graph-difference|<tuple|11.9|186>>
-    <associate|ch11:graph-estimates|<tuple|11.8|185>>
-    <associate|ch11:higher-induction|<tuple|11.11|187>>
+    <associate|ch11:graph-difference|<tuple|11.9|185>>
+    <associate|ch11:graph-estimates|<tuple|11.8|184>>
+    <associate|ch11:higher-induction|<tuple|11.11|186>>
     <associate|ch11:higher-modes|<tuple|11.4.2|186>>
     <associate|ch11:insertions|<tuple|11|179>>
     <associate|ch11:integrated-component|<tuple|11.6|183>>
     <associate|ch11:joint-gaussian|<tuple|11.2|187>>
-    <associate|ch11:local-source|<tuple|11.3|181>>
+    <associate|ch11:local-source|<tuple|11.3|180>>
     <associate|ch11:lower-weighted-step|<tuple|11.28|210>>
-    <associate|ch11:marked-incidence|<tuple|11.7|184>>
+    <associate|ch11:marked-incidence|<tuple|11.7|183>>
     <associate|ch11:marked-step|<tuple|11.4|182>>
     <associate|ch11:mass|<tuple|11.1|180>>
     <associate|ch11:n-mark-comparison|<tuple|11.10|216>>
@@ -23627,13 +23735,13 @@
     <associate|ch11:positional|<tuple|11.7.1|197>>
     <associate|ch11:raw-polynomial-error|<tuple|11.25|205>>
     <associate|ch11:replicated|<tuple|11.7|196>>
-    <associate|ch11:replicated-bound|<tuple|11.16|197>>
+    <associate|ch11:replicated-bound|<tuple|11.16|196>>
     <associate|ch11:restart-construction|<tuple|11.6.1|190>>
-    <associate|ch11:restart-density|<tuple|11.15|194>>
+    <associate|ch11:restart-density|<tuple|11.15|193>>
     <associate|ch11:restart-endpoint|<tuple|11.3|191>>
     <associate|ch11:restart-endpoint-error|<tuple|11.13|192>>
-    <associate|ch11:restart-endpoint-identity|<tuple|11.14|193>>
-    <associate|ch11:restart-family|<tuple|11.4|194>>
+    <associate|ch11:restart-endpoint-identity|<tuple|11.14|192>>
+    <associate|ch11:restart-family|<tuple|11.4|193>>
     <associate|ch11:restore-forced|<tuple|11.9|209>>
     <associate|ch11:restore-regular|<tuple|11.8|208>>
     <associate|ch11:root-bound|<tuple|11.17|197>>
@@ -23644,7 +23752,7 @@
     <associate|ch11:spare-support|<tuple|11.4|182>>
     <associate|ch11:tree-covariance|<tuple|11.5.1|188>>
     <associate|ch11:trial-descent|<tuple|11.8|198>>
-    <associate|ch11:trial-error|<tuple|11.19|199>>
+    <associate|ch11:trial-error|<tuple|11.19|198>>
     <associate|ch11:uniform-detector|<tuple|11.12|219>>
     <associate|ch11:uniform-differences|<tuple|11.12|203>>
     <associate|ch11:uniform-sweep|<tuple|11.7|204>>
@@ -23674,7 +23782,7 @@
     <associate|ch13:chess|<tuple|13.3|230>>
     <associate|ch13:coarse-matrix|<tuple|13.16|238>>
     <associate|ch13:coarse-residual|<tuple|13.17|238>>
-    <associate|ch13:coarse-residual-supplier|<tuple|13.4|238>>
+    <associate|ch13:coarse-residual-supplier|<tuple|13.4|239>>
     <associate|ch13:cone-factorization|<tuple|13.20|241>>
     <associate|ch13:continuum|<tuple|13|229>>
     <associate|ch13:derivative-response|<tuple|13.8|233>>
@@ -23685,7 +23793,7 @@
     <associate|ch13:normalized-null|<tuple|13.6|232>>
     <associate|ch13:null|<tuple|13.5|231>>
     <associate|ch13:ordered-limit|<tuple|13.2|229>>
-    <associate|ch13:positivity|<tuple|13.5|233>>
+    <associate|ch13:positivity|<tuple|13.5|234>>
     <associate|ch13:power|<tuple|13.10|234>>
     <associate|ch13:quotient|<tuple|13.3|231>>
     <associate|ch13:rank|<tuple|13.1|232>>
@@ -23696,13 +23804,13 @@
     <associate|ch13:sharp-centered|<tuple|13.3|237>>
     <associate|ch13:sharp-phase|<tuple|15.11|274>>
     <associate|ch13:sharp-root|<tuple|13.12|236>>
-    <associate|ch13:sharp-schedule|<tuple|13.11|235>>
+    <associate|ch13:sharp-schedule|<tuple|13.11|236>>
     <associate|ch13:sharp-section|<tuple|13.7|235>>
-    <associate|ch13:sharp-separated|<tuple|13.15|237>>
+    <associate|ch13:sharp-separated|<tuple|13.15|238>>
     <associate|ch13:vanishing-error|<tuple|13.4|231>>
     <associate|ch13:volume-limit|<tuple|13.1|229>>
-    <associate|ch13:weight-size|<tuple|13.13|236>>
-    <associate|ch13:word-bound|<tuple|13.2|234>>
+    <associate|ch13:weight-size|<tuple|13.13|237>>
+    <associate|ch13:word-bound|<tuple|13.2|235>>
     <associate|ch14:annular-input|<tuple|14.14|257>>
     <associate|ch14:averaged-stress|<tuple|14.27|267>>
     <associate|ch14:balanced-stress|<tuple|14.12|257>>
@@ -24288,7 +24396,7 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-37>
 
-      4.3<space|2spc>A first-power bound for the actual block average
+      4.3<space|2spc>A linear bound on coarse plaquette distances
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-39>
 
