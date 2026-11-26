@@ -55,6 +55,14 @@
     <assign|tr|<macro|<math-up|tr>>>
 
     <assign|Conf|<macro|<math-up|Conf>>>
+
+    <assign|bjoern|<macro|1|<with|color|blue|[BB: <arg|1>]>>>
+
+    <assign|sky|<macro|1|<with|color|purple|[SC: <arg|1>]>>>
+
+    <assign|wenhao|<macro|1|<with|color|darkgreen|[WZ: <arg|1>]>>>
+
+    <assign|martin|<macro|1|<with|color|orange|[MH: <arg|1>]>>>
   </hide-preamble>
 
   <ym-nav|<hlink|Home|../../index.tm><ym-nav-sep><hlink|The
@@ -4220,8 +4228,9 @@
 
   The frame lemma supplies an eligible choice whenever it is needed.
 
-  Fix the block penalty <math|b\<gtr\>0>. For <math|\<gamma\>\<geqslant\>0>,
-  let
+  Fix the block penalty <math|b\<gtr\>0>.<martin|Apparently <math|b> will be
+  fixed throughout and could just be taken as <math|b=1>. It controls the
+  soft conditioning used here.> For <math|\<gamma\>\<geqslant\>0>, let
 
   <\equation*>
     q<rsub|\<gamma\>><around|(|u|)>=<frac|e<rsup|-\<gamma\>*w<around|(|u|)>>|<big|int><rsub|G>e<rsup|-\<gamma\>*w<around|(|v|)>>*<space|0.17em>d*h<around|(|v|)>>.
@@ -9808,8 +9817,9 @@
   <section|The exact local integral and its first
   expansion><label|ch09:integral>
 
-  Let <math|<with|math-font|cal*|Z><rsub|<math-up|blk>>=\<cal-B\><rsub|m><rsup|\<beta\><rprime|'>><math-up|dens><around|(|\<rho\><rprime|'>|)>>,
-  with the exact kernel <eqref|ch04:block-operator>. In each sector one first
+  Let <math|<with|math-font|cal*|Z><rsub|<math-up|blk>>=\<cal-B\><rsup|<around|(|L|)>><rsub|\<beta\><rprime|'>><math-up|dens><around|(|\<rho\><rprime|'>|)>>,
+  where <math|\<cal-B\><rsup|<around|(|L|)>><rsub|\<beta\><rprime|'>>> is the
+  density operator of <eqref|ch04:block-operator>. In each sector one first
   performs the local coordinate change on its active links and leaves the
   other links in probability Haar measure.
   Chapter<nbsp><reference|ch06:large-fields> gives the exact Gaussian
@@ -11005,7 +11015,7 @@
     bounds <eqref|ch04:activity-bounds> and the pointwise identity
 
     <\equation*>
-      <math-up|dens><around|(|\<rho\><rsub|u>|)>=\<cal-B\><rsub|m><rsup|\<beta\><rprime|'><rsub|u>><math-up|dens><around|(|\<rho\><rprime|'><rsub|u>|)>.
+      <math-up|dens><around|(|\<rho\><rsub|u>|)>=\<cal-B\><rsup|<around|(|L|)>><rsub|\<beta\><rprime|'><rsub|u>><math-up|dens><around|(|\<rho\><rprime|'><rsub|u>|)>.
     </equation*>
 
     Its inverse coupling is <eqref|ch09:reset> and obeys <eqref|ch09:drift>,
@@ -11338,7 +11348,7 @@
   the period changes. The exact identity is
 
   <\equation*>
-    <math-up|dens><around|(|\<rho\><rsub|N,p,m>|)>=\<cal-B\><rsub|m><rsup|\<beta\><rsub|N,p,m+1>><math-up|dens><around|(|\<rho\><rsub|N,p,m+1>|)>.
+    <math-up|dens><around|(|\<rho\><rsub|N,p,m>|)>=\<cal-B\><rsup|<around|(|L<rsub|m>|)>><rsub|\<beta\><rsub|N,p,m+1>><math-up|dens><around|(|\<rho\><rsub|N,p,m+1>|)>.
   </equation*>
 
   It is an identity of the actual densities, including the additive scalar
@@ -12176,15 +12186,17 @@
   set
 
   <\equation>
-    q<rsub|N>*<around|(|z,U|)>=\<rho\><rsub|N><around|(|U|)>*<big|prod><rsub|i\<in\>\<cal-I\>><around|(|1+z<rsub|i>*F<rsub|i><around|(|U|)>|)>,<space|2em>q<rsub|m>=\<cal-B\><rsub|m>*q<rsub|m+1>.<label|ch11:source-density>
+    q<rsub|N>*<around|(|z,U|)>=\<rho\><rsub|N><around|(|U|)>*<big|prod><rsub|i\<in\>\<cal-I\>><around|(|1+z<rsub|i>*F<rsub|i><around|(|U|)>|)>,<space|2em>q<rsub|m>=\<cal-B\><rsup|<around|(|L<rsub|m>|)>><rsub|\<beta\>>*q<rsub|m+1>.<label|ch11:source-density>
   </equation>
 
-  The block map acts coefficientwise. Consequently
+  Here <math|\<beta\>> is the inverse coupling used for the step
+  <math|m+1\<to\>m> on the chosen history. The block map of
+  <eqref|ch04:block-operator> acts coefficientwise. Consequently
   <math|Z<rsub|N><rsup|-1>*<big|int><around|[|z<rsub|S>|]>*q<rsub|m>*<space|0.17em>d*\<lambda\><rsub|m>>
   is the original cutoff moment of the insertions indexed by <math|S>.
 
   If one instead uses the dimensionless one-insertion density of degree
-  <math|d>, its recursion is <math|H<rsub|m>=L<rsub|m><rsup|d>*\<cal-B\><rsub|m>*H<rsub|m+1>>.
+  <math|d>, its recursion is <math|H<rsub|m>=L<rsub|m><rsup|d>*\<cal-B\><rsup|<around|(|L<rsub|m>|)>><rsub|\<beta\>>*H<rsub|m+1>>.
   The scalar rescaling belongs to this convention; it is absent from
   <eqref|ch11:source-density>, where the physical normalization is already in
   <math|F<rsub|i>>. Mixing these two conventions changes the unit insertion.
@@ -13200,7 +13212,7 @@
     Their exact densities satisfy
 
     <\equation>
-      D<rsub|k>=\<rho\><rsub|N,p,k>,<space|2em>D<rsub|i>=\<cal-B\><rsub|i,\<beta\>>*D<rsub|i+1>=<math-up|density><around|(|P<rsub|i>|)>,<space|2em><big|int>D<rsub|i>=Z<rsub|N,p>.<label|ch11:restart-density>
+      D<rsub|k>=\<rho\><rsub|N,p,k>,<space|2em>D<rsub|i>=\<cal-B\><rsup|<around|(|L<rsub|i>|)>><rsub|\<beta\>>*D<rsub|i+1>=<math-up|density><around|(|P<rsub|i>|)>,<space|2em><big|int>D<rsub|i>=Z<rsub|N,p>.<label|ch11:restart-density>
     </equation>
 
     Here the block operator has the original geometric branches, evaluated at
@@ -13363,9 +13375,10 @@
     outside the regular family. Averaging the regular pieces over the finite
     signed motion group retains their anchored bound and invariant sum. The
     exact factorization and reassembly thus give
-    <math|D<rsub|i>=\<cal-B\><rsub|i,\<beta\>>*D<rsub|i+1>> on every coarse
-    configuration, including configurations with failed cutoff conditions.
-    There is no division by a large-field activity, which can vanish.
+    <math|D<rsub|i>=\<cal-B\><rsup|<around|(|L<rsub|i>|)>><rsub|\<beta\>>*D<rsub|i+1>>
+    on every coarse configuration, including configurations with failed
+    cutoff conditions. There is no division by a large-field activity, which
+    can vanish.
 
     At each step choose this expansion before specifying the marked family
     and retain it for subsequent use. Smaller support exponents and smaller
@@ -16608,10 +16621,14 @@
     two incidence bounds for terms involving at least two insertions are at
     most one.
 
-    Let <math|\<cal-I\>> index the cells of the reflected tiling and let
-    <math|-U<rsub|v>> denote the terminal insertion used for cell <math|v>.
-    In the product above the coefficient of
-    <math|<big|prod><rsub|v\<in\>\<cal-I\>>z<rsub|v>> at level <math|h> is
+    Let <math|<math-ss|P><rsub|h,N>> push densities from level <math|N> to
+    level <math|h> by successive applications of <eqref|ch04:block-operator>
+    along the chosen history. Its adjoint <math|\<cal-P\><rsub|N,h>> pulls
+    observables back from <math|h> to <math|N>. Let <math|\<cal-I\>> index
+    the cells of the reflected tiling and let <math|-U<rsub|v>> denote the
+    terminal insertion used for cell <math|v>. In the product above the
+    coefficient of <math|<big|prod><rsub|v\<in\>\<cal-I\>>z<rsub|v>> at level
+    <math|h> is
 
     <\equation*>
       <big|sum><rsub|A\<subseteq\>\<cal-I\>><math-ss|P><rsub|h,N><around*|(|\<rho\><rsub|N>*<big|prod><rsub|v\<nin\>A><around|(|-U<rsub|v>|)>|)>*<big|prod><rsub|v\<in\>A>F<rsub|v>.
@@ -16667,8 +16684,10 @@
     compact, and its section is a fixed polynomial in compact group
     variables.
 
-    Let <math|\<cal-K\><rsub|N,h><around|(|U,d*V|)>> be the forward
-    probability kernel from fine links to level <math|h>, and set
+    Let <math|\<cal-K\><rsub|N,h><around|(|U,d*V|)>> be the composition of
+    the one-step probability kernels <math|k<rsup|<around|(|L<rsub|i>|)>><rsub|\<beta\>>*<around|(|U,V|)>*<space|0.17em>d*V>
+    of <eqref|ch04:kernel>, in order from <math|i=N-1> down to <math|h> and
+    with the coupling of each step, and set
     <math|\<cal-P\><rsub|N,h>*F<around|(|U|)>=<big|int>F<around|(|V|)>*\<cal-K\><rsub|N,h><around|(|U,d*V|)>>.
     It preserves real values and contracts the supremum norm. Locality here
     must include every random variable used to choose a gauge-covariant block
@@ -16972,9 +16991,11 @@
   Extracting the polynomial part of a local degree-<math|t> marked density
   gives a coefficient vector <math|x<rsub|l>>. Write <math|r<rsub|l>> for the
   norm of the remaining density, whose extracted polynomial part vanishes.
-  The dimensionless density obeys <math|H<rsub|l>=L<rsub|l><rsup|t>*\<cal-B\><rsub|l>*H<rsub|l+1>>;
-  the physical source density has no additional factor. These conventions are
-  those of Section<nbsp><reference|ch11:one-graph>. Keep the full prescribed
+  The dimensionless density obeys <math|H<rsub|l>=L<rsub|l><rsup|t>*\<cal-B\><rsup|<around|(|L<rsub|l>|)>><rsub|\<beta\>>*H<rsub|l+1>>,
+  with <math|\<beta\>> the inverse coupling used for the step
+  <math|l+1\<to\>l> in <eqref|ch04:block-operator>. The physical source
+  density has no additional factor. These conventions are those of
+  Section<nbsp><reference|ch11:one-graph>. Keep the full prescribed
   large-field set and its normalization by the square root of the large-field
   bound in this remainder norm.
 
@@ -21088,8 +21109,9 @@
 
   <subsection|A differentiated block kernel>
 
-  Use the exact block kernel of <eqref|ch04:kernel>. Conditional on its fine
-  field and frame variables, its dependence on a coarse link is
+  In the exact kernel <math|k<rsup|<around|(|L|)>><rsub|\<beta\>>> of
+  <eqref|ch04:kernel>, condition on the fine field <math|U> and all auxiliary
+  choices <math|\<alpha\>>. The conditional density of <math|V<rsub|e>> is
   <math|q<rsub|b*\<beta\>>*<around|(|V<rsub|e>*Q<rsub|e><rsup|-1>|)>>, where
   <math|q<rsub|\<gamma\>><around|(|u|)>=Z<rsub|\<gamma\>><rsup|-1>*exp
   <around|[|-\<gamma\>*w<around|(|u|)>|]>>. For every fixed order <math|r>,
@@ -22943,7 +22965,7 @@
     <associate|auto-136|<tuple|11.1|179>>
     <associate|auto-137|<tuple|11.1.1|180>>
     <associate|auto-138|<tuple|11.2|181>>
-    <associate|auto-139|<tuple|11.3|181>>
+    <associate|auto-139|<tuple|11.3|182>>
     <associate|auto-14|<tuple|2|29>>
     <associate|auto-140|<tuple|11.4|182>>
     <associate|auto-141|<tuple|11.4.1|184>>
@@ -22991,10 +23013,10 @@
     <associate|auto-18|<tuple|2.1|32>>
     <associate|auto-180|<tuple|13.8|238>>
     <associate|auto-181|<tuple|13.9|243>>
-    <associate|auto-182|<tuple|13.10|244>>
+    <associate|auto-182|<tuple|13.10|245>>
     <associate|auto-183|<tuple|13.10.1|245>>
-    <associate|auto-184|<tuple|13.10.2|245>>
-    <associate|auto-185|<tuple|13.10.3|246>>
+    <associate|auto-184|<tuple|13.10.2|246>>
+    <associate|auto-185|<tuple|13.10.3|247>>
     <associate|auto-186|<tuple|13.10.4|248>>
     <associate|auto-187|<tuple|14|251>>
     <associate|auto-188|<tuple|14.1|251>>
@@ -23046,7 +23068,7 @@
     <associate|auto-229|<tuple|17.4.4|293>>
     <associate|auto-23|<tuple|2.6|39>>
     <associate|auto-230|<tuple|17.4.5|295>>
-    <associate|auto-231|<tuple|17.4.6|295>>
+    <associate|auto-231|<tuple|17.4.6|296>>
     <associate|auto-232|<tuple|17.4.7|296>>
     <associate|auto-233|<tuple|17.5|298>>
     <associate|auto-234|<tuple|17.5.1|299>>
@@ -23574,7 +23596,7 @@
     <associate|ch11:common-extraction|<tuple|11.12.1|204>>
     <associate|ch11:conditional-curvature|<tuple|11.12|189>>
     <associate|ch11:corrected-pair-comparison|<tuple|11.12.4|214>>
-    <associate|ch11:cover-transfer|<tuple|11.5|182>>
+    <associate|ch11:cover-transfer|<tuple|11.5|183>>
     <associate|ch11:cumulants|<tuple|11.1|180>>
     <associate|ch11:descent-error|<tuple|11.18|198>>
     <associate|ch11:detector-bound|<tuple|11.20|199>>
@@ -23645,7 +23667,7 @@
     <associate|ch12:ultraviolet|<tuple|12|221>>
     <associate|ch12:uv-theorem|<tuple|12.5|226>>
     <associate|ch13:bounded-approximations|<tuple|13.8|238>>
-    <associate|ch13:bounded-singleton|<tuple|13.5|240>>
+    <associate|ch13:bounded-singleton|<tuple|13.5|241>>
     <associate|ch13:bounded-word|<tuple|13.6|242>>
     <associate|ch13:calculus|<tuple|13.4|233>>
     <associate|ch13:cells|<tuple|13.2|230>>
@@ -23831,14 +23853,14 @@
     <associate|ch18:graded-quotient-section|<tuple|13.9|243>>
     <associate|ch18:graded-room|<tuple|13.21|243>>
     <associate|ch18:group-weight|<tuple|13.26|246>>
-    <associate|ch18:high-step|<tuple|13.24|243>>
+    <associate|ch18:high-step|<tuple|13.24|244>>
     <associate|ch18:input|<tuple|18.2|317>>
-    <associate|ch18:lattice-estimate|<tuple|13.28|247>>
-    <associate|ch18:lattice-products|<tuple|13.10|244>>
-    <associate|ch18:lattice-replacement|<tuple|13.8|247>>
-    <associate|ch18:low-cone|<tuple|13.23|243>>
-    <associate|ch18:mixed-bound|<tuple|13.9|248>>
-    <associate|ch18:mixed-product-rate|<tuple|13.29|248>>
+    <associate|ch18:lattice-estimate|<tuple|13.28|248>>
+    <associate|ch18:lattice-products|<tuple|13.10|245>>
+    <associate|ch18:lattice-replacement|<tuple|13.8|248>>
+    <associate|ch18:low-cone|<tuple|13.23|244>>
+    <associate|ch18:mixed-bound|<tuple|13.9|249>>
+    <associate|ch18:mixed-product-rate|<tuple|13.29|249>>
     <associate|ch18:mixed-replacement|<tuple|13.10.4|248>>
     <associate|ch18:normal-Taylor|<tuple|18.8|321>>
     <associate|ch18:ope|<tuple|18.3|319>>
